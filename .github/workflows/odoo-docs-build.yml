@@ -14,12 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # https://github.com/marketplace/actions/checkout
-      - name: Checkout odoo-documentation
+      - name: Checkout odoo/documentation
         uses: actions/checkout@v3
         with:
           repository: iroha-one/odoo-doc
           ref: '14.0'
-      - name: Checkout odoo-odoo
+      - name: Checkout odoo/odoo
         uses: actions/checkout@v3
         with:
           repository: odoo/odoo
@@ -35,7 +35,7 @@ jobs:
       - name: Install additional OS packages
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends libldap2-dev
+          sudo apt-get install -y --no-install-recommends libldap2-dev libsasl2-dev
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
