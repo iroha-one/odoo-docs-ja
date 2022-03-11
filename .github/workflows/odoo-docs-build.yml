@@ -17,11 +17,13 @@ jobs:
       - name: Checkout odoo-documentation
         uses: actions/checkout@v3
         with:
-          repository: iroha-one/odoo-doc@14.0
+          repository: iroha-one/odoo-doc
+          ref: 14.0
       - name: Checkout odoo-odoo
         uses: actions/checkout@v3
         with:
-          repository: odoo/odoo@14.0
+          repository: odoo/odoo
+          ref: 14.0
           path: odoo
       # https://github.com/marketplace/actions/setup-python
       # ^-- This gives info on matrix testing.
