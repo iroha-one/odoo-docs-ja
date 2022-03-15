@@ -16,16 +16,14 @@ on:
         type: choice
         options:
         - '14.0-l10n-ja'
-        - '14.0'
-        - '15.0'
       sourcecode:
         description: 'With inline docstrings'
         required: true
         default: '14.0' 
         type: choice
         options:
-        - '14.0'
         - '15.0'
+        - '14.0'
 
 # https://gist.github.com/c-bata/ed5e7b7f8015502ee5092a3e77937c99
 jobs:
