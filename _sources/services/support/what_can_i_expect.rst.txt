@@ -1,3 +1,4 @@
+:orphan:
 
 .. _support-expectations:
 
@@ -53,4 +54,3 @@ You can get this type of support with a `Success Pack <https://www.odoo.com/pric
 With a pack, one of our consultants will analyze the way your business runs and
 tell you how you can get the most out of your Odoo Database. We will handle all
 configurations and coach you on how to use Odoo.
-

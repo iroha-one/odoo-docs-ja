@@ -346,7 +346,7 @@ for this document type, the invoice number takes the first folio in the sequence
 
 .. important::
    In case you have used some folios in your previous system, make sure you set the next valid
-   folio when the first transation is created. 
+   folio when the first transaction is created. 
 
 
 
@@ -377,7 +377,10 @@ You can manually change the document type if needed.
 .. image:: media/Chile15.png
    :align: center
    :alt: Document type selection on invoices.
-
+   
+.. important::
+   Documents type 33: Electronic Invoice must have at least one item with tax, otherwise the SII
+   rejects the document validation.
 
 Validation and DTE Status
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -468,13 +471,16 @@ credit and debit notes, they are set automatically by Odoo:
 Invoice PDF Report
 ~~~~~~~~~~~~~~~~~~
 
-After the invoice is Accepted and valdiated by the SII and the PDF is printed it includes the
-fiscal elements that indicates out document is fiscally valid:
+Once the invoice is accepted and validated by the SII and the PDF is printed, it includes the
+fiscal elements that indicate that the document is fiscally valid:
 
 .. image:: media/Chile22.png
    :align: center
-   :alt: Barcode and fiscal elements in the invice report.
+   :alt: Barcode and fiscal elements in the invoice report.
 
+.. important::
+   If you are hosted in Odoo SH or On-Premise, you should manually install the ``pdf417gen``
+   library. Use the following command to install it: ``pip install pdf417gen``.
 
 Commercial Validation
 ~~~~~~~~~~~~~~~~~~~~~
@@ -485,7 +491,7 @@ Once the invoice has been sent to the customer:
 2. The customer must send a reception confirmation email.
 3. Subsequently, if all the commercial terms and invoice data are correct, they will send the
    Acceptance confirmation, otherwise they send a Claim.
-4. The field DTE acceptation status is updated automatically. 
+4. The field DTE acceptation status is updated automatically.
 
 .. image:: media/Chile23.png
    :align: center

@@ -2,6 +2,11 @@
 Italy (IT)
 ==========
 
+.. _italy/pec:
+
+PEC mail
+========
+
 Questa guida spiegherà come utilizzare la fattura elettronica in Odoo e
 come configurare correttamente i dati aziendali, i contatti e la
 contabilità. Per testare la fattura elettronica i dati devono essere
@@ -10,7 +15,7 @@ non riconoscerà l’interscambio di informazioni.
 
 
 Configurare le informazioni sulla tua Azienda
-=============================================
+---------------------------------------------
 
 Il passo successivo è la configurazione delle informazioni necessarie al
 funzionamento della fatturazione elettronica. Si può accedere alla
@@ -25,9 +30,9 @@ elettronica sono i seguenti:
    di posta elettronica certificata sono fornite dal tuo fornitore o dal
    Ministero. Lo stesso server deve essere configurato come server che
    gestisce tutta la corrispondenza mail in Odoo, per saperne di più si
-   puo’ consultare la relativa :doc:`guida </applications/productivity/discuss/advanced/email_servers>`.
+   può consultare la relativa :doc:`guida </applications/general/email_communication/email_servers>`.
 
--  Indirizzo PEC dell’ Azienda, tale indirizzo deve essere lo stesso
+-  Indirizzo PEC dell’Azienda, tale indirizzo deve essere lo stesso
    registrato presso l’Agenzia delle Entrate per l’utilizzo dei servizi
    di fatturazione elettronica.
 
@@ -36,13 +41,13 @@ elettronica sono i seguenti:
    Entrate, ricorda che l’Agenzia delle Entrate potrebbe cambiare questo
    indirizzo in seguito, previa comunicazione.
 
--  Partita IVA e Codice Fiscale. Per far si che la Fatturazione
-   Elettronica funzioni correttamente, questi cambi devono essere
+-  Partita IVA e Codice Fiscale. Per far sì che la Fatturazione
+   Elettronica funzioni correttamente, questi campi devono essere
    compilati correttamente.
 
 -  Regime Fiscale. Il regime fiscale a cui è sottoposta l’Azienda deve
    essere selezionato scegliendo dalla lista precompilata fornita da
-   Odoo. Chiedi al commercialista qual’è il corretto regime fiscale!
+   Odoo. Chiedi al commercialista qual è il corretto regime fiscale!
 
 -  Numero di Iscrizione nel registro delle Imprese.
 
@@ -51,7 +56,7 @@ elettronica sono i seguenti:
 
 
 Configurare le impostazioni per la Fatturazione Elettronica
------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Numero di iscrizione nel registro Imprese tenuto presso la Camera di
    Commercio.
@@ -67,7 +72,7 @@ Configurare le impostazioni per la Fatturazione Elettronica
 
 
 Configurare il profilo dei clienti
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Per un corretto utilizzo dell’applicazione, il profilo di clienti e
 fornitori, nell’applicazione contatti, deve essere configurato con le
@@ -84,7 +89,7 @@ fattura elettronica*.
 
 
 Il processo di fatturazione
-===========================
+---------------------------
 
 Si può procedere ad emettere una fattura seguendo le indicazioni
 dell’applicazione. Il momento che determina il formale invio della

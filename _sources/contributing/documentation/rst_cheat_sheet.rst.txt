@@ -1,4 +1,3 @@
-
 ===============
 RST cheat sheet
 ===============
@@ -15,28 +14,31 @@ Headings
   encounter different heading formatting and in a different order, in which case you should follow
   the formatting in place in the document. In any other case, use the formatting shown below.
 
-+--------------+---------------+-------------------------------+
-| Heading size | Formatting    | Min/Max number of occurrences |
-+==============+===============+===============================+
-| H1           | | ``=======`` | 1/1                           |
-|              | | ``Heading`` |                               |
-|              | | ``=======`` |                               |
-+--------------+---------------+-------------------------------+
-| H2           | | ``Heading`` | 0/∞                           |
-|              | | ``=======`` |                               |
-+--------------+---------------+-------------------------------+
-| H3           | | ``Heading`` | 0/∞                           |
-|              | | ``-------`` |                               |
-+--------------+---------------+-------------------------------+
-| H4           | | ``Heading`` | 0/∞                           |
-|              | | ``~~~~~~~`` |                               |
-+--------------+---------------+-------------------------------+
-| H5           | | ``Heading`` | 0/∞                           |
-|              | | ``*******`` |                               |
-+--------------+---------------+-------------------------------+
-| H6           | | ``Heading`` | 0/∞                           |
-|              | | ``^^^^^^^`` |                               |
-+--------------+---------------+-------------------------------+
++--------------+---------------+
+| Heading size | Formatting    |
++==============+===============+
+| H1           | | ``=======`` |
+|              | | ``Heading`` |
+|              | | ``=======`` |
++--------------+---------------+
+| H2           | | ``Heading`` |
+|              | | ``=======`` |
++--------------+---------------+
+| H3           | | ``Heading`` |
+|              | | ``-------`` |
++--------------+---------------+
+| H4           | | ``Heading`` |
+|              | | ``~~~~~~~`` |
++--------------+---------------+
+| H5           | | ``Heading`` |
+|              | | ``*******`` |
++--------------+---------------+
+| H6           | | ``Heading`` |
+|              | | ``^^^^^^^`` |
++--------------+---------------+
+
+.. important::
+   Each document must have **exactly one H1 heading**. No less, no more.
 
 .. _contributing/markup:
 
@@ -55,7 +57,7 @@ Use the following markups to emphasize your text to your liking:
 +--------------+----------+
 | \*Text\*     | *Text*   |
 +--------------+----------+
-| \`\`Text\`\` | ``Text`` |
+| \`Text\`     | ``Text`` |
 +--------------+----------+
 
 .. seealso::
@@ -328,7 +330,7 @@ RST
 Render
 ******
 
-.. image:: media/create-invoice.png
+.. image:: rst_cheat_sheet/create-invoice.png
    :align: center
    :alt: Create an invoice
    :height: 100
@@ -374,13 +376,13 @@ RST
 .. code-block:: rst
 
    .. note::
-      Use this to get the attention of the reader about additional information.
+      Use this admonition to grab the reader's attention about additional information.
 
 Render
 ~~~~~~
 
 .. note::
-   Use this to get the attention of the reader about additional information.
+   Use this admonition to grab the reader's attention about additional information.
 
 .. _contributing/tip:
 
@@ -393,15 +395,51 @@ RST
 .. code-block:: rst
 
    .. tip::
-      Use this to inform the reader about a useful trick that requires an
-      action.
+      Use this admonition to inform the reader about a useful trick that requires an action.
 
 Render
 ~~~~~~
 
 .. tip::
-   Use this to inform the reader about a useful trick that requires an
-   action.
+   Use this admonition to inform the reader about a useful trick that requires an action.
+
+.. _contributing/example:
+
+Example
+-------
+
+RST
+~~~
+
+.. code-block:: rst
+
+   .. example::
+      Use this admonition to show an example.
+
+Render
+~~~~~~
+
+.. example::
+   Use this admonition to show an example.
+
+.. _contributing/exercise:
+
+Exercise
+--------
+
+RST
+~~~
+
+.. code-block:: rst
+
+   .. exercise::
+      Use this admonition to suggest an exercise to the reader.
+
+Render
+~~~~~~
+
+.. exercise::
+   Use this admonition to suggest an exercise to the reader.
 
 .. _contributing/important:
 
@@ -414,13 +452,13 @@ RST
 .. code-block:: rst
 
    .. important::
-      Use this to notify the reader about an important information.
+      Use this admonition to notify the reader about an important information.
 
 Render
 ~~~~~~
 
 .. important::
-   Use this to notify the reader about an important information.
+   Use this admonition to notify the reader about an important information.
 
 .. _contributing/warning:
 
@@ -433,15 +471,15 @@ RST
 .. code-block:: rst
 
    .. warning::
-      Use this to require the reader to proceed with caution with what is
-      described in the warning.
+      Use this admonition to require the reader to proceed with caution with what is described in
+      the warning.
 
 Render
 ~~~~~~
 
 .. warning::
-   Use this to require the reader to proceed with caution with what is
-   described in the warning.
+   Use this admonition to require the reader to proceed with caution with what is described in the
+   warning.
 
 .. _contributing/danger:
 
@@ -454,13 +492,375 @@ RST
 .. code-block:: rst
 
    .. danger::
-      Use this to alarm the reader about a serious threat.
+      Use this admonition to bring the reader's attention to a serious threat.
 
 Render
 ~~~~~~
 
 .. danger::
-   Use this to alarm the reader about a serious threat.
+   Use this admonition to bring the reader's attention to a serious threat.
+
+.. _contributing/custom-admonition:
+
+Custom
+------
+
+RST
+~~~
+
+.. code-block:: rst
+
+   .. admonition:: Title
+
+   Customize this admonition with a **Title** of your choice.
+
+Render
+~~~~~~
+
+.. admonition:: Title
+
+   Customize this admonition with a **Title** of your choice.
+
+.. _contributing/code-blocks:
+
+Code blocks
+===========
+
+RST
+---
+
+.. code-block:: text
+
+   .. code-block:: python
+
+      def main():
+          print("Hello world!")
+
+Render
+------
+
+.. code-block:: python
+
+   def main():
+       print("Hello world!")
+
+.. _contributing/tabs:
+
+Content tabs
+============
+
+.. caution::
+   The `tabs` directive may not work well in some situations. In particular:
+
+   - The tabs' headers cannot be translated.
+   - A tab cannot contain :ref:`headings <contributing/headings>`.
+   - An :ref:`admonition <contributing/admonitions>` cannot contain tabs.
+   - A tab cannot contain :ref:`internal hyperlink targets
+     <contributing/internal-hyperlink-targets>`.
+
+.. _contributing/tabs/basic:
+
+Basic tabs
+----------
+
+Basic tabs are useful to split content into multiple options. The `tabs` directive is used to define
+a sequence of tabs. Each tab is then defined with the `tab` directive followed by a label.
+
+RST
+~~~
+
+.. code-block:: rst
+
+   .. tabs::
+
+      .. tab:: Odoo Online
+
+         Content dedicated to Odoo Online users.
+
+      .. tab:: Odoo.sh
+
+         Alternative for Odoo.sh users.
+
+      .. tab:: On-premise
+
+         Third version for On-premise users.
+
+Render
+~~~~~~
+
+.. tabs::
+
+   .. tab:: Odoo Online
+
+      Content dedicated to Odoo Online users.
+
+   .. tab:: Odoo.sh
+
+      Alternative for Odoo.sh users.
+
+   .. tab:: On-premise
+
+      Third version for On-premise users.
+
+.. _contributing/tabs/nested:
+
+Nested tabs
+-----------
+
+Tabs can be nested inside one another.
+
+RST
+~~~
+
+.. code-block:: rst
+
+   .. tabs::
+
+      .. tab:: Stars
+
+         .. tabs::
+
+            .. tab:: The Sun
+
+               The closest star to us.
+
+            .. tab:: Proxima Centauri
+
+               The second closest star to us.
+
+            .. tab:: Polaris
+
+               The North Star.
+
+      .. tab:: Moons
+
+         .. tabs::
+
+            .. tab:: The Moon
+
+               Orbits the Earth.
+
+            .. tab:: Titan
+
+               Orbits Jupiter.
+
+Render
+~~~~~~
+
+.. tabs::
+
+   .. tab:: Stars
+
+      .. tabs::
+
+         .. tab:: The Sun
+
+            The closest star to us.
+
+         .. tab:: Proxima Centauri
+
+            The second closest star to us.
+
+         .. tab:: Polaris
+
+            The North Star.
+
+   .. tab:: Moons
+
+      .. tabs::
+
+         .. tab:: The Moon
+
+            Orbits the Earth.
+
+         .. tab:: Titan
+
+            Orbits Jupiter.
+
+.. _contributing/tabs/group:
+
+Group tabs
+----------
+
+Group tabs are special tabs that synchronize based on a group label. The last selected group is
+remembered and automatically selected when the user returns on the page or visits another page with
+the tabs group. The `group-tab` directive is used to define group tabs.
+
+RST
+~~~
+
+.. code-block:: rst
+
+   .. tabs::
+
+      .. group-tab:: C++
+
+         C++
+
+      .. group-tab:: Python
+
+         Python
+
+      .. group-tab:: Java
+
+         Java
+
+   .. tabs::
+
+      .. group-tab:: C++
+
+         .. code-block:: c++
+
+            int main(const int argc, const char **argv) {
+                return 0;
+            }
+
+      .. group-tab:: Python
+
+         .. code-block:: python
+
+            def main():
+                return
+
+      .. group-tab:: Java
+
+         .. code-block:: java
+
+            class Main {
+                public static void main(String[] args) {}
+            }
+
+Render
+~~~~~~
+
+.. tabs::
+
+   .. group-tab:: C++
+
+      C++
+
+   .. group-tab:: Python
+
+      Python
+
+   .. group-tab:: Java
+
+      Java
+
+.. tabs::
+
+   .. group-tab:: C++
+
+      .. code-block:: c++
+
+         int main(const int argc, const char **argv) {
+             return 0;
+         }
+
+   .. group-tab:: Python
+
+      .. code-block:: python
+
+         def main():
+             return
+
+   .. group-tab:: Java
+
+      .. code-block:: java
+
+         class Main {
+             public static void main(String[] args) {}
+         }
+
+.. _contributing/tabs/code:
+
+Code tabs
+---------
+
+Code tabs are essentially :ref:`group tabs <contributing/tabs/group>` that treat the content as a
+:ref:`code block <contributing/code-blocks>`. The `code-tab` directive is used to define a code tab.
+Just as for the `code-block` directive, the language defines the syntax highlighting of the tab. If
+set, the label is used instead of the language for grouping tabs.
+
+RST
+~~~
+
+.. code-block:: rst
+
+   .. tabs::
+
+      .. code-tab:: c++ Hello C++
+
+         #include <iostream>
+
+         int main() {
+             std::cout << "Hello World";
+             return 0;
+         }
+
+      .. code-tab:: python Hello Python
+
+         print("Hello World")
+
+      .. code-tab:: javascript Hello JavaScript
+
+         console.log("Hello World");
+
+Render
+~~~~~~
+
+.. tabs::
+
+   .. code-tab:: c++ Hello C++
+
+      #include <iostream>
+
+      int main() {
+          std::cout << "Hello World";
+          return 0;
+      }
+
+   .. code-tab:: python Hello Python
+
+      print("Hello World")
+
+   .. code-tab:: javascript Hello JavaScript
+
+      console.log("Hello World");
+
+.. _contributing/document-metadata:
+
+Document metadata
+=================
+
+| Sphinx supports document-wide metadata directives that specify a behavior for the entire page.
+| They must be placed between colons (`:`) at the top of the source file.
+
++-----------------+--------------------------------------------------------------------------------+
+| **Metadata**    | **Purpose**                                                                    |
++-----------------+--------------------------------------------------------------------------------+
+| `show-content`  |  Make a toctree page accessible from the navigation menu.                      |
++-----------------+--------------------------------------------------------------------------------+
+| `show-toc`      |  Show the table of content on a page that has the `show-content` metadata      |
+|                 |  directive.                                                                    |
++-----------------+--------------------------------------------------------------------------------+
+| `code-column`   |  | Show a dynamic side column that can be used to display interactive          |
+|                 |    tutorials or code excerpts.                                                 |
+|                 |  | For example, see                                                            |
+|                 |    :doc:`/applications/finance/accounting/getting_started/memento`.            |
++-----------------+--------------------------------------------------------------------------------+
+| `hide-page-toc` | Hide the "On this page" sidebar and use full page width for the content.       |
++-----------------+--------------------------------------------------------------------------------+
+| `custom-css`    | Link CSS files (comma-separated) to the document.                              |
++-----------------+--------------------------------------------------------------------------------+
+| `custom-js`     | Link JS files (comma-separated) to the document.                               |
++-----------------+--------------------------------------------------------------------------------+
+| `classes`       | Assign the specified classes to the `<main/>` element of the document.         |
++-----------------+--------------------------------------------------------------------------------+
+| `orphan`        | Suppress the need to include the document in a toctree.                        |
++-----------------+--------------------------------------------------------------------------------+
+| `nosearch`      | Exclude the document from search results.                                      |
++-----------------+--------------------------------------------------------------------------------+
 
 .. _contributing/formatting-tips:
 

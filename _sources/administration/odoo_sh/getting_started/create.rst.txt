@@ -78,7 +78,8 @@ You can start using Odoo.sh. Your first build is about to be created. You will s
 Import your database
 ====================
 
-You can import your database in your Odoo.sh project as long as this is an Odoo 10.0, 11.0 or above database.
+You can import your database in your Odoo.sh project as long as it is in a :doc:`supported version
+</administration/maintain/supported_versions>` of Odoo.
 
 Push your modules in production
 -------------------------------
@@ -151,7 +152,7 @@ Check your outgoing email servers
 There is a default mail server provided with Odoo.sh.
 To use it, there must be no enabled outgoing mail server configured in your database in
 :menuselection:`Settings --> Technical --> Outgoing Mail Servers`
-(:doc:`Developer mode </applications/general/developer_mode/activate>` must be activated).
+(:ref:`Developer mode <developer-mode>` must be activated).
 
 After the import of your database,
 all outgoing email servers are disabled so you use the Odoo.sh email server provided by default.
@@ -183,4 +184,4 @@ as you can only have one database linked per subscription.
 
 If you plan to make it your production,
 unlink your former database from the subscription, and register the newly imported database.
-Read the :ref:`database registration documentation <db_premise>` for instructions.
+Read the :doc:`database registration documentation <../../maintain/on_premise>` for instructions.

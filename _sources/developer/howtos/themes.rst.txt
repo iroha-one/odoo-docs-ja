@@ -394,7 +394,7 @@ So here are the steps to create a robust and consistent style for your theme:
 
 \(1) Set the values for Odoo-provided SCSS variables
 
-Odoo declares many CSS rules, most being entirely customizable by overridding
+Odoo declares many CSS rules, most being entirely customizable by overriding
 the related SCSS variables. First, create a new file called primary_variables.scss
 and add it the same way as the style.scss file. The only difference it that
 you won't add it in the ``assets_frontend`` template but in the ``_assets_primary_variables``
@@ -845,7 +845,7 @@ We start by adding a new file in our views folder - name it **options.xml** and 
 
     <template id="snippet_testimonial_opt" name="Snippet Testimonial Options" inherit_id="website.snippet_options">
         <xpath expr="//div[@data-js='Box']" position="after">
-            <div data-selector=".snippet_testimonial"> <!-- Options group -->
+            <div data-selector=".s_testimonial"> <!-- Options group -->
                 <div class="dropdown-submenu">
                     <a href="#" class="dropdown-item">Your Option</a>
                     <div class="dropdown-menu"><!-- Options list -->

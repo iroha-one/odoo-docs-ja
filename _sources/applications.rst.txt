@@ -1,9 +1,18 @@
-============
-Applications
-============
+:nosearch:
+:show-content:
+:hide-page-toc:
+:show-toc:
+
+
+=========
+User Docs
+=========
+
+Discover our user guides and configuration tutorials per application.
 
 
 .. toctree::
+    :maxdepth: 2
 
     applications/finance
     applications/sales
@@ -12,5 +21,4 @@ Applications
     applications/marketing
     applications/services
     applications/productivity
-    applications/settings
     applications/general

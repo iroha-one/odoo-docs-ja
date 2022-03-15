@@ -59,33 +59,20 @@ The following modules are necessary for all databases that require Mexican local
    | All the basic data to manage accounting, taxes and the chart of accounts. The installed chart
      of accounts is based on `the SAT account grouping code
      <https://www.gob.mx/cms/uploads/attachment/file/151586/codigo_agrupador.pdf>`_.
-#. | **EDI for Mexico (l10n_mx_edi)**
+#. | **EDI for Mexico (l10n_mx_edi & l10n_mx_edi_extended)**
    | Necessary for electronic transactions, CFDI 3.3, payment complement, and addenda on invoices.
-#. | **Odoo Mexican localization reports (l10n_mx_reports)**
+#. | **Odoo Mexican localization reports (l10n_mx_reports & l10n_mx_reports_closing)**
    | All mandatory reports for electronic accounting. (Requires the accounting application).
 
 The following modules are optional, and should be installed only if they meet a specific
 organization requirement. Installing these modules is not recommended unless you are sure they
 are needed as they add fields that can unnecessarily complicate form filling.
 
-#. | **EDI External Trade Complement for Mexico (l10n_mx_edi_external_trade)**
-   | For clients that export, add the foreign trade complement to the CFDI, and the logic for
-     filling it.
-#. | **Odoo Mexico Localization for Invoice with customs Number (l10n_mx_edi_customs)**
-   | For importing customers, this module allows adding to the CFDI the request number with which
-     the merchandise to be resold entered. When it is imported into Mexico, in the invoice that
-     comes from any foreign country it is necessary to specify which was the import document; This
-     is known as a "pedimento", and it is processed at customs.
 #. | **Odoo Mexico Localization for Stock / Landing (l10n_mx_edi_landing)**
-   | Related to the import module (*l10n_mx_edi_customs*), this module allows managing the requests
-     as part of the shipping costs.
-#. | **Bank account payment to Mexico (l10n_mx_edi_payment_bank)**
-   | Add optional attributes to the payment plugin, allowing the user to select the bank account
-     that was used to pay the bills.
-#. | **Odoo Mexico Localization for Sale Coupon (l10n_mx_edi_sale_coupon)**
-   | Complements the Odoo coupon module (*sale_coupon*) to avoid errors in the generation of CFDIs.
-#. | **Tax Cash Basis Entries at Payment Date (l10n_mx_tax_cash_basis)** Create journal entries for
-   | taxes on the payment date (instead of the issue date).
+   | This module allows managing the requests as part of the shipping costs.
+#. | **Odoo Mexican XML Polizas Export (l10n_mx_xml_polizas)**
+   | With this module, you will be able to export your Journal Entries in XML ready to be uploaded
+     to the SAT.
 
 Configuration
 =============
@@ -117,6 +104,12 @@ click on *Update information* under your company name.
 
 In the resulting form, put your full address (including zip code), RFC (VAT number), and the rest of
 the data.
+
+.. important::
+   From a legal point of view, a Mexican company must use the local currency (MXN). Therefore, Odoo
+   does not provide features to manage an alternative configuration. If you want to manage another
+   currency, let MXN be the default currency and use a :doc:`pricelist
+   </applications/sales/sales/products_prices/prices/pricing>` instead.
 
 .. warning::
    Make sure that in the address, for the Country field, "Mexico" is chosen from the list of
@@ -1289,6 +1282,10 @@ The accountant should create a Journal Entry to recognize the result of the year
 Earnings from previous years on the account "previous years results" account (304.01.01 in
 Mexico) - that is an equity account.
 
+After posting the Journal Entry, click on *Mark as Closing Entry for the Fiscal Year*. This step is
+important because it is linked to the Trial Balance report. If this Journal Entry is not marked as a
+Closing Entry, the Trial Balance won't be correct.
+
 The simplified accounting entry would look like this:
 
 .. image:: media/mx_cc_03.png
@@ -1333,7 +1330,7 @@ Enabling Explicit errors on the CFDI using the XSD local validator (CFDI 3.3)
 Frequently you want receive explicit errors from the fields incorrectly set
 on the xml, those errors are better informed to the user if the check is
 enable, to enable the Check with xsd feature follow the next steps (with the
-:doc:`Developer mode </applications/general/developer_mode>` enabled).
+:ref:`developer mode <developer-mode>` enabled).
 
 - Go to :menuselection:`Settings --> Technical --> Actions --> Server Actions`
 - Look for the Action called "Download XSD files to CFDI"
@@ -1358,7 +1355,7 @@ generic one with no explanation.
       '{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoRelacion' does
       not resolve to a(n) simple type definition., line 36``
 
-   This can be caused by a database backup restored in anothe server,
+   This can be caused by a database backup restored in another server,
    or when the XSD files are not correctly downloaded. Follow the same steps
    as above but:
 

@@ -1,3 +1,5 @@
+:nosearch:
+
 ==================
 Odoo Documentation
 ==================
@@ -8,5 +10,4 @@ Odoo Documentation
     applications
     administration
     developer
-    services
     contributing

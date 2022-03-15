@@ -1,3 +1,5 @@
+:nosearch:
+
 =========
 Marketing
 =========
@@ -7,4 +9,4 @@ Marketing
 
     marketing/marketing_automation
     marketing/sms_marketing
-    marketing/survey
+    marketing/surveys

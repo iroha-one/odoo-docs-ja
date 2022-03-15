@@ -18,9 +18,9 @@ to improve the quality of the Odoo Apps code.
 
 .. exercise:: Polish your code.
 
-    Refactor your code to respect the coding guidelines. Don't forget to respect the module
-    structure, the variable names, the method name convention, the model attribute order and the
-    xml ids.
+    Refactor your code to respect the coding guidelines. Don't forget to run your linter and
+    respect the module structure, the variable names, the method name convention, the model
+    attribute order and the xml ids.
 
 Your first Pull Request (PR)
 ============================
@@ -52,7 +52,7 @@ folder to be able to commit your work.
     $ git remote add training git@github.com:odoo/technical-training-sandbox.git
     $ git remote add training-dev git@github.com:xyz-odoo/technical-training-sandbox.git #Don't forget to change xyz-odoo to your own GitHub account
     $ git remote set-url --push training no_push #Avoid pushing directly into the main repository
-    $ git fetch --all --prune
+    $ git fetch training master
     $ git branch master training/master
     $ git checkout master #Two new files will be downloaded README.md and .gitignore
 
@@ -72,7 +72,7 @@ Create your working branch:
 
     $ git checkout -b master-my_first_branch-xyz
 
-Your branch name must follow the following name strucutre : <targetVersion>-<feature>-<trigram>
+Your branch name must follow the following name structure : <targetVersion>-<feature>-<trigram>
 
 Example: The branch master-sale-fixes-abc on odoo-dev/odoo is a branch containing fixes for the
 sales app in the odoo/odoo repository, to be deployed in master and done by ABC.
@@ -95,7 +95,7 @@ Push your new branch to your development repository:
 
 .. code-block:: console
 
-    $ git push -u master-my_first_branch-xyz
+    $ git push -u training-dev master-my_first_branch-xyz
 
 .. warning:: NEVER use `git push --force` (or `git push -f`) with a branch that does not belong to you
              or in a stable branch. Never, never, never!
@@ -138,22 +138,6 @@ If you have multiple commits, you can either make a summary of the commits as th
 commits you can just copy/paste your commit messages as the PR message.
 
 .. image:: 16_guidelines_pr/media/pr_message.png
-
-Additional Info for Odoo Staff
-==============================
-
-Now that you know the basics, here are some more useful pages if you haven't seen them already:
-
-- Our `welcome <https://github.com/odoo/enterprise/wiki/Welcome>`__ page has extra info about
-  working at Odoo as well as additional
-  `tutorials <https://github.com/odoo/enterprise/wiki/Welcome#3-technical-training>`__ that are
-  both language and Odoo specific.
-- Once you are ready to start doing tasks, it is important to note that Odoo follows a
-  `rebasing workflow instead of merging <https://www.atlassian.com/git/tutorials/merging-vs-rebasing>`__
-  for your PRs.
-  `This cheatsheet <https://github.com/odoo/enterprise/wiki/GIT-Cheatsheet#pull-request-flow>`__ describes
-  how to do this flow. If you want to become more of a rebasing master, then
-  `this tutorial <https://www.atlassian.com/git/tutorials/rewriting-history>`__ is extra useful.
 
 Test on the runbot
 ==================

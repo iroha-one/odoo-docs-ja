@@ -1,11 +1,14 @@
+:orphan:
 
 =============================
 Customizing the web client
 =============================
 
-Note: this section is really really out of date. It will be updated someday,
-but meanwhile, this tutorial will probably be frustrating to follow, since it
-was written a long time ago.
+.. note::
+
+    this section is really really out of date. It will be updated someday,
+    but meanwhile, this tutorial will probably be frustrating to follow, since it
+    was written a long time ago.
 
 
 .. highlight:: javascript
@@ -1782,7 +1785,7 @@ When a client action must be executed, the action manager looks up its tag
 in the registry, walks the specified path and displays the widget it finds at
 the end.
 
-.. note:: a client action handler can also be a regular function, in whch case
+.. note:: a client action handler can also be a regular function, in which case
           it'll be called and its result (if any) will be interpreted as the
           next action to execute.
 

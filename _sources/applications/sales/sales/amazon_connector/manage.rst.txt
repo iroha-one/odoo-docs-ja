@@ -17,15 +17,14 @@ order is automatically canceled in Odoo.
 
 .. note::
    To force the synchronization of an order whose status has not changed since the last
-   synchronization, activate the :doc:`Developer mode </applications/general/developer_mode>`,
-   navigate to your Amazon account and modify the date under
-   :menuselection:`Orders Follow-up --> Last Order Sync`. Pick a date anterior to the last status
-   change of the order that you wish to synchronize and save.
+   synchronization, activate the :ref:`developer mode <developer-mode>`, navigate to your Amazon
+   account and modify the date under :menuselection:`Orders Follow-up --> Last Order Sync`. Pick a
+   date anterior to the last status change of the order that you wish to synchronize and save.
 
 .. tip::
-   To synchronize immediately the orders of your Amazon account switch to
-   :doc:`Developer mode </applications/general/developer_mode>`, head to your Amazon account and
-   click on **SYNC ORDERS**. The same can be done with pickings by clicking on **SYNC PICKINGS**.
+   To synchronize immediately the orders of your Amazon account switch to :ref:`developer mode
+   <developer-mode>`, head to your Amazon account and click on **SYNC ORDERS**. The same can be done
+   with pickings by clicking on **SYNC PICKINGS**.
 
 Manage deliveries in FBM
 ========================
@@ -36,6 +35,14 @@ at once or ship products partially by using backorders.
 
 When a picking related to the order is confirmed, a notification is sent to Amazon who will, in
 turn, notify the customer that the order (or a part of it) is on its way.
+
+.. important::
+   Amazon requires to provide a tracking reference with each delivery. You'll need to assign a
+   carrier. If the carrier doesn't automatically provide a tracking reference, you'll need to set
+   one manually. This concerns all marketplaces.
+
+.. seealso::
+   - :doc:`../../../inventory_and_mrp/inventory/shipping/setup/third_party_shipper`
 
 Follow deliveries in FBA
 ========================

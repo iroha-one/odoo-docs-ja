@@ -10,8 +10,9 @@ Advanced B: ACL and Record Rules
     <howto/rdtraining>`.
 
     To follow the exercise, it is recommended that you fetch the branch
-    14.0-core from the repository XXX, it
-    contains a version of the module created during the core training we can use
+    15.0-core from the
+    `technical training solutions <https://github.com/odoo/technical-training-solutions/tree/15.0-core>`__ repository.
+    It contains a version of the module created during the core training we can use
     as a starting point.
 
 So far we have mostly concerned ourselves with implementing useful features.
@@ -33,7 +34,7 @@ However:
 * Real-estate agents don't need or get to decide what property types or tags are
   *available*.
 * Real-estate agents can have *exclusive* properties, we do not want one agent
-  to be able to manage another's exclusivities.
+  to be able to manage another's exclusives.
 * All real-estate agents should be able to confirm the sale of a property they
   can manage, but we do not want them to be able to validate or mark as paid
   any invoice in the system.
@@ -44,7 +45,7 @@ However:
 
     Because it's easier for users to disable unnecessary security rules than it
     is to create them from nothing, it's better to err on the side of caution
-    and limiting access: users can relax that access if necessary or convenient.
+    and limit access: users can relax that access if necessary or convenient.
 
 Groups
 ======
@@ -172,12 +173,12 @@ while one with B and C will be able to read or update, but not search or read.
 
 .. note::
 
-    * The group of an access right can be ommitted, this means the ACL applies
+    * The group of an access right can be omitted, this means the ACL applies
       to *every user*, this is a useful but risky fallback as depending on the
       applications installed it can grant even non-users access to the model.
     * If no access right applies to a user, they are not granted access
       (default-deny).
-    * If a menu item points to a model to which a user doesn't have acces and
+    * If a menu item points to a model to which a user doesn't have access and
       has no submenus which the user can see, the menu will not be displayed.
 
 .. exercise:: Update the access rights file to:
@@ -198,7 +199,7 @@ Since the "demo" user was not made a real-estate agent or manager, they should
 not even be able to see the real-estate application. Use a private tab or window
 to check for this (the "demo" user has the password "demo").
 
-Access Rules
+Record Rules
 ============
 
 .. seealso:: The documentation related to this topic can be found at
@@ -214,7 +215,7 @@ Access rights can grant access to an entire model but often we need to be
 more specific: while an agent can interact with properties in general we may not
 want them to update or even see properties managed by one of their colleagues.
 
-Access *rules* provide that precision: they can grant or reject access to
+Record *rules* provide that precision: they can grant or reject access to
 individual records:
 
 .. code-block:: xml
@@ -223,7 +224,7 @@ individual records:
         <field name="name">A description of the rule's role</field>
         <field name="model_id" ref="model_to_manage"/>
         <field name="perm_read" eval="False"/>
-        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="groups" eval="[Command.link(ref('base.group_user'))]"/>
         <field name="domain_force">[
             '|', ('user_id', '=', user.id),
                  ('user_id', '=', False)
@@ -294,10 +295,10 @@ do so.
 There are two main ways to bypass existing security checks in Odoo, either
 wilfully or as a side-effect:
 
-* The ``sudo()`` method will create a new recorset in "sudo mode", this ignores
-  all access rules and access rights (although hard-coded group and user checks
+* The ``sudo()`` method will create a new recordset in "sudo mode", this ignores
+  all access rights and record rules (although hard-coded group and user checks
   may still apply).
-* Performing raw SQL queries will bypass access rules and access rights as a
+* Performing raw SQL queries will bypass access rights and record rules as a
   side-effect of bypassing the ORM itself.
 
 .. exercise::
@@ -322,12 +323,12 @@ Programmatically checking security
     At the end of this section, the creation of the invoice should be resilient
     to security issues regardless to changes to ``estate``.
 
-In Odoo, access rights and access rules are only checked *when performing data
+In Odoo, access rights and record rules are only checked *when performing data
 access via the ORM* e.g. creating, reading, searching, writing, or unlinking a
 record via ORM methods. Other methods do *not* necessarily check against any
 sort of access rights.
 
-In the previous section, we bypassed the access rules when creating the invoice
+In the previous section, we bypassed the record rules when creating the invoice
 in ``action_sold``. This bypass can be reached by any user without any access
 right being checked:
 
@@ -366,21 +367,21 @@ Explicit security checks can be performed by:
   specific models or records.
 * Checking that the current user has specific groups hard-coded to allow or deny
   an operation (``self.env.user.has_group``).
-* Calling the ``check_access_rights(operation)`` method on a recorset, this
+* Calling the ``check_access_rights(operation)`` method on a recordset, this
   verifies whether the current user has access to the model itself.
-* Calling ``check_access_rule(operations)`` on a non-empty recorset, this
+* Calling ``check_access_rule(operations)`` on a non-empty recordset, this
   verifies that the current user is allowed to perform the operation on *every*
   record of the set.
 
-.. warning:: Checking access rights and checking access rules are separate
-             operations, if you're checking access rules you usually want to
+.. warning:: Checking access rights and checking record rules are separate
+             operations, if you're checking record rules you usually want to
              also check access rights beforehand.
 
 .. exercise::
 
     Before creating the invoice, use ``check_access_rights`` and
     ``check_access_rule`` to ensure that the current user can update properties
-    in general, and this specific property in particular.
+    in general as well as the specific property the invoice is for.
 
     Re-run the bypass script, check that the error occurs before the print.
 
@@ -393,7 +394,7 @@ Multi-company security
 
     :ref:`reference/howtos/company` for an overview of multi-company facilities
     in general, and :ref:`multi-company security rules <howto/company/security>`
-    this in particular.
+    in particular.
 
     Documentation on rules in general can, again, be found at
     :ref:`reference/security/rules`.
@@ -403,16 +404,16 @@ Multi-company security
     At the end of this section, agents should only have access to properties
     of their agency (or agencies).
 
-For one reason or an other we might need to manage our real-estate business
-as multiple companies e.g. we might have largely autonomous agencies, or a
+For one reason or another we might need to manage our real-estate business
+as multiple companies e.g. we might have largely autonomous agencies, a
 franchise setup, or multiple brands (possibly from having acquired other
 real-estate businesses) which remain legally or financially separate from one
 another.
 
 Odoo can be used to manage multiple companies inside the same system, however
 the actual handling is up to individual modules: Odoo itself provides the tools
-to manage the issue like company-dependent fields and *multi-company rules*,
-which is what we're going to concern outselves with.
+to manage the issue of company-dependent fields and *multi-company rules*,
+which is what we're going to concern ourselves with.
 
 We want different agencies to be "siloed" from one another, with properties
 belonging to a given agency and users (whether agents or managers) only able to
@@ -422,7 +423,7 @@ As before, because this is based on non-trivial records it's easier for a user
 to relax rules than to tighten them so it makes sense to default to a
 relatively stronger security model.
 
-Multi-company rules are simply access rules based on the ``company_ids`` or
+Multi-company rules are simply record rules based on the ``company_ids`` or
 ``company_id`` fields:
 
 * ``company_ids`` is all the companies to which the current user has access
@@ -447,7 +448,7 @@ associated with *one* of the companies the user has access to:
 
     Multi-company rules are usually :ref:`global <reference/security/rules/global>`,
     otherwise there is a high risk that additional rules would allow bypassing
-    the muti-company rules.
+    the multi-company rules.
 
 .. exercise::
 
@@ -472,7 +473,7 @@ Visibility != security
 .. admonition:: **Goal**
 
     At the end of this section, real-estate agents should not see the Settings
-    menu of the rea-estate application, but should still be able to set the
+    menu of the real-estate application, but should still be able to set the
     property type or tags.
 
 Specific Odoo models can be associated directly with groups (or companies, or
@@ -480,8 +481,8 @@ users). It is important to figure out whether this association is a *security*
 or a *visibility* feature before using it:
 
 * *Visibility* features mean a user can still access the model or record
-  otherwise, either through an other part of the interface or by :doc:`perform
-  operations remotely using RPC <../../webservices/odoo>`, things might just not be
+  otherwise, either through another part of the interface or by :doc:`performing
+  operations remotely using RPC <../../misc/api/odoo>`, things might just not be
   visible in the web interface in some contexts.
 * *Security* features mean a user can not access records, fields or operations.
 
@@ -507,10 +508,10 @@ Here are some examples:
 
 .. exercise::
 
-    Real Estate agents can not add property types or tags, and can see their
+    Real Estate agents can not add property types or tags, but can see their
     options from the Property form view when creating it.
 
-    The Settings menu just adds noise to their interface, it should only be
+    The Settings menu just adds noise to their interface, make it only
     visible to managers.
 
 Despite not having access to the Property Types and Property Tags menus anymore,

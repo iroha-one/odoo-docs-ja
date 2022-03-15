@@ -1,3 +1,7 @@
+:nosearch:
+:show-content:
+:hide-page-toc:
+:show-toc:
 
 =======
 Discuss
@@ -7,4 +11,3 @@ Discuss
    :titlesonly:
 
    discuss/overview
-   discuss/advanced

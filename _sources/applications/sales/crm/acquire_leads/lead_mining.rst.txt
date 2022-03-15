@@ -17,7 +17,7 @@ Start generating leads
 ==========================
 You will now have a new button **Generate Leads** available in your pipeline.
 You are also able to create lead mining requests from the
-:menuselection:`Configuration --> Lead Mining Requests` and trough
+:menuselection:`Configuration --> Lead Mining Requests` and through
 :menuselection:`Leads --> Leads` where you have the **Generate Leads** button.
 
 .. image:: media/LM2.png
@@ -68,5 +68,5 @@ Credits`; or go to :menuselection:`Settings --> In-App Purchases --> View my Ser
    If you are on Odoo Online (SAAS) and have the Enterprise version, you benefit from free trial credits to test the feature.
 
 .. seealso::
-   * :doc:`In-App Purchases (IAP) </applications/general/in_app_purchase/in_app_purchase>`
+   * :doc:`In-App Purchases (IAP) </applications/general/in_app_purchase>`
  

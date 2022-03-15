@@ -286,7 +286,7 @@ on the value of other fields thanks to the ``attrs`` attribute. Note that ``invi
 to other elements of the view such as ``button`` or ``group``.
 
 The ``attrs`` is a dictionary with the property as a key and a domain as a value. The domain gives
-the conditon in which the property applies. For example:
+the condition in which the property applies. For example:
 
 .. code-block:: xml
 
@@ -426,7 +426,6 @@ used to search on both ``name`` and ``description`` fields.
     <search string="Test">
         <field name="description" string="Name and description"
                filter_domain="['|', ('name', 'ilike', self), ('description', 'ilike', self)]"/>
-        </group>
     </search>
 
 .. exercise:: Change the living area search.
