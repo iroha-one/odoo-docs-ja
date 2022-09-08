@@ -12,10 +12,11 @@ on:
       branch:
         description: 'Target branch'
         required: true
-        default: '14.0-l10n-ja'
+        default: 'main'
         type: choice
         options:
-        - '14.0-l10n-ja'
+        - 'main'
+        - '14.0'
       sourcecode:
         description: 'With inline docstrings'
         required: true
@@ -35,14 +36,20 @@ jobs:
       - name: Checkout odoo/documentation
         uses: actions/checkout@v3
         with:
-          repository: iroha-one/odoo-doc
-          ref: ${{ github.event.inputs.branch }}
+          repository: odoo/documentation
+          ref: ${{ github.event.inputs.sourcecode }}
       - name: Checkout odoo/odoo
         uses: actions/checkout@v3
         with:
           repository: odoo/odoo
           ref: ${{ github.event.inputs.sourcecode }}
           path: odoo
+      - name: Checkout iroha-one/odoo-docs-src-locale-ja
+        uses: actions/checkout@v3
+        with:
+          repository: iroha-one/odoo-docs-src-locale-ja
+          ref: ${{ github.event.inputs.branch }}
+          path: locale/ja
       # https://github.com/marketplace/actions/setup-python
       # ^-- This gives info on matrix testing.
       - name: Install Python
