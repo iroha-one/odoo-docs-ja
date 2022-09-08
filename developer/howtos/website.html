@@ -1882,9 +1882,6 @@
           <a href="../../genindex.html" title="総合索引"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
-        <li class="right" >
           <a href="backend.html" title="モジュールの構築"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
@@ -2111,7 +2108,7 @@ is only useful for testing.</p>
 <p>The last step is to alter model and template to use our demonstration data:</p>
 <ol class="arabic simple">
 <li><p>fetch the records from the database instead of having a static list</p></li>
-<li><p>Because <a class="reference internal" href="../reference/backend/orm.html#odoo.models.Model.search" title="odoo.models.Model.search"><code class="xref py py-meth docutils literal notranslate"><span class="pre">search()</span></code></a> returns a set of records
+<li><p>Because <code class="xref py py-meth docutils literal notranslate"><span class="pre">search()</span></code> returns a set of records
 matching the filter (&quot;all records&quot; here), alter the template to print each
 teacher's <code class="docutils literal notranslate"><span class="pre">name</span></code></p></li>
 </ol>
@@ -2229,7 +2226,7 @@ blocks (snippets) and rich text editing are available</p></li>
 </section><section id="urls-and-routing">
 <h2>URLs and routing<a class="headerlink" href="#urls-and-routing" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Controller methods are associated with <em>routes</em> via the
-<a class="reference internal" href="../reference/backend/http.html#odoo.http.route" title="odoo.http.route"><code class="xref py py-func docutils literal notranslate"><span class="pre">route()</span></code></a> decorator which takes a routing string and a
+<code class="xref py py-func docutils literal notranslate"><span class="pre">route()</span></code> decorator which takes a routing string and a
 number of attributes to customise its behavior or security.</p>
 <p>We've seen a &quot;literal&quot; routing string, which matches a URL section exactly,
 but routing strings can also use <a class="reference external" href="http://werkzeug.pocoo.org/docs/routing/#rule-format">converter patterns</a> which match bits
@@ -2577,7 +2574,7 @@ teach many courses:</p>
 </div>
 <p>It should also be possible to create new courses directly from a teacher's
 page, or to see all the courses they teach, so add
-<a class="reference internal" href="../reference/backend/orm.html#odoo.fields.One2many" title="odoo.fields.One2many"><code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">inverse</span> <span class="pre">relationship</span></code></a> to the <em>teachers</em>
+<code class="xref py py-class docutils literal notranslate"><span class="pre">the</span> <span class="pre">inverse</span> <span class="pre">relationship</span></code> to the <em>teachers</em>
 model:</p>
 <div class="literal-block-wrapper docutils container" id="id32">
 <div class="code-block-caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">academy/models.py</span></code></span><a class="headerlink" href="#id32" title="このコードへのパーマリンク">¶</a></div>
@@ -2845,10 +2842,6 @@ the <em>Academy</em> module is installed.</p>
 </section>
 
                     </div>
-                        <a href="https://github.com/odoo/documentation/edit/15.0/content/developer/howtos/website.rst"
-                           class="o_git_link d-none d-lg-inline-block">
-                            <i class="i-edit"></i> Edit on GitHub
-                        </a>
                 </article>
         </main>
             
@@ -2906,9 +2899,6 @@ the <em>Academy</em> module is installed.</p>
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="総合索引"
              >索引</a></li>
-        <li class="right" >
-          <a href="../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
         <li class="right" >
           <a href="backend.html" title="モジュールの構築"
              >次へ</a> |</li>

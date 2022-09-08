@@ -1882,9 +1882,6 @@
           <a href="../../../genindex.html" title="総合索引"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
-        <li class="right" >
           <a href="14_other_module.html" title="第14章：他のモジュールとの相互作用"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
@@ -1931,8 +1928,8 @@
     <span class="o">...</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">TestModel</span></code> は <a class="reference internal" href="../../reference/backend/orm.html#odoo.models.Model" title="odoo.models.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a> を継承しています。これは <a class="reference internal" href="../../reference/backend/orm.html#odoo.models.Model.create" title="odoo.models.Model.create"><code class="xref py py-meth docutils literal notranslate"><span class="pre">create()</span></code></a> 、 <a class="reference internal" href="../../reference/backend/orm.html#odoo.models.Model.read" title="odoo.models.Model.read"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code></a> 、 <code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code> と <a class="reference internal" href="../../reference/backend/orm.html#odoo.models.Model.unlink" title="odoo.models.Model.unlink"><code class="xref py py-meth docutils literal notranslate"><span class="pre">unlink()</span></code></a> を提供します。</p>
-<p>これらのメソッド(および <a class="reference internal" href="../../reference/backend/orm.html#odoo.models.Model" title="odoo.models.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a> で定義されている他のメソッド)は、特定のビジネスロジックを追加するために拡張することができます:</p>
+<p><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">TestModel</span></code> は <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code> を継承しています。これは <code class="xref py py-meth docutils literal notranslate"><span class="pre">create()</span></code> 、 <code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code> 、 <code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code> と <code class="xref py py-meth docutils literal notranslate"><span class="pre">unlink()</span></code> を提供します。</p>
+<p>これらのメソッド(および <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code> で定義されている他のメソッド)は、特定のビジネスロジックを追加するために拡張することができます:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">odoo</span> <span class="kn">import</span> <span class="n">fields</span><span class="p">,</span> <span class="n">models</span>
 
 <span class="k">class</span> <span class="nc">TestModel</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
@@ -1949,12 +1946,12 @@
         <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>デコレーターの <a class="reference internal" href="../../reference/backend/orm.html#odoo.api.model" title="odoo.api.model"><code class="xref py py-func docutils literal notranslate"><span class="pre">model()</span></code></a> は、 <a class="reference internal" href="../../reference/backend/orm.html#odoo.models.Model.create" title="odoo.models.Model.create"><code class="xref py py-meth docutils literal notranslate"><span class="pre">create()</span></code></a> メソッドに必要です。 レコードセットの <code class="docutils literal notranslate"><span class="pre">self</span></code> の内容は、作成のコンテキストでは関連性がないからです。 しかし、他のCRUDのメソッドには必要ありません。</p>
+<p>デコレーターの <code class="xref py py-func docutils literal notranslate"><span class="pre">model()</span></code> は、 <code class="xref py py-meth docutils literal notranslate"><span class="pre">create()</span></code> メソッドに必要です。 レコードセットの <code class="docutils literal notranslate"><span class="pre">self</span></code> の内容は、作成のコンテキストでは関連性がないからです。 しかし、他のCRUDのメソッドには必要ありません。</p>
 <p>It is also important to note that even though we can directly override the
-<a class="reference internal" href="../../reference/backend/orm.html#odoo.models.Model.unlink" title="odoo.models.Model.unlink"><code class="xref py py-meth docutils literal notranslate"><span class="pre">unlink()</span></code></a> method, you will almost always want to write a new method with
-the decorator <a class="reference internal" href="../../reference/backend/orm.html#odoo.api.ondelete" title="odoo.api.ondelete"><code class="xref py py-func docutils literal notranslate"><span class="pre">ondelete()</span></code></a> instead. Methods marked with this decorator will be
-called during <a class="reference internal" href="../../reference/backend/orm.html#odoo.models.Model.unlink" title="odoo.models.Model.unlink"><code class="xref py py-meth docutils literal notranslate"><span class="pre">unlink()</span></code></a> and avoids some issues that can occur during
-uninstalling the model's module when <a class="reference internal" href="../../reference/backend/orm.html#odoo.models.Model.unlink" title="odoo.models.Model.unlink"><code class="xref py py-meth docutils literal notranslate"><span class="pre">unlink()</span></code></a> is directly overridden.</p>
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">unlink()</span></code> method, you will almost always want to write a new method with
+the decorator <code class="xref py py-func docutils literal notranslate"><span class="pre">ondelete()</span></code> instead. Methods marked with this decorator will be
+called during <code class="xref py py-meth docutils literal notranslate"><span class="pre">unlink()</span></code> and avoids some issues that can occur during
+uninstalling the model's module when <code class="xref py py-meth docutils literal notranslate"><span class="pre">unlink()</span></code> is directly overridden.</p>
 <p>Python 3 では <code class="docutils literal notranslate"><span class="pre">super()</span></code> は <code class="docutils literal notranslate"><span class="pre">super(TestModel,</span> <span class="pre">self)</span></code> と同等です。 後者は、変更されたレコードセットを使用して親メソッドを呼び出す場合に、必要になるかもしれません。</p>
 <div class="alert alert-danger">
 <p class="alert-title">
@@ -1969,7 +1966,7 @@ Exercise</p><p>CRUD メソッドにビジネス・ロジックを追加してみ
 <ul class="simple">
 <li><p>物件の状態が <code class="docutils literal notranslate"><span class="pre">New</span></code> または <code class="docutils literal notranslate"><span class="pre">Canceld</span></code> ではない場合、その物件情報の削除を防止します。</p></li>
 </ul>
-<p>Tip: create a new method with the <a class="reference internal" href="../../reference/backend/orm.html#odoo.api.ondelete" title="odoo.api.ondelete"><code class="xref py py-func docutils literal notranslate"><span class="pre">ondelete()</span></code></a> decorator and remember that
+<p>Tip: create a new method with the <code class="xref py py-func docutils literal notranslate"><span class="pre">ondelete()</span></code> decorator and remember that
 <code class="docutils literal notranslate"><span class="pre">self</span></code> can be a recordset with more than one record.</p>
 <ul class="simple">
 <li><p>オファーの作成時に、物件情報の状態を <code class="docutils literal notranslate"><span class="pre">Offer</span> <span class="pre">Received</span></code> に設定します。また、ユーザが既存のオファーよりも低い金額のオファーを作成しようとすると、エラーを発生させるようにします。</p></li>
@@ -2095,10 +2092,6 @@ Exercise</p><p>Usersビューにフィールドを追加してみましょう。
 </section>
 
                     </div>
-                        <a href="https://github.com/odoo/documentation/edit/15.0/content/developer/howtos/rdtraining/13_inheritance.rst"
-                           class="o_git_link d-none d-lg-inline-block">
-                            <i class="i-edit"></i> Edit on GitHub
-                        </a>
                 </article>
         </main>
             
@@ -2137,9 +2130,6 @@ Exercise</p><p>Usersビューにフィールドを追加してみましょう。
         <li class="right" style="margin-right: 10px">
           <a href="../../../genindex.html" title="総合索引"
              >索引</a></li>
-        <li class="right" >
-          <a href="../../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
         <li class="right" >
           <a href="14_other_module.html" title="第14章：他のモジュールとの相互作用"
              >次へ</a> |</li>

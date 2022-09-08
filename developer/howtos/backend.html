@@ -1882,9 +1882,6 @@
           <a href="../../genindex.html" title="総合索引"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
-        <li class="right" >
           <a href="profilecode.html" title="Profiling Odoo code"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
@@ -1989,7 +1986,7 @@ install it in Odoo.</p>
 This layer avoids having to write most <abbr title="Structured Query Language">SQL</abbr>
 by hand and provides extensibility and security services<a class="footnote-reference brackets" href="#rawsql" id="id1">2</a>.</p>
 <p>Business objects are declared as Python classes extending
-<a class="reference internal" href="../reference/backend/orm.html#odoo.models.Model" title="odoo.models.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a> which integrates them into the automated
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code> which integrates them into the automated
 persistence system.</p>
 <p>Models can be configured by setting a number of attributes at their
 definition. The most important attribute is
@@ -2037,8 +2034,8 @@ value or always be given a value when creating a record.</p>
 <p>There are two broad categories of fields: &quot;simple&quot; fields which are atomic
 values stored directly in the model's table and &quot;relational&quot; fields linking
 records (of the same model or of different models).</p>
-<p>Example of simple fields are <a class="reference internal" href="../reference/backend/orm.html#odoo.fields.Boolean" title="odoo.fields.Boolean"><code class="xref py py-class docutils literal notranslate"><span class="pre">Boolean</span></code></a>,
-<a class="reference internal" href="../reference/backend/orm.html#odoo.fields.Date" title="odoo.fields.Date"><code class="xref py py-class docutils literal notranslate"><span class="pre">Date</span></code></a>, <a class="reference internal" href="../reference/backend/orm.html#odoo.fields.Char" title="odoo.fields.Char"><code class="xref py py-class docutils literal notranslate"><span class="pre">Char</span></code></a>.</p>
+<p>Example of simple fields are <code class="xref py py-class docutils literal notranslate"><span class="pre">Boolean</span></code>,
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Date</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Char</span></code>.</p>
 </section><section id="reserved-fields">
 <h4>Reserved fields<a class="headerlink" href="#reserved-fields" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>Odoo creates a few fields in all models<a class="footnote-reference brackets" href="#autofields" id="id2">1</a>. These fields are
@@ -2047,13 +2044,13 @@ useful or necessary:</p>
 <dl class="simple">
 <dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Id</span></code>)</dt><dd><p>The unique identifier for a record in its model.</p>
 </dd>
-<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">create_date</span></code> (<a class="reference internal" href="../reference/backend/orm.html#odoo.fields.Datetime" title="odoo.fields.Datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">Datetime</span></code></a>)</dt><dd><p>Creation date of the record.</p>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">create_date</span></code> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Datetime</span></code>)</dt><dd><p>Creation date of the record.</p>
 </dd>
-<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">create_uid</span></code> (<a class="reference internal" href="../reference/backend/orm.html#odoo.fields.Many2one" title="odoo.fields.Many2one"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code></a>)</dt><dd><p>User who created the record.</p>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">create_uid</span></code> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code>)</dt><dd><p>User who created the record.</p>
 </dd>
-<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">write_date</span></code> (<a class="reference internal" href="../reference/backend/orm.html#odoo.fields.Datetime" title="odoo.fields.Datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">Datetime</span></code></a>)</dt><dd><p>Last modification date of the record.</p>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">write_date</span></code> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Datetime</span></code>)</dt><dd><p>Last modification date of the record.</p>
 </dd>
-<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">write_uid</span></code> (<a class="reference internal" href="../reference/backend/orm.html#odoo.fields.Many2one" title="odoo.fields.Many2one"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code></a>)</dt><dd><p>user who last modified the record.</p>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">write_uid</span></code> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code>)</dt><dd><p>user who last modified the record.</p>
 </dd>
 </dl>
 </section><section id="special-fields">
@@ -2295,7 +2292,7 @@ them. Make the new model visible via a menu item.</p>
 between different models.</p>
 <p>Relational field types are:</p>
 <dl>
-<dt><a class="reference internal" href="../reference/backend/orm.html#odoo.fields.Many2one" title="odoo.fields.Many2one"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one(other_model,</span> <span class="pre">ondelete='set</span> <span class="pre">null')</span></code></a></dt><dd><p>A simple link to an other object:</p>
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one(other_model,</span> <span class="pre">ondelete='set</span> <span class="pre">null')</span></code></dt><dd><p>A simple link to an other object:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">foo</span><span class="o">.</span><span class="n">other_id</span><span class="o">.</span><span class="n">name</span>
 </pre></div>
 </div>
@@ -2304,8 +2301,8 @@ between different models.</p>
 参考</p><p><a class="reference external" href="http://www.postgresql.org/docs/9.3/static/tutorial-fk.html">foreign keys</a></p>
 </div>
 </dd>
-<dt><a class="reference internal" href="../reference/backend/orm.html#odoo.fields.One2many" title="odoo.fields.One2many"><code class="xref py py-class docutils literal notranslate"><span class="pre">One2many(other_model,</span> <span class="pre">related_field)</span></code></a></dt><dd><p>A virtual relationship, inverse of a <a class="reference internal" href="../reference/backend/orm.html#odoo.fields.Many2one" title="odoo.fields.Many2one"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code></a>.
-A <a class="reference internal" href="../reference/backend/orm.html#odoo.fields.One2many" title="odoo.fields.One2many"><code class="xref py py-class docutils literal notranslate"><span class="pre">One2many</span></code></a> behaves as a container of records,
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">One2many(other_model,</span> <span class="pre">related_field)</span></code></dt><dd><p>A virtual relationship, inverse of a <code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code>.
+A <code class="xref py py-class docutils literal notranslate"><span class="pre">One2many</span></code> behaves as a container of records,
 accessing it results in a (possibly empty) set of records:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">other</span> <span class="ow">in</span> <span class="n">foo</span><span class="o">.</span><span class="n">other_ids</span><span class="p">:</span>
     <span class="nb">print</span> <span class="n">other</span><span class="o">.</span><span class="n">name</span>
@@ -2313,12 +2310,12 @@ accessing it results in a (possibly empty) set of records:</p>
 </div>
 <div class="alert alert-danger">
 <p class="alert-title">
-危険</p><p>Because a <a class="reference internal" href="../reference/backend/orm.html#odoo.fields.One2many" title="odoo.fields.One2many"><code class="xref py py-class docutils literal notranslate"><span class="pre">One2many</span></code></a> is a virtual relationship,
-there <em>must</em> be a <a class="reference internal" href="../reference/backend/orm.html#odoo.fields.Many2one" title="odoo.fields.Many2one"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code></a> field in the
+危険</p><p>Because a <code class="xref py py-class docutils literal notranslate"><span class="pre">One2many</span></code> is a virtual relationship,
+there <em>must</em> be a <code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code> field in the
 <code class="samp docutils literal notranslate"><em><span class="pre">other_model</span></em></code>, and its name <em>must</em> be <code class="samp docutils literal notranslate"><em><span class="pre">related_field</span></em></code></p>
 </div>
 </dd>
-<dt><a class="reference internal" href="../reference/backend/orm.html#odoo.fields.Many2many" title="odoo.fields.Many2many"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2many(other_model)</span></code></a></dt><dd><p>Bidirectional multiple relationship, any record on one side can be related
+<dt><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2many(other_model)</span></code></dt><dd><p>Bidirectional multiple relationship, any record on one side can be related
 to any number of records on the other side. Behaves as a container of
 records, accessing it also results in a possibly empty set of records:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">other</span> <span class="ow">in</span> <span class="n">foo</span><span class="o">.</span><span class="n">other_ids</span><span class="p">:</span>
@@ -2525,7 +2522,7 @@ records by using the dot notation, like <code class="docutils literal notranslat
 <h3>Dependencies<a class="headerlink" href="#dependencies" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>The value of a computed field usually depends on the values of other fields on
 the computed record. The ORM expects the developer to specify those dependencies
-on the compute method with the decorator <a class="reference internal" href="../reference/backend/orm.html#odoo.api.depends" title="odoo.api.depends"><code class="xref py py-func docutils literal notranslate"><span class="pre">depends()</span></code></a>.
+on the compute method with the decorator <code class="xref py py-func docutils literal notranslate"><span class="pre">depends()</span></code>.
 The given dependencies are used by the ORM to trigger the recomputation of the
 field whenever some of its dependencies have been modified:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">odoo</span> <span class="kn">import</span> <span class="n">models</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">api</span>
@@ -2579,7 +2576,7 @@ used for querying the database</p></li>
 Exercise</p><p>Active objects – Default values</p>
 <ul class="simple">
 <li><p>Define the start_date default value as today (see
-<a class="reference internal" href="../reference/backend/orm.html#odoo.fields.Date" title="odoo.fields.Date"><code class="xref py py-class docutils literal notranslate"><span class="pre">Date</span></code></a>).</p></li>
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Date</span></code>).</p></li>
 <li><p>Add a field <code class="docutils literal notranslate"><span class="pre">active</span></code> in the class Session, and set sessions as active by
 default.</p></li>
 </ul>
@@ -2592,7 +2589,7 @@ to the database.</p>
 <p>For instance, suppose a model has three fields <code class="docutils literal notranslate"><span class="pre">amount</span></code>, <code class="docutils literal notranslate"><span class="pre">unit_price</span></code> and
 <code class="docutils literal notranslate"><span class="pre">price</span></code>, and you want to update the price on the form when any of the other
 fields is modified. To achieve this, define a method where <code class="docutils literal notranslate"><span class="pre">self</span></code> represents
-the record in the form view, and decorate it with <a class="reference internal" href="../reference/backend/orm.html#odoo.api.onchange" title="odoo.api.onchange"><code class="xref py py-func docutils literal notranslate"><span class="pre">onchange()</span></code></a>
+the record in the form view, and decorate it with <code class="xref py py-func docutils literal notranslate"><span class="pre">onchange()</span></code>
 to specify on which field it has to be triggered. Any change you make on
 <code class="docutils literal notranslate"><span class="pre">self</span></code> will be reflected on the form.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- content of form view --&gt;</span>
@@ -2627,10 +2624,10 @@ number of seats, or more participants than seats.</p>
 </section><section id="model-constraints">
 <h2>Model constraints<a class="headerlink" href="#model-constraints" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Odoo provides two ways to set up automatically verified invariants:
-<a class="reference internal" href="../reference/backend/orm.html#odoo.api.constrains" title="odoo.api.constrains"><code class="xref py py-func docutils literal notranslate"><span class="pre">Python</span> <span class="pre">constraints</span></code></a> and
+<code class="xref py py-func docutils literal notranslate"><span class="pre">Python</span> <span class="pre">constraints</span></code> and
 <code class="xref py py-attr docutils literal notranslate"><span class="pre">SQL</span> <span class="pre">constraints</span></code>.</p>
 <p>A Python constraint is defined as a method decorated with
-<a class="reference internal" href="../reference/backend/orm.html#odoo.api.constrains" title="odoo.api.constrains"><code class="xref py py-func docutils literal notranslate"><span class="pre">constrains()</span></code></a>, and invoked on a recordset. The decorator
+<code class="xref py py-func docutils literal notranslate"><span class="pre">constrains()</span></code>, and invoked on a recordset. The decorator
 specifies which fields are involved in the constraint, so that the constraint is
 automatically evaluated when one of them is modified. The method is expected to
 raise an exception if its invariant is not satisfied:</p>
@@ -2927,7 +2924,7 @@ restriction applies, and a domain. The domain specifies to which records the
 access rights are limited.</p>
 <p>Here is an example of a rule that prevents the deletion of leads that are not
 in state <code class="docutils literal notranslate"><span class="pre">cancel</span></code>. Notice that the value of the field <code class="docutils literal notranslate"><span class="pre">groups</span></code> must follow
-the same convention as the method <a class="reference internal" href="../reference/backend/orm.html#odoo.models.Model.write" title="odoo.models.Model.write"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code></a> of the ORM.</p>
+the same convention as the method <code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code> of the ORM.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;delete_cancelled_only&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.rule&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Only cancelled leads may be deleted<span class="nt">&lt;/field&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;model_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;crm.model_crm_lead&quot;</span><span class="nt">/&gt;</span>
@@ -2952,9 +2949,9 @@ of the group must be able to modify it.</p>
 <span id="howto-module-wizard"></span><h2>Wizards<a class="headerlink" href="#wizards" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Wizards describe interactive sessions with the user (or dialog boxes) through
 dynamic forms. A wizard is simply a model that extends the class
-<a class="reference internal" href="../reference/backend/orm.html#odoo.models.TransientModel" title="odoo.models.TransientModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">TransientModel</span></code></a> instead of
-<a class="reference internal" href="../reference/backend/orm.html#odoo.models.Model" title="odoo.models.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a>. The class
-<a class="reference internal" href="../reference/backend/orm.html#odoo.models.TransientModel" title="odoo.models.TransientModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">TransientModel</span></code></a> extends <a class="reference internal" href="../reference/backend/orm.html#odoo.models.Model" title="odoo.models.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a>
+<code class="xref py py-class docutils literal notranslate"><span class="pre">TransientModel</span></code> instead of
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code>. The class
+<code class="xref py py-class docutils literal notranslate"><span class="pre">TransientModel</span></code> extends <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code>
 and reuse all its existing mechanisms, with the following particularities:</p>
 <ul class="simple">
 <li><p>Wizard records are not meant to be persistent; they are automatically deleted
@@ -3274,10 +3271,6 @@ bypasses all Odoo authentication and security mechanisms.</p>
 </section>
 
                     </div>
-                        <a href="https://github.com/odoo/documentation/edit/15.0/content/developer/howtos/backend.rst"
-                           class="o_git_link d-none d-lg-inline-block">
-                            <i class="i-edit"></i> Edit on GitHub
-                        </a>
                 </article>
         </main>
             
@@ -3385,9 +3378,6 @@ bypasses all Odoo authentication and security mechanisms.</p>
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="総合索引"
              >索引</a></li>
-        <li class="right" >
-          <a href="../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
         <li class="right" >
           <a href="profilecode.html" title="Profiling Odoo code"
              >次へ</a> |</li>

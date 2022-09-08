@@ -1882,9 +1882,6 @@
           <a href="../../genindex.html" title="総合索引"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
-        <li class="right" >
           <a href="../reference.html" title="Reference"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
@@ -1947,14 +1944,14 @@ assigned to a given field depending on the company from which the value is set.<
 <div class="alert alert-note">
 <p class="alert-title">
 注釈</p><p>The <code class="docutils literal notranslate"><span class="pre">_compute_display_info</span></code> method is decorated with <code class="docutils literal notranslate"><span class="pre">depends_context('company')</span></code>
-(see <a class="reference internal" href="../reference/backend/orm.html#odoo.api.depends_context" title="odoo.api.depends_context"><code class="xref py py-attr docutils literal notranslate"><span class="pre">depends_context</span></code></a>) to ensure that the computed field is recomputed
+(see <code class="xref py py-attr docutils literal notranslate"><span class="pre">depends_context</span></code>) to ensure that the computed field is recomputed
 depending on the current company (<code class="docutils literal notranslate"><span class="pre">self.env.company</span></code>).</p>
 </div>
 <p>When a company-dependent field is read, the current company is used to retrieve its value. In other
 words, if a user is logged in companies A and B with A as main company and creates a record for
 company B, the values of company-dependent fields will be that of company A.</p>
 <p>To read the values of company-dependent fields set from another company than the current one, we need
-to ensure the company we are using is the correct one.  This can be done with <a class="reference internal" href="../reference/backend/orm.html#odoo.models.Model.with_company" title="odoo.models.Model.with_company"><code class="xref py py-meth docutils literal notranslate"><span class="pre">with_company()</span></code></a>,
+to ensure the company we are using is the correct one.  This can be done with <code class="xref py py-meth docutils literal notranslate"><span class="pre">with_company()</span></code>,
 which updates the current company.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Accessed as main company (self.env.company)</span>
 <span class="n">val</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">company_dependent_field</span>
@@ -1994,7 +1991,7 @@ For instance, we do not want to have a sales order and its invoice belonging to 
 <li><p>Define relational fields with the attribute <code class="docutils literal notranslate"><span class="pre">check_company</span></code> set to <code class="docutils literal notranslate"><span class="pre">True</span></code> if their model has a
 <code class="docutils literal notranslate"><span class="pre">company_id</span></code> field.</p></li>
 </ul>
-<p>On each <a class="reference internal" href="../reference/backend/orm.html#odoo.models.Model.create" title="odoo.models.Model.create"><code class="xref py py-meth docutils literal notranslate"><span class="pre">create()</span></code></a> and <a class="reference internal" href="../reference/backend/orm.html#odoo.models.Model.write" title="odoo.models.Model.write"><code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code></a>, automatic checks
+<p>On each <code class="xref py py-meth docutils literal notranslate"><span class="pre">create()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">write()</span></code>, automatic checks
 will be triggered to ensure the multi-company consistency of the record.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">odoo</span> <span class="kn">import</span> <span class="n">fields</span><span class="p">,</span> <span class="n">models</span>
 
@@ -2010,26 +2007,6 @@ will be triggered to ensure the multi-company consistency of the record.</p>
 <p class="alert-title">
 注釈</p><p>The field <code class="docutils literal notranslate"><span class="pre">company_id</span></code> must not be defined with <code class="docutils literal notranslate"><span class="pre">check_company=True</span></code>.</p>
 </div>
-<dl class="py method">
-<dt id="odoo.models.Model._check_company">
-<code class="sig-prename descclassname"><span class="pre">Model.</span></code><code class="sig-name descname"><span class="pre">_check_company</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fnames</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/models.py#L3456"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.models.Model._check_company" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Check the companies of the values of the given field names.</p>
-<dl class="field-list simple">
-<dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>fnames</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a>) -- names of relational fields to check</p>
-</dd>
-<dt class="field-even">例外</dt>
-<dd class="field-even"><p><a class="reference internal" href="../reference/backend/orm.html#odoo.exceptions.UserError" title="odoo.exceptions.UserError"><strong>UserError</strong></a> -- if the <code class="docutils literal notranslate"><span class="pre">company_id</span></code> of the value of any field is not
-in <code class="docutils literal notranslate"><span class="pre">[False,</span> <span class="pre">self.company_id]</span></code> (or <code class="docutils literal notranslate"><span class="pre">self</span></code> if
-<code class="xref py py-class docutils literal notranslate"><span class="pre">res_company</span></code>).</p>
-</dd>
-</dl>
-<p>For <code class="xref py py-class docutils literal notranslate"><span class="pre">res_users</span></code> relational fields,
-verifies record company is in <code class="docutils literal notranslate"><span class="pre">company_ids</span></code> fields.</p>
-<p>User with main company A, having access to company A and B, could be
-assigned or linked to records in company B.</p>
-</dd></dl>
-
 <div class="alert alert-warning">
 <p class="alert-title">
 警告</p><p>The <code class="docutils literal notranslate"><span class="pre">check_company</span></code> feature performs a strict check ! It means that if a record has no
@@ -2113,10 +2090,6 @@ the user (the companies the user checked in the multi-company widget).</p>
 </section>
 
                     </div>
-                        <a href="https://github.com/odoo/documentation/edit/15.0/content/developer/howtos/company.rst"
-                           class="o_git_link d-none d-lg-inline-block">
-                            <i class="i-edit"></i> Edit on GitHub
-                        </a>
                 </article>
         </main>
             
@@ -2157,9 +2130,6 @@ the user (the companies the user checked in the multi-company widget).</p>
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="総合索引"
              >索引</a></li>
-        <li class="right" >
-          <a href="../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
         <li class="right" >
           <a href="../reference.html" title="Reference"
              >次へ</a> |</li>

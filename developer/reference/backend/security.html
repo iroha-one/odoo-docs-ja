@@ -1882,9 +1882,6 @@
           <a href="../../../genindex.html" title="総合索引"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
-        <li class="right" >
           <a href="testing.html" title="Testing Odoo"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
@@ -2108,14 +2105,14 @@ non-overlapping rulesets, which will remove all access.</p>
 </div>
 </section><section id="field-access">
 <span id="reference-security-fields"></span><h2>Field Access<a class="headerlink" href="#field-access" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>An ORM <a class="reference internal" href="orm.html#odoo.fields.Field" title="odoo.fields.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> can have a <code class="docutils literal notranslate"><span class="pre">groups</span></code> attribute
+<p>An ORM <code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code> can have a <code class="docutils literal notranslate"><span class="pre">groups</span></code> attribute
 providing a list of groups (as a comma-separated string of
 <a class="reference internal" href="../../glossary.html#term-external-identifiers"><span class="xref std std-term">external identifiers</span></a>).</p>
 <p>If the current user is not in one of the listed groups, he will not have
 access to the field:</p>
 <ul class="simple">
 <li><p>restricted fields are automatically removed from requested views</p></li>
-<li><p>restricted fields are removed from <a class="reference internal" href="orm.html#odoo.models.Model.fields_get" title="odoo.models.Model.fields_get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fields_get()</span></code></a>
+<li><p>restricted fields are removed from <code class="xref py py-meth docutils literal notranslate"><span class="pre">fields_get()</span></code>
 responses</p></li>
 <li><p>attempts to (explicitly) read from or write to restricted fields results in
 an access error</p></li>
@@ -2388,10 +2385,6 @@ on the record id and field value must be done.</p>
 </section>
 
                     </div>
-                        <a href="https://github.com/odoo/documentation/edit/15.0/content/developer/reference/backend/security.rst"
-                           class="o_git_link d-none d-lg-inline-block">
-                            <i class="i-edit"></i> Edit on GitHub
-                        </a>
                 </article>
         </main>
             
@@ -2445,9 +2438,6 @@ on the record id and field value must be done.</p>
         <li class="right" style="margin-right: 10px">
           <a href="../../../genindex.html" title="総合索引"
              >索引</a></li>
-        <li class="right" >
-          <a href="../../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
         <li class="right" >
           <a href="testing.html" title="Testing Odoo"
              >次へ</a> |</li>

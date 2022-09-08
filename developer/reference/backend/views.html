@@ -1882,9 +1882,6 @@
           <a href="../../../genindex.html" title="総合索引"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
-        <li class="right" >
           <a href="module.html" title="Module Manifests"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
@@ -1927,24 +1924,24 @@ caps.</p>
 <h2>Fields<a class="headerlink" href="#fields" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>View objects expose a number of fields. They are optional unless specified otherwise.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (mandatory) <a class="reference internal" href="orm.html#odoo.fields.Char" title="odoo.fields.Char"><code class="xref py py-class docutils literal notranslate"><span class="pre">Char</span></code></a></p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (mandatory) <code class="xref py py-class docutils literal notranslate"><span class="pre">Char</span></code></p>
 <p>Only useful as a mnemonic/description of the view when looking for one in a list of some sort.</p>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code> <a class="reference internal" href="orm.html#odoo.fields.Char" title="odoo.fields.Char"><code class="xref py py-class docutils literal notranslate"><span class="pre">Char</span></code></a></p>
+<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">Char</span></code></p>
 <p>The model linked to the view, if applicable.</p>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> <a class="reference internal" href="orm.html#odoo.fields.Integer" title="odoo.fields.Integer"><code class="xref py py-class docutils literal notranslate"><span class="pre">Integer</span></code></a></p>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">Integer</span></code></p>
 <p>When a view is requested by <code class="docutils literal notranslate"><span class="pre">(model,</span> <span class="pre">type)</span></code>, the view matching the model and
 the type, with the lowest priority will be returned (it is the default view).</p>
 <p>It also defines the order of views application during <a class="reference internal" href="#reference-views-inheritance"><span class="std std-ref">view
 inheritance</span></a>.</p>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">groups_id</span></code> <a class="reference internal" href="orm.html#odoo.fields.Many2many" title="odoo.fields.Many2many"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2many</span></code></a> -&gt; <code class="xref py py-class docutils literal notranslate"><span class="pre">odoo.addons.base.models.res_users.Groups</span></code></p>
+<li><p><code class="docutils literal notranslate"><span class="pre">groups_id</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">Many2many</span></code> -&gt; <code class="xref py py-class docutils literal notranslate"><span class="pre">odoo.addons.base.models.res_users.Groups</span></code></p>
 <p>The groups allowed to use/access the current view.</p>
 <p>If the view extends an existing view, the extension will only be applied
 for a given user if the user has access to the provided <code class="docutils literal notranslate"><span class="pre">groups_id</span></code>.</p>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">arch</span></code> <a class="reference internal" href="orm.html#odoo.fields.Text" title="odoo.fields.Text"><code class="xref py py-class docutils literal notranslate"><span class="pre">Text</span></code></a></p>
+<li><p><code class="docutils literal notranslate"><span class="pre">arch</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">Text</span></code></p>
 <p>The description of the view layout.</p>
 </li>
 </ul>
@@ -2047,14 +2044,14 @@ attribute, like <a class="reference internal" href="#reference-views-form"><span
 <p>The two following <code class="xref py py-class docutils literal notranslate"><span class="pre">View</span></code> fields are used to specify
 inherited views.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">inherit_id</span></code> <a class="reference internal" href="orm.html#odoo.fields.Many2one" title="odoo.fields.Many2one"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code></a></p>
+<li><p><code class="docutils literal notranslate"><span class="pre">inherit_id</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code></p>
 <p>the current view's parent view, unset by default. Specify the parent using
 the <code class="docutils literal notranslate"><span class="pre">ref</span></code> attribute:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;inherit_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;library.view_book_form&quot;</span><span class="nt">/&gt;</span>
 </pre></div>
 </div>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> <a class="reference internal" href="orm.html#odoo.fields.Selection" title="odoo.fields.Selection"><code class="xref py py-class docutils literal notranslate"><span class="pre">Selection</span></code></a>: <code class="docutils literal notranslate"><span class="pre">extension</span> <span class="pre">/</span> <span class="pre">primary</span></code></p>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">Selection</span></code>: <code class="docutils literal notranslate"><span class="pre">extension</span> <span class="pre">/</span> <span class="pre">primary</span></code></p>
 <p>inheritance mode, <code class="docutils literal notranslate"><span class="pre">extension</span></code> by default if <code class="docutils literal notranslate"><span class="pre">inherit_id</span></code> is set,
 <code class="docutils literal notranslate"><span class="pre">primary</span></code> otherwise.</p>
 <p>An example of where you would want to override <code class="docutils literal notranslate"><span class="pre">mode</span></code> while using
@@ -2706,8 +2703,8 @@ for modifier 'required'. Possible attributes of the field node are:</p>
 the view (see <code class="docutils literal notranslate"><span class="pre">label</span></code> component below). Default is the field name.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">widget</span></code></dt><dd><p>fields have a default rendering based on their type
-(e.g. <a class="reference internal" href="orm.html#odoo.fields.Char" title="odoo.fields.Char"><code class="xref py py-class docutils literal notranslate"><span class="pre">Char</span></code></a>,
-<a class="reference internal" href="orm.html#odoo.fields.Many2one" title="odoo.fields.Many2one"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code></a>). The <code class="docutils literal notranslate"><span class="pre">widget</span></code> attributes allows using
+(e.g. <code class="xref py py-class docutils literal notranslate"><span class="pre">Char</span></code>,
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code>). The <code class="docutils literal notranslate"><span class="pre">widget</span></code> attributes allows using
 a different rendering method and context.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">options</span></code></dt><dd><p>JSON object specifying configuration option for the field's widget
@@ -2731,7 +2728,7 @@ size, some image decorations)</p>
 <dt><code class="docutils literal notranslate"><span class="pre">on_change</span></code></dt><dd><p>calls the specified method when this field's value is edited, can generate
 update other fields or display warnings for the user</p>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">バージョン 8.0 で非推奨: </span>Use <a class="reference internal" href="orm.html#odoo.api.onchange" title="odoo.api.onchange"><code class="xref py py-func docutils literal notranslate"><span class="pre">odoo.api.onchange()</span></code></a> on the model</p>
+<p><span class="versionmodified deprecated">バージョン 8.0 で非推奨: </span>Use <code class="xref py py-func docutils literal notranslate"><span class="pre">odoo.api.onchange()</span></code> on the model</p>
 </div>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">attrs</span></code></dt><dd><p>dynamic meta-parameters based on record values</p>
@@ -2754,7 +2751,7 @@ field is a direct child of a <code class="docutils literal notranslate"><span cl
 complex forms. <em>Should not</em> be an example of data as users are liable to
 confuse placeholder text with filled fields</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">mode</span></code></dt><dd><p>for <a class="reference internal" href="orm.html#odoo.fields.One2many" title="odoo.fields.One2many"><code class="xref py py-class docutils literal notranslate"><span class="pre">One2many</span></code></a>, display mode (view type) to use for
+<dt><code class="docutils literal notranslate"><span class="pre">mode</span></code></dt><dd><p>for <code class="xref py py-class docutils literal notranslate"><span class="pre">One2many</span></code>, display mode (view type) to use for
 the field's linked records. One of <code class="docutils literal notranslate"><span class="pre">tree</span></code>, <code class="docutils literal notranslate"><span class="pre">form</span></code>, <code class="docutils literal notranslate"><span class="pre">kanban</span></code> or
 <code class="docutils literal notranslate"><span class="pre">graph</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">tree</span></code> (a list display)</p>
 </dd>
@@ -2763,7 +2760,7 @@ the field's linked records. One of <code class="docutils literal notranslate"><s
 <dt><code class="docutils literal notranslate"><span class="pre">filename</span></code></dt><dd><p>for binary fields, name of the related field providing the name of the
 file</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">password</span></code></dt><dd><p>indicates that a <a class="reference internal" href="orm.html#odoo.fields.Char" title="odoo.fields.Char"><code class="xref py py-class docutils literal notranslate"><span class="pre">Char</span></code></a> field stores a password and
+<dt><code class="docutils literal notranslate"><span class="pre">password</span></code></dt><dd><p>indicates that a <code class="xref py py-class docutils literal notranslate"><span class="pre">Char</span></code> field stores a password and
 that its data shouldn't be displayed</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">kanban_view_ref</span></code></dt><dd><p>for opening specific kanban view when selecting records from m2o/m2m in mobile
@@ -3363,7 +3360,7 @@ template context and don't need to be accessed via <code class="docutils literal
 <dt><code class="docutils literal notranslate"><span class="pre">record</span></code></dt><dd><p>an object with all the requested fields as its attributes. Each field has
 two attributes <code class="docutils literal notranslate"><span class="pre">value</span></code> and <code class="docutils literal notranslate"><span class="pre">raw_value</span></code>, the former is formatted
 according to current user parameters, the latter is the direct value from
-a <a class="reference internal" href="orm.html#odoo.models.Model.read" title="odoo.models.Model.read"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code></a> (except for date and datetime fields
+a <code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code> (except for date and datetime fields
 that are <a class="reference external" href="https://github.com/odoo/odoo/blob/a678bd4e/addons/web_kanban/static/src/js/kanban_record.js#L102">formatted according to user's locale</a>)</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">context</span></code></dt><dd><p>the current context, coming from the action, and the one2many or many2many
@@ -3480,7 +3477,7 @@ non-editable</p>
 <dt><code class="docutils literal notranslate"><span class="pre">multi_edit</span></code></dt><dd><p>editable or not editable list can activate the multi-editing feature by defining
 the <code class="docutils literal notranslate"><span class="pre">multi_edit=1</span></code></p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">default_order</span></code></dt><dd><p>overrides the ordering of the view, replacing the model's order (<a class="reference internal" href="orm.html#odoo.models.BaseModel._order" title="odoo.models.BaseModel._order"><code class="xref py py-attr docutils literal notranslate"><span class="pre">_order</span></code></a> model attribute).
+<dt><code class="docutils literal notranslate"><span class="pre">default_order</span></code></dt><dd><p>overrides the ordering of the view, replacing the model's order (<code class="xref py py-attr docutils literal notranslate"><span class="pre">_order</span></code> model attribute).
 The value is a comma-separated list of fields, postfixed by <code class="docutils literal notranslate"><span class="pre">desc</span></code> to
 sort in reverse order:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;tree</span> <span class="na">default_order=</span><span class="s">&quot;sequence,name desc&quot;</span><span class="nt">&gt;</span>
@@ -3898,7 +3895,7 @@ than <code class="docutils literal notranslate"><span class="pre">operator</span
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">context</span></code></dt><dd><p>allows adding context keys, including the user-provided values (which
 as for <code class="docutils literal notranslate"><span class="pre">domain</span></code> are available as a <code class="docutils literal notranslate"><span class="pre">self</span></code> variable, an array of
-values e.g. <code class="docutils literal notranslate"><span class="pre">[id_1,</span> <span class="pre">id_2]</span></code> for a <a class="reference internal" href="orm.html#odoo.fields.Many2one" title="odoo.fields.Many2one"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code></a> field).
+values e.g. <code class="docutils literal notranslate"><span class="pre">[id_1,</span> <span class="pre">id_2]</span></code> for a <code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code> field).
 By default, fields don't generate domains.</p>
 <div class="alert alert-note">
 <p class="alert-title">
@@ -3911,7 +3908,7 @@ values, set <code class="docutils literal notranslate"><span class="pre">filter_
 <dt><code class="docutils literal notranslate"><span class="pre">groups</span></code></dt><dd><p>make the field only available to specific users</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">domain</span></code></dt><dd><p>if the field can provide an auto-completion
-(e.g. <a class="reference internal" href="orm.html#odoo.fields.Many2one" title="odoo.fields.Many2one"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code></a>), filters the possible
+(e.g. <code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code>), filters the possible
 completion results.</p>
 </dd>
 </dl>
@@ -3989,7 +3986,7 @@ the records are grouped by month by default. This can be changed by using the sy
 <p class="alert-title">
 注釈</p><p>The results of read_groups grouped on a field may be influenced by its group_expand attribute,
 allowing to display empty groups when needed.  For more information, please refer to
-<a class="reference internal" href="orm.html#odoo.fields.Field" title="odoo.fields.Field"><code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code></a> attributes documentation.</p>
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Field</span></code> attributes documentation.</p>
 </div>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>logical name for the filter, can be used to <a class="reference internal" href="#reference-views-search-defaults"><span class="std std-ref">enable it by default</span></a>, can also be used as
@@ -4120,10 +4117,6 @@ For instance if <code class="docutils literal notranslate"><span class="pre">foo
 </section>
 
                     </div>
-                        <a href="https://github.com/odoo/documentation/edit/15.0/content/developer/reference/backend/views.rst"
-                           class="o_git_link d-none d-lg-inline-block">
-                            <i class="i-edit"></i> Edit on GitHub
-                        </a>
                 </article>
         </main>
             
@@ -4209,9 +4202,6 @@ For instance if <code class="docutils literal notranslate"><span class="pre">foo
         <li class="right" style="margin-right: 10px">
           <a href="../../../genindex.html" title="総合索引"
              >索引</a></li>
-        <li class="right" >
-          <a href="../../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
         <li class="right" >
           <a href="module.html" title="Module Manifests"
              >次へ</a> |</li>

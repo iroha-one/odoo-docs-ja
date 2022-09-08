@@ -1882,9 +1882,6 @@
           <a href="../../../genindex.html" title="総合索引"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
-        <li class="right" >
           <a href="05_securityintro.html" title="第5章：セキュリティ - 簡単な紹介"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
@@ -1922,7 +1919,7 @@ count
 </div>
 </div>
 <p>Odooの重要なコンポーネントは <a class="reference external" href="https://en.wikipedia.org/wiki/Object-relational_mapping">ORM</a> 層です。このレイヤーは、ほとんどの <a class="reference external" href="https://en.wikipedia.org/wiki/SQL">SQL</a> を手動で記述することを回避し、拡張性とセキュリティサービス<a class="footnote-reference brackets" href="#rawsql" id="id1">2</a> を提供します。</p>
-<p>ビジネスオブジェクトは <a class="reference internal" href="../../reference/backend/orm.html#odoo.models.Model" title="odoo.models.Model"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></a> を拡張したPythonクラスとして宣言され、自動化された永続化システムに統合されます。</p>
+<p>ビジネスオブジェクトは <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code> を拡張したPythonクラスとして宣言され、自動化された永続化システムに統合されます。</p>
 <p>モデルは、その定義に属性を設定することで構成することができます。最も重要な属性は <code class="xref py py-attr docutils literal notranslate"><span class="pre">_name</span></code> で、これは必須であり、Odooシステムでのモデルの名前を定義します。ここでは、モデルの最小限の定義を示します。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">odoo</span> <span class="kn">import</span> <span class="n">models</span>
 
@@ -1976,7 +1973,7 @@ Exercise</p><p>説明を追加してみましょう。</p>
     <span class="n">name</span> <span class="o">=</span> <span class="n">fields</span><span class="o">.</span><span class="n">Char</span><span class="p">()</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">name</span></code> フィールドは <a class="reference internal" href="../../reference/backend/orm.html#odoo.fields.Char" title="odoo.fields.Char"><code class="xref py py-class docutils literal notranslate"><span class="pre">Char</span></code></a> ですが、これは、Pythonの unicode である <code class="docutils literal notranslate"><span class="pre">str</span></code> とSQLの <code class="docutils literal notranslate"><span class="pre">VARCHAR</span></code> で表現されます。</p>
+<p><code class="docutils literal notranslate"><span class="pre">name</span></code> フィールドは <code class="xref py py-class docutils literal notranslate"><span class="pre">Char</span></code> ですが、これは、Pythonの unicode である <code class="docutils literal notranslate"><span class="pre">str</span></code> とSQLの <code class="docutils literal notranslate"><span class="pre">VARCHAR</span></code> で表現されます。</p>
 </section><section id="types">
 <h3>型<a class="headerlink" href="#types" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <div class="alert alert-note">
@@ -2015,7 +2012,7 @@ Foreign-key constraints:
 </div>
 </div>
 <p>フィールドには2つの大まかなカテゴリがあります。モデルのテーブルに直接格納されるアトミック値である <code class="docutils literal notranslate"><span class="pre">単純な</span></code> フィールドと、(同じモデルまたは異なるモデルの) レコードをリンクする <code class="docutils literal notranslate"><span class="pre">リレーショナル</span></code> フィールドです。</p>
-<p>単純なフィールドの例としては、 <a class="reference internal" href="../../reference/backend/orm.html#odoo.fields.Boolean" title="odoo.fields.Boolean"><code class="xref py py-class docutils literal notranslate"><span class="pre">Boolean</span></code></a> や、 <a class="reference internal" href="../../reference/backend/orm.html#odoo.fields.Float" title="odoo.fields.Float"><code class="xref py py-class docutils literal notranslate"><span class="pre">Float</span></code></a> 、 <a class="reference internal" href="../../reference/backend/orm.html#odoo.fields.Char" title="odoo.fields.Char"><code class="xref py py-class docutils literal notranslate"><span class="pre">Char</span></code></a> 、 <a class="reference internal" href="../../reference/backend/orm.html#odoo.fields.Text" title="odoo.fields.Text"><code class="xref py py-class docutils literal notranslate"><span class="pre">Text</span></code></a> 、 <a class="reference internal" href="../../reference/backend/orm.html#odoo.fields.Date" title="odoo.fields.Date"><code class="xref py py-class docutils literal notranslate"><span class="pre">Date</span></code></a> 、 <a class="reference internal" href="../../reference/backend/orm.html#odoo.fields.Selection" title="odoo.fields.Selection"><code class="xref py py-class docutils literal notranslate"><span class="pre">Selection</span></code></a> があります。</p>
+<p>単純なフィールドの例としては、 <code class="xref py py-class docutils literal notranslate"><span class="pre">Boolean</span></code> や、 <code class="xref py py-class docutils literal notranslate"><span class="pre">Float</span></code> 、 <code class="xref py py-class docutils literal notranslate"><span class="pre">Char</span></code> 、 <code class="xref py py-class docutils literal notranslate"><span class="pre">Text</span></code> 、 <code class="xref py py-class docutils literal notranslate"><span class="pre">Date</span></code> 、 <code class="xref py py-class docutils literal notranslate"><span class="pre">Selection</span></code> があります。</p>
 <div class="alert alert-exercise">
 <p class="alert-title">
 Exercise</p><p>不動産物件のテーブルに基本的なフィールドを追加してみましょう。</p>
@@ -2143,13 +2140,13 @@ Exercise</p><p>既存のフィールドに属性を設定しましょう。</p>
 <dl class="simple">
 <dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">id</span></code> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Id</span></code>)</dt><dd><p>モデルのレコードを一意にする識別子です。</p>
 </dd>
-<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">create_date</span></code> (<a class="reference internal" href="../../reference/backend/orm.html#odoo.fields.Datetime" title="odoo.fields.Datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">Datetime</span></code></a>)</dt><dd><p>Creation date of the record.</p>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">create_date</span></code> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Datetime</span></code>)</dt><dd><p>Creation date of the record.</p>
 </dd>
-<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">create_uid</span></code> (<a class="reference internal" href="../../reference/backend/orm.html#odoo.fields.Many2one" title="odoo.fields.Many2one"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code></a>)</dt><dd><p>User who created the record.</p>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">create_uid</span></code> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code>)</dt><dd><p>User who created the record.</p>
 </dd>
-<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">write_date</span></code> (<a class="reference internal" href="../../reference/backend/orm.html#odoo.fields.Datetime" title="odoo.fields.Datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">Datetime</span></code></a>)</dt><dd><p>Last modification date of the record.</p>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">write_date</span></code> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Datetime</span></code>)</dt><dd><p>Last modification date of the record.</p>
 </dd>
-<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">write_uid</span></code> (<a class="reference internal" href="../../reference/backend/orm.html#odoo.fields.Many2one" title="odoo.fields.Many2one"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code></a>)</dt><dd><p>レコードを最後に修正したユーザー。</p>
+<dt><code class="xref py py-attr docutils literal notranslate"><span class="pre">write_uid</span></code> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code>)</dt><dd><p>レコードを最後に修正したユーザー。</p>
 </dd>
 </dl>
 <p>では、最初のモデルを作成したので、 <a class="reference internal" href="05_securityintro.html#howto-rdtraining-05-securityintro"><span class="std std-ref">セキュリティを追加</span></a> してみましょう。</p>
@@ -2165,10 +2162,6 @@ fields</span></a></p>
 </section>
 
                     </div>
-                        <a href="https://github.com/odoo/documentation/edit/15.0/content/developer/howtos/rdtraining/04_basicmodel.rst"
-                           class="o_git_link d-none d-lg-inline-block">
-                            <i class="i-edit"></i> Edit on GitHub
-                        </a>
                 </article>
         </main>
             
@@ -2211,9 +2204,6 @@ fields</span></a></p>
         <li class="right" style="margin-right: 10px">
           <a href="../../../genindex.html" title="総合索引"
              >索引</a></li>
-        <li class="right" >
-          <a href="../../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
         <li class="right" >
           <a href="05_securityintro.html" title="第5章：セキュリティ - 簡単な紹介"
              >次へ</a> |</li>

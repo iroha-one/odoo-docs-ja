@@ -1882,9 +1882,6 @@
           <a href="../../../genindex.html" title="総合索引"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
-        <li class="right" >
           <a href="10_actions.html" title="第10章: アクションの準備はできましたか？"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
@@ -1927,7 +1924,7 @@
 <p>慣例上、 <code class="xref py py-attr docutils literal notranslate"><span class="pre">compute</span></code> メソッドはプライベートメソッドであり、プレゼンテーション層からは呼び出すことができず、ビジネス層(<a class="reference internal" href="01_architecture.html#howto-rdtraining-01-architecture"><span class="std std-ref">第1章：アーキテクチャの概要</span></a> を参照) からのみ、呼び出しが可能ということです。プライベースメソッドの名前は、アンダースコア <code class="docutils literal notranslate"><span class="pre">_</span></code> で始めます。</p>
 </section><section id="dependencies">
 <h3>Dependencies<a class="headerlink" href="#dependencies" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>計算フィールドの値は、通常、計算されたレコードの他のフィールドの値に依存します。ORMは、開発者がデコレータ <a class="reference internal" href="../../reference/backend/orm.html#odoo.api.depends" title="odoo.api.depends"><code class="xref py py-func docutils literal notranslate"><span class="pre">depends()</span></code></a> を用いて計算メソッドに依存関係を指定することを期待しています。与えられた依存関係は、それが変更されるたびに、フィールドの再計算をトリガするように、ORMによって使用されます。</p>
+<p>計算フィールドの値は、通常、計算されたレコードの他のフィールドの値に依存します。ORMは、開発者がデコレータ <code class="xref py py-func docutils literal notranslate"><span class="pre">depends()</span></code> を用いて計算メソッドに依存関係を指定することを期待しています。与えられた依存関係は、それが変更されるたびに、フィールドの再計算をトリガするように、ORMによって使用されます。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">odoo</span> <span class="kn">import</span> <span class="n">api</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">models</span>
 
 <span class="k">class</span> <span class="nc">TestComputed</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
@@ -1967,7 +1964,7 @@ Exercise</p><p>総面積を計算してみましょう。</p>
         <span class="n">record</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Test for partner </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">record</span><span class="o">.</span><span class="n">partner_id</span><span class="o">.</span><span class="n">name</span>
 </pre></div>
 </div>
-<p>この例は、 <a class="reference internal" href="../../reference/backend/orm.html#odoo.fields.Many2one" title="odoo.fields.Many2one"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code></a> で説明していますが、 <a class="reference internal" href="../../reference/backend/orm.html#odoo.fields.Many2many" title="odoo.fields.Many2many"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2many</span></code></a> や <a class="reference internal" href="../../reference/backend/orm.html#odoo.fields.One2many" title="odoo.fields.One2many"><code class="xref py py-class docutils literal notranslate"><span class="pre">One2many</span></code></a> でも有効です。<a class="reference external" href="https://github.com/odoo/odoo/blob/713dd3777ca0ce9d121d5162a3d63de3237509f4/addons/account/models/account_reconcile_model.py#L248-L251">こちらの</a> 例を確認してください。</p>
+<p>この例は、 <code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code> で説明していますが、 <code class="xref py py-class docutils literal notranslate"><span class="pre">Many2many</span></code> や <code class="xref py py-class docutils literal notranslate"><span class="pre">One2many</span></code> でも有効です。<a class="reference external" href="https://github.com/odoo/odoo/blob/713dd3777ca0ce9d121d5162a3d63de3237509f4/addons/account/models/account_reconcile_model.py#L248-L251">こちらの</a> 例を確認してください。</p>
 <p>モジュールで試してみましょう！</p>
 <div class="alert alert-exercise">
 <p class="alert-title">
@@ -2057,14 +2054,14 @@ Exercise</p><p>オファーの有効期限を計算してみましょう。</p>
 <p>一般的に、計算フィールドを定義する際には、パフォーマンスを常に念頭に置かなければなりません。計算対象となるフィールドが複雑であればあるほど(例えば、多くの依存関係がある場合や、ある計算フィールドが他の計算フィールドに依存している場合など) 、計算にかかる時間は長くなります。常に、事前に計算フィールドのコストを評価するための時間を取るようにしてください。多くの場合、あなたのコードが本番サーバーに配置されたときに初めて、プロセス全体の速度を低下させていることに気付きます。かっこ悪いですね :-(</p>
 </section><section id="onchanges">
 <h2>Onchangeメカニズム<a class="headerlink" href="#onchanges" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><strong>参考</strong>: このトピックに関連するドキュメントは、 <a class="reference internal" href="../../reference/backend/orm.html#odoo.api.onchange" title="odoo.api.onchange"><code class="xref py py-func docutils literal notranslate"><span class="pre">onchange()</span></code></a> にあります。</p>
+<p><strong>参考</strong>: このトピックに関連するドキュメントは、 <code class="xref py py-func docutils literal notranslate"><span class="pre">onchange()</span></code> にあります。</p>
 <div class="alert alert-note">
 <p class="alert-title">
 注釈</p><p><strong>目標</strong>: このセクションの最後には、庭を有効にすると、デフォルトの面積が10、方向が北（North）に設定されるようになります。</p>
 <img alt="Onchange" class="align-center" src="../../../_images/onchange.gif" />
 </div>
 <p>不動産モジュールでは、ユーザーのデータ入力を支援したいと考えています。 <code class="docutils literal notranslate"><span class="pre">garden</span></code> フィールドが設定されている場合、庭面積と方角に対して、デフォルト値を与えたいと思います。また、 <code class="docutils literal notranslate"><span class="pre">garden</span></code> フィールドが未チェック状態の場合は、庭面積がゼロにリセットされ、方角もクリアされるようにします。このように、あるフィールドの値が他のフィールドの値を変更するようにします。</p>
-<p><code class="docutils literal notranslate"><span class="pre">onchange</span></code> メカニズムは、ユーザーがフィールドの値を入力したときに、データベースに何も保存せずにクライアント・インターフェースがフォームを更新する方法を提供します。これを実現するために、 <code class="docutils literal notranslate"><span class="pre">self</span></code> がフォームビューのレコードを表すメソッドを定義し、 <a class="reference internal" href="../../reference/backend/orm.html#odoo.api.onchange" title="odoo.api.onchange"><code class="xref py py-func docutils literal notranslate"><span class="pre">onchange()</span></code></a> でデコレーションして、どのフィールドでトリガーされるかを指定します。 <code class="docutils literal notranslate"><span class="pre">self</span></code> に加えた変更は、フォームに反映されます。</p>
+<p><code class="docutils literal notranslate"><span class="pre">onchange</span></code> メカニズムは、ユーザーがフィールドの値を入力したときに、データベースに何も保存せずにクライアント・インターフェースがフォームを更新する方法を提供します。これを実現するために、 <code class="docutils literal notranslate"><span class="pre">self</span></code> がフォームビューのレコードを表すメソッドを定義し、 <code class="xref py py-func docutils literal notranslate"><span class="pre">onchange()</span></code> でデコレーションして、どのフィールドでトリガーされるかを指定します。 <code class="docutils literal notranslate"><span class="pre">self</span></code> に加えた変更は、フォームに反映されます。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">odoo</span> <span class="kn">import</span> <span class="n">api</span><span class="p">,</span> <span class="n">fields</span><span class="p">,</span> <span class="n">models</span>
 
 <span class="k">class</span> <span class="nc">TestOnchange</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
@@ -2100,10 +2097,6 @@ Exercise</p><p>庭面積と方角の値を設定してみましょう。</p>
 </section>
 
                     </div>
-                        <a href="https://github.com/odoo/documentation/edit/15.0/content/developer/howtos/rdtraining/09_compute_onchange.rst"
-                           class="o_git_link d-none d-lg-inline-block">
-                            <i class="i-edit"></i> Edit on GitHub
-                        </a>
                 </article>
         </main>
             
@@ -2150,9 +2143,6 @@ Exercise</p><p>庭面積と方角の値を設定してみましょう。</p>
         <li class="right" style="margin-right: 10px">
           <a href="../../../genindex.html" title="総合索引"
              >索引</a></li>
-        <li class="right" >
-          <a href="../../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
         <li class="right" >
           <a href="10_actions.html" title="第10章: アクションの準備はできましたか？"
              >次へ</a> |</li>

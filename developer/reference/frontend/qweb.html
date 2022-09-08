@@ -1882,9 +1882,6 @@
           <a href="../../../genindex.html" title="総合索引"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
-        <li class="right" >
           <a href="../../misc.html" title="Misc"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
@@ -2222,7 +2219,7 @@ transparently.</p>
 safe content which will by default not be (re-)escaped when injected into
 templates:</p>
 <ul>
-<li><p><a class="reference internal" href="../backend/orm.html#odoo.fields.Html" title="odoo.fields.Html"><code class="xref py py-class docutils literal notranslate"><span class="pre">HTML</span> <span class="pre">fields</span></code></a>.</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">HTML</span> <span class="pre">fields</span></code>.</p></li>
 <li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">html_escape()</span></code> and <code class="xref py py-func docutils literal notranslate"><span class="pre">markupsafe.escape()</span></code> (they are
 aliases, and have no risk of double-escaping).</p></li>
 <li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">html_sanitize()</span></code>.</p></li>
@@ -2344,13 +2341,13 @@ be the name of a module, on which a <code class="docutils literal notranslate"><
 <p>Most Python-side uses of QWeb are in controllers (and during HTTP requests),
 in which case templates stored in the database (as
 <a class="reference internal" href="../backend/views.html#reference-views-qweb"><span class="std std-ref">views</span></a>) can be trivially rendered by calling
-<a class="reference internal" href="../backend/http.html#odoo.http.HttpRequest.render" title="odoo.http.HttpRequest.render"><code class="xref py py-meth docutils literal notranslate"><span class="pre">odoo.http.HttpRequest.render()</span></code></a>:</p>
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">odoo.http.HttpRequest.render()</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;my-template&#39;</span><span class="p">,</span> <span class="p">{</span>
     <span class="s1">&#39;context_value&#39;</span><span class="p">:</span> <span class="mi">42</span>
 <span class="p">})</span>
 </pre></div>
 </div>
-<p>This automatically creates a <a class="reference internal" href="../backend/http.html#odoo.http.Response" title="odoo.http.Response"><code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code></a> object which can
+<p>This automatically creates a <code class="xref py py-class docutils literal notranslate"><span class="pre">Response</span></code> object which can
 be returned from the controller (or further customized to suit).</p>
 </section><section id="view-based">
 <h4>View-based<a class="headerlink" href="#view-based" title="このヘッドラインへのパーマリンク">¶</a></h4>
@@ -2363,7 +2360,7 @@ be returned from the controller (or further customized to suit).</p>
 Templates are automatically loaded from <code class="docutils literal notranslate"><span class="pre">ir.ui.view</span></code> records.</p>
 <p>Sets up a number of default values in the rendering context:</p>
 <dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">request</span></code></dt><dd><p>the current <a class="reference internal" href="../backend/http.html#odoo.http.WebRequest" title="odoo.http.WebRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebRequest</span></code></a> object, if any</p>
+<dt><code class="docutils literal notranslate"><span class="pre">request</span></code></dt><dd><p>the current <code class="xref py py-class docutils literal notranslate"><span class="pre">WebRequest</span></code> object, if any</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">debug</span></code></dt><dd><p>whether the current request (if any) is in <code class="docutils literal notranslate"><span class="pre">debug</span></code> mode</p>
 </dd>
@@ -2651,10 +2648,6 @@ use case. Odoo 9.0 still depends on <a class="reference external" href="http://j
 </section>
 
                     </div>
-                        <a href="https://github.com/odoo/documentation/edit/15.0/content/developer/reference/frontend/qweb.rst"
-                           class="o_git_link d-none d-lg-inline-block">
-                            <i class="i-edit"></i> Edit on GitHub
-                        </a>
                 </article>
         </main>
             
@@ -2732,9 +2725,6 @@ use case. Odoo 9.0 still depends on <a class="reference external" href="http://j
         <li class="right" style="margin-right: 10px">
           <a href="../../../genindex.html" title="総合索引"
              >索引</a></li>
-        <li class="right" >
-          <a href="../../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
         <li class="right" >
           <a href="../../misc.html" title="Misc"
              >次へ</a> |</li>

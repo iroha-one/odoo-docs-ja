@@ -1882,9 +1882,6 @@
           <a href="../../../genindex.html" title="総合索引"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
-        <li class="right" >
           <a href="12_sprinkles.html" title="第12章：Sprinklesの追加"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
@@ -1906,7 +1903,7 @@
 <span id="howto-rdtraining-11-constraints"></span><h1>第11章: 制約<a class="headerlink" href="#chapter-11-constraints" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p><a class="reference internal" href="10_actions.html#howto-rdtraining-10-actions"><span class="std std-ref">前章</span></a> では、モデルにビジネスロジックを追加する機能を紹介しました。ボタンをビジネスコードにリンクできるようになりましたが、ユーザーが間違ったデータを入力しないようにするにはどうしたらよいでしょうか？例えば、不動産モジュールでは、ユーザーが負の想定価格を設定することを妨げるものはありません。</p>
 <p>Odoo provides two ways to set up automatically verified invariants:
-<a class="reference internal" href="../../reference/backend/orm.html#odoo.api.constrains" title="odoo.api.constrains"><code class="xref py py-func docutils literal notranslate"><span class="pre">Python</span> <span class="pre">constraints</span></code></a> and
+<code class="xref py py-func docutils literal notranslate"><span class="pre">Python</span> <span class="pre">constraints</span></code> and
 <code class="xref py py-attr docutils literal notranslate"><span class="pre">SQL</span> <span class="pre">constraints</span></code>.</p>
 </section><section id="sql">
 <h2>SQL<a class="headerlink" href="#sql" title="このヘッドラインへのパーマリンク">¶</a></h2>
@@ -1944,14 +1941,14 @@ Exercise</p><p>SQL制約を追加してみましょう。</p>
 <p>例えば、オファーの価格がゼロのものがあれば場合、制約を適用できません。新しい制約を適用するためには、問題のあるデータを削除します。</p>
 </section><section id="python">
 <h2>Python<a class="headerlink" href="#python" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><strong>参考</strong>: このトピックに関連するドキュメントは、 <a class="reference internal" href="../../reference/backend/orm.html#odoo.api.constrains" title="odoo.api.constrains"><code class="xref py py-func docutils literal notranslate"><span class="pre">constrains()</span></code></a> にあります。</p>
+<p><strong>参考</strong>: このトピックに関連するドキュメントは、 <code class="xref py py-func docutils literal notranslate"><span class="pre">constrains()</span></code> にあります。</p>
 <div class="alert alert-note">
 <p class="alert-title">
 注釈</p><p><strong>目標</strong>: このセクションの最後には、想定価格の90%以下のオファーを受け入れることができないようにします。</p>
 <img alt="Python constraint" class="align-center" src="../../../_images/python.gif" />
 </div>
 <p>SQL制約は、データの一貫性を確保する効率的な方法です。しかし、Pythonコードを必要とするより複雑なチェックを行う必要があるかもしれません。このような場合、Python制約が必要です。</p>
-<p>Python制約は <a class="reference internal" href="../../reference/backend/orm.html#odoo.api.constrains" title="odoo.api.constrains"><code class="xref py py-func docutils literal notranslate"><span class="pre">constrains()</span></code></a> でデコレートされたメソッドとして定義され、レコードセット上で呼び出されます。デコレータはどのフィールドが制約に関与するかを指定します。制約は、これらのフィールドのいずれかが変更されると自動的に評価されます。このメソッドは、その不変性が満たされない場合に例外を発生させることが期待されます。</p>
+<p>Python制約は <code class="xref py py-func docutils literal notranslate"><span class="pre">constrains()</span></code> でデコレートされたメソッドとして定義され、レコードセット上で呼び出されます。デコレータはどのフィールドが制約に関与するかを指定します。制約は、これらのフィールドのいずれかが変更されると自動的に評価されます。このメソッドは、その不変性が満たされない場合に例外を発生させることが期待されます。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">odoo.exceptions</span> <span class="kn">import</span> <span class="n">ValidationError</span>
 
 <span class="o">...</span>
@@ -1981,10 +1978,6 @@ Exercise</p><p>Python制約を追加してみましょう。</p>
 </section>
 
                     </div>
-                        <a href="https://github.com/odoo/documentation/edit/15.0/content/developer/howtos/rdtraining/11_constraints.rst"
-                           class="o_git_link d-none d-lg-inline-block">
-                            <i class="i-edit"></i> Edit on GitHub
-                        </a>
                 </article>
         </main>
             
@@ -2022,9 +2015,6 @@ Exercise</p><p>Python制約を追加してみましょう。</p>
         <li class="right" style="margin-right: 10px">
           <a href="../../../genindex.html" title="総合索引"
              >索引</a></li>
-        <li class="right" >
-          <a href="../../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
         <li class="right" >
           <a href="12_sprinkles.html" title="第12章：Sprinklesの追加"
              >次へ</a> |</li>

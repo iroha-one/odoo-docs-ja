@@ -1882,9 +1882,6 @@
           <a href="../../../genindex.html" title="総合索引"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
-        <li class="right" >
           <a href="http.html" title="Web Controllers"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
@@ -1939,178 +1936,6 @@ run</p>
 <p>The test runner will simply run any test case, as described in the official
 <a class="reference external" href="https://docs.python.org/3/library/unittest.html">unittest documentation</a>, but Odoo provides a number of utilities and helpers
 related to testing Odoo content (modules, mainly):</p>
-<dl class="py class">
-<dt id="odoo.tests.common.TransactionCase">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">odoo.tests.common.</span></code><code class="sig-name descname"><span class="pre">TransactionCase</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L686"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.TransactionCase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Test class in which all test methods are run in a single transaction,
-but each test method is run in a sub-transaction managed by a savepoint.
-The transaction's cursor is always closed without committing.</p>
-<p>The data setup common to all methods should be done in the class method
-<code class="docutils literal notranslate"><span class="pre">setUpClass</span></code>, so that it is done once for all test methods. This is useful
-for test cases containing fast tests but with significant database setup
-common to all cases (complex in-db test data).</p>
-<p>After being run, each test method cleans up the record cache and the
-registry cache. However, there is no cleanup of the registry models and
-fields. If a test modifies the registry (custom models and/or fields), it
-should prepare the necessary cleanup (<code class="docutils literal notranslate"><span class="pre">self.registry.reset_changes()</span></code>).</p>
-<dl class="py method">
-<dt id="odoo.tests.common.TransactionCase.browse_ref">
-<code class="sig-name descname"><span class="pre">browse_ref</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xid</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L381"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.TransactionCase.browse_ref" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Returns a record object for the provided
-<a class="reference internal" href="../../glossary.html#term-external-identifier"><span class="xref std std-term">external identifier</span></a></p>
-<dl class="field-list simple">
-<dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>xid</strong> -- fully-qualified <a class="reference internal" href="../../glossary.html#term-external-identifier"><span class="xref std std-term">external identifier</span></a>, in the form
-<code class="samp docutils literal notranslate"><em><span class="pre">module</span></em><span class="pre">.</span><em><span class="pre">identifier</span></em></code></p>
-</dd>
-<dt class="field-even">Raise</dt>
-<dd class="field-even"><p>ValueError if not found</p>
-</dd>
-<dt class="field-odd">戻り値</dt>
-<dd class="field-odd"><p><a class="reference internal" href="orm.html#odoo.models.BaseModel" title="odoo.models.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="odoo.tests.common.TransactionCase.ref">
-<code class="sig-name descname"><span class="pre">ref</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xid</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L370"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.TransactionCase.ref" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Returns database ID for the provided <a class="reference internal" href="../../glossary.html#term-external-identifier"><span class="xref std std-term">external identifier</span></a>,
-shortcut for <code class="docutils literal notranslate"><span class="pre">_xmlid_lookup</span></code></p>
-<dl class="field-list simple">
-<dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>xid</strong> -- fully-qualified <a class="reference internal" href="../../glossary.html#term-external-identifier"><span class="xref std std-term">external identifier</span></a>, in the form
-<code class="samp docutils literal notranslate"><em><span class="pre">module</span></em><span class="pre">.</span><em><span class="pre">identifier</span></em></code></p>
-</dd>
-<dt class="field-even">Raise</dt>
-<dd class="field-even"><p>ValueError if not found</p>
-</dd>
-<dt class="field-odd">戻り値</dt>
-<dd class="field-odd"><p>registered id</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="odoo.tests.common.SingleTransactionCase">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">odoo.tests.common.</span></code><code class="sig-name descname"><span class="pre">SingleTransactionCase</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L749"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.SingleTransactionCase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>TestCase in which all test methods are run in the same transaction,
-the transaction is started with the first test method and rolled back at
-the end of the last.</p>
-<dl class="py method">
-<dt id="odoo.tests.common.SingleTransactionCase.browse_ref">
-<code class="sig-name descname"><span class="pre">browse_ref</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xid</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L381"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.SingleTransactionCase.browse_ref" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Returns a record object for the provided
-<a class="reference internal" href="../../glossary.html#term-external-identifier"><span class="xref std std-term">external identifier</span></a></p>
-<dl class="field-list simple">
-<dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>xid</strong> -- fully-qualified <a class="reference internal" href="../../glossary.html#term-external-identifier"><span class="xref std std-term">external identifier</span></a>, in the form
-<code class="samp docutils literal notranslate"><em><span class="pre">module</span></em><span class="pre">.</span><em><span class="pre">identifier</span></em></code></p>
-</dd>
-<dt class="field-even">Raise</dt>
-<dd class="field-even"><p>ValueError if not found</p>
-</dd>
-<dt class="field-odd">戻り値</dt>
-<dd class="field-odd"><p><a class="reference internal" href="orm.html#odoo.models.BaseModel" title="odoo.models.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="odoo.tests.common.SingleTransactionCase.ref">
-<code class="sig-name descname"><span class="pre">ref</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xid</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L370"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.SingleTransactionCase.ref" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Returns database ID for the provided <a class="reference internal" href="../../glossary.html#term-external-identifier"><span class="xref std std-term">external identifier</span></a>,
-shortcut for <code class="docutils literal notranslate"><span class="pre">_xmlid_lookup</span></code></p>
-<dl class="field-list simple">
-<dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>xid</strong> -- fully-qualified <a class="reference internal" href="../../glossary.html#term-external-identifier"><span class="xref std std-term">external identifier</span></a>, in the form
-<code class="samp docutils literal notranslate"><em><span class="pre">module</span></em><span class="pre">.</span><em><span class="pre">identifier</span></em></code></p>
-</dd>
-<dt class="field-even">Raise</dt>
-<dd class="field-even"><p>ValueError if not found</p>
-</dd>
-<dt class="field-odd">戻り値</dt>
-<dd class="field-odd"><p>registered id</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="odoo.tests.common.SavepointCase">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">odoo.tests.common.</span></code><code class="sig-name descname"><span class="pre">SavepointCase</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L739"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.SavepointCase" title="この定義へのパーマリンク">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py class">
-<dt id="odoo.tests.common.HttpCase">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">odoo.tests.common.</span></code><code class="sig-name descname"><span class="pre">HttpCase</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L1424"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.HttpCase" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Transactional HTTP TestCase with url_open and Chrome headless helpers.</p>
-<dl class="py method">
-<dt id="odoo.tests.common.HttpCase.browse_ref">
-<code class="sig-name descname"><span class="pre">browse_ref</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xid</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L381"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.HttpCase.browse_ref" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Returns a record object for the provided
-<a class="reference internal" href="../../glossary.html#term-external-identifier"><span class="xref std std-term">external identifier</span></a></p>
-<dl class="field-list simple">
-<dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>xid</strong> -- fully-qualified <a class="reference internal" href="../../glossary.html#term-external-identifier"><span class="xref std std-term">external identifier</span></a>, in the form
-<code class="samp docutils literal notranslate"><em><span class="pre">module</span></em><span class="pre">.</span><em><span class="pre">identifier</span></em></code></p>
-</dd>
-<dt class="field-even">Raise</dt>
-<dd class="field-even"><p>ValueError if not found</p>
-</dd>
-<dt class="field-odd">戻り値</dt>
-<dd class="field-odd"><p><a class="reference internal" href="orm.html#odoo.models.BaseModel" title="odoo.models.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="odoo.tests.common.HttpCase.browser_js">
-<code class="sig-name descname"><span class="pre">browser_js</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ready</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">login</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L1547"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.HttpCase.browser_js" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Test js code running in the browser
-- optionnally log as 'login'
-- load page given by url_path
-- wait for ready object to be available
-- eval(code) inside the page</p>
-<p>To signal success test do: console.log('test successful')
-To signal test failure raise an exception or call console.error</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="odoo.tests.common.HttpCase.ref">
-<code class="sig-name descname"><span class="pre">ref</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xid</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L370"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.HttpCase.ref" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Returns database ID for the provided <a class="reference internal" href="../../glossary.html#term-external-identifier"><span class="xref std std-term">external identifier</span></a>,
-shortcut for <code class="docutils literal notranslate"><span class="pre">_xmlid_lookup</span></code></p>
-<dl class="field-list simple">
-<dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>xid</strong> -- fully-qualified <a class="reference internal" href="../../glossary.html#term-external-identifier"><span class="xref std std-term">external identifier</span></a>, in the form
-<code class="samp docutils literal notranslate"><em><span class="pre">module</span></em><span class="pre">.</span><em><span class="pre">identifier</span></em></code></p>
-</dd>
-<dt class="field-even">Raise</dt>
-<dd class="field-even"><p>ValueError if not found</p>
-</dd>
-<dt class="field-odd">戻り値</dt>
-<dd class="field-odd"><p>registered id</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py function">
-<dt id="odoo.tests.common.tagged">
-<code class="sig-prename descclassname"><span class="pre">odoo.tests.common.</span></code><code class="sig-name descname"><span class="pre">tagged</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">tags</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L2644"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.tagged" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>A decorator to tag BaseCase objects.
-Tags are stored in a set that can be accessed from a 'test_tags' attribute.
-A tag prefixed by '-' will remove the tag e.g. to remove the 'standard' tag.
-By default, all Test classes from odoo.tests.common have a test_tags
-attribute that defaults to 'standard' and 'at_install'.
-When using class inheritance, the tags are NOT inherited.</p>
-</dd></dl>
-
 <p>By default, tests are run once right after the corresponding module has been
 installed. Test cases can also be configured to run after all modules have
 been installed, and not run right after the module installation:</p>
@@ -2125,7 +1950,7 @@ been installed, and not run right after the module installation:</p>
 </pre></div>
 </div>
 <p>The most common situation is to use
-<a class="reference internal" href="#odoo.tests.common.TransactionCase" title="odoo.tests.common.TransactionCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">TransactionCase</span></code></a> and test a property of a model
+<code class="xref py py-class docutils literal notranslate"><span class="pre">TransactionCase</span></code> and test a property of a model
 in each method:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TestModelA</span><span class="p">(</span><span class="n">common</span><span class="o">.</span><span class="n">TransactionCase</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">test_some_action</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -2142,171 +1967,6 @@ in each method:</p>
 <p class="alert-title">
 注釈</p><p>Test methods must start with <code class="docutils literal notranslate"><span class="pre">test_</span></code></p>
 </div>
-<dl class="py class">
-<dt id="odoo.tests.common.Form">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">odoo.tests.common.</span></code><code class="sig-name descname"><span class="pre">Form</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recordp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L1712"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.Form" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Server-side form view implementation (partial)</p>
-<p>Implements much of the &quot;form view&quot; manipulation flow, such that
-server-side tests can more properly reflect the behaviour which would be
-observed when manipulating the interface:</p>
-<ul class="simple">
-<li><p>call default_get and the relevant onchanges on &quot;creation&quot;</p></li>
-<li><p>call the relevant onchanges on setting fields</p></li>
-<li><p>properly handle defaults &amp; onchanges around x2many fields</p></li>
-</ul>
-<p>Saving the form returns the created record if in creation mode.</p>
-<p>Regular fields can just be assigned directly to the form, for
-<a class="reference internal" href="orm.html#odoo.fields.Many2one" title="odoo.fields.Many2one"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code></a> fields assign a singleton recordset:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># empty recordset =&gt; creation mode</span>
-<span class="n">f</span> <span class="o">=</span> <span class="n">Form</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">env</span><span class="p">[</span><span class="s1">&#39;sale.order&#39;</span><span class="p">])</span>
-<span class="n">f</span><span class="o">.</span><span class="n">partner_id</span> <span class="o">=</span> <span class="n">a_partner</span>
-<span class="n">so</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>When editing a record, using the form as a context manager to
-automatically save it at the end of the scope:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">Form</span><span class="p">(</span><span class="n">so</span><span class="p">)</span> <span class="k">as</span> <span class="n">f2</span><span class="p">:</span>
-    <span class="n">f2</span><span class="o">.</span><span class="n">payment_term_id</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">ref</span><span class="p">(</span><span class="s1">&#39;account.account_payment_term_15days&#39;</span><span class="p">)</span>
-    <span class="c1"># f2 is saved here</span>
-</pre></div>
-</div>
-<p>For <a class="reference internal" href="orm.html#odoo.fields.Many2many" title="odoo.fields.Many2many"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2many</span></code></a> fields, the field itself is a
-<a class="reference internal" href="#odoo.tests.common.M2MProxy" title="odoo.tests.common.M2MProxy"><code class="xref py py-class docutils literal notranslate"><span class="pre">M2MProxy</span></code></a> and can be altered by adding or
-removing records:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">Form</span><span class="p">(</span><span class="n">user</span><span class="p">)</span> <span class="k">as</span> <span class="n">u</span><span class="p">:</span>
-    <span class="n">u</span><span class="o">.</span><span class="n">groups_id</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">ref</span><span class="p">(</span><span class="s1">&#39;account.group_account_manager&#39;</span><span class="p">))</span>
-    <span class="n">u</span><span class="o">.</span><span class="n">groups_id</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">env</span><span class="o">.</span><span class="n">ref</span><span class="p">(</span><span class="s1">&#39;base.group_portal&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Finally <a class="reference internal" href="orm.html#odoo.fields.One2many" title="odoo.fields.One2many"><code class="xref py py-class docutils literal notranslate"><span class="pre">One2many</span></code></a> are reified as
-<a class="reference internal" href="#odoo.tests.common.O2MProxy" title="odoo.tests.common.O2MProxy"><code class="xref py py-class docutils literal notranslate"><span class="pre">O2MProxy</span></code></a>.</p>
-<p>Because the <a class="reference internal" href="orm.html#odoo.fields.One2many" title="odoo.fields.One2many"><code class="xref py py-class docutils literal notranslate"><span class="pre">One2many</span></code></a> only exists through its
-parent, it is manipulated more directly by creating &quot;sub-forms&quot;
-with the <a class="reference internal" href="#odoo.tests.common.O2MProxy.new" title="odoo.tests.common.O2MProxy.new"><code class="xref py py-meth docutils literal notranslate"><span class="pre">new()</span></code></a> and
-<a class="reference internal" href="#odoo.tests.common.O2MProxy.edit" title="odoo.tests.common.O2MProxy.edit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">edit()</span></code></a> methods. These would
-normally be used as context managers since they get saved in the
-parent record:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">Form</span><span class="p">(</span><span class="n">so</span><span class="p">)</span> <span class="k">as</span> <span class="n">f3</span><span class="p">:</span>
-    <span class="c1"># add support</span>
-    <span class="k">with</span> <span class="n">f3</span><span class="o">.</span><span class="n">order_line</span><span class="o">.</span><span class="n">new</span><span class="p">()</span> <span class="k">as</span> <span class="n">line</span><span class="p">:</span>
-        <span class="n">line</span><span class="o">.</span><span class="n">product_id</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">ref</span><span class="p">(</span><span class="s1">&#39;product.product_product_2&#39;</span><span class="p">)</span>
-    <span class="c1"># add a computer</span>
-    <span class="k">with</span> <span class="n">f3</span><span class="o">.</span><span class="n">order_line</span><span class="o">.</span><span class="n">new</span><span class="p">()</span> <span class="k">as</span> <span class="n">line</span><span class="p">:</span>
-        <span class="n">line</span><span class="o">.</span><span class="n">product_id</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">ref</span><span class="p">(</span><span class="s1">&#39;product.product_product_3&#39;</span><span class="p">)</span>
-    <span class="c1"># we actually want 5 computers</span>
-    <span class="k">with</span> <span class="n">f3</span><span class="o">.</span><span class="n">order_line</span><span class="o">.</span><span class="n">edit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">as</span> <span class="n">line</span><span class="p">:</span>
-        <span class="n">line</span><span class="o">.</span><span class="n">product_uom_qty</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="c1"># remove support</span>
-    <span class="n">f3</span><span class="o">.</span><span class="n">order_line</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-    <span class="c1"># SO is saved here</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>recordp</strong> (<a class="reference internal" href="orm.html#odoo.models.Model" title="odoo.models.Model"><em>odoo.models.Model</em></a>) -- empty or singleton recordset. An empty recordset will
-put the view in &quot;creation&quot; mode and trigger calls to
-default_get and on-load onchanges, a singleton will
-put it in &quot;edit&quot; mode and only load the view's data.</p></li>
-<li><p><strong>view</strong> (<em>int | str | odoo.model.Model</em>) -- the id, xmlid or actual view object to use for
-onchanges and view constraints. If none is provided,
-simply loads the default view for the model.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="versionadded">
-<p><span class="versionmodified added">バージョン 12.0 で追加.</span></p>
-</div>
-<dl class="py method">
-<dt id="odoo.tests.common.Form.save">
-<code class="sig-name descname"><span class="pre">save</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L2044"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.Form.save" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Saves the form, returns the created record if applicable</p>
-<ul class="simple">
-<li><p>does not save <code class="docutils literal notranslate"><span class="pre">readonly</span></code> fields</p></li>
-<li><p>does not save unmodified fields (during edition) — any assignment
-or onchange return marks the field as modified, even if set to its
-current value</p></li>
-</ul>
-<dl class="field-list simple">
-<dt class="field-odd">例外</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#AssertionError" title="(in Python v3.10)"><strong>AssertionError</strong></a> -- if the form has any unfilled required field</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="odoo.tests.common.M2MProxy">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">odoo.tests.common.</span></code><code class="sig-name descname"><span class="pre">M2MProxy</span></code><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L2521"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.M2MProxy" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Behaves as a <code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code> of recordsets, can be
-indexed or sliced to get actual underlying recordsets.</p>
-<dl class="py method">
-<dt id="odoo.tests.common.M2MProxy.add">
-<code class="sig-name descname"><span class="pre">add</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L2550"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.M2MProxy.add" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Adds <code class="docutils literal notranslate"><span class="pre">record</span></code> to the field, the record must already exist.</p>
-<p>The addition will only be finalized when the parent record is saved.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="odoo.tests.common.M2MProxy.clear">
-<code class="sig-name descname"><span class="pre">clear</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L2587"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.M2MProxy.clear" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Removes all existing records in the m2m</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="odoo.tests.common.M2MProxy.remove">
-<code class="sig-name descname"><span class="pre">remove</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L2570"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.M2MProxy.remove" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Removes a record at a certain index or with a provided id from
-the field.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt id="odoo.tests.common.O2MProxy">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">odoo.tests.common.</span></code><code class="sig-name descname"><span class="pre">O2MProxy</span></code><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L2419"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.O2MProxy" title="この定義へのパーマリンク">¶</a></dt>
-<dd><dl class="py method">
-<dt id="odoo.tests.common.O2MProxy.edit">
-<code class="sig-name descname"><span class="pre">edit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L2486"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.O2MProxy.edit" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Returns a <a class="reference internal" href="#odoo.tests.common.Form" title="odoo.tests.common.Form"><code class="xref py py-class docutils literal notranslate"><span class="pre">Form</span></code></a> to edit the pre-existing
-<a class="reference internal" href="orm.html#odoo.fields.One2many" title="odoo.fields.One2many"><code class="xref py py-class docutils literal notranslate"><span class="pre">One2many</span></code></a> record.</p>
-<p>The form is created from the list view if editable, or the field's
-form view otherwise.</p>
-<dl class="field-list simple">
-<dt class="field-odd">例外</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#AssertionError" title="(in Python v3.10)"><strong>AssertionError</strong></a> -- if the field is not editable</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="odoo.tests.common.O2MProxy.new">
-<code class="sig-name descname"><span class="pre">new</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L2474"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.O2MProxy.new" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Returns a <a class="reference internal" href="#odoo.tests.common.Form" title="odoo.tests.common.Form"><code class="xref py py-class docutils literal notranslate"><span class="pre">Form</span></code></a> for a new
-<a class="reference internal" href="orm.html#odoo.fields.One2many" title="odoo.fields.One2many"><code class="xref py py-class docutils literal notranslate"><span class="pre">One2many</span></code></a> record, properly initialised.</p>
-<p>The form is created from the list view if editable, or the field's
-form view otherwise.</p>
-<dl class="field-list simple">
-<dt class="field-odd">例外</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#AssertionError" title="(in Python v3.10)"><strong>AssertionError</strong></a> -- if the field is not editable</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="odoo.tests.common.O2MProxy.remove">
-<code class="sig-name descname"><span class="pre">remove</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tests/common.py#L2498"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tests.common.O2MProxy.remove" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Removes the record at <code class="docutils literal notranslate"><span class="pre">index</span></code> from the parent form.</p>
-<dl class="field-list simple">
-<dt class="field-odd">例外</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#AssertionError" title="(in Python v3.10)"><strong>AssertionError</strong></a> -- if the field is not editable</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
 </section><section id="running-tests">
 <h3>Running tests<a class="headerlink" href="#running-tests" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>Tests are automatically run when installing or updating modules if
@@ -2317,9 +1977,9 @@ Odoo server.</p>
 <p>In Odoo, Python tests can be tagged to facilitate the test selection when
 running tests.</p>
 <p>Subclasses of <code class="xref py py-class docutils literal notranslate"><span class="pre">odoo.tests.common.BaseCase</span></code> (usually through
-<a class="reference internal" href="#odoo.tests.common.TransactionCase" title="odoo.tests.common.TransactionCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">TransactionCase</span></code></a>,
-<a class="reference internal" href="#odoo.tests.common.SavepointCase" title="odoo.tests.common.SavepointCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">SavepointCase</span></code></a> or
-<a class="reference internal" href="#odoo.tests.common.HttpCase" title="odoo.tests.common.HttpCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">HttpCase</span></code></a>) are automatically tagged with
+<code class="xref py py-class docutils literal notranslate"><span class="pre">TransactionCase</span></code>,
+<code class="xref py py-class docutils literal notranslate"><span class="pre">SavepointCase</span></code> or
+<code class="xref py py-class docutils literal notranslate"><span class="pre">HttpCase</span></code>) are automatically tagged with
 <code class="docutils literal notranslate"><span class="pre">standard</span></code> and <code class="docutils literal notranslate"><span class="pre">at_install</span></code> by default.</p>
 </section><section id="invocation">
 <h4>Invocation<a class="headerlink" href="#invocation" title="このヘッドラインへのパーマリンク">¶</a></h4>
@@ -2330,12 +1990,12 @@ when using <a class="reference internal" href="../../misc/other/cmdline.html#cmd
 <p>This option defaults to <code class="docutils literal notranslate"><span class="pre">+standard</span></code> meaning tests tagged <code class="docutils literal notranslate"><span class="pre">standard</span></code>
 (explicitly or implicitly) will be run by default when starting Odoo
 with <a class="reference internal" href="../../misc/other/cmdline.html#cmdoption-odoo-bin-test-enable"><code class="xref std std-option docutils literal notranslate"><span class="pre">--test-enable</span></code></a>.</p>
-<p>When writing tests, the <a class="reference internal" href="#odoo.tests.common.tagged" title="odoo.tests.common.tagged"><code class="xref py py-func docutils literal notranslate"><span class="pre">tagged()</span></code></a> decorator can be
+<p>When writing tests, the <code class="xref py py-func docutils literal notranslate"><span class="pre">tagged()</span></code> decorator can be
 used on <strong>test classes</strong> to add or remove tags.</p>
 <p>The decorator's arguments are tag names, as strings.</p>
 <div class="alert alert-danger">
 <p class="alert-title">
-危険</p><p><a class="reference internal" href="#odoo.tests.common.tagged" title="odoo.tests.common.tagged"><code class="xref py py-func docutils literal notranslate"><span class="pre">tagged()</span></code></a> is a class decorator, it has no
+危険</p><p><code class="xref py py-func docutils literal notranslate"><span class="pre">tagged()</span></code> is a class decorator, it has no
 effect on functions or methods</p>
 </div>
 <p>Tags can be prefixed with the minus (<code class="docutils literal notranslate"><span class="pre">-</span></code>) sign, to <em>remove</em> them instead of
@@ -2865,75 +2525,9 @@ you can use the <code class="xref py py-meth docutils literal notranslate"><span
 one can use this feature to fill a database on demand with the desired number of test data.
 This can be used to detect diverse bugs or performance issues in tested flows.</p>
 <p id="reference-testing-populate-methods">To specify this feature for a given model, the following methods and attributes can be defined.</p>
-<dl class="py attribute">
-<dt id="odoo.models.Model._populate_sizes">
-<code class="sig-prename descclassname"><span class="pre">Model.</span></code><code class="sig-name descname"><span class="pre">_populate_sizes</span></code><a class="headerlink" href="#odoo.models.Model._populate_sizes" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a dict mapping symbolic sizes (<code class="docutils literal notranslate"><span class="pre">'small'</span></code>, <code class="docutils literal notranslate"><span class="pre">'medium'</span></code>, <code class="docutils literal notranslate"><span class="pre">'large'</span></code>) to integers,
-giving the minimal number of records that <a class="reference internal" href="#odoo.models.Model._populate" title="odoo.models.Model._populate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">_populate()</span></code></a> should create.</p>
-<p>The default population sizes are:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">small</span></code> : 10</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">medium</span></code> : 100</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">large</span></code> : 1000</p></li>
-</ul>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="odoo.models.Model._populate_dependencies">
-<code class="sig-prename descclassname"><span class="pre">Model.</span></code><code class="sig-name descname"><span class="pre">_populate_dependencies</span></code><a class="headerlink" href="#odoo.models.Model._populate_dependencies" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return the list of models which have to be populated before the current one.</p>
-<dl class="field-list simple">
-<dt class="field-odd">戻り値の型</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)">list</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="odoo.models.Model._populate">
-<code class="sig-prename descclassname"><span class="pre">Model.</span></code><code class="sig-name descname"><span class="pre">_populate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/models.py#L6569"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.models.Model._populate" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Create records to populate this model.</p>
-<dl class="field-list simple">
-<dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) -- symbolic size for the number of records: <code class="docutils literal notranslate"><span class="pre">'small'</span></code>, <code class="docutils literal notranslate"><span class="pre">'medium'</span></code> or <code class="docutils literal notranslate"><span class="pre">'large'</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="odoo.models.Model._populate_factories">
-<code class="sig-prename descclassname"><span class="pre">Model.</span></code><code class="sig-name descname"><span class="pre">_populate_factories</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/models.py#L6517"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.models.Model._populate_factories" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Generates a factory for the different fields of the model.</p>
-<p><code class="docutils literal notranslate"><span class="pre">factory</span></code> is a generator of values (dict of field values).</p>
-<p>Factory skeleton:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">generator</span><span class="p">(</span><span class="n">iterator</span><span class="p">,</span> <span class="n">field_name</span><span class="p">,</span> <span class="n">model_name</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">counter</span><span class="p">,</span> <span class="n">values</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">iterator</span><span class="p">):</span>
-        <span class="c1"># values.update(dict())</span>
-        <span class="k">yield</span> <span class="n">values</span>
-</pre></div>
-</div>
-<p>See <a class="reference internal" href="#module-odoo.tools.populate" title="odoo.tools.populate"><code class="xref py py-mod docutils literal notranslate"><span class="pre">odoo.tools.populate</span></code></a> for population tools and applications.</p>
-<dl class="field-list simple">
-<dt class="field-odd">戻り値</dt>
-<dd class="field-odd"><p>list of pairs(field_name, factory) where <code class="docutils literal notranslate"><span class="pre">factory</span></code> is a generator function.</p>
-</dd>
-<dt class="field-even">戻り値の型</dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)">list</a>(<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.10)">tuple</a>(<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>, generator))</p>
-</dd>
-</dl>
 <div class="alert alert-note">
 <p class="alert-title">
-注釈</p><p>It is the responsibility of the generator to handle the field_name correctly.
-The generator could generate values for multiple fields together. In this case,
-the field_name should be more a &quot;field_group&quot; (should be begin by a &quot;_&quot;), covering
-the different fields updated by the generator (e.g. &quot;_address&quot; for a generator
-updating multiple address fields).</p>
-</div>
-</dd></dl>
-
-<div class="alert alert-note">
-<p class="alert-title">
-注釈</p><p>You have to define at least <a class="reference internal" href="#odoo.models.Model._populate" title="odoo.models.Model._populate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">_populate()</span></code></a> or <a class="reference internal" href="#odoo.models.Model._populate_factories" title="odoo.models.Model._populate_factories"><code class="xref py py-meth docutils literal notranslate"><span class="pre">_populate_factories()</span></code></a>
+注釈</p><p>You have to define at least <code class="xref py py-meth docutils literal notranslate"><span class="pre">_populate()</span></code> or <code class="xref py py-meth docutils literal notranslate"><span class="pre">_populate_factories()</span></code>
 on the model to enable database population.</p>
 </div>
 </section><section id="example-model">
@@ -2982,144 +2576,9 @@ on the model to enable database population.</p>
 <h4>Population tools<a class="headerlink" href="#population-tools" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>Multiple population tools are available to easily create
 the needed data generators.</p>
-<span class="target" id="module-odoo.tools.populate"></span><dl class="py function">
-<dt id="odoo.tools.populate.cartesian">
-<code class="sig-prename descclassname"><span class="pre">odoo.tools.populate.</span></code><code class="sig-name descname"><span class="pre">cartesian</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vals</span></em>, <em class="sig-param"><span class="pre">weights=None</span></em>, <em class="sig-param"><span class="pre">seed=False</span></em>, <em class="sig-param"><span class="pre">formatter=&lt;function</span> <span class="pre">format_str&gt;</span></em>, <em class="sig-param"><span class="pre">then=None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tools/populate.py#L57"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tools.populate.cartesian" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a factory for an iterator of values dicts that combines all <code class="docutils literal notranslate"><span class="pre">vals</span></code> for
-the field with the other field values in input.</p>
-<dl class="field-list simple">
-<dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>vals</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a>) -- list in which a value will be chosen, depending on <code class="docutils literal notranslate"><span class="pre">weights</span></code></p></li>
-<li><p><strong>weights</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a>) -- list of probabilistic weights</p></li>
-<li><p><strong>seed</strong> -- optional initialization of the random number generator</p></li>
-<li><p><strong>formatter</strong> (<em>function</em>) -- (val, counter, values) --&gt; formatted_value</p></li>
-<li><p><strong>then</strong> (<em>function</em>) -- if defined, factory used when vals has been consumed.</p></li>
-</ul>
-</dd>
-<dt class="field-even">戻り値</dt>
-<dd class="field-even"><p>function of the form (iterator, field_name, model_name) -&gt; values</p>
-</dd>
-<dt class="field-odd">戻り値の型</dt>
-<dd class="field-odd"><p>function (iterator, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>) -&gt; dict</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="odoo.tools.populate.compute">
-<code class="sig-prename descclassname"><span class="pre">odoo.tools.populate.</span></code><code class="sig-name descname"><span class="pre">compute</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tools/populate.py#L122"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tools.populate.compute" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a factory for an iterator of values dicts that computes the field value
-as <code class="docutils literal notranslate"><span class="pre">function(values,</span> <span class="pre">counter,</span> <span class="pre">random)</span></code>, where <code class="docutils literal notranslate"><span class="pre">values</span></code> is the other field values,
-<code class="docutils literal notranslate"><span class="pre">counter</span></code> is an integer, and <code class="docutils literal notranslate"><span class="pre">random</span></code> is a pseudo-random number generator.</p>
-<dl class="field-list simple">
-<dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>function</strong> (<em>function</em>) -- (values, counter, random) --&gt; field_values</p></li>
-<li><p><strong>seed</strong> -- optional initialization of the random number generator</p></li>
-</ul>
-</dd>
-<dt class="field-even">戻り値</dt>
-<dd class="field-even"><p>function of the form (iterator, field_name, model_name) -&gt; values</p>
-</dd>
-<dt class="field-odd">戻り値の型</dt>
-<dd class="field-odd"><p>function (iterator, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>) -&gt; dict</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="odoo.tools.populate.constant">
-<code class="sig-prename descclassname"><span class="pre">odoo.tools.populate.</span></code><code class="sig-name descname"><span class="pre">constant</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">val</span></em>, <em class="sig-param"><span class="pre">formatter=&lt;function</span> <span class="pre">format_str&gt;</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tools/populate.py#L108"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tools.populate.constant" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a factory for an iterator of values dicts that sets the field
-to the given value in each input dict.</p>
-<dl class="field-list simple">
-<dt class="field-odd">戻り値</dt>
-<dd class="field-odd"><p>function of the form (iterator, field_name, model_name) -&gt; values</p>
-</dd>
-<dt class="field-even">戻り値の型</dt>
-<dd class="field-even"><p>function (iterator, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>) -&gt; dict</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="odoo.tools.populate.iterate">
-<code class="sig-prename descclassname"><span class="pre">odoo.tools.populate.</span></code><code class="sig-name descname"><span class="pre">iterate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vals</span></em>, <em class="sig-param"><span class="pre">weights=None</span></em>, <em class="sig-param"><span class="pre">seed=False</span></em>, <em class="sig-param"><span class="pre">formatter=&lt;function</span> <span class="pre">format_str&gt;</span></em>, <em class="sig-param"><span class="pre">then=None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tools/populate.py#L82"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tools.populate.iterate" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a factory for an iterator of values dicts that picks a value among <code class="docutils literal notranslate"><span class="pre">vals</span></code>
-for each input.  Once all <code class="docutils literal notranslate"><span class="pre">vals</span></code> have been used once, resume as <code class="docutils literal notranslate"><span class="pre">then</span></code> or as a
-<code class="docutils literal notranslate"><span class="pre">randomize</span></code> generator.</p>
-<dl class="field-list simple">
-<dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>vals</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a>) -- list in which a value will be chosen, depending on <code class="docutils literal notranslate"><span class="pre">weights</span></code></p></li>
-<li><p><strong>weights</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a>) -- list of probabilistic weights</p></li>
-<li><p><strong>seed</strong> -- optional initialization of the random number generator</p></li>
-<li><p><strong>formatter</strong> (<em>function</em>) -- (val, counter, values) --&gt; formatted_value</p></li>
-<li><p><strong>then</strong> (<em>function</em>) -- if defined, factory used when vals has been consumed.</p></li>
-</ul>
-</dd>
-<dt class="field-even">戻り値</dt>
-<dd class="field-even"><p>function of the form (iterator, field_name, model_name) -&gt; values</p>
-</dd>
-<dt class="field-odd">戻り値の型</dt>
-<dd class="field-odd"><p>function (iterator, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>) -&gt; dict</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="odoo.tools.populate.randint">
-<code class="sig-prename descclassname"><span class="pre">odoo.tools.populate.</span></code><code class="sig-name descname"><span class="pre">randint</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tools/populate.py#L140"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tools.populate.randint" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a factory for an iterator of values dicts that sets the field
-to a random integer between a and b included in each input dict.</p>
-<dl class="field-list simple">
-<dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>a</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- minimal random value</p></li>
-<li><p><strong>b</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- maximal random value</p></li>
-</ul>
-</dd>
-<dt class="field-even">戻り値</dt>
-<dd class="field-even"><p>function of the form (iterator, field_name, model_name) -&gt; values</p>
-</dd>
-<dt class="field-odd">戻り値の型</dt>
-<dd class="field-odd"><p>function (iterator, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>) -&gt; dict</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt id="odoo.tools.populate.randomize">
-<code class="sig-prename descclassname"><span class="pre">odoo.tools.populate.</span></code><code class="sig-name descname"><span class="pre">randomize</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vals</span></em>, <em class="sig-param"><span class="pre">weights=None</span></em>, <em class="sig-param"><span class="pre">seed=False</span></em>, <em class="sig-param"><span class="pre">formatter=&lt;function</span> <span class="pre">format_str&gt;</span></em>, <em class="sig-param"><span class="pre">counter_offset=0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/tools/populate.py#L36"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.tools.populate.randomize" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Return a factory for an iterator of values dicts with pseudo-randomly
-chosen values (among <code class="docutils literal notranslate"><span class="pre">vals</span></code>) for a field.</p>
-<dl class="field-list simple">
-<dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>vals</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a>) -- list in which a value will be chosen, depending on <code class="docutils literal notranslate"><span class="pre">weights</span></code></p></li>
-<li><p><strong>weights</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a>) -- list of probabilistic weights</p></li>
-<li><p><strong>seed</strong> -- optional initialization of the random number generator</p></li>
-<li><p><strong>formatter</strong> (<em>function</em>) -- (val, counter, values) --&gt; formatted_value</p></li>
-<li><p><strong>counter_offset</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) -- </p></li>
-</ul>
-</dd>
-<dt class="field-even">戻り値</dt>
-<dd class="field-even"><p>function of the form (iterator, field_name, model_name) -&gt; values</p>
-</dd>
-<dt class="field-odd">戻り値の型</dt>
-<dd class="field-odd"><p>function (iterator, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)">str</a>) -&gt; dict</p>
-</dd>
-</dl>
-</dd></dl>
-
 </section>
 
                     </div>
-                        <a href="https://github.com/odoo/documentation/edit/15.0/content/developer/reference/backend/testing.rst"
-                           class="o_git_link d-none d-lg-inline-block">
-                            <i class="i-edit"></i> Edit on GitHub
-                        </a>
                 </article>
         </main>
             
@@ -3198,9 +2657,6 @@ chosen values (among <code class="docutils literal notranslate"><span class="pre
         <li class="right" style="margin-right: 10px">
           <a href="../../../genindex.html" title="総合索引"
              >索引</a></li>
-        <li class="right" >
-          <a href="../../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
         <li class="right" >
           <a href="http.html" title="Web Controllers"
              >次へ</a> |</li>

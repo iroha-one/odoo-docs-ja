@@ -1882,9 +1882,6 @@
           <a href="../../../genindex.html" title="総合索引"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="../../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
-        <li class="right" >
           <a href="views.html" title="Views"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
@@ -1983,7 +1980,7 @@ is the category of the view (tree, form, graph, ...) and the first is
 an optional database id (or <code class="docutils literal notranslate"><span class="pre">False</span></code>). If no id is provided, the client
 should fetch the default view of the specified type for the requested
 model (this is automatically done by
-<a class="reference internal" href="orm.html#odoo.models.Model.fields_view_get" title="odoo.models.Model.fields_view_get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fields_view_get()</span></code></a>). The first type of the
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">fields_view_get()</span></code>). The first type of the
 list is the default view type and will be open by default when the action
 is executed. Each view type should be present at most once in the list</p>
 </dd>
@@ -2101,27 +2098,6 @@ the current content with the page if <code class="docutils literal notranslate">
 <p>will replace the current content section by the Odoo home page.</p>
 </section><section id="server-actions-ir-actions-server">
 <span id="reference-actions-server"></span><h2>Server Actions (<code class="docutils literal notranslate"><span class="pre">ir.actions.server</span></code>)<a class="headerlink" href="#server-actions-ir-actions-server" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<dl class="py class">
-<dt id="odoo.addons.base.models.ir_actions.IrActionsServer">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">odoo.addons.base.models.ir_actions.</span></code><code class="sig-name descname"><span class="pre">IrActionsServer</span></code><a class="reference external" href="https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/models/ir_actions.py#L365"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.addons.base.models.ir_actions.IrActionsServer" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>Server actions model. Server action work on a base model and offer various
-type of actions that can be executed automatically, for example using base
-action rules, of manually, by adding the action in the 'More' contextual
-menu.</p>
-<p>Since Odoo 8.0 a button 'Create Menu Action' button is available on the
-action form view. It creates an entry in the More menu of the base model.
-This allows to create server actions and run them in mass mode easily through
-the interface.</p>
-<p>The available actions are :</p>
-<ul class="simple">
-<li><p>'Execute Python Code': a block of python code that will be executed</p></li>
-<li><p>'Create a new Record': create a new record with new values</p></li>
-<li><p>'Write on a Record': update the values of a record</p></li>
-<li><p>'Execute several actions': define an action that triggers several other
-server actions</p></li>
-</ul>
-</dd></dl>
-
 <p>Allow triggering complex server code from any valid action location. Only
 two fields are relevant to clients:</p>
 <dl class="simple">
@@ -2190,7 +2166,7 @@ condition</p>
 on which the newly created record should be set (models should match)</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">fields_lines</span></code> (create/write)</dt><dd><p>fields to override when creating or copying the record.
-<a class="reference internal" href="orm.html#odoo.fields.One2many" title="odoo.fields.One2many"><code class="xref py py-class docutils literal notranslate"><span class="pre">One2many</span></code></a> with the fields:</p>
+<code class="xref py py-class docutils literal notranslate"><span class="pre">One2many</span></code> with the fields:</p>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">col1</span></code></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ir.model.fields</span></code> to set in the concerned model
 (<code class="docutils literal notranslate"><span class="pre">crud_model_id</span></code> for creates, <code class="docutils literal notranslate"><span class="pre">model_id</span></code> for updates)</p>
@@ -2241,12 +2217,12 @@ when looking for one in a list of some sort</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">print_report_name</span></code></dt><dd><p>python expression defining the name of the report.</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">groups_id</span></code></dt><dd><p><a class="reference internal" href="orm.html#odoo.fields.Many2many" title="odoo.fields.Many2many"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2many</span></code></a> field to the groups allowed to view/use
+<dt><code class="docutils literal notranslate"><span class="pre">groups_id</span></code></dt><dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2many</span></code> field to the groups allowed to view/use
 the current report</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">multi</span></code></dt><dd><p>if set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, the action will not be displayed on a form view.</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">paperformat_id</span></code></dt><dd><p><a class="reference internal" href="orm.html#odoo.fields.Many2one" title="odoo.fields.Many2one"><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code></a> field to the paper format you wish to
+<dt><code class="docutils literal notranslate"><span class="pre">paperformat_id</span></code></dt><dd><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Many2one</span></code> field to the paper format you wish to
 use for this report (if not specified, the company format will be used)</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">attachment_use</span></code></dt><dd><p>if set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, the report is only generated once the first time it is
@@ -2319,10 +2295,6 @@ Can be a simple call to the model's method :</p>
 </section>
 
                     </div>
-                        <a href="https://github.com/odoo/documentation/edit/15.0/content/developer/reference/backend/actions.rst"
-                           class="o_git_link d-none d-lg-inline-block">
-                            <i class="i-edit"></i> Edit on GitHub
-                        </a>
                 </article>
         </main>
             
@@ -2369,9 +2341,6 @@ Can be a simple call to the model's method :</p>
         <li class="right" style="margin-right: 10px">
           <a href="../../../genindex.html" title="総合索引"
              >索引</a></li>
-        <li class="right" >
-          <a href="../../../py-modindex.html" title="Pythonモジュール索引"
-             >モジュール</a> |</li>
         <li class="right" >
           <a href="views.html" title="Views"
              >次へ</a> |</li>
