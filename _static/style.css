@@ -552,7 +552,7 @@ div.code-block-caption {
   padding: 2px 5px;
   font-size: small; }
 
-div.code-block-caption code {
+div.code-block-caption code, div.code-block-caption #wrap code ~ .sig-paren, #wrap div.code-block-caption code ~ .sig-paren, div.code-block-caption #wrap code ~ .sig-param, #wrap div.code-block-caption code ~ .sig-param, div.code-block-caption #wrap code ~ .optional, #wrap div.code-block-caption code ~ .optional, div.code-block-caption #wrap main article.doc-body .command, #wrap main article.doc-body div.code-block-caption .command, div.code-block-caption #wrap main article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class div.code-block-caption em.property:not(:first-child), div.code-block-caption #wrap main article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class div.code-block-caption em.property:not(:first-child), div.code-block-caption #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class div.code-block-caption em.property:not(:first-child) {
   background-color: transparent; }
 
 table.highlighttable td.linenos,
@@ -568,19 +568,19 @@ div.code-block-caption span.caption-number {
 div.literal-block-wrapper {
   margin: 1em 0; }
 
-code.descname {
+code.descname, #wrap code ~ .descname.sig-paren, #wrap code ~ .descname.sig-param, #wrap code ~ .descname.optional, #wrap main article.doc-body .descname.command, #wrap main article.doc-body dl.py.class em.descname.property:not(:first-child), #wrap main article.doc-body dl.js.class em.descname.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class em.descname.property:not(:first-child) {
   background-color: transparent;
   font-weight: bold;
   /* font-size: 1.2em; */ }
 
-code.descclassname {
+code.descclassname, #wrap code ~ .descclassname.sig-paren, #wrap code ~ .descclassname.sig-param, #wrap code ~ .descclassname.optional, #wrap main article.doc-body .descclassname.command, #wrap main article.doc-body dl.py.class em.descclassname.property:not(:first-child), #wrap main article.doc-body dl.js.class em.descclassname.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class em.descclassname.property:not(:first-child) {
   background-color: transparent; }
 
 /* code.xref, a code {
     background-color: transparent;
     font-weight: bold;
 } */
-h1 code, .h1 code, h2 code, .h2 code, h3 code, .h3 code, h4 code, .h4 code, h5 code, .h5 code, h6 code, .h6 code {
+h1 code, .h1 code, h1 #wrap code ~ .sig-paren, #wrap h1 code ~ .sig-paren, .h1 #wrap code ~ .sig-paren, #wrap .h1 code ~ .sig-paren, h1 #wrap code ~ .sig-param, #wrap h1 code ~ .sig-param, .h1 #wrap code ~ .sig-param, #wrap .h1 code ~ .sig-param, h1 #wrap code ~ .optional, #wrap h1 code ~ .optional, .h1 #wrap code ~ .optional, #wrap .h1 code ~ .optional, h1 #wrap main article.doc-body .command, #wrap main article.doc-body h1 .command, .h1 #wrap main article.doc-body .command, #wrap main article.doc-body .h1 .command, h1 #wrap main article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class h1 em.property:not(:first-child), .h1 #wrap main article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class .h1 em.property:not(:first-child), h1 #wrap main article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class h1 em.property:not(:first-child), .h1 #wrap main article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class .h1 em.property:not(:first-child), h1 #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class h1 em.property:not(:first-child), .h1 #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class .h1 em.property:not(:first-child), h2 code, .h2 code, h2 #wrap code ~ .sig-paren, #wrap h2 code ~ .sig-paren, .h2 #wrap code ~ .sig-paren, #wrap .h2 code ~ .sig-paren, h2 #wrap code ~ .sig-param, #wrap h2 code ~ .sig-param, .h2 #wrap code ~ .sig-param, #wrap .h2 code ~ .sig-param, h2 #wrap code ~ .optional, #wrap h2 code ~ .optional, .h2 #wrap code ~ .optional, #wrap .h2 code ~ .optional, h2 #wrap main article.doc-body .command, #wrap main article.doc-body h2 .command, .h2 #wrap main article.doc-body .command, #wrap main article.doc-body .h2 .command, h2 #wrap main article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class h2 em.property:not(:first-child), .h2 #wrap main article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class .h2 em.property:not(:first-child), h2 #wrap main article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class h2 em.property:not(:first-child), .h2 #wrap main article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class .h2 em.property:not(:first-child), h2 #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class h2 em.property:not(:first-child), .h2 #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class .h2 em.property:not(:first-child), h3 code, .h3 code, h3 #wrap code ~ .sig-paren, #wrap h3 code ~ .sig-paren, .h3 #wrap code ~ .sig-paren, #wrap .h3 code ~ .sig-paren, h3 #wrap code ~ .sig-param, #wrap h3 code ~ .sig-param, .h3 #wrap code ~ .sig-param, #wrap .h3 code ~ .sig-param, h3 #wrap code ~ .optional, #wrap h3 code ~ .optional, .h3 #wrap code ~ .optional, #wrap .h3 code ~ .optional, h3 #wrap main article.doc-body .command, #wrap main article.doc-body h3 .command, .h3 #wrap main article.doc-body .command, #wrap main article.doc-body .h3 .command, h3 #wrap main article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class h3 em.property:not(:first-child), .h3 #wrap main article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class .h3 em.property:not(:first-child), h3 #wrap main article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class h3 em.property:not(:first-child), .h3 #wrap main article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class .h3 em.property:not(:first-child), h3 #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class h3 em.property:not(:first-child), .h3 #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class .h3 em.property:not(:first-child), h4 code, .h4 code, h4 #wrap code ~ .sig-paren, #wrap h4 code ~ .sig-paren, .h4 #wrap code ~ .sig-paren, #wrap .h4 code ~ .sig-paren, h4 #wrap code ~ .sig-param, #wrap h4 code ~ .sig-param, .h4 #wrap code ~ .sig-param, #wrap .h4 code ~ .sig-param, h4 #wrap code ~ .optional, #wrap h4 code ~ .optional, .h4 #wrap code ~ .optional, #wrap .h4 code ~ .optional, h4 #wrap main article.doc-body .command, #wrap main article.doc-body h4 .command, .h4 #wrap main article.doc-body .command, #wrap main article.doc-body .h4 .command, h4 #wrap main article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class h4 em.property:not(:first-child), .h4 #wrap main article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class .h4 em.property:not(:first-child), h4 #wrap main article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class h4 em.property:not(:first-child), .h4 #wrap main article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class .h4 em.property:not(:first-child), h4 #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class h4 em.property:not(:first-child), .h4 #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class .h4 em.property:not(:first-child), h5 code, .h5 code, h5 #wrap code ~ .sig-paren, #wrap h5 code ~ .sig-paren, .h5 #wrap code ~ .sig-paren, #wrap .h5 code ~ .sig-paren, h5 #wrap code ~ .sig-param, #wrap h5 code ~ .sig-param, .h5 #wrap code ~ .sig-param, #wrap .h5 code ~ .sig-param, h5 #wrap code ~ .optional, #wrap h5 code ~ .optional, .h5 #wrap code ~ .optional, #wrap .h5 code ~ .optional, h5 #wrap main article.doc-body .command, #wrap main article.doc-body h5 .command, .h5 #wrap main article.doc-body .command, #wrap main article.doc-body .h5 .command, h5 #wrap main article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class h5 em.property:not(:first-child), .h5 #wrap main article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class .h5 em.property:not(:first-child), h5 #wrap main article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class h5 em.property:not(:first-child), .h5 #wrap main article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class .h5 em.property:not(:first-child), h5 #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class h5 em.property:not(:first-child), .h5 #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class .h5 em.property:not(:first-child), h6 code, .h6 code, h6 #wrap code ~ .sig-paren, #wrap h6 code ~ .sig-paren, .h6 #wrap code ~ .sig-paren, #wrap .h6 code ~ .sig-paren, h6 #wrap code ~ .sig-param, #wrap h6 code ~ .sig-param, .h6 #wrap code ~ .sig-param, #wrap .h6 code ~ .sig-param, h6 #wrap code ~ .optional, #wrap h6 code ~ .optional, .h6 #wrap code ~ .optional, #wrap .h6 code ~ .optional, h6 #wrap main article.doc-body .command, #wrap main article.doc-body h6 .command, .h6 #wrap main article.doc-body .command, #wrap main article.doc-body .h6 .command, h6 #wrap main article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class h6 em.property:not(:first-child), .h6 #wrap main article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class .h6 em.property:not(:first-child), h6 #wrap main article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class h6 em.property:not(:first-child), .h6 #wrap main article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class .h6 em.property:not(:first-child), h6 #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class h6 em.property:not(:first-child), .h6 #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class .h6 em.property:not(:first-child) {
   background-color: transparent; }
 
 .viewcode-link {
@@ -798,6 +798,13 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 
 pre,
 code,
+#wrap code ~ .sig-paren,
+#wrap code ~ .sig-param,
+#wrap code ~ .optional,
+#wrap main article.doc-body .command,
+#wrap main article.doc-body dl.py.class em.property:not(:first-child),
+#wrap main article.doc-body dl.js.class em.property:not(:first-child),
+#wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child),
 kbd,
 samp {
   font-family: var(--bs-font-monospace);
@@ -811,16 +818,24 @@ pre {
   margin-bottom: 1rem;
   overflow: auto;
   font-size: 0.875em; }
-  pre code {
+  pre code, pre #wrap code ~ .sig-paren, #wrap pre code ~ .sig-paren, pre #wrap code ~ .sig-param, #wrap pre code ~ .sig-param, pre #wrap code ~ .optional, #wrap pre code ~ .optional, pre #wrap main article.doc-body .command, #wrap main article.doc-body pre .command, pre #wrap main article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class pre em.property:not(:first-child), pre #wrap main article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class pre em.property:not(:first-child), pre #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class pre em.property:not(:first-child) {
     font-size: inherit;
     color: inherit;
     word-break: normal; }
 
-code {
+
+code,
+#wrap code ~ .sig-paren,
+#wrap code ~ .sig-param,
+#wrap code ~ .optional,
+#wrap main article.doc-body .command,
+#wrap main article.doc-body dl.py.class em.property:not(:first-child),
+#wrap main article.doc-body dl.js.class em.property:not(:first-child),
+#wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child) {
   font-size: 0.875em;
   color: #d63384;
   word-wrap: break-word; }
-  a > code {
+  a > code, #wrap a > code ~ .sig-paren, #wrap a > code ~ .sig-param, #wrap a > code ~ .optional, #wrap main article.doc-body a > .command, #wrap main article.doc-body dl.py.class a > em.property:not(:first-child), #wrap main article.doc-body dl.js.class a > em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class a > em.property:not(:first-child) {
     color: inherit; }
 
 kbd {
@@ -4448,11 +4463,11 @@ textarea.form-control-lg {
 
 .btn-close {
   box-sizing: content-box;
-  width: 1em;
-  height: 1em;
+  width: 2rem;
+  height: 2rem;
   padding: 0.25em 0.25em;
   color: #000;
-  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+  background: transparent url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" fill="%23000000"%3e%3cpath d="M15,16c-.27,0-.54-.11-.73-.31l-4.21-4.44c-.38-.4-.36-1.03,.04-1.41s1.03-.36,1.41,.04l3.48,3.67,3.42-3.67c.38-.4,1.01-.42,1.41-.05,.4,.38,.42,1.01,.05,1.41l-4.15,4.44c-.19,.2-.45,.32-.73,.32h0Z"/%3e%3cpath d="M10.79,20.44c-.25,0-.49-.09-.69-.27-.4-.38-.42-1.01-.04-1.41l4.21-4.45c.19-.2,.45-.31,.73-.31h0c.28,0,.54,.12,.73,.32l4.15,4.45c.38,.4,.35,1.04-.05,1.41-.41,.38-1.04,.35-1.41-.05l-3.42-3.67-3.48,3.67c-.2,.21-.46,.31-.73,.31Z"/%3e%3cpath d="M15,28.37c-7.37,0-13.37-6-13.37-13.37S7.63,1.63,15,1.63s13.37,6,13.37,13.37-6,13.37-13.37,13.37Zm0-24.74C8.73,3.63,3.63,8.73,3.63,15s5.1,11.37,11.37,11.37,11.37-5.1,11.37-11.37S21.27,3.63,15,3.63Z"/%3e%3c/svg%3e') center/2rem auto no-repeat;
   border: 0;
   border-radius: 0.25rem;
   opacity: 0.5; }
@@ -4580,7 +4595,7 @@ textarea.form-control-lg {
   .modal-backdrop.fade {
     opacity: 0; }
   .modal-backdrop.show {
-    opacity: 0.5; }
+    opacity: 0.7; }
 
 .modal-header {
   display: flex;
@@ -7991,14 +8006,6 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important; } }
 
-.o-no-select {
-  pointer-events: none;
-  cursor: default; }
-  .o-no-select::selection, .o-no-select *::selection {
-    background: transparent; }
-  .o-no-select::-moz-selection, .o-no-select *::-moz-selection {
-    background: transparent; }
-
 @font-face {
   font-family: 'icomoon';
   src: url("fonts/icomoon.woff2") format("woff2"), url("fonts/icomoon.woff") format("woff");
@@ -8091,6 +8098,9 @@ a {
 
 .i-link:before {
   content: ""; }
+
+.i-external-link:before {
+  content: ""; }
 
 .i-websites:before {
   content: ""; }
@@ -8308,305 +8318,317 @@ a {
 .i-article:before {
   content: ""; }
 
+.i-sidepanel:before {
+  content: ""; }
+
+.i-close:before {
+  content: ""; }
+
 div[aria-label="related navigation"] {
   display: none; }
 
-body a:not(:hover), body a.o_logo {
-  text-decoration: none !important; }
-
-body dd {
-  margin-left: 1rem; }
-
-body :target:before {
-  content: '';
-  display: block;
-  width: 0;
-  height: 0;
-  padding-top: 100px;
-  margin-top: -100px; }
-
-body abbr[title="Pull Request"] {
+body {
   position: relative; }
-  body abbr[title="Pull Request"]:after {
+  @media (max-width: 991.98px) {
+    body a {
+      overflow-wrap: anywhere; } }
+  body a:not(:hover), body a.o_logo {
+    text-decoration: none !important; }
+  body a:hover {
+    text-underline-position: from-font; }
+  body a.external:not(.image-reference):after {
+    content: "";
+    font-family: icomoon, sans-serif !important;
+    font-size: 0.76923rem;
+    margin: 0 .2rem; }
+  body dd {
+    margin-left: 1rem; }
+  body :target:before {
     content: '';
     display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: auto;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-image: url("img/poule.svg");
-    background-color: #fff;
-    background-repeat: no-repeat;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: all 0.5s ease-out 0.5s;
-    -moz-transition: all 0.5s ease-out 0.5s;
-    -o-transition: all 0.5s ease-out 0.5s;
-    transition: all 0.5s ease-out 0.5s; }
-  body abbr[title="Pull Request"]:hover:after {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition: all 0.5s ease-in 5s;
-    -moz-transition: all 0.5s ease-in 5s;
-    -o-transition: all 0.5s ease-in 5s;
-    transition: all 0.5s ease-in 5s; }
+    width: 0;
+    height: 0;
+    padding-top: calc(112px + 10px);
+    margin-top: -122px; }
+  body abbr {
+    text-underline-offset: 2px; }
+    body abbr[title="Pull Request"] {
+      position: relative; }
+      body abbr[title="Pull Request"]:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: auto;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: url("img/poule.svg");
+        background-color: #fff;
+        background-repeat: no-repeat;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.5s ease-out 0.5s;
+        -moz-transition: all 0.5s ease-out 0.5s;
+        -o-transition: all 0.5s ease-out 0.5s;
+        transition: all 0.5s ease-out 0.5s; }
+      body abbr[title="Pull Request"]:hover:after {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: all 0.5s ease-in 5s;
+        -moz-transition: all 0.5s ease-in 5s;
+        -o-transition: all 0.5s ease-in 5s;
+        transition: all 0.5s ease-in 5s; }
 
 .hidden {
   visibility: hidden !important;
   display: none !important;
   opacity: 0 !important; }
 
-header.o_main_header {
+span.viewcode-link {
+  float: none;
+  margin-left: .3rem; }
+
+header {
   width: 100%;
-  height: 50px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: #ffffff;
-  z-index: 10;
-  padding: 0 1rem; }
-  @media (min-width: 992px) {
-    header.o_main_header {
-      height: 90px;
-      padding: 0 2rem; } }
-  @media (min-width: 1200px) {
-    header.o_main_header {
-      padding: 0 3rem 0 2rem; } }
-  header.o_main_header .o_logo_wrapper > .o_logo img {
-    margin-bottom: -2px;
-    vertical-align: baseline; }
-  header.o_main_header .o_logo_wrapper > .o_logo span {
-    font-size: 1rem;
-    color: #875a7b;
-    position: relative; }
-    header.o_main_header .o_logo_wrapper > .o_logo span:after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: auto;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      background-image: url("img/ducky.svg");
-      background-color: #fff;
-      background-repeat: no-repeat;
-      opacity: 0;
-      visibility: hidden;
-      -webkit-transition: all 0.5s ease-out 0.5s;
-      -moz-transition: all 0.5s ease-out 0.5s;
-      -o-transition: all 0.5s ease-out 0.5s;
-      transition: all 0.5s ease-out 0.5s; }
-    header.o_main_header .o_logo_wrapper > .o_logo span:hover:after {
-      opacity: 1;
-      visibility: visible;
-      -webkit-transition: all 0.5s ease-in 5s;
-      -moz-transition: all 0.5s ease-in 5s;
-      -o-transition: all 0.5s ease-in 5s;
-      transition: all 0.5s ease-in 5s; }
-  @media (min-width: 1200px) {
-    header.o_main_header .o_logo_wrapper {
-      width: calc(350px - 3rem); } }
-  @media (min-width: 992px) {
-    header.o_main_header .o_logo_wrapper {
-      margin-right: 3rem; } }
-  @media (min-width: 992px) {
-    header.o_main_header .o_logo img {
-      height: 30px; } }
-  header.o_main_header .o_search_wrapper {
-    display: flex;
-    position: relative;
-    opacity: 1;
-    transition: opacity 0.3s; }
-    @media (prefers-reduced-motion: reduce) {
-      header.o_main_header .o_search_wrapper {
-        transition: none; } }
-    @media (max-width: 991.98px) {
-      header.o_main_header .o_search_wrapper {
-        display: block;
-        position: absolute;
-        width: calc(100% - (1rem * 2));
-        top: calc(100% + 1rem); } }
+  z-index: 10; }
+  header .o_main_header {
+    height: 50px;
+    background-color: #ffffff;
+    padding: 0 1rem; }
     @media (min-width: 992px) {
-      header.o_main_header .o_search_wrapper {
-        flex-grow: 1;
-        max-width: 500px; } }
-    header.o_main_header .o_search_wrapper .o_search {
-      position: relative;
-      width: 100%; }
-      header.o_main_header .o_search_wrapper .o_search .btn {
-        position: absolute;
-        top: 50%;
-        left: auto;
-        bottom: auto;
-        right: 1rem;
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        transform: translateY(-50%);
-        padding: 0;
-        font-size: 1.2rem;
-        color: #888888; }
-  @media (max-width: 991.98px) {
-    header.o_main_header.o_header_scrolled .o_search_wrapper {
-      opacity: 0; } }
-  header.o_main_header .highlight-link {
-    position: absolute;
-    top: auto;
-    left: auto;
-    bottom: -1.5rem;
-    right: 1rem;
-    margin-bottom: 0; }
-    header.o_main_header .highlight-link a {
-      font-size: 0.75rem; }
-  header.o_main_header .navbar-toggler[aria-expanded="true"] .icon-bar:nth-of-type(1) {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    -ms-transform-origin: 10% 10% 0;
-    -webkit-transform-origin: 10% 10% 0;
-    -moz-transform-origin: 10% 10% 0;
-    transform-origin: 10% 10% 0; }
-  header.o_main_header .navbar-toggler[aria-expanded="true"] .icon-bar:nth-of-type(2) {
-    opacity: 0;
-    filter: alpha(opacity=0); }
-  header.o_main_header .navbar-toggler[aria-expanded="true"] .icon-bar:nth-of-type(3) {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    -ms-transform-origin: 10% 90% 0;
-    -webkit-transform-origin: 10% 90% 0;
-    -moz-transform-origin: 10% 90% 0;
-    transform-origin: 10% 90% 0; }
-  header.o_main_header .navbar-toggler .icon-bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background-color: #707070;
-    -webkit-transition: all 0.2s ease 0s;
-    -moz-transition: all 0.2s ease 0s;
-    -o-transition: all 0.2s ease 0s;
-    transition: all 0.2s ease 0s; }
-    header.o_main_header .navbar-toggler .icon-bar + .icon-bar {
-      margin-top: 4px; }
-    header.o_main_header .navbar-toggler .icon-bar:nth-of-type(1) {
-      -webkit-transform: rotate(0);
-      -moz-transform: rotate(0);
-      -ms-transform: rotate(0);
-      -o-transform: rotate(0);
-      transform: rotate(0); }
-    header.o_main_header .navbar-toggler .icon-bar:nth-of-type(2) {
-      opacity: 1;
-      filter: alpha(opacity=100); }
-    header.o_main_header .navbar-toggler .icon-bar:nth-of-type(3) {
-      -webkit-transform: rotate(0);
-      -moz-transform: rotate(0);
-      -ms-transform: rotate(0);
-      -o-transform: rotate(0);
-      transform: rotate(0); }
-  header.o_main_header .navbar-toggler:focus {
-    box-shadow: none;
-    outline: none; }
+      header .o_main_header {
+        height: 80px;
+        padding: 0 2rem; } }
+    @media (min-width: 1200px) {
+      header .o_main_header {
+        padding: 0 3rem 0 2rem; } }
+    header .o_main_header .o_logo_wrapper {
+      margin-right: 1rem; }
+      @media (min-width: 1200px) {
+        header .o_main_header .o_logo_wrapper {
+          width: calc(350px - 2rem); } }
+      @media (min-width: 992px) {
+        header .o_main_header .o_logo_wrapper {
+          margin-right: 3rem; } }
+      header .o_main_header .o_logo_wrapper > .o_logo img {
+        margin-bottom: -2px;
+        vertical-align: baseline; }
+      header .o_main_header .o_logo_wrapper > .o_logo span {
+        font-size: 1rem;
+        color: #875a7b;
+        position: relative; }
+        header .o_main_header .o_logo_wrapper > .o_logo span:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: auto;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background-image: url("img/ducky.svg");
+          background-color: #fff;
+          background-repeat: no-repeat;
+          opacity: 0;
+          visibility: hidden;
+          -webkit-transition: all 0.5s ease-out 0.5s;
+          -moz-transition: all 0.5s ease-out 0.5s;
+          -o-transition: all 0.5s ease-out 0.5s;
+          transition: all 0.5s ease-out 0.5s; }
+        header .o_main_header .o_logo_wrapper > .o_logo span:hover:after {
+          opacity: 1;
+          visibility: visible;
+          -webkit-transition: all 0.5s ease-in 5s;
+          -moz-transition: all 0.5s ease-in 5s;
+          -o-transition: all 0.5s ease-in 5s;
+          transition: all 0.5s ease-in 5s; }
+    @media (min-width: 992px) {
+      header .o_main_header .o_logo img {
+        height: 30px; } }
+    @media (min-width: 992px) {
+      header .o_main_header > div:not(.o_logo_wrapper) {
+        width: calc(100% - (350px)); } }
+    header .o_main_header .o_search_wrapper {
+      position: relative; }
+      @media (min-width: 992px) {
+        header .o_main_header .o_search_wrapper {
+          margin-right: 2rem; } }
+      header .o_main_header .o_search_wrapper .o_search {
+        position: relative;
+        width: 100%; }
+        header .o_main_header .o_search_wrapper .o_search .btn {
+          position: absolute;
+          top: 50%;
+          left: auto;
+          bottom: auto;
+          right: 0.5rem;
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+          padding: 0 0.5rem;
+          font-size: 1.2rem;
+          color: #888888; }
+        @media (max-width: 991.98px) {
+          header .o_main_header .o_search_wrapper .o_search .form-control {
+            padding: 0.275rem 0.5rem;
+            font-size: 0.875rem; } }
+      header .o_main_header .o_search_wrapper .highlight-link {
+        font-size: 0;
+        margin-bottom: 0; }
+        header .o_main_header .o_search_wrapper .highlight-link a {
+          text-decoration: none;
+          color: #888888; }
+          header .o_main_header .o_search_wrapper .highlight-link a:before {
+            position: absolute;
+            top: 50%;
+            left: auto;
+            bottom: auto;
+            right: 3rem;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            content: "";
+            font-family: 'icomoon' !important;
+            font-size: 1.2rem;
+            font-weight: 400;
+            vertical-align: middle;
+            margin: auto; }
+  header .o_subheader {
+    background: #F2F2F2;
+    height: 32px;
+    padding-right: 1rem; }
+    @media (min-width: 992px) {
+      header .o_subheader {
+        padding: 0 2rem; } }
+    @media (min-width: 1200px) {
+      header .o_subheader {
+        padding: 0 3rem 0 0; } }
+    header .o_subheader .o_side_nav_toggler_wrapper {
+      height: 100%; }
+      header .o_subheader .o_side_nav_toggler_wrapper button:focus, header .o_subheader .o_side_nav_toggler_wrapper button:focus-visible {
+        box-shadow: none;
+        outline: none; }
+      header .o_subheader .o_side_nav_toggler_wrapper button[aria-expanded="true"] {
+        background-color: rgba(0, 0, 0, 0.2); }
 
-.o_side_nav {
-  width: 100%;
-  height: 100%;
+.o_side_nav .o_mobile-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity .2s linear;
+  z-index: -100; }
+
+.o_side_nav .o_side_nav-inner {
+  width: 90%;
+  height: calc(100% - 82px);
   overflow-y: auto;
   position: fixed;
-  top: -100%;
-  left: 0;
+  left: -100%;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  padding-top: 4rem;
   padding-left: 1rem;
   background-color: white;
   z-index: 10;
   font-size: 0.875rem;
   color: #7A436B;
-  font-weight: 400;
-  scrollbar-width: thin;
-  scrollbar-color: #603c5e transparent; }
+  font-weight: 400; }
   @media (min-width: 992px) {
-    .o_side_nav {
-      width: calc(350px - 1rem);
-      height: calc(100vh - 90px);
-      top: 90px;
+    .o_side_nav .o_side_nav-inner {
+      width: 350px;
+      height: calc(100vh - 112px);
+      left: 0;
       padding-top: 2rem;
       padding-left: 2rem; } }
-  @media (min-width: 1200px) {
-    .o_side_nav {
-      width: 350px; } }
-  .o_side_nav.show {
-    top: 50px; }
-  .o_side_nav .toctree-l1 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem; }
-    .o_side_nav .toctree-l1 > .o_toc_entry_wrapper a {
-      color: #7A436B;
-      font-weight: 600; }
-  .o_side_nav ul .o_deepest_active_toc_entry {
-    background-color: #F2F2F2;
-    border-left: 3px solid #F2F2F2;
-    margin-left: -3px; }
-  .o_side_nav ul li.o_active_toc_entry:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed), .o_side_nav ul li.o_active_toc_entry > a, .o_side_nav ul li.o_active_toc_entry > .o_toc_entry_wrapper a, .o_side_nav ul li.o_active_toc_entry > .o_toc_entry_wrapper i {
-    color: #7A436B; }
-  .o_side_nav ul li a.current {
-    color: #7A436B; }
-  .o_side_nav ul > .toctree-l1[class*="o_menu_"] > .o_toc_entry_wrapper > i:before {
-    content: "";
-    font-family: 'icomoon' !important;
-    font-size: calc(1.275rem + 0.3vw);
-    font-weight: 400;
-    vertical-align: middle;
-    margin: 0 5px 0 0;
-    color: #7A436B; }
-    @media (min-width: 1200px) {
-      .o_side_nav ul > .toctree-l1[class*="o_menu_"] > .o_toc_entry_wrapper > i:before {
-        font-size: 1.5rem; } }
-  .o_side_nav ul > .toctree-l1.o_menu_applications > .o_toc_entry_wrapper > i:before {
-    content: ""; }
-  .o_side_nav ul > .toctree-l1.o_menu_administration > .o_toc_entry_wrapper > i:before {
-    content: ""; }
-  .o_side_nav ul > .toctree-l1.o_menu_developer > .o_toc_entry_wrapper > i:before {
-    content: ""; }
-  .o_side_nav ul > .toctree-l1.o_menu_services > .o_toc_entry_wrapper > i:before {
-    content: ""; }
-  .o_side_nav ul > .toctree-l1.o_menu_contributing > .o_toc_entry_wrapper > i:before {
-    content: ""; }
-  .o_side_nav::-webkit-scrollbar {
+  .o_side_nav .o_side_nav-inner::-webkit-scrollbar {
     width: 5px; }
-  .o_side_nav::-webkit-scrollbar-track {
+  .o_side_nav .o_side_nav-inner::-webkit-scrollbar-track {
     background: #fff; }
-  .o_side_nav::-webkit-scrollbar-thumb {
+  .o_side_nav .o_side_nav-inner::-webkit-scrollbar-thumb {
     background-color: #603c5e;
     border-radius: 0; }
 
-.o_side_nav ul, .o_page_toc_nav ul {
+.o_side_nav.show .o_mobile-overlay {
+  opacity: 1;
+  z-index: 1; }
+
+.o_side_nav.show .o_side_nav-inner {
+  left: 0; }
+
+.o_side_nav .toctree-l1 {
+  padding-bottom: 0.5rem; }
+  .o_side_nav .toctree-l1 > .o_toc_entry_wrapper a {
+    color: #7A436B;
+    font-weight: 600; }
+
+.o_side_nav .o_main_toc > ul li.o_active_toc_entry:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed), .o_side_nav .o_main_toc > ul li.o_active_toc_entry > a, .o_side_nav .o_main_toc > ul li.o_active_toc_entry > .o_toc_entry_wrapper a, .o_side_nav .o_main_toc > ul li.o_active_toc_entry > .o_toc_entry_wrapper i {
+  color: #7A436B; }
+
+.o_side_nav .o_main_toc > ul li a.current {
+  color: #7A436B; }
+
+.o_side_nav ul .o_deepest_active_toc_entry {
+  background-color: #F2F2F2;
+  border-left: 3px solid #F2F2F2;
+  margin-left: -3px; }
+
+.o_side_nav ul > .toctree-l1[class*="o_menu_"] > .o_toc_entry_wrapper > i:before {
+  content: "";
+  font-family: 'icomoon' !important;
+  font-size: calc(1.275rem + 0.3vw);
+  font-weight: 400;
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+  color: #7A436B; }
+  @media (min-width: 1200px) {
+    .o_side_nav ul > .toctree-l1[class*="o_menu_"] > .o_toc_entry_wrapper > i:before {
+      font-size: 1.5rem; } }
+
+.o_side_nav ul > .toctree-l1.o_menu_applications > .o_toc_entry_wrapper > i:before {
+  content: ""; }
+
+.o_side_nav ul > .toctree-l1.o_menu_administration > .o_toc_entry_wrapper > i:before {
+  content: ""; }
+
+.o_side_nav ul > .toctree-l1.o_menu_developer > .o_toc_entry_wrapper > i:before {
+  content: ""; }
+
+.o_side_nav ul > .toctree-l1.o_menu_services > .o_toc_entry_wrapper > i:before {
+  content: ""; }
+
+.o_side_nav ul > .toctree-l1.o_menu_contributing > .o_toc_entry_wrapper > i:before {
+  content: ""; }
+
+.o_main_toc ul, .o_page_toc_nav ul {
   list-style: none;
   padding-left: 1rem; }
-  .o_side_nav ul li > a.reference, .o_page_toc_nav ul li > a.reference {
+  .o_main_toc ul li > a.reference, .o_page_toc_nav ul li > a.reference {
     padding-left: .875rem; }
-  .o_side_nav ul li a, .o_page_toc_nav ul li a {
+  .o_main_toc ul li a, .o_page_toc_nav ul li a {
     display: inline-block;
     padding: .4rem 0;
     color: #282F33;
     font-weight: 400; }
-  .o_side_nav ul li:not(.toctree-l1) .o_toc_entry_wrapper:not(.o_page_toc_title), .o_page_toc_nav ul li:not(.toctree-l1) .o_toc_entry_wrapper:not(.o_page_toc_title) {
+  .o_main_toc ul li:not(.toctree-l1) .o_toc_entry_wrapper:not(.o_page_toc_title), .o_page_toc_nav ul li:not(.toctree-l1) .o_toc_entry_wrapper:not(.o_page_toc_title) {
     display: flex;
     align-items: baseline; }
-  .o_side_nav ul li:not(.toctree-l1) .o_toc_entry_wrapper > i[class^="i-"], .o_page_toc_nav ul li:not(.toctree-l1) .o_toc_entry_wrapper > i[class^="i-"] {
+  .o_main_toc ul li:not(.toctree-l1) .o_toc_entry_wrapper > i[class^="i-"], .o_page_toc_nav ul li:not(.toctree-l1) .o_toc_entry_wrapper > i[class^="i-"] {
     display: inline-block;
     margin-right: .125rem;
     -webkit-transition: rotate 0.3s ease 0s;
@@ -8614,39 +8636,45 @@ header.o_main_header {
     -o-transition: rotate 0.3s ease 0s;
     transition: rotate 0.3s ease 0s;
     font-size: .75rem; }
-    .o_side_nav ul li:not(.toctree-l1) .o_toc_entry_wrapper > i[class^="i-"][aria-expanded="true"], .o_page_toc_nav ul li:not(.toctree-l1) .o_toc_entry_wrapper > i[class^="i-"][aria-expanded="true"] {
+    .o_main_toc ul li:not(.toctree-l1) .o_toc_entry_wrapper > i[class^="i-"][aria-expanded="true"], .o_page_toc_nav ul li:not(.toctree-l1) .o_toc_entry_wrapper > i[class^="i-"][aria-expanded="true"] {
       -webkit-transform: rotate(90deg);
       -moz-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
       -o-transform: rotate(90deg);
       transform: rotate(90deg); }
-  .o_side_nav ul li.o_active_toc_entry:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed), .o_page_toc_nav ul li.o_active_toc_entry:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed) {
+  .o_main_toc ul li.o_active_toc_entry:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed), .o_page_toc_nav ul li.o_active_toc_entry:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed) {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     transform: rotate(90deg); }
-  .o_side_nav ul li.o_active_toc_entry > a, .o_side_nav ul li.o_active_toc_entry > .o_toc_entry_wrapper a, .o_side_nav ul li.o_active_toc_entry > .o_toc_entry_wrapper i, .o_page_toc_nav ul li.o_active_toc_entry > a, .o_page_toc_nav ul li.o_active_toc_entry > .o_toc_entry_wrapper a, .o_page_toc_nav ul li.o_active_toc_entry > .o_toc_entry_wrapper i {
+  .o_main_toc ul li.o_active_toc_entry > a, .o_main_toc ul li.o_active_toc_entry > .o_toc_entry_wrapper a, .o_main_toc ul li.o_active_toc_entry > .o_toc_entry_wrapper i, .o_page_toc_nav ul li.o_active_toc_entry > a, .o_page_toc_nav ul li.o_active_toc_entry > .o_toc_entry_wrapper a, .o_page_toc_nav ul li.o_active_toc_entry > .o_toc_entry_wrapper i {
     font-weight: 700; }
 
-.o_side_nav > ul, .o_page_toc_nav > ul {
+.o_main_toc > ul, .o_page_toc_nav > ul {
   padding-left: 0; }
 
 aside.o_page_toc {
-  display: none;
+  color: #212529;
   font-size: 0.875rem; }
-  @media (min-width: 1200px) {
-    aside.o_page_toc {
-      display: block;
-      position: -webkit-sticky;
-      position: sticky;
-      top: 90px;
-      right: 0;
-      width: 20%;
-      height: 100%;
-      max-height: calc(100vh - 90px);
-      padding: 3rem 1rem 3rem 0;
-      overflow-y: auto; } }
+  aside.o_page_toc:not(.o_in_nav_toc) {
+    display: none;
+    position: -webkit-sticky;
+    position: sticky;
+    height: 100%;
+    max-height: calc(100vh - 112px); }
+    @media (min-width: 1200px) {
+      aside.o_page_toc:not(.o_in_nav_toc) {
+        display: block;
+        grid-area: toc;
+        top: 112px;
+        padding: 2rem 1rem 2rem 0;
+        overflow-y: auto; } }
+  aside.o_page_toc.o_in_nav_toc {
+    display: block; }
+    @media (min-width: 1200px) {
+      aside.o_page_toc.o_in_nav_toc {
+        display: none; } }
   aside.o_page_toc h3, aside.o_page_toc .h3 {
     text-transform: uppercase;
     font-weight: 700;
@@ -8662,40 +8690,53 @@ aside.o_page_toc {
       padding-left: 0; }
 
 #wrap {
-  margin-top: 50px; }
+  display: grid;
+  grid-template-areas: "main";
+  grid-template-columns: minmax(0, 100%);
+  margin-top: 82px; }
   @media (min-width: 992px) {
     #wrap {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 90px; } }
-  #wrap code {
+      grid-template-areas: "sidebar main toc";
+      grid-template-columns: minmax(0, 350px) minmax(0, auto) minmax(0, 20%);
+      margin-top: 112px; } }
+  #wrap p > code, #wrap p > code ~ .sig-paren, #wrap p > code ~ .sig-param, #wrap p > code ~ .optional, #wrap main article.doc-body p > .command, #wrap main article.doc-body dl.py.class p > em.property:not(:first-child), #wrap main article.doc-body dl.js.class p > em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class p > em.property:not(:first-child) {
+    padding: 0 .3rem; }
+  #wrap code, #wrap code ~ .sig-paren, #wrap code ~ .sig-param, #wrap code ~ .optional, #wrap main article.doc-body .command, #wrap main article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child) {
     display: inline-block;
     color: inherit;
-    background: #F8F8F8;
-    padding: 0 .3rem;
-    margin: 0 0.1rem;
-    line-height: 1.3;
-    border: 1px solid #d5d5d5;
     overflow-wrap: anywhere; }
+    #wrap code:first-of-type:not(span):not(em), #wrap code ~ .sig-paren:first-of-type:not(span):not(em), #wrap code ~ .sig-param:first-of-type:not(span):not(em), #wrap code ~ .optional:first-of-type:not(span):not(em), #wrap main article.doc-body .command:first-of-type:not(span):not(em), #wrap main article.doc-body dl.py.class em.property:first-of-type:not(span):not(em):not(:first-child), #wrap main article.doc-body dl.js.class em.property:first-of-type:not(span):not(em):not(:first-child), #wrap main article.doc-body dl.o-definition-list.class em.property:first-of-type:not(span):not(em):not(:first-child) {
+      padding-left: .3rem; }
+    #wrap code:last-of-type:not(em), #wrap code ~ .sig-paren:last-of-type:not(em), #wrap code ~ .sig-param:last-of-type:not(em), #wrap code ~ .optional:last-of-type:not(em), #wrap main article.doc-body .command:last-of-type:not(em), #wrap main article.doc-body dl.py.class em.property:last-of-type:not(em):not(:first-child), #wrap main article.doc-body dl.js.class em.property:last-of-type:not(em):not(:first-child), #wrap main article.doc-body dl.o-definition-list.class em.property:last-of-type:not(em):not(:first-child) {
+      padding-right: .3rem; }
+    #wrap code ~ .sig-paren + .sig-paren, #wrap code ~ .sig-paren ~ .sig-paren + .sig-paren, #wrap code ~ .sig-param ~ .sig-paren + .sig-paren, #wrap code ~ .optional ~ .sig-paren + .sig-paren, #wrap main article.doc-body .command ~ .sig-paren + .sig-paren, #wrap main article.doc-body dl.py.class em.property:not(:first-child) ~ .sig-paren + .sig-paren, #wrap main article.doc-body dl.js.class em.property:not(:first-child) ~ .sig-paren + .sig-paren, #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child) ~ .sig-paren + .sig-paren, #wrap code ~ .sig-param + .sig-paren, #wrap code ~ .sig-paren ~ .sig-param + .sig-paren, #wrap code ~ .sig-param ~ .sig-param + .sig-paren, #wrap code ~ .optional ~ .sig-param + .sig-paren, #wrap main article.doc-body .command ~ .sig-param + .sig-paren, #wrap main article.doc-body dl.py.class em.property:not(:first-child) ~ .sig-param + .sig-paren, #wrap main article.doc-body dl.js.class em.property:not(:first-child) ~ .sig-param + .sig-paren, #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child) ~ .sig-param + .sig-paren, #wrap code ~ .optional + .sig-paren, #wrap code ~ .sig-paren ~ .optional + .sig-paren, #wrap code ~ .sig-param ~ .optional + .sig-paren, #wrap code ~ .optional ~ .optional + .sig-paren, #wrap main article.doc-body .command ~ .optional + .sig-paren, #wrap main article.doc-body dl.py.class em.property:not(:first-child) ~ .optional + .sig-paren, #wrap main article.doc-body dl.js.class em.property:not(:first-child) ~ .optional + .sig-paren, #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child) ~ .optional + .sig-paren {
+      padding: 0 .1rem; }
+    #wrap code.file, #wrap code ~ .file.sig-paren, #wrap code ~ .file.sig-param, #wrap code ~ .file.optional, #wrap main article.doc-body .file.command, #wrap main article.doc-body dl.py.class em.file.property:not(:first-child), #wrap main article.doc-body dl.js.class em.file.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class em.file.property:not(:first-child) {
+      font-family: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      font-weight: 500;
+      font-style: italic;
+      padding-right: .4rem;
+      color: #3d5d6b;
+      background-color: #e9f3f8; }
+    #wrap code:not(.file), #wrap code ~ .sig-paren:not(.file), #wrap code ~ .sig-param:not(.file), #wrap code ~ .optional:not(.file), #wrap main article.doc-body .command:not(.file), #wrap main article.doc-body dl.py.class em.property:not(.file):not(:first-child), #wrap main article.doc-body dl.js.class em.property:not(.file):not(:first-child), #wrap main article.doc-body dl.o-definition-list.class em.property:not(.file):not(:first-child) {
+      color: inherit;
+      background: #f0f0f0; }
   #wrap iframe {
     max-width: 100%; }
   #wrap main {
     position: relative;
-    padding-top: 5rem;
+    grid-area: main;
     padding-bottom: 3rem; }
     @media (min-width: 992px) {
       #wrap main {
-        left: calc(350px - 1rem);
-        max-width: calc(100vw - 350px);
-        padding: 3rem;
-        margin: 0; } }
+        padding: 2rem 3rem;
+        margin: 0;
+        grid-column-end: toc; } }
     @media (min-width: 1200px) {
       #wrap main {
-        left: 350px;
-        max-width: calc(100vw - 350px - 20%); } }
-    @media (min-width: 1200px) {
-      #wrap main.o_index, #wrap main.o_fullwidth_page, #wrap main.o_has_code_column {
-        max-width: calc(100vw - 350px); } }
+        grid-column-end: main; } }
+    #wrap main.o_index, #wrap main.o_fullwidth_page, #wrap main.o_has_code_column {
+      grid-column-end: toc; }
     #wrap main.o_index .o_content_fw_banner {
       margin: 0 -0.75rem 2rem;
       padding: 2rem 1rem;
@@ -8708,11 +8749,11 @@ aside.o_page_toc {
       background: linear-gradient(99deg, #875a7b 10%, #62495B 90%); }
       @media (min-width: 992px) {
         #wrap main.o_index .o_content_fw_banner {
-          margin: -2rem -2rem 2rem;
+          margin: -2rem -3rem 2rem;
           padding: 2rem 2rem; } }
       @media (min-width: 1200px) {
         #wrap main.o_index .o_content_fw_banner {
-          margin: -3rem -3rem 3rem;
+          margin: -2rem -3rem 3rem;
           padding: 3rem 3rem; } }
     @media (min-width: 992px) {
       #wrap main.o_index .row:first-of-type h2.border-top, #wrap main.o_index .row:first-of-type .border-top.h2 {
@@ -8748,45 +8789,29 @@ aside.o_page_toc {
           width: 33%; }
           #wrap main.o_fullwidth_page div.toctree-wrapper > ul > li:not(:nth-of-type(3n)) {
             padding-right: 2rem; } }
-    #wrap main.o_has_code_column article.doc-body > * {
-      max-width: 100%; }
     @media (min-width: 1200px) {
-      #wrap main.o_has_code_column article.doc-body {
-        width: 100%;
-        padding-right: 0; }
-        #wrap main.o_has_code_column article.doc-body:before {
-          /* content: ""; Deactivating o_has_code_column background */
-          background: #F8F8F8;
-          /* @include box-shadow(inset 40px 0 40px -18px rgba(22, 24, 29, 0.3)); */
-          position: absolute;
-          top: 3rem;
-          left: auto;
-          bottom: auto;
-          right: 0;
-          width: 43%;
-          height: calc(100% - 3rem); }
-        #wrap main.o_has_code_column article.doc-body .o_git_link {
-          right: calc(43% + $padding-l); }
-        #wrap main.o_has_code_column article.doc-body section > * {
-          width: 54%;
-          float: left;
-          clear: left; }
-        #wrap main.o_has_code_column article.doc-body section > h1, #wrap main.o_has_code_column article.doc-body section > .h1 {
-          max-width: calc(54% - 120px); }
-        #wrap main.o_has_code_column article.doc-body section > h1, #wrap main.o_has_code_column article.doc-body section > .h1, #wrap main.o_has_code_column article.doc-body section > h2, #wrap main.o_has_code_column article.doc-body section > .h2, #wrap main.o_has_code_column article.doc-body section > h3, #wrap main.o_has_code_column article.doc-body section > .h3, #wrap main.o_has_code_column article.doc-body section > h4, #wrap main.o_has_code_column article.doc-body section > .h4, #wrap main.o_has_code_column article.doc-body section > h5, #wrap main.o_has_code_column article.doc-body section > .h5, #wrap main.o_has_code_column article.doc-body section > h6, #wrap main.o_has_code_column article.doc-body section > .h6 {
-          float: none;
-          clear: none; }
-        #wrap main.o_has_code_column article.doc-body section .doc-aside {
-          width: 43%;
-          float: none;
-          clear: none;
-          margin-left: 57%;
-          padding: 1rem; }
-          #wrap main.o_has_code_column article.doc-body section .doc-aside blockquote {
-            font-weight: 600;
-            font-style: italic; }
-          #wrap main.o_has_code_column article.doc-body section .doc-aside pre {
-            font-size: 12px; } }
+      #wrap main.o_has_code_column article.doc-body .o_git_link {
+        right: calc(43% + 3rem); }
+      #wrap main.o_has_code_column article.doc-body section > * {
+        width: 54%;
+        float: left;
+        clear: left; }
+      #wrap main.o_has_code_column article.doc-body section > h1, #wrap main.o_has_code_column article.doc-body section > .h1 {
+        max-width: calc(54% - 120px); }
+      #wrap main.o_has_code_column article.doc-body section > h1, #wrap main.o_has_code_column article.doc-body section > .h1, #wrap main.o_has_code_column article.doc-body section > h2, #wrap main.o_has_code_column article.doc-body section > .h2, #wrap main.o_has_code_column article.doc-body section > h3, #wrap main.o_has_code_column article.doc-body section > .h3, #wrap main.o_has_code_column article.doc-body section > h4, #wrap main.o_has_code_column article.doc-body section > .h4, #wrap main.o_has_code_column article.doc-body section > h5, #wrap main.o_has_code_column article.doc-body section > .h5, #wrap main.o_has_code_column article.doc-body section > h6, #wrap main.o_has_code_column article.doc-body section > .h6 {
+        float: none;
+        clear: none; }
+      #wrap main.o_has_code_column article.doc-body section .doc-aside {
+        width: 43%;
+        float: none;
+        clear: none;
+        margin-left: 57%;
+        padding: 1rem; }
+        #wrap main.o_has_code_column article.doc-body section .doc-aside blockquote {
+          font-weight: 600;
+          font-style: italic; }
+        #wrap main.o_has_code_column article.doc-body section .doc-aside pre {
+          font-size: 12px; } }
     #wrap main.o_has_code_column + aside.o_page_toc {
       display: none; }
     #wrap main.o_hide_toc .toctree-wrapper {
@@ -8817,6 +8842,7 @@ aside.o_page_toc {
       color: #282F33;
       font-weight: 600; }
     #wrap main article.doc-body {
+      padding-top: 1rem;
       position: relative; }
       #wrap main article.doc-body .o_git_link {
         font-size: 0.875rem;
@@ -8835,15 +8861,36 @@ aside.o_page_toc {
         #wrap main article.doc-body .o_git_link i {
           margin-right: .2rem; }
       #wrap main article.doc-body .command {
-        font-family: var(--bs-font-monospace); }
-      #wrap main article.doc-body .field-list {
+        font-family: var(--bs-font-monospace);
+        font-weight: 400; }
+      #wrap main article.doc-body dl.py > dd, #wrap main article.doc-body dl.js > dd, #wrap main article.doc-body dl.o-definition-list > dd {
+        border-left: 3px solid #F2F2F2;
+        margin: 0;
+        padding-left: 1rem;
+        padding-top: 0.5rem; }
+      #wrap main article.doc-body dl.py.class em.property, #wrap main article.doc-body dl.js.class em.property, #wrap main article.doc-body dl.o-definition-list.class em.property {
+        font-size: 0.875rem; }
+        #wrap main article.doc-body dl.py.class em.property:first-child, #wrap main article.doc-body dl.js.class em.property:first-child, #wrap main article.doc-body dl.o-definition-list.class em.property:first-child {
+          border-bottom: 3px solid #F2F2F2; }
+          #wrap main article.doc-body dl.py.class em.property:first-child + [class^=sig], #wrap main article.doc-body dl.js.class em.property:first-child + [class^=sig], #wrap main article.doc-body dl.o-definition-list.class em.property:first-child + [class^=sig] {
+            padding-left: .3rem; }
+        #wrap main article.doc-body dl.py.class em.property:not(:first-child):last-of-type, #wrap main article.doc-body dl.js.class em.property:not(:first-child):last-of-type, #wrap main article.doc-body dl.o-definition-list.class em.property:not(:first-child):last-of-type {
+          padding-right: .3rem; }
+      #wrap main article.doc-body dl.field-list {
         font-size: 0.875rem;
         padding: .5rem;
         border: 1px solid #d5d5d5; }
-        #wrap main article.doc-body .field-list ul {
+        @media (max-width: 991.98px) {
+          #wrap main article.doc-body dl.field-list {
+            display: block; } }
+        #wrap main article.doc-body dl.field-list > dt {
+          padding-left: 0; }
+        #wrap main article.doc-body dl.field-list > dd {
+          padding-right: 0; }
+        #wrap main article.doc-body dl.field-list ul {
           list-style: none;
           padding-left: 0; }
-          #wrap main article.doc-body .field-list ul li {
+          #wrap main article.doc-body dl.field-list ul li {
             padding-bottom: 0.5rem; }
       #wrap main article.doc-body span.highlighted {
         background-color: #ffd454; }
@@ -8869,11 +8916,14 @@ aside.o_page_toc {
         margin-top: 3rem; }
       #wrap main article.doc-body section > h4, #wrap main article.doc-body section > .h4, #wrap main article.doc-body section > h5, #wrap main article.doc-body section > .h5, #wrap main article.doc-body section > h6, #wrap main article.doc-body section > .h6 {
         font-weight: 600; }
-      #wrap main article.doc-body section img:not([alt="green"]):not([alt="orange"]):not([alt="red"]) {
+      #wrap main article.doc-body section img {
         border: 1px solid #F2F2F2;
         background: #fff;
-        padding: .5rem; }
-      #wrap main article.doc-body section img:not([alt="green"]):not([alt="orange"]):not([alt="red"]), #wrap main article.doc-body section iframe {
+        padding: .5rem;
+        margin-bottom: 1rem; }
+      #wrap main article.doc-body section img:not(.o-no-modal) {
+        cursor: pointer; }
+      #wrap main article.doc-body section iframe {
         margin-bottom: 1rem; }
       #wrap main article.doc-body section p > img {
         border: none;
@@ -8891,12 +8941,13 @@ aside.o_page_toc {
       #wrap main article.doc-body section a.headerlink {
         text-decoration: none;
         font-size: 0;
+        line-height: 0;
         visibility: hidden !important; }
         #wrap main article.doc-body section a.headerlink:before {
           content: "\a0"; }
         #wrap main article.doc-body section a.headerlink:after {
           content: "";
-          font-family: icomoon !important;
+          font-family: icomoon, sans-serif !important;
           font-size: 1rem;
           margin: 0 0 0 .3rem;
           visibility: hidden;
@@ -8913,14 +8964,14 @@ aside.o_page_toc {
         #wrap main article.doc-body section table.table {
           display: block;
           overflow-x: auto; }
-          #wrap main article.doc-body section table.table code {
+          #wrap main article.doc-body section table.table code, #wrap main article.doc-body section table.table code ~ .sig-paren, #wrap main article.doc-body section table.table code ~ .sig-param, #wrap main article.doc-body section table.table code ~ .optional, #wrap main article.doc-body section table.table .command, #wrap main article.doc-body section table.table dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class section table.table em.property:not(:first-child), #wrap main article.doc-body section table.table dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class section table.table em.property:not(:first-child), #wrap main article.doc-body section table.table dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class section table.table em.property:not(:first-child) {
             overflow-wrap: break-word; } }
     #wrap main div[class^="highlight"] {
       overflow-x: auto;
       border: 1px solid #d5d5d5;
       margin: 1px 0 24px 0; }
       #wrap main div[class^="highlight"] div[class^="highlight"] {
-        padding: 0px;
+        padding: 0;
         border: none;
         margin: 0; }
       #wrap main div[class^="highlight"] pre {
@@ -8934,21 +8985,21 @@ aside.o_page_toc {
     #wrap main .dfn {
       font-size: 0.875rem;
       line-height: 1;
-      color: #875a7b;
+      color: #5b899e;
       font-weight: 600; }
       #wrap main .dfn:before {
         content: '?';
         display: inline-block;
         width: 15px;
         height: 15px;
-        background-color: #875a7b;
-        border: 1px solid #875a7b;
+        border: 2px solid #5b899e;
         border-radius: 20px;
         text-align: center;
-        color: #fff;
+        color: #5b899e;
+        font-size: 12px;
         font-weight: 800;
         font-style: normal;
-        margin: 0 .2rem; }
+        margin: 0 .1rem; }
     #wrap main .pq-patch em {
       display: block;
       border-radius: 4px 4px 0 0;
@@ -8972,8 +9023,10 @@ aside.o_page_toc {
       border-width: 0 0 0 3px;
       width: 100%;
       font-size: 0.875rem; }
-      #wrap main .alert code {
-        background-color: #fff !important; }
+      #wrap main .alert code, #wrap main .alert code ~ .sig-paren, #wrap main .alert code ~ .sig-param, #wrap main .alert code ~ .optional, #wrap main .alert article.doc-body .command, #wrap main article.doc-body .alert .command, #wrap main .alert article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class .alert em.property:not(:first-child), #wrap main .alert article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class .alert em.property:not(:first-child), #wrap main .alert article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class .alert em.property:not(:first-child), #wrap main .alert div[class^="highlight"] {
+        background-color: #fff !important;
+        border: 1px solid #d5d5d5;
+        color: inherit; }
       #wrap main .alert > p, #wrap main .alert > ul {
         margin-bottom: .5rem; }
       #wrap main .alert > *:last-child {
@@ -9001,6 +9054,8 @@ aside.o_page_toc {
           color: #4B9EB6; }
           #wrap main .alert.alert-info > .alert-title:before, #wrap main .alert.alert-info > h3:before, #wrap main .alert.alert-info > .h3:before, #wrap main .alert[class^="admonition"] > .alert-title:before, #wrap main .alert[class^="admonition"] > h3:before, #wrap main .alert[class^="admonition"] > .h3:before {
             content: ""; }
+        #wrap main .alert.alert-info code, #wrap main .alert.alert-info code ~ .sig-paren, #wrap main .alert.alert-info code ~ .sig-param, #wrap main .alert.alert-info code ~ .optional, #wrap main .alert.alert-info article.doc-body .command, #wrap main article.doc-body .alert.alert-info .command, #wrap main .alert.alert-info article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class .alert.alert-info em.property:not(:first-child), #wrap main .alert.alert-info article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class .alert.alert-info em.property:not(:first-child), #wrap main .alert.alert-info article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class .alert.alert-info em.property:not(:first-child), #wrap main .alert.alert-info div[class^="highlight"], #wrap main .alert[class^="admonition"] code, #wrap main .alert[class^="admonition"] code ~ .sig-paren, #wrap main .alert[class^="admonition"] code ~ .sig-param, #wrap main .alert[class^="admonition"] code ~ .optional, #wrap main .alert[class^="admonition"] article.doc-body .command, #wrap main article.doc-body .alert[class^="admonition"] .command, #wrap main .alert[class^="admonition"] article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class .alert[class^="admonition"] em.property:not(:first-child), #wrap main .alert[class^="admonition"] article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class .alert[class^="admonition"] em.property:not(:first-child), #wrap main .alert[class^="admonition"] article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class .alert[class^="admonition"] em.property:not(:first-child), #wrap main .alert[class^="admonition"] div[class^="highlight"] {
+          border-color: #81bbcc; }
       #wrap main .alert.alert-note {
         border-color: #098da8;
         background-color: #F9F9F9;
@@ -9024,12 +9079,16 @@ aside.o_page_toc {
           color: #db8c1b; }
           #wrap main .alert.alert-warning > .alert-title:before, #wrap main .alert.alert-warning > h3:before, #wrap main .alert.alert-warning > .h3:before, #wrap main .alert.warning > .alert-title:before, #wrap main .alert.warning > h3:before, #wrap main .alert.warning > .h3:before {
             content: ""; }
+        #wrap main .alert.alert-warning code, #wrap main .alert.alert-warning code ~ .sig-paren, #wrap main .alert.alert-warning code ~ .sig-param, #wrap main .alert.alert-warning code ~ .optional, #wrap main .alert.alert-warning article.doc-body .command, #wrap main article.doc-body .alert.alert-warning .command, #wrap main .alert.alert-warning article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class .alert.alert-warning em.property:not(:first-child), #wrap main .alert.alert-warning article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class .alert.alert-warning em.property:not(:first-child), #wrap main .alert.alert-warning article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class .alert.alert-warning em.property:not(:first-child), #wrap main .alert.alert-warning div[class^="highlight"], #wrap main .alert.warning code, #wrap main .alert.warning code ~ .sig-paren, #wrap main .alert.warning code ~ .sig-param, #wrap main .alert.warning code ~ .optional, #wrap main .alert.warning article.doc-body .command, #wrap main article.doc-body .alert.warning .command, #wrap main .alert.warning article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class .alert.warning em.property:not(:first-child), #wrap main .alert.warning article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class .alert.warning em.property:not(:first-child), #wrap main .alert.warning article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class .alert.warning em.property:not(:first-child), #wrap main .alert.warning div[class^="highlight"] {
+          border-color: #f9ce8f; }
       #wrap main .alert.alert-danger {
         border-color: #dc3545; }
         #wrap main .alert.alert-danger > .alert-title, #wrap main .alert.alert-danger > h3, #wrap main .alert.alert-danger > .h3 {
           color: #a02622; }
           #wrap main .alert.alert-danger > .alert-title:before, #wrap main .alert.alert-danger > h3:before, #wrap main .alert.alert-danger > .h3:before {
             content: ""; }
+        #wrap main .alert.alert-danger code, #wrap main .alert.alert-danger code ~ .sig-paren, #wrap main .alert.alert-danger code ~ .sig-param, #wrap main .alert.alert-danger code ~ .optional, #wrap main .alert.alert-danger article.doc-body .command, #wrap main article.doc-body .alert.alert-danger .command, #wrap main .alert.alert-danger article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class .alert.alert-danger em.property:not(:first-child), #wrap main .alert.alert-danger article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class .alert.alert-danger em.property:not(:first-child), #wrap main .alert.alert-danger article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class .alert.alert-danger em.property:not(:first-child), #wrap main .alert.alert-danger div[class^="highlight"] {
+          border-color: #eca9a7; }
       #wrap main .alert.alert-example {
         border-color: #85b290;
         background-color: #eef4ef;
@@ -9038,6 +9097,8 @@ aside.o_page_toc {
           color: #355e3f; }
         #wrap main .alert.alert-example > .alert-title:before, #wrap main .alert.alert-example > h3:before, #wrap main .alert.alert-example > .h3:before {
           content: ""; }
+        #wrap main .alert.alert-example code, #wrap main .alert.alert-example code ~ .sig-paren, #wrap main .alert.alert-example code ~ .sig-param, #wrap main .alert.alert-example code ~ .optional, #wrap main .alert.alert-example article.doc-body .command, #wrap main article.doc-body .alert.alert-example .command, #wrap main .alert.alert-example article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class .alert.alert-example em.property:not(:first-child), #wrap main .alert.alert-example article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class .alert.alert-example em.property:not(:first-child), #wrap main .alert.alert-example article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class .alert.alert-example em.property:not(:first-child), #wrap main .alert.alert-example div[class^="highlight"] {
+          border-color: #a8c8b0; }
       #wrap main .alert.alert-exercise {
         border-color: #b3b0b4;
         background-color: #f4f4f4;
@@ -9046,19 +9107,19 @@ aside.o_page_toc {
           color: #605c60; }
         #wrap main .alert.alert-exercise > .alert-title:before, #wrap main .alert.alert-exercise > h3:before, #wrap main .alert.alert-exercise > .h3:before {
           content: ""; }
+        #wrap main .alert.alert-exercise code, #wrap main .alert.alert-exercise code ~ .sig-paren, #wrap main .alert.alert-exercise code ~ .sig-param, #wrap main .alert.alert-exercise code ~ .optional, #wrap main .alert.alert-exercise article.doc-body .command, #wrap main article.doc-body .alert.alert-exercise .command, #wrap main .alert.alert-exercise article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class .alert.alert-exercise em.property:not(:first-child), #wrap main .alert.alert-exercise article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class .alert.alert-exercise em.property:not(:first-child), #wrap main .alert.alert-exercise article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class .alert.alert-exercise em.property:not(:first-child), #wrap main .alert.alert-exercise div[class^="highlight"] {
+          border-color: #c9c7ca; }
       #wrap main .alert.alert-go_to {
         border-color: #875a7b;
         background-color: #F9F9F9; }
-        @media (min-width: 992px) {
-          #wrap main .alert.alert-go_to {
-            display: inline-block;
-            width: calc(50% - 1rem); } }
         #wrap main .alert.alert-go_to a {
           color: #7A436B; }
         #wrap main .alert.alert-go_to > .alert-title, #wrap main .alert.alert-go_to > h3, #wrap main .alert.alert-go_to > .h3 {
           color: #7A436B; }
         #wrap main .alert.alert-go_to > .alert-title:before, #wrap main .alert.alert-go_to > h3:before, #wrap main .alert.alert-go_to > .h3:before {
           content: ""; }
+        #wrap main .alert.alert-go_to code, #wrap main .alert.alert-go_to code ~ .sig-paren, #wrap main .alert.alert-go_to code ~ .sig-param, #wrap main .alert.alert-go_to code ~ .optional, #wrap main .alert.alert-go_to article.doc-body .command, #wrap main article.doc-body .alert.alert-go_to .command, #wrap main .alert.alert-go_to article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class .alert.alert-go_to em.property:not(:first-child), #wrap main .alert.alert-go_to article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class .alert.alert-go_to em.property:not(:first-child), #wrap main .alert.alert-go_to article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class .alert.alert-go_to em.property:not(:first-child), #wrap main .alert.alert-go_to div[class^="highlight"] {
+          border-color: #c3adbd; }
 
 .sphinx-tabs {
   padding: 0;
@@ -9081,7 +9142,7 @@ aside.o_page_toc {
     padding: .5rem 1rem; }
     .sphinx-tabs .sphinx-tabs-tab:hover:not([aria-selected="true"]) {
       cursor: pointer;
-      background: #eae1e7;
+      background: #e4d9e1;
       color: #7A436B;
       transition: color .15s, background .15s;
       border-radius: 0; }
@@ -9118,6 +9179,23 @@ aside.o_page_toc {
       border: 0 !important; }
     .sphinx-tabs .sphinx-tabs-panel > *:last-child {
       margin-bottom: 0 !important; }
+
+.o_image_modal .modal-dialog {
+  max-width: fit-content; }
+
+.o_image_modal .modal-content {
+  background-color: transparent;
+  border: none; }
+
+.o_image_modal .modal-body {
+  padding: 2.2rem; }
+
+.o_image_modal .btn-close {
+  position: absolute;
+  top: 0;
+  left: auto;
+  bottom: auto;
+  right: auto; }
 
 footer .o_get_help {
   padding-top: 3rem;

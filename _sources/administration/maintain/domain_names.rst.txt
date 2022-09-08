@@ -21,6 +21,11 @@ You can use a custom domain name to access your Odoo database and websites:
    databases for one year. Visitors can then access your website with an address such as
    ``www.example.com`` rather than the default ``example.odoo.com``.
 
+.. seealso::
+   - `Odoo Tutorials: Register a Free Domain Name
+     <https://www.odoo.com/slides/slide/register-a-free-domain-name-1663>`_
+   - `Odoo Quick Tips: Get a free domain name! <https://www.youtube.com/watch?v=eAfgeNOHLP4>`_
+
 .. _domain-name/about:
 
 About domain names
@@ -54,6 +59,8 @@ database manager.
      registrar.
    - You are the owner of the domain name and can use it for other purposes.
    - Odoo manages payment and technical support for you.
+   - This offer doesn't include any mailbox. However, you can :ref:`configure your MX records
+     <domain-name/odoo-manage>` to use your own email server or solution such as Google Workspace.
 
 To do so, go to :menuselection:`Website --> Go to website --> Promote --> Domain Name`.
 Alternatively, open your `database manager <https://www.odoo.com/my/databases>`_, click on the
@@ -112,6 +119,7 @@ that you proceed with the following actions in this order:
 #. :ref:`Add a CNAME record <domain-name/cname>` on your domain name's DNS zone.
 #. :ref:`Map your domain name with your Odoo database <domain-name/db-map>`.
 #. :ref:`Map your domain name with your Odoo website <domain-name/website-map>`.
+#. Optionally: :ref:`Change the web base address of your database <domain-name/web-base-url>`.
 
 .. _domain-name/cname:
 
@@ -258,10 +266,6 @@ Odoo generates a separate SSL certificate for each domain :ref:`mapped in the da
 Web base URL of a database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note::
-   If you have Odoo Website, you can disregard this part and directly :ref:`map your domain name
-   with your website <domain-name/website-map>`.
-
 The **web base URL** of a database, or **root URL** affects your main website address and all the
 links sent to your customers (e.g., quotations, portal links, etc.).
 
@@ -297,8 +301,6 @@ Mapping your domain name to your website isn't the same as mapping it with your 
 
 - It defines your domain name as the main one for your website, helping search engines to index your
   website properly.
-- It defines your domain name as the base URL for your database, including the portal links sent by
-  email to your customers.
 - If you have multiple websites, it maps your domain name with the appropriate website.
 
 Go to :menuselection:`Website --> Configuration --> Settings --> Website Info`. If you have multiple
@@ -318,12 +320,6 @@ In the :guilabel:`Domain` field, fill in the web address of your website (e.g.,
    If both addresses are already indexed, it may take some time before Google removes the indexation
    of the second address. You may also try using the `Google Search Console
    <https://search.google.com/search-console/welcome>`_ to fix this.
-
-.. note::
-   If you have multiple websites and companies on your database, make sure that you select the
-   right :guilabel:`Company` in the website settings, next to the :guilabel:`Domain` settings. Doing
-   so indicates Odoo which URL to use as the :ref:`base URL <domain-name/web-base-url>` according to
-   the company in use.
 
 .. seealso::
   - :doc:`/applications/general/email_communication/email_servers`

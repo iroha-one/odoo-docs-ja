@@ -8,5 +8,5 @@ Reference
 .. toctree::
     :titlesonly:
 
-    reference/backend
-    reference/frontend
+    reference/addons
+    reference/javascript

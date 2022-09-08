@@ -107,7 +107,7 @@ Linux
 Debian/Ubuntu
 '''''''''''''
 
-Odoo 15.0 'deb' package currently supports `Debian 11 (Bullseye)`_, `Ubuntu 20.04 (Focal)`_ or above.
+Odoo 13.0 'deb' package currently supports `Debian Buster`_, `Ubuntu 18.04`_ or above.
 
 Prepare
 ^^^^^^^
@@ -134,7 +134,7 @@ used to install *Odoo Community Edition* by executing the following commands **a
 .. code-block:: console
 
     # wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
-    # echo "deb http://nightly.odoo.com/15.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
+    # echo "deb http://nightly.odoo.com/13.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
     # apt-get update && apt-get install odoo
 
 You can then use the usual `apt-get upgrade` command to keep your installation up-to-date.
@@ -180,7 +180,7 @@ and automatically start the server.
 Fedora
 ''''''
 
-Odoo 15.0 'rpm' package supports Fedora 34.
+Odoo 13.0 'rpm' package supports Fedora 30.
 
 Prepare
 ^^^^^^^
@@ -209,7 +209,7 @@ commands:
 
 .. code-block:: console
 
-    $ sudo dnf config-manager --add-repo=https://nightly.odoo.com/15.0/nightly/rpm/odoo.repo
+    $ sudo dnf config-manager --add-repo=https://nightly.odoo.com/13.0/nightly/rpm/odoo.repo
     $ sudo dnf install -y odoo
     $ sudo systemctl enable odoo
     $ sudo systemctl start odoo
@@ -224,7 +224,7 @@ Once downloaded, the package can be installed using the 'dnf' package manager:
 
 .. code-block:: console
 
-    $ sudo dnf localinstall odoo_15.0.latest.noarch.rpm
+    $ sudo dnf localinstall odoo_13.0.latest.noarch.rpm
     $ sudo systemctl enable odoo
     $ sudo systemctl start odoo
 
@@ -248,6 +248,8 @@ packaged installations, and allows overriding settings using
 Finally it provides greater control over the system's set up, and allows to more easily keep
 (and run) multiple versions of Odoo side-by-side.
 
+.. _setup/install/source/windows:
+
 Windows
 -------
 
@@ -270,31 +272,42 @@ Enterprise Edition:
 * `Official download page <download_>`_
 * `GitHub repository <enterprise-repository_>`_
 
+.. _setup/install/source/windows/git:
+
 Git
 ^^^
 
-The following requires git_ to be installed on your machine and that you have basic knowledge of
-git commands.
+The following requires `Git <git_>`_ to be installed on your machine and that you have basic
+knowledge of Git commands. To clone a Git repository, you must choose between cloning with HTTPS or
+SSH. If you do not know the difference between the two, the best option is most likely HTTPS. If you
+are following the :doc:`Getting started </developer/howtos/rdtraining>` developer tutorial, or plan
+on contributing to Odoo source code, choose SSH.
 
-Community Edition:
+.. note::
+   **The Enterprise Git repository does not contain the full Odoo source code**. It is only a
+   collection of extra add-ons. The main server code is in the Community version. Running the
+   Enterprise version actually means running the server from the Community version with the
+   addons-path option set to the folder with the Enterprise version. You need to clone both the
+   Community and Enterprise repository to have a working Odoo Enterprise installation. See
+   :ref:`setup/install/editions` to get access to the Enterprise repository.
 
-.. code-block:: doscon
+.. tabs::
 
-    C:\> git clone https://github.com/odoo/odoo.git
+   .. tab:: Clone with HTTPS
 
+      .. code-block:: doscon
 
-Enterprise Edition: (see :ref:`setup/install/editions` to get access)
+         C:\> git clone https://github.com/odoo/odoo.git
+         C:\> git clone https://github.com/odoo/enterprise.git
 
-.. code-block:: doscon
+   .. tab:: Clone with SSH
 
-  C:\> git clone https://github.com/odoo/enterprise.git
+      .. code-block:: doscon
 
-.. note:: **The Enterprise git repository does not contain the full Odoo source code**. It is only
-          a collection of extra add-ons. The main server code is in the Community version. Running
-          the Enterprise version actually means running the server from the Community version with
-          the addons-path option set to the folder with the Enterprise version. You need to clone
-          both the Community and Enterprise repository to have a working Odoo Enterprise
-          installation.
+         C:\> git clone git@github.com:odoo/odoo.git
+         C:\> git clone git@github.com:odoo/enterprise.git
+
+.. _setup/install/source/windows/prepare:
 
 Prepare
 '''''''
@@ -302,13 +315,13 @@ Prepare
 Python
 ^^^^^^
 
-Odoo requires Python 3.7 or later to run. Visit `Python's download page <https://www.python.org/downloads/windows/>`_
+Odoo requires Python 3.6 or later to run. Visit `Python's download page <https://www.python.org/downloads/windows/>`_
 to download and install the latest version of Python 3 on your machine.
 
 During installation, check **Add Python 3 to PATH**, then click **Customize Installation** and make
 sure that **pip** is checked.
 
-.. note:: If Python 3 is already installed, make sure that the version is 3.7 or above, as previous
+.. note:: If Python 3 is already installed, make sure that the version is 3.6 or above, as previous
           versions are not compatible with Odoo.
 
           .. code-block:: doscon
@@ -409,10 +422,23 @@ A typical way to run the server would be:
 
 Where `CommunityPath` is the path of the Odoo Community installation, `dbuser` is the
 PostgreSQL login, `dbpassword` is the PostgreSQL password
-and `mydb` is the default database to serve on `localhost:8069`.
+and `mydb` is the name of the PostgreSQL database.
+
+After the server has started (the INFO log `odoo.modules.loading: Modules loaded.` is printed), open
+http://localhost:8069 in your web browser and log in with the base administrator account: Use
+`admin` for the :guilabel:`Email` and, again, `admin` for the :guilabel:`Password`. That's it, you
+just logged into your own Odoo database!
+
+.. tip::
+   - From there, you can create and manage new :doc:`users
+     </applications/general/users/manage_users>`.
+   - The user account you use to log into Odoo's web interface differs from the :option:`--db_user
+     <odoo-bin -r>` CLI argument.
 
 .. seealso::
-   - :doc:`The exhaustive list of arguments for odoo-bin </developer/misc/other/cmdline>`.
+   :doc:`The exhaustive list of CLI arguments for odoo-bin </developer/cli>`.
+
+.. _setup/install/source/linux:
 
 Linux
 -----
@@ -436,31 +462,42 @@ Enterprise Edition:
 * `Official download page <download_>`_
 * `GitHub repository <enterprise-repository_>`_
 
+.. _setup/install/source/linux/git:
+
 Git
 ^^^
 
-The following requires git_ to be installed on your machine and that you have basic knowledge of
-git commands.
+The following requires `Git <git_>`_ to be installed on your machine and that you have basic
+knowledge of Git commands. To clone a Git repository, you must choose between cloning with HTTPS or
+SSH. If you do not know the difference between the two, the best option is most likely HTTPS. If you
+are following the :doc:`Getting started </developer/howtos/rdtraining>` developer tutorial, or plan
+on contributing to Odoo source code, choose SSH.
 
-Community Edition:
+.. note::
+   **The Enterprise Git repository does not contain the full Odoo source code**. It is only a
+   collection of extra add-ons. The main server code is in the Community version. Running the
+   Enterprise version actually means running the server from the Community version with the
+   addons-path option set to the folder with the Enterprise version. You need to clone both the
+   Community and Enterprise repository to have a working Odoo Enterprise installation. See
+   :ref:`setup/install/editions` to get access to the Enterprise repository.
 
-.. code-block:: console
+.. tabs::
 
-    $ git clone https://github.com/odoo/odoo.git
+   .. tab:: Clone with HTTPS
 
+      .. code-block:: console
 
-Enterprise Edition: (see :ref:`setup/install/editions` to get access)
+         $ git clone https://github.com/odoo/odoo.git
+         $ git clone https://github.com/odoo/enterprise.git
 
-.. code-block:: console
+   .. tab:: Clone with SSH
 
-  $ git clone https://github.com/odoo/enterprise.git
+      .. code-block:: console
 
-.. note:: **The Enterprise git repository does not contain the full Odoo source code**. It is only
-          a collection of extra add-ons. The main server code is in the Community version. Running
-          the Enterprise version actually means running the server from the Community version with
-          the addons-path option set to the folder with the Enterprise version. You need to clone
-          both the Community and Enterprise repository to have a working Odoo Enterprise
-          installation.
+         $ git clone git@github.com:odoo/odoo.git
+         $ git clone git@github.com:odoo/enterprise.git
+
+.. _setup/install/source/linux/prepare:
 
 Prepare
 '''''''
@@ -468,10 +505,10 @@ Prepare
 Python
 ^^^^^^
 
-Odoo requires Python 3.7 or later to run. Use your package manager to download and install Python 3
+Odoo requires Python 3.6 or later to run. Use your package manager to download and install Python 3
 on your machine if it is not already done.
 
-.. note:: If Python 3 is already installed, make sure that the version is 3.7 or above, as previous
+.. note:: If Python 3 is already installed, make sure that the version is 3.6 or above, as previous
           versions are not compatible with Odoo.
 
           .. code-block:: console
@@ -580,10 +617,23 @@ A typical way to run the server would be:
     $ python3 odoo-bin --addons-path=addons -d mydb
 
 Where `CommunityPath` is the path of the Odoo Community installation
-and `mydb` is the default database to serve on `localhost:8069`.
+and `mydb` is the name of the PostgreSQL database.
+
+After the server has started (the INFO log `odoo.modules.loading: Modules loaded.` is printed), open
+http://localhost:8069 in your web browser and log in with the base administrator account: Use
+`admin` for the :guilabel:`Email` and, again, `admin` for the :guilabel:`Password`. That's it, you
+just logged into your own Odoo database!
+
+.. tip::
+   - From there, you can create and manage new :doc:`users
+     </applications/general/users/manage_users>`.
+   - The user account you use to log into Odoo's web interface differs from the :option:`--db_user
+     <odoo-bin -r>` CLI argument.
 
 .. seealso::
-   - :doc:`The exhaustive list of arguments for odoo-bin </developer/misc/other/cmdline>`.
+   :doc:`The exhaustive list of CLI arguments for odoo-bin </developer/cli>`.
+
+.. _setup/install/source/mac_os:
 
 Mac OS
 ------
@@ -607,31 +657,42 @@ Enterprise Edition:
 * `Official download page <download_>`_
 * `GitHub repository <enterprise-repository_>`_
 
+.. _setup/install/source/mac_os/git:
+
 Git
 ^^^
 
-The following requires git_ to be installed on your machine and that you have basic knowledge of
-git commands.
+The following requires `Git <git_>`_ to be installed on your machine and that you have basic
+knowledge of Git commands. To clone a Git repository, you must choose between cloning with HTTPS or
+SSH. If you do not know the difference between the two, the best option is most likely HTTPS. If you
+are following the :doc:`Getting started </developer/howtos/rdtraining>` developer tutorial, or plan
+on contributing to Odoo source code, choose SSH.
 
-Community Edition:
+.. note::
+   **The Enterprise Git repository does not contain the full Odoo source code**. It is only a
+   collection of extra add-ons. The main server code is in the Community version. Running the
+   Enterprise version actually means running the server from the Community version with the
+   addons-path option set to the folder with the Enterprise version. You need to clone both the
+   Community and Enterprise repository to have a working Odoo Enterprise installation. See
+   :ref:`setup/install/editions` to get access to the Enterprise repository.
 
-.. code-block:: console
+.. tabs::
 
-    $ git clone https://github.com/odoo/odoo.git
+   .. tab:: Clone with HTTPS
 
+      .. code-block:: console
 
-Enterprise Edition: (see :ref:`setup/install/editions` to get access)
+         $ git clone https://github.com/odoo/odoo.git
+         $ git clone https://github.com/odoo/enterprise.git
 
-.. code-block:: console
+   .. tab:: Clone with SSH
 
-  $ git clone https://github.com/odoo/enterprise.git
+      .. code-block:: console
 
-.. note:: **The Enterprise git repository does not contain the full Odoo source code**. It is only
-          a collection of extra add-ons. The main server code is in the Community version. Running
-          the Enterprise version actually means running the server from the Community version with
-          the addons-path option set to the folder with the Enterprise version. You need to clone
-          both the Community and Enterprise repository to have a working Odoo Enterprise
-          installation.
+         $ git clone git@github.com:odoo/odoo.git
+         $ git clone git@github.com:odoo/enterprise.git
+
+.. _setup/install/source/mac_os/prepare:
 
 Prepare
 '''''''
@@ -639,10 +700,10 @@ Prepare
 Python
 ^^^^^^
 
-Odoo requires Python 3.7 or later to run. Use your preferred package manager (homebrew_, macports_)
+Odoo requires Python 3.6 or later to run. Use your preferred package manager (homebrew_, macports_)
 to download and install Python 3 on your machine if it is not already done.
 
-.. note:: If Python 3 is already installed, make sure that the version is 3.7 or above, as previous
+.. note:: If Python 3 is already installed, make sure that the version is 3.6 or above, as previous
           versions are not compatible with Odoo.
 
           .. code-block:: console
@@ -660,6 +721,11 @@ PostgreSQL
 
 Odoo uses PostgreSQL as database management system. Use `postgres.app <https://postgresapp.com>`_
 to download and install PostgreSQL (supported version: 10.0 and later).
+
+.. tip::
+   To make the command line tools bundled with `postgres.app` available, make sure to setup your
+   `$PATH` variable by following the `Postgres.app CLI Tools Instructions
+   <https://postgresapp.com/documentation/cli-tools.html>`_.
 
 By default, the only user is `postgres` but Odoo forbids connecting as `postgres`, so you need to
 create a new PostgreSQL user:
@@ -744,10 +810,26 @@ A typical way to run the server would be:
     $ python3 odoo-bin --addons-path=addons -d mydb
 
 Where `CommunityPath` is the path of the Odoo Community installation
-and `mydb` is the default database to serve on `localhost:8069`.
+and `mydb` is the name of the PostgreSQL database.
+
+.. warning::
+   Some versions of python on Mac might lead to the following error message: `current limit exceeds
+   maximum limit`. In that case, add the following parameter `--limit-memory-hard 0` to avoid the
+   problem.
+
+After the server has started (the INFO log `odoo.modules.loading: Modules loaded.` is printed), open
+http://localhost:8069 in your web browser and log in with the base administrator account: Use
+`admin` for the :guilabel:`Email` and, again, `admin` for the :guilabel:`Password`. That's it, you
+just logged into your own Odoo database!
+
+.. tip::
+   - From there, you can create and manage new :doc:`users
+     </applications/general/users/manage_users>`.
+   - The user account you use to log into Odoo's web interface differs from the :option:`--db_user
+     <odoo-bin -r>` CLI argument.
 
 .. seealso::
-   - :doc:`The exhaustive list of arguments for odoo-bin </developer/misc/other/cmdline>`.
+   :doc:`The exhaustive list of CLI arguments for odoo-bin </developer/cli>`.
 
 .. _setup/install/docker:
 
@@ -757,11 +839,11 @@ Docker
 The full documentation on how to use Odoo with Docker can be found on the
 official Odoo `docker image <https://hub.docker.com/_/odoo/>`_ page.
 
-.. _Debian 11 (Bullseye): https://www.debian.org/releases/bullseye/
+.. _Debian Buster: https://www.debian.org/releases/buster/
 .. _demo: https://demo.odoo.com
 .. _docker: https://www.docker.com
 .. _download: https://www.odoo.com/page/download
-.. _Ubuntu 20.04 (Focal): http://releases.ubuntu.com/20.04/
+.. _Ubuntu 18.04: http://releases.ubuntu.com/18.04/
 .. _EPEL: https://fedoraproject.org/wiki/EPEL
 .. _PostgreSQL: http://www.postgresql.org
 .. _the official installer:

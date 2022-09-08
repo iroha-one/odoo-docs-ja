@@ -33,7 +33,7 @@ Installation
       ./odoo-bin --geoip-db= ~/Downloads/GeoLite2-City.mmdb
 
    .. seealso::
-      - :doc:`CLI documentation </developer/misc/other/cmdline>`.
+      - :doc:`CLI documentation </developer/cli>`.
 
 .. warning::
    ``GeoIP`` Python library can also be used. However this version is discontinued since January
@@ -52,7 +52,7 @@ How To Test GeoIP Geolocation In Your Odoo Website
 
 You should end up with a dictionary indicating the location of the IP address.
 
-.. image:: media/on-premise_geo-ip-installation01.png
+.. image:: on-premise_geo-ip-installation/on-premise_geo-ip-installation01.png
     :align: center
 
 .. note::

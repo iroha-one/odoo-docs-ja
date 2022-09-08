@@ -167,7 +167,7 @@ In the above commands, the argument:
 * ``--stop-after-init`` will immediately shutdown the server instance after it completed the operations you asked.
 
 More options are available and detailed in the
-:doc:`CLI documentation </developer/misc/other/cmdline>`.
+:doc:`CLI documentation </developer/cli>`.
 
 You can find in the logs (*~/logs/odoo.log*) the addons path used by Odoo.sh to run your server.
 Look for "*odoo: addons paths*":
@@ -232,6 +232,6 @@ Save the file and then run the Odoo Shell:
 Finally, *via* the Odoo Shell, you can trigger the piece of code/function/method
 you want to debug.
 
-.. image:: ./media/pdb_sh.png
+.. image:: containers/pdb_sh.png
     :align: center
     :alt: Console screenshot showing ``pdb`` running in an Odoo.sh shell.

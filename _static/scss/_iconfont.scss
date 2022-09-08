@@ -57,6 +57,11 @@
     content: $i-link;
   }
 }
+.i-external-link {
+  &:before {
+    content: $i-external-link;
+  }
+}
 .i-websites {
   &:before {
     content: $i-websites;
@@ -415,5 +420,15 @@
 .i-article {
   &:before {
     content: $i-article;
+  }
+}
+.i-sidepanel {
+  &:before {
+    content: $i-sidepanel;
+  }
+}
+.i-close {
+  &:before {
+    content: $i-close;
   }
 }
