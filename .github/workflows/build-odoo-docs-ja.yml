@@ -4,7 +4,7 @@
 # Syntax reference for this file:
 # https://help.github.com/en/articles/workflow-syntax-for-github-actions
 
-name: sphinx
+name: build-odoo-docs-ja
 # on: [push, pull_request]
 on: 
   workflow_dispatch:
