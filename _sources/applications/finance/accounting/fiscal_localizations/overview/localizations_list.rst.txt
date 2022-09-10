@@ -6,6 +6,10 @@ Odoo Accounting can be used in many countries out of the box by installing the a
 Here is a list of all :doc:`Fiscal Localization Packages <fiscal_localization_packages>` that are
 available on Odoo.
 
+.. image:: fiscal_localization_packages/fiscal_localization_packages_modules.png
+   :align: center
+   :alt: Odoo Accounting.
+
 Fiscal localization packages available
 ======================================
 
@@ -22,11 +26,9 @@ Fiscal localization packages available
 - Colombia - Accounting
 - Costa Rica - Accounting
 - Croatia - Accounting (RRIF 2012)
-- Czech - Accounting
 - Denmark - Accounting
 - Dominican Republic - Accounting
-- Ecuadorian - Accounting
-- Egypt - Accounting
+- Ecuador - Accounting
 - Ethiopia - Accounting
 - Finnish Localization
 - France - Accounting
@@ -47,7 +49,6 @@ Fiscal localization packages available
 - Israel - Accounting
 - Italy - Accounting
 - Japan - Accounting
-- Kenya - Accounting
 - Lithuania - Accounting
 - Luxembourg - Accounting
 - Maroc - Accounting
@@ -57,7 +58,6 @@ Fiscal localization packages available
 - New Zealand - Accounting
 - Norway - Accounting
 - OHADA - Accounting
-- Pakistan - Accounting
 - Panama - Accounting
 - Peru - Accounting
 - Poland - Accounting
@@ -69,9 +69,8 @@ Fiscal localization packages available
 - Slovenian - Accounting
 - South Africa - Accounting
 - Spain - Accounting (PGCE 2008)
-- Sweden - Accounting
+- Swedish - Accounting
 - Switzerland - Accounting
-- Taiwan - Accounting
 - Thailand - Accounting
 - Turkey - Accounting
 - U.A.E. - Accounting

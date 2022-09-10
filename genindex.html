@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>索引 &#8212; Odoo 15.0 ドキュメント</title>
+    <title>索引 &#8212; Odoo 14.0 ドキュメント</title>
     
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/style.css" />
@@ -82,7 +82,7 @@
 <li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_purchase_receipts"><a class="reference internal" href="applications/finance/accounting/payables/supplier_bills/purchase_receipts.html">Purchase receipts</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_deferred_expenses"><a class="reference internal" href="applications/finance/accounting/payables/supplier_bills/deferred_expenses.html">Deferred expenses and prepayments</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_assets"><a class="reference internal" href="applications/finance/accounting/payables/supplier_bills/assets.html">Non-current assets and fixed assets</a></li>
-<li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_invoice_digitization"><a class="reference internal" href="applications/finance/accounting/payables/supplier_bills/invoice_digitization.html">Invoice digitization with optical character recognition (OCR)</a></li>
+<li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_ocr"><a class="reference internal" href="applications/finance/accounting/payables/supplier_bills/ocr.html">Digitize vendor bills with optical character recognition (OCR)</a></li>
 </ul>
 </li>
 <li class="toctree-l5 o_menu_applications_finance_accounting_payables_pay"><a class="reference internal" href="#">Vendor payments</a><ul>
@@ -100,7 +100,6 @@
 <li class="toctree-l4 o_menu_applications_finance_accounting_bank"><a class="reference internal" href="#">Bank and cash</a><ul>
 <li class="toctree-l5 o_menu_applications_finance_accounting_bank_setup"><a class="reference internal" href="#">Setup</a><ul>
 <li class="toctree-l6 o_menu_applications_finance_accounting_bank_setup_bank_accounts"><a class="reference internal" href="applications/finance/accounting/bank/setup/bank_accounts.html">Bank Accounts</a></li>
-<li class="toctree-l6 o_menu_applications_finance_accounting_bank_setup_outstanding_accounts"><a class="reference internal" href="applications/finance/accounting/bank/setup/outstanding_accounts.html">Outstanding accounts</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_bank_setup_manage_cash_register"><a class="reference internal" href="applications/finance/accounting/bank/setup/manage_cash_register.html">Manage a cash register</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_bank_setup_foreign_currency"><a class="reference internal" href="applications/finance/accounting/bank/setup/foreign_currency.html">Manage a bank account in a foreign currency</a></li>
 </ul>
@@ -193,10 +192,8 @@
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_chile"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/chile.html">Chile</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_colombia"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/colombia.html">Colombia</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_colombia_ES"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/colombia_ES.html">Colombia (ES)</a></li>
-<li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_egypt"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/egypt.html">Egypt</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_france"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/france.html">France</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_germany"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/germany.html">Germany</a></li>
-<li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_india"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/india.html">India</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_indonesia"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/indonesia.html">Indonesia</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_italy"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/italy.html">Italy</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_italy_IT"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/italy_IT.html">Italy (IT)</a></li>
@@ -215,16 +212,14 @@
 <li class="toctree-l3 o_menu_applications_finance_expenses"><a class="reference internal" href="applications/finance/expenses.html">Expenses</a></li>
 <li class="toctree-l3 o_menu_applications_finance_documents"><a class="reference internal" href="applications/finance/documents.html">Documents</a></li>
 <li class="toctree-l3 o_menu_applications_finance_sign"><a class="reference internal" href="applications/finance/sign.html">Sign</a></li>
-<li class="toctree-l3 o_menu_applications_finance_payment_acquirers"><a class="reference internal" href="applications/finance/payment_acquirers.html">Payment acquirers (credit cards, online payments)</a><ul>
+<li class="toctree-l3 o_menu_applications_finance_payment_acquirers"><a class="reference internal" href="applications/finance/payment_acquirers.html">Payment Acquirers (Credit Cards, Online Payment)</a><ul>
 <li class="toctree-l4 o_menu_applications_finance_payment_acquirers_wire_transfer"><a class="reference internal" href="applications/finance/payment_acquirers/wire_transfer.html">How to get paid with wire transfers</a></li>
-<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_adyen"><a class="reference internal" href="applications/finance/payment_acquirers/adyen.html">Adyen</a></li>
-<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_alipay"><a class="reference internal" href="applications/finance/payment_acquirers/alipay.html">Alipay</a></li>
+<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_adyen"><a class="reference internal" href="applications/finance/payment_acquirers/adyen.html">Adyen</a><ul>
+<li class="toctree-l5 o_menu_applications_finance_payment_acquirers_adyen_install_pay_by_link_patch"><a class="reference internal" href="applications/finance/payment_acquirers/adyen/install_pay_by_link_patch.html">Install the Adyen Pay by Link Patch</a></li>
+</ul>
+</li>
 <li class="toctree-l4 o_menu_applications_finance_payment_acquirers_authorize"><a class="reference internal" href="applications/finance/payment_acquirers/authorize.html">Authorize.Net</a></li>
-<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_buckaroo"><a class="reference internal" href="applications/finance/payment_acquirers/buckaroo.html">Buckaroo</a></li>
-<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_mollie"><a class="reference internal" href="applications/finance/payment_acquirers/mollie.html">Mollie</a></li>
-<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_ogone"><a class="reference internal" href="applications/finance/payment_acquirers/ogone.html">Ogone</a></li>
-<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_paypal"><a class="reference internal" href="applications/finance/payment_acquirers/paypal.html">Paypal</a></li>
-<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_sips"><a class="reference internal" href="applications/finance/payment_acquirers/sips.html">SIPS</a></li>
+<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_paypal"><a class="reference internal" href="applications/finance/payment_acquirers/paypal.html">Configure your Paypal account</a></li>
 <li class="toctree-l4 o_menu_applications_finance_payment_acquirers_stripe"><a class="reference internal" href="applications/finance/payment_acquirers/stripe.html">Stripe</a></li>
 </ul>
 </li>
@@ -257,6 +252,7 @@
 </li>
 <li class="toctree-l4 o_menu_applications_sales_crm_optimize"><a class="reference internal" href="#">Optimize your Day-to-Day work</a><ul>
 <li class="toctree-l5 o_menu_applications_sales_crm_optimize_partner_autocomplete"><a class="reference internal" href="applications/sales/crm/optimize/partner_autocomplete.html">Enrich your contacts base with Partner Autocomplete</a></li>
+<li class="toctree-l5 o_menu_applications_sales_crm_optimize_outlook_extension"><a class="reference internal" href="applications/sales/crm/optimize/outlook_extension.html">Outlook Extension</a></li>
 <li class="toctree-l5 o_menu_applications_sales_crm_optimize_gamification"><a class="reference internal" href="applications/sales/crm/optimize/gamification.html">How to motivate and reward my salespeople?</a></li>
 </ul>
 </li>
@@ -287,7 +283,6 @@
 <li class="toctree-l5 o_menu_applications_sales_sales_products_prices_products"><a class="reference internal" href="#">Manage your products</a><ul>
 <li class="toctree-l6 o_menu_applications_sales_sales_products_prices_products_import"><a class="reference internal" href="applications/sales/sales/products_prices/products/import.html">How to import Products with Categories and Variants</a></li>
 <li class="toctree-l6 o_menu_applications_sales_sales_products_prices_products_variants"><a class="reference internal" href="applications/sales/sales/products_prices/products/variants.html">Using product variants</a></li>
-<li class="toctree-l6 o_menu_applications_sales_sales_products_prices_products_product_images"><a class="reference internal" href="applications/sales/sales/products_prices/products/product_images.html">Automatically get product images with Google Images</a></li>
 </ul>
 </li>
 <li class="toctree-l5 o_menu_applications_sales_sales_products_prices_taxes"><a class="reference internal" href="#">Set taxes</a><ul>
@@ -333,12 +328,11 @@
 </li>
 <li class="toctree-l4 o_menu_applications_sales_point_of_sale_shop"><a class="reference internal" href="#">Shop Features</a><ul>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_invoice"><a class="reference internal" href="applications/sales/point_of_sale/shop/invoice.html">Invoice from the PoS interface</a></li>
+<li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_cash_control"><a class="reference internal" href="applications/sales/point_of_sale/shop/cash_control.html">Set-up Cash Control in Point of Sale</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_barcode"><a class="reference internal" href="applications/sales/point_of_sale/shop/barcode.html">Using barcodes in PoS</a></li>
-<li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_sales_order"><a class="reference internal" href="applications/sales/point_of_sale/shop/sales_order.html">Sales orders in PoS</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_multicashiers"><a class="reference internal" href="applications/sales/point_of_sale/shop/multicashiers.html">Log in with employee</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_reprint"><a class="reference internal" href="applications/sales/point_of_sale/shop/reprint.html">Reprint Receipts</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_cash_rounding"><a class="reference internal" href="applications/sales/point_of_sale/shop/cash_rounding.html">Cash Rounding</a></li>
-<li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_serial_numbers"><a class="reference internal" href="applications/sales/point_of_sale/shop/serial_numbers.html">Serial numbers and lots</a></li>
 </ul>
 </li>
 <li class="toctree-l4 o_menu_applications_sales_point_of_sale_restaurant"><a class="reference internal" href="#">Restaurant Features</a><ul>
@@ -355,7 +349,6 @@
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_ingenico"><a class="reference internal" href="applications/sales/point_of_sale/payment/ingenico.html">Ingenico</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_vantiv"><a class="reference internal" href="applications/sales/point_of_sale/payment/vantiv.html">Vantiv</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_six"><a class="reference internal" href="applications/sales/point_of_sale/payment/six.html">SIX</a></li>
-<li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_worldline"><a class="reference internal" href="applications/sales/point_of_sale/payment/worldline.html">Worldline</a></li>
 </ul>
 </li>
 <li class="toctree-l4 o_menu_applications_sales_point_of_sale_advanced_pricing_features"><a class="reference internal" href="#">Pricing Features</a><ul>
@@ -441,7 +434,7 @@
 </li>
 <li class="toctree-l4 o_menu_applications_websites_ecommerce_maximizing_revenue"><a class="reference internal" href="#">Maximize my revenue</a><ul>
 <li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_upselling"><a class="reference internal" href="applications/websites/ecommerce/maximizing_revenue/upselling.html">How to sell pricier alternative products (upselling)</a></li>
-<li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_cross_selling"><a class="reference internal" href="applications/websites/ecommerce/maximizing_revenue/cross_selling.html">Cross-selling: Accessory and Optional Products</a></li>
+<li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_cross_selling"><a class="reference internal" href="applications/websites/ecommerce/maximizing_revenue/cross_selling.html">How to sell accessories and optional products (cross-selling)</a></li>
 <li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_reviews"><a class="reference internal" href="applications/websites/ecommerce/maximizing_revenue/reviews.html">How to enable comments &amp; rating</a></li>
 <li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_pricing"><a class="reference internal" href="applications/websites/ecommerce/maximizing_revenue/pricing.html">Adapt prices to website visitors</a></li>
 <li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_promo_code"><a class="reference internal" href="applications/websites/ecommerce/maximizing_revenue/promo_code.html">How to create &amp; share promotional codes</a></li>
@@ -570,12 +563,12 @@
 <li class="toctree-l3 o_menu_applications_inventory_and_mrp_manufacturing"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing.html">Manufacturing</a><ul>
 <li class="toctree-l4 o_menu_applications_inventory_and_mrp_manufacturing_management"><a class="reference internal" href="#">Manufacturing Management</a><ul>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_bill_configuration"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/bill_configuration.html">Create Bills of Materials</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_product_variants"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/product_variants.html">Variants BOM Management</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_kit_shipping"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/kit_shipping.html">Kits</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_kit_shipping"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/kit_shipping.html">Sell sets of products as kits</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_product_variants"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/product_variants.html">How to manage BoMs for product variants</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_sub_assemblies"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/sub_assemblies.html">Manage semi-finished products</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_quality_control"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/quality_control.html">Quality Control</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_alternative_wc"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/alternative_wc.html">Alternative Work Centers</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_alternative_wc"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/alternative_wc.html">Using an alternative Work Center</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_subcontracting"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/subcontracting.html">Subcontract your Manufacturing</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_routing_kit_bom"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.html">Set routings on kit Bills of materials</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_use_mps"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/use_mps.html">Use the Master Production Schedule</a></li>
 </ul>
 </li>
@@ -684,10 +677,6 @@
 <li class="toctree-l5 o_menu_applications_productivity_discuss_overview_plan_activities"><a class="reference internal" href="applications/productivity/discuss/overview/plan_activities.html">Get Organized by Planning Activities</a></li>
 </ul>
 </li>
-<li class="toctree-l4 o_menu_applications_productivity_discuss_advanced"><a class="reference internal" href="#">Advanced</a><ul>
-<li class="toctree-l5 o_menu_applications_productivity_discuss_advanced_ice_servers"><a class="reference internal" href="applications/productivity/discuss/advanced/ice_servers.html">Configure ICE servers with Twilio</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_productivity_iot"><a class="reference internal" href="applications/productivity/iot.html">Internet of Things (IoT)</a><ul>
@@ -711,21 +700,29 @@
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_ingenico"><a class="reference internal" href="applications/sales/point_of_sale/payment/ingenico.html">Ingenico</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_vantiv"><a class="reference internal" href="applications/sales/point_of_sale/payment/vantiv.html">Vantiv</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_six"><a class="reference internal" href="applications/sales/point_of_sale/payment/six.html">SIX</a></li>
-<li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_worldline"><a class="reference internal" href="applications/sales/point_of_sale/payment/worldline.html">Worldline</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l3 o_menu_applications_productivity_mail_plugins"><a class="reference internal" href="applications/productivity/mail_plugins.html">Mail Plugins</a><ul>
-<li class="toctree-l4 o_menu_applications_productivity_mail_plugins_outlook"><a class="reference internal" href="applications/productivity/mail_plugins/outlook.html">Outlook Plugin</a></li>
-<li class="toctree-l4 o_menu_applications_productivity_mail_plugins_gmail"><a class="reference internal" href="applications/productivity/mail_plugins/gmail.html">Gmail Plugin</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_productivity_studio"><a class="reference internal" href="applications/productivity/studio.html">Studio</a><ul>
-<li class="toctree-l4 o_menu_applications_productivity_studio_fields"><a class="reference internal" href="applications/productivity/studio/fields.html">Fields and widgets</a></li>
-<li class="toctree-l4 o_menu_applications_productivity_studio_views"><a class="reference internal" href="applications/productivity/studio/views.html">Views</a></li>
-<li class="toctree-l4 o_menu_applications_productivity_studio_models_modules_apps"><a class="reference internal" href="applications/productivity/studio/models_modules_apps.html">Models, modules, and apps</a></li>
-<li class="toctree-l4 o_menu_applications_productivity_studio_automated_actions"><a class="reference internal" href="applications/productivity/studio/automated_actions.html">Automated actions (automations)</a></li>
+<li class="toctree-l4 o_menu_applications_productivity_studio_concepts"><a class="reference internal" href="#">Concepts</a><ul>
+<li class="toctree-l5 o_menu_applications_productivity_studio_concepts_understanding_general"><a class="reference internal" href="applications/productivity/studio/concepts/understanding_general.html">Understanding General Concepts</a></li>
+<li class="toctree-l5 o_menu_applications_productivity_studio_concepts_understanding_automated_actions"><a class="reference internal" href="applications/productivity/studio/concepts/understanding_automated_actions.html">Understanding Automated Actions</a></li>
+</ul>
+</li>
+<li class="toctree-l4 o_menu_applications_productivity_studio_use_cases"><a class="reference internal" href="#">Use Cases</a><ul>
+<li class="toctree-l5 o_menu_applications_productivity_studio_use_cases_models_fields"><a class="reference internal" href="applications/productivity/studio/use_cases/models_fields.html">Advanced Use Cases: Creating Models and Adding Fields</a></li>
+<li class="toctree-l5 o_menu_applications_productivity_studio_use_cases_filters_status_bar"><a class="reference internal" href="applications/productivity/studio/use_cases/filters_status_bar.html">Advanced Use Cases: Filters and Status Bar</a></li>
+<li class="toctree-l5 o_menu_applications_productivity_studio_use_cases_automated_actions"><a class="reference internal" href="applications/productivity/studio/use_cases/automated_actions.html">Advanced Use Cases: Automated Actions</a></li>
+<li class="toctree-l5 o_menu_applications_productivity_studio_use_cases_views"><a class="reference internal" href="applications/productivity/studio/use_cases/views.html">Advanced Use Cases: Views</a></li>
+</ul>
+</li>
+<li class="toctree-l4 o_menu_applications_productivity_studio_how_to"><a class="reference internal" href="#">How To</a><ul>
+<li class="toctree-l5 o_menu_applications_productivity_studio_how_to_rainbow_man"><a class="reference internal" href="applications/productivity/studio/how_to/rainbow_man.html">Customizing the Rainbow Man</a></li>
+<li class="toctree-l5 o_menu_applications_productivity_studio_how_to_reports"><a class="reference internal" href="applications/productivity/studio/how_to/reports.html">Customizing Reports</a></li>
+<li class="toctree-l5 o_menu_applications_productivity_studio_how_to_export_import"><a class="reference internal" href="applications/productivity/studio/how_to/export_import.html">Export and Import Modules</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -765,7 +762,6 @@
 <li class="toctree-l4 o_menu_applications_general_calendars_google_google_calendar_credentials"><a class="reference internal" href="applications/general/calendars/google/google_calendar_credentials.html">Synchronize Google Calendar with Odoo</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_applications_general_digest_emails"><a class="reference internal" href="applications/general/digest_emails.html">Digest Emails</a></li>
 <li class="toctree-l3 o_menu_applications_general_in_app_purchase"><a class="reference internal" href="applications/general/in_app_purchase.html">In-App Purchase (IAP)</a></li>
 <li class="toctree-l3 o_menu_applications_general_developer_mode"><a class="reference internal" href="applications/general/developer_mode.html">Developer Mode (debug mode)</a></li>
 </ul>
@@ -823,8 +819,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 o_menu_developer"><a class="reference internal" href="developer.html">Developer</a><ul>
-<li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">Tutorials</a><ul>
+<li class="toctree-l1 o_menu_developer"><a class="reference internal" href="developer.html">開発者向け</a><ul>
+<li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">チュートリアル</a><ul>
 <li class="toctree-l3 o_menu_developer_howtos_rdtraining"><a class="reference internal" href="developer/howtos/rdtraining.html">Getting started</a><ul>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_01_architecture"><a class="reference internal" href="developer/howtos/rdtraining/01_architecture.html">Chapter 1: Architecture Overview</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="developer/howtos/rdtraining/02_setup.html">Chapter 2: Development environment setup</a></li>
@@ -844,63 +840,39 @@
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_16_guidelines_pr"><a class="reference internal" href="developer/howtos/rdtraining/16_guidelines_pr.html">Chapter 16: Polish Your Code And Submit Your PR</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_B_acl_irrules"><a class="reference internal" href="developer/howtos/rdtraining/B_acl_irrules.html">Advanced B: ACL and Record Rules</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_C_data"><a class="reference internal" href="developer/howtos/rdtraining/C_data.html">Advanced C: Master and Demo Data</a></li>
-<li class="toctree-l4 o_menu_developer_howtos_rdtraining_D_mixins"><a class="reference internal" href="developer/howtos/rdtraining/D_mixins.html">Advanced D: Mixins</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_E_unittest"><a class="reference internal" href="developer/howtos/rdtraining/E_unittest.html">Advanced E: Python Unit Tests</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_J_reports"><a class="reference internal" href="developer/howtos/rdtraining/J_reports.html">Advanced J: PDF Reports</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_K_dashboard"><a class="reference internal" href="developer/howtos/rdtraining/K_dashboard.html">Advanced K: Dashboards</a></li>
-<li class="toctree-l4 o_menu_developer_howtos_rdtraining_N_security"><a class="reference internal" href="developer/howtos/rdtraining/N_security.html">Advanced N: Security</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_developer_howtos_themes"><a class="reference internal" href="developer/howtos/themes.html">Theme Tutorial</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_website"><a class="reference internal" href="developer/howtos/website.html">Building a Website</a></li>
-<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="developer/howtos/backend.html">Building a Module</a></li>
+<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="developer/howtos/backend.html">モジュールの構築</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_profilecode"><a class="reference internal" href="developer/howtos/profilecode.html">Profiling Odoo code</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_company"><a class="reference internal" href="developer/howtos/company.html">Multi-company Guidelines</a></li>
-<li class="toctree-l3 o_menu_developer_howtos_accounting_localization"><a class="reference internal" href="developer/howtos/accounting_localization.html">Accounting localization</a></li>
+<li class="toctree-l3 o_menu_developer_howtos_localization"><a class="reference internal" href="developer/howtos/localization.html">Accounting Localization</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_translations"><a class="reference internal" href="developer/howtos/translations.html">Translating Modules</a></li>
 </ul>
 </li>
 <li class="toctree-l2 o_menu_developer_reference"><a class="reference internal" href="#">Reference</a><ul>
-<li class="toctree-l3 o_menu_developer_reference_backend"><a class="reference internal" href="#">Python framework</a><ul>
-<li class="toctree-l4 o_menu_developer_reference_backend_orm"><a class="reference internal" href="developer/reference/backend/orm.html">ORM API</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_data"><a class="reference internal" href="developer/reference/backend/data.html">Data Files</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_actions"><a class="reference internal" href="developer/reference/backend/actions.html">Actions</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_views"><a class="reference internal" href="developer/reference/backend/views.html">Views</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_module"><a class="reference internal" href="developer/reference/backend/module.html">Module Manifests</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_reports"><a class="reference internal" href="developer/reference/backend/reports.html">QWeb Reports</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_security"><a class="reference internal" href="developer/reference/backend/security.html">Security in Odoo</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_testing"><a class="reference internal" href="developer/reference/backend/testing.html">Testing Odoo</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_http"><a class="reference internal" href="developer/reference/backend/http.html">Web Controllers</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_mixins"><a class="reference internal" href="developer/reference/backend/mixins.html">Mixins and Useful Classes</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_standard_modules"><a class="reference internal" href="#">Standard modules</a><ul>
-<li class="toctree-l5 o_menu_developer_reference_backend_standard_modules_account"><a class="reference internal" href="#">Accounting</a><ul>
-<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_account_tag"><a class="reference internal" href="developer/reference/backend/standard_modules/account/account_account_tag.html">Account Tag</a></li>
-<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_account"><a class="reference internal" href="developer/reference/backend/standard_modules/account/account_account.html">Account</a></li>
-<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_chart_template"><a class="reference internal" href="developer/reference/backend/standard_modules/account/account_chart_template.html">Chart Template</a></li>
-<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_fiscal_position"><a class="reference internal" href="developer/reference/backend/standard_modules/account/account_fiscal_position.html">Fiscal Position</a></li>
-<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_group"><a class="reference internal" href="developer/reference/backend/standard_modules/account/account_group.html">Account Group</a></li>
-<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_tax_report_line"><a class="reference internal" href="developer/reference/backend/standard_modules/account/account_tax_report_line.html">Tax Report Line</a></li>
-<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_tax"><a class="reference internal" href="developer/reference/backend/standard_modules/account/account_tax.html">Taxes</a></li>
-<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_tax_repartition"><a class="reference internal" href="developer/reference/backend/standard_modules/account/account_tax_repartition.html">Tax Repartitions</a></li>
+<li class="toctree-l3 o_menu_developer_reference_addons"><a class="reference internal" href="#">Server Addons</a><ul>
+<li class="toctree-l4 o_menu_developer_reference_addons_orm"><a class="reference internal" href="developer/reference/addons/orm.html">ORM API</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="developer/reference/addons/data.html">データファイル</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="developer/reference/addons/actions.html">アクション</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_views"><a class="reference internal" href="developer/reference/addons/views.html">Views</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_module"><a class="reference internal" href="developer/reference/addons/module.html">Module Manifests</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_reports"><a class="reference internal" href="developer/reference/addons/reports.html">QWeb Reports</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_security"><a class="reference internal" href="developer/reference/addons/security.html">Security in Odoo</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_testing"><a class="reference internal" href="developer/reference/addons/testing.html">Testing Odoo</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_http"><a class="reference internal" href="developer/reference/addons/http.html">Web Controllers</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_mixins"><a class="reference internal" href="developer/reference/addons/mixins.html">Mixins and Useful Classes</a></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3 o_menu_developer_reference_frontend"><a class="reference internal" href="#">JavaScript framework</a><ul>
-<li class="toctree-l4 o_menu_developer_reference_frontend_framework_overview"><a class="reference internal" href="developer/reference/frontend/framework_overview.html">Framework Overview</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_assets"><a class="reference internal" href="developer/reference/frontend/assets.html">Assets</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_javascript_modules"><a class="reference internal" href="developer/reference/frontend/javascript_modules.html">Javascript Modules</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_owl_components"><a class="reference internal" href="developer/reference/frontend/owl_components.html">Owl Components</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_registries"><a class="reference internal" href="developer/reference/frontend/registries.html">Registries</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_services"><a class="reference internal" href="developer/reference/frontend/services.html">Services</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_hooks"><a class="reference internal" href="developer/reference/frontend/hooks.html">Hooks</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_patching_code"><a class="reference internal" href="developer/reference/frontend/patching_code.html">Patching code</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_javascript_cheatsheet"><a class="reference internal" href="developer/reference/frontend/javascript_cheatsheet.html">Javascript Cheatsheet</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_javascript_reference"><a class="reference internal" href="developer/reference/frontend/javascript_reference.html">Javascript Reference</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_mobile"><a class="reference internal" href="developer/reference/frontend/mobile.html">Mobile JavaScript</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_qweb"><a class="reference internal" href="developer/reference/frontend/qweb.html">QWeb Templates</a></li>
+<li class="toctree-l3 o_menu_developer_reference_javascript"><a class="reference internal" href="#">Javascript Modules</a><ul>
+<li class="toctree-l4 o_menu_developer_reference_javascript_javascript_cheatsheet"><a class="reference internal" href="developer/reference/javascript/javascript_cheatsheet.html">Javascript Cheatsheet</a></li>
+<li class="toctree-l4 o_menu_developer_reference_javascript_javascript_reference"><a class="reference internal" href="developer/reference/javascript/javascript_reference.html">Javascript Reference</a></li>
+<li class="toctree-l4 o_menu_developer_reference_javascript_mobile"><a class="reference internal" href="developer/reference/javascript/mobile.html">Mobile JavaScript</a></li>
+<li class="toctree-l4 o_menu_developer_reference_javascript_qweb"><a class="reference internal" href="developer/reference/javascript/qweb.html">QWeb Templates</a></li>
 </ul>
 </li>
 </ul>
@@ -994,7 +966,7 @@
 <li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_purchase_receipts"><a class="reference internal" href="applications/finance/accounting/payables/supplier_bills/purchase_receipts.html">Purchase receipts</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_deferred_expenses"><a class="reference internal" href="applications/finance/accounting/payables/supplier_bills/deferred_expenses.html">Deferred expenses and prepayments</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_assets"><a class="reference internal" href="applications/finance/accounting/payables/supplier_bills/assets.html">Non-current assets and fixed assets</a></li>
-<li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_invoice_digitization"><a class="reference internal" href="applications/finance/accounting/payables/supplier_bills/invoice_digitization.html">Invoice digitization with optical character recognition (OCR)</a></li>
+<li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_ocr"><a class="reference internal" href="applications/finance/accounting/payables/supplier_bills/ocr.html">Digitize vendor bills with optical character recognition (OCR)</a></li>
 </ul>
 </li>
 <li class="toctree-l5 o_menu_applications_finance_accounting_payables_pay"><a class="reference internal" href="#">Vendor payments</a><ul>
@@ -1012,7 +984,6 @@
 <li class="toctree-l4 o_menu_applications_finance_accounting_bank"><a class="reference internal" href="#">Bank and cash</a><ul>
 <li class="toctree-l5 o_menu_applications_finance_accounting_bank_setup"><a class="reference internal" href="#">Setup</a><ul>
 <li class="toctree-l6 o_menu_applications_finance_accounting_bank_setup_bank_accounts"><a class="reference internal" href="applications/finance/accounting/bank/setup/bank_accounts.html">Bank Accounts</a></li>
-<li class="toctree-l6 o_menu_applications_finance_accounting_bank_setup_outstanding_accounts"><a class="reference internal" href="applications/finance/accounting/bank/setup/outstanding_accounts.html">Outstanding accounts</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_bank_setup_manage_cash_register"><a class="reference internal" href="applications/finance/accounting/bank/setup/manage_cash_register.html">Manage a cash register</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_bank_setup_foreign_currency"><a class="reference internal" href="applications/finance/accounting/bank/setup/foreign_currency.html">Manage a bank account in a foreign currency</a></li>
 </ul>
@@ -1105,10 +1076,8 @@
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_chile"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/chile.html">Chile</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_colombia"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/colombia.html">Colombia</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_colombia_ES"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/colombia_ES.html">Colombia (ES)</a></li>
-<li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_egypt"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/egypt.html">Egypt</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_france"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/france.html">France</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_germany"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/germany.html">Germany</a></li>
-<li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_india"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/india.html">India</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_indonesia"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/indonesia.html">Indonesia</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_italy"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/italy.html">Italy</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_italy_IT"><a class="reference internal" href="applications/finance/accounting/fiscal_localizations/localizations/italy_IT.html">Italy (IT)</a></li>
@@ -1127,16 +1096,14 @@
 <li class="toctree-l3 o_menu_applications_finance_expenses"><a class="reference internal" href="applications/finance/expenses.html">Expenses</a></li>
 <li class="toctree-l3 o_menu_applications_finance_documents"><a class="reference internal" href="applications/finance/documents.html">Documents</a></li>
 <li class="toctree-l3 o_menu_applications_finance_sign"><a class="reference internal" href="applications/finance/sign.html">Sign</a></li>
-<li class="toctree-l3 o_menu_applications_finance_payment_acquirers"><a class="reference internal" href="applications/finance/payment_acquirers.html">Payment acquirers (credit cards, online payments)</a><ul>
+<li class="toctree-l3 o_menu_applications_finance_payment_acquirers"><a class="reference internal" href="applications/finance/payment_acquirers.html">Payment Acquirers (Credit Cards, Online Payment)</a><ul>
 <li class="toctree-l4 o_menu_applications_finance_payment_acquirers_wire_transfer"><a class="reference internal" href="applications/finance/payment_acquirers/wire_transfer.html">How to get paid with wire transfers</a></li>
-<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_adyen"><a class="reference internal" href="applications/finance/payment_acquirers/adyen.html">Adyen</a></li>
-<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_alipay"><a class="reference internal" href="applications/finance/payment_acquirers/alipay.html">Alipay</a></li>
+<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_adyen"><a class="reference internal" href="applications/finance/payment_acquirers/adyen.html">Adyen</a><ul>
+<li class="toctree-l5 o_menu_applications_finance_payment_acquirers_adyen_install_pay_by_link_patch"><a class="reference internal" href="applications/finance/payment_acquirers/adyen/install_pay_by_link_patch.html">Install the Adyen Pay by Link Patch</a></li>
+</ul>
+</li>
 <li class="toctree-l4 o_menu_applications_finance_payment_acquirers_authorize"><a class="reference internal" href="applications/finance/payment_acquirers/authorize.html">Authorize.Net</a></li>
-<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_buckaroo"><a class="reference internal" href="applications/finance/payment_acquirers/buckaroo.html">Buckaroo</a></li>
-<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_mollie"><a class="reference internal" href="applications/finance/payment_acquirers/mollie.html">Mollie</a></li>
-<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_ogone"><a class="reference internal" href="applications/finance/payment_acquirers/ogone.html">Ogone</a></li>
-<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_paypal"><a class="reference internal" href="applications/finance/payment_acquirers/paypal.html">Paypal</a></li>
-<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_sips"><a class="reference internal" href="applications/finance/payment_acquirers/sips.html">SIPS</a></li>
+<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_paypal"><a class="reference internal" href="applications/finance/payment_acquirers/paypal.html">Configure your Paypal account</a></li>
 <li class="toctree-l4 o_menu_applications_finance_payment_acquirers_stripe"><a class="reference internal" href="applications/finance/payment_acquirers/stripe.html">Stripe</a></li>
 </ul>
 </li>
@@ -1169,6 +1136,7 @@
 </li>
 <li class="toctree-l4 o_menu_applications_sales_crm_optimize"><a class="reference internal" href="#">Optimize your Day-to-Day work</a><ul>
 <li class="toctree-l5 o_menu_applications_sales_crm_optimize_partner_autocomplete"><a class="reference internal" href="applications/sales/crm/optimize/partner_autocomplete.html">Enrich your contacts base with Partner Autocomplete</a></li>
+<li class="toctree-l5 o_menu_applications_sales_crm_optimize_outlook_extension"><a class="reference internal" href="applications/sales/crm/optimize/outlook_extension.html">Outlook Extension</a></li>
 <li class="toctree-l5 o_menu_applications_sales_crm_optimize_gamification"><a class="reference internal" href="applications/sales/crm/optimize/gamification.html">How to motivate and reward my salespeople?</a></li>
 </ul>
 </li>
@@ -1199,7 +1167,6 @@
 <li class="toctree-l5 o_menu_applications_sales_sales_products_prices_products"><a class="reference internal" href="#">Manage your products</a><ul>
 <li class="toctree-l6 o_menu_applications_sales_sales_products_prices_products_import"><a class="reference internal" href="applications/sales/sales/products_prices/products/import.html">How to import Products with Categories and Variants</a></li>
 <li class="toctree-l6 o_menu_applications_sales_sales_products_prices_products_variants"><a class="reference internal" href="applications/sales/sales/products_prices/products/variants.html">Using product variants</a></li>
-<li class="toctree-l6 o_menu_applications_sales_sales_products_prices_products_product_images"><a class="reference internal" href="applications/sales/sales/products_prices/products/product_images.html">Automatically get product images with Google Images</a></li>
 </ul>
 </li>
 <li class="toctree-l5 o_menu_applications_sales_sales_products_prices_taxes"><a class="reference internal" href="#">Set taxes</a><ul>
@@ -1245,12 +1212,11 @@
 </li>
 <li class="toctree-l4 o_menu_applications_sales_point_of_sale_shop"><a class="reference internal" href="#">Shop Features</a><ul>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_invoice"><a class="reference internal" href="applications/sales/point_of_sale/shop/invoice.html">Invoice from the PoS interface</a></li>
+<li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_cash_control"><a class="reference internal" href="applications/sales/point_of_sale/shop/cash_control.html">Set-up Cash Control in Point of Sale</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_barcode"><a class="reference internal" href="applications/sales/point_of_sale/shop/barcode.html">Using barcodes in PoS</a></li>
-<li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_sales_order"><a class="reference internal" href="applications/sales/point_of_sale/shop/sales_order.html">Sales orders in PoS</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_multicashiers"><a class="reference internal" href="applications/sales/point_of_sale/shop/multicashiers.html">Log in with employee</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_reprint"><a class="reference internal" href="applications/sales/point_of_sale/shop/reprint.html">Reprint Receipts</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_cash_rounding"><a class="reference internal" href="applications/sales/point_of_sale/shop/cash_rounding.html">Cash Rounding</a></li>
-<li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_serial_numbers"><a class="reference internal" href="applications/sales/point_of_sale/shop/serial_numbers.html">Serial numbers and lots</a></li>
 </ul>
 </li>
 <li class="toctree-l4 o_menu_applications_sales_point_of_sale_restaurant"><a class="reference internal" href="#">Restaurant Features</a><ul>
@@ -1267,7 +1233,6 @@
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_ingenico"><a class="reference internal" href="applications/sales/point_of_sale/payment/ingenico.html">Ingenico</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_vantiv"><a class="reference internal" href="applications/sales/point_of_sale/payment/vantiv.html">Vantiv</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_six"><a class="reference internal" href="applications/sales/point_of_sale/payment/six.html">SIX</a></li>
-<li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_worldline"><a class="reference internal" href="applications/sales/point_of_sale/payment/worldline.html">Worldline</a></li>
 </ul>
 </li>
 <li class="toctree-l4 o_menu_applications_sales_point_of_sale_advanced_pricing_features"><a class="reference internal" href="#">Pricing Features</a><ul>
@@ -1353,7 +1318,7 @@
 </li>
 <li class="toctree-l4 o_menu_applications_websites_ecommerce_maximizing_revenue"><a class="reference internal" href="#">Maximize my revenue</a><ul>
 <li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_upselling"><a class="reference internal" href="applications/websites/ecommerce/maximizing_revenue/upselling.html">How to sell pricier alternative products (upselling)</a></li>
-<li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_cross_selling"><a class="reference internal" href="applications/websites/ecommerce/maximizing_revenue/cross_selling.html">Cross-selling: Accessory and Optional Products</a></li>
+<li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_cross_selling"><a class="reference internal" href="applications/websites/ecommerce/maximizing_revenue/cross_selling.html">How to sell accessories and optional products (cross-selling)</a></li>
 <li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_reviews"><a class="reference internal" href="applications/websites/ecommerce/maximizing_revenue/reviews.html">How to enable comments &amp; rating</a></li>
 <li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_pricing"><a class="reference internal" href="applications/websites/ecommerce/maximizing_revenue/pricing.html">Adapt prices to website visitors</a></li>
 <li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_promo_code"><a class="reference internal" href="applications/websites/ecommerce/maximizing_revenue/promo_code.html">How to create &amp; share promotional codes</a></li>
@@ -1482,12 +1447,12 @@
 <li class="toctree-l3 o_menu_applications_inventory_and_mrp_manufacturing"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing.html">Manufacturing</a><ul>
 <li class="toctree-l4 o_menu_applications_inventory_and_mrp_manufacturing_management"><a class="reference internal" href="#">Manufacturing Management</a><ul>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_bill_configuration"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/bill_configuration.html">Create Bills of Materials</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_product_variants"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/product_variants.html">Variants BOM Management</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_kit_shipping"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/kit_shipping.html">Kits</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_kit_shipping"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/kit_shipping.html">Sell sets of products as kits</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_product_variants"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/product_variants.html">How to manage BoMs for product variants</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_sub_assemblies"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/sub_assemblies.html">Manage semi-finished products</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_quality_control"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/quality_control.html">Quality Control</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_alternative_wc"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/alternative_wc.html">Alternative Work Centers</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_alternative_wc"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/alternative_wc.html">Using an alternative Work Center</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_subcontracting"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/subcontracting.html">Subcontract your Manufacturing</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_routing_kit_bom"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.html">Set routings on kit Bills of materials</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_use_mps"><a class="reference internal" href="applications/inventory_and_mrp/manufacturing/management/use_mps.html">Use the Master Production Schedule</a></li>
 </ul>
 </li>
@@ -1596,10 +1561,6 @@
 <li class="toctree-l5 o_menu_applications_productivity_discuss_overview_plan_activities"><a class="reference internal" href="applications/productivity/discuss/overview/plan_activities.html">Get Organized by Planning Activities</a></li>
 </ul>
 </li>
-<li class="toctree-l4 o_menu_applications_productivity_discuss_advanced"><a class="reference internal" href="#">Advanced</a><ul>
-<li class="toctree-l5 o_menu_applications_productivity_discuss_advanced_ice_servers"><a class="reference internal" href="applications/productivity/discuss/advanced/ice_servers.html">Configure ICE servers with Twilio</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_productivity_iot"><a class="reference internal" href="applications/productivity/iot.html">Internet of Things (IoT)</a><ul>
@@ -1623,21 +1584,29 @@
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_ingenico"><a class="reference internal" href="applications/sales/point_of_sale/payment/ingenico.html">Ingenico</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_vantiv"><a class="reference internal" href="applications/sales/point_of_sale/payment/vantiv.html">Vantiv</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_six"><a class="reference internal" href="applications/sales/point_of_sale/payment/six.html">SIX</a></li>
-<li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_worldline"><a class="reference internal" href="applications/sales/point_of_sale/payment/worldline.html">Worldline</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l3 o_menu_applications_productivity_mail_plugins"><a class="reference internal" href="applications/productivity/mail_plugins.html">Mail Plugins</a><ul>
-<li class="toctree-l4 o_menu_applications_productivity_mail_plugins_outlook"><a class="reference internal" href="applications/productivity/mail_plugins/outlook.html">Outlook Plugin</a></li>
-<li class="toctree-l4 o_menu_applications_productivity_mail_plugins_gmail"><a class="reference internal" href="applications/productivity/mail_plugins/gmail.html">Gmail Plugin</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_productivity_studio"><a class="reference internal" href="applications/productivity/studio.html">Studio</a><ul>
-<li class="toctree-l4 o_menu_applications_productivity_studio_fields"><a class="reference internal" href="applications/productivity/studio/fields.html">Fields and widgets</a></li>
-<li class="toctree-l4 o_menu_applications_productivity_studio_views"><a class="reference internal" href="applications/productivity/studio/views.html">Views</a></li>
-<li class="toctree-l4 o_menu_applications_productivity_studio_models_modules_apps"><a class="reference internal" href="applications/productivity/studio/models_modules_apps.html">Models, modules, and apps</a></li>
-<li class="toctree-l4 o_menu_applications_productivity_studio_automated_actions"><a class="reference internal" href="applications/productivity/studio/automated_actions.html">Automated actions (automations)</a></li>
+<li class="toctree-l4 o_menu_applications_productivity_studio_concepts"><a class="reference internal" href="#">Concepts</a><ul>
+<li class="toctree-l5 o_menu_applications_productivity_studio_concepts_understanding_general"><a class="reference internal" href="applications/productivity/studio/concepts/understanding_general.html">Understanding General Concepts</a></li>
+<li class="toctree-l5 o_menu_applications_productivity_studio_concepts_understanding_automated_actions"><a class="reference internal" href="applications/productivity/studio/concepts/understanding_automated_actions.html">Understanding Automated Actions</a></li>
+</ul>
+</li>
+<li class="toctree-l4 o_menu_applications_productivity_studio_use_cases"><a class="reference internal" href="#">Use Cases</a><ul>
+<li class="toctree-l5 o_menu_applications_productivity_studio_use_cases_models_fields"><a class="reference internal" href="applications/productivity/studio/use_cases/models_fields.html">Advanced Use Cases: Creating Models and Adding Fields</a></li>
+<li class="toctree-l5 o_menu_applications_productivity_studio_use_cases_filters_status_bar"><a class="reference internal" href="applications/productivity/studio/use_cases/filters_status_bar.html">Advanced Use Cases: Filters and Status Bar</a></li>
+<li class="toctree-l5 o_menu_applications_productivity_studio_use_cases_automated_actions"><a class="reference internal" href="applications/productivity/studio/use_cases/automated_actions.html">Advanced Use Cases: Automated Actions</a></li>
+<li class="toctree-l5 o_menu_applications_productivity_studio_use_cases_views"><a class="reference internal" href="applications/productivity/studio/use_cases/views.html">Advanced Use Cases: Views</a></li>
+</ul>
+</li>
+<li class="toctree-l4 o_menu_applications_productivity_studio_how_to"><a class="reference internal" href="#">How To</a><ul>
+<li class="toctree-l5 o_menu_applications_productivity_studio_how_to_rainbow_man"><a class="reference internal" href="applications/productivity/studio/how_to/rainbow_man.html">Customizing the Rainbow Man</a></li>
+<li class="toctree-l5 o_menu_applications_productivity_studio_how_to_reports"><a class="reference internal" href="applications/productivity/studio/how_to/reports.html">Customizing Reports</a></li>
+<li class="toctree-l5 o_menu_applications_productivity_studio_how_to_export_import"><a class="reference internal" href="applications/productivity/studio/how_to/export_import.html">Export and Import Modules</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1677,7 +1646,6 @@
 <li class="toctree-l4 o_menu_applications_general_calendars_google_google_calendar_credentials"><a class="reference internal" href="applications/general/calendars/google/google_calendar_credentials.html">Synchronize Google Calendar with Odoo</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_applications_general_digest_emails"><a class="reference internal" href="applications/general/digest_emails.html">Digest Emails</a></li>
 <li class="toctree-l3 o_menu_applications_general_in_app_purchase"><a class="reference internal" href="applications/general/in_app_purchase.html">In-App Purchase (IAP)</a></li>
 <li class="toctree-l3 o_menu_applications_general_developer_mode"><a class="reference internal" href="applications/general/developer_mode.html">Developer Mode (debug mode)</a></li>
 </ul>
@@ -1735,8 +1703,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 o_menu_developer"><a class="reference internal" href="developer.html">Developer</a><ul>
-<li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">Tutorials</a><ul>
+<li class="toctree-l1 o_menu_developer"><a class="reference internal" href="developer.html">開発者向け</a><ul>
+<li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">チュートリアル</a><ul>
 <li class="toctree-l3 o_menu_developer_howtos_rdtraining"><a class="reference internal" href="developer/howtos/rdtraining.html">Getting started</a><ul>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_01_architecture"><a class="reference internal" href="developer/howtos/rdtraining/01_architecture.html">Chapter 1: Architecture Overview</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="developer/howtos/rdtraining/02_setup.html">Chapter 2: Development environment setup</a></li>
@@ -1756,63 +1724,39 @@
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_16_guidelines_pr"><a class="reference internal" href="developer/howtos/rdtraining/16_guidelines_pr.html">Chapter 16: Polish Your Code And Submit Your PR</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_B_acl_irrules"><a class="reference internal" href="developer/howtos/rdtraining/B_acl_irrules.html">Advanced B: ACL and Record Rules</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_C_data"><a class="reference internal" href="developer/howtos/rdtraining/C_data.html">Advanced C: Master and Demo Data</a></li>
-<li class="toctree-l4 o_menu_developer_howtos_rdtraining_D_mixins"><a class="reference internal" href="developer/howtos/rdtraining/D_mixins.html">Advanced D: Mixins</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_E_unittest"><a class="reference internal" href="developer/howtos/rdtraining/E_unittest.html">Advanced E: Python Unit Tests</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_J_reports"><a class="reference internal" href="developer/howtos/rdtraining/J_reports.html">Advanced J: PDF Reports</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_K_dashboard"><a class="reference internal" href="developer/howtos/rdtraining/K_dashboard.html">Advanced K: Dashboards</a></li>
-<li class="toctree-l4 o_menu_developer_howtos_rdtraining_N_security"><a class="reference internal" href="developer/howtos/rdtraining/N_security.html">Advanced N: Security</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_developer_howtos_themes"><a class="reference internal" href="developer/howtos/themes.html">Theme Tutorial</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_website"><a class="reference internal" href="developer/howtos/website.html">Building a Website</a></li>
-<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="developer/howtos/backend.html">Building a Module</a></li>
+<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="developer/howtos/backend.html">モジュールの構築</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_profilecode"><a class="reference internal" href="developer/howtos/profilecode.html">Profiling Odoo code</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_company"><a class="reference internal" href="developer/howtos/company.html">Multi-company Guidelines</a></li>
-<li class="toctree-l3 o_menu_developer_howtos_accounting_localization"><a class="reference internal" href="developer/howtos/accounting_localization.html">Accounting localization</a></li>
+<li class="toctree-l3 o_menu_developer_howtos_localization"><a class="reference internal" href="developer/howtos/localization.html">Accounting Localization</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_translations"><a class="reference internal" href="developer/howtos/translations.html">Translating Modules</a></li>
 </ul>
 </li>
 <li class="toctree-l2 o_menu_developer_reference"><a class="reference internal" href="#">Reference</a><ul>
-<li class="toctree-l3 o_menu_developer_reference_backend"><a class="reference internal" href="#">Python framework</a><ul>
-<li class="toctree-l4 o_menu_developer_reference_backend_orm"><a class="reference internal" href="developer/reference/backend/orm.html">ORM API</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_data"><a class="reference internal" href="developer/reference/backend/data.html">Data Files</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_actions"><a class="reference internal" href="developer/reference/backend/actions.html">Actions</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_views"><a class="reference internal" href="developer/reference/backend/views.html">Views</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_module"><a class="reference internal" href="developer/reference/backend/module.html">Module Manifests</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_reports"><a class="reference internal" href="developer/reference/backend/reports.html">QWeb Reports</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_security"><a class="reference internal" href="developer/reference/backend/security.html">Security in Odoo</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_testing"><a class="reference internal" href="developer/reference/backend/testing.html">Testing Odoo</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_http"><a class="reference internal" href="developer/reference/backend/http.html">Web Controllers</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_mixins"><a class="reference internal" href="developer/reference/backend/mixins.html">Mixins and Useful Classes</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_standard_modules"><a class="reference internal" href="#">Standard modules</a><ul>
-<li class="toctree-l5 o_menu_developer_reference_backend_standard_modules_account"><a class="reference internal" href="#">Accounting</a><ul>
-<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_account_tag"><a class="reference internal" href="developer/reference/backend/standard_modules/account/account_account_tag.html">Account Tag</a></li>
-<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_account"><a class="reference internal" href="developer/reference/backend/standard_modules/account/account_account.html">Account</a></li>
-<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_chart_template"><a class="reference internal" href="developer/reference/backend/standard_modules/account/account_chart_template.html">Chart Template</a></li>
-<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_fiscal_position"><a class="reference internal" href="developer/reference/backend/standard_modules/account/account_fiscal_position.html">Fiscal Position</a></li>
-<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_group"><a class="reference internal" href="developer/reference/backend/standard_modules/account/account_group.html">Account Group</a></li>
-<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_tax_report_line"><a class="reference internal" href="developer/reference/backend/standard_modules/account/account_tax_report_line.html">Tax Report Line</a></li>
-<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_tax"><a class="reference internal" href="developer/reference/backend/standard_modules/account/account_tax.html">Taxes</a></li>
-<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_tax_repartition"><a class="reference internal" href="developer/reference/backend/standard_modules/account/account_tax_repartition.html">Tax Repartitions</a></li>
+<li class="toctree-l3 o_menu_developer_reference_addons"><a class="reference internal" href="#">Server Addons</a><ul>
+<li class="toctree-l4 o_menu_developer_reference_addons_orm"><a class="reference internal" href="developer/reference/addons/orm.html">ORM API</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="developer/reference/addons/data.html">データファイル</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="developer/reference/addons/actions.html">アクション</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_views"><a class="reference internal" href="developer/reference/addons/views.html">Views</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_module"><a class="reference internal" href="developer/reference/addons/module.html">Module Manifests</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_reports"><a class="reference internal" href="developer/reference/addons/reports.html">QWeb Reports</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_security"><a class="reference internal" href="developer/reference/addons/security.html">Security in Odoo</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_testing"><a class="reference internal" href="developer/reference/addons/testing.html">Testing Odoo</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_http"><a class="reference internal" href="developer/reference/addons/http.html">Web Controllers</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_mixins"><a class="reference internal" href="developer/reference/addons/mixins.html">Mixins and Useful Classes</a></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3 o_menu_developer_reference_frontend"><a class="reference internal" href="#">JavaScript framework</a><ul>
-<li class="toctree-l4 o_menu_developer_reference_frontend_framework_overview"><a class="reference internal" href="developer/reference/frontend/framework_overview.html">Framework Overview</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_assets"><a class="reference internal" href="developer/reference/frontend/assets.html">Assets</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_javascript_modules"><a class="reference internal" href="developer/reference/frontend/javascript_modules.html">Javascript Modules</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_owl_components"><a class="reference internal" href="developer/reference/frontend/owl_components.html">Owl Components</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_registries"><a class="reference internal" href="developer/reference/frontend/registries.html">Registries</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_services"><a class="reference internal" href="developer/reference/frontend/services.html">Services</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_hooks"><a class="reference internal" href="developer/reference/frontend/hooks.html">Hooks</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_patching_code"><a class="reference internal" href="developer/reference/frontend/patching_code.html">Patching code</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_javascript_cheatsheet"><a class="reference internal" href="developer/reference/frontend/javascript_cheatsheet.html">Javascript Cheatsheet</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_javascript_reference"><a class="reference internal" href="developer/reference/frontend/javascript_reference.html">Javascript Reference</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_mobile"><a class="reference internal" href="developer/reference/frontend/mobile.html">Mobile JavaScript</a></li>
-<li class="toctree-l4 o_menu_developer_reference_frontend_qweb"><a class="reference internal" href="developer/reference/frontend/qweb.html">QWeb Templates</a></li>
+<li class="toctree-l3 o_menu_developer_reference_javascript"><a class="reference internal" href="#">Javascript Modules</a><ul>
+<li class="toctree-l4 o_menu_developer_reference_javascript_javascript_cheatsheet"><a class="reference internal" href="developer/reference/javascript/javascript_cheatsheet.html">Javascript Cheatsheet</a></li>
+<li class="toctree-l4 o_menu_developer_reference_javascript_javascript_reference"><a class="reference internal" href="developer/reference/javascript/javascript_reference.html">Javascript Reference</a></li>
+<li class="toctree-l4 o_menu_developer_reference_javascript_mobile"><a class="reference internal" href="developer/reference/javascript/mobile.html">Mobile JavaScript</a></li>
+<li class="toctree-l4 o_menu_developer_reference_javascript_qweb"><a class="reference internal" href="developer/reference/javascript/qweb.html">QWeb Templates</a></li>
 </ul>
 </li>
 </ul>
@@ -1886,7 +1830,7 @@
             <button class="btn btn-sm dropdown-toggle"
                     id="versions"
                     disabled="">
-                Odoo 15 
+                Odoo 14 
             </button>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="versions">
         </ul>
@@ -1904,7 +1848,7 @@
         <li class="right" >
           <a href="py-modindex.html" title="Pythonモジュール索引"
              >モジュール</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Odoo 15.0 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Odoo 14.0 ドキュメント</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">索引</a></li> 
       </ul>
     </div>
@@ -1943,6 +1887,10 @@
  | <a href="#W"><strong>W</strong></a>
  | <a href="#コ"><strong>コ</strong></a>
  | <a href="#モ"><strong>モ</strong></a>
+ | <a href="#地"><strong>地</strong></a>
+ | <a href="#外"><strong>外</strong></a>
+ | <a href="#書"><strong>書</strong></a>
+ | <a href="#縮"><strong>縮</strong></a>
  
 </div>
 <h2 id="記号">記号</h2>
@@ -1964,13 +1912,6 @@
 
       <ul>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-c">odoo-bin コマンドラインオプション</a>
-</li>
-      </ul></li>
-      <li>
-    --data-dir &lt;data-dir-path&gt;
-
-      <ul>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-D">odoo-bin コマンドラインオプション</a>
 </li>
       </ul></li>
       <li>
@@ -2043,27 +1984,6 @@
 
       <ul>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-email-from">odoo-bin コマンドラインオプション</a>
-</li>
-      </ul></li>
-      <li>
-    --from-filter &lt;address or domain&gt;
-
-      <ul>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-from-filter">odoo-bin コマンドラインオプション</a>
-</li>
-      </ul></li>
-      <li>
-    --geoip-db &lt;path&gt;
-
-      <ul>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-geoip-db">odoo-bin コマンドラインオプション</a>
-</li>
-      </ul></li>
-      <li>
-    --help
-
-      <ul>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-h">odoo-bin コマンドラインオプション</a>
 </li>
       </ul></li>
       <li>
@@ -2155,13 +2075,6 @@
 </li>
       </ul></li>
       <li>
-    --load &lt;modules&gt;
-
-      <ul>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-load">odoo-bin コマンドラインオプション</a>
-</li>
-      </ul></li>
-      <li>
     --load-language &lt;languages&gt;
 
       <ul>
@@ -2238,6 +2151,8 @@
         <li><a href="developer/cli.html#cmdoption-odoo-bin-max-cron-threads">odoo-bin コマンドラインオプション</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     --models
 
@@ -2259,8 +2174,6 @@
         <li><a href="developer/cli.html#cmdoption-odoo-bin-no-database-list">odoo-bin コマンドラインオプション</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     --no-http
 
@@ -2280,13 +2193,6 @@
 
       <ul>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-pg_path">odoo-bin コマンドラインオプション</a>
-</li>
-      </ul></li>
-      <li>
-    --pidfile=&lt;pidfile&gt;
-
-      <ul>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-pidfile">odoo-bin コマンドラインオプション</a>
 </li>
       </ul></li>
       <li>
@@ -2360,31 +2266,10 @@
 </li>
       </ul></li>
       <li>
-    --smtp-ssl-certificate-filename &lt;path/to/cert.pem&gt;
-
-      <ul>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-smtp-ssl-certificate-filename">odoo-bin コマンドラインオプション</a>
-</li>
-      </ul></li>
-      <li>
-    --smtp-ssl-private-key-filename &lt;path/to/key.pem&gt;
-
-      <ul>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-smtp-ssl-private-key-filename">odoo-bin コマンドラインオプション</a>
-</li>
-      </ul></li>
-      <li>
     --smtp-user &lt;name&gt;
 
       <ul>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-smtp-user">odoo-bin コマンドラインオプション</a>
-</li>
-      </ul></li>
-      <li>
-    --stop-after-init
-
-      <ul>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-stop-after-init">odoo-bin コマンドラインオプション</a>
 </li>
       </ul></li>
       <li>
@@ -2402,24 +2287,10 @@
 </li>
       </ul></li>
       <li>
-    --test-file &lt;file&gt;
-
-      <ul>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-test-file">odoo-bin コマンドラインオプション</a>
-</li>
-      </ul></li>
-      <li>
     --test-tags [-][tag][/module][:class][.method]
 
       <ul>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-test-tags">odoo-bin コマンドラインオプション</a>
-</li>
-      </ul></li>
-      <li>
-    --unaccent
-
-      <ul>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-unaccent">odoo-bin コマンドラインオプション</a>
 </li>
       </ul></li>
       <li>
@@ -2430,24 +2301,10 @@
 </li>
       </ul></li>
       <li>
-    --upgrade-path &lt;upgrade_path&gt;
-
-      <ul>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-upgrade-path">odoo-bin コマンドラインオプション</a>
-</li>
-      </ul></li>
-      <li>
     --verbose
 
       <ul>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-cloc-v">odoo-bin-cloc コマンドラインオプション</a>
-</li>
-      </ul></li>
-      <li>
-    --version
-
-      <ul>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-version">odoo-bin コマンドラインオプション</a>
 </li>
       </ul></li>
       <li>
@@ -2479,13 +2336,6 @@
 </li>
       </ul></li>
       <li>
-    -D &lt;data-dir-path&gt;
-
-      <ul>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-D">odoo-bin コマンドラインオプション</a>
-</li>
-      </ul></li>
-      <li>
     -d &lt;database&gt;
 
       <ul>
@@ -2494,13 +2344,6 @@
         <li><a href="developer/cli.html#cmdoption-odoo-bin-cloc-d">odoo-bin-cloc コマンドラインオプション</a>
 </li>
         <li><a href="developer/howtos/rdtraining/02_setup.html#cmdoption-d">コマンドラインオプション</a>
-</li>
-      </ul></li>
-      <li>
-    -h
-
-      <ul>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-h">odoo-bin コマンドラインオプション</a>
 </li>
       </ul></li>
       <li>
@@ -2522,13 +2365,6 @@
 
       <ul>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-cloc-p">odoo-bin-cloc コマンドラインオプション</a>
-</li>
-      </ul></li>
-      <li>
-    -p &lt;port&gt;
-
-      <ul>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-p">odoo-bin コマンドラインオプション</a>
 </li>
       </ul></li>
       <li>
@@ -2573,9 +2409,7 @@
         <li><a href="developer/cli.html#cmdoption-odoo-bin-w">odoo-bin コマンドラインオプション</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/frontend/services.html#newEffectFunction">&lt;newEffectFunction&gt;() (組み込み関数)</a>
-</li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Rendering">[Rendering]() (組み込み関数)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Rendering">[Rendering]() (組み込み関数)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -2583,82 +2417,82 @@
 <h2 id="_">_</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._abstract">_abstract (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._abstract">_abstract (odoo.models.BaseModel の属性)</a>
 
       <ul>
-        <li><a href="developer/reference/backend/orm.html#odoo.models.Model._abstract">(odoo.models.Model の属性)</a>
+        <li><a href="developer/reference/addons/orm.html#odoo.models.Model._abstract">(odoo.models.Model の属性)</a>
 </li>
-        <li><a href="developer/reference/backend/orm.html#odoo.models.TransientModel._abstract">(odoo.models.TransientModel の属性)</a>
+        <li><a href="developer/reference/addons/orm.html#odoo.models.TransientModel._abstract">(odoo.models.TransientModel の属性)</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._auto">_auto (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._auto">_auto (odoo.models.BaseModel の属性)</a>
 
       <ul>
-        <li><a href="developer/reference/backend/orm.html#odoo.models.Model._auto">(odoo.models.Model の属性)</a>
+        <li><a href="developer/reference/addons/orm.html#odoo.models.Model._auto">(odoo.models.Model の属性)</a>
 </li>
-        <li><a href="developer/reference/backend/orm.html#odoo.models.TransientModel._auto">(odoo.models.TransientModel の属性)</a>
+        <li><a href="developer/reference/addons/orm.html#odoo.models.TransientModel._auto">(odoo.models.TransientModel の属性)</a>
 </li>
       </ul></li>
       <li><a href="developer/howtos/company.html#odoo.models.Model._check_company">_check_company() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._check_company_auto">_check_company_auto (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._check_company_auto">_check_company_auto (odoo.models.BaseModel の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._date_name">_date_name (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._date_name">_date_name (odoo.models.BaseModel の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._description">_description (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._description">_description (odoo.models.BaseModel の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._fold_name">_fold_name (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._fold_name">_fold_name (odoo.models.BaseModel の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/mixins.html#get_alias_model_name">_get_alias_model_name()</a>
+      <li><a href="developer/reference/addons/mixins.html#get_alias_model_name">_get_alias_model_name()</a>
 </li>
-      <li><a href="developer/reference/backend/mixins.html#get_alias_values">_get_alias_values()</a>
+      <li><a href="developer/reference/addons/mixins.html#get_alias_values">_get_alias_values()</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._inherit">_inherit (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._inherit">_inherit (odoo.models.BaseModel の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._inherits">_inherits (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._inherits">_inherits (odoo.models.BaseModel の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._log_access">_log_access (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._log_access">_log_access (odoo.models.BaseModel の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._name">_name (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._name">_name (odoo.models.BaseModel の属性)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/mixins.html#notify_get_action_link">_notify_get_action_link()</a>
+      <li><a href="developer/reference/addons/mixins.html#notify_get_action_link">_notify_get_action_link()</a>
 </li>
-      <li><a href="developer/reference/backend/mixins.html#notify_get_groups">_notify_get_groups()</a>
+      <li><a href="developer/reference/addons/mixins.html#notify_get_groups">_notify_get_groups()</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._order">_order (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._order">_order (odoo.models.BaseModel の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._parent_name">_parent_name (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._parent_name">_parent_name (odoo.models.BaseModel の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._parent_store">_parent_store (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._parent_store">_parent_store (odoo.models.BaseModel の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/testing.html#odoo.models.Model._populate">_populate() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.models.Model._populate">_populate() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/testing.html#odoo.models.Model._populate_dependencies">_populate_dependencies (odoo.models.Model の属性)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.models.Model._populate_dependencies">_populate_dependencies (odoo.models.Model の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/testing.html#odoo.models.Model._populate_factories">_populate_factories() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.models.Model._populate_factories">_populate_factories() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/testing.html#odoo.models.Model._populate_sizes">_populate_sizes (odoo.models.Model の属性)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.models.Model._populate_sizes">_populate_sizes (odoo.models.Model の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._rec_name">_rec_name (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._rec_name">_rec_name (odoo.models.BaseModel の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._register">_register (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._register">_register (odoo.models.BaseModel の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._sequence">_sequence (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._sequence">_sequence (odoo.models.BaseModel の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._sql_constraints">_sql_constraints (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._sql_constraints">_sql_constraints (odoo.models.BaseModel の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._table">_table (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._table">_table (odoo.models.BaseModel の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/mixins.html#track_subtype">_track_subtype()</a>
+      <li><a href="developer/reference/addons/mixins.html#track_subtype">_track_subtype()</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel._transient">_transient (odoo.models.BaseModel の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel._transient">_transient (odoo.models.BaseModel の属性)</a>
 
       <ul>
-        <li><a href="developer/reference/backend/orm.html#odoo.models.Model._transient">(odoo.models.Model の属性)</a>
+        <li><a href="developer/reference/addons/orm.html#odoo.models.Model._transient">(odoo.models.Model の属性)</a>
 </li>
-        <li><a href="developer/reference/backend/orm.html#odoo.models.TransientModel._transient">(odoo.models.TransientModel の属性)</a>
+        <li><a href="developer/reference/addons/orm.html#odoo.models.TransientModel._transient">(odoo.models.TransientModel の属性)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -2667,37 +2501,27 @@
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.AbstractModel">AbstractModel (odoo.models モジュール)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.AbstractModel">AbstractModel (odoo.models モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.exceptions.AccessDenied">AccessDenied</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.exceptions.AccessDenied">AccessDenied</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.exceptions.AccessError">AccessError</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.exceptions.AccessError">AccessError</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.active">active (odoo.fields モジュール)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.active">active (odoo.fields モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Date.add">add() (odoo.fields.Date の静的メソッド)</a>
-
-      <ul>
-        <li><a href="developer/reference/backend/orm.html#odoo.fields.Datetime.add">(odoo.fields.Datetime の静的メソッド)</a>
-</li>
-        <li><a href="developer/reference/backend/testing.html#odoo.tests.common.M2MProxy.add">(odoo.tests.common.M2MProxy のメソッド)</a>
-</li>
-        <li><a href="developer/reference/frontend/services.html#add">(組み込み関数)</a>
-</li>
-      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/frontend/mobile.html#addContact">addContact() (組み込み関数)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Date.add">add() (odoo.fields.Date の静的メソッド)</a>
+
+      <ul>
+        <li><a href="developer/reference/addons/orm.html#odoo.fields.Datetime.add">(odoo.fields.Datetime の静的メソッド)</a>
 </li>
-      <li><a href="developer/reference/frontend/framework_overview.html#Domain.and">and() (Domain の静的メソッド)</a>
+        <li><a href="developer/reference/addons/testing.html#odoo.tests.common.M2MProxy.add">(odoo.tests.common.M2MProxy のメソッド)</a>
 </li>
-      <li><a href="developer/reference/frontend/services.html#async">async (グローバル変数または定数)</a>
+      </ul></li>
+      <li><a href="developer/reference/javascript/mobile.html#addContact">addContact() (組み込み関数)</a>
 </li>
-      <li><a href="developer/reference/frontend/services.html#async-get">async get() (組み込み関数)</a>
-</li>
-      <li><a href="developer/reference/frontend/services.html#async-post">async post() (組み込み関数)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.api.autovacuum">autovacuum() (odoo.api モジュール)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.api.autovacuum">autovacuum() (odoo.api モジュール)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -2705,25 +2529,25 @@
 <h2 id="B">B</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.BaseModel">BaseModel (odoo.models のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.BaseModel">BaseModel (odoo.models のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Binary">Binary (odoo.fields のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Binary">Binary (odoo.fields のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Boolean">Boolean (odoo.fields のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Boolean">Boolean (odoo.fields のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.browse">browse() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.browse">browse() (odoo.models.Model のメソッド)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/testing.html#odoo.tests.common.HttpCase.browse_ref">browse_ref() (odoo.tests.common.HttpCase のメソッド)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tests.common.HttpCase.browse_ref">browse_ref() (odoo.tests.common.HttpCase のメソッド)</a>
 
       <ul>
-        <li><a href="developer/reference/backend/testing.html#odoo.tests.common.SingleTransactionCase.browse_ref">(odoo.tests.common.SingleTransactionCase のメソッド)</a>
+        <li><a href="developer/reference/addons/testing.html#odoo.tests.common.SingleTransactionCase.browse_ref">(odoo.tests.common.SingleTransactionCase のメソッド)</a>
 </li>
-        <li><a href="developer/reference/backend/testing.html#odoo.tests.common.TransactionCase.browse_ref">(odoo.tests.common.TransactionCase のメソッド)</a>
+        <li><a href="developer/reference/addons/testing.html#odoo.tests.common.TransactionCase.browse_ref">(odoo.tests.common.TransactionCase のメソッド)</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/backend/testing.html#odoo.tests.common.HttpCase.browser_js">browser_js() (odoo.tests.common.HttpCase のメソッド)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tests.common.HttpCase.browser_js">browser_js() (odoo.tests.common.HttpCase のメソッド)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -2738,69 +2562,51 @@
         <li><a href="developer/howtos/rdtraining/02_setup.html#cmdoption-arg-c-ontinue">コマンドラインオプション</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/backend/orm.html#odoo.exceptions.CacheMiss">CacheMiss</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.exceptions.CacheMiss">CacheMiss</a>
 </li>
-      <li><a href="developer/reference/backend/testing.html#odoo.tools.populate.cartesian">cartesian() (odoo.tools.populate モジュール)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tools.populate.cartesian">cartesian() (odoo.tools.populate モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/security.html#res.groups.category_id">category_id (res.groups の属性)</a>
+      <li><a href="developer/reference/addons/security.html#res.groups.category_id">category_id (res.groups の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Char">Char (odoo.fields のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Char">Char (odoo.fields のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Command.CLEAR">CLEAR (odoo.fields.Command の属性)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tests.common.M2MProxy.clear">clear() (odoo.tests.common.M2MProxy のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Command.clear">clear() (odoo.fields.Command のクラスメソッド)</a>
-
-      <ul>
-        <li><a href="developer/reference/backend/testing.html#odoo.tests.common.M2MProxy.clear">(odoo.tests.common.M2MProxy のメソッド)</a>
+      <li><a href="developer/reference/addons/security.html#res.groups.comment">comment (res.groups の属性)</a>
 </li>
-      </ul></li>
-      <li><a href="developer/reference/frontend/framework_overview.html#Domain.combine">combine() (Domain の静的メソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.api.Environment.companies">companies (odoo.api.Environment の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Command">Command (odoo.fields のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.api.Environment.company">company (odoo.api.Environment の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/security.html#res.groups.comment">comment (res.groups の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.company_id">company_id (odoo.fields モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.api.Environment.companies">companies (odoo.api.Environment の属性)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.api.Environment.company">company (odoo.api.Environment の属性)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.company_id">company_id (odoo.fields モジュール)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tools.populate.compute">compute() (odoo.tools.populate モジュール)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/testing.html#odoo.tools.populate.compute">compute() (odoo.tools.populate モジュール)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tools.populate.constant">constant() (odoo.tools.populate モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/testing.html#odoo.tools.populate.constant">constant() (odoo.tools.populate モジュール)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.api.constrains">constrains() (odoo.api モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.api.constrains">constrains() (odoo.api モジュール)</a>
+      <li><a href="developer/reference/addons/http.html#odoo.http.WebRequest.context">context (odoo.http.WebRequest のプロパティ)</a>
 </li>
-      <li><a href="developer/reference/backend/http.html#odoo.http.WebRequest.context">context (odoo.http.WebRequest のプロパティ)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Datetime.context_timestamp">context_timestamp() (odoo.fields.Datetime の静的メソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Datetime.context_timestamp">context_timestamp() (odoo.fields.Datetime の静的メソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Date.context_today">context_today() (odoo.fields.Date の静的メソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Date.context_today">context_today() (odoo.fields.Date の静的メソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.copy">copy() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.copy">copy() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/javascript/qweb.html#core.qweb">core.qweb (core の属性)</a>
 </li>
-      <li><a href="developer/reference/frontend/qweb.html#core.qweb">core.qweb (core の属性)</a>
+      <li><a href="developer/reference/addons/http.html#odoo.http.WebRequest.cr">cr (odoo.http.WebRequest のプロパティ)</a>
 </li>
-      <li><a href="developer/reference/backend/http.html#odoo.http.WebRequest.cr">cr (odoo.http.WebRequest のプロパティ)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.create">create() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Command.CREATE">CREATE (odoo.fields.Command の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.create_date">create_date (odoo.fields モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Command.create">create() (odoo.fields.Command のクラスメソッド)</a>
-
-      <ul>
-        <li><a href="developer/reference/backend/orm.html#odoo.models.Model.create">(odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.create_uid">create_uid (odoo.fields モジュール)</a>
 </li>
-      </ul></li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.create_date">create_date (odoo.fields モジュール)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.create_uid">create_uid (odoo.fields モジュール)</a>
-</li>
-      <li><a href="developer/reference/backend/http.html#odoo.http.WebRequest.csrf_token">csrf_token() (odoo.http.WebRequest のメソッド)</a>
-</li>
-      <li><a href="developer/reference/frontend/services.html#current">current (グローバル変数または定数)</a>
+      <li><a href="developer/reference/addons/http.html#odoo.http.WebRequest.csrf_token">csrf_token() (odoo.http.WebRequest のメソッド)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -2815,27 +2621,19 @@
         <li><a href="developer/howtos/rdtraining/02_setup.html#cmdoption-arg-d-own">コマンドラインオプション</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Date">Date (odoo.fields のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Date">Date (odoo.fields のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Datetime">Datetime (odoo.fields のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Datetime">Datetime (odoo.fields のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/http.html#odoo.http.WebRequest.db">db (odoo.http.WebRequest のプロパティ)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.default_get">default_get() (odoo.models.Model のメソッド)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Command.DELETE">DELETE (odoo.fields.Command の属性)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Command.delete">delete() (odoo.fields.Command のクラスメソッド)</a>
+      <li><a href="developer/reference/addons/http.html#odoo.http.WebRequest.db">db (odoo.http.WebRequest のプロパティ)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/frontend/services.html#deleteCookie">deleteCookie() (組み込み関数)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.default_get">default_get() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/frontend/services.html#dependencies">dependencies (グローバル変数または定数)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.api.depends">depends() (odoo.api モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.api.depends">depends() (odoo.api モジュール)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.api.depends_context">depends_context() (odoo.api モジュール)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.api.depends_context">depends_context() (odoo.api モジュール)</a>
 </li>
       <li>
     destination (default=current directory)
@@ -2844,9 +2642,7 @@
         <li><a href="developer/cli.html#cmdoption-odoo-bin-scaffold-arg-destination">odoo-bin-scaffold コマンドラインオプション</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/frontend/framework_overview.html#Domain">Domain() (クラス)</a>
-</li>
-      <li><a href="developer/reference/backend/security.html#ir.rule.domain_force">domain_force (ir.rule の属性)</a>
+      <li><a href="developer/reference/addons/security.html#ir.rule.domain_force">domain_force (ir.rule の属性)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -2854,37 +2650,25 @@
 <h2 id="E">E</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/testing.html#odoo.tests.common.O2MProxy.edit">edit() (odoo.tests.common.O2MProxy のメソッド)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tests.common.O2MProxy.edit">edit() (odoo.tests.common.O2MProxy のメソッド)</a>
 </li>
-      <li><a href="developer/reference/frontend/services.html#effectService.add">effectService.add() (effectService のメソッド)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Date.end_of">end_of() (odoo.fields.Date の静的メソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Date.end_of">end_of() (odoo.fields.Date の静的メソッド)</a>
 
       <ul>
-        <li><a href="developer/reference/backend/orm.html#odoo.fields.Datetime.end_of">(odoo.fields.Datetime の静的メソッド)</a>
-</li>
-      </ul></li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.ensure_one">ensure_one() (odoo.models.Model のメソッド)</a>
-</li>
-      <li><a href="developer/reference/backend/http.html#odoo.http.WebRequest.env">env (odoo.http.WebRequest のプロパティ)</a>
-
-      <ul>
-        <li><a href="developer/reference/backend/orm.html#odoo.models.env">(odoo.models モジュール)</a>
+        <li><a href="developer/reference/addons/orm.html#odoo.fields.Datetime.end_of">(odoo.fields.Datetime の静的メソッド)</a>
 </li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/frontend/framework_overview.html#evaluate">evaluate() (組み込み関数)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.ensure_one">ensure_one() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/frontend/framework_overview.html#evaluateExpr">evaluateExpr() (組み込み関数)</a>
+      <li><a href="developer/reference/addons/http.html#odoo.http.WebRequest.env">env (odoo.http.WebRequest のプロパティ)</a>
+
+      <ul>
+        <li><a href="developer/reference/addons/orm.html#odoo.models.env">(odoo.models モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.exists">exists() (odoo.models.Model のメソッド)</a>
-</li>
-      <li><a href="developer/glossary.html#term-external-id"><strong>external id</strong></a>
-</li>
-      <li><a href="developer/glossary.html#term-external-identifier"><strong>external identifier</strong></a>
-</li>
-      <li><a href="developer/glossary.html#term-external-identifiers"><strong>external identifiers</strong></a>
+      </ul></li>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.exists">exists() (odoo.models.Model のメソッド)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -2892,29 +2676,25 @@
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Field">Field (odoo.fields のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Field">Field (odoo.fields のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.fields_get">fields_get() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.fields_get">fields_get() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.fields_view_get">fields_view_get() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.fields_view_get">fields_view_get() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.filtered">filtered() (odoo.models.Model のメソッド)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.filtered_domain">filtered_domain() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.filtered">filtered() (odoo.models.Model のメソッド)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/http.html#odoo.http.Response.flatten">flatten() (odoo.http.Response のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.filtered_domain">filtered_domain() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Float">Float (odoo.fields のクラス)</a>
+      <li><a href="developer/reference/addons/http.html#odoo.http.Response.flatten">flatten() (odoo.http.Response のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.flush">flush() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Float">Float (odoo.fields のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/testing.html#odoo.tests.common.Form">Form (odoo.tests.common のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.flush">flush() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/glossary.html#term-format-string"><strong>format string</strong></a>
-</li>
-      <li><a href="developer/reference/frontend/registries.html#format">format() (組み込み関数)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tests.common.Form">Form (odoo.tests.common のクラス)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -2922,21 +2702,17 @@
 <h2 id="G">G</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/glossary.html#term-Geographic-Information-System"><strong>Geographic Information System</strong></a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.get_metadata">get_metadata() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.get_metadata">get_metadata() (odoo.models.Model のメソッド)</a>
-</li>
-      <li><a href="developer/reference/frontend/services.html#getParts">getParts() (組み込み関数)</a>
+      <li><a href="developer/glossary.html#term-GIS"><strong>GIS</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/glossary.html#term-GIS"><strong>GIS</strong></a>
+      <li><a href="developer/reference/addons/security.html#ir.rule.global">global (ir.rule の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/security.html#ir.rule.global">global (ir.rule の属性)</a>
+      <li><a href="developer/reference/addons/security.html#ir.model.access.group_id">group_id (ir.model.access の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/security.html#ir.model.access.group_id">group_id (ir.model.access の属性)</a>
-</li>
-      <li><a href="developer/reference/backend/security.html#ir.rule.groups">groups (ir.rule の属性)</a>
+      <li><a href="developer/reference/addons/security.html#ir.rule.groups">groups (ir.rule の属性)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -2951,17 +2727,15 @@
         <li><a href="developer/howtos/rdtraining/02_setup.html#cmdoption-arg-h-elp">コマンドラインオプション</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/frontend/services.html#hasGroup">hasGroup() (組み込み関数)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Html">Html (odoo.fields のクラス)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Html">Html (odoo.fields のクラス)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tests.common.HttpCase">HttpCase (odoo.tests.common のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/testing.html#odoo.tests.common.HttpCase">HttpCase (odoo.tests.common のクラス)</a>
+      <li><a href="developer/reference/addons/http.html#odoo.http.HttpRequest">HttpRequest (odoo.http のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/http.html#odoo.http.HttpRequest">HttpRequest (odoo.http のクラス)</a>
-</li>
-      <li><a href="developer/reference/backend/http.html#odoo.http.WebRequest.httprequest">httprequest (odoo.http.WebRequest の属性)</a>
+      <li><a href="developer/reference/addons/http.html#odoo.http.WebRequest.httprequest">httprequest (odoo.http.WebRequest の属性)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -2969,27 +2743,27 @@
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.id">id (odoo.fields モジュール)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.id">id (odoo.fields モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.ids">ids (odoo.models.Model の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.ids">ids (odoo.models.Model の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Image">Image (odoo.fields のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Image">Image (odoo.fields のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/security.html#res.groups.implied_ids">implied_ids (res.groups の属性)</a>
+      <li><a href="developer/reference/addons/security.html#res.groups.implied_ids">implied_ids (res.groups の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Integer">Integer (odoo.fields のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Integer">Integer (odoo.fields のクラス)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.invalidate_cache">invalidate_cache() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.invalidate_cache">invalidate_cache() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/security.html#ir.model.access">ir.model.access (組み込みクラス)</a>
+      <li><a href="developer/reference/addons/security.html#ir.model.access">ir.model.access (組み込みクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/security.html#ir.rule">ir.rule (組み込みクラス)</a>
+      <li><a href="developer/reference/addons/security.html#ir.rule">ir.rule (組み込みクラス)</a>
 </li>
-      <li><a href="developer/reference/frontend/assets.html#odoo.addons.base.models.ir_asset.IrAsset">IrAsset (odoo.addons.base.models.ir_asset のクラス)</a>
+      <li><a href="developer/reference/addons/actions.html#odoo.addons.base.models.ir_actions.IrActionsServer">IrActionsServer (odoo.addons.base.models.ir_actions のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/testing.html#odoo.tools.populate.iterate">iterate() (odoo.tools.populate モジュール)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tools.populate.iterate">iterate() (odoo.tools.populate モジュール)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -2997,7 +2771,7 @@
 <h2 id="J">J</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/http.html#odoo.http.JsonRequest">JsonRequest (odoo.http のクラス)</a>
+      <li><a href="developer/reference/addons/http.html#odoo.http.JsonRequest">JsonRequest (odoo.http のクラス)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -3005,15 +2779,7 @@
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/orm.html#odoo.api.Environment.lang">lang (odoo.api.Environment の属性)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Command.LINK">LINK (odoo.fields.Command の属性)</a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Command.link">link() (odoo.fields.Command のクラスメソッド)</a>
-</li>
-      <li><a href="developer/reference/frontend/assets.html#loadAssets">loadAssets() (組み込み関数)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.api.Environment.lang">lang (odoo.api.Environment の属性)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -3021,53 +2787,49 @@
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/testing.html#odoo.tests.common.M2MProxy">M2MProxy (odoo.tests.common のクラス)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tests.common.M2MProxy">M2MProxy (odoo.tests.common のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/http.html#odoo.http.HttpRequest.make_response">make_response() (odoo.http.HttpRequest のメソッド)</a>
+      <li><a href="developer/reference/addons/http.html#odoo.http.HttpRequest.make_response">make_response() (odoo.http.HttpRequest のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Many2many">Many2many (odoo.fields のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Many2many">Many2many (odoo.fields のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Many2one">Many2one (odoo.fields のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Many2one">Many2one (odoo.fields のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Many2oneReference">Many2oneReference (odoo.fields のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Many2oneReference">Many2oneReference (odoo.fields のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.mapped">mapped() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.mapped">mapped() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/mixins.html#message_new">message_new()</a>
+      <li><a href="developer/reference/addons/mixins.html#message_new">message_new()</a>
 </li>
-      <li><a href="developer/reference/backend/mixins.html#message_post">message_post()</a>
+      <li><a href="developer/reference/addons/mixins.html#message_post">message_post()</a>
 </li>
-      <li><a href="developer/reference/backend/mixins.html#message_post_with_template">message_post_with_template()</a>
+      <li><a href="developer/reference/addons/mixins.html#message_post_with_template">message_post_with_template()</a>
 </li>
-      <li><a href="developer/reference/backend/mixins.html#message_subscribe">message_subscribe()</a>
-</li>
-      <li><a href="developer/reference/backend/mixins.html#message_unsubscribe">message_unsubscribe()</a>
+      <li><a href="developer/reference/addons/mixins.html#message_subscribe">message_subscribe()</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/mixins.html#message_unsubscribe_users">message_unsubscribe_users()</a>
+      <li><a href="developer/reference/addons/mixins.html#message_unsubscribe">message_unsubscribe()</a>
 </li>
-      <li><a href="developer/reference/backend/mixins.html#message_update">message_update()</a>
+      <li><a href="developer/reference/addons/mixins.html#message_unsubscribe_users">message_unsubscribe_users()</a>
 </li>
-      <li><a href="developer/glossary.html#term-minification"><strong>minification</strong></a>
+      <li><a href="developer/reference/addons/mixins.html#message_update">message_update()</a>
 </li>
-      <li><a href="developer/glossary.html#term-minified"><strong>minified</strong></a>
+      <li><a href="developer/reference/addons/orm.html#odoo.exceptions.MissingError">MissingError</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.exceptions.MissingError">MissingError</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model">Model (odoo.models のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model">Model (odoo.models のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.api.model">model() (odoo.api モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.api.model">model() (odoo.api モジュール)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.api.model_create_multi">model_create_multi() (odoo.api モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.api.model_create_multi">model_create_multi() (odoo.api モジュール)</a>
-</li>
-      <li><a href="developer/reference/backend/security.html#ir.model.access.model_id">model_id (ir.model.access の属性)</a>
+      <li><a href="developer/reference/addons/security.html#ir.model.access.model_id">model_id (ir.model.access の属性)</a>
 
       <ul>
-        <li><a href="developer/reference/backend/security.html#ir.rule.model_id">(ir.rule の属性)</a>
+        <li><a href="developer/reference/addons/security.html#ir.rule.model_id">(ir.rule の属性)</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Monetary">Monetary (odoo.fields のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Monetary">Monetary (odoo.fields のクラス)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -3082,38 +2844,36 @@
         <li><a href="developer/howtos/rdtraining/02_setup.html#cmdoption-arg-n-ext">コマンドラインオプション</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/backend/security.html#ir.model.access.name">name (ir.model.access の属性)</a>
+      <li><a href="developer/reference/addons/security.html#ir.model.access.name">name (ir.model.access の属性)</a>
 
       <ul>
-        <li><a href="developer/reference/backend/security.html#ir.rule.name">(ir.rule の属性)</a>
+        <li><a href="developer/reference/addons/security.html#ir.rule.name">(ir.rule の属性)</a>
 </li>
-        <li><a href="developer/reference/backend/orm.html#odoo.fields.name">(odoo.fields モジュール)</a>
+        <li><a href="developer/reference/addons/orm.html#odoo.fields.name">(odoo.fields モジュール)</a>
 </li>
       </ul></li>
       <li>
     name (required)
 
       <ul>
-        <li><a href="developer/reference/backend/security.html#res.groups.name">(res.groups の属性)</a>
+        <li><a href="developer/reference/addons/security.html#res.groups.name">(res.groups の属性)</a>
 </li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-scaffold-arg-name">odoo-bin-scaffold コマンドラインオプション</a>
 </li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.name_create">name_create() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.name_create">name_create() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.name_get">name_get() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.name_get">name_get() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.name_search">name_search() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.name_search">name_search() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/testing.html#odoo.tests.common.O2MProxy.new">new() (odoo.tests.common.O2MProxy のメソッド)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tests.common.O2MProxy.new">new() (odoo.tests.common.O2MProxy のメソッド)</a>
 </li>
-      <li><a href="developer/reference/frontend/framework_overview.html#Domain.not">not() (Domain の静的メソッド)</a>
+      <li><a href="developer/reference/addons/http.html#odoo.http.HttpRequest.not_found">not_found() (odoo.http.HttpRequest のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/http.html#odoo.http.HttpRequest.not_found">not_found() (odoo.http.HttpRequest のメソッド)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Datetime.now">now() (odoo.fields.Datetime の静的メソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Datetime.now">now() (odoo.fields.Datetime の静的メソッド)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -3121,7 +2881,7 @@
 <h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/testing.html#odoo.tests.common.O2MProxy">O2MProxy (odoo.tests.common のクラス)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tests.common.O2MProxy">O2MProxy (odoo.tests.common のクラス)</a>
 </li>
       <li>
     odoo-bin コマンドラインオプション
@@ -3130,8 +2890,6 @@
         <li><a href="developer/cli.html#cmdoption-odoo-bin-addons-path">--addons-path &lt;directories&gt;</a>
 </li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-c">--config &lt;config&gt;</a>
-</li>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-D">--data-dir &lt;data-dir-path&gt;</a>
 </li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-d">--database &lt;database&gt;</a>
 </li>
@@ -3152,12 +2910,6 @@
         <li><a href="developer/cli.html#cmdoption-odoo-bin-dev">--dev &lt;feature,feature,...,feature&gt;</a>
 </li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-email-from">--email-from &lt;address&gt;</a>
-</li>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-from-filter">--from-filter &lt;address or domain&gt;</a>
-</li>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-geoip-db">--geoip-db &lt;path&gt;</a>
-</li>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-h">--help</a>
 </li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-http-interface">--http-interface &lt;interface&gt;</a>
 </li>
@@ -3182,8 +2934,6 @@
         <li><a href="developer/cli.html#cmdoption-odoo-bin-limit-time-cpu">--limit-time-cpu &lt;limit&gt;</a>
 </li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-limit-time-real">--limit-time-real &lt;limit&gt;</a>
-</li>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-load">--load &lt;modules&gt;</a>
 </li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-load-language">--load-language &lt;languages&gt;</a>
 </li>
@@ -3215,8 +2965,6 @@
 </li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-pg_path">--pg_path &lt;/path/to/postgresql/binaries&gt;</a>
 </li>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-pidfile">--pidfile=&lt;pidfile&gt;</a>
-</li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-proxy-mode">--proxy-mode</a>
 </li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-s">--save</a>
@@ -3235,29 +2983,15 @@
 </li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-smtp-ssl">--smtp-ssl</a>
 </li>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-smtp-ssl-certificate-filename">--smtp-ssl-certificate-filename &lt;path/to/cert.pem&gt;</a>
-</li>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-smtp-ssl-private-key-filename">--smtp-ssl-private-key-filename &lt;path/to/key.pem&gt;</a>
-</li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-smtp-user">--smtp-user &lt;name&gt;</a>
-</li>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-stop-after-init">--stop-after-init</a>
 </li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-syslog">--syslog</a>
 </li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-test-enable">--test-enable</a>
 </li>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-test-file">--test-file &lt;file&gt;</a>
-</li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-test-tags">--test-tags [-][tag][/module][:class][.method]</a>
 </li>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-unaccent">--unaccent</a>
-</li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-u">--update &lt;modules&gt;</a>
-</li>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-upgrade-path">--upgrade-path &lt;upgrade_path&gt;</a>
-</li>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-version">--version</a>
 </li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-without-demo">--without-demo</a>
 </li>
@@ -3265,17 +2999,11 @@
 </li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-c">-c &lt;config&gt;</a>
 </li>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-D">-D &lt;data-dir-path&gt;</a>
-</li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-d">-d &lt;database&gt;</a>
-</li>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-h">-h</a>
 </li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-i">-i &lt;modules&gt;</a>
 </li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-l">-l</a>
-</li>
-        <li><a href="developer/cli.html#cmdoption-odoo-bin-p">-p &lt;port&gt;</a>
 </li>
         <li><a href="developer/cli.html#cmdoption-odoo-bin-r">-r &lt;user&gt;</a>
 </li>
@@ -3343,37 +3071,33 @@
     odoo.api
 
       <ul>
-        <li><a href="developer/reference/backend/orm.html#module-odoo.api">モジュール</a>
+        <li><a href="developer/reference/addons/orm.html#module-odoo.api">モジュール</a>
 </li>
       </ul></li>
       <li>
     odoo.exceptions
 
       <ul>
-        <li><a href="developer/reference/backend/orm.html#module-odoo.exceptions">モジュール</a>
+        <li><a href="developer/reference/addons/orm.html#module-odoo.exceptions">モジュール</a>
 </li>
       </ul></li>
       <li>
     odoo.models
 
       <ul>
-        <li><a href="developer/reference/backend/orm.html#module-odoo.models">モジュール</a>
+        <li><a href="developer/reference/addons/orm.html#module-odoo.models">モジュール</a>
 </li>
       </ul></li>
       <li>
     odoo.tools.populate
 
       <ul>
-        <li><a href="developer/reference/backend/testing.html#module-odoo.tools.populate">モジュール</a>
+        <li><a href="developer/reference/addons/testing.html#module-odoo.tools.populate">モジュール</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/backend/orm.html#odoo.api.onchange">onchange() (odoo.api モジュール)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.api.onchange">onchange() (odoo.api モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.api.ondelete">ondelete() (odoo.api モジュール)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.One2many">One2many (odoo.fields のクラス)</a>
-</li>
-      <li><a href="developer/reference/frontend/framework_overview.html#Domain.or">or() (Domain の静的メソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.One2many">One2many (odoo.fields のクラス)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -3381,42 +3105,36 @@
 <h2 id="P">P</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/http.html#odoo.http.WebRequest.params">params (odoo.http.WebRequest の属性)</a>
+      <li><a href="developer/reference/addons/http.html#odoo.http.WebRequest.params">params (odoo.http.WebRequest の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.parent_id">parent_id (odoo.fields モジュール)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.parent_id">parent_id (odoo.fields モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.parent_path">parent_path (odoo.fields モジュール)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.parent_path">parent_path (odoo.fields モジュール)</a>
 </li>
-      <li><a href="developer/reference/frontend/framework_overview.html#parse">parse() (組み込み関数)</a>
-</li>
-      <li><a href="developer/reference/frontend/framework_overview.html#parseExpr">parseExpr() (組み込み関数)</a>
-</li>
-      <li><a href="developer/reference/frontend/patching_code.html#patch">patch() (組み込み関数)</a>
-</li>
-      <li><a href="developer/reference/backend/security.html#ir.model.access.perm_create">perm_create (ir.model.access の属性)</a>
+      <li><a href="developer/reference/addons/security.html#ir.model.access.perm_create">perm_create (ir.model.access の属性)</a>
 
       <ul>
-        <li><a href="developer/reference/backend/security.html#ir.rule.perm_create">(ir.rule の属性)</a>
+        <li><a href="developer/reference/addons/security.html#ir.rule.perm_create">(ir.rule の属性)</a>
+</li>
+      </ul></li>
+      <li><a href="developer/reference/addons/security.html#ir.model.access.perm_read">perm_read (ir.model.access の属性)</a>
+
+      <ul>
+        <li><a href="developer/reference/addons/security.html#ir.rule.perm_read">(ir.rule の属性)</a>
 </li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/security.html#ir.model.access.perm_read">perm_read (ir.model.access の属性)</a>
+      <li><a href="developer/reference/addons/security.html#ir.model.access.perm_unlink">perm_unlink (ir.model.access の属性)</a>
 
       <ul>
-        <li><a href="developer/reference/backend/security.html#ir.rule.perm_read">(ir.rule の属性)</a>
+        <li><a href="developer/reference/addons/security.html#ir.rule.perm_unlink">(ir.rule の属性)</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/backend/security.html#ir.model.access.perm_unlink">perm_unlink (ir.model.access の属性)</a>
+      <li><a href="developer/reference/addons/security.html#ir.model.access.perm_write">perm_write (ir.model.access の属性)</a>
 
       <ul>
-        <li><a href="developer/reference/backend/security.html#ir.rule.perm_unlink">(ir.rule の属性)</a>
-</li>
-      </ul></li>
-      <li><a href="developer/reference/backend/security.html#ir.model.access.perm_write">perm_write (ir.model.access の属性)</a>
-
-      <ul>
-        <li><a href="developer/reference/backend/security.html#ir.rule.perm_write">(ir.rule の属性)</a>
+        <li><a href="developer/reference/addons/security.html#ir.rule.perm_write">(ir.rule の属性)</a>
 </li>
       </ul></li>
       <li>
@@ -3426,8 +3144,6 @@
         <li><a href="developer/howtos/rdtraining/02_setup.html#cmdoption-arg-pp">コマンドラインオプション</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/frontend/services.html#pushState">pushState() (組み込み関数)</a>
-</li>
   </ul></td>
 </tr></table>
 
@@ -3441,21 +3157,21 @@
         <li><a href="developer/howtos/rdtraining/02_setup.html#cmdoption-arg-q-uit">コマンドラインオプション</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/frontend/qweb.html#QWeb2.Engine">QWeb2.Engine() (クラス)</a>
+      <li><a href="developer/reference/javascript/qweb.html#QWeb2.Engine">QWeb2.Engine() (クラス)</a>
 </li>
-      <li><a href="developer/reference/frontend/qweb.html#QWeb2.Engine.QWeb2.Engine.add_template">QWeb2.Engine.QWeb2.Engine.add_template() (QWeb2.Engine.QWeb2.Engine のメソッド)</a>
+      <li><a href="developer/reference/javascript/qweb.html#QWeb2.Engine.QWeb2.Engine.add_template">QWeb2.Engine.QWeb2.Engine.add_template() (QWeb2.Engine.QWeb2.Engine のメソッド)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/frontend/qweb.html#QWeb2.Engine.QWeb2.Engine.debug">QWeb2.Engine.QWeb2.Engine.debug (QWeb2.Engine.QWeb2.Engine の属性)</a>
+      <li><a href="developer/reference/javascript/qweb.html#QWeb2.Engine.QWeb2.Engine.debug">QWeb2.Engine.QWeb2.Engine.debug (QWeb2.Engine.QWeb2.Engine の属性)</a>
 </li>
-      <li><a href="developer/reference/frontend/qweb.html#QWeb2.Engine.QWeb2.Engine.jQuery">QWeb2.Engine.QWeb2.Engine.jQuery (QWeb2.Engine.QWeb2.Engine の属性)</a>
+      <li><a href="developer/reference/javascript/qweb.html#QWeb2.Engine.QWeb2.Engine.jQuery">QWeb2.Engine.QWeb2.Engine.jQuery (QWeb2.Engine.QWeb2.Engine の属性)</a>
 </li>
-      <li><a href="developer/reference/frontend/qweb.html#QWeb2.Engine.QWeb2.Engine.prefix">QWeb2.Engine.QWeb2.Engine.prefix (QWeb2.Engine.QWeb2.Engine の属性)</a>
+      <li><a href="developer/reference/javascript/qweb.html#QWeb2.Engine.QWeb2.Engine.prefix">QWeb2.Engine.QWeb2.Engine.prefix (QWeb2.Engine.QWeb2.Engine の属性)</a>
 </li>
-      <li><a href="developer/reference/frontend/qweb.html#QWeb2.Engine.QWeb2.Engine.preprocess_node">QWeb2.Engine.QWeb2.Engine.preprocess_node (QWeb2.Engine.QWeb2.Engine の属性)</a>
+      <li><a href="developer/reference/javascript/qweb.html#QWeb2.Engine.QWeb2.Engine.preprocess_node">QWeb2.Engine.QWeb2.Engine.preprocess_node (QWeb2.Engine.QWeb2.Engine の属性)</a>
 </li>
-      <li><a href="developer/reference/frontend/qweb.html#QWeb2.Engine.QWeb2.Engine.render">QWeb2.Engine.QWeb2.Engine.render() (QWeb2.Engine.QWeb2.Engine のメソッド)</a>
+      <li><a href="developer/reference/javascript/qweb.html#QWeb2.Engine.QWeb2.Engine.render">QWeb2.Engine.QWeb2.Engine.render() (QWeb2.Engine.QWeb2.Engine のメソッド)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -3463,68 +3179,60 @@
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/testing.html#odoo.tools.populate.randint">randint() (odoo.tools.populate モジュール)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tools.populate.randint">randint() (odoo.tools.populate モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/testing.html#odoo.tools.populate.randomize">randomize() (odoo.tools.populate モジュール)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tools.populate.randomize">randomize() (odoo.tools.populate モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.read">read() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.read">read() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.read_group">read_group() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.read_group">read_group() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/frontend/services.html#redirect">redirect() (組み込み関数)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.exceptions.RedirectWarning">RedirectWarning</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.exceptions.RedirectWarning">RedirectWarning</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.api.Environment.ref">ref() (odoo.api.Environment のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.api.Environment.ref">ref() (odoo.api.Environment のメソッド)</a>
 
       <ul>
-        <li><a href="developer/reference/backend/testing.html#odoo.tests.common.HttpCase.ref">(odoo.tests.common.HttpCase のメソッド)</a>
+        <li><a href="developer/reference/addons/testing.html#odoo.tests.common.HttpCase.ref">(odoo.tests.common.HttpCase のメソッド)</a>
 </li>
-        <li><a href="developer/reference/backend/testing.html#odoo.tests.common.SingleTransactionCase.ref">(odoo.tests.common.SingleTransactionCase のメソッド)</a>
+        <li><a href="developer/reference/addons/testing.html#odoo.tests.common.SingleTransactionCase.ref">(odoo.tests.common.SingleTransactionCase のメソッド)</a>
 </li>
-        <li><a href="developer/reference/backend/testing.html#odoo.tests.common.TransactionCase.ref">(odoo.tests.common.TransactionCase のメソッド)</a>
+        <li><a href="developer/reference/addons/testing.html#odoo.tests.common.TransactionCase.ref">(odoo.tests.common.TransactionCase のメソッド)</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Reference">Reference (odoo.fields のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Reference">Reference (odoo.fields のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/http.html#odoo.http.WebRequest.registry">registry (odoo.http.WebRequest のプロパティ)</a>
-</li>
-      <li><a href="developer/reference/frontend/registries.html#Registry">Registry() (クラス)</a>
+      <li><a href="developer/reference/addons/http.html#odoo.http.WebRequest.registry">registry (odoo.http.WebRequest のプロパティ)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/testing.html#odoo.tests.common.M2MProxy.remove">remove() (odoo.tests.common.M2MProxy のメソッド)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tests.common.M2MProxy.remove">remove() (odoo.tests.common.M2MProxy のメソッド)</a>
 
       <ul>
-        <li><a href="developer/reference/backend/testing.html#odoo.tests.common.O2MProxy.remove">(odoo.tests.common.O2MProxy のメソッド)</a>
+        <li><a href="developer/reference/addons/testing.html#odoo.tests.common.O2MProxy.remove">(odoo.tests.common.O2MProxy のメソッド)</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/frontend/services.html#removeFromContext">removeFromContext() (組み込み関数)</a>
-</li>
-      <li><a href="developer/reference/frontend/qweb.html#render">render()</a>
+      <li><a href="developer/reference/javascript/qweb.html#render">render()</a>
 
       <ul>
-        <li><a href="developer/reference/backend/http.html#odoo.http.HttpRequest.render">(odoo.http.HttpRequest のメソッド)</a>
+        <li><a href="developer/reference/addons/http.html#odoo.http.HttpRequest.render">(odoo.http.HttpRequest のメソッド)</a>
 </li>
-        <li><a href="developer/reference/backend/http.html#odoo.http.Response.render">(odoo.http.Response のメソッド)</a>
+        <li><a href="developer/reference/addons/http.html#odoo.http.Response.render">(odoo.http.Response のメソッド)</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/backend/security.html#res.groups">res.groups (組み込みクラス)</a>
+      <li><a href="developer/reference/addons/security.html#res.groups">res.groups (組み込みクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/http.html#odoo.http.Response">Response (odoo.http のクラス)</a>
+      <li><a href="developer/reference/addons/http.html#odoo.http.Response">Response (odoo.http のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.api.returns">returns() (odoo.api モジュール)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.api.returns">returns() (odoo.api モジュール)</a>
 </li>
       <li>
     RFC
 
       <ul>
-        <li><a href="developer/reference/backend/http.html#index-0">RFC 7231</a>
+        <li><a href="developer/reference/addons/http.html#index-0">RFC 7231</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/backend/http.html#odoo.http.route">route() (odoo.http モジュール)</a>
-</li>
-      <li><a href="developer/reference/frontend/services.html#rpc">rpc() (組み込み関数)</a>
+      <li><a href="developer/reference/addons/http.html#odoo.http.route">route() (odoo.http モジュール)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -3539,65 +3247,53 @@
         <li><a href="developer/howtos/rdtraining/02_setup.html#cmdoption-arg-s-tep">コマンドラインオプション</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/backend/testing.html#odoo.tests.common.Form.save">save() (odoo.tests.common.Form のメソッド)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tests.common.Form.save">save() (odoo.tests.common.Form のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/testing.html#odoo.tests.common.SavepointCase">SavepointCase (odoo.tests.common のクラス)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tests.common.SavepointCase">SavepointCase (odoo.tests.common のクラス)</a>
 </li>
-      <li><a href="developer/reference/frontend/mobile.html#scanBarcode">scanBarcode() (組み込み関数)</a>
+      <li><a href="developer/reference/javascript/mobile.html#scanBarcode">scanBarcode() (組み込み関数)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.search">search() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.search">search() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.search_count">search_count() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.search_count">search_count() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Selection">Selection (odoo.fields のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Selection">Selection (odoo.fields のクラス)</a>
 </li>
       <li><a href="developer/api/iap.html#ServiceKey">ServiceKey (組み込みクラス)</a>
 </li>
       <li><a href="developer/api/iap.html#ServiceName">ServiceName (組み込みクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/http.html#odoo.http.WebRequest.session">session (odoo.http.WebRequest の属性)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Command.SET">SET (odoo.fields.Command の属性)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Command.set">set() (odoo.fields.Command のクラスメソッド)</a>
-</li>
-      <li><a href="developer/reference/frontend/services.html#setCookie">setCookie() (組み込み関数)</a>
+      <li><a href="developer/reference/addons/http.html#odoo.http.WebRequest.session">session (odoo.http.WebRequest の属性)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/frontend/services.html#setParts">setParts() (組み込み関数)</a>
+      <li><a href="developer/reference/javascript/mobile.html#showNotification">showNotification() (組み込み関数)</a>
 </li>
-      <li><a href="developer/reference/frontend/mobile.html#showNotification">showNotification() (組み込み関数)</a>
+      <li><a href="developer/reference/javascript/mobile.html#showSnackBar">showSnackBar() (組み込み関数)</a>
 </li>
-      <li><a href="developer/reference/frontend/mobile.html#showSnackBar">showSnackBar() (組み込み関数)</a>
+      <li><a href="developer/reference/javascript/mobile.html#showToast">showToast() (組み込み関数)</a>
 </li>
-      <li><a href="developer/reference/frontend/mobile.html#showToast">showToast() (組み込み関数)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tests.common.SingleTransactionCase">SingleTransactionCase (odoo.tests.common のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/testing.html#odoo.tests.common.SingleTransactionCase">SingleTransactionCase (odoo.tests.common のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.sorted">sorted() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.sorted">sorted() (odoo.models.Model のメソッド)</a>
-</li>
-      <li><a href="developer/reference/backend/standard_modules/account/account_chart_template.html#odoo.addons.l10n_multilang.models.account.AccountChartTemplate.spoken_languages">spoken_languages (odoo.addons.l10n_multilang.models.account.AccountChartTemplate の属性)</a>
-</li>
-      <li><a href="developer/reference/frontend/services.html#start">start() (組み込み関数)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Date.start_of">start_of() (odoo.fields.Date の静的メソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Date.start_of">start_of() (odoo.fields.Date の静的メソッド)</a>
 
       <ul>
-        <li><a href="developer/reference/backend/orm.html#odoo.fields.Datetime.start_of">(odoo.fields.Datetime の静的メソッド)</a>
+        <li><a href="developer/reference/addons/orm.html#odoo.fields.Datetime.start_of">(odoo.fields.Datetime の静的メソッド)</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.state">state (odoo.fields モジュール)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.state">state (odoo.fields モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Date.subtract">subtract() (odoo.fields.Date の静的メソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Date.subtract">subtract() (odoo.fields.Date の静的メソッド)</a>
 
       <ul>
-        <li><a href="developer/reference/backend/orm.html#odoo.fields.Datetime.subtract">(odoo.fields.Datetime の静的メソッド)</a>
+        <li><a href="developer/reference/addons/orm.html#odoo.fields.Datetime.subtract">(odoo.fields.Datetime の静的メソッド)</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.sudo">sudo() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.sudo">sudo() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/frontend/mobile.html#switchAccount">switchAccount() (組み込み関数)</a>
+      <li><a href="developer/reference/javascript/mobile.html#switchAccount">switchAccount() (組み込み関数)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -3605,35 +3301,33 @@
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/testing.html#odoo.tests.common.tagged">tagged() (odoo.tests.common モジュール)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tests.common.tagged">tagged() (odoo.tests.common モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Text">Text (odoo.fields のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Text">Text (odoo.fields のクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Date.to_date">to_date() (odoo.fields.Date の静的メソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Date.to_date">to_date() (odoo.fields.Date の静的メソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Datetime.to_datetime">to_datetime() (odoo.fields.Datetime の静的メソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Datetime.to_datetime">to_datetime() (odoo.fields.Datetime の静的メソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Date.to_string">to_string() (odoo.fields.Date の静的メソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Date.to_string">to_string() (odoo.fields.Date の静的メソッド)</a>
 
       <ul>
-        <li><a href="developer/reference/backend/orm.html#odoo.fields.Datetime.to_string">(odoo.fields.Datetime の静的メソッド)</a>
+        <li><a href="developer/reference/addons/orm.html#odoo.fields.Datetime.to_string">(odoo.fields.Datetime の静的メソッド)</a>
 </li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Date.today">today() (odoo.fields.Date の静的メソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.Date.today">today() (odoo.fields.Date の静的メソッド)</a>
 
       <ul>
-        <li><a href="developer/reference/backend/orm.html#odoo.fields.Datetime.today">(odoo.fields.Datetime の静的メソッド)</a>
+        <li><a href="developer/reference/addons/orm.html#odoo.fields.Datetime.today">(odoo.fields.Datetime の静的メソッド)</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/frontend/framework_overview.html#tokenize">tokenize() (組み込み関数)</a>
-</li>
-      <li><a href="developer/reference/backend/testing.html#odoo.tests.common.TransactionCase">TransactionCase (odoo.tests.common のクラス)</a>
+      <li><a href="developer/reference/addons/testing.html#odoo.tests.common.TransactionCase">TransactionCase (odoo.tests.common のクラス)</a>
 </li>
       <li><a href="developer/api/iap.html#TransactionToken">TransactionToken (組み込みクラス)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.TransientModel">TransientModel (odoo.models のクラス)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.TransientModel">TransientModel (odoo.models のクラス)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -3648,33 +3342,13 @@
         <li><a href="developer/howtos/rdtraining/02_setup.html#cmdoption-arg-u-p">コマンドラインオプション</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Command.UNLINK">UNLINK (odoo.fields.Command の属性)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Command.unlink">unlink() (odoo.fields.Command のクラスメソッド)</a>
-
-      <ul>
-        <li><a href="developer/reference/backend/orm.html#odoo.models.Model.unlink">(odoo.models.Model のメソッド)</a>
-</li>
-      </ul></li>
-      <li><a href="developer/reference/frontend/patching_code.html#unpatch">unpatch() (組み込み関数)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Command.UPDATE">UPDATE (odoo.fields.Command の属性)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.unlink">unlink() (odoo.models.Model のメソッド)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.Command.update">update() (odoo.fields.Command のクラスメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.api.Environment.user">user (odoo.api.Environment の属性)</a>
 </li>
-      <li><a href="developer/reference/frontend/services.html#updateContext">updateContext() (組み込み関数)</a>
-</li>
-      <li><a href="developer/reference/frontend/assets.html#useAssets">useAssets() (組み込み関数)</a>
-</li>
-      <li><a href="developer/reference/frontend/hooks.html#useBus">useBus() (組み込み関数)</a>
-</li>
-      <li><a href="developer/reference/frontend/hooks.html#usePosition">usePosition() (組み込み関数)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.api.Environment.user">user (odoo.api.Environment の属性)</a>
-</li>
-      <li><a href="developer/reference/backend/orm.html#odoo.exceptions.UserError">UserError</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.exceptions.UserError">UserError</a>
 </li>
       <li><a href="developer/api/iap.html#UserToken">UserToken (組み込みクラス)</a>
 </li>
@@ -3684,11 +3358,11 @@
 <h2 id="V">V</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/backend/orm.html#odoo.exceptions.ValidationError">ValidationError</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.exceptions.ValidationError">ValidationError</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/frontend/mobile.html#vibrate">vibrate() (組み込み関数)</a>
+      <li><a href="developer/reference/javascript/mobile.html#vibrate">vibrate() (組み込み関数)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -3703,69 +3377,69 @@
         <li><a href="developer/howtos/rdtraining/02_setup.html#cmdoption-arg-w-here">コマンドラインオプション</a>
 </li>
       </ul></li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#web.relational_fields.FieldSelection">web.relational_fields.FieldSelection() (クラス)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#web.relational_fields.FieldSelection">web.relational_fields.FieldSelection() (クラス)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#web.relational_fields.FieldSelection.placeholder">web.relational_fields.FieldSelection.placeholder (web.relational_fields.FieldSelection の属性)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#web.relational_fields.FieldSelection.placeholder">web.relational_fields.FieldSelection.placeholder (web.relational_fields.FieldSelection の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/http.html#odoo.http.WebRequest">WebRequest (odoo.http のクラス)</a>
+      <li><a href="developer/reference/addons/http.html#odoo.http.WebRequest">WebRequest (odoo.http のクラス)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.">Widget.$() (Widget のメソッド)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.">Widget.$() (Widget のメソッド)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.-el">Widget.$el (Widget の属性)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.-el">Widget.$el (Widget の属性)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.appendTo">Widget.appendTo() (Widget のメソッド)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.appendTo">Widget.appendTo() (Widget のメソッド)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.attributes">Widget.attributes (Widget の属性)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.attributes">Widget.attributes (Widget の属性)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.className">Widget.className (Widget の属性)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.className">Widget.className (Widget の属性)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.custom_events">Widget.custom_events (Widget の属性)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.custom_events">Widget.custom_events (Widget の属性)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.destroy">Widget.destroy() (Widget のメソッド)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.destroy">Widget.destroy() (Widget のメソッド)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.el">Widget.el (Widget の属性)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.el">Widget.el (Widget の属性)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.events">Widget.events (Widget の属性)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.events">Widget.events (Widget の属性)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.id">Widget.id (Widget の属性)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.id">Widget.id (Widget の属性)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.init">Widget.init() (Widget のメソッド)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.init">Widget.init() (Widget のメソッド)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.insertAfter">Widget.insertAfter() (Widget のメソッド)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.insertAfter">Widget.insertAfter() (Widget のメソッド)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.insertBefore">Widget.insertBefore() (Widget のメソッド)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.insertBefore">Widget.insertBefore() (Widget のメソッド)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.isDestroyed">Widget.isDestroyed() (Widget のメソッド)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.isDestroyed">Widget.isDestroyed() (Widget のメソッド)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.prependTo">Widget.prependTo() (Widget のメソッド)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.prependTo">Widget.prependTo() (Widget のメソッド)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.setElement">Widget.setElement() (Widget のメソッド)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.setElement">Widget.setElement() (Widget のメソッド)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.start">Widget.start() (Widget のメソッド)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.start">Widget.start() (Widget のメソッド)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.tagName">Widget.tagName (Widget の属性)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.tagName">Widget.tagName (Widget の属性)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.template">Widget.template (Widget の属性)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.template">Widget.template (Widget の属性)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.willStart">Widget.willStart() (Widget のメソッド)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.willStart">Widget.willStart() (Widget のメソッド)</a>
 </li>
-      <li><a href="developer/reference/frontend/javascript_reference.html#Widget.xmlDependencies">Widget.xmlDependencies (Widget の属性)</a>
+      <li><a href="developer/reference/javascript/javascript_reference.html#Widget.xmlDependencies">Widget.xmlDependencies (Widget の属性)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.with_company">with_company() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.with_company">with_company() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.with_context">with_context() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.with_context">with_context() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.with_env">with_env() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.with_env">with_env() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.with_user">with_user() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.with_user">with_user() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.models.Model.write">write() (odoo.models.Model のメソッド)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.models.Model.write">write() (odoo.models.Model のメソッド)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.write_date">write_date (odoo.fields モジュール)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.write_date">write_date (odoo.fields モジュール)</a>
 </li>
-      <li><a href="developer/reference/backend/orm.html#odoo.fields.write_uid">write_uid (odoo.fields モジュール)</a>
+      <li><a href="developer/reference/addons/orm.html#odoo.fields.write_uid">write_uid (odoo.fields モジュール)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -3814,22 +3488,64 @@
     モジュール
 
       <ul>
-        <li><a href="developer/reference/backend/orm.html#module-odoo.api">odoo.api</a>
+        <li><a href="developer/reference/addons/orm.html#module-odoo.api">odoo.api</a>
 </li>
-        <li><a href="developer/reference/backend/orm.html#module-odoo.exceptions">odoo.exceptions</a>
+        <li><a href="developer/reference/addons/orm.html#module-odoo.exceptions">odoo.exceptions</a>
 </li>
-        <li><a href="developer/reference/backend/orm.html#module-odoo.models">odoo.models</a>
+        <li><a href="developer/reference/addons/orm.html#module-odoo.models">odoo.models</a>
 </li>
-        <li><a href="developer/reference/backend/testing.html#module-odoo.tools.populate">odoo.tools.populate</a>
+        <li><a href="developer/reference/addons/testing.html#module-odoo.tools.populate">odoo.tools.populate</a>
 </li>
       </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="地">地</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="developer/glossary.html#term-Geographic-Information-System"><strong>地理情報システム（Geographic Information System）</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="外">外</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="developer/glossary.html#term-external-id"><strong>外部ID</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="developer/glossary.html#term-external-identifiers"><strong>外部識別子群</strong></a>
+</li>
+      <li><a href="developer/glossary.html#term-external-identifier"><strong>外部識別子（ID）</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="書">書</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="developer/glossary.html#term-format-string"><strong>書式文字列</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="縮">縮</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="developer/glossary.html#term-minification"><strong>縮小</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="developer/glossary.html#term-minified"><strong>縮小された</strong></a>
+</li>
   </ul></td>
 </tr></table>
 
 
 
                     </div>
-                        <a href="https://github.com/odoo/documentation/edit/15.0/content/genindex.rst"
+                        <a href="https://github.com/odoo/documentation/edit/14.0/content/genindex.rst"
                            class="o_git_link d-none d-lg-inline-block">
                             <i class="i-edit"></i> Edit on GitHub
                         </a>
@@ -3866,7 +3582,7 @@
         <li class="right" >
           <a href="py-modindex.html" title="Pythonモジュール索引"
              >モジュール</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Odoo 15.0 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Odoo 14.0 ドキュメント</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">索引</a></li> 
       </ul>
     </div>
