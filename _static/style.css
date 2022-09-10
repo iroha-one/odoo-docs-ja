@@ -9120,6 +9120,11 @@ aside.o_page_toc {
           content: ""; }
         #wrap main .alert.alert-go_to code, #wrap main .alert.alert-go_to code ~ .sig-paren, #wrap main .alert.alert-go_to code ~ .sig-param, #wrap main .alert.alert-go_to code ~ .optional, #wrap main .alert.alert-go_to article.doc-body .command, #wrap main article.doc-body .alert.alert-go_to .command, #wrap main .alert.alert-go_to article.doc-body dl.py.class em.property:not(:first-child), #wrap main article.doc-body dl.py.class .alert.alert-go_to em.property:not(:first-child), #wrap main .alert.alert-go_to article.doc-body dl.js.class em.property:not(:first-child), #wrap main article.doc-body dl.js.class .alert.alert-go_to em.property:not(:first-child), #wrap main .alert.alert-go_to article.doc-body dl.o-definition-list.class em.property:not(:first-child), #wrap main article.doc-body dl.o-definition-list.class .alert.alert-go_to em.property:not(:first-child), #wrap main .alert.alert-go_to div[class^="highlight"] {
           border-color: #c3adbd; }
+    #wrap main .graphviz {
+      overflow-x: auto;
+      white-space: nowrap; }
+      #wrap main .graphviz img {
+        max-width: unset; }
 
 .sphinx-tabs {
   padding: 0;

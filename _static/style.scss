@@ -1084,6 +1084,13 @@ header {
                 }
             }
         }
+        .graphviz {
+            overflow-x: auto;
+            white-space: nowrap;
+            img {
+                max-width: unset;
+            }
+        }
     }
 }
 //------------------------------------------------------------------------------

@@ -2,6 +2,36 @@
 Luxembourg
 ==========
 
+Configuration
+=============
+
+:ref:`Install <general/install>` the following modules to get all the features of the Luxembourgish
+localization:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Technical name
+     - Description
+   * - :guilabel:`Luxembourg - Accounting`
+     - `l10n_lu`
+     - Default :doc:`fiscal localization package <../overview/fiscal_localization_packages>`
+   * - :guilabel:`Luxembourg - Accounting Reports`
+     - `l10n_lu_reports`
+     - Country-specific reports
+   * - :guilabel:`Luxembourg - Annual VAT Report`
+     - `l10n_lu_reports_annual_vat`
+     - Country-specific reports
+
+.. image:: luxembourg/modules.png
+   :align: center
+   :alt: The three modules for the Luxembourgish Fiscal Localization Package on Odoo
+
+.. tip::
+   Installing the module :guilabel:`Luxembourg - Accounting Reports` installs all three modules at
+   once.
+
 Standard Chart of Accounts - PCN 2020
 =====================================
 
@@ -45,6 +75,9 @@ so, go to :menuselection:`Accounting --> Report --> Audit Reports --> Tax Report
 
 Finally, click on :guilabel:`Export XML` to download the XML file.
 
+.. note::
+   This feature requires the module :guilabel:`Luxembourg - Annual VAT Report` to be installed.
+
 FAIA (SAF-T)
 ============
 
@@ -55,14 +88,11 @@ Luxembourgish version of the OECD-recommended SAF-T (Standard Audit File for Tax
 Odoo can generate an XML file that contains all the content of an accounting period according to the
 rules imposed by the Luxembourg tax authorities on digital audit files.
 
-Configuration
--------------
-
-:ref:`Install <general/install>` the module :guilabel:`Luxembourg Standard Audit File for Tax`
-(module's technical name: ``l10n_lu_saft``).
+.. note::
+   This feature requires the module :guilabel:`Luxembourg - Accounting Reports` to be installed.
 
 Export FAIA file
 ----------------
 
 Go to :menuselection:`Accounting --> Reporting --> Audit Reports -->  General Ledger`, then click on
-:guilabel:`Export SAF-T (Luxembourg)`.
+:guilabel:`FAIA`.
