@@ -70,7 +70,7 @@ jobs:
           pip install -r odoo/requirements.txt
       - name: Add 'ja' to languages_names in conf.py
         run: |
-          echo -e "\nlanguages_names.setdefault('ja', '日本語')\n" >> conf.py
+          echo -e "\n\nlanguages_names.setdefault('ja', '日本語')\n" >> conf.py
       - name: Build Sphinx docs
         run: |
           make html
