@@ -27,7 +27,7 @@
     
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
-    <link rel="next" title="データファイル" href="data.html" />
+    <link rel="next" title="Data Files" href="data.html" />
     <link rel="prev" title="Server Addons" href="../addons.html" /> 
   </head><body>
     <noscript>
@@ -736,11 +736,11 @@
 <li class="toctree-l4 o_menu_applications_general_users_companies"><a class="reference internal" href="../../../applications/general/users/companies.html">Companies</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">認証</a><ul>
+<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">Authentication</a><ul>
 <li class="toctree-l4 o_menu_applications_general_auth_google"><a class="reference internal" href="../../../applications/general/auth/google.html">Google Sign-In Authentication</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="../../../applications/general/auth/azure.html">OAuth認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="../../../applications/general/auth/azure.html">OAuth</a></li>
 <li class="toctree-l4 o_menu_applications_general_auth_ldap"><a class="reference internal" href="../../../applications/general/auth/ldap.html">Sign in with LDAP</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../../applications/general/auth/2fa.html">2要素認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../../applications/general/auth/2fa.html">Two-factor Authentication</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_general_apps_modules"><a class="reference internal" href="../../../applications/general/apps_modules.html">Apps and modules</a></li>
@@ -821,7 +821,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current o_menu_developer"><a class="reference internal" href="../../../developer.html">開発者向け</a><ul class="current">
-<li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">チュートリアル</a><ul>
+<li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">Tutorials</a><ul>
 <li class="toctree-l3 o_menu_developer_howtos_rdtraining"><a class="reference internal" href="../../howtos/rdtraining.html">Getting started</a><ul>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_01_architecture"><a class="reference internal" href="../../howtos/rdtraining/01_architecture.html">Chapter 1: Architecture Overview</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="../../howtos/rdtraining/02_setup.html">Chapter 2: Development environment setup</a></li>
@@ -848,7 +848,7 @@
 </li>
 <li class="toctree-l3 o_menu_developer_howtos_themes"><a class="reference internal" href="../../howtos/themes.html">Theme Tutorial</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_website"><a class="reference internal" href="../../howtos/website.html">Building a Website</a></li>
-<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../../howtos/backend.html">モジュールの構築</a></li>
+<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../../howtos/backend.html">Building a Module</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_profilecode"><a class="reference internal" href="../../howtos/profilecode.html">Profiling Odoo code</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_company"><a class="reference internal" href="../../howtos/company.html">Multi-company Guidelines</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_localization"><a class="reference internal" href="../../howtos/localization.html">Accounting Localization</a></li>
@@ -858,8 +858,8 @@
 <li class="toctree-l2 current o_menu_developer_reference"><a class="reference internal" href="#">Reference</a><ul class="current">
 <li class="toctree-l3 current o_menu_developer_reference_addons"><a class="reference internal" href="#">Server Addons</a><ul class="current">
 <li class="toctree-l4 current o_menu_developer_reference_addons_"><a class="current reference internal" href="#">ORM API</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="data.html">データファイル</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="actions.html">アクション</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="data.html">Data Files</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="actions.html">Actions</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_views"><a class="reference internal" href="views.html">Views</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_module"><a class="reference internal" href="module.html">Module Manifests</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_reports"><a class="reference internal" href="reports.html">QWeb Reports</a></li>
@@ -916,7 +916,7 @@
 <li><a class="reference internal" href="#">ORM API</a><ul>
 <li><a class="reference internal" href="#models">Models</a><ul>
 <li><a class="reference internal" href="#abstractmodel">AbstractModel</a></li>
-<li><a class="reference internal" href="#model">モデル</a></li>
+<li><a class="reference internal" href="#model">Model</a></li>
 <li><a class="reference internal" href="#transientmodel">TransientModel</a></li>
 </ul>
 </li>
@@ -926,7 +926,7 @@
 <li><a class="reference internal" href="#date-time-fields">Date(time) Fields</a></li>
 <li><a class="reference internal" href="#relational-fields">Relational Fields</a></li>
 <li><a class="reference internal" href="#pseudo-relational-fields">Pseudo-relational fields</a></li>
-<li><a class="reference internal" href="#computed-fields">計算フィールド</a></li>
+<li><a class="reference internal" href="#computed-fields">Computed Fields</a></li>
 <li><a class="reference internal" href="#related-fields">Related fields</a></li>
 </ul>
 </li>
@@ -1684,11 +1684,11 @@
 <li class="toctree-l4 o_menu_applications_general_users_companies"><a class="reference internal" href="../../../applications/general/users/companies.html">Companies</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">認証</a><ul>
+<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">Authentication</a><ul>
 <li class="toctree-l4 o_menu_applications_general_auth_google"><a class="reference internal" href="../../../applications/general/auth/google.html">Google Sign-In Authentication</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="../../../applications/general/auth/azure.html">OAuth認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="../../../applications/general/auth/azure.html">OAuth</a></li>
 <li class="toctree-l4 o_menu_applications_general_auth_ldap"><a class="reference internal" href="../../../applications/general/auth/ldap.html">Sign in with LDAP</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../../applications/general/auth/2fa.html">2要素認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../../applications/general/auth/2fa.html">Two-factor Authentication</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_general_apps_modules"><a class="reference internal" href="../../../applications/general/apps_modules.html">Apps and modules</a></li>
@@ -1769,7 +1769,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current o_menu_developer"><a class="reference internal" href="../../../developer.html">開発者向け</a><ul class="current">
-<li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">チュートリアル</a><ul>
+<li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">Tutorials</a><ul>
 <li class="toctree-l3 o_menu_developer_howtos_rdtraining"><a class="reference internal" href="../../howtos/rdtraining.html">Getting started</a><ul>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_01_architecture"><a class="reference internal" href="../../howtos/rdtraining/01_architecture.html">Chapter 1: Architecture Overview</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="../../howtos/rdtraining/02_setup.html">Chapter 2: Development environment setup</a></li>
@@ -1796,7 +1796,7 @@
 </li>
 <li class="toctree-l3 o_menu_developer_howtos_themes"><a class="reference internal" href="../../howtos/themes.html">Theme Tutorial</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_website"><a class="reference internal" href="../../howtos/website.html">Building a Website</a></li>
-<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../../howtos/backend.html">モジュールの構築</a></li>
+<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../../howtos/backend.html">Building a Module</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_profilecode"><a class="reference internal" href="../../howtos/profilecode.html">Profiling Odoo code</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_company"><a class="reference internal" href="../../howtos/company.html">Multi-company Guidelines</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_localization"><a class="reference internal" href="../../howtos/localization.html">Accounting Localization</a></li>
@@ -1806,8 +1806,8 @@
 <li class="toctree-l2 current o_menu_developer_reference"><a class="reference internal" href="#">Reference</a><ul class="current">
 <li class="toctree-l3 current o_menu_developer_reference_addons"><a class="reference internal" href="#">Server Addons</a><ul class="current">
 <li class="toctree-l4 current o_menu_developer_reference_addons_"><a class="current reference internal" href="#">ORM API</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="data.html">データファイル</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="actions.html">アクション</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="data.html">Data Files</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="actions.html">Actions</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_views"><a class="reference internal" href="views.html">Views</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_module"><a class="reference internal" href="module.html">Module Manifests</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_reports"><a class="reference internal" href="reports.html">QWeb Reports</a></li>
@@ -1914,7 +1914,7 @@
           <a href="../../../py-modindex.html" title="Pythonモジュール索引"
              >モジュール</a> |</li>
         <li class="right" >
-          <a href="data.html" title="データファイル"
+          <a href="data.html" title="Data Files"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
           <a href="../addons.html" title="Server Addons"
@@ -2193,7 +2193,7 @@ on the records of the current model using the <code class="docutils literal notr
 </dd></dl>
 
 </section><section id="model">
-<h3>モデル<a class="headerlink" href="#model" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>Model<a class="headerlink" href="#model" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="odoo.models.Model">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">odoo.models.</span></span><span class="sig-name descname"><span class="pre">Model</span></span><a class="reference external" href="https://github.com/odoo/odoo/blob/14.0/odoo/models.py#L6437"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#odoo.models.Model" title="この定義へのパーマリンク">¶</a></dt>
@@ -2373,7 +2373,7 @@ the current field.</p>
 </ul>
 </dd>
 </dl>
-<p class="rubric">計算フィールド</p>
+<p class="rubric">Computed Fields</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3103,7 +3103,7 @@ in a <a class="reference internal" href="#odoo.fields.Char" title="odoo.fields.C
 </dd></dl>
 
 </section><section id="computed-fields">
-<span id="reference-fields-compute"></span><h4>計算フィールド<a class="headerlink" href="#computed-fields" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<span id="reference-fields-compute"></span><h4>Computed Fields<a class="headerlink" href="#computed-fields" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>Fields can be computed (instead of read straight from the database) using the
 <code class="docutils literal notranslate"><span class="pre">compute</span></code> parameter. <strong>It must assign the computed value to the field</strong>. If
 it uses the values of other <em>fields</em>, it should specify those fields using
@@ -4927,7 +4927,7 @@ Example</p><p>When you try to create a new user with a login which already exist
 <li><a class="reference internal" href="#">ORM API</a><ul>
 <li><a class="reference internal" href="#models">Models</a><ul>
 <li><a class="reference internal" href="#abstractmodel">AbstractModel</a></li>
-<li><a class="reference internal" href="#model">モデル</a></li>
+<li><a class="reference internal" href="#model">Model</a></li>
 <li><a class="reference internal" href="#transientmodel">TransientModel</a></li>
 </ul>
 </li>
@@ -4937,7 +4937,7 @@ Example</p><p>When you try to create a new user with a login which already exist
 <li><a class="reference internal" href="#date-time-fields">Date(time) Fields</a></li>
 <li><a class="reference internal" href="#relational-fields">Relational Fields</a></li>
 <li><a class="reference internal" href="#pseudo-relational-fields">Pseudo-relational fields</a></li>
-<li><a class="reference internal" href="#computed-fields">計算フィールド</a></li>
+<li><a class="reference internal" href="#computed-fields">Computed Fields</a></li>
 <li><a class="reference internal" href="#related-fields">Related fields</a></li>
 </ul>
 </li>
@@ -5016,7 +5016,7 @@ Example</p><p>When you try to create a new user with a login which already exist
           <a href="../../../py-modindex.html" title="Pythonモジュール索引"
              >モジュール</a> |</li>
         <li class="right" >
-          <a href="data.html" title="データファイル"
+          <a href="data.html" title="Data Files"
              >次へ</a> |</li>
         <li class="right" >
           <a href="../addons.html" title="Server Addons"

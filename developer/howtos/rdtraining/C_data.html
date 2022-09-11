@@ -736,11 +736,11 @@
 <li class="toctree-l4 o_menu_applications_general_users_companies"><a class="reference internal" href="../../../applications/general/users/companies.html">Companies</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">認証</a><ul>
+<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">Authentication</a><ul>
 <li class="toctree-l4 o_menu_applications_general_auth_google"><a class="reference internal" href="../../../applications/general/auth/google.html">Google Sign-In Authentication</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="../../../applications/general/auth/azure.html">OAuth認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="../../../applications/general/auth/azure.html">OAuth</a></li>
 <li class="toctree-l4 o_menu_applications_general_auth_ldap"><a class="reference internal" href="../../../applications/general/auth/ldap.html">Sign in with LDAP</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../../applications/general/auth/2fa.html">2要素認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../../applications/general/auth/2fa.html">Two-factor Authentication</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_general_apps_modules"><a class="reference internal" href="../../../applications/general/apps_modules.html">Apps and modules</a></li>
@@ -821,7 +821,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current o_menu_developer"><a class="reference internal" href="../../../developer.html">開発者向け</a><ul class="current">
-<li class="toctree-l2 current o_menu_developer_howtos"><a class="reference internal" href="#">チュートリアル</a><ul class="current">
+<li class="toctree-l2 current o_menu_developer_howtos"><a class="reference internal" href="#">Tutorials</a><ul class="current">
 <li class="toctree-l3 current o_menu_developer_howtos_rdtraining"><a class="reference internal" href="../rdtraining.html">Getting started</a><ul class="current">
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_01_architecture"><a class="reference internal" href="01_architecture.html">Chapter 1: Architecture Overview</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="02_setup.html">Chapter 2: Development environment setup</a></li>
@@ -848,7 +848,7 @@
 </li>
 <li class="toctree-l3 o_menu_developer_howtos_themes"><a class="reference internal" href="../themes.html">Theme Tutorial</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_website"><a class="reference internal" href="../website.html">Building a Website</a></li>
-<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../backend.html">モジュールの構築</a></li>
+<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../backend.html">Building a Module</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_profilecode"><a class="reference internal" href="../profilecode.html">Profiling Odoo code</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_company"><a class="reference internal" href="../company.html">Multi-company Guidelines</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_localization"><a class="reference internal" href="../localization.html">Accounting Localization</a></li>
@@ -858,8 +858,8 @@
 <li class="toctree-l2 o_menu_developer_reference"><a class="reference internal" href="#">Reference</a><ul>
 <li class="toctree-l3 o_menu_developer_reference_addons"><a class="reference internal" href="#">Server Addons</a><ul>
 <li class="toctree-l4 o_menu_developer_reference_addons_orm"><a class="reference internal" href="../../reference/addons/orm.html">ORM API</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="../../reference/addons/data.html">データファイル</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="../../reference/addons/actions.html">アクション</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="../../reference/addons/data.html">Data Files</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="../../reference/addons/actions.html">Actions</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_views"><a class="reference internal" href="../../reference/addons/views.html">Views</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_module"><a class="reference internal" href="../../reference/addons/module.html">Module Manifests</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_reports"><a class="reference internal" href="../../reference/addons/reports.html">QWeb Reports</a></li>
@@ -920,7 +920,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#data-declaration">Data Declaration</a><ul>
-<li><a class="reference internal" href="#manifest">マニフェスト</a></li>
+<li><a class="reference internal" href="#manifest">Manifest</a></li>
 <li><a class="reference internal" href="#csv">CSV</a></li>
 <li><a class="reference internal" href="#xml">XML</a><ul>
 <li><a class="reference internal" href="#data-extension">Data Extension</a></li>
@@ -933,7 +933,7 @@
 <li><a class="reference internal" href="#add-x2many-fields">Add X2many fields</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#accessing-the-data">データへのアクセス</a></li>
+<li><a class="reference internal" href="#accessing-the-data">Accessing the data</a></li>
 <li><a class="reference internal" href="#advanced">Advanced</a><ul>
 <li><a class="reference internal" href="#what-is-the-xml-id">What is the XML id?</a></li>
 <li><a class="reference internal" href="#no-update">No update</a></li>
@@ -1651,11 +1651,11 @@
 <li class="toctree-l4 o_menu_applications_general_users_companies"><a class="reference internal" href="../../../applications/general/users/companies.html">Companies</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">認証</a><ul>
+<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">Authentication</a><ul>
 <li class="toctree-l4 o_menu_applications_general_auth_google"><a class="reference internal" href="../../../applications/general/auth/google.html">Google Sign-In Authentication</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="../../../applications/general/auth/azure.html">OAuth認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="../../../applications/general/auth/azure.html">OAuth</a></li>
 <li class="toctree-l4 o_menu_applications_general_auth_ldap"><a class="reference internal" href="../../../applications/general/auth/ldap.html">Sign in with LDAP</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../../applications/general/auth/2fa.html">2要素認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../../applications/general/auth/2fa.html">Two-factor Authentication</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_general_apps_modules"><a class="reference internal" href="../../../applications/general/apps_modules.html">Apps and modules</a></li>
@@ -1736,7 +1736,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current o_menu_developer"><a class="reference internal" href="../../../developer.html">開発者向け</a><ul class="current">
-<li class="toctree-l2 current o_menu_developer_howtos"><a class="reference internal" href="#">チュートリアル</a><ul class="current">
+<li class="toctree-l2 current o_menu_developer_howtos"><a class="reference internal" href="#">Tutorials</a><ul class="current">
 <li class="toctree-l3 current o_menu_developer_howtos_rdtraining"><a class="reference internal" href="../rdtraining.html">Getting started</a><ul class="current">
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_01_architecture"><a class="reference internal" href="01_architecture.html">Chapter 1: Architecture Overview</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="02_setup.html">Chapter 2: Development environment setup</a></li>
@@ -1763,7 +1763,7 @@
 </li>
 <li class="toctree-l3 o_menu_developer_howtos_themes"><a class="reference internal" href="../themes.html">Theme Tutorial</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_website"><a class="reference internal" href="../website.html">Building a Website</a></li>
-<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../backend.html">モジュールの構築</a></li>
+<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../backend.html">Building a Module</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_profilecode"><a class="reference internal" href="../profilecode.html">Profiling Odoo code</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_company"><a class="reference internal" href="../company.html">Multi-company Guidelines</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_localization"><a class="reference internal" href="../localization.html">Accounting Localization</a></li>
@@ -1773,8 +1773,8 @@
 <li class="toctree-l2 o_menu_developer_reference"><a class="reference internal" href="#">Reference</a><ul>
 <li class="toctree-l3 o_menu_developer_reference_addons"><a class="reference internal" href="#">Server Addons</a><ul>
 <li class="toctree-l4 o_menu_developer_reference_addons_orm"><a class="reference internal" href="../../reference/addons/orm.html">ORM API</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="../../reference/addons/data.html">データファイル</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="../../reference/addons/actions.html">アクション</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="../../reference/addons/data.html">Data Files</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="../../reference/addons/actions.html">Actions</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_views"><a class="reference internal" href="../../reference/addons/views.html">Views</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_module"><a class="reference internal" href="../../reference/addons/module.html">Module Manifests</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_reports"><a class="reference internal" href="../../reference/addons/reports.html">QWeb Reports</a></li>
@@ -1888,7 +1888,7 @@
              accesskey="P">前へ</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../../index.html">Odoo 14.0 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../developer.html" >開発者向け</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../../howtos.html" >チュートリアル</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../howtos.html" >Tutorials</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="../rdtraining.html" accesskey="U">Getting started</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Advanced C: Master and Demo Data</a></li> 
       </ul>
@@ -1953,7 +1953,7 @@ want it. This can be done in the database manager or with the command line.</p>
 </section><section id="data-declaration">
 <h2>Data Declaration<a class="headerlink" href="#data-declaration" title="このヘッドラインへのパーマリンク">¶</a></h2>
 </section><section id="manifest">
-<h3>マニフェスト<a class="headerlink" href="#manifest" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>Manifest<a class="headerlink" href="#manifest" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p><strong>Reference</strong>: the documentation related to this topic can be found in
 <a class="reference internal" href="../../reference/addons/module.html#reference-module-manifest"><span class="std std-ref">Module Manifests</span></a>.</p>
 <p>The data is declared either in CSV either in XML.
@@ -2272,7 +2272,7 @@ Exercise</p><p>Create one new Property, but this time with some offers created d
 One2many field linking to the Offers.</p>
 </div>
 </section><section id="accessing-the-data">
-<h2>データへのアクセス<a class="headerlink" href="#accessing-the-data" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Accessing the data<a class="headerlink" href="#accessing-the-data" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="alert alert-warning">
 <p class="alert-title">
 警告</p><p>You should never access demo data outside of the demo data declaration, not even in
@@ -2365,7 +2365,7 @@ bypasses all the features of the ORM, computed fields (including metadata) and p
 </ul>
 </li>
 <li><a class="reference internal" href="#data-declaration">Data Declaration</a><ul>
-<li><a class="reference internal" href="#manifest">マニフェスト</a></li>
+<li><a class="reference internal" href="#manifest">Manifest</a></li>
 <li><a class="reference internal" href="#csv">CSV</a></li>
 <li><a class="reference internal" href="#xml">XML</a><ul>
 <li><a class="reference internal" href="#data-extension">Data Extension</a></li>
@@ -2378,7 +2378,7 @@ bypasses all the features of the ORM, computed fields (including metadata) and p
 <li><a class="reference internal" href="#add-x2many-fields">Add X2many fields</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#accessing-the-data">データへのアクセス</a></li>
+<li><a class="reference internal" href="#accessing-the-data">Accessing the data</a></li>
 <li><a class="reference internal" href="#advanced">Advanced</a><ul>
 <li><a class="reference internal" href="#what-is-the-xml-id">What is the XML id?</a></li>
 <li><a class="reference internal" href="#no-update">No update</a></li>
@@ -2424,7 +2424,7 @@ bypasses all the features of the ORM, computed fields (including metadata) and p
              >前へ</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../../index.html">Odoo 14.0 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../developer.html" >開発者向け</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../../howtos.html" >チュートリアル</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../howtos.html" >Tutorials</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="../rdtraining.html" >Getting started</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Advanced C: Master and Demo Data</a></li> 
       </ul>

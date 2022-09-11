@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>2要素認証 &#8212; Odoo 14.0 ドキュメント</title>
+    <title>Two-factor Authentication &#8212; Odoo 14.0 ドキュメント</title>
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
@@ -736,11 +736,11 @@
 <li class="toctree-l4 o_menu_applications_general_users_companies"><a class="reference internal" href="../users/companies.html">Companies</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current o_menu_applications_general_auth"><a class="reference internal" href="#">認証</a><ul class="current">
+<li class="toctree-l3 current o_menu_applications_general_auth"><a class="reference internal" href="#">Authentication</a><ul class="current">
 <li class="toctree-l4 o_menu_applications_general_auth_google"><a class="reference internal" href="google.html">Google Sign-In Authentication</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="azure.html">OAuth認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="azure.html">OAuth</a></li>
 <li class="toctree-l4 o_menu_applications_general_auth_ldap"><a class="reference internal" href="ldap.html">Sign in with LDAP</a></li>
-<li class="toctree-l4 current o_menu_applications_general_auth_"><a class="current reference internal" href="#">2要素認証</a></li>
+<li class="toctree-l4 current o_menu_applications_general_auth_"><a class="current reference internal" href="#">Two-factor Authentication</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_general_apps_modules"><a class="reference internal" href="../apps_modules.html">Apps and modules</a></li>
@@ -821,7 +821,7 @@
 </ul>
 </li>
 <li class="toctree-l1 o_menu_developer"><a class="reference internal" href="../../../developer.html">開発者向け</a><ul>
-<li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">チュートリアル</a><ul>
+<li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">Tutorials</a><ul>
 <li class="toctree-l3 o_menu_developer_howtos_rdtraining"><a class="reference internal" href="../../../developer/howtos/rdtraining.html">Getting started</a><ul>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_01_architecture"><a class="reference internal" href="../../../developer/howtos/rdtraining/01_architecture.html">Chapter 1: Architecture Overview</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="../../../developer/howtos/rdtraining/02_setup.html">Chapter 2: Development environment setup</a></li>
@@ -848,7 +848,7 @@
 </li>
 <li class="toctree-l3 o_menu_developer_howtos_themes"><a class="reference internal" href="../../../developer/howtos/themes.html">Theme Tutorial</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_website"><a class="reference internal" href="../../../developer/howtos/website.html">Building a Website</a></li>
-<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../../../developer/howtos/backend.html">モジュールの構築</a></li>
+<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../../../developer/howtos/backend.html">Building a Module</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_profilecode"><a class="reference internal" href="../../../developer/howtos/profilecode.html">Profiling Odoo code</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_company"><a class="reference internal" href="../../../developer/howtos/company.html">Multi-company Guidelines</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_localization"><a class="reference internal" href="../../../developer/howtos/localization.html">Accounting Localization</a></li>
@@ -858,8 +858,8 @@
 <li class="toctree-l2 o_menu_developer_reference"><a class="reference internal" href="#">Reference</a><ul>
 <li class="toctree-l3 o_menu_developer_reference_addons"><a class="reference internal" href="#">Server Addons</a><ul>
 <li class="toctree-l4 o_menu_developer_reference_addons_orm"><a class="reference internal" href="../../../developer/reference/addons/orm.html">ORM API</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="../../../developer/reference/addons/data.html">データファイル</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="../../../developer/reference/addons/actions.html">アクション</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="../../../developer/reference/addons/data.html">Data Files</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="../../../developer/reference/addons/actions.html">Actions</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_views"><a class="reference internal" href="../../../developer/reference/addons/views.html">Views</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_module"><a class="reference internal" href="../../../developer/reference/addons/module.html">Module Manifests</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_reports"><a class="reference internal" href="../../../developer/reference/addons/reports.html">QWeb Reports</a></li>
@@ -913,10 +913,10 @@
                 <aside id="o_page_toc_in_nav" class="o_page_toc o_in_nav_toc border-bottom pt-3 pb-3" hidden><div class="o_page_toc_nav mt-1">
     <h3>On this page</h3>
     <ul>
-<li><a class="reference internal" href="#">2要素認証</a><ul>
-<li><a class="reference internal" href="#requirements">必要なもの</a></li>
-<li><a class="reference internal" href="#setting-up-two-factor-authentication">2要素認証の設定</a></li>
-<li><a class="reference internal" href="#logging-in">ログイン</a></li>
+<li><a class="reference internal" href="#">Two-factor Authentication</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#setting-up-two-factor-authentication">Setting up two-factor authentication</a></li>
+<li><a class="reference internal" href="#logging-in">Logging in</a></li>
 </ul>
 </li>
 </ul>
@@ -1628,11 +1628,11 @@
 <li class="toctree-l4 o_menu_applications_general_users_companies"><a class="reference internal" href="../users/companies.html">Companies</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current o_menu_applications_general_auth"><a class="reference internal" href="#">認証</a><ul class="current">
+<li class="toctree-l3 current o_menu_applications_general_auth"><a class="reference internal" href="#">Authentication</a><ul class="current">
 <li class="toctree-l4 o_menu_applications_general_auth_google"><a class="reference internal" href="google.html">Google Sign-In Authentication</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="azure.html">OAuth認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="azure.html">OAuth</a></li>
 <li class="toctree-l4 o_menu_applications_general_auth_ldap"><a class="reference internal" href="ldap.html">Sign in with LDAP</a></li>
-<li class="toctree-l4 current o_menu_applications_general_auth_"><a class="current reference internal" href="#">2要素認証</a></li>
+<li class="toctree-l4 current o_menu_applications_general_auth_"><a class="current reference internal" href="#">Two-factor Authentication</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_general_apps_modules"><a class="reference internal" href="../apps_modules.html">Apps and modules</a></li>
@@ -1713,7 +1713,7 @@
 </ul>
 </li>
 <li class="toctree-l1 o_menu_developer"><a class="reference internal" href="../../../developer.html">開発者向け</a><ul>
-<li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">チュートリアル</a><ul>
+<li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">Tutorials</a><ul>
 <li class="toctree-l3 o_menu_developer_howtos_rdtraining"><a class="reference internal" href="../../../developer/howtos/rdtraining.html">Getting started</a><ul>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_01_architecture"><a class="reference internal" href="../../../developer/howtos/rdtraining/01_architecture.html">Chapter 1: Architecture Overview</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="../../../developer/howtos/rdtraining/02_setup.html">Chapter 2: Development environment setup</a></li>
@@ -1740,7 +1740,7 @@
 </li>
 <li class="toctree-l3 o_menu_developer_howtos_themes"><a class="reference internal" href="../../../developer/howtos/themes.html">Theme Tutorial</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_website"><a class="reference internal" href="../../../developer/howtos/website.html">Building a Website</a></li>
-<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../../../developer/howtos/backend.html">モジュールの構築</a></li>
+<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../../../developer/howtos/backend.html">Building a Module</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_profilecode"><a class="reference internal" href="../../../developer/howtos/profilecode.html">Profiling Odoo code</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_company"><a class="reference internal" href="../../../developer/howtos/company.html">Multi-company Guidelines</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_localization"><a class="reference internal" href="../../../developer/howtos/localization.html">Accounting Localization</a></li>
@@ -1750,8 +1750,8 @@
 <li class="toctree-l2 o_menu_developer_reference"><a class="reference internal" href="#">Reference</a><ul>
 <li class="toctree-l3 o_menu_developer_reference_addons"><a class="reference internal" href="#">Server Addons</a><ul>
 <li class="toctree-l4 o_menu_developer_reference_addons_orm"><a class="reference internal" href="../../../developer/reference/addons/orm.html">ORM API</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="../../../developer/reference/addons/data.html">データファイル</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="../../../developer/reference/addons/actions.html">アクション</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="../../../developer/reference/addons/data.html">Data Files</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="../../../developer/reference/addons/actions.html">Actions</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_views"><a class="reference internal" href="../../../developer/reference/addons/views.html">Views</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_module"><a class="reference internal" href="../../../developer/reference/addons/module.html">Module Manifests</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_reports"><a class="reference internal" href="../../../developer/reference/addons/reports.html">QWeb Reports</a></li>
@@ -1866,8 +1866,8 @@
         <li class="nav-item nav-item-0"><a href="../../../index.html">Odoo 14.0 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../applications.html" >User Docs</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../general.html" >Miscellaneous</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="../auth.html" accesskey="U">認証</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">2要素認証</a></li> 
+          <li class="nav-item nav-item-3"><a href="../auth.html" accesskey="U">Authentication</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Two-factor Authentication</a></li> 
       </ul>
     </div>
     <div id="wrap">
@@ -1876,44 +1876,67 @@
                 <article id="o_content" class="doc-body">
                     <div role="main"> 
   <section id="two-factor-authentication">
-<h1>2要素認証<a class="headerlink" href="#two-factor-authentication" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>2要素認証(&quot;2FA&quot;：Two-factor authentication) は、アカウントのセキュリティを高め、 他人が成りすましてログインできる可能性を抑える一つの手段です。</p>
-<p>実際には、 <em>認証ツール</em> (通常は携帯電話) の中に秘密情報を保持しており、ログインしようとする際に、その認証ツールから確認コードを取得します。</p>
-<p>これは、攻撃者が、パスワードを推測し(見つけだす)、認証ツールにアクセスする(盗みだす) という <em>両方</em> を必要とすることを意味します。 どちらか片方だけよりも難しさが増すということです。</p>
+<h1>Two-factor Authentication<a class="headerlink" href="#two-factor-authentication" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Two-factor authentication (&quot;2FA&quot;) is a good way to improve the
+security of an account, to make it less likely that an other person
+will manage to log in instead of you.</p>
+<p>Practically, it means storing a secret inside an <em>authenticator</em>
+(usually your cell phone) and exchanging a code from the authenticator
+when you try to log in.</p>
+<p>This means an attacker needs <em>both</em> to have guessed (or found) your
+password and to access (or steal) your authenticator, a more difficult
+proposition than either one or the other.</p>
 </section><section id="requirements">
-<h2>必要なもの<a class="headerlink" href="#requirements" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Requirements<a class="headerlink" href="#requirements" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="alert alert-note">
 <p class="alert-title">
-注釈</p><p>ここに示すリストは単なる例であり、特定のソフトウェアを推奨するものではありません。</p>
+注釈</p><p>These lists are just examples, they are not endorsements of
+any specific software.</p>
 </div>
-<p>まだツールを持っていなければ、認証ツールを選んでください。</p>
-<p>携帯電話用の認証ツールが最も簡単で一般的です。スマホ等に２段階認証アプリをインストールしてください。 アプリには、 <a class="reference external" href="https://authy.com/">Authy</a>, <a class="reference external" href="https://freeotp.github.io/">FreeOTP</a>, <a class="reference external" href="https://support.google.com/accounts/answer/1066447?hl=en">Google Authenticator</a>, <a class="reference external" href="https://lastpass.com/auth/">LastPass Authenticator</a>, <a class="reference external" href="https://www.microsoft.com/en-gb/account/authenticator?cmp=h66ftb_42hbak">Microsoft Authenticator</a> などがあります。 パスワードマネージャーは <abbr title="two-factor authentication：２要素認証">2FA</abbr> をサポートしています。 例えば、<a class="reference external" href="https://support.1password.com/one-time-passwords/">1Password</a>, <a class="reference external" href="https://bitwarden.com/help/article/authenticator-keys/">Bitwarden</a> などです。</p>
-<p>デモンストレーションのために Google Authenticator を使用してみます(これが良いというのではなく、ただ単に一般的な説明として選びました)。</p>
+<p>If you don't already have one, you will need to choose an
+authenticator.</p>
+<p>Phone-based authenticators are the easiest and most common so we will
+assume you'll pick and install one on your phone, examples include
+<a class="reference external" href="https://authy.com/">Authy</a>, <a class="reference external" href="https://freeotp.github.io/">FreeOTP</a>, <a class="reference external" href="https://support.google.com/accounts/answer/1066447?hl=en">Google Authenticator</a>,
+<a class="reference external" href="https://lastpass.com/auth/">LastPass Authenticator</a>, <a class="reference external" href="https://www.microsoft.com/en-gb/account/authenticator?cmp=h66ftb_42hbak">Microsoft
+Authenticator</a>,
+...; password managers also commonly include <abbr title="two-factor authentication">2FA</abbr> support e.g. <a class="reference external" href="https://support.1password.com/one-time-passwords/">1Password</a>, <a class="reference external" href="https://bitwarden.com/help/article/authenticator-keys/">Bitwarden</a>, ...</p>
+<p>For the sake of demonstration we will be using Google Authenticator
+(not because it is any good but because it is quite common).</p>
 </section><section id="setting-up-two-factor-authentication">
-<h2>2要素認証の設定<a class="headerlink" href="#setting-up-two-factor-authentication" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>選んだ認証ツールを入手したら、 <abbr title="two-factor authentication：2要素認証">2FA</abbr> を設定したいOdooインスタンスで、 <span class="guilabel">Preferences：基本設定</span> (または <span class="guilabel">My Profile：マイ プロフィール</span>) を開きます。</p>
+<h2>Setting up two-factor authentication<a class="headerlink" href="#setting-up-two-factor-authentication" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Once you have your authenticator of choice, go to the Odoo instance
+you want to setup <abbr title="two-factor authentication">2FA</abbr>, then open
+<span class="guilabel">Preferences</span> (or <span class="guilabel">My Profile</span>):</p>
 <div class="figure align-center">
 <img alt="../../../_images/preferences1.png" src="../../../_images/preferences1.png" />
 </div>
-<p><span class="guilabel">Account Security ：アカウント セキュリティ</span> タブを開き、 <span class="guilabel">Enable two factor authentication ：２要素認証の有効化</span> ボタンをクリックします。</p>
+<p>Open the <span class="guilabel">Account Security</span> tab, then click the
+<span class="guilabel">Enable two-factor authentication</span> button:</p>
 <div class="figure align-center">
 <img alt="../../../_images/sec_tab.png" src="../../../_images/sec_tab.png" />
 </div>
-<p>これはセキュリティを担保するアクションですので、パスワードを入力してください。</p>
+<p>Because this is a security-sensitive action, you will need to input
+your password:</p>
 <div class="figure align-center">
 <img alt="../../../_images/sec_enhanced.png" src="../../../_images/sec_enhanced.png" />
 </div>
-<p>その後、バーコード付きのこの画面が表示されます。</p>
+<p>After which you will see this screen with a barcode:</p>
 <div class="figure align-center">
 <img alt="../../../_images/totp_scan.png" src="../../../_images/totp_scan.png" />
 </div>
-<p>ほとんどのアプリでは、アプリに備わる機能からバーコードを <em>スキャン</em> するだけで、認証ツールの設定をすべて処理します。</p>
+<p>In most applications, you can simply <em>scan the barcode</em> via the
+authenticator of your choice, the authenticator will then take care of
+all the setup:</p>
 <div class="figure align-center">
 <img alt="../../../_images/scan_barcode.jpg" src="../../../_images/scan_barcode.jpg" />
 </div>
 <div class="alert alert-note">
 <p class="alert-title">
-注釈</p><p>画面をスキャンできない場合 (認証アプリと同じ携帯電話で設定を行っている場合など) は、提供されているリンクをクリックするか、 secret （シークレット）をコピーして手動で認証ツールに設定してください。</p>
+注釈</p><p>If you can not scan the screen (e.g. because you are doing this
+set-up on the same phone as the authenticator application), you can
+click the provided link, or copy the secret to manually set-up your
+authenticator:</p>
 <div class="figure align-center">
 <img alt="../../../_images/secret_visible.png" src="../../../_images/secret_visible.png" />
 </div>
@@ -1921,27 +1944,37 @@
 <img alt="../../../_images/input_secret.png" src="../../../_images/input_secret.png" />
 </div>
 </div>
-<p>この処理が完了すると、認証ツールは、わかりやすい識別情報(例えば、対象となるドメイン情報やログイン情報)と同時に <em>認証コード</em> を表示します。</p>
+<p>Once this is done, the authenticator should display a <em>verification
+code</em> with some useful identifying information (e.g. the domain and
+login for which the code is):</p>
 <div class="figure align-center">
 <img alt="../../../_images/authenticator.png" src="../../../_images/authenticator.png" />
 </div>
-<p><span class="guilabel">Verification Code（認証コード）</span> フィールドにコードを入力し、 <span class="guilabel">Enable two factor authentication（２要素認証の有効化）</span> ボタンをクリックします。</p>
-<p>おめでとうございます。これで、アカウントは2要素認証で保護されました！</p>
+<p>You can now input the code into the <span class="guilabel">Verification Code</span>
+field, then click the <span class="guilabel">Enable two-factor authentication</span>
+button.</p>
+<p>Congratulation, your account is now protected by two-factor
+authentication!</p>
 <div class="figure align-center">
 <img alt="../../../_images/totp_enabled.png" src="../../../_images/totp_enabled.png" />
 </div>
 </section><section id="logging-in">
-<h2>ログイン<a class="headerlink" href="#logging-in" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>まずは、 <span class="guilabel">ログアウト</span> して、次に進んでください。</p>
-<p>ログインページで、 <abbr title="two-factor authentication：２要素認証">2FA</abbr> を設定したアカウントのユーザー名とパスワードを入力します。 すると、そのままOdoo に入れるのではなく、2 番目のログイン画面が表示されます。</p>
+<h2>Logging in<a class="headerlink" href="#logging-in" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>You should now <span class="guilabel">Log out</span> to follow along.</p>
+<p>On the login page, input the username and password of the account for
+which you set up <abbr title="two-factor authentication">2FA</abbr>, rather than
+immediately enter Odoo you will now get a second log-in screen:</p>
 <div class="figure align-center">
 <img alt="../../../_images/2fa_input.png" src="../../../_images/2fa_input.png" />
 </div>
-<p>ドメインとアカウントに関連付けられた確認コードを認証ツールで取得したら、そのコードを入力し、認証します。</p>
-<p>これだけです。 <abbr title="two-factor authentication:２段階認証">2FA</abbr> を無効にしない限り、これまでのような一段階のプロセスではなく、２段階でのプロセスでログインできます。</p>
+<p>Get your authenticator, input the code it provides for the domain and
+account, validate, and you're now in.</p>
+<p>And that's it. From now on, unless you disable <abbr title="two-factor authentication">2FA</abbr> you will have a two-step log-in process rather than
+the old one-step process.</p>
 <div class="alert alert-danger">
 <p class="alert-title">
-危険</p><p>認証ツールを紛失しないでください。アカウントの <abbr title="two-factor authentication:２要素認証">2FA</abbr> を無効にするには <em>Odoo Administrator</em> 権限が必要になります。</p>
+危険</p><p>Don't lose your authenticator, if you do, you will need an
+<em>Odoo Administrator</em> to disable <abbr title="two-factor authentication">2FA</abbr> on the account.</p>
 </div>
 </section>
 
@@ -1956,10 +1989,10 @@
             <aside id="o_page_toc" class="o_page_toc" hidden><div class="o_page_toc_nav mt-1">
     <h3>On this page</h3>
     <ul>
-<li><a class="reference internal" href="#">2要素認証</a><ul>
-<li><a class="reference internal" href="#requirements">必要なもの</a></li>
-<li><a class="reference internal" href="#setting-up-two-factor-authentication">2要素認証の設定</a></li>
-<li><a class="reference internal" href="#logging-in">ログイン</a></li>
+<li><a class="reference internal" href="#">Two-factor Authentication</a><ul>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#setting-up-two-factor-authentication">Setting up two-factor authentication</a></li>
+<li><a class="reference internal" href="#logging-in">Logging in</a></li>
 </ul>
 </li>
 </ul>
@@ -2000,8 +2033,8 @@
         <li class="nav-item nav-item-0"><a href="../../../index.html">Odoo 14.0 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../applications.html" >User Docs</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../general.html" >Miscellaneous</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="../auth.html" >認証</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">2要素認証</a></li> 
+          <li class="nav-item nav-item-3"><a href="../auth.html" >Authentication</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Two-factor Authentication</a></li> 
       </ul>
     </div>
   </body>

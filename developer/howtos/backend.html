@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>モジュールの構築 &#8212; Odoo 14.0 ドキュメント</title>
+    <title>Building a Module &#8212; Odoo 14.0 ドキュメント</title>
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
@@ -736,11 +736,11 @@
 <li class="toctree-l4 o_menu_applications_general_users_companies"><a class="reference internal" href="../../applications/general/users/companies.html">Companies</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">認証</a><ul>
+<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">Authentication</a><ul>
 <li class="toctree-l4 o_menu_applications_general_auth_google"><a class="reference internal" href="../../applications/general/auth/google.html">Google Sign-In Authentication</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="../../applications/general/auth/azure.html">OAuth認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="../../applications/general/auth/azure.html">OAuth</a></li>
 <li class="toctree-l4 o_menu_applications_general_auth_ldap"><a class="reference internal" href="../../applications/general/auth/ldap.html">Sign in with LDAP</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../applications/general/auth/2fa.html">2要素認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../applications/general/auth/2fa.html">Two-factor Authentication</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_general_apps_modules"><a class="reference internal" href="../../applications/general/apps_modules.html">Apps and modules</a></li>
@@ -821,7 +821,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current o_menu_developer"><a class="reference internal" href="../../developer.html">開発者向け</a><ul class="current">
-<li class="toctree-l2 current o_menu_developer_howtos"><a class="reference internal" href="#">チュートリアル</a><ul class="current">
+<li class="toctree-l2 current o_menu_developer_howtos"><a class="reference internal" href="#">Tutorials</a><ul class="current">
 <li class="toctree-l3 o_menu_developer_howtos_rdtraining"><a class="reference internal" href="rdtraining.html">Getting started</a><ul>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_01_architecture"><a class="reference internal" href="rdtraining/01_architecture.html">Chapter 1: Architecture Overview</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="rdtraining/02_setup.html">Chapter 2: Development environment setup</a></li>
@@ -848,7 +848,7 @@
 </li>
 <li class="toctree-l3 o_menu_developer_howtos_themes"><a class="reference internal" href="themes.html">Theme Tutorial</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_website"><a class="reference internal" href="website.html">Building a Website</a></li>
-<li class="toctree-l3 current o_menu_developer_howtos_"><a class="current reference internal" href="#">モジュールの構築</a></li>
+<li class="toctree-l3 current o_menu_developer_howtos_"><a class="current reference internal" href="#">Building a Module</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_profilecode"><a class="reference internal" href="profilecode.html">Profiling Odoo code</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_company"><a class="reference internal" href="company.html">Multi-company Guidelines</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_localization"><a class="reference internal" href="localization.html">Accounting Localization</a></li>
@@ -858,8 +858,8 @@
 <li class="toctree-l2 o_menu_developer_reference"><a class="reference internal" href="#">Reference</a><ul>
 <li class="toctree-l3 o_menu_developer_reference_addons"><a class="reference internal" href="#">Server Addons</a><ul>
 <li class="toctree-l4 o_menu_developer_reference_addons_orm"><a class="reference internal" href="../reference/addons/orm.html">ORM API</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="../reference/addons/data.html">データファイル</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="../reference/addons/actions.html">アクション</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="../reference/addons/data.html">Data Files</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="../reference/addons/actions.html">Actions</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_views"><a class="reference internal" href="../reference/addons/views.html">Views</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_module"><a class="reference internal" href="../reference/addons/module.html">Module Manifests</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_reports"><a class="reference internal" href="../reference/addons/reports.html">QWeb Reports</a></li>
@@ -913,11 +913,11 @@
                 <aside id="o_page_toc_in_nav" class="o_page_toc o_in_nav_toc border-bottom pt-3 pb-3" hidden><div class="o_page_toc_nav mt-1">
     <h3>On this page</h3>
     <ul>
-<li><a class="reference internal" href="#">モジュールの構築</a><ul>
-<li><a class="reference internal" href="#start-stop-the-odoo-server">Odoo サーバーの起動/停止</a></li>
+<li><a class="reference internal" href="#">Building a Module</a><ul>
+<li><a class="reference internal" href="#start-stop-the-odoo-server">Start/Stop the Odoo server</a></li>
 <li><a class="reference internal" href="#build-an-odoo-module">Build an Odoo module</a><ul>
-<li><a class="reference internal" href="#composition-of-a-module">モジュールの構造</a></li>
-<li><a class="reference internal" href="#module-structure">モジュール構造</a></li>
+<li><a class="reference internal" href="#composition-of-a-module">Composition of a module</a></li>
+<li><a class="reference internal" href="#module-structure">Module structure</a></li>
 <li><a class="reference internal" href="#object-relational-mapping">Object-Relational Mapping</a></li>
 <li><a class="reference internal" href="#model-fields">Model fields</a><ul>
 <li><a class="reference internal" href="#common-attributes">Common Attributes</a></li>
@@ -926,7 +926,7 @@
 <li><a class="reference internal" href="#special-fields">Special fields</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#data-files">データファイル</a></li>
+<li><a class="reference internal" href="#data-files">Data files</a></li>
 <li><a class="reference internal" href="#actions-and-menus">Actions and Menus</a></li>
 </ul>
 </li>
@@ -956,7 +956,7 @@
 </li>
 <li><a class="reference internal" href="#onchange">Onchange</a></li>
 <li><a class="reference internal" href="#model-constraints">Model constraints</a></li>
-<li><a class="reference internal" href="#advanced-views">アドバンスドビュー</a><ul>
+<li><a class="reference internal" href="#advanced-views">Advanced Views</a><ul>
 <li><a class="reference internal" href="#id3">Tree views</a></li>
 <li><a class="reference internal" href="#calendars">Calendars</a></li>
 <li><a class="reference internal" href="#id4">Search views</a></li>
@@ -1697,11 +1697,11 @@
 <li class="toctree-l4 o_menu_applications_general_users_companies"><a class="reference internal" href="../../applications/general/users/companies.html">Companies</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">認証</a><ul>
+<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">Authentication</a><ul>
 <li class="toctree-l4 o_menu_applications_general_auth_google"><a class="reference internal" href="../../applications/general/auth/google.html">Google Sign-In Authentication</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="../../applications/general/auth/azure.html">OAuth認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="../../applications/general/auth/azure.html">OAuth</a></li>
 <li class="toctree-l4 o_menu_applications_general_auth_ldap"><a class="reference internal" href="../../applications/general/auth/ldap.html">Sign in with LDAP</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../applications/general/auth/2fa.html">2要素認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../applications/general/auth/2fa.html">Two-factor Authentication</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_general_apps_modules"><a class="reference internal" href="../../applications/general/apps_modules.html">Apps and modules</a></li>
@@ -1782,7 +1782,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current o_menu_developer"><a class="reference internal" href="../../developer.html">開発者向け</a><ul class="current">
-<li class="toctree-l2 current o_menu_developer_howtos"><a class="reference internal" href="#">チュートリアル</a><ul class="current">
+<li class="toctree-l2 current o_menu_developer_howtos"><a class="reference internal" href="#">Tutorials</a><ul class="current">
 <li class="toctree-l3 o_menu_developer_howtos_rdtraining"><a class="reference internal" href="rdtraining.html">Getting started</a><ul>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_01_architecture"><a class="reference internal" href="rdtraining/01_architecture.html">Chapter 1: Architecture Overview</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="rdtraining/02_setup.html">Chapter 2: Development environment setup</a></li>
@@ -1809,7 +1809,7 @@
 </li>
 <li class="toctree-l3 o_menu_developer_howtos_themes"><a class="reference internal" href="themes.html">Theme Tutorial</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_website"><a class="reference internal" href="website.html">Building a Website</a></li>
-<li class="toctree-l3 current o_menu_developer_howtos_"><a class="current reference internal" href="#">モジュールの構築</a></li>
+<li class="toctree-l3 current o_menu_developer_howtos_"><a class="current reference internal" href="#">Building a Module</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_profilecode"><a class="reference internal" href="profilecode.html">Profiling Odoo code</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_company"><a class="reference internal" href="company.html">Multi-company Guidelines</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_localization"><a class="reference internal" href="localization.html">Accounting Localization</a></li>
@@ -1819,8 +1819,8 @@
 <li class="toctree-l2 o_menu_developer_reference"><a class="reference internal" href="#">Reference</a><ul>
 <li class="toctree-l3 o_menu_developer_reference_addons"><a class="reference internal" href="#">Server Addons</a><ul>
 <li class="toctree-l4 o_menu_developer_reference_addons_orm"><a class="reference internal" href="../reference/addons/orm.html">ORM API</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="../reference/addons/data.html">データファイル</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="../reference/addons/actions.html">アクション</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="../reference/addons/data.html">Data Files</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="../reference/addons/actions.html">Actions</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_views"><a class="reference internal" href="../reference/addons/views.html">Views</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_module"><a class="reference internal" href="../reference/addons/module.html">Module Manifests</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_reports"><a class="reference internal" href="../reference/addons/reports.html">QWeb Reports</a></li>
@@ -1934,8 +1934,8 @@
              accesskey="P">前へ</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Odoo 14.0 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../developer.html" >開発者向け</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../howtos.html" accesskey="U">チュートリアル</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">モジュールの構築</a></li> 
+          <li class="nav-item nav-item-2"><a href="../howtos.html" accesskey="U">Tutorials</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Building a Module</a></li> 
       </ul>
     </div>
     <div id="wrap">
@@ -1944,13 +1944,13 @@
                 <article id="o_content" class="doc-body">
                     <div role="main"> 
   <section id="building-a-module">
-<span id="howto-module"></span><span id="howto-base"></span><h1>モジュールの構築<a class="headerlink" href="#building-a-module" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<span id="howto-module"></span><span id="howto-base"></span><h1>Building a Module<a class="headerlink" href="#building-a-module" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="alert alert-warning">
 <p class="alert-title">
-警告</p><p>このチュートリアルでは、 :ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>Odoo のインストール &lt;setup/install&gt; ` が必要です。</p>
+警告</p><p>This tutorial requires <a class="reference internal" href="../../administration/install/install.html#setup-install"><span class="std std-ref">having installed Odoo</span></a></p>
 </div>
 </section><section id="start-stop-the-odoo-server">
-<h2>Odoo サーバーの起動/停止<a class="headerlink" href="#start-stop-the-odoo-server" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Start/Stop the Odoo server<a class="headerlink" href="#start-stop-the-odoo-server" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Odoo uses a client/server architecture in which clients are web browsers
 accessing the Odoo server via RPC.</p>
 <p>Business logic and extension is generally performed on the server side,
@@ -1973,36 +1973,38 @@ country's accounting rules to Odoo's generic accounting support, while the
 next module adds support for real-time visualisation of a bus fleet.</p>
 <p>Everything in Odoo thus starts and ends with modules.</p>
 </section><section id="composition-of-a-module">
-<h3>モジュールの構造<a class="headerlink" href="#composition-of-a-module" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>Composition of a module<a class="headerlink" href="#composition-of-a-module" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>An Odoo module can contain a number of elements:</p>
 <dl class="simple">
 <dt>Business objects</dt><dd><p>Declared as Python classes, these resources are automatically persisted
 by Odoo based on their configuration</p>
 </dd>
-<dt><a class="reference internal" href="../reference/addons/views.html#reference-views"><span class="std std-ref">オブジェクトビュー</span></a></dt><dd><p>Definition of business objects UI display</p>
+<dt><a class="reference internal" href="../reference/addons/views.html#reference-views"><span class="std std-ref">Object views</span></a></dt><dd><p>Definition of business objects UI display</p>
 </dd>
 <dt><a class="reference internal" href="../reference/addons/data.html#reference-data"><span class="std std-ref">Data files</span></a></dt><dd><p>XML or CSV files declaring the model metadata :</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../reference/addons/views.html#reference-views"><span class="std std-ref">ビュー</span></a> or <a class="reference internal" href="../reference/addons/reports.html#reference-reports"><span class="std std-ref">レポート</span></a>,</p></li>
-<li><p>構成データ (モジュールのパラメータ化、 <a class="reference internal" href="../reference/addons/security.html#reference-security"><span class="std std-ref">セキュリティルール</span></a>)</p></li>
-<li><p>デモデータ</p></li>
-<li><p>などなど</p></li>
+<li><p><a class="reference internal" href="../reference/addons/views.html#reference-views"><span class="std std-ref">views</span></a> or <a class="reference internal" href="../reference/addons/reports.html#reference-reports"><span class="std std-ref">reports</span></a>,</p></li>
+<li><p>configuration data (modules parametrization, <a class="reference internal" href="../reference/addons/security.html#reference-security"><span class="std std-ref">security rules</span></a>),</p></li>
+<li><p>demonstration data</p></li>
+<li><p>and more</p></li>
 </ul>
 </dd>
-<dt><a class="reference internal" href="../reference/addons/http.html#reference-controllers"><span class="std std-ref">ウェブコントローラ</span></a></dt><dd><p>Webブラウザからのリクエストを処理します。</p>
+<dt><a class="reference internal" href="../reference/addons/http.html#reference-controllers"><span class="std std-ref">Web controllers</span></a></dt><dd><p>Handle requests from web browsers</p>
 </dd>
-<dt>静的Webデータ</dt><dd><p>Images, CSS or javascript files used by the web interface or website</p>
+<dt>Static web data</dt><dd><p>Images, CSS or javascript files used by the web interface or website</p>
 </dd>
 </dl>
 </section><section id="module-structure">
-<h3>モジュール構造<a class="headerlink" href="#module-structure" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>各モジュールは <em>モジュールディレクトリ</em> というディレクトリにあります。モジュールディレクトリは、 <a class="reference internal" href="../cli.html#cmdoption-odoo-bin-addons-path"><code class="xref std std-option docutils literal notranslate"><span class="pre">--addons-path</span></code></a> オプションを使用して指定します。</p>
+<h3>Module structure<a class="headerlink" href="#module-structure" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Each module is a directory within a <em>module directory</em>. Module directories
+are specified by using the <a class="reference internal" href="../cli.html#cmdoption-odoo-bin-addons-path"><code class="xref std std-option docutils literal notranslate"><span class="pre">--addons-path</span></code></a>
+option.</p>
 <div class="aphorism alert alert-tip">
 <p class="alert-title">
 ちなみに</p><p>most command-line options can also be set using <a class="reference internal" href="../cli.html#reference-cmdline-config"><span class="std std-ref">a configuration
 file</span></a></p>
 </div>
-<p>Odoo モジュールは、 <a class="reference internal" href="../reference/addons/module.html#reference-module-manifest"><span class="std std-ref">マニフェスト</span></a> で宣言されます。</p>
+<p>An Odoo module is declared by its <a class="reference internal" href="../reference/addons/module.html#reference-module-manifest"><span class="std std-ref">manifest</span></a>.</p>
 <p>A module is also a
 <a class="reference external" href="http://docs.python.org/2/tutorial/modules.html#packages">Python package</a>
 with a <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file, containing import instructions for various Python
@@ -2110,7 +2112,7 @@ Exercise</p><p>Define a model</p>
 has a title and a description. Courses must have a title.</p>
 </div>
 </section><section id="data-files">
-<h3>データファイル<a class="headerlink" href="#data-files" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>Data files<a class="headerlink" href="#data-files" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>Odoo is a highly data driven system. Although behavior is customized using
 <a class="reference external" href="http://python.org">Python</a> code part of a module's value is in the data it sets up when loaded.</p>
 <div class="aphorism alert alert-tip">
@@ -2717,7 +2719,7 @@ Duplicate</span>).</p>
 object, changing the original name into &quot;Copy of [original name]&quot;.</p>
 </div>
 </section><section id="advanced-views">
-<h2>アドバンスドビュー<a class="headerlink" href="#advanced-views" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Advanced Views<a class="headerlink" href="#advanced-views" title="このヘッドラインへのパーマリンク">¶</a></h2>
 </section><section id="id3">
 <h3>Tree views<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>Tree views can take supplementary attributes to further customize their
@@ -3326,11 +3328,11 @@ bypasses all Odoo authentication and security mechanisms.</p>
             <aside id="o_page_toc" class="o_page_toc" hidden><div class="o_page_toc_nav mt-1">
     <h3>On this page</h3>
     <ul>
-<li><a class="reference internal" href="#">モジュールの構築</a><ul>
-<li><a class="reference internal" href="#start-stop-the-odoo-server">Odoo サーバーの起動/停止</a></li>
+<li><a class="reference internal" href="#">Building a Module</a><ul>
+<li><a class="reference internal" href="#start-stop-the-odoo-server">Start/Stop the Odoo server</a></li>
 <li><a class="reference internal" href="#build-an-odoo-module">Build an Odoo module</a><ul>
-<li><a class="reference internal" href="#composition-of-a-module">モジュールの構造</a></li>
-<li><a class="reference internal" href="#module-structure">モジュール構造</a></li>
+<li><a class="reference internal" href="#composition-of-a-module">Composition of a module</a></li>
+<li><a class="reference internal" href="#module-structure">Module structure</a></li>
 <li><a class="reference internal" href="#object-relational-mapping">Object-Relational Mapping</a></li>
 <li><a class="reference internal" href="#model-fields">Model fields</a><ul>
 <li><a class="reference internal" href="#common-attributes">Common Attributes</a></li>
@@ -3339,7 +3341,7 @@ bypasses all Odoo authentication and security mechanisms.</p>
 <li><a class="reference internal" href="#special-fields">Special fields</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#data-files">データファイル</a></li>
+<li><a class="reference internal" href="#data-files">Data files</a></li>
 <li><a class="reference internal" href="#actions-and-menus">Actions and Menus</a></li>
 </ul>
 </li>
@@ -3369,7 +3371,7 @@ bypasses all Odoo authentication and security mechanisms.</p>
 </li>
 <li><a class="reference internal" href="#onchange">Onchange</a></li>
 <li><a class="reference internal" href="#model-constraints">Model constraints</a></li>
-<li><a class="reference internal" href="#advanced-views">アドバンスドビュー</a><ul>
+<li><a class="reference internal" href="#advanced-views">Advanced Views</a><ul>
 <li><a class="reference internal" href="#id3">Tree views</a></li>
 <li><a class="reference internal" href="#calendars">Calendars</a></li>
 <li><a class="reference internal" href="#id4">Search views</a></li>
@@ -3438,8 +3440,8 @@ bypasses all Odoo authentication and security mechanisms.</p>
              >前へ</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Odoo 14.0 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../developer.html" >開発者向け</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../howtos.html" >チュートリアル</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">モジュールの構築</a></li> 
+          <li class="nav-item nav-item-2"><a href="../howtos.html" >Tutorials</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Building a Module</a></li> 
       </ul>
     </div>
   </body>

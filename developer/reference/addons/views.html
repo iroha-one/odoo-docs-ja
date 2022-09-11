@@ -28,7 +28,7 @@
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="検索" href="../../../search.html" />
     <link rel="next" title="Module Manifests" href="module.html" />
-    <link rel="prev" title="アクション" href="actions.html" /> 
+    <link rel="prev" title="Actions" href="actions.html" /> 
   </head><body>
     <noscript>
         <nav class="o_side_nav border-end">
@@ -736,11 +736,11 @@
 <li class="toctree-l4 o_menu_applications_general_users_companies"><a class="reference internal" href="../../../applications/general/users/companies.html">Companies</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">認証</a><ul>
+<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">Authentication</a><ul>
 <li class="toctree-l4 o_menu_applications_general_auth_google"><a class="reference internal" href="../../../applications/general/auth/google.html">Google Sign-In Authentication</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="../../../applications/general/auth/azure.html">OAuth認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="../../../applications/general/auth/azure.html">OAuth</a></li>
 <li class="toctree-l4 o_menu_applications_general_auth_ldap"><a class="reference internal" href="../../../applications/general/auth/ldap.html">Sign in with LDAP</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../../applications/general/auth/2fa.html">2要素認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../../applications/general/auth/2fa.html">Two-factor Authentication</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_general_apps_modules"><a class="reference internal" href="../../../applications/general/apps_modules.html">Apps and modules</a></li>
@@ -821,7 +821,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current o_menu_developer"><a class="reference internal" href="../../../developer.html">開発者向け</a><ul class="current">
-<li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">チュートリアル</a><ul>
+<li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">Tutorials</a><ul>
 <li class="toctree-l3 o_menu_developer_howtos_rdtraining"><a class="reference internal" href="../../howtos/rdtraining.html">Getting started</a><ul>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_01_architecture"><a class="reference internal" href="../../howtos/rdtraining/01_architecture.html">Chapter 1: Architecture Overview</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="../../howtos/rdtraining/02_setup.html">Chapter 2: Development environment setup</a></li>
@@ -848,7 +848,7 @@
 </li>
 <li class="toctree-l3 o_menu_developer_howtos_themes"><a class="reference internal" href="../../howtos/themes.html">Theme Tutorial</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_website"><a class="reference internal" href="../../howtos/website.html">Building a Website</a></li>
-<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../../howtos/backend.html">モジュールの構築</a></li>
+<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../../howtos/backend.html">Building a Module</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_profilecode"><a class="reference internal" href="../../howtos/profilecode.html">Profiling Odoo code</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_company"><a class="reference internal" href="../../howtos/company.html">Multi-company Guidelines</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_localization"><a class="reference internal" href="../../howtos/localization.html">Accounting Localization</a></li>
@@ -858,8 +858,8 @@
 <li class="toctree-l2 current o_menu_developer_reference"><a class="reference internal" href="#">Reference</a><ul class="current">
 <li class="toctree-l3 current o_menu_developer_reference_addons"><a class="reference internal" href="#">Server Addons</a><ul class="current">
 <li class="toctree-l4 o_menu_developer_reference_addons_orm"><a class="reference internal" href="orm.html">ORM API</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="data.html">データファイル</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="actions.html">アクション</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="data.html">Data Files</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="actions.html">Actions</a></li>
 <li class="toctree-l4 current o_menu_developer_reference_addons_"><a class="current reference internal" href="#">Views</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_module"><a class="reference internal" href="module.html">Module Manifests</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_reports"><a class="reference internal" href="reports.html">QWeb Reports</a></li>
@@ -916,7 +916,7 @@
 <li><a class="reference internal" href="#">Views</a><ul>
 <li><a class="reference internal" href="#generic-structure">Generic structure</a></li>
 <li><a class="reference internal" href="#fields">Fields</a></li>
-<li><a class="reference internal" href="#attributes">属性</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
 <li><a class="reference internal" href="#inheritance">Inheritance</a><ul>
 <li><a class="reference internal" href="#inheritance-fields">Inheritance fields</a></li>
 <li><a class="reference internal" href="#view-matching">View matching</a></li>
@@ -929,7 +929,7 @@
 <li><a class="reference internal" href="#calendar">Calendar</a></li>
 <li><a class="reference internal" href="#cohort">Cohort</a></li>
 <li><a class="reference internal" href="#dashboard">Dashboard</a></li>
-<li><a class="reference internal" href="#form">フォーム</a><ul>
+<li><a class="reference internal" href="#form">Form</a><ul>
 <li><a class="reference internal" href="#structural-components">Structural components</a></li>
 <li><a class="reference internal" href="#semantic-components">Semantic components</a></li>
 <li><a class="reference internal" href="#id8">Generic structure</a></li>
@@ -938,7 +938,7 @@
 <li><a class="reference internal" href="#gantt">Gantt</a></li>
 <li><a class="reference internal" href="#graph">Graph</a></li>
 <li><a class="reference internal" href="#kanban">Kanban</a></li>
-<li><a class="reference internal" href="#list">一覧表示</a></li>
+<li><a class="reference internal" href="#list">List</a></li>
 <li><a class="reference internal" href="#map">Map</a><ul>
 <li><a class="reference internal" href="#api">Api</a></li>
 <li><a class="reference internal" href="#reference-views-structural-components">Structural components</a></li>
@@ -946,7 +946,7 @@
 </li>
 <li><a class="reference internal" href="#pivot">Pivot</a></li>
 <li><a class="reference internal" href="#qweb">QWeb</a></li>
-<li><a class="reference internal" href="#search">検索</a><ul>
+<li><a class="reference internal" href="#search">Search</a><ul>
 <li><a class="reference internal" href="#search-defaults">Search defaults</a></li>
 </ul>
 </li>
@@ -1663,11 +1663,11 @@
 <li class="toctree-l4 o_menu_applications_general_users_companies"><a class="reference internal" href="../../../applications/general/users/companies.html">Companies</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">認証</a><ul>
+<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">Authentication</a><ul>
 <li class="toctree-l4 o_menu_applications_general_auth_google"><a class="reference internal" href="../../../applications/general/auth/google.html">Google Sign-In Authentication</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="../../../applications/general/auth/azure.html">OAuth認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="../../../applications/general/auth/azure.html">OAuth</a></li>
 <li class="toctree-l4 o_menu_applications_general_auth_ldap"><a class="reference internal" href="../../../applications/general/auth/ldap.html">Sign in with LDAP</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../../applications/general/auth/2fa.html">2要素認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../../applications/general/auth/2fa.html">Two-factor Authentication</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_general_apps_modules"><a class="reference internal" href="../../../applications/general/apps_modules.html">Apps and modules</a></li>
@@ -1748,7 +1748,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current o_menu_developer"><a class="reference internal" href="../../../developer.html">開発者向け</a><ul class="current">
-<li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">チュートリアル</a><ul>
+<li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">Tutorials</a><ul>
 <li class="toctree-l3 o_menu_developer_howtos_rdtraining"><a class="reference internal" href="../../howtos/rdtraining.html">Getting started</a><ul>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_01_architecture"><a class="reference internal" href="../../howtos/rdtraining/01_architecture.html">Chapter 1: Architecture Overview</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="../../howtos/rdtraining/02_setup.html">Chapter 2: Development environment setup</a></li>
@@ -1775,7 +1775,7 @@
 </li>
 <li class="toctree-l3 o_menu_developer_howtos_themes"><a class="reference internal" href="../../howtos/themes.html">Theme Tutorial</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_website"><a class="reference internal" href="../../howtos/website.html">Building a Website</a></li>
-<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../../howtos/backend.html">モジュールの構築</a></li>
+<li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../../howtos/backend.html">Building a Module</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_profilecode"><a class="reference internal" href="../../howtos/profilecode.html">Profiling Odoo code</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_company"><a class="reference internal" href="../../howtos/company.html">Multi-company Guidelines</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_localization"><a class="reference internal" href="../../howtos/localization.html">Accounting Localization</a></li>
@@ -1785,8 +1785,8 @@
 <li class="toctree-l2 current o_menu_developer_reference"><a class="reference internal" href="#">Reference</a><ul class="current">
 <li class="toctree-l3 current o_menu_developer_reference_addons"><a class="reference internal" href="#">Server Addons</a><ul class="current">
 <li class="toctree-l4 o_menu_developer_reference_addons_orm"><a class="reference internal" href="orm.html">ORM API</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="data.html">データファイル</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="actions.html">アクション</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="data.html">Data Files</a></li>
+<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="actions.html">Actions</a></li>
 <li class="toctree-l4 current o_menu_developer_reference_addons_"><a class="current reference internal" href="#">Views</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_module"><a class="reference internal" href="module.html">Module Manifests</a></li>
 <li class="toctree-l4 o_menu_developer_reference_addons_reports"><a class="reference internal" href="reports.html">QWeb Reports</a></li>
@@ -1896,7 +1896,7 @@
           <a href="module.html" title="Module Manifests"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
-          <a href="actions.html" title="アクション"
+          <a href="actions.html" title="Actions"
              accesskey="P">前へ</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../../index.html">Odoo 14.0 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../developer.html" >開発者向け</a> &#187;</li>
@@ -1957,7 +1957,7 @@ for a given user if the user has access to the provided <code class="docutils li
 </li>
 </ul>
 </section><section id="attributes">
-<h2>属性<a class="headerlink" href="#attributes" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Attributes<a class="headerlink" href="#attributes" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>The different view types have a wide variety of attributes allowing customizations of
 the generic behaviors. Some main attributes will be explained here. They do not all have
 an impact on all view types.</p>
@@ -2027,9 +2027,9 @@ a look at the documentation of the _onActionClicked method of
 AbstractController (<em>addons/web/static/src/js/views/abstract_controller.js</em>)
 for more details.</p>
 <p>Only views extending AbstractView and AbstractController can use this
-attribute, like <a class="reference internal" href="#reference-views-form"><span class="std std-ref">フォーム</span></a>, <a class="reference internal" href="#reference-views-kanban"><span class="std std-ref">Kanban</span></a>,
-<a class="reference internal" href="#reference-views-list"><span class="std std-ref">一覧表示</span></a>, ...</p>
-<p>例：</p>
+attribute, like <a class="reference internal" href="#reference-views-form"><span class="std std-ref">Form</span></a>, <a class="reference internal" href="#reference-views-kanban"><span class="std std-ref">Kanban</span></a>,
+<a class="reference internal" href="#reference-views-list"><span class="std std-ref">List</span></a>, ...</p>
+<p>Example:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;tree</span> <span class="na">banner_route=</span><span class="s">&quot;/module_name/hello&quot;</span> <span class="nt">/&gt;</span>
 </pre></div>
 </div>
@@ -2508,7 +2508,7 @@ group). By default, 1.</p>
 </dd>
 </dl>
 </section><section id="form">
-<span id="reference-views-form"></span><h3>フォーム<a class="headerlink" href="#form" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<span id="reference-views-form"></span><h3>Form<a class="headerlink" href="#form" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>Form views are used to display the data from a single record. Their root
 element is <code class="docutils literal notranslate"><span class="pre">&lt;form&gt;</span></code>. They are composed of regular <a class="reference external" href="https://en.wikipedia.org/wiki/HTML">HTML</a> with additional
 structural and semantic components.</p>
@@ -3041,7 +3041,7 @@ Odoo buttons can be used.</p>
 </dl>
 <p>If you need to extend the Kanban view, see <code class="xref js js-class docutils literal notranslate"><span class="pre">KanbanRecord()</span></code>.</p>
 </section><section id="list">
-<span id="reference-views-list"></span><h3>一覧表示<a class="headerlink" href="#list" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<span id="reference-views-list"></span><h3>List<a class="headerlink" href="#list" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>The root element of list views is <code class="docutils literal notranslate"><span class="pre">&lt;tree&gt;</span></code><a class="footnote-reference brackets" href="#treehistory" id="id14">2</a>. The list view's
 root can have the following attributes:</p>
 <dl class="o-definition-list">
@@ -3445,11 +3445,11 @@ and will call the context-preparation methods and ultimately
 </li>
 </ul>
 </section><section id="search">
-<span id="reference-views-search"></span><h3>検索<a class="headerlink" href="#search" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<span id="reference-views-search"></span><h3>Search<a class="headerlink" href="#search" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>Search views are a break from previous view types in that they don't display
 <em>content</em>: although they apply to a specific model, they are used to filter
 other view's content (generally aggregated views
-e.g. <a class="reference internal" href="#reference-views-list"><span class="std std-ref">一覧表示</span></a> or <a class="reference internal" href="#reference-views-graph"><span class="std std-ref">Graph</span></a>). Beyond that
+e.g. <a class="reference internal" href="#reference-views-list"><span class="std std-ref">List</span></a> or <a class="reference internal" href="#reference-views-graph"><span class="std std-ref">Graph</span></a>). Beyond that
 difference in use case, they are defined the same way.</p>
 <p>The root element of search views is <code class="docutils literal notranslate"><span class="pre">&lt;search&gt;</span></code>. It takes no attributes.</p>
 <p>Possible children elements of the search view are:</p>
@@ -3516,7 +3516,7 @@ a set of filters available in a submenu
 of the filters menu. The filters proposed are time dependent
 but not dynamic in the sense that their domains are evaluated
 at the time of the control panel instantiation.</p>
-<p>例：</p>
+<p>Example:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;filter</span> <span class="na">name=</span><span class="s">&quot;filter_create_date&quot;</span> <span class="na">date=</span><span class="s">&quot;create_date&quot;</span> <span class="na">string=</span><span class="s">&quot;Creation Date&quot;</span><span class="nt">/&gt;</span>
 </pre></div>
 </div>
@@ -3546,7 +3546,7 @@ default set of filters activated at the view initialization. If not provided,
 today, this_week, this_month, last_month, antepenultimate_month,
 fourth_quarter, third_quarter, second_quarter, first_quarter,
 this_year, last_year, antepenultimate_year.</p>
-<p>例：</p>
+<p>Example:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;filter</span> <span class="na">name=</span><span class="s">&quot;filter_create_date&quot;</span> <span class="na">date=</span><span class="s">&quot;create_date&quot;</span> <span class="na">string=</span><span class="s">&quot;Creation Date&quot;</span> <span class="na">default_period=</span><span class="s">&quot;this_week&quot;</span><span class="nt">/&gt;</span>
 </pre></div>
 </div>
@@ -3564,7 +3564,7 @@ menu in which the following interval options are available: day, week, month, qu
 <p>In case the filter is in the default set of filters activated at the view initialization,
 the records are grouped by month by default. This can be changed by using the syntax
 'date_field:interval' as in the following example.</p>
-<p>例：</p>
+<p>Example:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;filter</span> <span class="na">name=</span><span class="s">&quot;groupby_create_date&quot;</span> <span class="na">string=</span><span class="s">&quot;Creation Date&quot;</span> <span class="na">context=</span><span class="s">&quot;{&#39;group_by&#39;: &#39;create_date:week&#39;}&quot;</span><span class="nt">/&gt;</span>
 </pre></div>
 </div>
@@ -3734,7 +3734,7 @@ For instance if <code class="docutils literal notranslate"><span class="pre">foo
 <li><a class="reference internal" href="#">Views</a><ul>
 <li><a class="reference internal" href="#generic-structure">Generic structure</a></li>
 <li><a class="reference internal" href="#fields">Fields</a></li>
-<li><a class="reference internal" href="#attributes">属性</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
 <li><a class="reference internal" href="#inheritance">Inheritance</a><ul>
 <li><a class="reference internal" href="#inheritance-fields">Inheritance fields</a></li>
 <li><a class="reference internal" href="#view-matching">View matching</a></li>
@@ -3747,7 +3747,7 @@ For instance if <code class="docutils literal notranslate"><span class="pre">foo
 <li><a class="reference internal" href="#calendar">Calendar</a></li>
 <li><a class="reference internal" href="#cohort">Cohort</a></li>
 <li><a class="reference internal" href="#dashboard">Dashboard</a></li>
-<li><a class="reference internal" href="#form">フォーム</a><ul>
+<li><a class="reference internal" href="#form">Form</a><ul>
 <li><a class="reference internal" href="#structural-components">Structural components</a></li>
 <li><a class="reference internal" href="#semantic-components">Semantic components</a></li>
 <li><a class="reference internal" href="#id8">Generic structure</a></li>
@@ -3756,7 +3756,7 @@ For instance if <code class="docutils literal notranslate"><span class="pre">foo
 <li><a class="reference internal" href="#gantt">Gantt</a></li>
 <li><a class="reference internal" href="#graph">Graph</a></li>
 <li><a class="reference internal" href="#kanban">Kanban</a></li>
-<li><a class="reference internal" href="#list">一覧表示</a></li>
+<li><a class="reference internal" href="#list">List</a></li>
 <li><a class="reference internal" href="#map">Map</a><ul>
 <li><a class="reference internal" href="#api">Api</a></li>
 <li><a class="reference internal" href="#reference-views-structural-components">Structural components</a></li>
@@ -3764,7 +3764,7 @@ For instance if <code class="docutils literal notranslate"><span class="pre">foo
 </li>
 <li><a class="reference internal" href="#pivot">Pivot</a></li>
 <li><a class="reference internal" href="#qweb">QWeb</a></li>
-<li><a class="reference internal" href="#search">検索</a><ul>
+<li><a class="reference internal" href="#search">Search</a><ul>
 <li><a class="reference internal" href="#search-defaults">Search defaults</a></li>
 </ul>
 </li>
@@ -3805,7 +3805,7 @@ For instance if <code class="docutils literal notranslate"><span class="pre">foo
           <a href="module.html" title="Module Manifests"
              >次へ</a> |</li>
         <li class="right" >
-          <a href="actions.html" title="アクション"
+          <a href="actions.html" title="Actions"
              >前へ</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../../index.html">Odoo 14.0 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../developer.html" >開発者向け</a> &#187;</li>
