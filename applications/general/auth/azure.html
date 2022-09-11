@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>OAuth認証 &#8212; Odoo 15.0 ドキュメント</title>
+    <title>OAuth &#8212; Odoo 15.0 ドキュメント</title>
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
@@ -739,11 +739,11 @@
 <li class="toctree-l4 o_menu_applications_general_users_companies"><a class="reference internal" href="../users/companies.html">Companies</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current o_menu_applications_general_auth"><a class="reference internal" href="#">認証</a><ul class="current">
+<li class="toctree-l3 current o_menu_applications_general_auth"><a class="reference internal" href="#">Authentication</a><ul class="current">
 <li class="toctree-l4 o_menu_applications_general_auth_google"><a class="reference internal" href="google.html">Google Sign-In Authentication</a></li>
-<li class="toctree-l4 current o_menu_applications_general_auth_"><a class="current reference internal" href="#">OAuth認証</a></li>
+<li class="toctree-l4 current o_menu_applications_general_auth_"><a class="current reference internal" href="#">OAuth</a></li>
 <li class="toctree-l4 o_menu_applications_general_auth_ldap"><a class="reference internal" href="ldap.html">Sign in with LDAP</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="2fa.html">2要素認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="2fa.html">Two-factor Authentication</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_general_apps_modules"><a class="reference internal" href="../apps_modules.html">Apps and modules</a></li>
@@ -941,7 +941,7 @@
                 <aside id="o_page_toc_in_nav" class="o_page_toc o_in_nav_toc border-bottom pt-3 pb-3" hidden><div class="o_page_toc_nav mt-1">
     <h3>On this page</h3>
     <ul>
-<li><a class="reference internal" href="#">OAuth認証</a></li>
+<li><a class="reference internal" href="#">OAuth</a></li>
 </ul>
  
 </div>
@@ -1654,11 +1654,11 @@
 <li class="toctree-l4 o_menu_applications_general_users_companies"><a class="reference internal" href="../users/companies.html">Companies</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current o_menu_applications_general_auth"><a class="reference internal" href="#">認証</a><ul class="current">
+<li class="toctree-l3 current o_menu_applications_general_auth"><a class="reference internal" href="#">Authentication</a><ul class="current">
 <li class="toctree-l4 o_menu_applications_general_auth_google"><a class="reference internal" href="google.html">Google Sign-In Authentication</a></li>
-<li class="toctree-l4 current o_menu_applications_general_auth_"><a class="current reference internal" href="#">OAuth認証</a></li>
+<li class="toctree-l4 current o_menu_applications_general_auth_"><a class="current reference internal" href="#">OAuth</a></li>
 <li class="toctree-l4 o_menu_applications_general_auth_ldap"><a class="reference internal" href="ldap.html">Sign in with LDAP</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="2fa.html">2要素認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="2fa.html">Two-factor Authentication</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_general_apps_modules"><a class="reference internal" href="../apps_modules.html">Apps and modules</a></li>
@@ -1917,8 +1917,8 @@
         <li class="nav-item nav-item-0"><a href="../../../index.html">Odoo 15.0 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../applications.html" >User Docs</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../general.html" >Miscellaneous</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="../auth.html" accesskey="U">認証</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">OAuth認証</a></li> 
+          <li class="nav-item nav-item-3"><a href="../auth.html" accesskey="U">Authentication</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">OAuth</a></li> 
       </ul>
     </div>
     <div id="wrap">
@@ -1927,8 +1927,9 @@
                 <article id="o_content" class="doc-body">
                     <div role="main"> 
   <section id="oauth">
-<h1>OAuth認証<a class="headerlink" href="#oauth" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Azure の OAuth 実装における特定の要件により、Microsoft Azure OAuth 識別子は Odoo と互換性がありません。</p>
+<h1>OAuth<a class="headerlink" href="#oauth" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Due to specific requirements in Azure's OAuth implementation,
+Microsoft Azure OAuth identification is NOT compatible with Odoo at the moment.</p>
 </section>
 
                     </div>
@@ -1942,7 +1943,7 @@
             <aside id="o_page_toc" class="o_page_toc" hidden><div class="o_page_toc_nav mt-1">
     <h3>On this page</h3>
     <ul>
-<li><a class="reference internal" href="#">OAuth認証</a></li>
+<li><a class="reference internal" href="#">OAuth</a></li>
 </ul>
  
 </div>
@@ -1981,8 +1982,8 @@
         <li class="nav-item nav-item-0"><a href="../../../index.html">Odoo 15.0 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../applications.html" >User Docs</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../general.html" >Miscellaneous</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="../auth.html" >認証</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">OAuth認証</a></li> 
+          <li class="nav-item nav-item-3"><a href="../auth.html" >Authentication</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">OAuth</a></li> 
       </ul>
     </div>
   </body>
