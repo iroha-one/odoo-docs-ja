@@ -9,14 +9,6 @@ name: build-odoo-docs-ja
 on: 
   workflow_dispatch:
     inputs:
-      branch:
-        description: 'Target branch'
-        required: true
-        default: 'main'
-        type: choice
-        options:
-        - 'main'
-        - 'develop'
       sourcecode:
         description: 'With inline docstrings'
         required: true
@@ -25,6 +17,15 @@ on:
         options:
         - '15.0'
         - '14.0'
+      branch:
+        description: 'Target branch'
+        required: true
+        default: 'main'
+        type: choice
+        options:
+        - 'main'
+        - 'develop'
+        - 'l10n_crowdin_action'
 
 # https://gist.github.com/c-bata/ed5e7b7f8015502ee5092a3e77937c99
 jobs:
