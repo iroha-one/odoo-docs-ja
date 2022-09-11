@@ -36,6 +36,21 @@ environment <reference/cmdline/shell>`, :ref:`scaffold an Odoo module <reference
          Please refer to the `documentation of the official Docker image of Odoo
          <https://hub.docker.com/_/odoo/>`_.
 
+.. _reference/cmdline/help:
+
+Help & version
+==============
+
+.. program:: odoo-bin
+
+.. option:: -h, --help
+
+    shows help text with all available options
+
+.. option:: --version
+
+   shows Odoo version e.g. "Odoo Server 13.0"
+
 .. _reference/cmdline/server:
 
 Running the server
@@ -58,8 +73,8 @@ Running the server
 
 .. option:: -u <modules>, --update <modules>
 
-    comma-separated list of modules to update before running the server
-    (requires :option:`-d`).
+    comma-separated list of modules to update before running the server.
+    Use ``all`` for all modules. (requires :option:`-d`).
 
 .. option:: --addons-path <directories>
 
@@ -68,9 +83,31 @@ Running the server
 
     .. (nb: when and why?)
 
+.. option:: --upgrade-path <upgrade_path>
+
+   specify an additional upgrade path.
+
+.. option:: --load <modules>
+
+   list of server-wide modules to load. Those modules are supposed to provide
+   features not necessarily tied to a particular database. This is in contrast
+   to modules that are always bound to a specific database when they are
+   installed (i.e. the majority of Odoo addons). Default is ``base,web``.
+
 .. option:: -c <config>, --config <config>
 
-    provide an alternate :ref:`configuration file <reference/cmdline/config>`
+    path to an alternate :ref:`configuration file <reference/cmdline/config>`.
+    If not defined, Odoo checks ``ODOO_RC`` environmental variable
+    and default location :file:`{$HOME}/.odoorc`.
+    See configuration file section :ref:`below <reference/cmdline/config>`.
+
+.. option:: -D <data-dir-path>, --data-dir <data-dir-path>
+
+   directory path where to store Odoo data (eg. filestore, sessions).
+   If not specified, Odoo will fallback
+   to a predefined path. On Unix systems its
+   one defined in ``$XDG_DATA_HOME`` environmental variable
+   or :file:`~/.local/share/Odoo` or :file:`/var/lib/Odoo`.
 
 .. option:: -s, --save
 
@@ -82,10 +119,33 @@ Running the server
 
     disables demo data loading for modules installed
     comma-separated, use ``all`` for all modules.
+    Requires :option:`-d` and :option:`-i`.
+
+.. option:: --pidfile=<pidfile>
+
+    path to a file where the server pid will be stored
+
+.. option:: --stop-after-init
+
+    stops the server after its initialization.
+
+.. option:: --geoip-db <path>
+
+   Absolute path to the GeoIP database file.
+
+
+.. _reference/cmdline/testing:
+
+Testing Configuration
+=====================
 
 .. option:: --test-enable
 
     runs tests after module installation
+
+.. option:: --test-file <file>
+
+    runs a python test file
 
 .. option:: --test-tags [-][tag][/module][:class][.method]
 
@@ -217,6 +277,10 @@ Database
     'verify-ca' or 'verify-full'
     Default value is 'prefer'
 
+.. option:: --unaccent
+
+   Use the unaccent function provided by the database when available.
+
 .. _reference/cmdline/server/emails:
 
 Emails
@@ -225,6 +289,12 @@ Emails
 .. option:: --email-from <address>
 
     Email address used as <FROM> when Odoo needs to send mails
+
+.. option:: --from-filter <address or domain>
+
+    Email address or domain that the mail server is configured for. If the 
+    email of the sender does not match this value, it might be encapsulated 
+    into ``mail.default.from``.
 
 .. option:: --smtp <server>
 
@@ -243,6 +313,14 @@ Emails
 .. option:: --smtp-password <password>
 
     Password to connect to the SMTP server
+
+.. option:: --smtp-ssl-certificate-filename <path/to/cert.pem>
+
+    SSL certificate used for SMTP authentication
+
+.. option:: --smtp-ssl-private-key-filename <path/to/key.pem>
+
+    SSL private key used for SMTP authentication
 
 .. _reference/cmdline/server/internationalisation:
 
@@ -294,19 +372,24 @@ Developer features
 
 .. option:: --dev <feature,feature,...,feature>
 
+    comma-separated list of features. For development purposes only. Do not use it in production.
+    Possible features are:
+
     * ``all``: all the features below are activated
 
-    * ``xml``: read template qweb from xml file directly instead of database.
+    * ``xml``: read QWeb template from xml file directly instead of database.
       Once a template has been modified in database, it will be not be read from
       the xml file until the next update/init.
 
     * ``reload``: restart server when python file are updated (may not be detected
       depending on the text editor used)
 
-    * ``qweb``: break in the evaluation of qweb template when a node contains ``t-debug='debugger'``
+    * ``qweb``: break in the evaluation of QWeb template when a node contains ``t-debug='debugger'``
 
     * ``(i)p(u)db``: start the chosen python debugger in the code when an
       unexpected error is raised before logging and returning the error.
+
+    * ``werkzeug``: display the full traceback on the frontend page in case of exception
 
 
 .. _reference/cmdline/server/http:
@@ -327,6 +410,7 @@ HTTP
     TCP/IP address on which the HTTP server listens, defaults to ``0.0.0.0``
     (all addresses)
 
+.. option:: -p <port>
 .. option:: --http-port <port>
 
     Port on which the HTTP server listens, defaults to 8069.
@@ -339,7 +423,8 @@ HTTP
 .. option:: --proxy-mode
 
     enables the use of ``X-Forwarded-*`` headers through `Werkzeug's proxy
-    support`_.
+    support`_. Only enable this when running behind a trusted web proxy!
+
 
     .. warning:: proxy mode *must not* be enabled outside of a reverse proxy
                  scenario
@@ -563,7 +648,7 @@ This enables direct interaction with the :ref:`orm <reference/orm>` and its func
 
 .. code-block:: console
 
-   $ odoo_bin shell
+   $ odoo-bin shell
 
 .. option:: --shell-interface (ipython|ptpython|bpython|python)
 
@@ -586,7 +671,7 @@ Scaffolding is available via the :command:`odoo-bin scaffold` subcommand.
 
 .. code-block:: console
 
-    $ odoo_bin scaffold my_module /addons/
+    $ odoo-bin scaffold my_module /addons/
 
 .. option:: name (required)
 
@@ -619,7 +704,7 @@ generation of the model's records to test your modules in databases containing n
 
 .. code-block:: console
 
-    $ odoo_bin populate
+    $ odoo-bin populate
 
 .. option:: --models
 
@@ -643,7 +728,7 @@ Cloc
 .. program:: odoo-bin cloc
 
 Odoo Cloc is a tool to count the number of relevant lines written in
-Python, Javascript or XML. This can be used as a rough metric for pricing
+Python, Javascript, CSS, SCSS, or XML. This can be used as a rough metric for pricing
 maintenance of extra modules.
 
 Command-line options
@@ -721,14 +806,15 @@ With the :option:`--database` option
 Odoo Cloc counts the lines in each file of extra installed modules in a
 given database. In addition, it counts the Python lines of server actions and
 custom computed fields that have been directly created in the database or
-imported.
+imported. Finally, it counts the lines of code of Javascript, CSS, and SCSS files,
+and of QWeb views from imported modules.
 
 Some files are excluded from the count by default:
 
 - The manifest (:file:`__manifest__.py` or :file:`__openerp__.py`)
 - The contents of the folder :file:`static/lib`
 - The tests defined in the folder :file:`tests` and :file:`static/tests`
-- The migrations scripts defined in the folder :file:`migrations`
+- The migrations scripts defined in the folder :file:`migrations` and `upgrades`
 - The XML files declared in the ``demo`` or ``demo_xml`` sections of the manifest
 
 For special cases, a list of files that should be ignored by Odoo Cloc can be defined
@@ -740,6 +826,7 @@ per module. This is specified by the ``cloc_exclude`` entry of the manifest:
         "lib/common.py", # exclude a single file
         "data/*.xml",    # exclude all XML files in a specific folder
         "example/**/*",  # exclude all files in a folder hierarchy recursively
+        "**/*.scss",     # exclude all scss file from the module
     ]
 
 | The pattern ``**/*`` can be used to ignore an entire module. This can be useful
@@ -792,3 +879,20 @@ load. If the module works despite the presence of those files, they are probably
 not loaded and should therefore be removed from the module, or at least excluded
 in the manifest via ``cloc_exclude``.
 
+TSConfig Generator
+==================
+
+.. program:: odoo-bin tsconfig
+
+When working on javascript, there are ways to help your editor providing you with
+powerful auto-completion. One of those ways is the use of a tsconfig.json file.
+Originally meant for typescript, editors can use its information with plain javascript also.
+With this config file, you will now have full auto-completion across modules.
+
+The command to generate this files takes as many unnamed arguments as you need. Those are relative paths
+to your addon directories. In the example below, we move up one folder to save the tsconfig file in the folder
+containing community and enterprise.
+
+.. code-block:: console
+
+   $ community/odoo-bin tsconfig --addons-path community/addons,community/odoo/addons,enterprise > tsconfig.json

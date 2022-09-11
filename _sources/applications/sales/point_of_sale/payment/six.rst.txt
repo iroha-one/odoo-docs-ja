@@ -25,9 +25,9 @@ First, make sure that the :guilabel:`POS Six` module is installed. For this, go 
    :align: center
    :alt: The POS Six module.
 
-Back in :menuselection:`Point of Sale --> Configuration --> Payment Methods`, create a new payment
-method for SIX, select the payment terminal option :guilabel:`SIX`, and enter the payment terminal
-IP address.
+Back in :menuselection:`Point of Sale --> Configuration --> Payment Methods`, click
+:guilabel:`Create` to create a new payment method for SIX, select the payment terminal option
+:guilabel:`SIX`, and enter the payment terminal IP address.
 
 .. image:: six/new-payment-method.png
    :align: center

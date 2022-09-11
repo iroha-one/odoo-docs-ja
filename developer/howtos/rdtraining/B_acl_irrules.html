@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>上級者向け B: ACLとレコード ルール &#8212; Odoo 14.0 ドキュメント</title>
+    <title>上級者向け B: ACLとレコード ルール &#8212; Odoo 15.0 ドキュメント</title>
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
@@ -83,7 +83,7 @@
 <li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_purchase_receipts"><a class="reference internal" href="../../../applications/finance/accounting/payables/supplier_bills/purchase_receipts.html">Purchase receipts</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_deferred_expenses"><a class="reference internal" href="../../../applications/finance/accounting/payables/supplier_bills/deferred_expenses.html">Deferred expenses and prepayments</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_assets"><a class="reference internal" href="../../../applications/finance/accounting/payables/supplier_bills/assets.html">Non-current assets and fixed assets</a></li>
-<li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_ocr"><a class="reference internal" href="../../../applications/finance/accounting/payables/supplier_bills/ocr.html">Digitize vendor bills with optical character recognition (OCR)</a></li>
+<li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_invoice_digitization"><a class="reference internal" href="../../../applications/finance/accounting/payables/supplier_bills/invoice_digitization.html">Invoice digitization with optical character recognition (OCR)</a></li>
 </ul>
 </li>
 <li class="toctree-l5 o_menu_applications_finance_accounting_payables_pay"><a class="reference internal" href="#">Vendor payments</a><ul>
@@ -101,6 +101,7 @@
 <li class="toctree-l4 o_menu_applications_finance_accounting_bank"><a class="reference internal" href="#">Bank and cash</a><ul>
 <li class="toctree-l5 o_menu_applications_finance_accounting_bank_setup"><a class="reference internal" href="#">Setup</a><ul>
 <li class="toctree-l6 o_menu_applications_finance_accounting_bank_setup_bank_accounts"><a class="reference internal" href="../../../applications/finance/accounting/bank/setup/bank_accounts.html">Bank Accounts</a></li>
+<li class="toctree-l6 o_menu_applications_finance_accounting_bank_setup_outstanding_accounts"><a class="reference internal" href="../../../applications/finance/accounting/bank/setup/outstanding_accounts.html">Outstanding accounts</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_bank_setup_manage_cash_register"><a class="reference internal" href="../../../applications/finance/accounting/bank/setup/manage_cash_register.html">Manage a cash register</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_bank_setup_foreign_currency"><a class="reference internal" href="../../../applications/finance/accounting/bank/setup/foreign_currency.html">Manage a bank account in a foreign currency</a></li>
 </ul>
@@ -193,8 +194,10 @@
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_chile"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/chile.html">Chile</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_colombia"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/colombia.html">Colombia</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_colombia_ES"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/colombia_ES.html">Colombia (ES)</a></li>
+<li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_egypt"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/egypt.html">Egypt</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_france"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/france.html">France</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_germany"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/germany.html">Germany</a></li>
+<li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_india"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/india.html">India</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_indonesia"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/indonesia.html">Indonesia</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_italy"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/italy.html">Italy</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_italy_IT"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/italy_IT.html">Italy (IT)</a></li>
@@ -213,14 +216,16 @@
 <li class="toctree-l3 o_menu_applications_finance_expenses"><a class="reference internal" href="../../../applications/finance/expenses.html">Expenses</a></li>
 <li class="toctree-l3 o_menu_applications_finance_documents"><a class="reference internal" href="../../../applications/finance/documents.html">Documents</a></li>
 <li class="toctree-l3 o_menu_applications_finance_sign"><a class="reference internal" href="../../../applications/finance/sign.html">Sign</a></li>
-<li class="toctree-l3 o_menu_applications_finance_payment_acquirers"><a class="reference internal" href="../../../applications/finance/payment_acquirers.html">Payment Acquirers (Credit Cards, Online Payment)</a><ul>
+<li class="toctree-l3 o_menu_applications_finance_payment_acquirers"><a class="reference internal" href="../../../applications/finance/payment_acquirers.html">Payment acquirers (credit cards, online payments)</a><ul>
 <li class="toctree-l4 o_menu_applications_finance_payment_acquirers_wire_transfer"><a class="reference internal" href="../../../applications/finance/payment_acquirers/wire_transfer.html">How to get paid with wire transfers</a></li>
-<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_adyen"><a class="reference internal" href="../../../applications/finance/payment_acquirers/adyen.html">Adyen</a><ul>
-<li class="toctree-l5 o_menu_applications_finance_payment_acquirers_adyen_install_pay_by_link_patch"><a class="reference internal" href="../../../applications/finance/payment_acquirers/adyen/install_pay_by_link_patch.html">Install the Adyen Pay by Link Patch</a></li>
-</ul>
-</li>
+<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_adyen"><a class="reference internal" href="../../../applications/finance/payment_acquirers/adyen.html">Adyen</a></li>
+<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_alipay"><a class="reference internal" href="../../../applications/finance/payment_acquirers/alipay.html">Alipay</a></li>
 <li class="toctree-l4 o_menu_applications_finance_payment_acquirers_authorize"><a class="reference internal" href="../../../applications/finance/payment_acquirers/authorize.html">Authorize.Net</a></li>
-<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_paypal"><a class="reference internal" href="../../../applications/finance/payment_acquirers/paypal.html">Configure your Paypal account</a></li>
+<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_buckaroo"><a class="reference internal" href="../../../applications/finance/payment_acquirers/buckaroo.html">Buckaroo</a></li>
+<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_mollie"><a class="reference internal" href="../../../applications/finance/payment_acquirers/mollie.html">Mollie</a></li>
+<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_ogone"><a class="reference internal" href="../../../applications/finance/payment_acquirers/ogone.html">Ogone</a></li>
+<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_paypal"><a class="reference internal" href="../../../applications/finance/payment_acquirers/paypal.html">Paypal</a></li>
+<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_sips"><a class="reference internal" href="../../../applications/finance/payment_acquirers/sips.html">SIPS</a></li>
 <li class="toctree-l4 o_menu_applications_finance_payment_acquirers_stripe"><a class="reference internal" href="../../../applications/finance/payment_acquirers/stripe.html">Stripe</a></li>
 </ul>
 </li>
@@ -253,7 +258,6 @@
 </li>
 <li class="toctree-l4 o_menu_applications_sales_crm_optimize"><a class="reference internal" href="#">Optimize your Day-to-Day work</a><ul>
 <li class="toctree-l5 o_menu_applications_sales_crm_optimize_partner_autocomplete"><a class="reference internal" href="../../../applications/sales/crm/optimize/partner_autocomplete.html">Enrich your contacts base with Partner Autocomplete</a></li>
-<li class="toctree-l5 o_menu_applications_sales_crm_optimize_outlook_extension"><a class="reference internal" href="../../../applications/sales/crm/optimize/outlook_extension.html">Outlook Extension</a></li>
 <li class="toctree-l5 o_menu_applications_sales_crm_optimize_gamification"><a class="reference internal" href="../../../applications/sales/crm/optimize/gamification.html">How to motivate and reward my salespeople?</a></li>
 </ul>
 </li>
@@ -284,6 +288,7 @@
 <li class="toctree-l5 o_menu_applications_sales_sales_products_prices_products"><a class="reference internal" href="#">Manage your products</a><ul>
 <li class="toctree-l6 o_menu_applications_sales_sales_products_prices_products_import"><a class="reference internal" href="../../../applications/sales/sales/products_prices/products/import.html">How to import Products with Categories and Variants</a></li>
 <li class="toctree-l6 o_menu_applications_sales_sales_products_prices_products_variants"><a class="reference internal" href="../../../applications/sales/sales/products_prices/products/variants.html">Using product variants</a></li>
+<li class="toctree-l6 o_menu_applications_sales_sales_products_prices_products_product_images"><a class="reference internal" href="../../../applications/sales/sales/products_prices/products/product_images.html">Automatically get product images with Google Images</a></li>
 </ul>
 </li>
 <li class="toctree-l5 o_menu_applications_sales_sales_products_prices_taxes"><a class="reference internal" href="#">Set taxes</a><ul>
@@ -329,11 +334,12 @@
 </li>
 <li class="toctree-l4 o_menu_applications_sales_point_of_sale_shop"><a class="reference internal" href="#">Shop Features</a><ul>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_invoice"><a class="reference internal" href="../../../applications/sales/point_of_sale/shop/invoice.html">Invoice from the PoS interface</a></li>
-<li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_cash_control"><a class="reference internal" href="../../../applications/sales/point_of_sale/shop/cash_control.html">Set-up Cash Control in Point of Sale</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_barcode"><a class="reference internal" href="../../../applications/sales/point_of_sale/shop/barcode.html">Using barcodes in PoS</a></li>
+<li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_sales_order"><a class="reference internal" href="../../../applications/sales/point_of_sale/shop/sales_order.html">Sales orders in PoS</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_multicashiers"><a class="reference internal" href="../../../applications/sales/point_of_sale/shop/multicashiers.html">Log in with employee</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_reprint"><a class="reference internal" href="../../../applications/sales/point_of_sale/shop/reprint.html">Reprint Receipts</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_cash_rounding"><a class="reference internal" href="../../../applications/sales/point_of_sale/shop/cash_rounding.html">Cash Rounding</a></li>
+<li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_serial_numbers"><a class="reference internal" href="../../../applications/sales/point_of_sale/shop/serial_numbers.html">Serial numbers and lots</a></li>
 </ul>
 </li>
 <li class="toctree-l4 o_menu_applications_sales_point_of_sale_restaurant"><a class="reference internal" href="#">Restaurant Features</a><ul>
@@ -350,6 +356,7 @@
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_ingenico"><a class="reference internal" href="../../../applications/sales/point_of_sale/payment/ingenico.html">Ingenico</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_vantiv"><a class="reference internal" href="../../../applications/sales/point_of_sale/payment/vantiv.html">Vantiv</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_six"><a class="reference internal" href="../../../applications/sales/point_of_sale/payment/six.html">SIX</a></li>
+<li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_worldline"><a class="reference internal" href="../../../applications/sales/point_of_sale/payment/worldline.html">Worldline</a></li>
 </ul>
 </li>
 <li class="toctree-l4 o_menu_applications_sales_point_of_sale_advanced_pricing_features"><a class="reference internal" href="#">Pricing Features</a><ul>
@@ -435,7 +442,7 @@
 </li>
 <li class="toctree-l4 o_menu_applications_websites_ecommerce_maximizing_revenue"><a class="reference internal" href="#">Maximize my revenue</a><ul>
 <li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_upselling"><a class="reference internal" href="../../../applications/websites/ecommerce/maximizing_revenue/upselling.html">How to sell pricier alternative products (upselling)</a></li>
-<li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_cross_selling"><a class="reference internal" href="../../../applications/websites/ecommerce/maximizing_revenue/cross_selling.html">How to sell accessories and optional products (cross-selling)</a></li>
+<li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_cross_selling"><a class="reference internal" href="../../../applications/websites/ecommerce/maximizing_revenue/cross_selling.html">Cross-selling: Accessory and Optional Products</a></li>
 <li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_reviews"><a class="reference internal" href="../../../applications/websites/ecommerce/maximizing_revenue/reviews.html">How to enable comments &amp; rating</a></li>
 <li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_pricing"><a class="reference internal" href="../../../applications/websites/ecommerce/maximizing_revenue/pricing.html">Adapt prices to website visitors</a></li>
 <li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_promo_code"><a class="reference internal" href="../../../applications/websites/ecommerce/maximizing_revenue/promo_code.html">How to create &amp; share promotional codes</a></li>
@@ -564,12 +571,12 @@
 <li class="toctree-l3 o_menu_applications_inventory_and_mrp_manufacturing"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing.html">Manufacturing</a><ul>
 <li class="toctree-l4 o_menu_applications_inventory_and_mrp_manufacturing_management"><a class="reference internal" href="#">Manufacturing Management</a><ul>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_bill_configuration"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/bill_configuration.html">Create Bills of Materials</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_kit_shipping"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/kit_shipping.html">Sell sets of products as kits</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_product_variants"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/product_variants.html">How to manage BoMs for product variants</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_product_variants"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/product_variants.html">Variants BOM Management</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_kit_shipping"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/kit_shipping.html">Kits</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_sub_assemblies"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/sub_assemblies.html">Manage semi-finished products</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_alternative_wc"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/alternative_wc.html">Using an alternative Work Center</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_quality_control"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/quality_control.html">Quality Control</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_alternative_wc"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/alternative_wc.html">Alternative Work Centers</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_subcontracting"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/subcontracting.html">Subcontract your Manufacturing</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_routing_kit_bom"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.html">Set routings on kit Bills of materials</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_use_mps"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/use_mps.html">Use the Master Production Schedule</a></li>
 </ul>
 </li>
@@ -678,6 +685,10 @@
 <li class="toctree-l5 o_menu_applications_productivity_discuss_overview_plan_activities"><a class="reference internal" href="../../../applications/productivity/discuss/overview/plan_activities.html">Get Organized by Planning Activities</a></li>
 </ul>
 </li>
+<li class="toctree-l4 o_menu_applications_productivity_discuss_advanced"><a class="reference internal" href="#">Advanced</a><ul>
+<li class="toctree-l5 o_menu_applications_productivity_discuss_advanced_ice_servers"><a class="reference internal" href="../../../applications/productivity/discuss/advanced/ice_servers.html">Configure ICE servers with Twilio</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_productivity_iot"><a class="reference internal" href="../../../applications/productivity/iot.html">Internet of Things (IoT)</a><ul>
@@ -701,29 +712,21 @@
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_ingenico"><a class="reference internal" href="../../../applications/sales/point_of_sale/payment/ingenico.html">Ingenico</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_vantiv"><a class="reference internal" href="../../../applications/sales/point_of_sale/payment/vantiv.html">Vantiv</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_six"><a class="reference internal" href="../../../applications/sales/point_of_sale/payment/six.html">SIX</a></li>
+<li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_worldline"><a class="reference internal" href="../../../applications/sales/point_of_sale/payment/worldline.html">Worldline</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l3 o_menu_applications_productivity_mail_plugins"><a class="reference internal" href="../../../applications/productivity/mail_plugins.html">Mail Plugins</a><ul>
+<li class="toctree-l4 o_menu_applications_productivity_mail_plugins_outlook"><a class="reference internal" href="../../../applications/productivity/mail_plugins/outlook.html">Outlook Plugin</a></li>
+<li class="toctree-l4 o_menu_applications_productivity_mail_plugins_gmail"><a class="reference internal" href="../../../applications/productivity/mail_plugins/gmail.html">Gmail Plugin</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_productivity_studio"><a class="reference internal" href="../../../applications/productivity/studio.html">Studio</a><ul>
-<li class="toctree-l4 o_menu_applications_productivity_studio_concepts"><a class="reference internal" href="#">Concepts</a><ul>
-<li class="toctree-l5 o_menu_applications_productivity_studio_concepts_understanding_general"><a class="reference internal" href="../../../applications/productivity/studio/concepts/understanding_general.html">Understanding General Concepts</a></li>
-<li class="toctree-l5 o_menu_applications_productivity_studio_concepts_understanding_automated_actions"><a class="reference internal" href="../../../applications/productivity/studio/concepts/understanding_automated_actions.html">Understanding Automated Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l4 o_menu_applications_productivity_studio_use_cases"><a class="reference internal" href="#">Use Cases</a><ul>
-<li class="toctree-l5 o_menu_applications_productivity_studio_use_cases_models_fields"><a class="reference internal" href="../../../applications/productivity/studio/use_cases/models_fields.html">Advanced Use Cases: Creating Models and Adding Fields</a></li>
-<li class="toctree-l5 o_menu_applications_productivity_studio_use_cases_filters_status_bar"><a class="reference internal" href="../../../applications/productivity/studio/use_cases/filters_status_bar.html">Advanced Use Cases: Filters and Status Bar</a></li>
-<li class="toctree-l5 o_menu_applications_productivity_studio_use_cases_automated_actions"><a class="reference internal" href="../../../applications/productivity/studio/use_cases/automated_actions.html">Advanced Use Cases: Automated Actions</a></li>
-<li class="toctree-l5 o_menu_applications_productivity_studio_use_cases_views"><a class="reference internal" href="../../../applications/productivity/studio/use_cases/views.html">Advanced Use Cases: Views</a></li>
-</ul>
-</li>
-<li class="toctree-l4 o_menu_applications_productivity_studio_how_to"><a class="reference internal" href="#">How To</a><ul>
-<li class="toctree-l5 o_menu_applications_productivity_studio_how_to_rainbow_man"><a class="reference internal" href="../../../applications/productivity/studio/how_to/rainbow_man.html">Customizing the Rainbow Man</a></li>
-<li class="toctree-l5 o_menu_applications_productivity_studio_how_to_reports"><a class="reference internal" href="../../../applications/productivity/studio/how_to/reports.html">Customizing Reports</a></li>
-<li class="toctree-l5 o_menu_applications_productivity_studio_how_to_export_import"><a class="reference internal" href="../../../applications/productivity/studio/how_to/export_import.html">Export and Import Modules</a></li>
-</ul>
-</li>
+<li class="toctree-l4 o_menu_applications_productivity_studio_fields"><a class="reference internal" href="../../../applications/productivity/studio/fields.html">Fields and widgets</a></li>
+<li class="toctree-l4 o_menu_applications_productivity_studio_views"><a class="reference internal" href="../../../applications/productivity/studio/views.html">Views</a></li>
+<li class="toctree-l4 o_menu_applications_productivity_studio_models_modules_apps"><a class="reference internal" href="../../../applications/productivity/studio/models_modules_apps.html">Models, modules, and apps</a></li>
+<li class="toctree-l4 o_menu_applications_productivity_studio_automated_actions"><a class="reference internal" href="../../../applications/productivity/studio/automated_actions.html">Automated actions (automations)</a></li>
 </ul>
 </li>
 </ul>
@@ -763,6 +766,7 @@
 <li class="toctree-l4 o_menu_applications_general_calendars_google_google_calendar_credentials"><a class="reference internal" href="../../../applications/general/calendars/google/google_calendar_credentials.html">Synchronize Google Calendar with Odoo</a></li>
 </ul>
 </li>
+<li class="toctree-l3 o_menu_applications_general_digest_emails"><a class="reference internal" href="../../../applications/general/digest_emails.html">Digest Emails</a></li>
 <li class="toctree-l3 o_menu_applications_general_in_app_purchase"><a class="reference internal" href="../../../applications/general/in_app_purchase.html">In-App Purchase (IAP)</a></li>
 <li class="toctree-l3 o_menu_applications_general_developer_mode"><a class="reference internal" href="../../../applications/general/developer_mode.html">Developer Mode (debug mode)</a></li>
 </ul>
@@ -841,9 +845,11 @@
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_16_guidelines_pr"><a class="reference internal" href="16_guidelines_pr.html">第16章: コードの洗練化とPRの提出</a></li>
 <li class="toctree-l4 current o_menu_developer_howtos_rdtraining_"><a class="current reference internal" href="#">上級者向け B: ACLとレコード ルール</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_C_data"><a class="reference internal" href="C_data.html">上級者向け C: マスターとデモデータ</a></li>
+<li class="toctree-l4 o_menu_developer_howtos_rdtraining_D_mixins"><a class="reference internal" href="D_mixins.html">上級者向け D: Mixins</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_E_unittest"><a class="reference internal" href="E_unittest.html">上級者向け E: Python ユニットテスト</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_J_reports"><a class="reference internal" href="J_reports.html">上級者向け J: PDF レポート</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_K_dashboard"><a class="reference internal" href="K_dashboard.html">上級者向け K: ダッシュボード</a></li>
+<li class="toctree-l4 o_menu_developer_howtos_rdtraining_N_security"><a class="reference internal" href="N_security.html">上級者向け N: セキュリティ</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_developer_howtos_themes"><a class="reference internal" href="../themes.html">Theme Tutorial</a></li>
@@ -851,35 +857,57 @@
 <li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../backend.html">モジュールの構築</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_profilecode"><a class="reference internal" href="../profilecode.html">Profiling Odoo code</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_company"><a class="reference internal" href="../company.html">Multi-company Guidelines</a></li>
-<li class="toctree-l3 o_menu_developer_howtos_localization"><a class="reference internal" href="../localization.html">Accounting Localization</a></li>
+<li class="toctree-l3 o_menu_developer_howtos_accounting_localization"><a class="reference internal" href="../accounting_localization.html">Accounting localization</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_translations"><a class="reference internal" href="../translations.html">Translating Modules</a></li>
 </ul>
 </li>
 <li class="toctree-l2 o_menu_developer_reference"><a class="reference internal" href="#">Reference</a><ul>
-<li class="toctree-l3 o_menu_developer_reference_addons"><a class="reference internal" href="#">Server Addons</a><ul>
-<li class="toctree-l4 o_menu_developer_reference_addons_orm"><a class="reference internal" href="../../reference/addons/orm.html">ORM API</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="../../reference/addons/data.html">データファイル</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="../../reference/addons/actions.html">アクション</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_views"><a class="reference internal" href="../../reference/addons/views.html">Views</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_module"><a class="reference internal" href="../../reference/addons/module.html">Module Manifests</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_reports"><a class="reference internal" href="../../reference/addons/reports.html">QWeb Reports</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_security"><a class="reference internal" href="../../reference/addons/security.html">Security in Odoo</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_testing"><a class="reference internal" href="../../reference/addons/testing.html">Testing Odoo</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_http"><a class="reference internal" href="../../reference/addons/http.html">Web Controllers</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_mixins"><a class="reference internal" href="../../reference/addons/mixins.html">Mixins and Useful Classes</a></li>
+<li class="toctree-l3 o_menu_developer_reference_backend"><a class="reference internal" href="#">Python framework</a><ul>
+<li class="toctree-l4 o_menu_developer_reference_backend_orm"><a class="reference internal" href="../../reference/backend/orm.html">ORM API</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_data"><a class="reference internal" href="../../reference/backend/data.html">データファイル</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_actions"><a class="reference internal" href="../../reference/backend/actions.html">アクション</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_views"><a class="reference internal" href="../../reference/backend/views.html">Views</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_module"><a class="reference internal" href="../../reference/backend/module.html">Module Manifests</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_reports"><a class="reference internal" href="../../reference/backend/reports.html">QWeb Reports</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_security"><a class="reference internal" href="../../reference/backend/security.html">Security in Odoo</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_testing"><a class="reference internal" href="../../reference/backend/testing.html">Testing Odoo</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_http"><a class="reference internal" href="../../reference/backend/http.html">Web Controllers</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_mixins"><a class="reference internal" href="../../reference/backend/mixins.html">Mixins and Useful Classes</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_standard_modules"><a class="reference internal" href="#">Standard modules</a><ul>
+<li class="toctree-l5 o_menu_developer_reference_backend_standard_modules_account"><a class="reference internal" href="#">Accounting</a><ul>
+<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_account_tag"><a class="reference internal" href="../../reference/backend/standard_modules/account/account_account_tag.html">Account Tag</a></li>
+<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_account"><a class="reference internal" href="../../reference/backend/standard_modules/account/account_account.html">Account</a></li>
+<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_chart_template"><a class="reference internal" href="../../reference/backend/standard_modules/account/account_chart_template.html">Chart Template</a></li>
+<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_fiscal_position"><a class="reference internal" href="../../reference/backend/standard_modules/account/account_fiscal_position.html">Fiscal Position</a></li>
+<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_group"><a class="reference internal" href="../../reference/backend/standard_modules/account/account_group.html">Account Group</a></li>
+<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_tax_report_line"><a class="reference internal" href="../../reference/backend/standard_modules/account/account_tax_report_line.html">Tax Report Line</a></li>
+<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_tax"><a class="reference internal" href="../../reference/backend/standard_modules/account/account_tax.html">Taxes</a></li>
+<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_tax_repartition"><a class="reference internal" href="../../reference/backend/standard_modules/account/account_tax_repartition.html">Tax Repartitions</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_developer_reference_javascript"><a class="reference internal" href="#">Javascript Modules</a><ul>
-<li class="toctree-l4 o_menu_developer_reference_javascript_javascript_cheatsheet"><a class="reference internal" href="../../reference/javascript/javascript_cheatsheet.html">Javascript Cheatsheet</a></li>
-<li class="toctree-l4 o_menu_developer_reference_javascript_javascript_reference"><a class="reference internal" href="../../reference/javascript/javascript_reference.html">Javascript Reference</a></li>
-<li class="toctree-l4 o_menu_developer_reference_javascript_mobile"><a class="reference internal" href="../../reference/javascript/mobile.html">Mobile JavaScript</a></li>
-<li class="toctree-l4 o_menu_developer_reference_javascript_qweb"><a class="reference internal" href="../../reference/javascript/qweb.html">QWeb Templates</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 o_menu_developer_reference_frontend"><a class="reference internal" href="#">JavaScript framework</a><ul>
+<li class="toctree-l4 o_menu_developer_reference_frontend_framework_overview"><a class="reference internal" href="../../reference/frontend/framework_overview.html">Framework Overview</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_assets"><a class="reference internal" href="../../reference/frontend/assets.html">Assets</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_javascript_modules"><a class="reference internal" href="../../reference/frontend/javascript_modules.html">Javascript Modules</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_owl_components"><a class="reference internal" href="../../reference/frontend/owl_components.html">Owl Components</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_registries"><a class="reference internal" href="../../reference/frontend/registries.html">Registries</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_services"><a class="reference internal" href="../../reference/frontend/services.html">Services</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_hooks"><a class="reference internal" href="../../reference/frontend/hooks.html">Hooks</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_patching_code"><a class="reference internal" href="../../reference/frontend/patching_code.html">Patching code</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_javascript_cheatsheet"><a class="reference internal" href="../../reference/frontend/javascript_cheatsheet.html">Javascript Cheatsheet</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_javascript_reference"><a class="reference internal" href="../../reference/frontend/javascript_reference.html">Javascript Reference</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_mobile"><a class="reference internal" href="../../reference/frontend/mobile.html">Mobile JavaScript</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_qweb"><a class="reference internal" href="../../reference/frontend/qweb.html">QWeb Templates</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2 o_menu_developer_api"><a class="reference internal" href="#">API</a><ul>
-<li class="toctree-l3 o_menu_developer_api_external_api"><a class="reference internal" href="../../api/external_api.html">External API</a></li>
+<li class="toctree-l3 o_menu_developer_api_external_api"><a class="reference internal" href="../../api/external_api.html">外部API</a></li>
 <li class="toctree-l3 o_menu_developer_api_iap"><a class="reference internal" href="../../api/iap.html">In-App Purchase</a></li>
 <li class="toctree-l3 o_menu_developer_api_extract_api"><a class="reference internal" href="../../api/extract_api.html">Extract API</a></li>
 </ul>
@@ -982,7 +1010,7 @@
 <li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_purchase_receipts"><a class="reference internal" href="../../../applications/finance/accounting/payables/supplier_bills/purchase_receipts.html">Purchase receipts</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_deferred_expenses"><a class="reference internal" href="../../../applications/finance/accounting/payables/supplier_bills/deferred_expenses.html">Deferred expenses and prepayments</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_assets"><a class="reference internal" href="../../../applications/finance/accounting/payables/supplier_bills/assets.html">Non-current assets and fixed assets</a></li>
-<li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_ocr"><a class="reference internal" href="../../../applications/finance/accounting/payables/supplier_bills/ocr.html">Digitize vendor bills with optical character recognition (OCR)</a></li>
+<li class="toctree-l6 o_menu_applications_finance_accounting_payables_supplier_bills_invoice_digitization"><a class="reference internal" href="../../../applications/finance/accounting/payables/supplier_bills/invoice_digitization.html">Invoice digitization with optical character recognition (OCR)</a></li>
 </ul>
 </li>
 <li class="toctree-l5 o_menu_applications_finance_accounting_payables_pay"><a class="reference internal" href="#">Vendor payments</a><ul>
@@ -1000,6 +1028,7 @@
 <li class="toctree-l4 o_menu_applications_finance_accounting_bank"><a class="reference internal" href="#">Bank and cash</a><ul>
 <li class="toctree-l5 o_menu_applications_finance_accounting_bank_setup"><a class="reference internal" href="#">Setup</a><ul>
 <li class="toctree-l6 o_menu_applications_finance_accounting_bank_setup_bank_accounts"><a class="reference internal" href="../../../applications/finance/accounting/bank/setup/bank_accounts.html">Bank Accounts</a></li>
+<li class="toctree-l6 o_menu_applications_finance_accounting_bank_setup_outstanding_accounts"><a class="reference internal" href="../../../applications/finance/accounting/bank/setup/outstanding_accounts.html">Outstanding accounts</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_bank_setup_manage_cash_register"><a class="reference internal" href="../../../applications/finance/accounting/bank/setup/manage_cash_register.html">Manage a cash register</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_bank_setup_foreign_currency"><a class="reference internal" href="../../../applications/finance/accounting/bank/setup/foreign_currency.html">Manage a bank account in a foreign currency</a></li>
 </ul>
@@ -1092,8 +1121,10 @@
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_chile"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/chile.html">Chile</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_colombia"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/colombia.html">Colombia</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_colombia_ES"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/colombia_ES.html">Colombia (ES)</a></li>
+<li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_egypt"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/egypt.html">Egypt</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_france"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/france.html">France</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_germany"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/germany.html">Germany</a></li>
+<li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_india"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/india.html">India</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_indonesia"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/indonesia.html">Indonesia</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_italy"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/italy.html">Italy</a></li>
 <li class="toctree-l6 o_menu_applications_finance_accounting_fiscal_localizations_localizations_italy_IT"><a class="reference internal" href="../../../applications/finance/accounting/fiscal_localizations/localizations/italy_IT.html">Italy (IT)</a></li>
@@ -1112,14 +1143,16 @@
 <li class="toctree-l3 o_menu_applications_finance_expenses"><a class="reference internal" href="../../../applications/finance/expenses.html">Expenses</a></li>
 <li class="toctree-l3 o_menu_applications_finance_documents"><a class="reference internal" href="../../../applications/finance/documents.html">Documents</a></li>
 <li class="toctree-l3 o_menu_applications_finance_sign"><a class="reference internal" href="../../../applications/finance/sign.html">Sign</a></li>
-<li class="toctree-l3 o_menu_applications_finance_payment_acquirers"><a class="reference internal" href="../../../applications/finance/payment_acquirers.html">Payment Acquirers (Credit Cards, Online Payment)</a><ul>
+<li class="toctree-l3 o_menu_applications_finance_payment_acquirers"><a class="reference internal" href="../../../applications/finance/payment_acquirers.html">Payment acquirers (credit cards, online payments)</a><ul>
 <li class="toctree-l4 o_menu_applications_finance_payment_acquirers_wire_transfer"><a class="reference internal" href="../../../applications/finance/payment_acquirers/wire_transfer.html">How to get paid with wire transfers</a></li>
-<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_adyen"><a class="reference internal" href="../../../applications/finance/payment_acquirers/adyen.html">Adyen</a><ul>
-<li class="toctree-l5 o_menu_applications_finance_payment_acquirers_adyen_install_pay_by_link_patch"><a class="reference internal" href="../../../applications/finance/payment_acquirers/adyen/install_pay_by_link_patch.html">Install the Adyen Pay by Link Patch</a></li>
-</ul>
-</li>
+<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_adyen"><a class="reference internal" href="../../../applications/finance/payment_acquirers/adyen.html">Adyen</a></li>
+<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_alipay"><a class="reference internal" href="../../../applications/finance/payment_acquirers/alipay.html">Alipay</a></li>
 <li class="toctree-l4 o_menu_applications_finance_payment_acquirers_authorize"><a class="reference internal" href="../../../applications/finance/payment_acquirers/authorize.html">Authorize.Net</a></li>
-<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_paypal"><a class="reference internal" href="../../../applications/finance/payment_acquirers/paypal.html">Configure your Paypal account</a></li>
+<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_buckaroo"><a class="reference internal" href="../../../applications/finance/payment_acquirers/buckaroo.html">Buckaroo</a></li>
+<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_mollie"><a class="reference internal" href="../../../applications/finance/payment_acquirers/mollie.html">Mollie</a></li>
+<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_ogone"><a class="reference internal" href="../../../applications/finance/payment_acquirers/ogone.html">Ogone</a></li>
+<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_paypal"><a class="reference internal" href="../../../applications/finance/payment_acquirers/paypal.html">Paypal</a></li>
+<li class="toctree-l4 o_menu_applications_finance_payment_acquirers_sips"><a class="reference internal" href="../../../applications/finance/payment_acquirers/sips.html">SIPS</a></li>
 <li class="toctree-l4 o_menu_applications_finance_payment_acquirers_stripe"><a class="reference internal" href="../../../applications/finance/payment_acquirers/stripe.html">Stripe</a></li>
 </ul>
 </li>
@@ -1152,7 +1185,6 @@
 </li>
 <li class="toctree-l4 o_menu_applications_sales_crm_optimize"><a class="reference internal" href="#">Optimize your Day-to-Day work</a><ul>
 <li class="toctree-l5 o_menu_applications_sales_crm_optimize_partner_autocomplete"><a class="reference internal" href="../../../applications/sales/crm/optimize/partner_autocomplete.html">Enrich your contacts base with Partner Autocomplete</a></li>
-<li class="toctree-l5 o_menu_applications_sales_crm_optimize_outlook_extension"><a class="reference internal" href="../../../applications/sales/crm/optimize/outlook_extension.html">Outlook Extension</a></li>
 <li class="toctree-l5 o_menu_applications_sales_crm_optimize_gamification"><a class="reference internal" href="../../../applications/sales/crm/optimize/gamification.html">How to motivate and reward my salespeople?</a></li>
 </ul>
 </li>
@@ -1183,6 +1215,7 @@
 <li class="toctree-l5 o_menu_applications_sales_sales_products_prices_products"><a class="reference internal" href="#">Manage your products</a><ul>
 <li class="toctree-l6 o_menu_applications_sales_sales_products_prices_products_import"><a class="reference internal" href="../../../applications/sales/sales/products_prices/products/import.html">How to import Products with Categories and Variants</a></li>
 <li class="toctree-l6 o_menu_applications_sales_sales_products_prices_products_variants"><a class="reference internal" href="../../../applications/sales/sales/products_prices/products/variants.html">Using product variants</a></li>
+<li class="toctree-l6 o_menu_applications_sales_sales_products_prices_products_product_images"><a class="reference internal" href="../../../applications/sales/sales/products_prices/products/product_images.html">Automatically get product images with Google Images</a></li>
 </ul>
 </li>
 <li class="toctree-l5 o_menu_applications_sales_sales_products_prices_taxes"><a class="reference internal" href="#">Set taxes</a><ul>
@@ -1228,11 +1261,12 @@
 </li>
 <li class="toctree-l4 o_menu_applications_sales_point_of_sale_shop"><a class="reference internal" href="#">Shop Features</a><ul>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_invoice"><a class="reference internal" href="../../../applications/sales/point_of_sale/shop/invoice.html">Invoice from the PoS interface</a></li>
-<li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_cash_control"><a class="reference internal" href="../../../applications/sales/point_of_sale/shop/cash_control.html">Set-up Cash Control in Point of Sale</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_barcode"><a class="reference internal" href="../../../applications/sales/point_of_sale/shop/barcode.html">Using barcodes in PoS</a></li>
+<li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_sales_order"><a class="reference internal" href="../../../applications/sales/point_of_sale/shop/sales_order.html">Sales orders in PoS</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_multicashiers"><a class="reference internal" href="../../../applications/sales/point_of_sale/shop/multicashiers.html">Log in with employee</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_reprint"><a class="reference internal" href="../../../applications/sales/point_of_sale/shop/reprint.html">Reprint Receipts</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_cash_rounding"><a class="reference internal" href="../../../applications/sales/point_of_sale/shop/cash_rounding.html">Cash Rounding</a></li>
+<li class="toctree-l5 o_menu_applications_sales_point_of_sale_shop_serial_numbers"><a class="reference internal" href="../../../applications/sales/point_of_sale/shop/serial_numbers.html">Serial numbers and lots</a></li>
 </ul>
 </li>
 <li class="toctree-l4 o_menu_applications_sales_point_of_sale_restaurant"><a class="reference internal" href="#">Restaurant Features</a><ul>
@@ -1249,6 +1283,7 @@
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_ingenico"><a class="reference internal" href="../../../applications/sales/point_of_sale/payment/ingenico.html">Ingenico</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_vantiv"><a class="reference internal" href="../../../applications/sales/point_of_sale/payment/vantiv.html">Vantiv</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_six"><a class="reference internal" href="../../../applications/sales/point_of_sale/payment/six.html">SIX</a></li>
+<li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_worldline"><a class="reference internal" href="../../../applications/sales/point_of_sale/payment/worldline.html">Worldline</a></li>
 </ul>
 </li>
 <li class="toctree-l4 o_menu_applications_sales_point_of_sale_advanced_pricing_features"><a class="reference internal" href="#">Pricing Features</a><ul>
@@ -1334,7 +1369,7 @@
 </li>
 <li class="toctree-l4 o_menu_applications_websites_ecommerce_maximizing_revenue"><a class="reference internal" href="#">Maximize my revenue</a><ul>
 <li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_upselling"><a class="reference internal" href="../../../applications/websites/ecommerce/maximizing_revenue/upselling.html">How to sell pricier alternative products (upselling)</a></li>
-<li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_cross_selling"><a class="reference internal" href="../../../applications/websites/ecommerce/maximizing_revenue/cross_selling.html">How to sell accessories and optional products (cross-selling)</a></li>
+<li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_cross_selling"><a class="reference internal" href="../../../applications/websites/ecommerce/maximizing_revenue/cross_selling.html">Cross-selling: Accessory and Optional Products</a></li>
 <li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_reviews"><a class="reference internal" href="../../../applications/websites/ecommerce/maximizing_revenue/reviews.html">How to enable comments &amp; rating</a></li>
 <li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_pricing"><a class="reference internal" href="../../../applications/websites/ecommerce/maximizing_revenue/pricing.html">Adapt prices to website visitors</a></li>
 <li class="toctree-l5 o_menu_applications_websites_ecommerce_maximizing_revenue_promo_code"><a class="reference internal" href="../../../applications/websites/ecommerce/maximizing_revenue/promo_code.html">How to create &amp; share promotional codes</a></li>
@@ -1463,12 +1498,12 @@
 <li class="toctree-l3 o_menu_applications_inventory_and_mrp_manufacturing"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing.html">Manufacturing</a><ul>
 <li class="toctree-l4 o_menu_applications_inventory_and_mrp_manufacturing_management"><a class="reference internal" href="#">Manufacturing Management</a><ul>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_bill_configuration"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/bill_configuration.html">Create Bills of Materials</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_kit_shipping"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/kit_shipping.html">Sell sets of products as kits</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_product_variants"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/product_variants.html">How to manage BoMs for product variants</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_product_variants"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/product_variants.html">Variants BOM Management</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_kit_shipping"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/kit_shipping.html">Kits</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_sub_assemblies"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/sub_assemblies.html">Manage semi-finished products</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_alternative_wc"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/alternative_wc.html">Using an alternative Work Center</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_quality_control"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/quality_control.html">Quality Control</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_alternative_wc"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/alternative_wc.html">Alternative Work Centers</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_subcontracting"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/subcontracting.html">Subcontract your Manufacturing</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_routing_kit_bom"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.html">Set routings on kit Bills of materials</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_use_mps"><a class="reference internal" href="../../../applications/inventory_and_mrp/manufacturing/management/use_mps.html">Use the Master Production Schedule</a></li>
 </ul>
 </li>
@@ -1577,6 +1612,10 @@
 <li class="toctree-l5 o_menu_applications_productivity_discuss_overview_plan_activities"><a class="reference internal" href="../../../applications/productivity/discuss/overview/plan_activities.html">Get Organized by Planning Activities</a></li>
 </ul>
 </li>
+<li class="toctree-l4 o_menu_applications_productivity_discuss_advanced"><a class="reference internal" href="#">Advanced</a><ul>
+<li class="toctree-l5 o_menu_applications_productivity_discuss_advanced_ice_servers"><a class="reference internal" href="../../../applications/productivity/discuss/advanced/ice_servers.html">Configure ICE servers with Twilio</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_productivity_iot"><a class="reference internal" href="../../../applications/productivity/iot.html">Internet of Things (IoT)</a><ul>
@@ -1600,29 +1639,21 @@
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_ingenico"><a class="reference internal" href="../../../applications/sales/point_of_sale/payment/ingenico.html">Ingenico</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_vantiv"><a class="reference internal" href="../../../applications/sales/point_of_sale/payment/vantiv.html">Vantiv</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_six"><a class="reference internal" href="../../../applications/sales/point_of_sale/payment/six.html">SIX</a></li>
+<li class="toctree-l5 o_menu_applications_sales_point_of_sale_payment_worldline"><a class="reference internal" href="../../../applications/sales/point_of_sale/payment/worldline.html">Worldline</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l3 o_menu_applications_productivity_mail_plugins"><a class="reference internal" href="../../../applications/productivity/mail_plugins.html">Mail Plugins</a><ul>
+<li class="toctree-l4 o_menu_applications_productivity_mail_plugins_outlook"><a class="reference internal" href="../../../applications/productivity/mail_plugins/outlook.html">Outlook Plugin</a></li>
+<li class="toctree-l4 o_menu_applications_productivity_mail_plugins_gmail"><a class="reference internal" href="../../../applications/productivity/mail_plugins/gmail.html">Gmail Plugin</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_productivity_studio"><a class="reference internal" href="../../../applications/productivity/studio.html">Studio</a><ul>
-<li class="toctree-l4 o_menu_applications_productivity_studio_concepts"><a class="reference internal" href="#">Concepts</a><ul>
-<li class="toctree-l5 o_menu_applications_productivity_studio_concepts_understanding_general"><a class="reference internal" href="../../../applications/productivity/studio/concepts/understanding_general.html">Understanding General Concepts</a></li>
-<li class="toctree-l5 o_menu_applications_productivity_studio_concepts_understanding_automated_actions"><a class="reference internal" href="../../../applications/productivity/studio/concepts/understanding_automated_actions.html">Understanding Automated Actions</a></li>
-</ul>
-</li>
-<li class="toctree-l4 o_menu_applications_productivity_studio_use_cases"><a class="reference internal" href="#">Use Cases</a><ul>
-<li class="toctree-l5 o_menu_applications_productivity_studio_use_cases_models_fields"><a class="reference internal" href="../../../applications/productivity/studio/use_cases/models_fields.html">Advanced Use Cases: Creating Models and Adding Fields</a></li>
-<li class="toctree-l5 o_menu_applications_productivity_studio_use_cases_filters_status_bar"><a class="reference internal" href="../../../applications/productivity/studio/use_cases/filters_status_bar.html">Advanced Use Cases: Filters and Status Bar</a></li>
-<li class="toctree-l5 o_menu_applications_productivity_studio_use_cases_automated_actions"><a class="reference internal" href="../../../applications/productivity/studio/use_cases/automated_actions.html">Advanced Use Cases: Automated Actions</a></li>
-<li class="toctree-l5 o_menu_applications_productivity_studio_use_cases_views"><a class="reference internal" href="../../../applications/productivity/studio/use_cases/views.html">Advanced Use Cases: Views</a></li>
-</ul>
-</li>
-<li class="toctree-l4 o_menu_applications_productivity_studio_how_to"><a class="reference internal" href="#">How To</a><ul>
-<li class="toctree-l5 o_menu_applications_productivity_studio_how_to_rainbow_man"><a class="reference internal" href="../../../applications/productivity/studio/how_to/rainbow_man.html">Customizing the Rainbow Man</a></li>
-<li class="toctree-l5 o_menu_applications_productivity_studio_how_to_reports"><a class="reference internal" href="../../../applications/productivity/studio/how_to/reports.html">Customizing Reports</a></li>
-<li class="toctree-l5 o_menu_applications_productivity_studio_how_to_export_import"><a class="reference internal" href="../../../applications/productivity/studio/how_to/export_import.html">Export and Import Modules</a></li>
-</ul>
-</li>
+<li class="toctree-l4 o_menu_applications_productivity_studio_fields"><a class="reference internal" href="../../../applications/productivity/studio/fields.html">Fields and widgets</a></li>
+<li class="toctree-l4 o_menu_applications_productivity_studio_views"><a class="reference internal" href="../../../applications/productivity/studio/views.html">Views</a></li>
+<li class="toctree-l4 o_menu_applications_productivity_studio_models_modules_apps"><a class="reference internal" href="../../../applications/productivity/studio/models_modules_apps.html">Models, modules, and apps</a></li>
+<li class="toctree-l4 o_menu_applications_productivity_studio_automated_actions"><a class="reference internal" href="../../../applications/productivity/studio/automated_actions.html">Automated actions (automations)</a></li>
 </ul>
 </li>
 </ul>
@@ -1662,6 +1693,7 @@
 <li class="toctree-l4 o_menu_applications_general_calendars_google_google_calendar_credentials"><a class="reference internal" href="../../../applications/general/calendars/google/google_calendar_credentials.html">Synchronize Google Calendar with Odoo</a></li>
 </ul>
 </li>
+<li class="toctree-l3 o_menu_applications_general_digest_emails"><a class="reference internal" href="../../../applications/general/digest_emails.html">Digest Emails</a></li>
 <li class="toctree-l3 o_menu_applications_general_in_app_purchase"><a class="reference internal" href="../../../applications/general/in_app_purchase.html">In-App Purchase (IAP)</a></li>
 <li class="toctree-l3 o_menu_applications_general_developer_mode"><a class="reference internal" href="../../../applications/general/developer_mode.html">Developer Mode (debug mode)</a></li>
 </ul>
@@ -1740,9 +1772,11 @@
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_16_guidelines_pr"><a class="reference internal" href="16_guidelines_pr.html">第16章: コードの洗練化とPRの提出</a></li>
 <li class="toctree-l4 current o_menu_developer_howtos_rdtraining_"><a class="current reference internal" href="#">上級者向け B: ACLとレコード ルール</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_C_data"><a class="reference internal" href="C_data.html">上級者向け C: マスターとデモデータ</a></li>
+<li class="toctree-l4 o_menu_developer_howtos_rdtraining_D_mixins"><a class="reference internal" href="D_mixins.html">上級者向け D: Mixins</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_E_unittest"><a class="reference internal" href="E_unittest.html">上級者向け E: Python ユニットテスト</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_J_reports"><a class="reference internal" href="J_reports.html">上級者向け J: PDF レポート</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_K_dashboard"><a class="reference internal" href="K_dashboard.html">上級者向け K: ダッシュボード</a></li>
+<li class="toctree-l4 o_menu_developer_howtos_rdtraining_N_security"><a class="reference internal" href="N_security.html">上級者向け N: セキュリティ</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_developer_howtos_themes"><a class="reference internal" href="../themes.html">Theme Tutorial</a></li>
@@ -1750,35 +1784,57 @@
 <li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../backend.html">モジュールの構築</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_profilecode"><a class="reference internal" href="../profilecode.html">Profiling Odoo code</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_company"><a class="reference internal" href="../company.html">Multi-company Guidelines</a></li>
-<li class="toctree-l3 o_menu_developer_howtos_localization"><a class="reference internal" href="../localization.html">Accounting Localization</a></li>
+<li class="toctree-l3 o_menu_developer_howtos_accounting_localization"><a class="reference internal" href="../accounting_localization.html">Accounting localization</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_translations"><a class="reference internal" href="../translations.html">Translating Modules</a></li>
 </ul>
 </li>
 <li class="toctree-l2 o_menu_developer_reference"><a class="reference internal" href="#">Reference</a><ul>
-<li class="toctree-l3 o_menu_developer_reference_addons"><a class="reference internal" href="#">Server Addons</a><ul>
-<li class="toctree-l4 o_menu_developer_reference_addons_orm"><a class="reference internal" href="../../reference/addons/orm.html">ORM API</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_data"><a class="reference internal" href="../../reference/addons/data.html">データファイル</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_actions"><a class="reference internal" href="../../reference/addons/actions.html">アクション</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_views"><a class="reference internal" href="../../reference/addons/views.html">Views</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_module"><a class="reference internal" href="../../reference/addons/module.html">Module Manifests</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_reports"><a class="reference internal" href="../../reference/addons/reports.html">QWeb Reports</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_security"><a class="reference internal" href="../../reference/addons/security.html">Security in Odoo</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_testing"><a class="reference internal" href="../../reference/addons/testing.html">Testing Odoo</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_http"><a class="reference internal" href="../../reference/addons/http.html">Web Controllers</a></li>
-<li class="toctree-l4 o_menu_developer_reference_addons_mixins"><a class="reference internal" href="../../reference/addons/mixins.html">Mixins and Useful Classes</a></li>
+<li class="toctree-l3 o_menu_developer_reference_backend"><a class="reference internal" href="#">Python framework</a><ul>
+<li class="toctree-l4 o_menu_developer_reference_backend_orm"><a class="reference internal" href="../../reference/backend/orm.html">ORM API</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_data"><a class="reference internal" href="../../reference/backend/data.html">データファイル</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_actions"><a class="reference internal" href="../../reference/backend/actions.html">アクション</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_views"><a class="reference internal" href="../../reference/backend/views.html">Views</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_module"><a class="reference internal" href="../../reference/backend/module.html">Module Manifests</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_reports"><a class="reference internal" href="../../reference/backend/reports.html">QWeb Reports</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_security"><a class="reference internal" href="../../reference/backend/security.html">Security in Odoo</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_testing"><a class="reference internal" href="../../reference/backend/testing.html">Testing Odoo</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_http"><a class="reference internal" href="../../reference/backend/http.html">Web Controllers</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_mixins"><a class="reference internal" href="../../reference/backend/mixins.html">Mixins and Useful Classes</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_standard_modules"><a class="reference internal" href="#">Standard modules</a><ul>
+<li class="toctree-l5 o_menu_developer_reference_backend_standard_modules_account"><a class="reference internal" href="#">Accounting</a><ul>
+<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_account_tag"><a class="reference internal" href="../../reference/backend/standard_modules/account/account_account_tag.html">Account Tag</a></li>
+<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_account"><a class="reference internal" href="../../reference/backend/standard_modules/account/account_account.html">Account</a></li>
+<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_chart_template"><a class="reference internal" href="../../reference/backend/standard_modules/account/account_chart_template.html">Chart Template</a></li>
+<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_fiscal_position"><a class="reference internal" href="../../reference/backend/standard_modules/account/account_fiscal_position.html">Fiscal Position</a></li>
+<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_group"><a class="reference internal" href="../../reference/backend/standard_modules/account/account_group.html">Account Group</a></li>
+<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_tax_report_line"><a class="reference internal" href="../../reference/backend/standard_modules/account/account_tax_report_line.html">Tax Report Line</a></li>
+<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_tax"><a class="reference internal" href="../../reference/backend/standard_modules/account/account_tax.html">Taxes</a></li>
+<li class="toctree-l6 o_menu_developer_reference_backend_standard_modules_account_account_tax_repartition"><a class="reference internal" href="../../reference/backend/standard_modules/account/account_tax_repartition.html">Tax Repartitions</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_developer_reference_javascript"><a class="reference internal" href="#">Javascript Modules</a><ul>
-<li class="toctree-l4 o_menu_developer_reference_javascript_javascript_cheatsheet"><a class="reference internal" href="../../reference/javascript/javascript_cheatsheet.html">Javascript Cheatsheet</a></li>
-<li class="toctree-l4 o_menu_developer_reference_javascript_javascript_reference"><a class="reference internal" href="../../reference/javascript/javascript_reference.html">Javascript Reference</a></li>
-<li class="toctree-l4 o_menu_developer_reference_javascript_mobile"><a class="reference internal" href="../../reference/javascript/mobile.html">Mobile JavaScript</a></li>
-<li class="toctree-l4 o_menu_developer_reference_javascript_qweb"><a class="reference internal" href="../../reference/javascript/qweb.html">QWeb Templates</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 o_menu_developer_reference_frontend"><a class="reference internal" href="#">JavaScript framework</a><ul>
+<li class="toctree-l4 o_menu_developer_reference_frontend_framework_overview"><a class="reference internal" href="../../reference/frontend/framework_overview.html">Framework Overview</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_assets"><a class="reference internal" href="../../reference/frontend/assets.html">Assets</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_javascript_modules"><a class="reference internal" href="../../reference/frontend/javascript_modules.html">Javascript Modules</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_owl_components"><a class="reference internal" href="../../reference/frontend/owl_components.html">Owl Components</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_registries"><a class="reference internal" href="../../reference/frontend/registries.html">Registries</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_services"><a class="reference internal" href="../../reference/frontend/services.html">Services</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_hooks"><a class="reference internal" href="../../reference/frontend/hooks.html">Hooks</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_patching_code"><a class="reference internal" href="../../reference/frontend/patching_code.html">Patching code</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_javascript_cheatsheet"><a class="reference internal" href="../../reference/frontend/javascript_cheatsheet.html">Javascript Cheatsheet</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_javascript_reference"><a class="reference internal" href="../../reference/frontend/javascript_reference.html">Javascript Reference</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_mobile"><a class="reference internal" href="../../reference/frontend/mobile.html">Mobile JavaScript</a></li>
+<li class="toctree-l4 o_menu_developer_reference_frontend_qweb"><a class="reference internal" href="../../reference/frontend/qweb.html">QWeb Templates</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2 o_menu_developer_api"><a class="reference internal" href="#">API</a><ul>
-<li class="toctree-l3 o_menu_developer_api_external_api"><a class="reference internal" href="../../api/external_api.html">External API</a></li>
+<li class="toctree-l3 o_menu_developer_api_external_api"><a class="reference internal" href="../../api/external_api.html">外部API</a></li>
 <li class="toctree-l3 o_menu_developer_api_iap"><a class="reference internal" href="../../api/iap.html">In-App Purchase</a></li>
 <li class="toctree-l3 o_menu_developer_api_extract_api"><a class="reference internal" href="../../api/extract_api.html">Extract API</a></li>
 </ul>
@@ -1846,7 +1902,7 @@
             <button class="btn btn-sm dropdown-toggle"
                     id="versions"
                     disabled="">
-                Odoo 14 
+                Odoo 15 
             </button>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="versions">
         </ul>
@@ -1870,7 +1926,7 @@
         <li class="right" >
           <a href="16_guidelines_pr.html" title="第16章: コードの洗練化とPRの提出"
              accesskey="P">前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Odoo 14.0 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Odoo 15.0 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../developer.html" >開発者向け</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../howtos.html" >チュートリアル</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="../rdtraining.html" accesskey="U">Getting started</a> &#187;</li>
@@ -1887,7 +1943,11 @@
 <div class="alert alert-warning">
 <p class="alert-title">
 警告</p><p>このチュートリアルでは、 <a class="reference internal" href="../rdtraining.html#howto-rdtraining"><span class="std std-ref">Coreトレーニング</span></a> を完了したと仮定しています。</p>
-<p>この演習を行うには、リポジトリ <code class="docutils literal notranslate"><span class="pre">https://github.com/odoo/technical-training-solutions</span></code> からブランチ 14.0-core を取得することをお勧めします。このブランチには、コアトレーニングで作成されたモジュールのバージョンが含まれており、これを出発点として使用することができます。</p>
+<p>To follow the exercise, it is recommended that you fetch the branch
+15.0-core from the
+<a class="reference external" href="https://github.com/odoo/technical-training-solutions/tree/15.0-core">technical training solutions</a> repository.
+It contains a version of the module created during the core training we can use
+as a starting point.</p>
 </div>
 <p>ここまでは、便利な機能の実装を中心に説明してきました。しかし、ほとんどのビジネスシナリオでは、すぐに <em>セキュリティ</em> が問題になります。</p>
 <ul class="simple">
@@ -1899,19 +1959,22 @@
 <li><p>第三者が物件に直接アクセスできるようにはしたくありません。</p></li>
 <li><p>当社の従業員全員が不動産エージェントではないため(例：管理担当者、不動産管理者など) 、エージェントではない人に利用可能な物件を見せたくありません。</p></li>
 <li><p>不動産業者は、 <em>利用可能な</em> 物件の種類やタグを決定する必要はありません。</p></li>
-<li><p>不動産業者は <em>独占的な</em> 物件を持つことができますが、あるエージェントが他のエージェントの独占的な物件を管理することは望んでいません。</p></li>
+<li><p>Real-estate agents can have <em>exclusive</em> properties, we do not want one agent
+to be able to manage another's exclusives.</p></li>
 <li><p>すべての不動産業者は、自分が管理する物件の販売内容を確認できるべきですが、システム内の請求書を検証したり、支払い済みとしてマークしたりすることはできないようにします。</p></li>
 </ul>
 <div class="alert alert-note">
 <p class="alert-title">
 注釈</p><p>小規模な企業であれば、これらのいくつか、あるいはほとんどの機能を利用しても問題ないかもしれません。</p>
-<p>ユーザーが不要なセキュリティ・ルールを無効にすることは、何もないところからセキュリティ・ルールを作成するよりも簡単なので、慎重を期してアクセスを制限する方が良いでしょう。ユーザーは、必要に応じて、あるいは便利さに応じて、そのアクセスを緩和することができます。</p>
+<p>Because it's easier for users to disable unnecessary security rules than it
+is to create them from nothing, it's better to err on the side of caution
+and limit access: users can relax that access if necessary or convenient.</p>
 </div>
 </section><section id="groups">
 <h2>グループ<a class="headerlink" href="#groups" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="alert alert-go_to">
 <p class="alert-title">
-参考</p><p>このトピックに関連するドキュメントは、 <a class="reference internal" href="../../reference/addons/security.html#reference-security"><span class="std std-ref">セキュリティ リファレンス</span></a> にあります。</p>
+参考</p><p>このトピックに関連するドキュメントは、 <a class="reference internal" href="../../reference/backend/security.html#reference-security"><span class="std std-ref">セキュリティ リファレンス</span></a> にあります。</p>
 <p><a class="reference internal" href="../../../contributing/development/coding_guidelines.html"><span class="doc">Coding Guidelines</span></a> document the format and
 location of master data items.</p>
 </div>
@@ -1964,7 +2027,7 @@ Exercise</p><p>Webインターフェイスを介して、 &quot;不動産エー�
 <h2>アクセス権限<a class="headerlink" href="#access-rights" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="alert alert-go_to">
 <p class="alert-title">
-参考</p><p>このトピックに関連する文書は、 <a class="reference internal" href="../../reference/addons/security.html#reference-security-acl"><span class="std std-ref">アクセス権限</span></a> にあります。</p>
+参考</p><p>このトピックに関連する文書は、 <a class="reference internal" href="../../reference/backend/security.html#reference-security-acl"><span class="std std-ref">アクセス権限</span></a> にあります。</p>
 </div>
 <div class="admonition-goal alert">
 <p class="alert-title">
@@ -2045,7 +2108,7 @@ Exercise</p><p>アクセス権ファイルを次のようにしてみましょ�
 <h2>Record Rules<a class="headerlink" href="#record-rules" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="alert alert-go_to">
 <p class="alert-title">
-参考</p><p>このトピックに関連するドキュメントは、 <a class="reference internal" href="../../reference/addons/security.html#reference-security-rules"><span class="std std-ref">Record Rules</span></a> にあります。</p>
+参考</p><p>このトピックに関連するドキュメントは、 <a class="reference internal" href="../../reference/backend/security.html#reference-security-rules"><span class="std std-ref">Record Rules</span></a> にあります。</p>
 </div>
 <div class="admonition-goal alert">
 <p class="alert-title">
@@ -2058,7 +2121,7 @@ individual records:</p>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>A description of the rule&#39;s role<span class="nt">&lt;/field&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;model_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;model_to_manage&quot;</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;perm_read&quot;</span> <span class="na">eval=</span><span class="s">&quot;False&quot;</span><span class="nt">/&gt;</span>
-    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;groups&quot;</span> <span class="na">eval=</span><span class="s">&quot;[(4, ref(&#39;base.group_user&#39;))]&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;groups&quot;</span> <span class="na">eval=</span><span class="s">&quot;[Command.link(ref(&#39;base.group_user&#39;))]&quot;</span><span class="nt">/&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;domain_force&quot;</span><span class="nt">&gt;</span>[
         &#39;|&#39;, (&#39;user_id&#39;, &#39;=&#39;, user.id),
              (&#39;user_id&#39;, &#39;=&#39;, False)
@@ -2066,7 +2129,7 @@ individual records:</p>
 <span class="nt">&lt;/record&gt;</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../../reference/addons/orm.html#reference-orm-domains"><span class="std std-ref">Search domains</span></a> は、アクセスを管理するためのものです。レコードがパスされた場合、アクセスが許可され、そうでなければ、アクセスが拒否されます。</p>
+<p><a class="reference internal" href="../../reference/backend/orm.html#reference-orm-domains"><span class="std std-ref">Search domains</span></a> は、アクセスを管理するためのものです。レコードがパスされた場合、アクセスが許可され、そうでなければ、アクセスが拒否されます。</p>
 <div class="alert alert-tip">
 <p class="alert-title">
 ちなみに</p><p>ルールはやや複雑で、一括して作成されない傾向があるため、通常はアクセス権に使用されるCSVではなく、XMLで作成されます。</p>
@@ -2074,7 +2137,7 @@ individual records:</p>
 <p>上記のルールについて：</p>
 <ul class="simple">
 <li><p>&quot;作成（create）&quot;、&quot;更新（update）&quot; (write) 、 &quot;削除（delete）&quot; (unlink) といった操作にのみ適用されます。ここでは、すべての従業員が他のユーザーの記録を見ることができますが、作成者/担当者のみがレコードを更新できます。</p></li>
-<li><p><a class="reference internal" href="../../reference/addons/security.html#reference-security-rules-global"><span class="std std-ref">非グローバル</span></a> ですので、マネージャーなどの追加ルールを提供できます。</p></li>
+<li><p><a class="reference internal" href="../../reference/backend/security.html#reference-security-rules-global"><span class="std std-ref">非グローバル</span></a> ですので、マネージャーなどの追加ルールを提供できます。</p></li>
 <li><p>現在のユーザー (<code class="docutils literal notranslate"><span class="pre">user.id</span></code>) がレコードに設定されている場合 (例：作成した、または、割り当てられている) や、レコードに関連するユーザーが全くいない場合に、操作を許可します。</p></li>
 </ul>
 <div class="alert alert-note">
@@ -2153,8 +2216,11 @@ right being checked:</p>
 <ul class="simple">
 <li><p>現在のユーザーが誰であるかをチェックし (<code class="docutils literal notranslate"><span class="pre">self.env.user</span></code>) 、特定のモデルやレコードと照合する。</p></li>
 <li><p>現在のユーザーが、操作を許可または拒否するためにハードコードされた特定のグループを持っているかどうかをチェックする (<code class="docutils literal notranslate"><span class="pre">self.env.user.has_group</span></code>) 。</p></li>
-<li><p>レコードセットの <code class="docutils literal notranslate"><span class="pre">check_access_rights(operation)</span></code> メソッドを呼び出して、現在のユーザがモデル自体へのアクセス権を持っているかどうかを確認する。</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">check_access_rule(operation)</span></code> メソッドを空ではないレコードセットで呼び出し、現在のユーザがセット内の <em>すべての</em> レコードに対して操作を実行することを許可されているかどうかを検証する。</p></li>
+<li><p>Calling the <code class="docutils literal notranslate"><span class="pre">check_access_rights(operation)</span></code> method on a recordset, this
+verifies whether the current user has access to the model itself.</p></li>
+<li><p>Calling <code class="docutils literal notranslate"><span class="pre">check_access_rule(operations)</span></code> on a non-empty recordset, this
+verifies that the current user is allowed to perform the operation on <em>every</em>
+record of the set.</p></li>
 </ul>
 <div class="alert alert-warning">
 <p class="alert-title">
@@ -2164,24 +2230,32 @@ also check access rights beforehand.</p>
 </div>
 <div class="alert alert-exercise">
 <p class="alert-title">
-Exercise</p><p>請求書を作成する前に、 <code class="docutils literal notranslate"><span class="pre">check_access_rights</span></code> と <code class="docutils literal notranslate"><span class="pre">check_access_rule</span></code> を使って、現在のユーザが一般的に物件を更新できるかどうか、特に、このある物件を更新できるかどうかを確認してみましょう。</p>
+Exercise</p><p>Before creating the invoice, use <code class="docutils literal notranslate"><span class="pre">check_access_rights</span></code> and
+<code class="docutils literal notranslate"><span class="pre">check_access_rule</span></code> to ensure that the current user can update properties
+in general as well as the specific property the invoice is for.</p>
 <p>バイパス・スクリプトを再実行し、印刷の前にエラーが発生することを確認してみましょう。</p>
 </div>
 </section><section id="multi-company-security">
 <span id="howto-rdtraining-b-acl-irrules-multicompany"></span><h2>マルチカンパニーでのセキュリティ<a class="headerlink" href="#multi-company-security" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="alert alert-go_to">
 <p class="alert-title">
-参考</p><p><a class="reference internal" href="../company.html#reference-howtos-company"><span class="std std-ref">Multi-company Guidelines</span></a> では、一般的なマルチカンパニー・ファシリティの概要と、特に <a class="reference internal" href="../company.html#howto-company-security"><span class="std std-ref">マルチカンパニーにおけるセキュリティルール</span></a> について説明しています。</p>
-<p>一般的なルールに関する文書は、 <a class="reference internal" href="../../reference/addons/security.html#reference-security-rules"><span class="std std-ref">Record Rules</span></a> にあります。</p>
+参考</p><p><a class="reference internal" href="../company.html#reference-howtos-company"><span class="std std-ref">Multi-company Guidelines</span></a> for an overview of multi-company facilities
+in general, and <a class="reference internal" href="../company.html#howto-company-security"><span class="std std-ref">multi-company security rules</span></a>
+in particular.</p>
+<p>一般的なルールに関する文書は、 <a class="reference internal" href="../../reference/backend/security.html#reference-security-rules"><span class="std std-ref">Record Rules</span></a> にあります。</p>
 </div>
 <div class="admonition-goal alert">
 <p class="alert-title">
 <strong>目標</strong></p><p>このセクションの最後では、エージェントが自分の所属するエージェンシー(または複数のエージェンシー) の物件にのみアクセスできるようになります。</p>
 </div>
-<p>当社の不動産事業は、何らかの理由で複数の会社で運営する必要があります。例えば、主に、独立した代理店であったり、フランチャイズ方式であったり、複数のブランド(他の不動産事業を買収した場合もあります) であったりしますが、それらは法的にも財務的にも互いに独立しています。</p>
+<p>For one reason or another we might need to manage our real-estate business
+as multiple companies e.g. we might have largely autonomous agencies, a
+franchise setup, or multiple brands (possibly from having acquired other
+real-estate businesses) which remain legally or financially separate from one
+another.</p>
 <p>Odoo can be used to manage multiple companies inside the same system, however
 the actual handling is up to individual modules: Odoo itself provides the tools
-to manage the issue like company-dependent fields and <em>multi-company rules</em>,
+to manage the issue of company-dependent fields and <em>multi-company rules</em>,
 which is what we're going to concern ourselves with.</p>
 <p>私たちは、異なる代理店を互いに &quot;サイロ化&quot; し、物件は特定の代理店に属し、ユーザー(代理店またはマネージャー) は自分の代理店にリンクされた物件のみを見ることができるようにしたいと考えています。</p>
 <p>先に述べたように、これは自明ではない記録に基づいているため、ユーザにとってはルールを厳しくするよりも緩める方が簡単であり、比較的強いセキュリティモデルをデフォルトにすることは理にかなっています。</p>
@@ -2204,7 +2278,9 @@ which is what we're going to concern ourselves with.</p>
 </div>
 <div class="alert alert-danger">
 <p class="alert-title">
-危険</p><p>マルチカンパニーのルールは通常 <a class="reference internal" href="../../reference/addons/security.html#reference-security-rules-global"><span class="std std-ref">グローバル</span></a> なものであり、その一方で、追加のルールによってマルチカンパニーのルールを迂回できるようになるリスクが高くなります。</p>
+危険</p><p>Multi-company rules are usually <a class="reference internal" href="../../reference/backend/security.html#reference-security-rules-global"><span class="std std-ref">global</span></a>,
+otherwise there is a high risk that additional rules would allow bypassing
+the multi-company rules.</p>
 </div>
 <div class="alert alert-exercise">
 <p class="alert-title">
@@ -2225,12 +2301,14 @@ Exercise</p><ul class="simple">
 <h2>可視性 != セキュリティ<a class="headerlink" href="#visibility-security" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="admonition-goal alert">
 <p class="alert-title">
-<strong>目標</strong></p><p>このセクションの最後には、不動産エージェントは不動産アプリケーションの設定メニューを見ることはできないが、それでも物件タイプやタグを設定することができるままになっています。</p>
+<strong>目標</strong></p><p>At the end of this section, real-estate agents should not see the Settings
+menu of the real-estate application, but should still be able to set the
+property type or tags.</p>
 </div>
 <p>特定のOdooモデルをグループ(または会社やユーザー) に直接関連付けることができます。この関連付けが <em>セキュリティ</em> 機能なのか <em>可視化</em> 機能なのかを利用する前に把握することが重要です。</p>
 <ul class="simple">
 <li><p><em>Visibility</em> features mean a user can still access the model or record
-otherwise, either through an other part of the interface or by <a class="reference internal" href="../../api/external_api.html"><span class="doc">perform
+otherwise, either through another part of the interface or by <a class="reference internal" href="../../api/external_api.html"><span class="doc">performing
 operations remotely using RPC</span></a>, things might just not be
 visible in the web interface in some contexts.</p></li>
 <li><p><em>セキュリティ</em> 機能とは、ユーザーがレコード、フィールド、操作にアクセスできないことを意味します。</p></li>
@@ -2249,8 +2327,10 @@ visible in the web interface in some contexts.</p></li>
 </ul>
 <div class="alert alert-exercise">
 <p class="alert-title">
-Exercise</p><p>不動産エージェントは、物件タイプやタグを追加することはできず、物件作成時に物件フォームビューからオプションを表示することができます。</p>
-<p>設定メニューは、インターフェイスにノイズを加えるだけで、管理者のみが見ることができるはずです。</p>
+Exercise</p><p>Real Estate agents can not add property types or tags, but can see their
+options from the Property form view when creating it.</p>
+<p>The Settings menu just adds noise to their interface, make it only
+visible to managers.</p>
 </div>
 <p>物件タイプや物件タグのメニューにアクセスできなくなったにもかかわらず、エージェントはタグやタイプを選択してプロパティに設定することができるので、オブジェクトそのものにアクセスすることができます。</p>
 <dl class="footnote brackets">
@@ -2264,7 +2344,7 @@ Exercise</p><p>不動産エージェントは、物件タイプやタグを追�
 </section>
 
                     </div>
-                        <a href="https://github.com/odoo/documentation/edit/14.0/content/developer/howtos/rdtraining/B_acl_irrules.rst"
+                        <a href="https://github.com/odoo/documentation/edit/15.0/content/developer/howtos/rdtraining/B_acl_irrules.rst"
                            class="o_git_link d-none d-lg-inline-block">
                             <i class="i-edit"></i> Edit on GitHub
                         </a>
@@ -2322,7 +2402,7 @@ Exercise</p><p>不動産エージェントは、物件タイプやタグを追�
         <li class="right" >
           <a href="16_guidelines_pr.html" title="第16章: コードの洗練化とPRの提出"
              >前へ</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Odoo 14.0 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Odoo 15.0 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../developer.html" >開発者向け</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../howtos.html" >チュートリアル</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="../rdtraining.html" >Getting started</a> &#187;</li>
