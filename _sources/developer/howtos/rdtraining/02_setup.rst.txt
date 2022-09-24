@@ -8,9 +8,8 @@ code`), which is best suited for Odoo developers.
 
 Throughout this document, we assume that you are installing your development environment on a
 laptop provided by Odoo with Linux Mint installed and up-to-date. If that is not the case, switch to
-the appropriate section of the installation guide, depending on whether you are on :ref:`Windows
-<setup/install/source/windows>` or :ref:`Mac OS <setup/install/source/mac_os>`. The steps remain
-essentially the same.
+the :guilabel:`Windows` or :guilabel:`Mac OS` tab if any section of the installation guide,
+depending on which OS you are on. The steps remain essentially the same.
 
 Set up Git
 ==========
@@ -95,7 +94,7 @@ It is time to fetch the source code of Odoo. First, let's create a home for the 
    $ cd $HOME/src
 
 Then, clone the two repositories with SSH as explained in the :ref:`Installing Odoo guide
-<setup/install/source/linux/git>`.
+<setup/install/source/git>`.
 
 .. tip::
    Cloning the repositories will take a while, enjoy a cup of coffee while you wait.
@@ -137,7 +136,7 @@ Install the dependencies
 As seen in :ref:`howto/rdtraining/01_architecture`, Odoo's server runs on Python and uses PostgreSQL
 as an RDBMS. In the context of a development machine, the easiest approach is to install everything
 locally. To do so, follow once again the :ref:`Installing Odoo guide
-<setup/install/source/linux/prepare>`.
+<setup/install/source/prepare>`.
 
 .. tip::
    Some useful SQL commands:
@@ -249,10 +248,10 @@ Here are some useful Git commands for your day-to-day work.
   .. code-block:: console
 
      $ cd $HOME/src/odoo
-     $ git switch 15.0
+     $ git switch master
 
      $ cd $HOME/src/enterprise
-     $ git switch 15.0
+     $ git switch master
 
 - Fetch and rebase:
 
@@ -260,11 +259,11 @@ Here are some useful Git commands for your day-to-day work.
 
      $ cd $HOME/src/odoo
      $ git fetch --all --prune
-     $ git rebase --autostash odoo/15.0
+     $ git rebase --autostash odoo/master
 
      $ cd $HOME/src/enterprise
      $ git fetch --all --prune
-     $ git rebase --autostash enterprise/15.0
+     $ git rebase --autostash enterprise/master
 
 Code Editor
 -----------

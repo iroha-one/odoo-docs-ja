@@ -292,9 +292,11 @@ Emails
 
 .. option:: --from-filter <address or domain>
 
-    Email address or domain that the mail server is configured for. If the 
-    email of the sender does not match this value, it might be encapsulated 
-    into ``mail.default.from``.
+    Define which email address the SMTP configuration will apply to. The field can be a domain name
+    or an entire email address, or it can remain empty. If the sender's email address does not
+    match this set filter, then the email will be encapsulated using a combination of the two
+    system parameters: ``mail.default.from`` and ``mail.catchall.domain``. For example, "Admin"
+    <admin\@example.com> => "Admin" <notifications\@mycompany.com>.
 
 .. option:: --smtp <server>
 
@@ -316,11 +318,12 @@ Emails
 
 .. option:: --smtp-ssl-certificate-filename <path/to/cert.pem>
 
-    SSL certificate used for SMTP authentication
+    An SSL certificate is to be used for authentication. If set, then `smtp-ssl-private-key` is
+    required.
 
 .. option:: --smtp-ssl-private-key-filename <path/to/key.pem>
 
-    SSL private key used for SMTP authentication
+    An SSL private key is used for authentication. If set, then `smtp-ssl-certificate` is required.
 
 .. _reference/cmdline/server/internationalisation:
 
@@ -379,7 +382,8 @@ Developer features
 
     * ``xml``: read QWeb template from xml file directly instead of database.
       Once a template has been modified in database, it will be not be read from
-      the xml file until the next update/init.
+      the xml file until the next update/init. Particularly, templates are not
+      translated on using this option.
 
     * ``reload``: restart server when python file are updated (may not be detected
       depending on the text editor used)
@@ -415,9 +419,9 @@ HTTP
 
     Port on which the HTTP server listens, defaults to 8069.
 
-.. option:: --longpolling-port <port>
+.. option:: --gevent-port <port>
 
-    TCP port for long-polling connections in multiprocessing or gevent mode,
+    TCP port for websocket connections in multiprocessing or gevent mode,
     defaults to 8072. Not used in default (threaded) mode.
 
 .. option:: --proxy-mode
@@ -428,6 +432,12 @@ HTTP
 
     .. warning:: proxy mode *must not* be enabled outside of a reverse proxy
                  scenario
+
+.. option:: --x-sendfile
+
+    delegates serving attachments files to the static web server and sets both
+    ``X-Sendfile`` (apache) and ``X-Accel-*`` (nginx) http headers on stream
+    responses. See :ref:`deploy/streaming` for web server configuration.
 
 .. _reference/cmdline/server/logging:
 
