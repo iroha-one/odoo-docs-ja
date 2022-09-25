@@ -1956,16 +1956,13 @@
 </section><section id="multitier-application">
 <h2>多層アプリケーション<a class="headerlink" href="#multitier-application" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Odoo は <a class="reference external" href="https://en.wikipedia.org/wiki/Multitier_architecture">multitier architecture</a> （多層アーキテクチャ）に準拠しており、プレゼンテーション、ビジネスロジック、データストレージは分離されています。 具体的には、3層アーキテクチャを使用しています(Wikipediaの画像)。</p>
-<img alt="Three-tier architecture" class="align-center" src="../../../_images/three_tier.svg" /><p>プレゼンテーション層は、HTML5、JavaScript、CSSの組み合わせで構成されています。ロジック層はPythonのみで書かれており、データ層はRDBMSであるPostgreSQLのみをサポートしています。</p>
+<img alt="3層アーキテクチャ" class="align-center" src="../../../_images/three_tier.svg" /><p>プレゼンテーション層は、HTML5、JavaScript、CSSの組み合わせで構成されています。ロジック層はPythonのみで書かれており、データ層はRDBMSであるPostgreSQLのみをサポートしています。</p>
 <p>モジュールの範囲に応じて、Odooの開発はこれらの層のいずれかで行うことができます。したがって、先に進む前に、これらのトピックに関して中級レベルの知識を持っていない場合は、あなた自身の記憶をリフレッシュするのが良いかもしれません。</p>
 <p>このチュートリアルを進めるためには、HTMLのごく基本的な知識とPythonの中級レベルが必要となります。上級者向けトピックスでは、他の科目の知識が必要になります。自由にアクセスできるチュートリアルはたくさんありますが、各自のバックグラウンドに依存するため、どれかを推奨することはできません。</p>
 <p>参考までに、<a class="reference external" href="https://docs.python.org/3.7/tutorial/">Python tutorial</a> これは公式のPythonチュートリアルです。</p>
 <div class="alert alert-note">
 <p class="alert-title">
-注釈</p><p>Since version 15.0, Odoo is actively transitioning to using its own in-house developed <a class="reference external" href="https://odoo.github.io/owl/">OWL
-framework</a> as part of its presentation tier. The legacy JavaScript
-framework is still supported but will be deprecated over time. This will be discussed further in
-advanced topics.</p>
+注釈</p><p>バージョン15.0以降、Odooは自社で開発した <a class="reference external" href="https://odoo.github.io/owl/">OWLフレームワーク</a> をプレゼンテーション階層の一部として活発に使用しています。 従来のJavaScriptフレームワークはまだサポートされていますが、時間の経過とともに非推奨となります。これは高度なトピックで詳しく説明します。</p>
 </div>
 </section><section id="odoo-modules">
 <h2>Odoo モジュール<a class="headerlink" href="#odoo-modules" title="このヘッドラインへのパーマリンク">¶</a></h2>
