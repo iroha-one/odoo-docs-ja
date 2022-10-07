@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Send and Receive Emails in Odoo with an Email Server &#8212; Odoo 16.0 ドキュメント</title>
+    <title>Send and receive emails in Odoo with an email server &#8212; Odoo 16.0 ドキュメント</title>
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
@@ -572,7 +572,7 @@
 <li class="toctree-l3 o_menu_applications_inventory_and_mrp_manufacturing"><a class="reference internal" href="../../inventory_and_mrp/manufacturing.html">製造</a><ul>
 <li class="toctree-l4 o_menu_applications_inventory_and_mrp_manufacturing_management"><a class="reference internal" href="#">Manufacturing Management</a><ul>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_bill_configuration"><a class="reference internal" href="../../inventory_and_mrp/manufacturing/management/bill_configuration.html">Create Bills of Materials</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_product_variants"><a class="reference internal" href="../../inventory_and_mrp/manufacturing/management/product_variants.html">Variants BOM Management</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_product_variants"><a class="reference internal" href="../../inventory_and_mrp/manufacturing/management/product_variants.html">Managing BoMs for product variants</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_kit_shipping"><a class="reference internal" href="../../inventory_and_mrp/manufacturing/management/kit_shipping.html">Kits</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_sub_assemblies"><a class="reference internal" href="../../inventory_and_mrp/manufacturing/management/sub_assemblies.html">Manage semi-finished products</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_quality_control"><a class="reference internal" href="../../inventory_and_mrp/manufacturing/management/quality_control.html">Quality Control</a></li>
@@ -750,7 +750,7 @@
 <li class="toctree-l3 o_menu_applications_general_apps_modules"><a class="reference internal" href="../apps_modules.html">Apps and modules</a></li>
 <li class="toctree-l3 o_menu_applications_general_export_import_data"><a class="reference internal" href="../export_import_data.html">Export and import data</a></li>
 <li class="toctree-l3 current o_menu_applications_general_email_communication"><a class="reference internal" href="#">Email Communication</a><ul class="current">
-<li class="toctree-l4 current o_menu_applications_general_email_communication_"><a class="current reference internal" href="#">Send and Receive Emails in Odoo with an Email Server</a></li>
+<li class="toctree-l4 current o_menu_applications_general_email_communication_"><a class="current reference internal" href="#">Send and receive emails in Odoo with an email server</a></li>
 <li class="toctree-l4 o_menu_applications_general_email_communication_email_domain"><a class="reference internal" href="email_domain.html">Sending emails with Odoo</a></li>
 <li class="toctree-l4 o_menu_applications_general_email_communication_email_template"><a class="reference internal" href="email_template.html">Email Templates</a></li>
 <li class="toctree-l4 o_menu_applications_general_email_communication_faq"><a class="reference internal" href="faq.html">FAQ</a></li>
@@ -829,7 +829,7 @@
 <li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">チュートリアル</a><ul>
 <li class="toctree-l3 o_menu_developer_howtos_rdtraining"><a class="reference internal" href="../../../developer/howtos/rdtraining.html">Getting started</a><ul>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_01_architecture"><a class="reference internal" href="../../../developer/howtos/rdtraining/01_architecture.html">第1章：アーキテクチャの概要</a></li>
-<li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="../../../developer/howtos/rdtraining/02_setup.html">Chapter 2: Development environment setup</a></li>
+<li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="../../../developer/howtos/rdtraining/02_setup.html">第2章：開発環境のセットアップ</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_03_newapp"><a class="reference internal" href="../../../developer/howtos/rdtraining/03_newapp.html">第3章：新規アプリケーション</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_04_basicmodel"><a class="reference internal" href="../../../developer/howtos/rdtraining/04_basicmodel.html">第4章：モデルと基本フィールド</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_05_securityintro"><a class="reference internal" href="../../../developer/howtos/rdtraining/05_securityintro.html">第5章：セキュリティ - 簡単な紹介</a></li>
@@ -857,7 +857,6 @@
 <li class="toctree-l3 o_menu_developer_howtos_website"><a class="reference internal" href="../../../developer/howtos/website.html">Building a Website</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../../../developer/howtos/backend.html">モジュールの構築</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_web_services"><a class="reference internal" href="../../../developer/howtos/web_services.html">Web Services</a></li>
-<li class="toctree-l3 o_menu_developer_howtos_profilecode"><a class="reference internal" href="../../../developer/howtos/profilecode.html">Profiling Odoo code</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_company"><a class="reference internal" href="../../../developer/howtos/company.html">Multi-company Guidelines</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_accounting_localization"><a class="reference internal" href="../../../developer/howtos/accounting_localization.html">Accounting localization</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_translations"><a class="reference internal" href="../../../developer/howtos/translations.html">Translating Modules</a></li>
@@ -875,6 +874,7 @@
 <li class="toctree-l4 o_menu_developer_reference_backend_module"><a class="reference internal" href="../../../developer/reference/backend/module.html">Module Manifests</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_reports"><a class="reference internal" href="../../../developer/reference/backend/reports.html">QWeb Reports</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_security"><a class="reference internal" href="../../../developer/reference/backend/security.html">Security in Odoo</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_performance"><a class="reference internal" href="../../../developer/reference/backend/performance.html">Performance</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_testing"><a class="reference internal" href="../../../developer/reference/backend/testing.html">Testing Odoo</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_http"><a class="reference internal" href="../../../developer/reference/backend/http.html">Web Controllers</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_mixins"><a class="reference internal" href="../../../developer/reference/backend/mixins.html">Mixins and Useful Classes</a></li>
@@ -949,17 +949,17 @@
                 <aside id="o_page_toc_in_nav" class="o_page_toc o_in_nav_toc border-bottom pt-3 pb-3" hidden><div class="o_page_toc_nav mt-1">
     <h3>目次</h3>
     <ul>
-<li><a class="reference internal" href="#">Send and Receive Emails in Odoo with an Email Server</a><ul>
-<li><a class="reference internal" href="#if-you-are-a-user-of-odoo-online-or-odoo-sh">If you are a user of Odoo Online or Odoo.sh...</a></li>
+<li><a class="reference internal" href="#">Send and receive emails in Odoo with an email server</a><ul>
+<li><a class="reference internal" href="#odoo-online-or-odoo-sh-users">Odoo Online or Odoo.sh users</a></li>
 <li><a class="reference internal" href="#scope-of-this-documentation">Scope of this documentation</a></li>
-<li><a class="reference internal" href="#how-to-manage-outbound-messages">How to manage outbound messages</a><ul>
-<li><a class="reference internal" href="#can-i-use-an-office-365-server">Can I use an Office 365 server</a></li>
-<li><a class="reference internal" href="#how-to-use-a-g-suite-server">How to use a G Suite server</a></li>
+<li><a class="reference internal" href="#manage-outbound-messages">Manage outbound messages</a><ul>
+<li><a class="reference internal" href="#use-an-office-365-server">Use an Office 365 server</a></li>
+<li><a class="reference internal" href="#use-a-g-suite-server">Use a G Suite server</a></li>
 <li><a class="reference internal" href="#restriction">Restriction</a></li>
 <li><a class="reference internal" href="#use-a-default-from-email-address">Use a default &quot;From&quot; email address</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#how-to-manage-inbound-messages">How to manage inbound messages</a></li>
+<li><a class="reference internal" href="#manage-inbound-messages">Manage inbound messages</a></li>
 <li><a class="reference internal" href="#set-up-different-dedicated-servers-for-transactional-and-mass-mails">Set up different dedicated servers for transactional and mass mails</a></li>
 </ul>
 </li>
@@ -1508,7 +1508,7 @@
 <li class="toctree-l3 o_menu_applications_inventory_and_mrp_manufacturing"><a class="reference internal" href="../../inventory_and_mrp/manufacturing.html">製造</a><ul>
 <li class="toctree-l4 o_menu_applications_inventory_and_mrp_manufacturing_management"><a class="reference internal" href="#">Manufacturing Management</a><ul>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_bill_configuration"><a class="reference internal" href="../../inventory_and_mrp/manufacturing/management/bill_configuration.html">Create Bills of Materials</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_product_variants"><a class="reference internal" href="../../inventory_and_mrp/manufacturing/management/product_variants.html">Variants BOM Management</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_product_variants"><a class="reference internal" href="../../inventory_and_mrp/manufacturing/management/product_variants.html">Managing BoMs for product variants</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_kit_shipping"><a class="reference internal" href="../../inventory_and_mrp/manufacturing/management/kit_shipping.html">Kits</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_sub_assemblies"><a class="reference internal" href="../../inventory_and_mrp/manufacturing/management/sub_assemblies.html">Manage semi-finished products</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_quality_control"><a class="reference internal" href="../../inventory_and_mrp/manufacturing/management/quality_control.html">Quality Control</a></li>
@@ -1686,7 +1686,7 @@
 <li class="toctree-l3 o_menu_applications_general_apps_modules"><a class="reference internal" href="../apps_modules.html">Apps and modules</a></li>
 <li class="toctree-l3 o_menu_applications_general_export_import_data"><a class="reference internal" href="../export_import_data.html">Export and import data</a></li>
 <li class="toctree-l3 current o_menu_applications_general_email_communication"><a class="reference internal" href="#">Email Communication</a><ul class="current">
-<li class="toctree-l4 current o_menu_applications_general_email_communication_"><a class="current reference internal" href="#">Send and Receive Emails in Odoo with an Email Server</a></li>
+<li class="toctree-l4 current o_menu_applications_general_email_communication_"><a class="current reference internal" href="#">Send and receive emails in Odoo with an email server</a></li>
 <li class="toctree-l4 o_menu_applications_general_email_communication_email_domain"><a class="reference internal" href="email_domain.html">Sending emails with Odoo</a></li>
 <li class="toctree-l4 o_menu_applications_general_email_communication_email_template"><a class="reference internal" href="email_template.html">Email Templates</a></li>
 <li class="toctree-l4 o_menu_applications_general_email_communication_faq"><a class="reference internal" href="faq.html">FAQ</a></li>
@@ -1765,7 +1765,7 @@
 <li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">チュートリアル</a><ul>
 <li class="toctree-l3 o_menu_developer_howtos_rdtraining"><a class="reference internal" href="../../../developer/howtos/rdtraining.html">Getting started</a><ul>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_01_architecture"><a class="reference internal" href="../../../developer/howtos/rdtraining/01_architecture.html">第1章：アーキテクチャの概要</a></li>
-<li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="../../../developer/howtos/rdtraining/02_setup.html">Chapter 2: Development environment setup</a></li>
+<li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="../../../developer/howtos/rdtraining/02_setup.html">第2章：開発環境のセットアップ</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_03_newapp"><a class="reference internal" href="../../../developer/howtos/rdtraining/03_newapp.html">第3章：新規アプリケーション</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_04_basicmodel"><a class="reference internal" href="../../../developer/howtos/rdtraining/04_basicmodel.html">第4章：モデルと基本フィールド</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_05_securityintro"><a class="reference internal" href="../../../developer/howtos/rdtraining/05_securityintro.html">第5章：セキュリティ - 簡単な紹介</a></li>
@@ -1793,7 +1793,6 @@
 <li class="toctree-l3 o_menu_developer_howtos_website"><a class="reference internal" href="../../../developer/howtos/website.html">Building a Website</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../../../developer/howtos/backend.html">モジュールの構築</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_web_services"><a class="reference internal" href="../../../developer/howtos/web_services.html">Web Services</a></li>
-<li class="toctree-l3 o_menu_developer_howtos_profilecode"><a class="reference internal" href="../../../developer/howtos/profilecode.html">Profiling Odoo code</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_company"><a class="reference internal" href="../../../developer/howtos/company.html">Multi-company Guidelines</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_accounting_localization"><a class="reference internal" href="../../../developer/howtos/accounting_localization.html">Accounting localization</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_translations"><a class="reference internal" href="../../../developer/howtos/translations.html">Translating Modules</a></li>
@@ -1811,6 +1810,7 @@
 <li class="toctree-l4 o_menu_developer_reference_backend_module"><a class="reference internal" href="../../../developer/reference/backend/module.html">Module Manifests</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_reports"><a class="reference internal" href="../../../developer/reference/backend/reports.html">QWeb Reports</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_security"><a class="reference internal" href="../../../developer/reference/backend/security.html">Security in Odoo</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_performance"><a class="reference internal" href="../../../developer/reference/backend/performance.html">Performance</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_testing"><a class="reference internal" href="../../../developer/reference/backend/testing.html">Testing Odoo</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_http"><a class="reference internal" href="../../../developer/reference/backend/http.html">Web Controllers</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_mixins"><a class="reference internal" href="../../../developer/reference/backend/mixins.html">Mixins and Useful Classes</a></li>
@@ -1947,7 +1947,7 @@
           <li class="nav-item nav-item-1"><a href="../../../applications.html" >ユーザードキュメント</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../general.html" >Miscellaneous</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="../email_communication.html" accesskey="U">Email Communication</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Send and Receive Emails in Odoo with an Email Server</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Send and receive emails in Odoo with an email server</a></li> 
       </ul>
     </div>
     <div id="wrap">
@@ -1956,123 +1956,105 @@
                 <article id="o_content" class="doc-body">
                     <div role="main"> 
   <section id="send-and-receive-emails-in-odoo-with-an-email-server">
-<h1>Send and Receive Emails in Odoo with an Email Server<a class="headerlink" href="#send-and-receive-emails-in-odoo-with-an-email-server" title="このヘッドラインへのパーマリンク">¶</a></h1>
-</section><section id="if-you-are-a-user-of-odoo-online-or-odoo-sh">
-<h2>If you are a user of Odoo Online or Odoo.sh...<a class="headerlink" href="#if-you-are-a-user-of-odoo-online-or-odoo-sh" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>You have nothing to do! <strong>Odoo sets up its own mail servers for your database.</strong>
-Outgoing and incoming emails work out-of-the-box!</p>
-<p>Unless you plan to send large batches of mass mailing that could require the
-use of an external mail server, simply enjoy your new Odoo database.</p>
+<h1>Send and receive emails in Odoo with an email server<a class="headerlink" href="#send-and-receive-emails-in-odoo-with-an-email-server" title="このヘッドラインへのパーマリンク">¶</a></h1>
+</section><section id="odoo-online-or-odoo-sh-users">
+<h2>Odoo Online or Odoo.sh users<a class="headerlink" href="#odoo-online-or-odoo-sh-users" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Since <strong>Odoo sets up its own mail servers for the database</strong>, outgoing and incoming emails already
+work out-of-the-box. So for <strong>Odoo Online</strong> and <strong>Odoo.sh</strong> customers, nothing needs to be done!</p>
+<p>Unless an external mail server is required to send large batches of mass mailing, simply use the
+standard online Odoo database normally since it has already been preconfigured for email.</p>
 </section><section id="scope-of-this-documentation">
 <h2>Scope of this documentation<a class="headerlink" href="#scope-of-this-documentation" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>This document is <strong>mainly dedicated to Odoo on-premise users</strong> who don't
-benefit from an out-of-the-box solution to send and receive emails in Odoo,
-unlike <a class="reference external" href="https://www.odoo.com/trial">Odoo Online</a> &amp; <a class="reference external" href="https://www.odoo.sh">Odoo.sh</a>.</p>
+<p>This document is <strong>mainly dedicated to Odoo on-premise users</strong> who don't benefit from an
+out-of-the-box solution to send and receive emails in Odoo, unlike <a class="reference external" href="https://www.odoo.com/trial">Odoo Online</a> and <a class="reference external" href="https://www.odoo.sh">Odoo.sh</a>.</p>
+<p>The following sections below contain information on how to integrate an external email server with
+Odoo.</p>
 <div class="alert alert-warning">
 <p class="alert-title">
-警告</p><p>If no one in your company is used to manage email servers, we strongly recommend that
-you opt for those Odoo hosting solutions. Their email system
-works instantly and is monitored by professionals.
-Nevertheless you can still use your own email servers if you want
-to manage your email server's reputation yourself.</p>
+警告</p><p>If no one in the company is used to managing email servers, Odoo Online and Odoo.sh are strongly
+recommended. Those Odoo hosting types' email systems work instantly and are monitored by
+professionals. Nevertheless, a company can use their own email server if they want to manage the
+email server's reputation themselves.</p>
 </div>
-<p>You will find here some useful
-information on how to integrate your own email solution with Odoo.</p>
 <div class="alert alert-note">
 <p class="alert-title">
-注釈</p><p>Office 365 email servers don't easily allow to send external emails from hosts like Odoo. Refer
-to <a class="reference external" href="https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4">Microsoft's documentation</a>
-to make it work.</p>
+注釈</p><p>Office 365 email servers don't easily allow the sending of external emails from hosts like Odoo.
+Refer to <a class="reference external" href="https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4">Microsoft's documentation</a> to make it work.</p>
 </div>
-</section><section id="how-to-manage-outbound-messages">
-<h2>How to manage outbound messages<a class="headerlink" href="#how-to-manage-outbound-messages" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>As a system admin, go to <span class="menuselection">Settings ‣ General Settings</span>
-and check <em>External Email Servers</em>. Then, click <em>Outgoing Mail Servers</em> to create one and reference
-the SMTP data of your email server. Once all the information has been filled out, click on
-<em>Test Connection</em>.</p>
+</section><section id="manage-outbound-messages">
+<h2>Manage outbound messages<a class="headerlink" href="#manage-outbound-messages" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>As a system admin, go to <span class="menuselection">Settings ‣ General Settings ‣ Discuss</span> in Odoo, and
+enable the <span class="guilabel">External Email Servers</span> option. Then, click <span class="guilabel">Save</span>. Next, click
+<span class="guilabel">Outgoing Email Servers</span> and click <span class="guilabel">Create</span> to create a new outgoing mail
+server record in Odoo. Reference the SMTP data of the external email server. Once all the
+information has been filled out, click <span class="guilabel">Test Connection</span>.</p>
 <p>Here is a typical configuration for a G Suite server.</p>
-<img alt="../../../_images/outgoing-server.png" class="align-center" src="../../../_images/outgoing-server.png" />
-<p>Then set your email domain name in the General Settings.</p>
+<img alt="The typical G Suite configuration on Odoo." class="align-center" src="../../../_images/outgoing-server.png" />
+<p>Then, go back to <span class="menuselection">Settings ‣ General Settings ‣ Discuss</span> and set the email
+domain name in the <span class="guilabel">Alias Domain</span> name. Finally, click <span class="guilabel">Save</span> to finish setting
+up the email server.</p>
 <div class="alert alert-note">
 <p class="alert-title">
-注釈</p><p>If you get a <code class="docutils literal notranslate"><span class="pre">[AUTHENTICATIONFAILED]</span> <span class="pre">Invalid</span> <span class="pre">credentials</span> <span class="pre">(Failure)</span></code> warning when you <em>Test
-Connection</em> on a Gmail address, activate the <em>Less secure app access</em> option. A direct link can
-be <a class="reference external" href="https://myaccount.google.com/lesssecureapps?pli=1">accessed here</a>.</p>
-<p>In addition to that, enable the IMAP setting on your Gmail account.</p>
+注釈</p><p>If an <code class="docutils literal notranslate"><span class="pre">[AUTHENTICATION</span> <span class="pre">FAILED]</span> <span class="pre">Invalid</span> <span class="pre">credentials</span> <span class="pre">(Failure)</span></code> warning appears when
+<span class="guilabel">Test Connection</span> is clicked for a Gmail address, activate the <span class="guilabel">Less secure
+app access</span> option. A direct link can be <a class="reference external" href="https://myaccount.google.com/lesssecureapps?pli=1">accessed here</a>.</p>
+<p>In addition to that, enable the <span class="guilabel">IMAP setting</span> on the Gmail account.</p>
 </div>
-</section><section id="can-i-use-an-office-365-server">
-<h3>Can I use an Office 365 server<a class="headerlink" href="#can-i-use-an-office-365-server" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>You can use an Office 365 server if you run Odoo on-premise.
-Office 365 SMTP relays are not compatible with Odoo Online unless you configure
-Odoo to <a class="reference internal" href="#email-communication-default-from"><span class="std std-ref">force the outgoing &quot;From&quot; address</span></a> .</p>
-<p>Please refer to <a class="reference external" href="https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4">Microsoft's documentation</a>
-to configure a SMTP relay for your Odoo's IP address.</p>
-</section><section id="how-to-use-a-g-suite-server">
-<h3>How to use a G Suite server<a class="headerlink" href="#how-to-use-a-g-suite-server" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>You can use an G Suite server for any Odoo hosting type.
-To do so you need to setup the SMTP relay service. The configuration steps are explained in
-<a class="reference external" href="https://support.google.com/a/answer/2956491?hl=en">Google documentation</a>.</p>
+</section><section id="use-an-office-365-server">
+<h3>Use an Office 365 server<a class="headerlink" href="#use-an-office-365-server" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>An Office 365 server can be used if the database's hosting type is <strong>Odoo on-premise</strong>. Office 365
+SMTP relays are not compatible with Odoo Online or Odoo.sh unless Odoo is configured to
+<a class="reference internal" href="#email-communication-default-from"><span class="std std-ref">force the outgoing &quot;From&quot; address</span></a>.</p>
+<p>Please refer to <a class="reference external" href="https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4">Microsoft's documentation</a> to configure an SMTP relay for the Odoo database's IP address.</p>
+</section><section id="use-a-g-suite-server">
+<h3>Use a G Suite server<a class="headerlink" href="#use-a-g-suite-server" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>A G Suite server can be used for any Odoo hosting type. To do so, set up the SMTP relay service.
+The configuration steps are explained in <a class="reference external" href="https://support.google.com/a/answer/2956491?hl=en">Google documentation</a>.</p>
 </section><section id="restriction">
 <h3>Restriction<a class="headerlink" href="#restriction" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Please note that port 25 is blocked for security reasons on our SaaS and Odoo.sh platform. Try using
-465, 587, or 2525.</p>
+<p>Please note that port 25 is blocked for security reasons on the SaaS and Odoo.sh platforms. Try
+using ports 465, 587, or 2525 instead.</p>
 </section><section id="use-a-default-from-email-address">
 <span id="email-communication-default-from"></span><h3>Use a default &quot;From&quot; email address<a class="headerlink" href="#use-a-default-from-email-address" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Sometimes, an email's &quot;From&quot; (outgoing) address can belong to a
-different domain, and that can be a problem.</p>
-<p>For example, if a customer with address <em>mary@customer.example.com</em> responds to
-a message, Odoo will try to redistribute that same email to other subscribers
-in the thread. But if the domain <em>customer.example.com</em> forbids that kind of
-usage for security, the Odoo's redistributed email would get
-rejected by some recipients' mail servers.</p>
-<p>To avoid those kind of problems, you should make sure all emails use a &quot;From&quot;
-address from your authorized domain.</p>
-<p>If your MTA supports <a class="reference external" href="https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme">SRS (Sender Rewriting Scheme)</a>, you can enable it
-to handle these situations. However, that is more complex and requires more
-technical knowledge that is not meant to be covered by this documentation.</p>
-<p>Instead, you can also configure Odoo to do something similar by itself:</p>
+<p>Sometimes, an email's &quot;From&quot; (outgoing) address can belong to a different domain, and that can be a
+problem.</p>
+<p>For example, if a customer with the email address <em>mary@customer.example.com</em> responds to a
+message, Odoo will try to redistribute that same email to the other subscribers in the thread.
+However, if the domain <em>customer.example.com</em> forbids that kind of usage for security, the email
+that Odoo is trying to redistribute would get rejected by some recipients' email servers.</p>
+<p>To avoid that problem, make sure all emails use a &quot;From&quot; address from the same authorized domain.</p>
+<p>If the MTA supports <a class="reference external" href="https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme">SRS (Sender Rewriting Scheme)</a>, SRS can be enabled to handle these situations. However, that is more complex and
+requires more technical knowledge that is not meant to be covered by this documentation.</p>
+<p>Instead, Odoo can be configured to do something similar by itself:</p>
 <ol class="arabic">
-<li><p>Set your domain name in the General Settings.</p>
-<img alt="../../../_images/alias-domain.png" class="align-center" src="../../../_images/alias-domain.png" />
+<li><p>Set the <span class="guilabel">Alias Domain</span> name in the <span class="menuselection">Settings ‣ General Settings
+‣ Discuss</span>.</p>
+<img alt="Setting the domain alias configuration on Odoo." src="../../../_images/alias-domain.png" />
 </li>
-<li><p>Click on <em>Outgoing Mail Servers</em></p></li>
-<li><p>Create a new one.</p></li>
-<li><p>Fill its <em>From Filter</em>.</p>
-<img alt="../../../_images/outgoing_server_from_filter.png" class="align-center" src="../../../_images/outgoing_server_from_filter.png" />
+<li><p>Turn on <a class="reference internal" href="../developer_mode.html"><span class="doc">developer mode</span></a>.</p></li>
+<li><p>Go to <span class="menuselection">Settings ‣ Technical ‣ Parameters ‣ System Parameters</span>.</p></li>
+<li><p>Add one system parameter from the following list:</p>
 <ul class="simple">
-<li><p>Use a domain (such as <code class="docutils literal notranslate"><span class="pre">mycompany.example.com</span></code>) to keep the original &quot;From&quot;
-address for mails that come from that domain.</p></li>
-<li><p>Use an address (such as <code class="docutils literal notranslate"><span class="pre">outgoing@mycompany.example.com</span></code>) to allow only
-that outgoing address.</p></li>
-<li><p>Keep it empty to use this server for any email address.</p></li>
-</ul>
-<p>With this configuration in place, if Odoo sends an email that doesn't match any
-of the <em>from filters</em>, it will alter the email's &quot;From&quot; before sending it to
-the MTA.</p>
-<p>It will use the default outgoing email address, composed like this:
-<code class="docutils literal notranslate"><span class="pre">{mail.default.from}@{mail.catchall.domain}</span></code>.</p>
-</li>
-<li><p>In developer mode, go to <span class="menuselection">Settings ‣ Technical ‣
-Parameters ‣ System Parameters</span>.</p></li>
-<li><p>Add these system parameters:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">mail.default.from</span></code>: local part of default outgoing email address.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mail.catchall.domain</span></code>: domain part of default outgoing email address.</p></li>
+<li><p>To use the same &quot;From&quot; address for <em>all</em> outgoing messages, use the key <code class="docutils literal notranslate"><span class="pre">mail.force.smtp.from</span></code>
+and set that address as value (such as <code class="docutils literal notranslate"><span class="pre">outgoing@mycompany.example.com</span></code>).</p></li>
+<li><p>To keep the original &quot;From&quot; address for emails that use the same domain, but change it for
+emails that use a different domain, use the key <code class="docutils literal notranslate"><span class="pre">mail.dynamic.smtp.from</span></code> and set the value as
+the email address that should be used in those cases (such as <code class="docutils literal notranslate"><span class="pre">outgoing@mycompany.example.com</span></code>
+).</p></li>
 </ul>
 </li>
 </ol>
-</section><section id="how-to-manage-inbound-messages">
-<span id="email-communication-inbound-messages"></span><h2>How to manage inbound messages<a class="headerlink" href="#how-to-manage-inbound-messages" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</section><section id="manage-inbound-messages">
+<span id="email-communication-inbound-messages"></span><h2>Manage inbound messages<a class="headerlink" href="#manage-inbound-messages" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Odoo relies on generic email aliases to fetch incoming messages.</p>
 <ul class="simple">
-<li><p><strong>Reply messages</strong> of messages sent from Odoo are routed to their original
-discussion thread (and to the inbox of all its followers) by the
-catchall alias (<strong>catchall@</strong>).</p></li>
-<li><p><strong>Bounced messages</strong> are routed to <strong>bounce@</strong> in order to track them in Odoo.
-This is especially used in <a class="reference external" href="https://www.odoo.com/page/email-marketing">Odoo Email Marketing</a>
-to opt-out invalid recipients.</p></li>
-<li><p><strong>Original messages</strong>: Several business objects have their own alias to
-create new records in Odoo from incoming emails:</p>
+<li><p><strong>Reply messages</strong> of messages sent from Odoo are routed to their original discussion thread (and
+to the inbox of all its followers) by the catchall alias (<strong>catchall@</strong>).</p></li>
+<li><p><strong>Bounced messages</strong> are routed to <strong>bounce@</strong> in order to track them in Odoo. This is especially
+used in <a class="reference external" href="https://www.odoo.com/page/email-marketing">Odoo Email Marketing</a> to opt-out invalid
+recipients.</p></li>
+<li><p><strong>Original messages</strong>: Several business objects have their own alias to create new records in
+Odoo from incoming emails:</p>
 <ul>
 <li><p>Sales Channel (to create Leads or Opportunities in <a class="reference external" href="https://www.odoo.com/page/crm">Odoo CRM</a>),</p></li>
 <li><p>Support Channel (to create Tickets in <a class="reference external" href="https://www.odoo.com/page/helpdesk">Odoo Helpdesk</a>),</p></li>
@@ -2082,73 +2064,60 @@ create new records in Odoo from incoming emails:</p>
 </ul>
 </li>
 </ul>
-<p>Depending on your mail server, there might be several methods to fetch emails.
-The easiest and most recommended method is to manage one email address per Odoo
-alias in your mail server.</p>
+<p>Depending on the mail server, there might be several methods to fetch emails. The easiest and most
+recommended method is to manage one email address per Odoo alias in the mail server.</p>
 <ul>
-<li><p>Create the corresponding email addresses in your mail server
-(catchall@, bounce@, sales@, etc.).</p></li>
-<li><p>Set your domain name in the General Settings.</p>
-<img alt="../../../_images/alias-domain.png" class="align-center" src="../../../_images/alias-domain.png" />
+<li><p>Create the corresponding email addresses in the mail server (catchall@, bounce@, sales@, etc.).</p></li>
+<li><p>Set the <span class="guilabel">Alias Domain</span> name in <span class="menuselection">Settings ‣ General Settings ‣
+Discuss</span>.</p></li>
+<li><p>If the database's hosting type is Odoo on-premise, create an <span class="guilabel">Incoming Mail Server</span> in
+Odoo for each alias. This can be done from the General Settings as well. Fill out the form
+according to the email provider's settings. Leave the <span class="guilabel">Actions to Perform on Incoming
+Mails</span> field blank. Once all the information has been filled out, click on <span class="guilabel">TEST &amp;
+CONFIRM</span>.</p>
+<img alt="Incoming mail server configuration on Odoo." class="align-center" src="../../../_images/incoming-server.png" />
 </li>
-<li><p>If you use Odoo on-premise, create an <em>Incoming Mail Server</em> in Odoo for each alias.
-You can do it from the General Settings as well. Fill out the form according
-to your email provider’s settings.
-Leave the <em>Actions to Perform on Incoming Mails</em> blank. Once all the
-information has been filled out, click on <em>TEST &amp; CONFIRM</em>.</p></li>
+<li><p>If the database's hosting type is Odoo Online or Odoo.sh, redirecting incoming messages to Odoo's
+domain name instead of the external email server is recommended. That way, incoming messages can
+be received without delay. Odoo Online only fetches incoming messages of external servers once
+every hour. Redirections for all email addresses should be set to Odoo's domain name in the email
+server (e.g. <em>catchall@mydomain.ext</em> to <em>catchall@mycompany.odoo.com</em>).</p></li>
 </ul>
-<img alt="../../../_images/incoming-server.png" class="align-center" src="../../../_images/incoming-server.png" />
-<ul class="simple">
-<li><p>If you use Odoo Online or Odoo.sh, We do recommend to redirect incoming messages
-to Odoo's domain name rather than exclusively use your own email server.
-That way you will receive incoming messages without delay. Indeed, Odoo Online is fetching
-incoming messages of external servers once per hour only.
-You should set redirections for all the email addresses to Odoo's domain name in your
-email server (e.g. <em>catchall@mydomain.ext</em> to <em>catchall@mycompany.odoo.com</em>).</p></li>
-</ul>
+<p>All the aliases are customizable in Odoo. Object aliases can be edited from their respective
+configuration view.</p>
 <div class="alert alert-tip">
 <p class="alert-title">
-ちなみに</p><dl class="simple">
-<dt>All the aliases are customizable in Odoo.</dt><dd><p>Object aliases can be edited from their  respective configuration view.
-To edit catchall and bounce aliases, you first need to activate the
-<a class="reference internal" href="../developer_mode.html#developer-mode"><span class="std std-ref">developer mode</span></a>.</p>
-</dd>
-</dl>
-<p>Then go to <span class="menuselection">Settings ‣ Technical ‣ Parameters ‣ System Parameters</span>
-to customize the aliases (<em>mail.catchall.alias</em> &amp; * mail.bounce.alias*).</p>
-<img alt="../../../_images/system-parameters.png" class="align-center" src="../../../_images/system-parameters.png" />
+ちなみに</p><p>To edit catchall and bounce aliases, first activate the <a class="reference internal" href="../developer_mode.html#developer-mode"><span class="std std-ref">developer mode</span></a>.
+Then, go to <span class="menuselection">Settings ‣ Technical ‣ Parameters ‣ System Parameters</span> to
+customize the aliases (<em>mail.catchall.alias</em> &amp; <em>mail.bounce.alias</em>).</p>
+<img alt="System parameters with catchall configuration in Odoo." class="align-center" src="../../../_images/system-parameters.png" />
 </div>
+<p>By default, inbound messages are fetched every 5 minutes in Odoo on-premise.</p>
 <div class="alert alert-note">
 <p class="alert-title">
-注釈</p><p>By default inbound messages are fetched every 5 minutes in Odoo on-premise.
-You can change this value in <a class="reference internal" href="../developer_mode.html#developer-mode"><span class="std std-ref">developer mode</span></a>.
-Go to <span class="menuselection">Settings ‣ Technical ‣ Automation ‣
-Scheduled Actions</span> and look for <em>Mail: Fetchmail Service</em>.</p>
+注釈</p><p>This value can be changed in <a class="reference internal" href="../developer_mode.html#developer-mode"><span class="std std-ref">developer mode</span></a>. Go to
+<span class="menuselection">Settings ‣ Technical ‣ Automation ‣ Scheduled Actions</span> and look for
+<span class="guilabel">Mail: Fetchmail Service</span>.</p>
 </div>
 </section><section id="set-up-different-dedicated-servers-for-transactional-and-mass-mails">
 <h2>Set up different dedicated servers for transactional and mass mails<a class="headerlink" href="#set-up-different-dedicated-servers-for-transactional-and-mass-mails" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Odoo is subject to a <a class="reference internal" href="faq.html#email-communication-daily-limit-mail"><span class="std std-ref">daily email limit</span></a> to prevent abuse.
-However, if needed, you can use a separate Mail Transfer Agent (MTA) servers for transactional
-e-mails and mass mailings.
-Example: use Odoo's own mail server for transactional e-mails, and Sendgrid, Amazon SES, or Mailgun
-for mass mailings. Another alternative is to use Postmark for transactional e-mails, and Amazon SES
-or Sendgrid for mass mailings.</p>
-<div class="alert alert-note">
+<p>In Odoo a separate Mail Transfer Agent (MTA) server can be used for transactional emails and mass
+mailings. Example: Use Postmark or SendinBlue for transactional emails, and Amazon SES, Mailgun or
+Sendgrid for mass mailings.</p>
+<div class="alert alert-tip">
 <p class="alert-title">
-注釈</p><p>A default outgoing email server is already configured. You should not create an alternative one
-unless you want to use a specific external outgoing email server for technical reasons.</p>
+ちなみに</p><p>A default outgoing email server is already configured. Do not create an alternative one unless a
+specific external outgoing email server is needed for technical reasons.</p>
 </div>
-<p>To do this, you should first activate the <a class="reference internal" href="../developer_mode.html#developer-mode"><span class="std std-ref">developer mode</span></a> and then go to
-<span class="menuselection">Settings ‣ Technical ‣ Outgoing</span> e-mail servers. There you have to create two
-e-mail MTA server settings. One for transactional e-mails and one for mass mail servers. Be sure to
-mark the priority of transactional e-mail servers as low as the mass email servers.</p>
-<p>Now, go to <span class="menuselection">Email Marketing ‣ Settings</span> and enable <em>Dedicated Server</em>.
+<p>To do this, first activate the <a class="reference internal" href="../developer_mode.html#developer-mode"><span class="std std-ref">developer mode</span></a>, and then go to
+<span class="menuselection">Settings ‣ Technical ‣ Outgoing</span> email servers. There, create two email MTA
+server settings; one for the transactional emails and one for the mass mailing server. Make sure
+to give priority to the transactional server over the mass mailing server by providing a lower
+priority number for the transactional MTA server.</p>
+<p>Now, go to <span class="menuselection">Email Marketing ‣ Settings</span> and enable <span class="guilabel">Dedicated Server</span>.
 With these settings, Odoo uses the server with the lower priority for transactional emails, and the
-server here selected for mass mails.
-Note that in this case, you have to set your domain's Sender Policy Framework (SPF) records to
-include both transactional and mass mail servers. If your server resides with xxxx.odoo.com, the
-available options are Sendinblue and Mailchimp, as your e-mails would be originated from the
-xxxx.odoo.com domain.</p>
+server here selected for mass mails. Note that in this case, the domain's Sender Policy Framework
+(SPF) records must be set to include both transactional and mass mail servers.</p>
 </section>
 
                     </div>
@@ -2162,17 +2131,17 @@ xxxx.odoo.com domain.</p>
             <aside id="o_page_toc" class="o_page_toc" hidden><div class="o_page_toc_nav mt-1">
     <h3>目次</h3>
     <ul>
-<li><a class="reference internal" href="#">Send and Receive Emails in Odoo with an Email Server</a><ul>
-<li><a class="reference internal" href="#if-you-are-a-user-of-odoo-online-or-odoo-sh">If you are a user of Odoo Online or Odoo.sh...</a></li>
+<li><a class="reference internal" href="#">Send and receive emails in Odoo with an email server</a><ul>
+<li><a class="reference internal" href="#odoo-online-or-odoo-sh-users">Odoo Online or Odoo.sh users</a></li>
 <li><a class="reference internal" href="#scope-of-this-documentation">Scope of this documentation</a></li>
-<li><a class="reference internal" href="#how-to-manage-outbound-messages">How to manage outbound messages</a><ul>
-<li><a class="reference internal" href="#can-i-use-an-office-365-server">Can I use an Office 365 server</a></li>
-<li><a class="reference internal" href="#how-to-use-a-g-suite-server">How to use a G Suite server</a></li>
+<li><a class="reference internal" href="#manage-outbound-messages">Manage outbound messages</a><ul>
+<li><a class="reference internal" href="#use-an-office-365-server">Use an Office 365 server</a></li>
+<li><a class="reference internal" href="#use-a-g-suite-server">Use a G Suite server</a></li>
 <li><a class="reference internal" href="#restriction">Restriction</a></li>
 <li><a class="reference internal" href="#use-a-default-from-email-address">Use a default &quot;From&quot; email address</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#how-to-manage-inbound-messages">How to manage inbound messages</a></li>
+<li><a class="reference internal" href="#manage-inbound-messages">Manage inbound messages</a></li>
 <li><a class="reference internal" href="#set-up-different-dedicated-servers-for-transactional-and-mass-mails">Set up different dedicated servers for transactional and mass mails</a></li>
 </ul>
 </li>
@@ -2215,7 +2184,7 @@ xxxx.odoo.com domain.</p>
           <li class="nav-item nav-item-1"><a href="../../../applications.html" >ユーザードキュメント</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../../general.html" >Miscellaneous</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="../email_communication.html" >Email Communication</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Send and Receive Emails in Odoo with an Email Server</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Send and receive emails in Odoo with an email server</a></li> 
       </ul>
     </div>
   </body>

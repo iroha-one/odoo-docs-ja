@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Variants BOM Management &#8212; Odoo 16.0 ドキュメント</title>
+    <title>Managing BoMs for product variants &#8212; Odoo 16.0 ドキュメント</title>
     
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/style.css" />
@@ -572,7 +572,7 @@
 <li class="toctree-l3 current o_menu_applications_inventory_and_mrp_manufacturing"><a class="reference internal" href="../../manufacturing.html">製造</a><ul class="current">
 <li class="toctree-l4 current o_menu_applications_inventory_and_mrp_manufacturing_management"><a class="reference internal" href="#">Manufacturing Management</a><ul class="current">
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_bill_configuration"><a class="reference internal" href="bill_configuration.html">Create Bills of Materials</a></li>
-<li class="toctree-l5 current o_menu_applications_inventory_and_mrp_manufacturing_management_"><a class="current reference internal" href="#">Variants BOM Management</a></li>
+<li class="toctree-l5 current o_menu_applications_inventory_and_mrp_manufacturing_management_"><a class="current reference internal" href="#">Managing BoMs for product variants</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_kit_shipping"><a class="reference internal" href="kit_shipping.html">Kits</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_sub_assemblies"><a class="reference internal" href="sub_assemblies.html">Manage semi-finished products</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_quality_control"><a class="reference internal" href="quality_control.html">Quality Control</a></li>
@@ -750,7 +750,7 @@
 <li class="toctree-l3 o_menu_applications_general_apps_modules"><a class="reference internal" href="../../../general/apps_modules.html">Apps and modules</a></li>
 <li class="toctree-l3 o_menu_applications_general_export_import_data"><a class="reference internal" href="../../../general/export_import_data.html">Export and import data</a></li>
 <li class="toctree-l3 o_menu_applications_general_email_communication"><a class="reference internal" href="#">Email Communication</a><ul>
-<li class="toctree-l4 o_menu_applications_general_email_communication_email_servers"><a class="reference internal" href="../../../general/email_communication/email_servers.html">Send and Receive Emails in Odoo with an Email Server</a></li>
+<li class="toctree-l4 o_menu_applications_general_email_communication_email_servers"><a class="reference internal" href="../../../general/email_communication/email_servers.html">Send and receive emails in Odoo with an email server</a></li>
 <li class="toctree-l4 o_menu_applications_general_email_communication_email_domain"><a class="reference internal" href="../../../general/email_communication/email_domain.html">Sending emails with Odoo</a></li>
 <li class="toctree-l4 o_menu_applications_general_email_communication_email_template"><a class="reference internal" href="../../../general/email_communication/email_template.html">Email Templates</a></li>
 <li class="toctree-l4 o_menu_applications_general_email_communication_faq"><a class="reference internal" href="../../../general/email_communication/faq.html">FAQ</a></li>
@@ -829,7 +829,7 @@
 <li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">チュートリアル</a><ul>
 <li class="toctree-l3 o_menu_developer_howtos_rdtraining"><a class="reference internal" href="../../../../developer/howtos/rdtraining.html">Getting started</a><ul>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_01_architecture"><a class="reference internal" href="../../../../developer/howtos/rdtraining/01_architecture.html">第1章：アーキテクチャの概要</a></li>
-<li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="../../../../developer/howtos/rdtraining/02_setup.html">Chapter 2: Development environment setup</a></li>
+<li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="../../../../developer/howtos/rdtraining/02_setup.html">第2章：開発環境のセットアップ</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_03_newapp"><a class="reference internal" href="../../../../developer/howtos/rdtraining/03_newapp.html">第3章：新規アプリケーション</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_04_basicmodel"><a class="reference internal" href="../../../../developer/howtos/rdtraining/04_basicmodel.html">第4章：モデルと基本フィールド</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_05_securityintro"><a class="reference internal" href="../../../../developer/howtos/rdtraining/05_securityintro.html">第5章：セキュリティ - 簡単な紹介</a></li>
@@ -857,7 +857,6 @@
 <li class="toctree-l3 o_menu_developer_howtos_website"><a class="reference internal" href="../../../../developer/howtos/website.html">Building a Website</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../../../../developer/howtos/backend.html">モジュールの構築</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_web_services"><a class="reference internal" href="../../../../developer/howtos/web_services.html">Web Services</a></li>
-<li class="toctree-l3 o_menu_developer_howtos_profilecode"><a class="reference internal" href="../../../../developer/howtos/profilecode.html">Profiling Odoo code</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_company"><a class="reference internal" href="../../../../developer/howtos/company.html">Multi-company Guidelines</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_accounting_localization"><a class="reference internal" href="../../../../developer/howtos/accounting_localization.html">Accounting localization</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_translations"><a class="reference internal" href="../../../../developer/howtos/translations.html">Translating Modules</a></li>
@@ -875,6 +874,7 @@
 <li class="toctree-l4 o_menu_developer_reference_backend_module"><a class="reference internal" href="../../../../developer/reference/backend/module.html">Module Manifests</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_reports"><a class="reference internal" href="../../../../developer/reference/backend/reports.html">QWeb Reports</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_security"><a class="reference internal" href="../../../../developer/reference/backend/security.html">Security in Odoo</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_performance"><a class="reference internal" href="../../../../developer/reference/backend/performance.html">Performance</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_testing"><a class="reference internal" href="../../../../developer/reference/backend/testing.html">Testing Odoo</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_http"><a class="reference internal" href="../../../../developer/reference/backend/http.html">Web Controllers</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_mixins"><a class="reference internal" href="../../../../developer/reference/backend/mixins.html">Mixins and Useful Classes</a></li>
@@ -949,7 +949,11 @@
                 <aside id="o_page_toc_in_nav" class="o_page_toc o_in_nav_toc border-bottom pt-3 pb-3" hidden><div class="o_page_toc_nav mt-1">
     <h3>目次</h3>
     <ul>
-<li><a class="reference internal" href="#">Variants BOM Management</a></li>
+<li><a class="reference internal" href="#">Managing BoMs for product variants</a><ul>
+<li><a class="reference internal" href="#activate-product-variants">Activate product variants</a></li>
+<li><a class="reference internal" href="#apply-bom-components-to-product-variants">Apply BoM components to product variants</a></li>
+</ul>
+</li>
 </ul>
  
 </div>
@@ -1495,7 +1499,7 @@
 <li class="toctree-l3 current o_menu_applications_inventory_and_mrp_manufacturing"><a class="reference internal" href="../../manufacturing.html">製造</a><ul class="current">
 <li class="toctree-l4 current o_menu_applications_inventory_and_mrp_manufacturing_management"><a class="reference internal" href="#">Manufacturing Management</a><ul class="current">
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_bill_configuration"><a class="reference internal" href="bill_configuration.html">Create Bills of Materials</a></li>
-<li class="toctree-l5 current o_menu_applications_inventory_and_mrp_manufacturing_management_"><a class="current reference internal" href="#">Variants BOM Management</a></li>
+<li class="toctree-l5 current o_menu_applications_inventory_and_mrp_manufacturing_management_"><a class="current reference internal" href="#">Managing BoMs for product variants</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_kit_shipping"><a class="reference internal" href="kit_shipping.html">Kits</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_sub_assemblies"><a class="reference internal" href="sub_assemblies.html">Manage semi-finished products</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_quality_control"><a class="reference internal" href="quality_control.html">Quality Control</a></li>
@@ -1673,7 +1677,7 @@
 <li class="toctree-l3 o_menu_applications_general_apps_modules"><a class="reference internal" href="../../../general/apps_modules.html">Apps and modules</a></li>
 <li class="toctree-l3 o_menu_applications_general_export_import_data"><a class="reference internal" href="../../../general/export_import_data.html">Export and import data</a></li>
 <li class="toctree-l3 o_menu_applications_general_email_communication"><a class="reference internal" href="#">Email Communication</a><ul>
-<li class="toctree-l4 o_menu_applications_general_email_communication_email_servers"><a class="reference internal" href="../../../general/email_communication/email_servers.html">Send and Receive Emails in Odoo with an Email Server</a></li>
+<li class="toctree-l4 o_menu_applications_general_email_communication_email_servers"><a class="reference internal" href="../../../general/email_communication/email_servers.html">Send and receive emails in Odoo with an email server</a></li>
 <li class="toctree-l4 o_menu_applications_general_email_communication_email_domain"><a class="reference internal" href="../../../general/email_communication/email_domain.html">Sending emails with Odoo</a></li>
 <li class="toctree-l4 o_menu_applications_general_email_communication_email_template"><a class="reference internal" href="../../../general/email_communication/email_template.html">Email Templates</a></li>
 <li class="toctree-l4 o_menu_applications_general_email_communication_faq"><a class="reference internal" href="../../../general/email_communication/faq.html">FAQ</a></li>
@@ -1752,7 +1756,7 @@
 <li class="toctree-l2 o_menu_developer_howtos"><a class="reference internal" href="#">チュートリアル</a><ul>
 <li class="toctree-l3 o_menu_developer_howtos_rdtraining"><a class="reference internal" href="../../../../developer/howtos/rdtraining.html">Getting started</a><ul>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_01_architecture"><a class="reference internal" href="../../../../developer/howtos/rdtraining/01_architecture.html">第1章：アーキテクチャの概要</a></li>
-<li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="../../../../developer/howtos/rdtraining/02_setup.html">Chapter 2: Development environment setup</a></li>
+<li class="toctree-l4 o_menu_developer_howtos_rdtraining_02_setup"><a class="reference internal" href="../../../../developer/howtos/rdtraining/02_setup.html">第2章：開発環境のセットアップ</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_03_newapp"><a class="reference internal" href="../../../../developer/howtos/rdtraining/03_newapp.html">第3章：新規アプリケーション</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_04_basicmodel"><a class="reference internal" href="../../../../developer/howtos/rdtraining/04_basicmodel.html">第4章：モデルと基本フィールド</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_rdtraining_05_securityintro"><a class="reference internal" href="../../../../developer/howtos/rdtraining/05_securityintro.html">第5章：セキュリティ - 簡単な紹介</a></li>
@@ -1780,7 +1784,6 @@
 <li class="toctree-l3 o_menu_developer_howtos_website"><a class="reference internal" href="../../../../developer/howtos/website.html">Building a Website</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_backend"><a class="reference internal" href="../../../../developer/howtos/backend.html">モジュールの構築</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_web_services"><a class="reference internal" href="../../../../developer/howtos/web_services.html">Web Services</a></li>
-<li class="toctree-l3 o_menu_developer_howtos_profilecode"><a class="reference internal" href="../../../../developer/howtos/profilecode.html">Profiling Odoo code</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_company"><a class="reference internal" href="../../../../developer/howtos/company.html">Multi-company Guidelines</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_accounting_localization"><a class="reference internal" href="../../../../developer/howtos/accounting_localization.html">Accounting localization</a></li>
 <li class="toctree-l3 o_menu_developer_howtos_translations"><a class="reference internal" href="../../../../developer/howtos/translations.html">Translating Modules</a></li>
@@ -1798,6 +1801,7 @@
 <li class="toctree-l4 o_menu_developer_reference_backend_module"><a class="reference internal" href="../../../../developer/reference/backend/module.html">Module Manifests</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_reports"><a class="reference internal" href="../../../../developer/reference/backend/reports.html">QWeb Reports</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_security"><a class="reference internal" href="../../../../developer/reference/backend/security.html">Security in Odoo</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_performance"><a class="reference internal" href="../../../../developer/reference/backend/performance.html">Performance</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_testing"><a class="reference internal" href="../../../../developer/reference/backend/testing.html">Testing Odoo</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_http"><a class="reference internal" href="../../../../developer/reference/backend/http.html">Web Controllers</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_mixins"><a class="reference internal" href="../../../../developer/reference/backend/mixins.html">Mixins and Useful Classes</a></li>
@@ -1935,7 +1939,7 @@
           <li class="nav-item nav-item-2"><a href="../../../inventory_and_mrp.html" >Inventory &amp; MRP</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="../../manufacturing.html" >製造</a> &#187;</li>
           <li class="nav-item nav-item-4"><a href="../management.html" accesskey="U">Manufacturing Management</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Variants BOM Management</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Managing BoMs for product variants</a></li> 
       </ul>
     </div>
     <div id="wrap">
@@ -1943,26 +1947,34 @@
         <main class="container-fluid ">
                 <article id="o_content" class="doc-body">
                     <div role="main"> 
-  <section id="variants-bom-management">
-<h1>Variants BOM Management<a class="headerlink" href="#variants-bom-management" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Odoo allows you to use one bill of materials for multiple variants of
-the same product. To activate variants, simply go to <span class="menuselection">Configuration ‣ Settings
-‣ Variants</span>.</p>
-<img alt="../../../../_images/bom-variants1.png" class="align-center" src="../../../../_images/bom-variants1.png" />
-<p>You will then be able to specify which BOM component lines are to be used in
-the manufacture of each product variant. You may specify multiple
-variants for each line. If no variant is specified on a component line,
-then this component will be used in the BOM of all variants.</p>
-<p>When defining variant BoMs on a line-item-basis, the <strong>Product
-Variant</strong> field in the main section of the BoM should be left blank as shown
-below. This field is used when creating a BoM for one specific variant
-of a product only.</p>
-<img alt="../../../../_images/kit-bom1.png" class="align-center" src="../../../../_images/kit-bom1.png" />
-<p>Note that the same principle applies for the configuration
-of operations.</p>
-<img alt="../../../../_images/kit-bom2.png" class="align-center" src="../../../../_images/kit-bom2.png" />
-<p>And for the production of by-products.</p>
-<img alt="../../../../_images/kit-bom3.png" class="align-center" src="../../../../_images/kit-bom3.png" />
+  <section id="managing-boms-for-product-variants">
+<h1>Managing BoMs for product variants<a class="headerlink" href="#managing-boms-for-product-variants" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Odoo allows one bill of materials (BoM) to be used for multiple variants of the same product.
+Having a consolidated BoM for a product with variants saves time by preventing the need to manage
+multiple BoMs.</p>
+</section><section id="activate-product-variants">
+<h2>Activate product variants<a class="headerlink" href="#activate-product-variants" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>To activate variants, simply navigate to <span class="menuselection">Inventory ‣ Configuration ‣ Settings
+‣ Products</span>, and then enable the <span class="guilabel">Variants</span> option. After that, click <span class="guilabel">Save</span>
+to apply the setting. For more information on configuring product variants, refer to <a class="reference internal" href="../../../sales/sales/products_prices/products/variants.html"><span class="doc">this
+page</span></a>.</p>
+<img alt="Selecting &quot;Variants&quot; from Inventory app settings." class="align-center" src="../../../../_images/inventory-variants-settings.png" />
+</section><section id="apply-bom-components-to-product-variants">
+<h2>Apply BoM components to product variants<a class="headerlink" href="#apply-bom-components-to-product-variants" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Next, create a new BoM or edit an existing one by going to <span class="menuselection">Manufacturing ‣
+Products ‣ Bills of Materials</span>. Then, click <span class="guilabel">Edit</span>. The <span class="guilabel">Apply on Variants</span>
+option to assign components to specific product variants on the BoM is available once the
+<span class="guilabel">Variants</span> setting is activated from the <span class="guilabel">Inventory</span> application. If the
+<span class="guilabel">Apply on Variants</span> field is not immediately visible, activate it from the additional
+options menu.</p>
+<img alt="&quot;Apply on Variants&quot; option on the additional options menu." class="align-center" src="../../../../_images/variants-kebab-menu.png" />
+<p>Each component can be assigned to multiple variants. Components with no variants specified are used
+in every variant of the product. The same principle applies when configuring operations and
+by-products.</p>
+<p>When defining variant BoMs by component assignment, the <span class="guilabel">Product Variant</span> field in the
+main section of the BoM should be left blank, as shown below. This field is used only when creating
+a BoM specifically for one product variant.</p>
+<img alt="Applying components to multiple variants." class="align-center" src="../../../../_images/apply-on-variants-bom.png" />
 </section>
 
                     </div>
@@ -1976,7 +1988,11 @@ of operations.</p>
             <aside id="o_page_toc" class="o_page_toc" hidden><div class="o_page_toc_nav mt-1">
     <h3>目次</h3>
     <ul>
-<li><a class="reference internal" href="#">Variants BOM Management</a></li>
+<li><a class="reference internal" href="#">Managing BoMs for product variants</a><ul>
+<li><a class="reference internal" href="#activate-product-variants">Activate product variants</a></li>
+<li><a class="reference internal" href="#apply-bom-components-to-product-variants">Apply BoM components to product variants</a></li>
+</ul>
+</li>
 </ul>
  
 </div>
@@ -2017,7 +2033,7 @@ of operations.</p>
           <li class="nav-item nav-item-2"><a href="../../../inventory_and_mrp.html" >Inventory &amp; MRP</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="../../manufacturing.html" >製造</a> &#187;</li>
           <li class="nav-item nav-item-4"><a href="../management.html" >Manufacturing Management</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Variants BOM Management</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Managing BoMs for product variants</a></li> 
       </ul>
     </div>
   </body>
