@@ -73,7 +73,7 @@ Python
 
 .. note::
 
-    **Goal**: at the end of this section, it will not possible to accept an offer
+    **Goal**: at the end of this section, it will not be possible to accept an offer
     lower than 90% of the expected price.
 
     .. image:: 11_constraints/python.gif
@@ -127,4 +127,4 @@ improve it in the :ref:`next chapter <howto/rdtraining/12_sprinkles>`.
 
 .. _PostgreSQL's documentation:
 .. _table_constraint:
-    https://www.postgresql.org/docs/current/ddl-constraints.html
+    https://www.postgresql.org/docs/12/ddl-constraints.html

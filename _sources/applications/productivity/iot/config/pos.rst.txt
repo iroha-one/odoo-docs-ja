@@ -3,10 +3,10 @@ Use the IoT Box for the PoS
 ===========================
 
 .. image:: pos/pos01.png
-    :align: center
+   :align: center
 
 Prerequisites
-~~~~~~~~~~~~~
+=============
 
 Before starting, make sure you have the following:
 
@@ -14,7 +14,7 @@ Before starting, make sure you have the following:
 
 -  A computer or tablet with an up-to-date web browser
 
--  A running SaaS or Odoo instance with the Point of Sale and IoT apps
+-  A running Odoo Online or Odoo instance with the Point of Sale and IoT apps
    installed
 
 -  A local network setup with DHCP (this is the default setting)
@@ -26,8 +26,8 @@ Before starting, make sure you have the following:
    The list of supported hardware can be found on the `POS Hardware
    page <https://www.odoo.com/page/point-of-sale-hardware>`__
 
-Set Up 
-~~~~~~~
+Set Up
+======
 
 To connect hardware to the PoS, the first step is to connect an IoT Box
 to your database. For this, follow this
@@ -48,10 +48,9 @@ Then, you have to connect the peripheral devices to your IoT Box.
 
 -  **Scale**: Connect your scale and power it on.
 
--  **Customer Display**: Connect a monitor to the IoT Box using an HDMI
-   cable. You can also access the Customer Display from any other computer
-   by accessing the IoT Box homepage and clicking on the *POS Display*
-   button.
+-  **Customer Display**: Connect a screen to the IoT Box to display the
+   PoS order. Please refer to
+   :doc:`/applications/productivity/iot/devices/screen`.
 
 -  **Payment terminal**: The connection process depends on the terminal,
    please refer to the :doc:`payment terminals documentation
@@ -63,6 +62,6 @@ and select the devices you want to use in this Point of Sale. Save the
 changes.
 
 .. image:: pos/pos02.png
-    :align: center
+   :align: center
 
 Set up is done, you can launch a new PoS Session.

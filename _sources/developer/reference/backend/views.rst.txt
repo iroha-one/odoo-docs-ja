@@ -114,9 +114,9 @@ an impact on all view types.
   .. code-block:: xml
 
     <tree decoration-info="state == 'draft'"
-      decoration-danger="state == 'help_needed'"
-      decoration-bf="state='busy'">
-      <TREE_VIEW_CONTENT>
+        decoration-danger="state == 'help_needed'"
+        decoration-bf="state='busy'">
+        <!-- TREE_VIEW_CONTENT -->
     </tree>
 
   .. warning::
@@ -337,7 +337,7 @@ A view's specs are applied sequentially.
                all the specified classes
 
 Model Commons
-====================
+=============
 
 .. currentmodule:: odoo.addons.base.models.ir_ui_view
 
@@ -348,6 +348,7 @@ Attributes
 
 Methods
 -------
+
 .. automethod:: Model.get_views
 .. automethod:: Model.get_view
 
@@ -422,7 +423,7 @@ Calendar
 --------
 
 Calendar views display records as events in a daily, weekly, monthly or yearly
-calendar. 
+calendar.
 
 .. note:: By default the calendar view will be centered around the current date
    (today). You can pass a specific initial date to the context of the action in
@@ -687,7 +688,7 @@ There are 5 possible type of tags in a dashboard view:
 
     ``group_operator`` (optional)
         A valid postgreSQL aggregate function identifier to use when aggregating
-        values (see https://www.postgresql.org/docs/9.5/static/functions-aggregate.html).
+        values (see https://www.postgresql.org/docs/12/static/functions-aggregate.html).
         If not provided, By default, the group_operator from the field definition is used.
         Note that no aggregation of field values is achieved if the group_operator value is "".
 
@@ -899,7 +900,7 @@ system. Available semantic components are:
     .. rst-class:: o-definition-list
 
     ``oe_inline``
-      prevent the usual line break following fields
+      prevent the usual line break following fields and limit their span.
     ``oe_left``, ``oe_right``
       floats_ the field to the corresponding direction
     ``oe_read_only``, ``oe_edit_only``
@@ -1580,6 +1581,10 @@ attributes:
   whether it should be possible to drag records when kanban is grouped. Default: true.
 
   Set to ``true`` to always enable it, and to ``false`` to always disable it.
+``groups_draggable``
+  whether it should be possible to resequence colunms when kanban is grouped. Default: true.
+
+  Set to ``true`` to always enable it, and to ``false`` to always disable it.
 
 .. todo:: VFE missing information on on_create attribute of kanban views.
 
@@ -1739,6 +1744,8 @@ root can have the following attributes:
     .. code-block:: xml
 
         <tree default_order="sequence,name desc">
+            ...
+        </tree>
 
 ``decoration-{$name}``
     allow changing the style of a row's text based on the corresponding
@@ -2485,7 +2492,7 @@ Possible children elements of the search view are:
     <searchpanel>
       <field name="department_id"/>
       <field name="manager_id" select="multi" domain="[('department_id', '=', department_id)]"/>
-    <searchpanel/>
+    </searchpanel>
 
   In the above example, the range of values for manager_id (manager names) available at screen
   will depend on the value currently selected for the field ``department_id``.

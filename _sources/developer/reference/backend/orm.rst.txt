@@ -153,7 +153,7 @@ Advanced Fields
 .. _reference/fields/date:
 
 Date(time) Fields
-'''''''''''''''''
+~~~~~~~~~~~~~~~~~
 
 :class:`Dates <odoo.fields.Date>` and :class:`Datetimes <odoo.fields.Datetime>`
 are very important fields in any kind of business application.
@@ -214,7 +214,7 @@ These helpers are also available by importing `odoo.tools.date_utils`.
 .. _reference/fields/relational:
 
 Relational Fields
-'''''''''''''''''
+~~~~~~~~~~~~~~~~~
 
 .. autoclass:: Many2one()
 
@@ -228,7 +228,7 @@ Relational Fields
    :member-order: bysource
 
 Pseudo-relational fields
-''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. autoclass:: Reference()
 
@@ -237,7 +237,7 @@ Pseudo-relational fields
 .. _reference/fields/compute:
 
 Computed Fields
-'''''''''''''''
+~~~~~~~~~~~~~~~
 
 Fields can be computed (instead of read straight from the database) using the
 ``compute`` parameter. **It must assign the computed value to the field**. If
@@ -328,7 +328,7 @@ it uses the values of other *fields*, it should specify those fields using
 .. _reference/fields/related:
 
 Related fields
-''''''''''''''
+~~~~~~~~~~~~~~
 
 A special case of computed fields are *related* (proxy) fields, which provide
 the value of a sub-field on the current record. They are defined by setting
@@ -410,7 +410,7 @@ Automatic fields
 .. _reference/fields/automatic/log_access:
 
 Access Log fields
-'''''''''''''''''
+~~~~~~~~~~~~~~~~~
 
 These fields are automatically set and updated if
 :attr:`~odoo.models.BaseModel._log_access` is enabled. It can be
@@ -472,10 +472,10 @@ behavior is desired:
   .. automethod:: Model.action_unarchive
 
 .. .. attribute:: sequence
-..
+
 ..   Alterable ordering criteria, allows drag-and-drop reordering of models
 ..   in list views.
-..
+
 ..   :class:`~odoo.fields.Integer`
 
 .. attribute:: Model.state
@@ -650,50 +650,46 @@ Method decorators
 Environment
 ===========
 
-The :class:`~odoo.api.Environment` stores various contextual data used by
-the ORM: the database cursor (for database queries), the current user
-(for access rights checking) and the current context (storing arbitrary
-metadata). The environment also stores caches.
+.. currentmodule:: odoo.api
 
-All recordsets have an environment, which is immutable, can be accessed
-using :attr:`~odoo.models.Model.env` and gives access to:
-
-* the current user (:attr:`~odoo.api.Environment.user`)
-* the cursor (:attr:`~odoo.api.Environment.cr`)
-* the superuser flag (:attr:`~odoo.api.Environment.su`)
-* or the context (:attr:`~odoo.api.Environment.context`)
+.. autoclass:: Environment
 
 .. code-block:: bash
 
     >>> records.env
     <Environment object ...>
+    >>> records.env.uid
+    3
     >>> records.env.user
     res.user(3)
     >>> records.env.cr
-    <Cursor object ...)
+    <Cursor object ...>
 
 When creating a recordset from an other recordset, the environment is
 inherited. The environment can be used to get an empty recordset in an
-other model, and query that model::
+other model, and query that model:
+
+.. code-block:: bash
 
     >>> self.env['res.partner']
     res.partner()
-    >>> self.env['res.partner'].search([['is_company', '=', True], ['customer', '=', True]])
+    >>> self.env['res.partner'].search([('is_company', '=', True), ('customer', '=', True)])
     res.partner(7, 18, 12, 14, 17, 19, 8, 31, 26, 16, 13, 20, 30, 22, 29, 15, 23, 28, 74)
 
-.. currentmodule:: odoo.api
-
-.. automethod:: Environment.ref
+Some lazy properties are available to access the environment (contextual) data:
 
 .. autoattribute:: Environment.lang
-
 .. autoattribute:: Environment.user
-
 .. autoattribute:: Environment.company
-
 .. autoattribute:: Environment.companies
 
-.. TODO cr, uid but not @property or methods of Environment class...
+Useful environment methods
+--------------------------
+
+.. automethod:: Environment.ref
+.. automethod:: Environment.is_superuser
+.. automethod:: Environment.is_admin
+.. automethod:: Environment.is_system
 
 Altering the environment
 ------------------------
@@ -856,14 +852,14 @@ Search/Read
 .. automethod:: Model.read_group
 
 Fields
-''''''
+~~~~~~
 
 .. automethod:: Model.fields_get
 
 .. _reference/orm/domains:
 
 Search domains
-''''''''''''''
+~~~~~~~~~~~~~~
 
 A domain is a list of criteria, each criterion being a triple (either a
 ``list`` or a ``tuple``) of ``(field_name, operator, value)`` where:
@@ -1025,14 +1021,14 @@ Recordsets therefore provide the following operations returning recordsets thems
 (when possible):
 
 Filter
-''''''
+~~~~~~
 
 .. automethod:: Model.filtered
 
 .. automethod:: Model.filtered_domain
 
 Map
-'''
+~~~
 
 .. automethod:: Model.mapped
 
@@ -1047,7 +1043,7 @@ Map
         records.partner_id.mapped('name')  # == records.mapped('partner_id.name')
 
 Sort
-''''
+~~~~
 
 .. automethod:: Model.sorted
 

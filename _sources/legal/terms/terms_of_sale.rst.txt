@@ -4,6 +4,10 @@
 General Terms of Sale
 =====================
 
+.. only:: html
+
+   `Download PDF <../../terms_of_sale.pdf>`_
+
 .. note:: Last revision: October 20, 2021.
 
 These General Terms of Sale govern the sale of products and services by
@@ -66,4 +70,3 @@ acceptation of those terms.
 All our contractual relations will be governed exclusively by Belgian law.
 Moreover, any dispute that may arise will be subject exclusively to the
 jurisdiction of the courts of the Nivelles arrondissement (Belgium).
-

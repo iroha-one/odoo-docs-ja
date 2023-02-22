@@ -97,7 +97,7 @@ Configuration sample
 * Allow tcp connection on localhost
 * Allow tcp connection from 192.168.1.x network
 
-in ``/etc/postgresql/9.5/main/pg_hba.conf`` set:
+in ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/pg_hba.conf`` set:
 
 .. code-block:: text
 
@@ -105,7 +105,7 @@ in ``/etc/postgresql/9.5/main/pg_hba.conf`` set:
   host    all             all             127.0.0.1/32            md5
   host    all             all             192.168.1.0/24          md5
 
-in ``/etc/postgresql/9.5/main/postgresql.conf`` set:
+in ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/postgresql.conf`` set:
 
 .. code-block:: text
 
@@ -172,7 +172,7 @@ in Odoo the db_sslmode control the ssl security of the connection
 with value chosen out of 'disable', 'allow', 'prefer', 'require', 'verify-ca'
 or 'verify-full'
 
-`PostgreSQL Doc <https://www.postgresql.org/docs/current/static/libpq-ssl.html>`_
+`PostgreSQL Doc <https://www.postgresql.org/docs/12/static/libpq-ssl.html>`_
 
 .. _builtin_server:
 
@@ -290,6 +290,10 @@ in ``/etc/nginx/sites-enabled/odoo.conf`` set:
   upstream odoochat {
     server 127.0.0.1:8072;
   }
+  map $http_upgrade $connection_upgrade {
+    default upgrade;
+    ''      close;
+  }
 
   # http -> https
   server {
@@ -304,12 +308,6 @@ in ``/etc/nginx/sites-enabled/odoo.conf`` set:
     proxy_read_timeout 720s;
     proxy_connect_timeout 720s;
     proxy_send_timeout 720s;
-
-    # Add Headers for odoo proxy mode
-    proxy_set_header X-Forwarded-Host $host;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Proto $scheme;
-    proxy_set_header X-Real-IP $remote_addr;
 
     # SSL parameters
     ssl_certificate /etc/ssl/nginx/server.crt;
@@ -336,6 +334,11 @@ in ``/etc/nginx/sites-enabled/odoo.conf`` set:
 
     # Redirect requests to odoo backend server
     location / {
+      # Add Headers for odoo proxy mode
+      proxy_set_header X-Forwarded-Host $host;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+      proxy_set_header X-Real-IP $remote_addr;
       proxy_redirect off;
       proxy_pass http://odoo;
     }
@@ -388,7 +391,7 @@ The solutions to support livechat/motifications in a WSGI application are:
 
 * Deploy a threaded version of Odoo (instead of a process-based preforking
   one) and redirect only requests to URLs starting with ``/websocket/`` to
-  that Odoo, this is the simplest and the websocket URL can double up as the cron 
+  that Odoo, this is the simplest and the websocket URL can double up as the cron
   instance.
 * Deploy an evented Odoo via ``odoo-gevent`` and proxy requests starting
   with ``/websocket/`` to
@@ -406,60 +409,55 @@ a static HTTP server.
 Serving static files
 --------------------
 
-Odoo static files are located in each module's :file:`static/` folder, so static files can be served 
+Odoo static files are located in each module's :file:`static/` folder, so static files can be served
 by intercepting all requests to :samp:`/{MODULE}/static/{FILE}`, and looking up the right module
 (and file) in the various addons paths.
 
 .. example::
-   Say Odoo has been installed via the **debian packages** for Community and Enterprise, the addons
-   paths is :file:`/usr/lib/python3/dist-packages/odoo/addons`. Using the above NGINX (https)
-   configuration, the following location block should be added to serve static files via NGINX.
-   
+   Say Odoo has been installed via the **debian packages** for Community and Enterprise and the
+   :option:`--addons-path <odoo-bin --addons-path>` is ``'/usr/lib/python3/dist-packages/odoo/addons'``.
+
+   Using the above NGINX (https) configuration, the following location block should be added to
+   serve static files via NGINX.
+
    .. code-block:: nginx
-   
+
        location @odoo {
            # copy-paste the content of the / location block
        }
-   
+
        # Serve static files right away
        location ~ ^/[^/]+/static/.+$ {
+           # Add Headers for odoo proxy mode
+           proxy_set_header X-Forwarded-Host $host;
+           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+           proxy_set_header X-Forwarded-Proto $scheme;
+           proxy_set_header X-Real-IP $remote_addr;
            root /usr/lib/python3/dist-packages/odoo/addons;
            try_files $uri @odoo;
            expires 24h;
        }
 
 .. example::
-   Say Odoo has been installed via the **source**, and the two git repositories for Community and
-   Enterprise has been cloned in :file:`/opt/odoo` and :file:`/opt/odoo-enterprise` respectively. 
-   The addons paths is ``/opt/odoo/odoo,/opt/odoo/addons,/opt/odoo-enterprise``. Using the above
-   NGINX (https) configuragion, the following location block should be added to serve static files
-   via NGINX.
+   Say Odoo has been installed via the **source**. The two git repositories for Community and
+   Enterprise have been cloned in :file:`/opt/odoo/community` and :file:`/opt/odoo/enterprise`
+   respectively and the :option:`--addons-path <odoo-bin --addons-path>` is
+   ``'/opt/odoo/community/odoo/addons,/opt/community/addons,/opt/odoo/enterprise'``.
+
+   Using the above NGINX (https) configuration, the following location block should be added to
+   serve static files via NGINX.
 
    .. code-block:: nginx
-   
+
        location @odoo {
            # copy-paste the content of the / location block
        }
-   
+
        # Serve static files right away
        location ~ ^/[^/]+/static/.+$ {
-           try_files /static-base$uri /static-addons$uri /static-enterprise$uri @odoo$uri;
+           root /opt/odoo;
+           try_files /community/odoo/addons$uri /community/addons$uri /enterprise$uri @odoo;
            expires 24h;
-       }
-   
-       location /static-base {
-           internal;
-           alias /opt/odoo/odoo/addons;
-       }
-   
-       location /static-addons {
-           internal;
-           alias /opt/odoo/addons;
-       }
-   
-       location /static-enterprise {
-           internal;
-           alias /opt/odoo-enterprise;
        }
 
 .. warning::
@@ -489,7 +487,7 @@ X-Sendfile and X-Accel).
    - The X-Accel extension for NGINX **does** require the following additionnal configuration:
 
      .. code-block:: nginx
- 
+
          location /web/filestore {
              internal;
              alias /path/to/odoo/data-dir/filestore;
@@ -614,6 +612,7 @@ security-related topics:
 
 Blocking Brute Force Attacks
 ----------------------------
+
 For internet-facing deployments, brute force attacks on user passwords are very common, and this
 threat should not be neglected for Odoo servers. Odoo emits a log entry whenever a login attempt
 is performed, and reports the result: success or failure, along with the target login and source IP.
@@ -741,8 +740,8 @@ Here are the supported browsers:
 .. _socat: http://www.dest-unreach.org/socat/
 .. _PostgreSQL connection settings:
 .. _listen to network interfaces:
-    https://www.postgresql.org/docs/9.6/static/runtime-config-connection.html
+    https://www.postgresql.org/docs/12/static/runtime-config-connection.html
 .. _use an SSH tunnel:
-    https://www.postgresql.org/docs/9.6/static/ssh-tunnels.html
+    https://www.postgresql.org/docs/12/static/ssh-tunnels.html
 .. _WSGI: https://wsgi.readthedocs.org/
 .. _POSBox: https://www.odoo.com/page/point-of-sale-hardware#part_2

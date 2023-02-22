@@ -33,7 +33,7 @@ Editions
 ========
 
 There are two different Editions_ of Odoo: the Community and Enterprise versions.
-Using the Enterprise version is possible on our SaaS_ and accessing the code is
+Using the Enterprise version is possible on `Odoo Online`_ and accessing the code is
 restricted to Enterprise customers and partners. The Community version is freely
 available to anyone.
 
@@ -55,17 +55,17 @@ around and try things out with no commitment.
 
 Demo_ instances require no local installation, just a web browser.
 
-SaaS
-----
+Odoo Online
+-----------
 
-Trivial to start with, fully managed and migrated by Odoo S.A., Odoo's SaaS_
+Trivial to start with, fully managed and migrated by Odoo S.A., `Odoo Online`_
 provides private instances and starts out free. It can be used to discover and
 test Odoo and do non-code customizations (i.e. incompatible with custom modules
 or the Odoo Apps Store) without having to install it locally.
 
 Can be used for both testing Odoo and long-term production use.
 
-Like demo_ instances, SaaS_ instances require no local installation, a web
+Like demo_ instances, `Odoo Online`_ instances require no local installation, a web
 browser is sufficient.
 
 
@@ -146,13 +146,13 @@ Repository
    .. group-tab:: Debian/Ubuntu
 
       Odoo S.A. provides a repository that can be used with Debian and Ubuntu distributions. It can
-      be used to install *Odoo Community Edition* by executing the following commands **as root**:
+      be used to install *Odoo Community Edition* by executing the following commands:
 
       .. code-block:: console
 
-          # wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
-          # echo "deb http://nightly.odoo.com/15.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
-          # apt-get update && apt-get install odoo
+          $ wget -q -O - https://nightly.odoo.com/odoo.key | sudo gpg --dearmor -o /usr/share/keyrings/odoo-archive-keyring.gpg
+          $ echo 'deb [signed-by=/usr/share/keyrings/odoo-archive-keyring.gpg] https://nightly.odoo.com/{CURRENT_MAJOR_BRANCH}/nightly/deb/ ./' | sudo tee /etc/apt/sources.list.d/odoo.list
+          $ sudo apt-get update && sudo apt-get install odoo
 
       You can then use the usual `apt-get upgrade` command to keep your installation up-to-date.
 
@@ -163,7 +163,7 @@ Repository
 
       .. code-block:: console
 
-         $ sudo dnf config-manager --add-repo=https://nightly.odoo.com/15.0/nightly/rpm/odoo.repo
+         $ sudo dnf config-manager --add-repo=https://nightly.odoo.com/{CURRENT_MAJOR_BRANCH}/nightly/rpm/odoo.repo
          $ sudo dnf install -y odoo
          $ sudo systemctl enable odoo
          $ sudo systemctl start odoo
@@ -183,8 +183,8 @@ Distribution package
       <download_>`_.
 
       .. note::
-         Odoo 15.0 'deb' package currently supports `Debian 11 (Bullseye)`_, `Ubuntu 20.04 (Focal)`_
-         or above.
+         Odoo {CURRENT_MAJOR_VERSION} 'deb' package currently supports `Debian 11 (Bullseye)`_,
+         `Ubuntu 22.04 (Jammy)`_ or above.
 
       Next, execute the following commands **as root**:
 
@@ -224,13 +224,13 @@ Distribution package
       <download_>`_.
 
       .. note::
-         Odoo 15.0 'rpm' package supports Fedora 34.
+         Odoo {CURRENT_MAJOR_VERSION} 'rpm' package supports Fedora 36.
 
       Once downloaded, the package can be installed using the 'dnf' package manager:
 
       .. code-block:: console
 
-         $ sudo dnf localinstall odoo_15.0.latest.noarch.rpm
+         $ sudo dnf localinstall odoo_{CURRENT_MAJOR_BRANCH}.latest.noarch.rpm
          $ sudo systemctl enable odoo
          $ sudo systemctl start odoo
 
@@ -242,9 +242,8 @@ Source install
 The source "installation" is really about not installing Odoo, and running it directly from source
 instead.
 
-This can be more convenient for module developers as the Odoo source is more easily accessible
-than using packaged installation (for information or to build this documentation and have it
-available offline).
+It can be more convenient for module developers as the Odoo source is more easily accessible than
+using packaged installation.
 
 It also makes starting and stopping Odoo more flexible and explicit than the services set up by the
 packaged installations, and allows overriding settings using
@@ -432,7 +431,7 @@ PostgreSQL
    .. group-tab:: Windows
 
       Odoo uses PostgreSQL as database management system. `Download and install PostgreSQL
-      <https://www.postgresql.org/download/windows/>`_ (supported version: 10.0 and later).
+      <https://www.postgresql.org/download/windows/>`_ (supported version: 12.0 and later).
 
       By default, the only user is `postgres` but Odoo forbids connecting as `postgres`, so you need
       to create a new PostgreSQL user:
@@ -452,7 +451,7 @@ PostgreSQL
    .. group-tab:: Linux
 
       Odoo uses PostgreSQL as database management system. Use your package manager to download and
-      install PostgreSQL (supported version: 10.0 and later).
+      install PostgreSQL (supported version: 12.0 and later).
 
       It can be achieved by executing the following:
 
@@ -475,7 +474,7 @@ PostgreSQL
    .. group-tab:: Mac OS
 
       Odoo uses PostgreSQL as database management system. Use `postgres.app
-      <https://postgresapp.com>`_ to download and install PostgreSQL (supported version: 10.0 and
+      <https://postgresapp.com>`_ to download and install PostgreSQL (supported version: 12.0 and
       later).
 
       .. tip::
@@ -547,7 +546,7 @@ Dependencies
          .. tab:: Debian/Ubuntu
 
             For Debian-based systems, the packages are listed in the `debian/control
-            <https://github.com/odoo/odoo/blob/16.0/debian/control>`_ file of the Odoo sources.
+            <{GITHUB_PATH}/debian/control>`_ file of the Odoo sources.
 
             On Debian/Ubuntu, the following commands should install the required packages:
 
@@ -726,24 +725,24 @@ official Odoo `docker image <https://hub.docker.com/_/odoo/>`_ page.
 .. _demo: https://demo.odoo.com
 .. _docker: https://www.docker.com
 .. _download: https://www.odoo.com/page/download
-.. _Ubuntu 20.04 (Focal): http://releases.ubuntu.com/20.04/
+.. _Ubuntu 22.04 (Jammy): https://releases.ubuntu.com/22.04/
 .. _EPEL: https://fedoraproject.org/wiki/EPEL
-.. _PostgreSQL: http://www.postgresql.org
+.. _PostgreSQL: https://www.postgresql.org
 .. _the official installer:
 .. _install pip:
     https://pip.pypa.io/en/latest/installing.html#install-pip
-.. _Quilt: http://en.wikipedia.org/wiki/Quilt_(software)
-.. _saas: https://www.odoo.com/page/start
+.. _Quilt: https://en.wikipedia.org/wiki/Quilt_(software)
+.. _Odoo Online: https://www.odoo.com/page/start
 .. _the wkhtmltopdf download page: https://github.com/wkhtmltopdf/wkhtmltopdf/releases/tag/0.12.5
-.. _UAC: http://en.wikipedia.org/wiki/User_Account_Control
-.. _wkhtmltopdf: http://wkhtmltopdf.org
+.. _UAC: https://en.wikipedia.org/wiki/User_Account_Control
+.. _wkhtmltopdf: https://wkhtmltopdf.org
 .. _pip: https://pip.pypa.io
 .. _macports: https://www.macports.org
-.. _homebrew: http://brew.sh
+.. _homebrew: https://brew.sh
 .. _wheels: https://wheel.readthedocs.org/en/latest/
 .. _virtualenv: https://pypi.python.org/pypi/virtualenv
 .. _virtualenvwrapper: https://virtualenvwrapper.readthedocs.io/en/latest/
-.. _pywin32: http://sourceforge.net/projects/pywin32/files/pywin32/
+.. _pywin32: https://sourceforge.net/projects/pywin32/files/pywin32/
 .. _community-repository: https://github.com/odoo/odoo
 .. _enterprise-repository: https://github.com/odoo/enterprise
 .. _Editions: https://www.odoo.com/pricing#pricing_table_features

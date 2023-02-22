@@ -12,7 +12,7 @@ Upgrade
 .. toctree::
    :titlesonly:
 
-   upgrade/online_hosting
+   upgrade/odoo_online
    upgrade/odoo_sh
    upgrade/on_premise
    upgrade/faq
@@ -22,8 +22,8 @@ An upgrade is switching to a newer version of Odoo (e.g., Odoo 14.0 to Odoo 15.0
 An upgrade does not cover:
 
 * Changing :ref:`editions <upgrade-faq/editions-change>` (i.e., Community to Enterprise edition)
-* Switching :ref:`hosting type <upgrade-faq/hosting-types-switch>` (i.e., On-Premise to Online or
-  Odoo.sh)
+* Switching :ref:`hosting type <upgrade-faq/hosting-types-switch>` (i.e., On-Premise to Odoo Online
+  or Odoo.sh)
 * Migration from another ERP to Odoo
 
 .. note:: |assistance-contact|
@@ -54,7 +54,7 @@ The upgrade process in a nutshell:
    newly upgraded database (this is done automatically on Odoo Online).
 
 .. seealso::
-   - :doc:`Upgrade process for Odoo Online (SaaS) <upgrade/online_hosting>`
+   - :doc:`Upgrade process for Odoo Online <upgrade/odoo_online>`
    - :doc:`Upgrade process for Odoo.sh <upgrade/odoo_sh>`
    - :doc:`Upgrade process for On-Premise <upgrade/on_premise>`
 
@@ -225,15 +225,14 @@ Service Level Agreement
 What is covered by the Enterprise Licence?
 ------------------------------------------
 
-Databases hosted on Odoo’s Cloud platforms (Saas and Odoo.sh) or On-Premise (Self-Hosting) enjoy the
-following services at all times.
+Databases hosted on Odoo's Cloud platforms (Odoo Online and Odoo.sh) or On-Premise (Self-Hosting)
+enjoy the following services at all times.
 
 The upgrade of:
 
 * standard applications
 * Studio customization (as long as the :guilabel:`Studio` app is still active)
-* customizations done by our consulting and developer services *if* they are covered by a
-  ‘Maintenance of Customisations’ subscription
+* customizations *if* they are covered by a "Maintenance of Customizations" subscription
 
 The Upgrade Service is limited to your database's technical conversion and adaptation (standard
 modules and data) to make it compatible with the targeted version.
@@ -244,6 +243,7 @@ What upgrading does NOT cover
 * The cleaning of pre-existing data & configuration while upgrading
 * Any new developments and/or upgrades of your own :ref:`custom modules
   <upgrade-faq/custom-modules>`
+* Lines of code added to standard modules that are not created with Odoo Studio.
 * `Training <https://www.odoo.com/learn>`_ on the latest version
 
 You can get more information about your Enterprise Licence on our :ref:`Odoo Enterprise Subscription
