@@ -14,6 +14,7 @@ https://iroha-one.github.io/odoo-docs-ja/
 
 ## Documentation translations
 
+- [odoo-docs-locale-ja-16.0](https://github.com/iroha-one/odoo-docs-locale-ja-16.0)
 - [odoo-docs-locale-ja-15.0](https://github.com/iroha-one/odoo-docs-locale-ja-15.0)
 - [odoo-docs-locale-ja-14.0](https://github.com/iroha-one/odoo-docs-locale-ja-14.0)
 
