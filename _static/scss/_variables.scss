@@ -1,9 +1,3 @@
-$o-grid-breakpoint-xxl: 1400px;
-$o-grid-breakpoint-xxxl: 1680px;
-
-$o-container-max-width-xxl:1380px;
-$o-container-max-width-xxxl: 1560px;
-
 // Typography
 // ===============================================
 $o-font-family-serif:                         'Roboto Slab', Georgia, "Times New Roman", Times, serif;
@@ -142,7 +136,7 @@ $o-codecol-width:                           43%;
 // Paddings and margins
 $o-padding-xs:                                .5rem;
 $o-padding-s:                                 1rem;
-$o-padding-m:                                 2rem;
+$o-padding-m:                                 1.5rem;
 $o-padding-l:                                 3rem;
 $o-margin-s:                                  $o-padding-s;
 $o-margin-m:                                  $o-padding-m;

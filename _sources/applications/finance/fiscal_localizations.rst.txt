@@ -10,9 +10,9 @@ Fiscal localization packages
 ============================
 
 **Fiscal Localization Packages** are country-specific modules that install pre-configured taxes,
-fiscal positions, chart of accounts, and legal statements on your database. Some additional features,
-such as the configuration of specific certificates, are also added to your Accounting app, following
-your fiscal administration requirements.
+fiscal positions, chart of accounts, and legal statements on your database. Some additional
+features, such as the configuration of specific certificates, are also added to your Accounting app,
+following your fiscal administration requirements.
 
 .. note::
    Odoo continuously adds new localizations and improves the existing packages.
@@ -46,8 +46,8 @@ These packages require you to fine-tune your chart of accounts according to your
 taxes you use, and configure your country-specific statements and certifications.
 
 .. seealso::
-   - :doc:`accounting/getting_started/initial_configuration/chart_of_accounts`
-   - :doc:`accounting/taxation/taxes/taxes`
+   - :doc:`accounting/get_started/chart_of_accounts`
+   - :doc:`accounting/taxes`
 
 .. _fiscal_localizations/countries-list:
 
@@ -62,20 +62,19 @@ available on Odoo.
 - :doc:`Argentina - Accounting <fiscal_localizations/argentina>`
 - :doc:`Australian - Accounting <fiscal_localizations/australia>`
 - Austria - Accounting
-- Belgium - Accounting
+- :doc:`Belgium - Accounting <fiscal_localizations/belgium>`
 - Bolivia - Accounting
-- Brazilian - Accounting
+- :doc:`Brazilian - Accounting <fiscal_localizations/brazil>`
 - Canada - Accounting
 - :doc:`Chile - Accounting <fiscal_localizations/chile>`
 - China - Accounting
-- :doc:`Colombia - Accounting <fiscal_localizations/colombia>` (:doc:`doc in Spanish
-  <fiscal_localizations/colombia_ES>`)
+- :doc:`Colombia - Accounting <fiscal_localizations/colombia>`
 - Costa Rica - Accounting
 - Croatia - Accounting (RRIF 2012)
 - Czech - Accounting
 - Denmark - Accounting
 - Dominican Republic - Accounting
-- Ecuadorian - Accounting
+- :doc:`Ecuadorian - Accounting <fiscal_localizations/ecuador>`
 - :doc:`Egypt - Accounting <fiscal_localizations/egypt>`
 - Ethiopia - Accounting
 - Finnish Localization
@@ -110,10 +109,11 @@ available on Odoo.
 - Pakistan - Accounting
 - Panama - Accounting
 - :doc:`Peru - Accounting <fiscal_localizations/peru>`
+- :doc:`Philippines - Accounting <fiscal_localizations/philippines>`
 - Poland - Accounting
 - Portugal - Accounting
-- Romania - Accounting
-- Saudi Arabia - Accounting
+- :doc:`Romania - Accounting <fiscal_localizations/romania>`
+- :doc:`Saudi Arabia - Accounting <fiscal_localizations/saudi_arabia>`
 - Singapore - Accounting
 - Slovak - Accounting
 - Slovenian - Accounting
@@ -122,9 +122,9 @@ available on Odoo.
 - Sweden - Accounting
 - :doc:`Switzerland - Accounting <fiscal_localizations/switzerland>`
 - Taiwan - Accounting
-- Thailand - Accounting
+- :doc:`Thailand - Accounting <fiscal_localizations/thailand>`
 - Turkey - Accounting
-- U.A.E. - Accounting
+- :doc:`United Arab Emirates - Accounting <fiscal_localizations/united_arab_emirates>`
 - :doc:`UK - Accounting <fiscal_localizations/united_kingdom>`
 - Ukraine - Accounting
 - United States - Accounting
@@ -137,9 +137,11 @@ available on Odoo.
 
    fiscal_localizations/argentina
    fiscal_localizations/australia
+   fiscal_localizations/belgium
+   fiscal_localizations/brazil
    fiscal_localizations/chile
    fiscal_localizations/colombia
-   fiscal_localizations/colombia_ES
+   fiscal_localizations/ecuador
    fiscal_localizations/egypt
    fiscal_localizations/france
    fiscal_localizations/germany
@@ -150,7 +152,12 @@ available on Odoo.
    fiscal_localizations/luxembourg
    fiscal_localizations/mexico
    fiscal_localizations/netherlands
+   fiscal_localizations/romania
    fiscal_localizations/peru
+   fiscal_localizations/philippines
+   fiscal_localizations/saudi_arabia
    fiscal_localizations/spain
    fiscal_localizations/switzerland
+   fiscal_localizations/thailand
+   fiscal_localizations/united_arab_emirates
    fiscal_localizations/united_kingdom

@@ -21,6 +21,10 @@ available:
   The features of this module are based on the resolutions published on the
   `SUNAT Legislation <https://www.sunat.gob.pe/legislacion/general/index.html/>`_.
 
+.. seealso::
+   - `App Tour - Localización de Peru <https://youtu.be/Ic3mGovkf8Y>`_
+   - `Smart Tutorial - Localización de Peru <https://www.odoo.com/slides/smart-tutorial-localizacion-de-peru-133>`_
+
 Configuration
 =============
 
@@ -233,7 +237,7 @@ directly to its services and get the currency rate either automatically or manua
    :alt: Bank of Peru is displayed in Multicurrency Service option
 
 Please refer to the next section in our documentation for more information about
-:doc:`multicurrencies <../accounting/others/multi_currency>`.
+:doc:`multicurrencies <../accounting/get_started/multi_currency>`.
 
 Configure Master data
 ---------------------
@@ -354,7 +358,7 @@ EDI Elements
 
 Once you have configured your master data, the invoices can be created from your sales order or
 manually. Additional to the basic invoice information described on :doc:`our page about the
-invoicing process <../accounting/receivables/customer_invoices/overview>`, there are a couple of
+invoicing process <../accounting/customer_invoices/overview>`, there are a couple of
 fields required as part of the Peru EDI:
 
 - **Document type**: The default value is “Factura Electronica” but  you can manually change the
@@ -397,7 +401,7 @@ Asynchronous means that the document is not sent automatically after the invoice
 Electronic Invoice Status
 *************************
 
-**To be Sent**: To be sent: Indicates the document is ready to be sent to the OSE, this can be
+**To be Sent**: Indicates the document is ready to be sent to the OSE, this can be
 done either automatically by Odoo with a *cron* that runs every hour, or the user can send it
 immediately by clicking on the button “Sent now”.
 
@@ -572,7 +576,7 @@ By default the Credit Note is set in the document type:
    :alt: Credit Note document type
 
 To finish the workflow please follow the instructions on :doc:`our page about Credit Notes
-<../accounting/receivables/customer_invoices/credit_notes>`.
+<../accounting/customer_invoices/credit_notes>`.
 
 .. note::
    The EDI workflow for the Credit notes works in the same way as the invoices.

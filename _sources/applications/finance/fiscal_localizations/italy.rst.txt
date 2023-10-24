@@ -23,19 +23,15 @@ localization:
    * - Italy - E-invoicing
      - `l10n_it_edi`
      - e-invoice implementation
-   * - Italy - E-invoicing (SdiCoop)
-     - `l10n_it_edi_sdicoop`
-     - Web service e-invoice implementation
+   * - Italy - E-invoicing
+     - `l10n_it_edi_withholding`
+     - e-invoice withholding
    * - Italy - Accounting Reports
      - `l10n_it_reports`
      - Country-specific reports
    * - Italy - Stock DDT
      - `l10n_it_stock_ddt`
      - Transport documents - Documento di Trasporto (DDT)
-
-.. warning::
-   Once the `l10_it_edi_sdicoop` module is installed, sending invoices via PEC mails is no longer
-   possible.
 
 .. image:: italy/italy-modules.png
    :align: center
@@ -52,18 +48,10 @@ section, click :guilabel:`Update info`. From here, fill out the fields:
 - :guilabel:`VAT`: VAT of the company;
 - :guilabel:`Codice Fiscale`: the fiscal code of the company;
 - :guilabel:`Tax System`: the tax system under which the company falls;
-- :guilabel:`PEC address email`: the certified email address of the company.
 
 .. image:: italy/italy-company.png
    :align: center
    :alt: Company information to provide
-
-PEC mail
---------
-
-The **PEC email** is a specific type of **certified** email providing a legal equivalent to the
-traditional registered mail. The **PEC email** of the main company must be the same as the one
-registered by the **Agenzia delle Entrate** authorities.
 
 E-invoicing
 -----------
@@ -103,7 +91,7 @@ XML file can be found in the **chatter** of the invoice.
    :alt: Electronic invoicing status (waiting for confirmation)
 
 .. seealso::
-   :doc:`../accounting/receivables/customer_invoices/electronic_invoicing`
+   :doc:`../accounting/customer_invoices/electronic_invoicing`
 
 File processing authorization (Odoo)
 ------------------------------------
@@ -364,6 +352,12 @@ For **vendor bills**, **three** types of configurations are technically identifi
      - At least one tax on the invoice lines targets the tax grid :ref:`VJ3 <italy/grids>`;
      - All invoice lines either have :guilabel:`Consumable` products, or a tax with
        :guilabel:`Goods` as tax scope.
+
+.. warning::
+   Odoo does not offer the
+   `Conservazione Sostitutiva <https://www.agid.gov.it/index.php/it/piattaforme/conservazione>`_
+   requirements. Other providers and **Agenzia delle Entrate** supply free and certified storage to
+   meet the requested conditions.
 
 .. _italy/internal-reverse:
 

@@ -88,15 +88,13 @@ Concerning *views*, backend views should be split like models and suffixed
 by ``_views.xml``. Backend views are list, form, kanban, activity, graph, pivot, ..
 views. To ease split by model in views main menus not linked to specific actions
 may be extracted into an optional ``<module>_menus.xml`` file. Templates (QWeb
-pages used notably for portal / website display) and bundles (import of JS and
-CSS assets) are put in separate files. Those are respectively
-``<model>_templates.xml`` and ``assets.xml`` files.
+pages used notably for portal / website display) are put in separate files named
+``<model>_templates.xml``.
 
 .. code-block:: text
 
     addons/plant_nursery/
     |-- views/
-    |   | -- assets.xml (import of JS / CSS)
     |   | -- plant_nursery_menus.xml (optional definition of main menus)
     |   | -- plant_nursery_views.xml (backend views)
     |   | -- plant_nursery_templates.xml (portal templates)
@@ -220,7 +218,6 @@ The complete tree of our Odoo module therefore looks like
     |   |   |   |-- widget_a.xml
     |   |   |   |-- widget_a.xml
     |-- views/
-    |   |-- assets.xml
     |   |-- plant_nursery_menus.xml
     |   |-- plant_nursery_views.xml
     |   |-- plant_nursery_templates.xml
@@ -493,19 +490,19 @@ Idiomatics of Programming (Python)
 
     # a bit complex and with a redundant temp variable
     def axes(self, axis):
-            axes = []
-            if type(axis) == type([]):
-                    axes.extend(axis)
-            else:
-                    axes.append(axis)
-            return axes
+        axes = []
+        if type(axis) == type([]):
+            axes.extend(axis)
+        else:
+            axes.append(axis)
+        return axes
 
      # clearer
     def axes(self, axis):
-            if type(axis) == type([]):
-                    return list(axis) # clone the axis
-            else:
-                    return [axis] # single-element list
+        if type(axis) == type([]):
+            return list(axis) # clone the axis
+        else:
+            return [axis] # single-element list
 
 - Know your builtins : You should at least have a basic understanding of all
   the Python builtins (http://docs.python.org/library/functions.html)
@@ -527,7 +524,7 @@ meaning, be sure that you're using the right one.
     # not very good
     cube = []
     for i in res:
-            cube.append((i['id'],i['name']))
+        cube.append((i['id'],i['name']))
     # better
     cube = [(i['id'], i['name']) for i in res]
 
@@ -551,13 +548,13 @@ So, you can write ``if some_collection:`` instead of ``if len(some_collection):`
 
     # creates a temporary list and looks bar
     for key in my_dict.keys():
-            "do something..."
+        "do something..."
     # better
     for key in my_dict:
-            "do something..."
+        "do something..."
     # accessing the key,value pair
     for key, value in my_dict.items():
-            "do something..."
+        "do something..."
 
 - Use dict.setdefault
 

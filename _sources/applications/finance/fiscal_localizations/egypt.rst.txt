@@ -122,7 +122,7 @@ Most of these codes are handled automatically by Odoo, provided that your :ref:`
 .. seealso::
    - `Egyptian eInvoicing & eReceipt SDK - Code Tables
      <https://sdk.preprod.invoicing.eta.gov.eg/codes/>`_
-   - :doc:`../accounting/taxation/taxes/taxes`
+   - :doc:`../accounting/taxes`
 
 .. _egypt/e-invoicing-branches:
 
@@ -220,7 +220,7 @@ Proxy. Copy the token and save it in a safe place for later use.
 
 .. seealso::
    - `Odoo: Download Odoo <https://www.odoo.com/page/download>`_
-   - :doc:`/administration/install/install`
+   - :doc:`../../../administration/install`
 
 .. _egypt/e-invoicing-usb-configuration:
 

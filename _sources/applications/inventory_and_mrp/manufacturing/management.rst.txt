@@ -1,8 +1,8 @@
 :nosearch:
 
-========================
-Manufacturing management
-========================
+=======================
+Manufacturing workflows
+=======================
 
 .. toctree::
    :titlesonly:
@@ -11,7 +11,10 @@ Manufacturing management
    management/product_variants
    management/kit_shipping
    management/sub_assemblies
-   management/quality_control
-   management/alternative_wc
    management/subcontracting
    management/use_mps
+   management/using_work_centers
+   management/work_center_time_off
+   management/scrap_manufacturing
+   management/manufacturing_backorders
+   management/configure_manufacturing_product
