@@ -12,13 +12,13 @@ How-to guides
     howtos/javascript_field
     howtos/javascript_view
     howtos/javascript_client_action
+    howtos/standalone_owl_application
     howtos/web_services
     howtos/company
     howtos/create_reports
     howtos/accounting_localization
     howtos/translations
     howtos/website_themes
-    howtos/provide_iap_services
     howtos/connect_device
 
 .. cards::
@@ -42,6 +42,12 @@ How-to guides
       :target: howtos/javascript_client_action
 
       Learn how to create client actions in the Odoo JavaScript web framework.
+
+   .. card:: Create a standalone Owl application
+      :target: howtos/standalone_owl_application
+
+      Learn how to create a public-facing Owl application outside of the web client using a
+      controller and the Odoo JavaScript framework.
 
    .. card:: Web services
       :target: howtos/web_services
@@ -73,11 +79,6 @@ How-to guides
       :target: howtos/website_themes
 
       Learn how to customize your website by creating a custom theme.
-
-   .. card:: Provide IAP services
-      :target: howtos/provide_iap_services
-
-       Learn how to provide ongoing services with Odoo's In-App Purchase (IAP).
 
    .. card:: Connect with a device
       :target: howtos/connect_device

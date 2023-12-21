@@ -117,9 +117,6 @@ Fields
 
 .. autoclass:: Field()
 
-.. .. autoattribute:: Field._slots
-      :annotation:
-
 .. _reference/fields/basic:
 
 Basic Fields
@@ -407,6 +404,13 @@ Automatic fields
 
     Raise an Error otherwise.
 
+.. attribute:: Model.display_name
+
+    Name :class:`field <odoo.fields.Char>` displayed by default in the web client
+
+    By default, it equals to :attr:`~odoo.models.BaseModel._rec_name` value field
+    but the behavior can be customized by overriding :attr:`~odoo.models.BaseModel._compute_display_name`
+
 .. _reference/fields/automatic/log_access:
 
 Access Log fields
@@ -470,13 +474,6 @@ behavior is desired:
   .. automethod:: Model.toggle_active
   .. automethod:: Model.action_archive
   .. automethod:: Model.action_unarchive
-
-.. .. attribute:: sequence
-
-..   Alterable ordering criteria, allows drag-and-drop reordering of models
-..   in list views.
-
-..   :class:`~odoo.fields.Integer`
 
 .. attribute:: Model.state
 
@@ -615,6 +612,12 @@ for partners and one for countries::
         country = partner.country_id        # first pass prefetches all partners
         countries.add(country.name)         # first pass prefetches all countries
 
+.. seealso::
+    The methods :meth:`~odoo.models.Model.search_fetch` and
+    :meth:`~odoo.models.Model.fetch` can be used to populate the cache of
+    records, typically in cases where the prefetching mechanism does not work
+    well.
+
 
 .. _reference/api/decorators:
 
@@ -723,6 +726,13 @@ joins) or for performance reasons::
     Please make sure your queries are sanitized when using user input and prefer using
     ORM utilities if you don't really need to use SQL queries.
 
+The recommended way to build SQL queries is to use the wrapper object
+
+.. autoclass:: odoo.tools.SQL
+
+    .. automethod:: SQL.join
+    .. automethod:: SQL.identifier
+
 One important thing to know about models is that they don't necessarily perform
 database updates right away. Indeed, for performance reasons, the framework
 delays the recomputation of fields after modifying records. And some database
@@ -737,7 +747,7 @@ called *flushing* and performs the expected database updates.
         # make sure that 'partner_id' is up-to-date in database
         self.env['model'].flush_model(['partner_id'])
 
-        self.env.cr.execute("SELECT id FROM model WHERE partner_id IN %s", [ids])
+        self.env.cr.execute(SQL("SELECT id FROM model WHERE partner_id IN %s", ids))
         ids = [row[0] for row in self.env.cr.fetchall()]
 
 Before every SQL query, one has to flush the data needed for that query. There
@@ -845,9 +855,15 @@ Search/Read
 
 .. automethod:: Model.search_count
 
+.. automethod:: Model.search_fetch
+
 .. automethod:: Model.name_search
 
+.. automethod:: Model.fetch
+
 .. automethod:: Model.read
+
+.. automethod:: Model._read_group
 
 .. automethod:: Model.read_group
 
@@ -983,8 +999,6 @@ Record(set) information
 
 .. automethod:: Model.ensure_one
 
-.. automethod:: Model.name_get
-
 .. automethod:: Model.get_metadata
 
 .. _reference/orm/records/operations:
@@ -1046,6 +1060,11 @@ Sort
 ~~~~
 
 .. automethod:: Model.sorted
+
+Grouping
+~~~~~~~~
+
+.. automethod:: Model.grouped
 
 .. _reference/orm/inheritance:
 

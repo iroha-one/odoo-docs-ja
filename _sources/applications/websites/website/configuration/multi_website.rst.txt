@@ -108,7 +108,7 @@ Website pages
 To modify the website on which a page is to be published, proceed as follows:
 
 #. Go to :menuselection:`Website --> Site --> Pages`.
-#. Select the website on which the page is currently published.
+#. Open the search panel and select the website on which the page is currently published.
 
    .. image:: multi_website/pages-switch-websites.png
       :alt: Display pages per website
@@ -162,4 +162,4 @@ Other reporting data
 --------------------
 
 Other reporting data such as eCommerce dashboard data, online sales analyses and visitors can be
-grouped by website if necessary. Click :guilabel:`Group by --> Website`.
+grouped by website if necessary. Open the search panel and select :guilabel:`Group by --> Website`.

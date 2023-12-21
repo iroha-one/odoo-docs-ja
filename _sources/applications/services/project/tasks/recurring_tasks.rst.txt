@@ -12,8 +12,8 @@ creation of those tasks.
 Configuration
 =============
 
-To enable recurring tasks, go to :menuselection:`Project --> Configuration --> Settings`,
-then activate :guilabel:`Recurring Tasks`, and :guilabel:`Save`.
+To enable recurring tasks, go to :menuselection:`Project --> Configuration --> Settings`, then
+activate :guilabel:`Recurring Tasks`, and press :guilabel:`Save`.
 
 Recurring tasks are now activated on all existing projects. The feature can be deactivated
 on an individual project by clicking the drop-down menu button :guilabel:`⋮` next to the project
@@ -23,31 +23,28 @@ name, then going to :menuselection:`Settings --> Settings --> Task Management` a
 Set up task recurrence
 ----------------------
 
-In an existing task, go to the :guilabel:`Recurrent` tab, then check the :guilabel:`Recurrent` box.
-A set of options allows you to configure the frequency: :guilabel:`Days`, :guilabel:`Weeks`,
-:guilabel:`Months`, :guilabel:`Years`, and the number of repetitions.
+In an existing task, press the :guilabel:`Recurrent` button next to the :guilabel:`Planned date`.
+Then, configure :guilabel:`Repeat Every` field according to your needs.
 
-On the scheduled recurrency date, a new task is created on your project dashboard with the following
-configuration:
+A new task in recurrence will be created once either of this conditions is met:
+- Previous task in recurrence has been closed.
+- On the day of the planned recurrence.
+
+The new task is created on your project dashboard with the following configuration:
 
 - :guilabel:`Stage`: first stage of the project dashboard (:guilabel:`New` or equivalent);
 - :guilabel:`Name`, :guilabel:`Description`, :guilabel:`Project`, :guilabel:`Assignees`,
   :guilabel:`Customer`, :guilabel:`Tags`: copied from the original task;
 - :guilabel:`Milestones`, :guilabel:`Deadline`, :guilabel:`Timesheets`, :guilabel:`Chatter`,
-  :guilabel:`Activities`: those fields are not copied;
-- :guilabel:`Subtasks`: copied from the original task, which becomes a parent of all the tasks in
-  recurrence;
-- A **smart button** on the task displays the total number of existing recurrences.
+  :guilabel:`Activities`, :guilabel:`Subtasks`: those fields are not copied;
 
-.. tip::
-   To see the task in your project dashboard before the scheduled date, consider setting up the
-   recurrence date to a day earlier.
+- A **smart button** on the task displays the total number of existing recurrences.
 
 Edit or stop task recurrence
 ----------------------------
 
-**To edit** the recurrence, open the task: a blue banner invites you to choose whether you wish to
-apply your changes to this task only or to a sequence of tasks.
+**To edit** the recurrence, open the last task in recurrence. Any changes made on the task will be
+applied to the tasks that will be created in the future.
 
-**To stop** the recurrence, open the task, then go to the :guilabel:`Recurrency` tab and uncheck
-:guilabel:`Recurrent`.
+**To stop** the recurrence, open the last task in recurrence and press the :guilabel:`Recurrent`
+button next to the :guilabel:`Planned date`.

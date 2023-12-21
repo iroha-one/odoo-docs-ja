@@ -21,9 +21,6 @@ localization:
    * - Saudi Arabia - E-invoicing
      - `l10n_sa_edi`
      - ZATCA e-invoices implementation
-   * - Saudi Arabia - E-invoicing (Simplified)
-     - `l10n_sa_edi_simplified`
-     - ZATCA simplified e-invoices implementation (Point of Sale)
    * - Saudi Arabia - Point of Sale
      - `l10n_sa_pos`
      - Point of Sale compliance

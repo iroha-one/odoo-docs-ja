@@ -1,7 +1,7 @@
 .. _frontend/components:
 
 ==============
-Owl Components
+Owl components
 ==============
 
 The Odoo Javascript framework uses a custom component framework called Owl. It
@@ -81,22 +81,13 @@ And the template is now located in the corresponding xml file:
     <?xml version="1.0" encoding="UTF-8" ?>
     <templates xml:space="preserve">
 
-    <t t-name="myaddon.MyComponent" owl="1">
+    <t t-name="myaddon.MyComponent">
       <div t-on-click="increment">
         <t t-esc="state.value"/>
       </div>
     </t>
 
     </templates>
-
-Odoo code is not yet completely made in Owl, so it needs a way to tell the
-difference between Owl templates (new code) and old templates (for components). To
-do that in a backward-compatible way, all new templates should be defined with
-the `owl` attribute set to 1.
-
-.. note::
-
-   Do not forget to set `owl="1"` in your Owl templates!
 
 .. note::
 
@@ -162,6 +153,10 @@ checkboxes or datepickers. This page explains how to use these generic component
      - a component to navigate between pages using tabs
    * - :ref:`Pager <frontend/pager>`
      - a small component to handle pagination
+   * - :ref:`SelectMenu <frontend/select_menu>`
+     - a dropdown component to choose between different options
+   * - :ref:`TagsList <frontend/tags_list>`
+     - a list of tags displayed in rounded pills
 
 .. _frontend/owl/actionswiper:
 
@@ -493,6 +488,9 @@ being present in the DOM or not.
    * - `manualOnly`
      - boolean
      - if true, only toggle the dropdown when the button is clicked on (defaults to `false`)
+   * - `disabled`
+     - boolean
+     - disable (if true) the dropdown button (defaults to `false`)
    * - `title`
      - string
      - title attribute content for the `<button class="dropdown-toggle"/>` (default: none)
@@ -605,7 +603,7 @@ the `New` and `Save as...` sub elements.
 
 .. code-block:: xml
 
-  <t t-name="addon.Dropdown.File" owl="1">
+  <t t-name="addon.Dropdown.File">
     <Dropdown>
       <t t-set-slot="toggler">File</t>
       <DropdownItem onSelected="() => this.onItemSelected('file-open')">Open</DropdownItem>
@@ -615,7 +613,7 @@ the `New` and `Save as...` sub elements.
     </Dropdown>
   </t>
 
-  <t t-name="addon.Dropdown.File.New" owl="1">
+  <t t-name="addon.Dropdown.File.New">
     <Dropdown>
       <t t-set-slot="toggler">New</t>
       <DropdownItem onSelected="() => this.onItemSelected('file-new-document')">Document</DropdownItem>
@@ -623,7 +621,7 @@ the `New` and `Save as...` sub elements.
     </Dropdown>
   </t>
 
-  <t t-name="addon.Dropdown.File.Save.As" owl="1">
+  <t t-name="addon.Dropdown.File.Save.As">
     <Dropdown>
       <t t-set-slot="toggler">Save as...</t>
       <DropdownItem onSelected="() => this.onItemSelected('file-save-as-csv')">CSV</DropdownItem>
@@ -659,7 +657,7 @@ In this example, we recursively call a template to display a tree-like structure
 
 .. code-block:: xml
 
-  <t t-name="addon.MainTemplate" owl="1">
+  <t t-name="addon.MainTemplate">
     <div>
       <t t-call="addon.RecursiveDropdown">
         <t t-set="name" t-value="'Main Menu'" />
@@ -668,7 +666,7 @@ In this example, we recursively call a template to display a tree-like structure
     </div>
   </t>
 
-  <t t-name="addon.RecursiveDropdown" owl="1">
+  <t t-name="addon.RecursiveDropdown">
     <Dropdown>
       <t t-set-slot="toggler"><t t-esc="name"/></t>
         <t t-foreach="items" t-as="item" t-key="item.id">
@@ -707,6 +705,10 @@ at the top of the element to display horizontally, or at the left for a vertical
 There are two ways to define your Notebook pages to instanciate, either by using `slot`'s,
 or by passing a dedicated `props`.
 
+A page can be disabled with the `isDisabled` attribute, set directly on the slot node, or
+in the page declaration, if the Notebook is used with the `pages` given as props. Once disabled,
+the corresponding tab is greyed out and set as inactive as well.
+
 Props
 ~~~~~
 
@@ -726,6 +728,9 @@ Props
     * - `defaultPage`
       - `string`
       - optional. Page `id` to display by default.
+    * - `icons`
+      - `array`
+      - optional. List of icons used in the tabs.
     * - `orientation`
       - `string`
       - optional. Whether tabs direction is `horizontal` or `vertical`.
@@ -851,3 +856,269 @@ Props
     * - `withAccessKey`
       - `boolean`
       - Binds access key `p` on the previous page button and `n` on the next page one (`true` by default).
+
+.. _frontend/select_menu:
+
+SelectMenu
+----------
+
+Location
+~~~~~~~~
+
+`@web/core/select_menu/select_menu`
+
+Description
+~~~~~~~~~~~
+
+This component can be used when you want to do more than using the native `select` element. You can define your own option template, allowing to search
+between your options, or group them in subsections.
+
+.. note::
+    Prefer the native HTML `select` element, as it provides by default accessibility features, and has a better user interface on mobile devices.
+    This component is designed to be used for more complex use cases, to overcome limitations of the native element.
+
+Props
+~~~~~
+
+.. list-table::
+    :widths: 20 20 60
+    :header-rows: 1
+
+    * - Name
+      - Type
+      - Description
+    * - `choices`
+      - `array`
+      - optional. List of `choice`'s to display in the dropdown.
+    * - `class`
+      - `string`
+      - optional. Classname set on the root of the SelectMenu component.
+    * - `groups`
+      - `array`
+      - optional. List of `group`'s, containing `choices` to display in the dropdown.
+    * - `multiSelect`
+      - `boolean`
+      - optional. Enable multiple selections. When multiple selection is enabled, selected values are displayed as :ref:`tag <frontend/tags_list>`'s in the SelectMenu input.
+    * - `togglerClass`
+      - `string`
+      - optional. classname set on the toggler button.
+    * - `required`
+      - `boolean`
+      - optional. Whether the selected value can be unselected.
+    * - `searchable`
+      - `boolean`
+      - optional. Whether a search box is visible in the dropdown.
+    * - `searchPlaceholder`
+      - `string`
+      - optional. Text displayed as the search box placeholder.
+    * - `value`
+      - `any`
+      - optional. Current selected value. It can be from any kind of type.
+    * - `onSelect`
+      - `function`
+      - optional. Callback executed when an option is chosen.
+
+The shape of a `choice` is the following:
+
+    - `value` is actual value of the choice. It is usually a technical string, but can be from `any` type.
+    - `label` is the displayed text associated with the option. This one is usually a more friendly and translated `string`.
+
+The shape of a `group` is the following:
+
+    - `choices` is the list of `choice`'s to display for this group.
+    - `label` is the displayed text associated with the group. This is a `string` displayed at the top of the group.
+
+.. example::
+
+   In the following example, the SelectMenu will display four choices. One of them is displayed on top of the options,
+   since no groups are associated with it, but the other ones are separated by the label of their group.
+
+   .. code-block:: javascript
+
+      import { SelectMenu } from "@web/core/select_menu/select_menu";
+
+      class MyComponent extends owl.Component {
+        get choices() {
+          return [
+              {
+                value: "value_1",
+                label: "First value"
+              }
+          ]
+        }
+        get groups() {
+          return [
+            {
+                label: "Group A",
+                choices: [
+                    {
+                      value: "value_2",
+                      label: "Second value"
+                    },
+                    {
+                      value: "value_3",
+                      label: "Third value"
+                    }
+                ]
+            },
+            {
+                label: "Group B",
+                choices: [
+                    {
+                      value: "value_4",
+                      label: "Fourth value"
+                    }
+                ]
+            }
+          ]
+        }
+      }
+      MyComponent.template = owl.tags.xml`
+        <SelectMenu
+          choices="choices"
+          groups="groups"
+          value="'value_2'"
+        />
+      `;
+
+   You can also customize the appearance of the toggler and set a custom template for the choices, using the appropriate component `slot`'s.
+
+   .. code-block:: javascript
+
+      MyComponent.template = owl.tags.xml`
+        <SelectMenu
+          choices="choices"
+          groups="groups"
+          value="'value_2'"
+        >
+          Make a choice!
+          <t t-set-slot="choice" t-slot-scope="choice">
+            <span class="coolClass" t-esc="'👉 ' + choice.data.label + ' 👈'" />
+          </t>
+        </SelectMenu>
+      `;
+
+   .. image:: owl_components/select_menu.png
+      :width: 400 px
+      :alt: Example of SelectMenu usage and customization
+      :align: center
+
+   When SelectMenu is used with multiple selection, the `value` props must be an `Array` containing the values of the selected choices.
+
+   .. image:: owl_components/select_menu_multiSelect.png
+      :width: 350 px
+      :alt: Example of SelectMenu used with multiple selection
+      :align: center
+
+   For more advanced use cases, you can customize the bottom area of the dropdown, using the `bottomArea` slot. Here, we choose to display
+   a button with the corresponding value set in the search input.
+
+   .. code-block:: javascript
+
+      MyComponent.template = owl.tags.xml`
+        <SelectMenu
+            choices="choices"
+        >
+            <span class="select_menu_test">Select something</span>
+            <t t-set-slot="bottomArea" t-slot-scope="select">
+                <div t-if="select.data.searchValue">
+                    <button class="btn text-primary" t-on-click="() => this.onCreate(select.data.searchValue)">
+                        Create this article "<i t-esc="select.data.searchValue" />"
+                    </button>
+                </div>
+            </t>
+        </SelectMenu>
+      `;
+
+   .. image:: owl_components/select_menu_bottomArea.png
+      :width: 400 px
+      :alt: Example of SelectMenu's bottom area customization
+      :align: center
+
+.. _frontend/tags_list:
+
+TagsList
+--------
+
+Location
+~~~~~~~~
+
+`@web/core/tags_list/tags_list`
+
+Description
+~~~~~~~~~~~
+
+This component can display a list of tags in rounded pills. Those tags can either simply list a few values, or can be editable, allowing the removal of items.
+It can be possible to limit the number of displayed items using the `itemsVisible` props. If the list is longer than this limit, the number of additional items is
+shown in a circle next to the last tag.
+
+Props
+~~~~~
+
+.. list-table::
+    :widths: 20 20 60
+    :header-rows: 1
+
+    * - Name
+      - Type
+      - Description
+    * - `displayBadge`
+      - `boolean`
+      - optional. Whether the tag is displayed as a badge.
+    * - `displayText`
+      - `boolean`
+      - optional. Whether the tag is displayed with a text or not.
+    * - `itemsVisible`
+      - `number`
+      - optional. Limit of visible tags in the list.
+    * - `tags`
+      - `array`
+      - list of `tag`'s elements given to the component.
+
+The shape of a `tag` is the following:
+
+    - `colorIndex` is an optional color id.
+    - `icon` is an optional icon displayed just before the displayed text.
+    - `id` is a unique identifier for the tag.
+    - `img` is an optional image displayed in a circle, just before the displayed text.
+    - `onClick` is an optional callback that can be given to the element. This allows the parent element to handle any functionality depending on the tag clicked.
+    - `onDelete` is an optional callback that can be given to the element. This makes the removal of the item from the list of tags possible, and must be handled by the parent element.
+    - `text` is the displayed `string` associated with the tag.
+
+.. example::
+
+   In the next example, a TagsList component is used to display multiple tags.
+   It's at the developer to handle from the parent what would happen when the tag is pressed, or when the delete button is clicked.
+
+   .. code-block:: javascript
+
+      import { TagsList } from "@web/core/tags_list/tags_list";
+
+      class Parent extends Component {
+        setup() {
+          this.tags = [{
+              id: "tag1",
+              text: "Earth"
+          }, {
+              colorIndex: 1,
+              id: "tag2",
+              text: "Wind",
+              onDelete: () => {...}
+          }, {
+              colorIndex: 2,
+              id: "tag3",
+              text: "Fire",
+              onClick: () => {...},
+              onDelete: () => {...}
+          }];
+        }
+      }
+      Parent.components = { TagsList };
+      Parent.template = xml`<TagsList tags="tags" />`;
+
+   Depending the attributes given to each tag, their appearance and behavior will differ.
+
+   .. image:: owl_components/tags_list.png
+      :width: 350 px
+      :alt: Examples of TagsList using different props and attributes
+      :align: center

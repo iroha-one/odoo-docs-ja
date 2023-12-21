@@ -7,48 +7,9 @@ Belgium
 Configuration
 =============
 
-:ref:`Install <general/install>` the following modules to get all the features of the Belgian
+Install the :guilabel:`🇧🇪 Belgium` :ref:`fiscal localization package
+<fiscal_localizations/packages>` to get all the default accounting features of the Belgian
 localization, following the :abbr:`IFRS(International Financial Reporting Standards)` rules.
-
-.. list-table::
-   :header-rows: 1
-
-   * - Name
-     - Technical name
-     - Description
-   * - :guilabel:`Belgium - Accounting`
-     - `l10n_be`
-     - Default :ref:`fiscal localization package <fiscal_localizations/packages>`.
-   * - :guilabel:`Belgium - Accounting Reports`
-     - `l10n_be_reports`
-     - Access to specific accounting reports for Belgium.
-   * - :guilabel:`Belgium - Accounting Reports (post wizard)`
-     - `l10n_be_reports_post_wizard`
-     - Enables the VAT wizard when posting a tax return journal entry.
-   * - :guilabel:`Belgium - Import Bank CODA Statements`
-     - `l10n_be_coda`
-     - Import CODA bank statements.
-   * - :guilabel:`Belgium - Import SODA files`
-     - `l10n_be_soda`
-     - Import SODA files.
-   * - :guilabel:`Belgium - Disallowed Expenses Data`
-     - `l10n_be_disallowed_expenses`
-     - Access to the use of disallowed expenses features.
-   * - :guilabel:`Belgium - Payroll`
-     - `l10n_be_hr_payroll`
-     - Access to the basic payroll features for Belgium.
-   * - :guilabel:`Belgium - Payroll with Accounting`
-     - `l10n_be_hr_payroll_account`
-     - Integration of accounting data with payroll.
-   * - :guilabel:`Belgium - Payroll - Dimona`
-     - `l10n_be_hr_payroll_dimona`
-     - Access to Dimona features for payroll.
-   * - :guilabel:`Belgium - Payroll - Fleet`
-     - `l10n_be_hr_payroll_fleet`
-     - Fleet features for payroll.
-   * - :guilabel:`Salary Configurator (Belgium)`
-     - `l10n_be_hr_contract_salary`
-     -  Access to the salary configurator feature.
 
 .. _belgium/coa:
 
@@ -261,11 +222,6 @@ from your :guilabel:`Bank` journal on your dashboard.
 .. image:: belgium/coda-import.png
    :alt: Import CODA files
 
-.. note::
-   The :guilabel:`Belgium - Import Bank CODA Statements` module is installed by default when the
-   :guilabel:`Belgium - Accounting` and the :guilabel:`Belgium - Accounting Reports` modules are
-   installed.
-
 .. seealso::
    :ref:`Import bank statements files <transactions/import>`
 
@@ -289,10 +245,9 @@ journal.
 Electronic invoicing
 ====================
 
-Odoo supports the **E-FFF** and **Peppol BIS Billing 3.0 (UBL)** electronic invoicing formats. To
-enable them, go to :menuselection:`Accounting --> Configuration --> Journals --> Customer Invoices
---> Advanced Settings --> Electronic Invoicing`, and tick :guilabel:`E-FFF (BE)` and
-:guilabel:`Peppol BIS Billing 3.0`.
+Odoo supports the **Peppol BIS Billing 3.0 (UBL)** electronic invoicing format. To enable it for a
+customer, go to :menuselection:`Accounting --> Customers --> Customers`, open their contact form,
+and under the :guilabel:`Accounting` tab, select the :guilabel:`Peppol BIS Billing 3.0` format.
 
 .. seealso::
    :doc:`../accounting/customer_invoices/electronic_invoicing`

@@ -33,7 +33,7 @@ and statement to move the amount from the **Outstanding Receipt** account to the
    You can create a new payment method named *Checks* if you would like to identify such payments
    quickly. To do so, go to :menuselection:`Accounting --> Configuration --> Journals --> Bank`,
    click the :guilabel:`Incoming Payments` tab, and :guilabel:`Add a line`. As :guilabel:`Payment
-   Method`, select :guilabel:`Manual`, enter `Checks` as name, and :guilabel:`Save`.
+   Method`, select :guilabel:`Manual`, and enter `Checks` as name.
 
 .. _checks/reconciliation-bypass:
 

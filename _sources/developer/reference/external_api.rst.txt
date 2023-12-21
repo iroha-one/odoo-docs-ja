@@ -949,20 +949,20 @@ a record).
 
          models.execute_kw(db, uid, password, 'res.partner', 'write', [[id], {'name': "Newer partner"}])
          # get record name after having changed it
-         models.execute_kw(db, uid, password, 'res.partner', 'name_get', [[id]])
+         models.execute_kw(db, uid, password, 'res.partner', 'read', [[id], ['display_name']])
 
       .. code-tab:: ruby
 
          models.execute_kw(db, uid, password, 'res.partner', 'write', [[id], {name: "Newer partner"}])
          # get record name after having changed it
-         models.execute_kw(db, uid, password, 'res.partner', 'name_get', [[id]])
+         models.execute_kw(db, uid, password, 'res.partner', 'read', [[id], ['display_name']])
 
       .. code-tab:: php
 
          $models->execute_kw($db, $uid, $password, 'res.partner', 'write', array(array($id), array('name'=>"Newer partner")));
          // get record name after having changed it
          $models->execute_kw($db, $uid, $password,
-             'res.partner', 'name_get', array(array($id)));
+             'res.partner', 'read', array(array($id), array('display_name')));
 
       .. code-tab:: java
 
@@ -977,8 +977,8 @@ a record).
          // get record name after having changed it
          asList((Object[])models.execute("execute_kw", asList(
              db, uid, password,
-             "res.partner", "name_get",
-             asList(asList(id))
+             "res.partner", "read",
+             asList(asList(id), asList("display_name"))
          )));
 
       .. code-tab:: go
@@ -1112,8 +1112,8 @@ Provides information about Odoo models via its various fields.
     list of the model's fields through a :class:`~odoo.fields.One2many` to
     :ref:`reference/webservice/inspection/fields`
 ``view_ids``
-    :class:`~odoo.fields.One2many` to the :ref:`reference/views` defined
-    for the model
+    :class:`~odoo.fields.One2many` to the :doc:`../reference/user_interface//view_architecture`
+    defined for the model
 ``access_ids``
     :class:`~odoo.fields.One2many` relation to the
     :ref:`reference/security/acl` set on the model

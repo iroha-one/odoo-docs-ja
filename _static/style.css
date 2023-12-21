@@ -883,10 +883,10 @@ sup {
   top: -.5em; }
 
 a {
-  color: #017e84;
+  color: var(--o-link-color, #017e84);
   text-decoration: none; }
   a:hover {
-    color: #01656a;
+    color: var(--o-link-hover-color, #01656a);
     text-decoration: underline; }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -10776,7 +10776,7 @@ b, strong {
   font-weight: 700; }
 
 a {
-  font-weight: 600; }
+  font-weight: var(--o-link-fontweight, 600); }
 
 [class^="i-"], [class*=" i-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -11439,33 +11439,46 @@ main.container-fluid, main.container-sm, main.container-md, main.container-lg, m
 .o_hide_toc .toctree-wrapper {
   display: none; }
 
+.toctree-wrapper .toctree-l2.o_toc_contains_l3 > a:not([href="#"]), .toctree-wrapper:not(.o_toc_l1_to_l2) .toctree-l1 > a:not([href="#"]) {
+  --o-link-color: #282F33;
+  --o-link-hover-color: #017e84; }
+  .toctree-wrapper .toctree-l2.o_toc_contains_l3 > a:not([href="#"]):after, .toctree-wrapper:not(.o_toc_l1_to_l2) .toctree-l1 > a:not([href="#"]):after {
+    content: " ";
+    vertical-align: baseline;
+    margin: auto;
+    font-size: 0.7em;
+    font-family: 'icomoon' !important;
+    font-weight: 600;
+    color: #017e84; }
+
 .toctree-wrapper > ul, .toctree-wrapper .toctree-l1 > ul {
   padding-left: 0;
   list-style: none; }
 
-.toctree-wrapper .toctree-l1 > a {
-  display: block;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #D5D5D5;
-  font-size: calc(1.2852rem + 0.4224vw);
-  font-weight: 600; }
-  @media (min-width: 1200px) {
-    .toctree-wrapper .toctree-l1 > a {
-      font-size: 1.602rem; } }
-.toctree-wrapper .toctree-l1 {
+.toctree-wrapper:not(.o_toc_l1_to_l2) .toctree-l1 {
   margin-bottom: 2rem; }
-
-.toctree-wrapper .toctree-l2 > a[href="#"] {
-  margin-top: 0.7rem;
-  display: inline-block; }
+  .toctree-wrapper:not(.o_toc_l1_to_l2) .toctree-l1 > a {
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #D5D5D5;
+    font-size: calc(1.2852rem + 0.4224vw);
+    font-weight: 700; }
+    @media (min-width: 1200px) {
+      .toctree-wrapper:not(.o_toc_l1_to_l2) .toctree-l1 > a {
+        font-size: 1.602rem; } }
+.toctree-wrapper .toctree-l2.o_toc_contains_l3 {
+  margin-top: 1rem; }
 
 .toctree-wrapper a[href="#"] {
   color: #282F33;
   font-weight: 600;
   pointer-events: none;
   cursor: default; }
+
+.toctree-wrapper .toctree-l3 > a {
+  --o-link-fontweight: 500; }
 
 article.doc-body {
   position: relative;

@@ -125,8 +125,8 @@ listed, you do not have anything to do.
    :alt: Select and add icons of the payment methods you want to enable
 
 .. note::
-   - If a payment icon record does not exist in the database and its related local payment method is
-     listed above, it is considered enabled with Stripe.
+   - If a payment method record does not exist in the database and its related local payment method
+     is listed above, it is considered enabled with Stripe.
    - If a local payment method is not listed above, it is not supported and cannot be enabled.
 
 .. seealso::

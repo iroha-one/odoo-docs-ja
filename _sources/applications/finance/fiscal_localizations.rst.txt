@@ -24,19 +24,13 @@ Odoo automatically installs the appropriate package for your company, according 
 selected at the creation of the database.
 
 .. important::
-   As long as you haven't posted any entry, you can still add and select another package.
+   As long as you haven't posted any entry, you can still select another package.
 
-To install a new package, go to :menuselection:`Accounting --> Configuration --> Fiscal
-Localization`, click on **Install More Packages**, and install your country's module.
+To select a fiscal localization package for your company, go to :menuselection:`Accounting -->
+Configuration --> Settings --> Fiscal Localization`, select the appropriate package from the list
+and save.
 
-.. image:: fiscal_localizations/packages_modules.png
-   :align: center
-   :alt: Install the appropriate module as fiscal localization package in Odoo Accounting.
-
-Once done, select your country's package, and click on *Save*.
-
-.. image:: fiscal_localizations/packages_selection.png
-   :align: center
+.. image:: fiscal_localizations/package-selection.png
    :alt: Select your country's fiscal localization package in Odoo Accounting.
 
 Use
@@ -61,7 +55,7 @@ available on Odoo.
 - Algeria - Accounting
 - :doc:`Argentina - Accounting <fiscal_localizations/argentina>`
 - :doc:`Australian - Accounting <fiscal_localizations/australia>`
-- Austria - Accounting
+- :doc:`Austria - Accounting <fiscal_localizations/austria>`
 - :doc:`Belgium - Accounting <fiscal_localizations/belgium>`
 - Bolivia - Accounting
 - :doc:`Brazilian - Accounting <fiscal_localizations/brazil>`
@@ -88,7 +82,7 @@ available on Odoo.
 - Greece - Accounting
 - Guatemala - Accounting
 - Honduras - Accounting
-- Hong Kong - Accounting
+- :doc:`Hong Kong - Accounting <fiscal_localizations/hong_kong>`
 - Hungarian - Accounting
 - :doc:`Indian - Accounting <fiscal_localizations/india>`
 - :doc:`Indonesian - Accounting <fiscal_localizations/indonesia>`
@@ -114,7 +108,7 @@ available on Odoo.
 - Portugal - Accounting
 - :doc:`Romania - Accounting <fiscal_localizations/romania>`
 - :doc:`Saudi Arabia - Accounting <fiscal_localizations/saudi_arabia>`
-- Singapore - Accounting
+- :doc:`Singapore - Accounting <fiscal_localizations/singapore>`
 - Slovak - Accounting
 - Slovenian - Accounting
 - South Africa - Accounting
@@ -130,13 +124,14 @@ available on Odoo.
 - United States - Accounting
 - Uruguay - Accounting
 - Venezuela - Accounting
-- Vietnam - Accounting
+- :doc:`Vietnam - Accounting <fiscal_localizations/vietnam>`
 
 .. toctree::
    :titlesonly:
 
    fiscal_localizations/argentina
    fiscal_localizations/australia
+   fiscal_localizations/austria
    fiscal_localizations/belgium
    fiscal_localizations/brazil
    fiscal_localizations/chile
@@ -145,6 +140,7 @@ available on Odoo.
    fiscal_localizations/egypt
    fiscal_localizations/france
    fiscal_localizations/germany
+   fiscal_localizations/hong_kong
    fiscal_localizations/india
    fiscal_localizations/indonesia
    fiscal_localizations/italy
@@ -156,8 +152,10 @@ available on Odoo.
    fiscal_localizations/peru
    fiscal_localizations/philippines
    fiscal_localizations/saudi_arabia
+   fiscal_localizations/singapore
    fiscal_localizations/spain
    fiscal_localizations/switzerland
    fiscal_localizations/thailand
+   fiscal_localizations/vietnam
    fiscal_localizations/united_arab_emirates
    fiscal_localizations/united_kingdom

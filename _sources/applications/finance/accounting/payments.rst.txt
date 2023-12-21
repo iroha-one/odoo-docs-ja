@@ -143,3 +143,4 @@ and the invoice or bill marked as :guilabel:`Paid`.
    payments/pay_checks
    payments/multiple
    payments/forecast
+   payments/trusted_accounts
