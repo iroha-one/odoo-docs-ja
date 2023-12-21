@@ -28,6 +28,14 @@ on:
         - 'main'
         - 'develop'
         - 'l10n_crowdin_action'
+      python-version:
+        description: 'Python version'
+        required: true
+        default: '3.10'
+        type: choice
+        options:
+        - '3.10'
+        - '3.8'
 
 # https://gist.github.com/c-bata/ed5e7b7f8015502ee5092a3e77937c99
 jobs:
@@ -58,7 +66,7 @@ jobs:
       - name: Install Python
         uses: actions/setup-python@v1
         with:
-          python-version: 3.8
+          python-version: ${{ github.event.inputs.python-version }}
       # I don't know where the "run" thing is documented.
       - name: Install additional OS packages
         run: |
