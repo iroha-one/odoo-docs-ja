@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Coding guidelines &#8212; Odoo 17.0 ドキュメント</title>
+    <title>コーディング ガイドライン &#8212; Odoo 17.0 ドキュメント</title>
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
@@ -980,7 +980,7 @@
 </li>
 <li class="toctree-l1 current o_menu_contributing"><a class="reference internal" href="../../contributing.html">コントリビューション</a><ul class="current">
 <li class="toctree-l2 current o_menu_contributing_development"><a class="reference internal" href="../development.html">Development</a><ul class="current">
-<li class="toctree-l3 current o_menu_contributing_development_"><a class="current reference internal" href="#">Coding guidelines</a></li>
+<li class="toctree-l3 current o_menu_contributing_development_"><a class="current reference internal" href="#">コーディング ガイドライン</a></li>
 <li class="toctree-l3 o_menu_contributing_development_git_guidelines"><a class="reference internal" href="git_guidelines.html">Git guidelines</a></li>
 </ul>
 </li>
@@ -1004,10 +1004,10 @@
                 <aside id="o_page_toc_in_nav" class="o_page_toc o_in_nav_toc border-bottom pt-3 pb-3" hidden><div class="o_page_toc_nav mt-1">
     <h5>On this page</h5>
     <ul>
-<li><a class="reference internal" href="#">Coding guidelines</a><ul>
+<li><a class="reference internal" href="#">コーディング ガイドライン</a><ul>
 <li><a class="reference internal" href="#module-structure">モジュール構造</a><ul>
-<li><a class="reference internal" href="#directories">Directories</a></li>
-<li><a class="reference internal" href="#file-naming">File naming</a></li>
+<li><a class="reference internal" href="#directories">ディレクトリ構成</a></li>
+<li><a class="reference internal" href="#file-naming">ファイルの命名</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#xml-files">XML files</a><ul>
@@ -2009,7 +2009,7 @@
 </li>
 <li class="toctree-l1 current o_menu_contributing"><a class="reference internal" href="../../contributing.html">コントリビューション</a><ul class="current">
 <li class="toctree-l2 current o_menu_contributing_development"><a class="reference internal" href="../development.html">Development</a><ul class="current">
-<li class="toctree-l3 current o_menu_contributing_development_"><a class="current reference internal" href="#">Coding guidelines</a></li>
+<li class="toctree-l3 current o_menu_contributing_development_"><a class="current reference internal" href="#">コーディング ガイドライン</a></li>
 <li class="toctree-l3 o_menu_contributing_development_git_guidelines"><a class="reference internal" href="git_guidelines.html">Git guidelines</a></li>
 </ul>
 </li>
@@ -2094,7 +2094,7 @@
         <li class="nav-item nav-item-0"><a href="../../index.html">Odoo 17.0 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../contributing.html" >コントリビューション</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../development.html" accesskey="U">Development</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Coding guidelines</a></li> 
+        <li class="nav-item nav-item-this"><a href="">コーディング ガイドライン</a></li> 
       </ul>
     </div>
     <div id="wrap">
@@ -2103,52 +2103,37 @@
                 <article id="o_content" class="doc-body">
                     <div role="main"> 
   <section id="coding-guidelines">
-<h1>Coding guidelines<a class="headerlink" href="#coding-guidelines" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>This page introduces the Odoo Coding Guidelines. Those aim to improve the
-quality of Odoo Apps code. Indeed proper code improves readability, eases
-maintenance, helps debugging, lowers complexity and promotes reliability.
-These guidelines should be applied to every new module and to all new development.</p>
+<h1>コーディング ガイドライン<a class="headerlink" href="#coding-guidelines" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>本ページでは、Odoo コーディングガイドラインを紹介し、Odoo Appsコードの品質向上を目指しています。 実際に適切なコードは読みやすさを改善し、メンテナンスを容易にし、デバッグを助け、複雑さを減らし、信頼性を高めます。 これらのガイドラインは、すべての新しいモジュールおよびすべての新しい開発に適用されるべきです。</p>
 <div class="alert alert-warning">
 <p class="alert-title">
-警告</p><p>When modifying existing files in <strong>stable version</strong> the original file style
-strictly supersedes any other style guidelines. In other words please never
-modify existing files in order to apply these guidelines. It avoids disrupting
-the revision history of code lines. Diff should be kept minimal. For more
-details, see our <a class="reference external" href="https://odoo.com/submit-pr">pull request guide</a>.</p>
+警告</p><p><strong>安定版</strong> で既存のファイルを変更する場合、オリジナルのファイルスタイルは他のスタイルガイドラインよりも絶対的に優先されます。 つまり、これらのガイドラインを適用するために、既存のファイルを変更しないでください。 コード行のリビジョン履歴を乱すのを避けます。差分は最小限に抑えるべきです。詳細については、 <a class="reference external" href="https://odoo.com/submit-pr">pull request guide</a> を参照してください。</p>
 </div>
 <div class="alert alert-warning">
 <p class="alert-title">
-警告</p><p>When modifying existing files in <strong>master (development) version</strong> apply those
-guidelines to existing code only for modified code or if most of the file is
-under revision. In other words modify existing files structure only if it is
-going under major changes. In that case first do a <strong>move</strong> commit then apply
-the changes related to the feature.</p>
+警告</p><p><strong>master (development) バージョン</strong> の既存のファイルを変更する場合は、既存のコードにこれらのガイドラインを適用します。 つまり、既存のファイル構造を大幅に変更する場合にのみ変更します。 その場合、最初に <strong>move</strong> コミットを実行し、その機能に関連する変更を適用します。</p>
 </div>
 </section><section id="module-structure">
 <h2>モジュール構造<a class="headerlink" href="#module-structure" title="このヘッドラインへのパーマリンク">¶</a></h2>
 </section><section id="directories">
-<h3>Directories<a class="headerlink" href="#directories" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>A module is organized in important directories. Those contain the business logic;
-having a look at them should make you understand the purpose of the module.</p>
+<h3>ディレクトリ構成<a class="headerlink" href="#directories" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>モジュールは重要なディレクトリにまとめられています。 それらはビジネスロジックを含んでおり、それらを見ることでモジュールの目的を理解できるようにします。</p>
 <ul class="simple">
-<li><p><em>data/</em> : demo and data xml</p></li>
-<li><p><em>models/</em> : models definition</p></li>
-<li><p><em>controllers/</em> : contains controllers (HTTP routes)</p></li>
-<li><p><em>views/</em> : contains the views and templates</p></li>
-<li><p><em>static/</em> : contains the web assets, separated into <em>css/, js/, img/, lib/, ...</em></p></li>
+<li><p><em>data/</em> : デモとデータのxml</p></li>
+<li><p><em>models/</em> : モデルの定義</p></li>
+<li><p><em>controllers/</em> : コントローラー (HTTP ルート)</p></li>
+<li><p><em>views/</em> : ビューとテンプレートが含まれています</p></li>
+<li><p><em>static/</em> : <em>css/, js/, img/, lib/, ...</em> で構成されるWeb アセットを含みます。</p></li>
 </ul>
-<p>Other optional directories compose the module.</p>
+<p>その他の任意のディレクトリがモジュールを構成します。</p>
 <ul class="simple">
-<li><p><em>wizard/</em> : regroups the transient models (<code class="o_code docutils literal notranslate"><span class="pre">models.TransientModel</span></code>) and their views</p></li>
-<li><p><em>report/</em> : contains the printable reports and models based on SQL views. Python objects and XML views are included in this directory</p></li>
-<li><p><em>tests/</em> : contains the Python tests</p></li>
+<li><p><em>ウィザード/</em> : 一時モデル (<code class="o_code docutils literal notranslate"><span class="pre">models.TransientModel</span></code>) とそのビュー</p></li>
+<li><p><em>report/</em> : SQL ビューに基づく印刷可能なレポートとモデルが含まれています。Python オブジェクトと XML ビューは、このディレクトリに含まれています。</p></li>
+<li><p><em>tests/</em> : Python テストが含まれています</p></li>
 </ul>
 </section><section id="file-naming">
-<h3>File naming<a class="headerlink" href="#file-naming" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>File naming is important to quickly find information through all odoo addons.
-This section explains how to name files in a standard odoo module. As an
-example we use a <a class="reference external" href="https://github.com/tivisse/odoodays-2018/tree/master/plant_nursery">plant nursery</a> application.
-It holds two main models <em>plant.nursery</em> and <em>plant.order</em>.</p>
+<h3>ファイルの命名<a class="headerlink" href="#file-naming" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ファイル名は、すべてのアドオンから情報をすばやく見つけるために重要です。このセクションでは、標準の odoo モジュールでファイルに名前を付ける方法を説明します。 例として、 <a class="reference external" href="https://github.com/tivisse/odoodays-2018/tree/master/plant_nursery">plant murde</a> アプリケーションを使用します。 <em>plant.narsery</em> と <em>plant.order</em> の2つの主要なモデルを保持します。</p>
 <p>Concerning <em>models</em>, split the business logic by sets of models belonging to
 a same main model. Each set lies in a given file named based on its main model.
 If there is only one model, its name is the same as the module name. Each
@@ -3368,10 +3353,10 @@ require a certain level of contextual awareness in order to be rendered properly
             <aside id="o_page_toc" class="o_page_toc" hidden><div class="o_page_toc_nav mt-1">
     <h5>On this page</h5>
     <ul>
-<li><a class="reference internal" href="#">Coding guidelines</a><ul>
+<li><a class="reference internal" href="#">コーディング ガイドライン</a><ul>
 <li><a class="reference internal" href="#module-structure">モジュール構造</a><ul>
-<li><a class="reference internal" href="#directories">Directories</a></li>
-<li><a class="reference internal" href="#file-naming">File naming</a></li>
+<li><a class="reference internal" href="#directories">ディレクトリ構成</a></li>
+<li><a class="reference internal" href="#file-naming">ファイルの命名</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#xml-files">XML files</a><ul>
@@ -3459,7 +3444,7 @@ require a certain level of contextual awareness in order to be rendered properly
         <li class="nav-item nav-item-0"><a href="../../index.html">Odoo 17.0 ドキュメント</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../contributing.html" >コントリビューション</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../development.html" >Development</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Coding guidelines</a></li> 
+        <li class="nav-item nav-item-this"><a href="">コーディング ガイドライン</a></li> 
       </ul>
     </div>
   </body>
