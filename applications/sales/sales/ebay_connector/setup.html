@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>How to configure eBay in Odoo? &#8212; Odoo 17.0 ドキュメント</title>
+    <title>eBay connector setup &#8212; Odoo 17.0 ドキュメント</title>
     
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/style.css" />
@@ -261,16 +261,18 @@
 </ul>
 </li>
 <li class="toctree-l4 current o_menu_applications_sales_sales_ebay_connector"><a class="reference internal" href="#">eBay Connector</a><ul class="current">
-<li class="toctree-l5 current o_menu_applications_sales_sales_ebay_connector_"><a class="current reference internal" href="#">How to configure eBay in Odoo?</a></li>
+<li class="toctree-l5 current o_menu_applications_sales_sales_ebay_connector_"><a class="current reference internal" href="#">eBay connector setup</a></li>
 <li class="toctree-l5 o_menu_applications_sales_sales_ebay_connector_manage"><a class="reference internal" href="manage.html">How to list a product?</a></li>
+<li class="toctree-l5 o_menu_applications_sales_sales_ebay_connector_troubleshooting"><a class="reference internal" href="troubleshooting.html">Troubleshooting eBay connector</a></li>
+<li class="toctree-l5 o_menu_applications_sales_sales_ebay_connector_linking_listings"><a class="reference internal" href="linking_listings.html">Linking existing listings</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_applications_sales_point_of_sale"><a class="reference internal" href="../../point_of_sale.html">POSシステム</a><ul>
+<li class="toctree-l3 o_menu_applications_sales_point_of_sale"><a class="reference internal" href="../../point_of_sale.html">Point of Sale</a><ul>
 <li class="toctree-l4 o_menu_applications_sales_point_of_sale_employee_login"><a class="reference internal" href="../../point_of_sale/employee_login.html">Multi-employee management</a></li>
 <li class="toctree-l4 o_menu_applications_sales_point_of_sale_receipts_invoices"><a class="reference internal" href="../../point_of_sale/receipts_invoices.html">Receipts and invoices</a></li>
-<li class="toctree-l4 o_menu_applications_sales_point_of_sale_configuration"><a class="reference internal" href="../../point_of_sale/configuration.html">構成設定</a><ul>
+<li class="toctree-l4 o_menu_applications_sales_point_of_sale_configuration"><a class="reference internal" href="../../point_of_sale/configuration.html">Configuration</a><ul>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_configuration_https"><a class="reference internal" href="../../point_of_sale/configuration/https.html">Secure connection (HTTPS)</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_configuration_epos_ssc"><a class="reference internal" href="../../point_of_sale/configuration/epos_ssc.html">Self-signed certificate for ePOS printers</a></li>
 </ul>
@@ -333,7 +335,7 @@
 <li class="toctree-l5 o_menu_applications_websites_website_pages_seo"><a class="reference internal" href="../../../websites/website/pages/seo.html">Search Engine Optimisation (SEO)</a></li>
 </ul>
 </li>
-<li class="toctree-l4 o_menu_applications_websites_website_configuration"><a class="reference internal" href="#">構成設定</a><ul>
+<li class="toctree-l4 o_menu_applications_websites_website_configuration"><a class="reference internal" href="#">Configuration</a><ul>
 <li class="toctree-l5 o_menu_applications_websites_website_configuration_cookies_bar"><a class="reference internal" href="../../../websites/website/configuration/cookies_bar.html">Cookies bar</a></li>
 <li class="toctree-l5 o_menu_applications_websites_website_configuration_translate"><a class="reference internal" href="../../../websites/website/configuration/translate.html">Translations</a></li>
 <li class="toctree-l5 o_menu_applications_websites_website_configuration_multi_website"><a class="reference internal" href="../../../websites/website/configuration/multi_website.html">Multiple websites</a></li>
@@ -385,8 +387,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 o_menu_applications_inventory_and_mrp"><a class="reference internal" href="#">在庫とMRP</a><ul>
-<li class="toctree-l3 o_menu_applications_inventory_and_mrp_inventory"><a class="reference internal" href="../../../inventory_and_mrp/inventory.html">在庫</a><ul>
+<li class="toctree-l2 o_menu_applications_inventory_and_mrp"><a class="reference internal" href="#">Inventory &amp; MRP</a><ul>
+<li class="toctree-l3 o_menu_applications_inventory_and_mrp_inventory"><a class="reference internal" href="../../../inventory_and_mrp/inventory.html">Inventory</a><ul>
 <li class="toctree-l4 o_menu_applications_inventory_and_mrp_inventory_product_management"><a class="reference internal" href="#">Product management</a><ul>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_inventory_product_management_product_replenishment"><a class="reference internal" href="#">Product replenishment</a><ul>
 <li class="toctree-l6 o_menu_applications_inventory_and_mrp_inventory_product_management_product_replenishment_strategies"><a class="reference internal" href="../../../inventory_and_mrp/inventory/product_management/product_replenishment/strategies.html">Selecting a replenishment strategy</a></li>
@@ -468,11 +470,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_applications_inventory_and_mrp_manufacturing"><a class="reference internal" href="../../../inventory_and_mrp/manufacturing.html">製造アプリ（Manufacturing）</a><ul>
+<li class="toctree-l3 o_menu_applications_inventory_and_mrp_manufacturing"><a class="reference internal" href="../../../inventory_and_mrp/manufacturing.html">Manufacturing</a><ul>
 <li class="toctree-l4 o_menu_applications_inventory_and_mrp_manufacturing_management"><a class="reference internal" href="#">Manufacturing workflows</a><ul>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_bill_configuration"><a class="reference internal" href="../../../inventory_and_mrp/manufacturing/management/bill_configuration.html">Bill of materials</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_product_variants"><a class="reference internal" href="../../../inventory_and_mrp/manufacturing/management/product_variants.html">Managing BoMs for product variants</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_kit_shipping"><a class="reference internal" href="../../../inventory_and_mrp/manufacturing/management/kit_shipping.html">キットの使用</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_kit_shipping"><a class="reference internal" href="../../../inventory_and_mrp/manufacturing/management/kit_shipping.html">Use kits</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_sub_assemblies"><a class="reference internal" href="../../../inventory_and_mrp/manufacturing/management/sub_assemblies.html">Manage semi-finished products</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_subcontracting"><a class="reference internal" href="../../../inventory_and_mrp/manufacturing/management/subcontracting.html">Subcontract your Manufacturing</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_use_mps"><a class="reference internal" href="../../../inventory_and_mrp/manufacturing/management/use_mps.html">Use the Master Production Schedule</a></li>
@@ -495,7 +497,7 @@
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_inventory_and_mrp_purchase"><a class="reference internal" href="../../../inventory_and_mrp/purchase.html">Purchase</a><ul>
-<li class="toctree-l4 o_menu_applications_inventory_and_mrp_purchase_products"><a class="reference internal" href="#">製品</a><ul>
+<li class="toctree-l4 o_menu_applications_inventory_and_mrp_purchase_products"><a class="reference internal" href="#">Products</a><ul>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_purchase_products_reordering"><a class="reference internal" href="../../../inventory_and_mrp/purchase/products/reordering.html">Configure reordering rules</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_purchase_products_uom"><a class="reference internal" href="../../../inventory_and_mrp/purchase/products/uom.html">Purchase in different units of measure than sales</a></li>
 </ul>
@@ -507,7 +509,7 @@
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_purchase_manage_deals_manage"><a class="reference internal" href="../../../inventory_and_mrp/purchase/manage_deals/manage.html">Manage vendor bills</a></li>
 </ul>
 </li>
-<li class="toctree-l4 o_menu_applications_inventory_and_mrp_purchase_advanced"><a class="reference internal" href="#">上級者向け</a><ul>
+<li class="toctree-l4 o_menu_applications_inventory_and_mrp_purchase_advanced"><a class="reference internal" href="#">Advanced</a><ul>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_purchase_advanced_analyze"><a class="reference internal" href="../../../inventory_and_mrp/purchase/advanced/analyze.html">Analyze the performance of your purchases</a></li>
 </ul>
 </li>
@@ -520,7 +522,7 @@
 </ul>
 </li>
 <li class="toctree-l4 o_menu_applications_inventory_and_mrp_barcode_operations"><a class="reference internal" href="#">Daily operations</a><ul>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_barcode_operations_adjustments"><a class="reference internal" href="../../../inventory_and_mrp/barcode/operations/adjustments.html">バーコードによる在庫調整へのプロセス</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_barcode_operations_adjustments"><a class="reference internal" href="../../../inventory_and_mrp/barcode/operations/adjustments.html">Process to an Inventory Adjustment with Barcodes</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_barcode_operations_internal"><a class="reference internal" href="../../../inventory_and_mrp/barcode/operations/internal.html">Process to Transfers</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_barcode_operations_transfers_scratch"><a class="reference internal" href="../../../inventory_and_mrp/barcode/operations/transfers_scratch.html">Create a Transfer from Scratch</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_barcode_operations_barcode_nomenclature"><a class="reference internal" href="../../../inventory_and_mrp/barcode/operations/barcode_nomenclature.html">Overview</a></li>
@@ -584,7 +586,7 @@
 <li class="toctree-l4 o_menu_applications_hr_payroll_reporting"><a class="reference internal" href="../../../hr/payroll/reporting.html">Reporting</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_applications_hr_recruitment"><a class="reference internal" href="#">Recruitment</a><ul>
+<li class="toctree-l3 o_menu_applications_hr_recruitment"><a class="reference internal" href="../../../hr/recruitment.html">Recruitment</a><ul>
 <li class="toctree-l4 o_menu_applications_hr_recruitment_new_job"><a class="reference internal" href="../../../hr/recruitment/new_job.html">Job positions</a></li>
 </ul>
 </li>
@@ -604,7 +606,7 @@
 <li class="toctree-l5 o_menu_applications_marketing_marketing_automation_getting_started_testing_running"><a class="reference internal" href="../../../marketing/marketing_automation/getting_started/testing_running.html">Testing/running campaigns</a></li>
 </ul>
 </li>
-<li class="toctree-l4 o_menu_applications_marketing_marketing_automation_advanced"><a class="reference internal" href="#">上級者向け</a><ul>
+<li class="toctree-l4 o_menu_applications_marketing_marketing_automation_advanced"><a class="reference internal" href="#">Advanced</a><ul>
 <li class="toctree-l5 o_menu_applications_marketing_marketing_automation_advanced_understanding_metrics"><a class="reference internal" href="../../../marketing/marketing_automation/advanced/understanding_metrics.html">Campaign metrics</a></li>
 </ul>
 </li>
@@ -677,7 +679,7 @@
 <li class="toctree-l5 o_menu_applications_services_helpdesk_overview_ratings"><a class="reference internal" href="../../../services/helpdesk/overview/ratings.html">Customer ratings</a></li>
 </ul>
 </li>
-<li class="toctree-l4 o_menu_applications_services_helpdesk_advanced"><a class="reference internal" href="#">上級者向け</a><ul>
+<li class="toctree-l4 o_menu_applications_services_helpdesk_advanced"><a class="reference internal" href="#">Advanced</a><ul>
 <li class="toctree-l5 o_menu_applications_services_helpdesk_advanced_after_sales"><a class="reference internal" href="../../../services/helpdesk/advanced/after_sales.html">After-Sales services</a></li>
 <li class="toctree-l5 o_menu_applications_services_helpdesk_advanced_close_tickets"><a class="reference internal" href="../../../services/helpdesk/advanced/close_tickets.html">Closing tickets</a></li>
 <li class="toctree-l5 o_menu_applications_services_helpdesk_advanced_track_and_bill"><a class="reference internal" href="../../../services/helpdesk/advanced/track_and_bill.html">Track and bill time</a></li>
@@ -695,7 +697,7 @@
 <li class="toctree-l5 o_menu_applications_productivity_discuss_overview_plan_activities"><a class="reference internal" href="../../../productivity/discuss/overview/plan_activities.html">Activities</a></li>
 </ul>
 </li>
-<li class="toctree-l4 o_menu_applications_productivity_discuss_advanced"><a class="reference internal" href="#">上級者向け</a><ul>
+<li class="toctree-l4 o_menu_applications_productivity_discuss_advanced"><a class="reference internal" href="#">Advanced</a><ul>
 <li class="toctree-l5 o_menu_applications_productivity_discuss_advanced_ice_servers"><a class="reference internal" href="../../../productivity/discuss/advanced/ice_servers.html">Configure ICE servers with Twilio</a></li>
 </ul>
 </li>
@@ -715,7 +717,7 @@
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_productivity_iot"><a class="reference internal" href="../../../productivity/iot.html">Internet of Things (IoT)</a><ul>
-<li class="toctree-l4 o_menu_applications_productivity_iot_config"><a class="reference internal" href="#">構成設定</a><ul>
+<li class="toctree-l4 o_menu_applications_productivity_iot_config"><a class="reference internal" href="#">Configuration</a><ul>
 <li class="toctree-l5 o_menu_applications_productivity_iot_config_connect"><a class="reference internal" href="../../../productivity/iot/config/connect.html">Connect an IoT box to Odoo</a></li>
 <li class="toctree-l5 o_menu_applications_productivity_iot_config_pos"><a class="reference internal" href="../../../productivity/iot/config/pos.html">Use an IoT box with a PoS</a></li>
 <li class="toctree-l5 o_menu_applications_productivity_iot_config_https_certificate_iot"><a class="reference internal" href="../../../productivity/iot/config/https_certificate_iot.html">HTTPS certificate (IoT)</a></li>
@@ -754,17 +756,17 @@
 <li class="toctree-l3 o_menu_applications_general_users"><a class="reference internal" href="#">Users and companies</a><ul>
 <li class="toctree-l4 o_menu_applications_general_users_manage_users"><a class="reference internal" href="../../../general/users/manage_users.html">Manage users</a></li>
 <li class="toctree-l4 o_menu_applications_general_users_language"><a class="reference internal" href="../../../general/users/language.html">Change language</a></li>
-<li class="toctree-l4 o_menu_applications_general_users_access_rights"><a class="reference internal" href="../../../general/users/access_rights.html">アクセス権限</a></li>
+<li class="toctree-l4 o_menu_applications_general_users_access_rights"><a class="reference internal" href="../../../general/users/access_rights.html">Access Rights</a></li>
 <li class="toctree-l4 o_menu_applications_general_users_companies"><a class="reference internal" href="../../../general/users/companies.html">Companies</a></li>
 <li class="toctree-l4 o_menu_applications_general_users_portal"><a class="reference internal" href="../../../general/users/portal.html">Portal access</a></li>
 <li class="toctree-l4 o_menu_applications_general_users_odoo_account"><a class="reference internal" href="../../../general/users/odoo_account.html">Odoo.com account changes</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">認証</a><ul>
+<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">Authentication</a><ul>
 <li class="toctree-l4 o_menu_applications_general_auth_google"><a class="reference internal" href="../../../general/auth/google.html">Google Sign-In Authentication</a></li>
 <li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="../../../general/auth/azure.html">Microsoft Azure sign-in authentication</a></li>
 <li class="toctree-l4 o_menu_applications_general_auth_ldap"><a class="reference internal" href="../../../general/auth/ldap.html">Sign in with LDAP</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../../general/auth/2fa.html">2要素認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../../general/auth/2fa.html">Two-factor Authentication</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_general_apps_modules"><a class="reference internal" href="../../../general/apps_modules.html">Apps and modules</a></li>
@@ -791,7 +793,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 o_menu_administration"><a class="reference internal" href="../../../../administration.html">インストールとメンテナンス</a><ul>
+<li class="toctree-l1 o_menu_administration"><a class="reference internal" href="../../../../administration.html">Install and Maintain</a><ul>
 <li class="toctree-l2 o_menu_administration_install"><a class="reference internal" href="../../../../administration/install.html">Install</a><ul>
 <li class="toctree-l3 o_menu_administration_install_online"><a class="reference internal" href="../../../../administration/install/online.html">Online</a></li>
 <li class="toctree-l3 o_menu_administration_install_packages"><a class="reference internal" href="../../../../administration/install/packages.html">Packaged installers</a></li>
@@ -806,7 +808,7 @@
 <li class="toctree-l3 o_menu_administration_maintain_azure_oauth"><a class="reference internal" href="../../../../administration/maintain/azure_oauth.html">Connect Microsoft Outlook 365 to Odoo using Azure OAuth</a></li>
 <li class="toctree-l3 o_menu_administration_maintain_google_oauth"><a class="reference internal" href="../../../../administration/maintain/google_oauth.html">Connect Gmail to Odoo using Google OAuth</a></li>
 <li class="toctree-l3 o_menu_administration_maintain_mailjet_api"><a class="reference internal" href="../../../../administration/maintain/mailjet_api.html">Mailjet API</a></li>
-<li class="toctree-l3 o_menu_administration_maintain_update"><a class="reference internal" href="../../../../administration/maintain/update.html">バグ修正アップデート</a></li>
+<li class="toctree-l3 o_menu_administration_maintain_update"><a class="reference internal" href="../../../../administration/maintain/update.html">Bugfix updates</a></li>
 <li class="toctree-l3 o_menu_administration_maintain_enterprise"><a class="reference internal" href="../../../../administration/maintain/enterprise.html">Switch from Community to Enterprise</a></li>
 <li class="toctree-l3 o_menu_administration_maintain_hosting_changes"><a class="reference internal" href="../../../../administration/maintain/hosting_changes.html">Change hosting solution</a></li>
 <li class="toctree-l3 o_menu_administration_maintain_odoo_online"><a class="reference internal" href="../../../../administration/maintain/odoo_online.html">Odoo Online database management</a></li>
@@ -830,7 +832,7 @@
 <li class="toctree-l4 o_menu_administration_odoo_sh_getting_started_first_module"><a class="reference internal" href="../../../../administration/odoo_sh/getting_started/first_module.html">Your first module</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_administration_odoo_sh_advanced"><a class="reference internal" href="#">上級者向け</a><ul>
+<li class="toctree-l3 o_menu_administration_odoo_sh_advanced"><a class="reference internal" href="#">Advanced</a><ul>
 <li class="toctree-l4 o_menu_administration_odoo_sh_advanced_containers"><a class="reference internal" href="../../../../administration/odoo_sh/advanced/containers.html">Containers</a></li>
 <li class="toctree-l4 o_menu_administration_odoo_sh_advanced_submodules"><a class="reference internal" href="../../../../administration/odoo_sh/advanced/submodules.html">Submodules</a></li>
 <li class="toctree-l4 o_menu_administration_odoo_sh_advanced_frequent_technical_questions"><a class="reference internal" href="../../../../administration/odoo_sh/advanced/frequent_technical_questions.html">Frequent Technical Questions</a></li>
@@ -840,24 +842,24 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 o_menu_developer"><a class="reference internal" href="../../../../developer.html">開発者向け</a><ul>
-<li class="toctree-l2 o_menu_developer_tutorials"><a class="reference internal" href="../../../../developer/tutorials.html">チュートリアル</a><ul>
+<li class="toctree-l1 o_menu_developer"><a class="reference internal" href="../../../../developer.html">Developer</a><ul>
+<li class="toctree-l2 o_menu_developer_tutorials"><a class="reference internal" href="../../../../developer/tutorials.html">Tutorials</a><ul>
 <li class="toctree-l3 o_menu_developer_tutorials_getting_started"><a class="reference internal" href="../../../../developer/tutorials/getting_started.html">Getting started</a><ul>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_01_architecture"><a class="reference internal" href="../../../../developer/tutorials/getting_started/01_architecture.html">第1章：アーキテクチャの概要</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_02_setup"><a class="reference internal" href="../../../../developer/tutorials/getting_started/02_setup.html">第2章：開発環境のセットアップ</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_03_newapp"><a class="reference internal" href="../../../../developer/tutorials/getting_started/03_newapp.html">第3章：新規アプリケーション</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_04_basicmodel"><a class="reference internal" href="../../../../developer/tutorials/getting_started/04_basicmodel.html">第4章：モデルと基本フィールド</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_05_securityintro"><a class="reference internal" href="../../../../developer/tutorials/getting_started/05_securityintro.html">第5章：セキュリティ - 簡単な紹介</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_06_firstui"><a class="reference internal" href="../../../../developer/tutorials/getting_started/06_firstui.html">第6章：いよいよUIを動かせるように</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_07_basicviews"><a class="reference internal" href="../../../../developer/tutorials/getting_started/07_basicviews.html">第7章：基本的なビュー</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_08_relations"><a class="reference internal" href="../../../../developer/tutorials/getting_started/08_relations.html">第8章：モデル間のリレーション</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_09_compute_onchange"><a class="reference internal" href="../../../../developer/tutorials/getting_started/09_compute_onchange.html">第9章：計算フィールドとOnchangeメカニズム</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_10_actions"><a class="reference internal" href="../../../../developer/tutorials/getting_started/10_actions.html">第10章: アクションの準備はできましたか？</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_11_constraints"><a class="reference internal" href="../../../../developer/tutorials/getting_started/11_constraints.html">第11章: 制約</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_12_sprinkles"><a class="reference internal" href="../../../../developer/tutorials/getting_started/12_sprinkles.html">第12章：Sprinklesの追加</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_13_inheritance"><a class="reference internal" href="../../../../developer/tutorials/getting_started/13_inheritance.html">第13章：継承</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_14_other_module"><a class="reference internal" href="../../../../developer/tutorials/getting_started/14_other_module.html">第14章：他のモジュールとの相互作用</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_15_qwebintro"><a class="reference internal" href="../../../../developer/tutorials/getting_started/15_qwebintro.html">第15章: QWeb の歴史を振り返る</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_01_architecture"><a class="reference internal" href="../../../../developer/tutorials/getting_started/01_architecture.html">Chapter 1: Architecture Overview</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_02_setup"><a class="reference internal" href="../../../../developer/tutorials/getting_started/02_setup.html">Chapter 2: Development environment setup</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_03_newapp"><a class="reference internal" href="../../../../developer/tutorials/getting_started/03_newapp.html">Chapter 3: A New Application</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_04_basicmodel"><a class="reference internal" href="../../../../developer/tutorials/getting_started/04_basicmodel.html">Chapter 4: Models And Basic Fields</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_05_securityintro"><a class="reference internal" href="../../../../developer/tutorials/getting_started/05_securityintro.html">Chapter 5: Security - A Brief Introduction</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_06_firstui"><a class="reference internal" href="../../../../developer/tutorials/getting_started/06_firstui.html">Chapter 6: Finally, Some UI To Play With</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_07_basicviews"><a class="reference internal" href="../../../../developer/tutorials/getting_started/07_basicviews.html">Chapter 7: Basic Views</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_08_relations"><a class="reference internal" href="../../../../developer/tutorials/getting_started/08_relations.html">Chapter 8: Relations Between Models</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_09_compute_onchange"><a class="reference internal" href="../../../../developer/tutorials/getting_started/09_compute_onchange.html">Chapter 9: Computed Fields And Onchanges</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_10_actions"><a class="reference internal" href="../../../../developer/tutorials/getting_started/10_actions.html">Chapter 10: Ready For Some Action?</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_11_constraints"><a class="reference internal" href="../../../../developer/tutorials/getting_started/11_constraints.html">Chapter 11: Constraints</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_12_sprinkles"><a class="reference internal" href="../../../../developer/tutorials/getting_started/12_sprinkles.html">Chapter 12: Add The Sprinkles</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_13_inheritance"><a class="reference internal" href="../../../../developer/tutorials/getting_started/13_inheritance.html">Chapter 13: Inheritance</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_14_other_module"><a class="reference internal" href="../../../../developer/tutorials/getting_started/14_other_module.html">Chapter 14: Interact With Other Modules</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_15_qwebintro"><a class="reference internal" href="../../../../developer/tutorials/getting_started/15_qwebintro.html">Chapter 15: A Brief History Of QWeb</a></li>
 <li class="toctree-l4 o_menu_developer_tutorials_getting_started_16_final_word"><a class="reference internal" href="../../../../developer/tutorials/getting_started/16_final_word.html">Chapter 16: The final word</a></li>
 </ul>
 </li>
@@ -901,7 +903,7 @@
 <li class="toctree-l4 o_menu_developer_howtos_website_themes_gradients"><a class="reference internal" href="../../../../developer/howtos/website_themes/gradients.html">Gradients</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_website_themes_animations"><a class="reference internal" href="../../../../developer/howtos/website_themes/animations.html">Animations</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_website_themes_forms"><a class="reference internal" href="../../../../developer/howtos/website_themes/forms.html">Forms</a></li>
-<li class="toctree-l4 o_menu_developer_howtos_website_themes_translations"><a class="reference internal" href="../../../../developer/howtos/website_themes/translations.html">翻訳</a></li>
+<li class="toctree-l4 o_menu_developer_howtos_website_themes_translations"><a class="reference internal" href="../../../../developer/howtos/website_themes/translations.html">Translations</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_website_themes_going_live"><a class="reference internal" href="../../../../developer/howtos/website_themes/going_live.html">Going live</a></li>
 </ul>
 </li>
@@ -914,8 +916,8 @@
 <li class="toctree-l5 o_menu_developer_reference_backend_orm_changelog"><a class="reference internal" href="../../../../developer/reference/backend/orm/changelog.html">Changelog</a></li>
 </ul>
 </li>
-<li class="toctree-l4 o_menu_developer_reference_backend_data"><a class="reference internal" href="../../../../developer/reference/backend/data.html">データファイル</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_actions"><a class="reference internal" href="../../../../developer/reference/backend/actions.html">アクション</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_data"><a class="reference internal" href="../../../../developer/reference/backend/data.html">Data Files</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_actions"><a class="reference internal" href="../../../../developer/reference/backend/actions.html">Actions</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_reports"><a class="reference internal" href="../../../../developer/reference/backend/reports.html">QWeb Reports</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_module"><a class="reference internal" href="../../../../developer/reference/backend/module.html">Module Manifests</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_security"><a class="reference internal" href="../../../../developer/reference/backend/security.html">Security in Odoo</a></li>
@@ -948,7 +950,7 @@
 </ul>
 </li>
 <li class="toctree-l3 o_menu_developer_reference_standard_modules"><a class="reference internal" href="#">Standard modules</a><ul>
-<li class="toctree-l4 o_menu_developer_reference_standard_modules_account"><a class="reference internal" href="#">会計</a><ul>
+<li class="toctree-l4 o_menu_developer_reference_standard_modules_account"><a class="reference internal" href="#">Accounting</a><ul>
 <li class="toctree-l5 o_menu_developer_reference_standard_modules_account_account_account_tag"><a class="reference internal" href="../../../../developer/reference/standard_modules/account/account_account_tag.html">Account Tag</a></li>
 <li class="toctree-l5 o_menu_developer_reference_standard_modules_account_account_account"><a class="reference internal" href="../../../../developer/reference/standard_modules/account/account_account.html">Account</a></li>
 <li class="toctree-l5 o_menu_developer_reference_standard_modules_account_account_fiscal_position"><a class="reference internal" href="../../../../developer/reference/standard_modules/account/account_fiscal_position.html">Fiscal Position</a></li>
@@ -968,21 +970,21 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_developer_reference_cli"><a class="reference internal" href="../../../../developer/reference/cli.html">コマンドラインインターフェース (CLI)</a></li>
-<li class="toctree-l3 o_menu_developer_reference_external_api"><a class="reference internal" href="../../../../developer/reference/external_api.html">外部API</a></li>
+<li class="toctree-l3 o_menu_developer_reference_cli"><a class="reference internal" href="../../../../developer/reference/cli.html">Command-line interface (CLI)</a></li>
+<li class="toctree-l3 o_menu_developer_reference_external_api"><a class="reference internal" href="../../../../developer/reference/external_api.html">External API</a></li>
 <li class="toctree-l3 o_menu_developer_reference_extract_api"><a class="reference internal" href="../../../../developer/reference/extract_api.html">Extract API</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 o_menu_contributing"><a class="reference internal" href="../../../../contributing.html">コントリビューション</a><ul>
+<li class="toctree-l1 o_menu_contributing"><a class="reference internal" href="../../../../contributing.html">Contributing</a><ul>
 <li class="toctree-l2 o_menu_contributing_development"><a class="reference internal" href="../../../../contributing/development.html">Development</a><ul>
 <li class="toctree-l3 o_menu_contributing_development_coding_guidelines"><a class="reference internal" href="../../../../contributing/development/coding_guidelines.html">Coding guidelines</a></li>
 <li class="toctree-l3 o_menu_contributing_development_git_guidelines"><a class="reference internal" href="../../../../contributing/development/git_guidelines.html">Git guidelines</a></li>
 </ul>
 </li>
-<li class="toctree-l2 o_menu_contributing_documentation"><a class="reference internal" href="../../../../contributing/documentation.html">ドキュメント</a><ul>
-<li class="toctree-l3 o_menu_contributing_documentation_content_guidelines"><a class="reference internal" href="../../../../contributing/documentation/content_guidelines.html">コンテンツガイドライン</a></li>
+<li class="toctree-l2 o_menu_contributing_documentation"><a class="reference internal" href="../../../../contributing/documentation.html">Documentation</a><ul>
+<li class="toctree-l3 o_menu_contributing_documentation_content_guidelines"><a class="reference internal" href="../../../../contributing/documentation/content_guidelines.html">Content guidelines</a></li>
 <li class="toctree-l3 o_menu_contributing_documentation_rst_cheat_sheet"><a class="reference internal" href="../../../../contributing/documentation/rst_cheat_sheet.html">RST cheat sheet</a></li>
 <li class="toctree-l3 o_menu_contributing_documentation_rst_guidelines"><a class="reference internal" href="../../../../contributing/documentation/rst_guidelines.html">RST guidelines</a></li>
 </ul>
@@ -1001,16 +1003,27 @@
                 <aside id="o_page_toc_in_nav" class="o_page_toc o_in_nav_toc border-bottom pt-3 pb-3" hidden><div class="o_page_toc_nav mt-1">
     <h5>On this page</h5>
     <ul>
-<li><a class="reference internal" href="#">How to configure eBay in Odoo?</a><ul>
-<li><a class="reference internal" href="#create-ebay-tokens">Create eBay tokens</a></li>
-<li><a class="reference internal" href="#set-up-tokens-in-odoo">Set up tokens in Odoo?</a></li>
-<li><a class="reference internal" href="#accept-account-deletion-notifications">Accept account deletion notifications</a><ul>
-<li><a class="reference internal" href="#retrieve-endpoint-details-from-odoo">Retrieve endpoint details from Odoo</a></li>
-<li><a class="reference internal" href="#subscribe-to-account-deletion-notifications">Subscribe to account deletion notifications</a></li>
-<li><a class="reference internal" href="#verify-the-connectivity-with-the-endpoint">Verify the connectivity with the endpoint</a></li>
+<li><a class="reference internal" href="#">eBay connector setup</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a><ul>
+<li><a class="reference internal" href="#ebay-odoo-linked-fields">eBay - Odoo linked fields</a></li>
+<li><a class="reference internal" href="#ebay-terms">eBay terms</a></li>
+<li><a class="reference internal" href="#ebay-actions-available-on-odoo">eBay actions available on Odoo</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#using-the-updated-synchronisation-method">Using the updated synchronisation method</a></li>
+<li><a class="reference internal" href="#setup-required-on-odoo-prior-to-ebay-setup">Setup required on Odoo prior to eBay setup</a></li>
+<li><a class="reference internal" href="#set-up-on-ebay">Set up on eBay</a><ul>
+<li><a class="reference internal" href="#set-up-ebay-developer-account">Set up eBay developer account</a></li>
+<li><a class="reference internal" href="#set-up-ebay-keyset">Set up eBay keyset</a><ul>
+<li><a class="reference internal" href="#configure-account-deletion-notification-settings-production">Configure account deletion / notification settings (Production)</a></li>
+<li><a class="reference internal" href="#creating-the-keyset">Creating the keyset</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#create-ebay-user-token">Create eBay user token</a></li>
+<li><a class="reference internal" href="#grant-application-access">Grant application access</a></li>
+<li><a class="reference internal" href="#api-explorer">API explorer</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#entering-credentials-into-odoo">Entering credentials into Odoo</a></li>
 </ul>
 </li>
 </ul>
@@ -1247,16 +1260,18 @@
 </ul>
 </li>
 <li class="toctree-l4 current o_menu_applications_sales_sales_ebay_connector"><a class="reference internal" href="#">eBay Connector</a><ul class="current">
-<li class="toctree-l5 current o_menu_applications_sales_sales_ebay_connector_"><a class="current reference internal" href="#">How to configure eBay in Odoo?</a></li>
+<li class="toctree-l5 current o_menu_applications_sales_sales_ebay_connector_"><a class="current reference internal" href="#">eBay connector setup</a></li>
 <li class="toctree-l5 o_menu_applications_sales_sales_ebay_connector_manage"><a class="reference internal" href="manage.html">How to list a product?</a></li>
+<li class="toctree-l5 o_menu_applications_sales_sales_ebay_connector_troubleshooting"><a class="reference internal" href="troubleshooting.html">Troubleshooting eBay connector</a></li>
+<li class="toctree-l5 o_menu_applications_sales_sales_ebay_connector_linking_listings"><a class="reference internal" href="linking_listings.html">Linking existing listings</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_applications_sales_point_of_sale"><a class="reference internal" href="../../point_of_sale.html">POSシステム</a><ul>
+<li class="toctree-l3 o_menu_applications_sales_point_of_sale"><a class="reference internal" href="../../point_of_sale.html">Point of Sale</a><ul>
 <li class="toctree-l4 o_menu_applications_sales_point_of_sale_employee_login"><a class="reference internal" href="../../point_of_sale/employee_login.html">Multi-employee management</a></li>
 <li class="toctree-l4 o_menu_applications_sales_point_of_sale_receipts_invoices"><a class="reference internal" href="../../point_of_sale/receipts_invoices.html">Receipts and invoices</a></li>
-<li class="toctree-l4 o_menu_applications_sales_point_of_sale_configuration"><a class="reference internal" href="../../point_of_sale/configuration.html">構成設定</a><ul>
+<li class="toctree-l4 o_menu_applications_sales_point_of_sale_configuration"><a class="reference internal" href="../../point_of_sale/configuration.html">Configuration</a><ul>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_configuration_https"><a class="reference internal" href="../../point_of_sale/configuration/https.html">Secure connection (HTTPS)</a></li>
 <li class="toctree-l5 o_menu_applications_sales_point_of_sale_configuration_epos_ssc"><a class="reference internal" href="../../point_of_sale/configuration/epos_ssc.html">Self-signed certificate for ePOS printers</a></li>
 </ul>
@@ -1319,7 +1334,7 @@
 <li class="toctree-l5 o_menu_applications_websites_website_pages_seo"><a class="reference internal" href="../../../websites/website/pages/seo.html">Search Engine Optimisation (SEO)</a></li>
 </ul>
 </li>
-<li class="toctree-l4 o_menu_applications_websites_website_configuration"><a class="reference internal" href="#">構成設定</a><ul>
+<li class="toctree-l4 o_menu_applications_websites_website_configuration"><a class="reference internal" href="#">Configuration</a><ul>
 <li class="toctree-l5 o_menu_applications_websites_website_configuration_cookies_bar"><a class="reference internal" href="../../../websites/website/configuration/cookies_bar.html">Cookies bar</a></li>
 <li class="toctree-l5 o_menu_applications_websites_website_configuration_translate"><a class="reference internal" href="../../../websites/website/configuration/translate.html">Translations</a></li>
 <li class="toctree-l5 o_menu_applications_websites_website_configuration_multi_website"><a class="reference internal" href="../../../websites/website/configuration/multi_website.html">Multiple websites</a></li>
@@ -1371,8 +1386,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 o_menu_applications_inventory_and_mrp"><a class="reference internal" href="#">在庫とMRP</a><ul>
-<li class="toctree-l3 o_menu_applications_inventory_and_mrp_inventory"><a class="reference internal" href="../../../inventory_and_mrp/inventory.html">在庫</a><ul>
+<li class="toctree-l2 o_menu_applications_inventory_and_mrp"><a class="reference internal" href="#">Inventory &amp; MRP</a><ul>
+<li class="toctree-l3 o_menu_applications_inventory_and_mrp_inventory"><a class="reference internal" href="../../../inventory_and_mrp/inventory.html">Inventory</a><ul>
 <li class="toctree-l4 o_menu_applications_inventory_and_mrp_inventory_product_management"><a class="reference internal" href="#">Product management</a><ul>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_inventory_product_management_product_replenishment"><a class="reference internal" href="#">Product replenishment</a><ul>
 <li class="toctree-l6 o_menu_applications_inventory_and_mrp_inventory_product_management_product_replenishment_strategies"><a class="reference internal" href="../../../inventory_and_mrp/inventory/product_management/product_replenishment/strategies.html">Selecting a replenishment strategy</a></li>
@@ -1454,11 +1469,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_applications_inventory_and_mrp_manufacturing"><a class="reference internal" href="../../../inventory_and_mrp/manufacturing.html">製造アプリ（Manufacturing）</a><ul>
+<li class="toctree-l3 o_menu_applications_inventory_and_mrp_manufacturing"><a class="reference internal" href="../../../inventory_and_mrp/manufacturing.html">Manufacturing</a><ul>
 <li class="toctree-l4 o_menu_applications_inventory_and_mrp_manufacturing_management"><a class="reference internal" href="#">Manufacturing workflows</a><ul>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_bill_configuration"><a class="reference internal" href="../../../inventory_and_mrp/manufacturing/management/bill_configuration.html">Bill of materials</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_product_variants"><a class="reference internal" href="../../../inventory_and_mrp/manufacturing/management/product_variants.html">Managing BoMs for product variants</a></li>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_kit_shipping"><a class="reference internal" href="../../../inventory_and_mrp/manufacturing/management/kit_shipping.html">キットの使用</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_kit_shipping"><a class="reference internal" href="../../../inventory_and_mrp/manufacturing/management/kit_shipping.html">Use kits</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_sub_assemblies"><a class="reference internal" href="../../../inventory_and_mrp/manufacturing/management/sub_assemblies.html">Manage semi-finished products</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_subcontracting"><a class="reference internal" href="../../../inventory_and_mrp/manufacturing/management/subcontracting.html">Subcontract your Manufacturing</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_manufacturing_management_use_mps"><a class="reference internal" href="../../../inventory_and_mrp/manufacturing/management/use_mps.html">Use the Master Production Schedule</a></li>
@@ -1481,7 +1496,7 @@
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_inventory_and_mrp_purchase"><a class="reference internal" href="../../../inventory_and_mrp/purchase.html">Purchase</a><ul>
-<li class="toctree-l4 o_menu_applications_inventory_and_mrp_purchase_products"><a class="reference internal" href="#">製品</a><ul>
+<li class="toctree-l4 o_menu_applications_inventory_and_mrp_purchase_products"><a class="reference internal" href="#">Products</a><ul>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_purchase_products_reordering"><a class="reference internal" href="../../../inventory_and_mrp/purchase/products/reordering.html">Configure reordering rules</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_purchase_products_uom"><a class="reference internal" href="../../../inventory_and_mrp/purchase/products/uom.html">Purchase in different units of measure than sales</a></li>
 </ul>
@@ -1493,7 +1508,7 @@
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_purchase_manage_deals_manage"><a class="reference internal" href="../../../inventory_and_mrp/purchase/manage_deals/manage.html">Manage vendor bills</a></li>
 </ul>
 </li>
-<li class="toctree-l4 o_menu_applications_inventory_and_mrp_purchase_advanced"><a class="reference internal" href="#">上級者向け</a><ul>
+<li class="toctree-l4 o_menu_applications_inventory_and_mrp_purchase_advanced"><a class="reference internal" href="#">Advanced</a><ul>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_purchase_advanced_analyze"><a class="reference internal" href="../../../inventory_and_mrp/purchase/advanced/analyze.html">Analyze the performance of your purchases</a></li>
 </ul>
 </li>
@@ -1506,7 +1521,7 @@
 </ul>
 </li>
 <li class="toctree-l4 o_menu_applications_inventory_and_mrp_barcode_operations"><a class="reference internal" href="#">Daily operations</a><ul>
-<li class="toctree-l5 o_menu_applications_inventory_and_mrp_barcode_operations_adjustments"><a class="reference internal" href="../../../inventory_and_mrp/barcode/operations/adjustments.html">バーコードによる在庫調整へのプロセス</a></li>
+<li class="toctree-l5 o_menu_applications_inventory_and_mrp_barcode_operations_adjustments"><a class="reference internal" href="../../../inventory_and_mrp/barcode/operations/adjustments.html">Process to an Inventory Adjustment with Barcodes</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_barcode_operations_internal"><a class="reference internal" href="../../../inventory_and_mrp/barcode/operations/internal.html">Process to Transfers</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_barcode_operations_transfers_scratch"><a class="reference internal" href="../../../inventory_and_mrp/barcode/operations/transfers_scratch.html">Create a Transfer from Scratch</a></li>
 <li class="toctree-l5 o_menu_applications_inventory_and_mrp_barcode_operations_barcode_nomenclature"><a class="reference internal" href="../../../inventory_and_mrp/barcode/operations/barcode_nomenclature.html">Overview</a></li>
@@ -1570,7 +1585,7 @@
 <li class="toctree-l4 o_menu_applications_hr_payroll_reporting"><a class="reference internal" href="../../../hr/payroll/reporting.html">Reporting</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_applications_hr_recruitment"><a class="reference internal" href="#">Recruitment</a><ul>
+<li class="toctree-l3 o_menu_applications_hr_recruitment"><a class="reference internal" href="../../../hr/recruitment.html">Recruitment</a><ul>
 <li class="toctree-l4 o_menu_applications_hr_recruitment_new_job"><a class="reference internal" href="../../../hr/recruitment/new_job.html">Job positions</a></li>
 </ul>
 </li>
@@ -1590,7 +1605,7 @@
 <li class="toctree-l5 o_menu_applications_marketing_marketing_automation_getting_started_testing_running"><a class="reference internal" href="../../../marketing/marketing_automation/getting_started/testing_running.html">Testing/running campaigns</a></li>
 </ul>
 </li>
-<li class="toctree-l4 o_menu_applications_marketing_marketing_automation_advanced"><a class="reference internal" href="#">上級者向け</a><ul>
+<li class="toctree-l4 o_menu_applications_marketing_marketing_automation_advanced"><a class="reference internal" href="#">Advanced</a><ul>
 <li class="toctree-l5 o_menu_applications_marketing_marketing_automation_advanced_understanding_metrics"><a class="reference internal" href="../../../marketing/marketing_automation/advanced/understanding_metrics.html">Campaign metrics</a></li>
 </ul>
 </li>
@@ -1663,7 +1678,7 @@
 <li class="toctree-l5 o_menu_applications_services_helpdesk_overview_ratings"><a class="reference internal" href="../../../services/helpdesk/overview/ratings.html">Customer ratings</a></li>
 </ul>
 </li>
-<li class="toctree-l4 o_menu_applications_services_helpdesk_advanced"><a class="reference internal" href="#">上級者向け</a><ul>
+<li class="toctree-l4 o_menu_applications_services_helpdesk_advanced"><a class="reference internal" href="#">Advanced</a><ul>
 <li class="toctree-l5 o_menu_applications_services_helpdesk_advanced_after_sales"><a class="reference internal" href="../../../services/helpdesk/advanced/after_sales.html">After-Sales services</a></li>
 <li class="toctree-l5 o_menu_applications_services_helpdesk_advanced_close_tickets"><a class="reference internal" href="../../../services/helpdesk/advanced/close_tickets.html">Closing tickets</a></li>
 <li class="toctree-l5 o_menu_applications_services_helpdesk_advanced_track_and_bill"><a class="reference internal" href="../../../services/helpdesk/advanced/track_and_bill.html">Track and bill time</a></li>
@@ -1681,7 +1696,7 @@
 <li class="toctree-l5 o_menu_applications_productivity_discuss_overview_plan_activities"><a class="reference internal" href="../../../productivity/discuss/overview/plan_activities.html">Activities</a></li>
 </ul>
 </li>
-<li class="toctree-l4 o_menu_applications_productivity_discuss_advanced"><a class="reference internal" href="#">上級者向け</a><ul>
+<li class="toctree-l4 o_menu_applications_productivity_discuss_advanced"><a class="reference internal" href="#">Advanced</a><ul>
 <li class="toctree-l5 o_menu_applications_productivity_discuss_advanced_ice_servers"><a class="reference internal" href="../../../productivity/discuss/advanced/ice_servers.html">Configure ICE servers with Twilio</a></li>
 </ul>
 </li>
@@ -1701,7 +1716,7 @@
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_productivity_iot"><a class="reference internal" href="../../../productivity/iot.html">Internet of Things (IoT)</a><ul>
-<li class="toctree-l4 o_menu_applications_productivity_iot_config"><a class="reference internal" href="#">構成設定</a><ul>
+<li class="toctree-l4 o_menu_applications_productivity_iot_config"><a class="reference internal" href="#">Configuration</a><ul>
 <li class="toctree-l5 o_menu_applications_productivity_iot_config_connect"><a class="reference internal" href="../../../productivity/iot/config/connect.html">Connect an IoT box to Odoo</a></li>
 <li class="toctree-l5 o_menu_applications_productivity_iot_config_pos"><a class="reference internal" href="../../../productivity/iot/config/pos.html">Use an IoT box with a PoS</a></li>
 <li class="toctree-l5 o_menu_applications_productivity_iot_config_https_certificate_iot"><a class="reference internal" href="../../../productivity/iot/config/https_certificate_iot.html">HTTPS certificate (IoT)</a></li>
@@ -1740,17 +1755,17 @@
 <li class="toctree-l3 o_menu_applications_general_users"><a class="reference internal" href="#">Users and companies</a><ul>
 <li class="toctree-l4 o_menu_applications_general_users_manage_users"><a class="reference internal" href="../../../general/users/manage_users.html">Manage users</a></li>
 <li class="toctree-l4 o_menu_applications_general_users_language"><a class="reference internal" href="../../../general/users/language.html">Change language</a></li>
-<li class="toctree-l4 o_menu_applications_general_users_access_rights"><a class="reference internal" href="../../../general/users/access_rights.html">アクセス権限</a></li>
+<li class="toctree-l4 o_menu_applications_general_users_access_rights"><a class="reference internal" href="../../../general/users/access_rights.html">Access Rights</a></li>
 <li class="toctree-l4 o_menu_applications_general_users_companies"><a class="reference internal" href="../../../general/users/companies.html">Companies</a></li>
 <li class="toctree-l4 o_menu_applications_general_users_portal"><a class="reference internal" href="../../../general/users/portal.html">Portal access</a></li>
 <li class="toctree-l4 o_menu_applications_general_users_odoo_account"><a class="reference internal" href="../../../general/users/odoo_account.html">Odoo.com account changes</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">認証</a><ul>
+<li class="toctree-l3 o_menu_applications_general_auth"><a class="reference internal" href="#">Authentication</a><ul>
 <li class="toctree-l4 o_menu_applications_general_auth_google"><a class="reference internal" href="../../../general/auth/google.html">Google Sign-In Authentication</a></li>
 <li class="toctree-l4 o_menu_applications_general_auth_azure"><a class="reference internal" href="../../../general/auth/azure.html">Microsoft Azure sign-in authentication</a></li>
 <li class="toctree-l4 o_menu_applications_general_auth_ldap"><a class="reference internal" href="../../../general/auth/ldap.html">Sign in with LDAP</a></li>
-<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../../general/auth/2fa.html">2要素認証</a></li>
+<li class="toctree-l4 o_menu_applications_general_auth_2fa"><a class="reference internal" href="../../../general/auth/2fa.html">Two-factor Authentication</a></li>
 </ul>
 </li>
 <li class="toctree-l3 o_menu_applications_general_apps_modules"><a class="reference internal" href="../../../general/apps_modules.html">Apps and modules</a></li>
@@ -1777,7 +1792,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 o_menu_administration"><a class="reference internal" href="../../../../administration.html">インストールとメンテナンス</a><ul>
+<li class="toctree-l1 o_menu_administration"><a class="reference internal" href="../../../../administration.html">Install and Maintain</a><ul>
 <li class="toctree-l2 o_menu_administration_install"><a class="reference internal" href="../../../../administration/install.html">Install</a><ul>
 <li class="toctree-l3 o_menu_administration_install_online"><a class="reference internal" href="../../../../administration/install/online.html">Online</a></li>
 <li class="toctree-l3 o_menu_administration_install_packages"><a class="reference internal" href="../../../../administration/install/packages.html">Packaged installers</a></li>
@@ -1792,7 +1807,7 @@
 <li class="toctree-l3 o_menu_administration_maintain_azure_oauth"><a class="reference internal" href="../../../../administration/maintain/azure_oauth.html">Connect Microsoft Outlook 365 to Odoo using Azure OAuth</a></li>
 <li class="toctree-l3 o_menu_administration_maintain_google_oauth"><a class="reference internal" href="../../../../administration/maintain/google_oauth.html">Connect Gmail to Odoo using Google OAuth</a></li>
 <li class="toctree-l3 o_menu_administration_maintain_mailjet_api"><a class="reference internal" href="../../../../administration/maintain/mailjet_api.html">Mailjet API</a></li>
-<li class="toctree-l3 o_menu_administration_maintain_update"><a class="reference internal" href="../../../../administration/maintain/update.html">バグ修正アップデート</a></li>
+<li class="toctree-l3 o_menu_administration_maintain_update"><a class="reference internal" href="../../../../administration/maintain/update.html">Bugfix updates</a></li>
 <li class="toctree-l3 o_menu_administration_maintain_enterprise"><a class="reference internal" href="../../../../administration/maintain/enterprise.html">Switch from Community to Enterprise</a></li>
 <li class="toctree-l3 o_menu_administration_maintain_hosting_changes"><a class="reference internal" href="../../../../administration/maintain/hosting_changes.html">Change hosting solution</a></li>
 <li class="toctree-l3 o_menu_administration_maintain_odoo_online"><a class="reference internal" href="../../../../administration/maintain/odoo_online.html">Odoo Online database management</a></li>
@@ -1816,7 +1831,7 @@
 <li class="toctree-l4 o_menu_administration_odoo_sh_getting_started_first_module"><a class="reference internal" href="../../../../administration/odoo_sh/getting_started/first_module.html">Your first module</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_administration_odoo_sh_advanced"><a class="reference internal" href="#">上級者向け</a><ul>
+<li class="toctree-l3 o_menu_administration_odoo_sh_advanced"><a class="reference internal" href="#">Advanced</a><ul>
 <li class="toctree-l4 o_menu_administration_odoo_sh_advanced_containers"><a class="reference internal" href="../../../../administration/odoo_sh/advanced/containers.html">Containers</a></li>
 <li class="toctree-l4 o_menu_administration_odoo_sh_advanced_submodules"><a class="reference internal" href="../../../../administration/odoo_sh/advanced/submodules.html">Submodules</a></li>
 <li class="toctree-l4 o_menu_administration_odoo_sh_advanced_frequent_technical_questions"><a class="reference internal" href="../../../../administration/odoo_sh/advanced/frequent_technical_questions.html">Frequent Technical Questions</a></li>
@@ -1826,24 +1841,24 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 o_menu_developer"><a class="reference internal" href="../../../../developer.html">開発者向け</a><ul>
-<li class="toctree-l2 o_menu_developer_tutorials"><a class="reference internal" href="../../../../developer/tutorials.html">チュートリアル</a><ul>
+<li class="toctree-l1 o_menu_developer"><a class="reference internal" href="../../../../developer.html">Developer</a><ul>
+<li class="toctree-l2 o_menu_developer_tutorials"><a class="reference internal" href="../../../../developer/tutorials.html">Tutorials</a><ul>
 <li class="toctree-l3 o_menu_developer_tutorials_getting_started"><a class="reference internal" href="../../../../developer/tutorials/getting_started.html">Getting started</a><ul>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_01_architecture"><a class="reference internal" href="../../../../developer/tutorials/getting_started/01_architecture.html">第1章：アーキテクチャの概要</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_02_setup"><a class="reference internal" href="../../../../developer/tutorials/getting_started/02_setup.html">第2章：開発環境のセットアップ</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_03_newapp"><a class="reference internal" href="../../../../developer/tutorials/getting_started/03_newapp.html">第3章：新規アプリケーション</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_04_basicmodel"><a class="reference internal" href="../../../../developer/tutorials/getting_started/04_basicmodel.html">第4章：モデルと基本フィールド</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_05_securityintro"><a class="reference internal" href="../../../../developer/tutorials/getting_started/05_securityintro.html">第5章：セキュリティ - 簡単な紹介</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_06_firstui"><a class="reference internal" href="../../../../developer/tutorials/getting_started/06_firstui.html">第6章：いよいよUIを動かせるように</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_07_basicviews"><a class="reference internal" href="../../../../developer/tutorials/getting_started/07_basicviews.html">第7章：基本的なビュー</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_08_relations"><a class="reference internal" href="../../../../developer/tutorials/getting_started/08_relations.html">第8章：モデル間のリレーション</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_09_compute_onchange"><a class="reference internal" href="../../../../developer/tutorials/getting_started/09_compute_onchange.html">第9章：計算フィールドとOnchangeメカニズム</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_10_actions"><a class="reference internal" href="../../../../developer/tutorials/getting_started/10_actions.html">第10章: アクションの準備はできましたか？</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_11_constraints"><a class="reference internal" href="../../../../developer/tutorials/getting_started/11_constraints.html">第11章: 制約</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_12_sprinkles"><a class="reference internal" href="../../../../developer/tutorials/getting_started/12_sprinkles.html">第12章：Sprinklesの追加</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_13_inheritance"><a class="reference internal" href="../../../../developer/tutorials/getting_started/13_inheritance.html">第13章：継承</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_14_other_module"><a class="reference internal" href="../../../../developer/tutorials/getting_started/14_other_module.html">第14章：他のモジュールとの相互作用</a></li>
-<li class="toctree-l4 o_menu_developer_tutorials_getting_started_15_qwebintro"><a class="reference internal" href="../../../../developer/tutorials/getting_started/15_qwebintro.html">第15章: QWeb の歴史を振り返る</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_01_architecture"><a class="reference internal" href="../../../../developer/tutorials/getting_started/01_architecture.html">Chapter 1: Architecture Overview</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_02_setup"><a class="reference internal" href="../../../../developer/tutorials/getting_started/02_setup.html">Chapter 2: Development environment setup</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_03_newapp"><a class="reference internal" href="../../../../developer/tutorials/getting_started/03_newapp.html">Chapter 3: A New Application</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_04_basicmodel"><a class="reference internal" href="../../../../developer/tutorials/getting_started/04_basicmodel.html">Chapter 4: Models And Basic Fields</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_05_securityintro"><a class="reference internal" href="../../../../developer/tutorials/getting_started/05_securityintro.html">Chapter 5: Security - A Brief Introduction</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_06_firstui"><a class="reference internal" href="../../../../developer/tutorials/getting_started/06_firstui.html">Chapter 6: Finally, Some UI To Play With</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_07_basicviews"><a class="reference internal" href="../../../../developer/tutorials/getting_started/07_basicviews.html">Chapter 7: Basic Views</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_08_relations"><a class="reference internal" href="../../../../developer/tutorials/getting_started/08_relations.html">Chapter 8: Relations Between Models</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_09_compute_onchange"><a class="reference internal" href="../../../../developer/tutorials/getting_started/09_compute_onchange.html">Chapter 9: Computed Fields And Onchanges</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_10_actions"><a class="reference internal" href="../../../../developer/tutorials/getting_started/10_actions.html">Chapter 10: Ready For Some Action?</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_11_constraints"><a class="reference internal" href="../../../../developer/tutorials/getting_started/11_constraints.html">Chapter 11: Constraints</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_12_sprinkles"><a class="reference internal" href="../../../../developer/tutorials/getting_started/12_sprinkles.html">Chapter 12: Add The Sprinkles</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_13_inheritance"><a class="reference internal" href="../../../../developer/tutorials/getting_started/13_inheritance.html">Chapter 13: Inheritance</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_14_other_module"><a class="reference internal" href="../../../../developer/tutorials/getting_started/14_other_module.html">Chapter 14: Interact With Other Modules</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_getting_started_15_qwebintro"><a class="reference internal" href="../../../../developer/tutorials/getting_started/15_qwebintro.html">Chapter 15: A Brief History Of QWeb</a></li>
 <li class="toctree-l4 o_menu_developer_tutorials_getting_started_16_final_word"><a class="reference internal" href="../../../../developer/tutorials/getting_started/16_final_word.html">Chapter 16: The final word</a></li>
 </ul>
 </li>
@@ -1887,7 +1902,7 @@
 <li class="toctree-l4 o_menu_developer_howtos_website_themes_gradients"><a class="reference internal" href="../../../../developer/howtos/website_themes/gradients.html">Gradients</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_website_themes_animations"><a class="reference internal" href="../../../../developer/howtos/website_themes/animations.html">Animations</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_website_themes_forms"><a class="reference internal" href="../../../../developer/howtos/website_themes/forms.html">Forms</a></li>
-<li class="toctree-l4 o_menu_developer_howtos_website_themes_translations"><a class="reference internal" href="../../../../developer/howtos/website_themes/translations.html">翻訳</a></li>
+<li class="toctree-l4 o_menu_developer_howtos_website_themes_translations"><a class="reference internal" href="../../../../developer/howtos/website_themes/translations.html">Translations</a></li>
 <li class="toctree-l4 o_menu_developer_howtos_website_themes_going_live"><a class="reference internal" href="../../../../developer/howtos/website_themes/going_live.html">Going live</a></li>
 </ul>
 </li>
@@ -1900,8 +1915,8 @@
 <li class="toctree-l5 o_menu_developer_reference_backend_orm_changelog"><a class="reference internal" href="../../../../developer/reference/backend/orm/changelog.html">Changelog</a></li>
 </ul>
 </li>
-<li class="toctree-l4 o_menu_developer_reference_backend_data"><a class="reference internal" href="../../../../developer/reference/backend/data.html">データファイル</a></li>
-<li class="toctree-l4 o_menu_developer_reference_backend_actions"><a class="reference internal" href="../../../../developer/reference/backend/actions.html">アクション</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_data"><a class="reference internal" href="../../../../developer/reference/backend/data.html">Data Files</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_actions"><a class="reference internal" href="../../../../developer/reference/backend/actions.html">Actions</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_reports"><a class="reference internal" href="../../../../developer/reference/backend/reports.html">QWeb Reports</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_module"><a class="reference internal" href="../../../../developer/reference/backend/module.html">Module Manifests</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_security"><a class="reference internal" href="../../../../developer/reference/backend/security.html">Security in Odoo</a></li>
@@ -1934,7 +1949,7 @@
 </ul>
 </li>
 <li class="toctree-l3 o_menu_developer_reference_standard_modules"><a class="reference internal" href="#">Standard modules</a><ul>
-<li class="toctree-l4 o_menu_developer_reference_standard_modules_account"><a class="reference internal" href="#">会計</a><ul>
+<li class="toctree-l4 o_menu_developer_reference_standard_modules_account"><a class="reference internal" href="#">Accounting</a><ul>
 <li class="toctree-l5 o_menu_developer_reference_standard_modules_account_account_account_tag"><a class="reference internal" href="../../../../developer/reference/standard_modules/account/account_account_tag.html">Account Tag</a></li>
 <li class="toctree-l5 o_menu_developer_reference_standard_modules_account_account_account"><a class="reference internal" href="../../../../developer/reference/standard_modules/account/account_account.html">Account</a></li>
 <li class="toctree-l5 o_menu_developer_reference_standard_modules_account_account_fiscal_position"><a class="reference internal" href="../../../../developer/reference/standard_modules/account/account_fiscal_position.html">Fiscal Position</a></li>
@@ -1954,21 +1969,21 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_developer_reference_cli"><a class="reference internal" href="../../../../developer/reference/cli.html">コマンドラインインターフェース (CLI)</a></li>
-<li class="toctree-l3 o_menu_developer_reference_external_api"><a class="reference internal" href="../../../../developer/reference/external_api.html">外部API</a></li>
+<li class="toctree-l3 o_menu_developer_reference_cli"><a class="reference internal" href="../../../../developer/reference/cli.html">Command-line interface (CLI)</a></li>
+<li class="toctree-l3 o_menu_developer_reference_external_api"><a class="reference internal" href="../../../../developer/reference/external_api.html">External API</a></li>
 <li class="toctree-l3 o_menu_developer_reference_extract_api"><a class="reference internal" href="../../../../developer/reference/extract_api.html">Extract API</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 o_menu_contributing"><a class="reference internal" href="../../../../contributing.html">コントリビューション</a><ul>
+<li class="toctree-l1 o_menu_contributing"><a class="reference internal" href="../../../../contributing.html">Contributing</a><ul>
 <li class="toctree-l2 o_menu_contributing_development"><a class="reference internal" href="../../../../contributing/development.html">Development</a><ul>
 <li class="toctree-l3 o_menu_contributing_development_coding_guidelines"><a class="reference internal" href="../../../../contributing/development/coding_guidelines.html">Coding guidelines</a></li>
 <li class="toctree-l3 o_menu_contributing_development_git_guidelines"><a class="reference internal" href="../../../../contributing/development/git_guidelines.html">Git guidelines</a></li>
 </ul>
 </li>
-<li class="toctree-l2 o_menu_contributing_documentation"><a class="reference internal" href="../../../../contributing/documentation.html">ドキュメント</a><ul>
-<li class="toctree-l3 o_menu_contributing_documentation_content_guidelines"><a class="reference internal" href="../../../../contributing/documentation/content_guidelines.html">コンテンツガイドライン</a></li>
+<li class="toctree-l2 o_menu_contributing_documentation"><a class="reference internal" href="../../../../contributing/documentation.html">Documentation</a><ul>
+<li class="toctree-l3 o_menu_contributing_documentation_content_guidelines"><a class="reference internal" href="../../../../contributing/documentation/content_guidelines.html">Content guidelines</a></li>
 <li class="toctree-l3 o_menu_contributing_documentation_rst_cheat_sheet"><a class="reference internal" href="../../../../contributing/documentation/rst_cheat_sheet.html">RST cheat sheet</a></li>
 <li class="toctree-l3 o_menu_contributing_documentation_rst_guidelines"><a class="reference internal" href="../../../../contributing/documentation/rst_guidelines.html">RST guidelines</a></li>
 </ul>
@@ -2050,7 +2065,7 @@
           <li class="nav-item nav-item-2"><a href="../../../sales.html" >Sales</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="../../sales.html" >Sales</a> &#187;</li>
           <li class="nav-item nav-item-4"><a href="../ebay_connector.html" accesskey="U">eBay Connector</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">How to configure eBay in Odoo?</a></li> 
+        <li class="nav-item nav-item-this"><a href="">eBay connector setup</a></li> 
       </ul>
     </div>
     <div id="wrap">
@@ -2058,93 +2073,359 @@
         <main class="container-fluid ">
                 <article id="o_content" class="doc-body">
                     <div role="main"> 
-  <section id="how-to-configure-ebay-in-odoo">
-<h1>How to configure eBay in Odoo?<a class="headerlink" href="#how-to-configure-ebay-in-odoo" title="このヘッドラインへのパーマリンク">¶</a></h1>
-</section><section id="create-ebay-tokens">
-<h2>Create eBay tokens<a class="headerlink" href="#create-ebay-tokens" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>In order to create your tokens, you need to create a developer account on the
-<a class="reference external" href="https://go.developer.ebay.com/">developer portal</a>.
-Once you are logged in, you can create <strong>Sandbox Keys</strong> and <strong>Production Keys</strong>
-by clicking on the adequate buttons.</p>
-<img alt="../../../../_images/setup01.png" class="align-center" src="../../../../_images/setup01.png" />
-<p>After the creation of the keys, you can get the user token. To do so, click on
-the <strong>Get a User Token</strong> link in the bottom of the page. Go through the form,
-log in with you eBay account and you will get the keys and token needed to
-configure the module in Odoo.</p>
-</section><section id="set-up-tokens-in-odoo">
-<h2>Set up tokens in Odoo?<a class="headerlink" href="#set-up-tokens-in-odoo" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>To set up the eBay integration, go to <span class="menuselection">Sales ‣ Configuration ‣ Settings</span>.</p>
-<img alt="../../../../_images/setup02.png" class="align-center" src="../../../../_images/setup02.png" />
-<p>First choose if you want to use the production or the sandbox eBay Site. Then
-fill in the fields <strong>Developer Key</strong>, <strong>Token</strong>, <strong>App Key</strong>, <strong>Cert Key</strong>.
-Apply the changes.</p>
-<p>Once the page is reloaded, you need to synchronize information from eBay. Push
-on <strong>Sync countries and currencies</strong>, then you can fill in all the other fields.</p>
-<p>When all the fields are filled in, you can synchronize the categories and the
-policies by clicking on the adequate buttons.</p>
-</section><section id="accept-account-deletion-notifications">
-<h2>Accept account deletion notifications<a class="headerlink" href="#accept-account-deletion-notifications" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Since September 2021, <strong>eBay requires supporting customer account deletion/closure notifications</strong>.
-As such, when eBay receives an account request for deletion, all eBay partners must confirm the
-reception of the request and take further action if necessary.</p>
-<p>Odoo has a notification endpoint to receive those notifications, confirm the reception of the
-request, and handle the first set of actions to anonymize the account details in <strong>Contacts</strong> and
-remove the customer's access to the portal.</p>
-<div class="alert alert-warning">
+  <section id="ebay-connector-setup">
+<h1>eBay connector setup<a class="headerlink" href="#ebay-connector-setup" title="このヘッドラインへのパーマリンク">¶</a></h1>
+</section><section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Odoo's eBay connector allows eBay listings to connect with Odoo products. Once connected,
+<a class="reference internal" href="linking_listings.html"><span class="doc">updates to the listings</span></a> can be made in Odoo or in eBay. When an item sells
+on eBay, draft <em>sales orders</em> are created in Odoo for the user to review and confirm. Once the sales
+order is confirmed, Odoo <em>Inventory</em> and <em>Sales</em> apps function standard to pull products out of
+inventory, and allow the user to create invoices.</p>
+<div class="alert alert-secondary">
 <p class="alert-title">
-重要</p><p>Make sure to correctly <a class="reference internal" href="#ebay-subscribe-account-deletion-notifications"><span class="std std-ref">set up your subscription to the marketplace account deletion
-notifications</span></a> as eBay may temporarily disable
-the related eBay account until the subscription is completed.</p>
-</div>
-</section><section id="retrieve-endpoint-details-from-odoo">
-<span id="ebay-retrieve-endpoint-details"></span><h3>Retrieve endpoint details from Odoo<a class="headerlink" href="#retrieve-endpoint-details-from-odoo" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The endpoint details can be found in <span class="menuselection">Sales ‣ Configuration ‣ Settings ‣ eBay</span>.
-Click on <em>Generate Token</em> to retrieve your <strong>Verification Token</strong>.</p>
-<img alt="Button to generate an eBay verification token in Odoo" class="align-center" src="../../../../_images/verification-token.png" />
-</section><section id="subscribe-to-account-deletion-notifications">
-<span id="ebay-subscribe-account-deletion-notifications"></span><h3>Subscribe to account deletion notifications<a class="headerlink" href="#subscribe-to-account-deletion-notifications" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Log in on the <a class="reference external" href="https://go.developer.ebay.com/">developer portal of eBay</a> and go to <strong>Alerts &amp;
-Notifications</strong>.</p>
-<img alt="Overview of the Alerts &amp; Notifications dashboard of eBay" class="align-center" src="../../../../_images/ebay-your-account.png" />
-<p>To subscribe to deletion/closure notifications, eBay needs a few details:</p>
+参考</p><p>To learn more about the eBay connector visit these pages as well:</p>
 <ul class="simple">
-<li><p>An <strong>email address</strong> to send notifications to if the endpoint is unreachable.</p></li>
-<li><p>The <strong>endpoint details</strong>:</p>
+<li><p><a class="reference internal" href="manage.html"><span class="doc">How to list a product?</span></a></p></li>
+<li><p><a class="reference internal" href="linking_listings.html"><span class="doc">Linking existing listings</span></a></p></li>
+<li><p><a class="reference internal" href="troubleshooting.html"><span class="doc">Troubleshooting eBay connector</span></a></p></li>
+</ul>
+</div>
+</section><section id="ebay-odoo-linked-fields">
+<h3>eBay - Odoo linked fields<a class="headerlink" href="#ebay-odoo-linked-fields" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>The following are eBay product details. Each of these eBay fields update corresponding fields in
+Odoo.</p>
+<ul class="simple">
+<li><p>eBay URL</p></li>
+<li><p>eBay status</p></li>
+<li><p>Quantity sold</p></li>
+<li><p>Start date</p></li>
+<li><p>Title</p></li>
+<li><p>Subtitle</p></li>
+<li><p>Item condition</p></li>
+<li><p>Category</p></li>
+<li><p>Category 2</p></li>
+<li><p>Store category</p></li>
+<li><p>Store category 2</p></li>
+<li><p>Payment policy</p></li>
+<li><p>Seller profiles</p></li>
+<li><p>Postal code</p></li>
+<li><p>Shipping policy</p></li>
+<li><p>Listing type (fixed price or auction)</p>
 <ul>
-<li><p>The URL to Odoo's account deletion notification endpoint</p></li>
-<li><p>A verification token</p></li>
+<li><p>Starting price for Auction</p></li>
+<li><p>Buy it now price</p></li>
+<li><p>Fixed Price amount</p></li>
 </ul>
 </li>
+<li><p>Use stock quantity</p></li>
+<li><p>Quantity on eBay</p></li>
+<li><p>Duration</p></li>
+<li><p>Allow best offer</p></li>
+<li><p>Private listing</p></li>
+<li><p>eBay description</p></li>
+<li><p>eBay product image</p></li>
+<li><p>Country</p></li>
 </ul>
-<img alt="Dedicated fields to enter the endpoint details" class="align-center" src="../../../../_images/ebay-notification-endpoint.png" />
+</section><section id="ebay-terms">
+<h3>eBay terms<a class="headerlink" href="#ebay-terms" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><em>Variations</em> group multiple products into one, with variation (or variant) options. Variations can
+sync to Odoo's attributes and values. Variations will appear in drop down menus near the top of the
+page when viewing an eBay listing. These are comparable to product variants in Odoo.</p>
+<img alt="An example on eBay of the variations that can be added to a product." class="align-center" src="../../../../_images/ebay-variation.png" />
+<p><em>Item specifics</em>, located at the bottom of the listing, detail product-specific information. These
+specifics don't sync with Odoo fields by default; a development is required to link these fields.</p>
+<img alt="Item specifics listed on an eBay product." class="align-center" src="../../../../_images/item-specifics.png" />
+<p><em>Sandbox</em> and <em>Production</em> are terms that are used to categorize the eBay environments as either
+still in development/testing (<em>Sandbox</em>) or for use in the real instance of the database with real
+customer information/dataset (<em>Production</em>). It is recommended to start first in the <em>Sandbox</em> to
+test, and then following the processes below, create a <em>Production</em> instance.</p>
 <div class="alert alert-tip">
 <p class="alert-title">
-ちなみに</p><p>You can edit the last two fields once the email address field is filled out.</p>
+ちなみに</p><p>eBay's sandbox environment can be accessed by navigating to <a class="reference external" href="https://sandbox.ebay.com/">eBay's sandbox portal</a> at <code class="o_code docutils literal notranslate"><span class="pre">https://sandbox.ebay.com/</span></code>. eBay's production environment can
+be accessed by navigating to <a class="reference external" href="https://www.ebay.com/">eBay.com portal</a> or
+<code class="o_code docutils literal notranslate"><span class="pre">https://www.ebay.com/</span></code>.</p>
 </div>
-</section><section id="verify-the-connectivity-with-the-endpoint">
-<h3>Verify the connectivity with the endpoint<a class="headerlink" href="#verify-the-connectivity-with-the-endpoint" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>After setting the retrieved endpoint details in eBay's dashboard, consider testing the connectivity
-with the <strong>Send Test Notification</strong> button.</p>
-<p>You should get the following confirmation message: &quot;A test notification was sent successfully!&quot;</p>
-<img alt="Button to send test notification" class="align-center" src="../../../../_images/test-notification.png" />
-</section><section id="using-the-updated-synchronisation-method">
-<h2>Using the updated synchronisation method<a class="headerlink" href="#using-the-updated-synchronisation-method" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>If you have a lot of products, the eBay API can sometimes refuse some synchronization
-calls due to a time-based limit on the number of requests that eBay enforces.</p>
-<p>To fix this issue, a new implementation mechanism has been developed; however this
-updated mechanism is disabled by default to avoid having the 2 systems running in
-parallel in existing installations.</p>
-<p>To switch to the new synchronization mechanism:</p>
-<ol class="arabic simple">
-<li><p>Activate the <a class="reference internal" href="../../../general/developer_mode.html#developer-mode"><span class="std std-ref">developer mode</span></a>.</p></li>
-<li><p>Go to <span class="menuselection">Settings ‣ Technical ‣ Scheduled Actions</span></p></li>
-<li><p>Archive the old synchronization actions (both are named <em>Ebay: update product status</em>)</p></li>
-<li><p>Activate the new synchronization actions (<em>Ebay: get new orders</em> which runs every 15min by
-default and <em>Ebay: synchronise stock (for 'get new orders' synchronisation)</em> which runs once a
-day per default)</p></li>
-<li><p>Ensure that the <strong>Next Execution Date</strong> for both these actions are in the near future</p></li>
-</ol>
-<p>Starting with the next execution date, the new method will be used instead of the old one.</p>
+<div class="alert alert-warning">
+<p class="alert-title">
+重要</p><p>The environment selection <strong>must</strong> remain the same for all environment settings on eBay and on
+Odoo throughout this setup.</p>
+</div>
+</section><section id="ebay-actions-available-on-odoo">
+<h3>eBay actions available on Odoo<a class="headerlink" href="#ebay-actions-available-on-odoo" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>The following are built-in actions in Odoo that add or update eBay listings:</p>
+<ul class="simple">
+<li><p><strong>List</strong>/ <strong>Link</strong>: generate a new eBay listing with an Odoo product by clicking <span class="guilabel">List
+Item on eBay</span> or <span class="guilabel">Link With Existing eBay Listing</span>.</p></li>
+<li><p><span class="guilabel">Revise item</span> button: after making changes to an eBay listing in Odoo, save the record,
+and then click the <span class="guilabel">Revise Item</span> in Odoo to update the eBay listing.</p></li>
+<li><p><strong>Relist</strong>: if an item's listing was ended early or <span class="guilabel">auto-relist</span> was not selected, a
+user can relist the item from Odoo. The start date will reset.</p></li>
+<li><p><span class="guilabel">End item's listing</span> button: end a listing on eBay directly from Odoo.</p></li>
+<li><p><strong>Unlink product listings</strong>: users can unlink a product from the eBay listing; the listing will
+stay intact on eBay.</p></li>
+</ul>
+</section><section id="setup-required-on-odoo-prior-to-ebay-setup">
+<h2>Setup required on Odoo prior to eBay setup<a class="headerlink" href="#setup-required-on-odoo-prior-to-ebay-setup" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>To link eBay with Odoo, install the eBay module by navigating to the Odoo dashboard and clicking
+into the <span class="guilabel">Apps</span> application. Search the term <code class="o_code docutils literal notranslate"><span class="pre">eBay</span></code> and install the <code class="o_code docutils literal notranslate"><span class="pre">eBay</span> <span class="pre">Connector</span></code>
+module.</p>
+<p>The following items must be configured before eBay is set up:</p>
+<ul>
+<li><p>In Odoo, create and configure products that are intended to be listed in eBay. eBay does not
+import new products into Odoo. All products must first be created in Odoo, and then linked to
+listings.</p>
+<ul>
+<li><p>Odoo does not allow multiple eBay listings to be linked per product in Odoo. If the company
+sells the same product for multiple listings, follow these instructions:</p>
+<ul class="simple">
+<li><p>Set up one <em>base</em> product (noted in the <span class="guilabel">Component</span> field of the <abbr title="Bill of Materials">BoM</abbr>) from which all eBay listings will pull from. This will be a storable product
+so stock can be kept. Highlighted in green below, this product will be included in the kit on
+each subsequent “linked” product below.</p></li>
+<li><p>Set up 2+ <em>linked</em> products (noted in the <span class="guilabel">Product</span> field of the <abbr title="Bill of Materials">BoM</abbr>, one for each eBay listing. The product type will be determined by the
+company's accounting settings, as explained in the Odoo documentation. Highlighted in yellow
+below, each product should have a <span class="guilabel">BoM type</span> equal to <span class="guilabel">Kit</span> and have the
+base product as a <span class="guilabel">Component</span> of the kit. When this linked eBay product is sold, the
+delivery order created will have the base product listed in lieu of the linked product.</p></li>
+</ul>
+<img alt="Setting up bill of materials with base product and linked products." class="align-center" src="../../../../_images/products-odoo.png" />
+</li>
+</ul>
+<blockquote>
+<div><div class="alert alert-secondary">
+<p class="alert-title">
+参考</p><p><a class="reference internal" href="../../../inventory_and_mrp/manufacturing/management/bill_configuration.html"><span class="doc">Bill of materials</span></a></p>
+</div>
+</div></blockquote>
+</li>
+<li><p>eBay does not automatically create invoices for eBay orders that get pushed into Odoo. Set
+invoicing policy on eBay products: invoicing policy will dictate when the product can be invoiced.
+Since most eBay users collect payment before the product is shipped, “invoice on ordered” will
+allow users to mass create invoices for eBay orders every day.</p></li>
+<li><p>Set the <span class="guilabel">Outgoing Shipments</span> route for the warehouse to <span class="guilabel">Deliver goods
+directly (1 step)</span>.</p>
+<div class="alert alert-warning">
+<p class="alert-title">
+警告</p><p>When the <span class="guilabel">Outgoing Shipments</span> route is set to two or three steps, a known bug occurs:
+eBay wrongly marks orders as delivered when the pick operation in Odoo is confirmed. The
+expected behavior is to mark orders as delivered <strong>after</strong> the <em>delivery order</em> is confirmed.
+This mislabeling prevents tracking numbers in eBay from being imported onto the delivery order.</p>
+</div>
+</li>
+<li><p>If the Accounting/Invoicing apps are installed, practice registering payment and reconciling
+invoices created from eBay orders with incoming eBay money.</p>
+<div class="alert alert-secondary">
+<p class="alert-title">
+参考</p><p><a class="reference internal" href="../../../finance/accounting/bank/reconciliation.html"><span class="doc">Bank reconciliation</span></a></p>
+</div>
+</li>
+<li><p>Generate a marketplace account deletion/closure notification token. To begin, navigate to
+<span class="menuselection">Sales app ‣ Configuration ‣ Settings</span>. Under the <span class="guilabel">eBay</span> heading,
+change the mode to <span class="guilabel">Production</span>, and input random text values for the
+<span class="guilabel">Production Cert Key</span>. Then click the <span class="guilabel">Generate Token</span> button under the
+<span class="guilabel">eBay Marketplace Account Deletion/Closure Notifications</span> section. This token will be
+used during the setup on eBay for the deletion/closure notifications configuration.</p></li>
+</ul>
+<img alt="Generate a verification token in Odoo." class="align-center" src="../../../../_images/generate-token.png" />
+</section><section id="set-up-on-ebay">
+<h2>Set up on eBay<a class="headerlink" href="#set-up-on-ebay" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</section><section id="set-up-ebay-developer-account">
+<h3>Set up eBay developer account<a class="headerlink" href="#set-up-ebay-developer-account" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>To start, create an eBay developer account via <a class="reference external" href="https://go.developer.ebay.com/">eBay's developer portal</a>. This site requires a different login and password than the eBay
+account, though the same email address can be used to register. The verification to create a
+developer account is around 24 hours.</p>
+</section><section id="set-up-ebay-keyset">
+<h3>Set up eBay keyset<a class="headerlink" href="#set-up-ebay-keyset" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Once the eBay developer account is created, set up an application on <a class="reference external" href="https://go.developer.ebay.com/">eBay's developer portal</a>. Next, navigate to the <span class="guilabel">Hi [username]</span> heading at top
+right of screen, then from the drop-down menu options, click <span class="guilabel">Application Keysets</span>. Doing
+so opens a pop-up that prompts the user to <span class="guilabel">Enter Application Title</span> (up to fifty
+characters), and choose a development environment (<span class="guilabel">Sandbox</span> or <span class="guilabel">Production</span>).
+These two fields generate first keyset. This application title is not saved until the keyset is
+generated. Click on <span class="guilabel">Create a keyset</span> to generate the keyset.</p>
+<div class="alert alert-warning">
+<p class="alert-title">
+警告</p><p>The newly created <em>production keyset</em> is disabled by default. Activate it by subscribing to the
+eBay Marketplace 'account deletion or closure notifications' or by applying to eBay for an
+exemption. Once enabled, the database can make 5000 calls per day using this keyset.</p>
+</div>
+<img alt="Disabled keyset present after creating a keyset." class="align-center" src="../../../../_images/disabled-keyset.png" />
+</section><section id="configure-account-deletion-notification-settings-production">
+<h4>Configure account deletion / notification settings (Production)<a class="headerlink" href="#configure-account-deletion-notification-settings-production" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>To configure notifications or delete the database on a production environment, navigate to the <a class="reference external" href="https://go.developer.ebay.com/">eBay
+developer portal</a>. Configure the account deletion/notification
+settings in eBay by navigating to the <code class="o_code docutils literal notranslate"><span class="pre">Hi</span> <span class="pre">[username]</span></code> at top right of screen, then
+<span class="guilabel">Application Keysets</span>.</p>
+<p>Next, click the <span class="guilabel">marketplace deletion/account closure notification</span> option under the
+<span class="guilabel">Production</span> keyset column. Enter an email under <span class="guilabel">Email to notify if marketplace
+account deletion notification endpoint is down</span>. Click <span class="guilabel">Save</span> to enable the email.</p>
+<p>Following this action, enter the <span class="guilabel">Marketplace account deletion notification endpoint</span> URL
+provided by Odoo. This HTTPs endpoint is found in Odoo by navigating to <span class="menuselection">Sales app
+‣ Configuration ‣ Settings</span>, in the <span class="guilabel">eBay Marketplace Account Deletion/Closure
+Notifications</span> field.</p>
+<p>Clicking the <span class="guilabel">Generate Token</span> button in Odoo below this field creates a verification token
+for the eBay production environment. In Odoo, <span class="guilabel">Copy</span> the newly created token and navigate
+to eBay to fill in the <span class="guilabel">Verification token</span> field. Click <span class="guilabel">Save</span> to enable the
+<span class="guilabel">Event Notification Delivery Method</span>.</p>
+<img alt="Configuring account deletion / notification settings in eBay." class="align-center" src="../../../../_images/account-closure.png" />
+<p>After completing the above fields, click <span class="guilabel">Send Test Notification</span> to test the new
+notifications. Proceed to the next step when the green check mark appears. Revisit the above
+settings if the test post is not as expected.</p>
+<p>After configuring notification settings, go back to the <span class="menuselection">Application Keys</span> page to
+generate production keysets.</p>
+</section><section id="creating-the-keyset">
+<h4>Creating the keyset<a class="headerlink" href="#creating-the-keyset" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>A successful setup of the notifications enables the ability to create Production Keysets which are
+needed in the remainder of the Odoo configuration. Navigate back to the <span class="menuselection">Application
+Keys</span> page generate a production keyset.</p>
+<p>The administrator is prompted to <span class="menuselection">Confirm the Primary Contact</span>. Enter or confirm the
+account owner (the person legally responsible for the eBay API License Agreement). Fill out
+<span class="guilabel">First Name</span>, <span class="guilabel">Last Name</span>, <span class="guilabel">Email</span>, <span class="guilabel">Phone</span>. Then, select
+either the <span class="guilabel">Individual</span> or <span class="guilabel">Business</span> options.</p>
+<div class="alert alert-primary">
+<p class="alert-title">
+注釈</p><p>The provided email address or phone number does <strong>not</strong> have to match the account's. eBay uses
+this information to contacting the business or individual in case of issues with user tokens.
+Additional contacts can be added from the <span class="guilabel">Profile &amp; Contacts</span> page on eBay.</p>
+</div>
+<p>Click on <span class="guilabel">Continue to Create Keys</span> to confirm the primary contact. The
+<span class="guilabel">Application Keys</span> populates in a new screen and an email is also sent to the developer
+account. An <span class="guilabel">App ID (Client ID)</span>, <span class="guilabel">Dev ID</span>, and <span class="guilabel">Cert ID (Client
+Secret)</span> all populate.</p>
+<img alt="Application keys are populated after creating the app in eBay." class="align-center" src="../../../../_images/application-keys.png" />
+<p>Copy these values down as they will be input into Odoo later in the process.</p>
+</section><section id="create-ebay-user-token">
+<h3>Create eBay user token<a class="headerlink" href="#create-ebay-user-token" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Now, create a <em>user token</em> in eBay by navigating to the <code class="o_code docutils literal notranslate"><span class="pre">Hi</span> <span class="pre">[username]</span></code> at top right of screen,
+then <span class="guilabel">User Access Tokens</span>.</p>
+<img alt="Generate user token s on the eBay developer console." class="align-center" src="../../../../_images/user-tokens.png" />
+<p>Select the correct <span class="guilabel">Environment</span>: <span class="guilabel">Sandbox</span> for testing or
+<span class="guilabel">Production</span> for the live database. Maintain the same selection for all environment
+settings on both eBay and Odoo.</p>
+<p>Next, select the radio button labeled <span class="guilabel">Auth'n'Auth</span>.</p>
+<p>Choose <span class="guilabel">Sign in to Production</span> or <span class="guilabel">Sign in to Sandbox</span> to get a user token in
+the chosen environment. This button varies based on the selection made above for either
+<span class="guilabel">Sandbox</span> or <span class="guilabel">Production</span>.</p>
+<p>Doing so triggers a a pop-up window to <span class="guilabel">Confirm your Legal Address</span>. Complete the required
+fields, which are <span class="guilabel">First Name</span>, <span class="guilabel">Last Name</span>, <span class="guilabel">Primary Email</span>,
+<span class="guilabel">Legal Address</span>, and <span class="guilabel">Account Type</span>. For <span class="guilabel">Account Type</span>, select either
+<span class="guilabel">Individual</span> or <span class="guilabel">Business</span>. To complete the confirmation, click <span class="guilabel">Sign
+into eBay to get a Token</span>.</p>
+<div class="alert alert-primary">
+<p class="alert-title">
+注釈</p><p>eBay will contact this individual or business should there be any issues with the application
+keys. Other contacts can be added on the <span class="menuselection">Profile &amp; Contacts</span> eBay page.</p>
+</div>
+<p>The administrator will be redirected to either a sandbox or production sign-in page for eBay. This
+login is different than the eBay developer's console, it is the eBay account where the items will be
+sold on. This email and/or login can differ from the eBay developer account.</p>
+<p>Enter the <span class="guilabel">Email</span> or <span class="guilabel">Username</span> for the eBay account and sign into the eBay
+account.</p>
+<div class="alert alert-warning">
+<p class="alert-title">
+重要</p><p>Should an additional user be needed for the sandbox simulation, a test user needs to be created.
+Visit <a class="reference external" href="https://developer.ebay.com/sandbox/register">eBay's Register for Sandbox form</a>. Detailed
+instructions can be found on eBay's help pages: <a class="reference external" href="https://developer.ebay.com/api-docs/static/gs_create-a-test-sandbox-user.html">Create a test Sandbox user</a>.</p>
+</div>
+</section><section id="grant-application-access">
+<h3>Grant application access<a class="headerlink" href="#grant-application-access" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>After signing into the production or sandbox environment, eBay presents the administrator with an
+<em>agreement</em> to grant access to the user's eBay data.</p>
+<p>Clicking <span class="guilabel">Agree</span> allows eBay to link the eBay account with the <em>application programming
+interface</em> (API). This agreement can be changed at any time by visiting eBay's account preferences.</p>
+<div class="alert alert-warning">
+<p class="alert-title">
+警告</p><p>eBay has a timed sequence between signing in and agreeing to the terms for the <abbr title="Application Programming Interface">API</abbr> linkage to the account. Once complete a <span class="guilabel">User
+Token</span> will populate on the <span class="menuselection">User Tokens</span> page.</p>
+</div>
+<p>A <span class="guilabel">User Token</span> will populate on the screen. Make sure to copy this token down as it will
+be used in the next steps along with the <span class="guilabel">Application Keyset</span>.</p>
+<img alt="Generated user token and API explorer link on the eBay developer console." class="align-center" src="../../../../_images/user-token.png" />
+<div class="alert alert-warning">
+<p class="alert-title">
+重要</p><p>Signing in to the eBay account is necessary to create to the token. The eBay developer can also
+revoke the token by clicking on the <span class="guilabel">Revoke a Token</span> link.</p>
+</div>
+</section><section id="api-explorer">
+<h3>API explorer<a class="headerlink" href="#api-explorer" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Now that the <span class="guilabel">Application Keyset</span> and <span class="guilabel">User Token</span> have been created, a test can
+be executed via the <a class="reference external" href="https://developer.ebay.com/DevZone/build-test/test-tool/default.aspx">API Explorer</a> to ensure that the
+<abbr title="Application Programming Interface">API</abbr> is configured correctly. This test will execute a
+simple search using the <abbr title="Application Programming Interface">API</abbr>.</p>
+<p>To begin the <abbr title="Application Programming Interface">API</abbr> test, click on <span class="guilabel">Get OAuth
+Application Token</span>. This will populate the key into the <span class="guilabel">Token</span> field.</p>
+<p>A basic search function is set to execute. Click on <span class="guilabel">Execute</span> to complete the test. A
+successful test will respond with a <span class="guilabel">Call Response</span> of <code class="o_code docutils literal notranslate"><span class="pre">200</span> <span class="pre">OK</span></code> with a corresponding
+<span class="guilabel">Time</span>.</p>
+</section><section id="entering-credentials-into-odoo">
+<h2>Entering credentials into Odoo<a class="headerlink" href="#entering-credentials-into-odoo" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>The previously copied <span class="guilabel">User Token</span> and <span class="guilabel">Application Keyset</span> are now ready to be
+entered into the Odoo database.</p>
+<p>Navigate back the eBay settings in Odoo (<span class="menuselection">Sales app ‣ Configuration ‣ Settings
+‣ eBay</span>) and paste the following credentials from eBay into the corresponding fields in Odoo.</p>
+<table class="table docutils">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Platform</p></th>
+<th class="head"><p>Dev Key/ID</p></th>
+<th class="head"><p>Token</p></th>
+<th class="head"><p>App Key/ID</p></th>
+<th class="head"><p>Cert Key/ID</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>eBay</p></th>
+<td><p>Dev ID</p></td>
+<td><p>User Token</p></td>
+<td><p>App ID (Client ID)</p></td>
+<td><p>Cert ID (Client Secret)</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Odoo</p></th>
+<td><p>Developer Key</p></td>
+<td><p>Production/Sandbox Token</p></td>
+<td><p>Production/Sandbox App Key</p></td>
+<td><p>Production/Sandbox Cert Key</p></td>
+</tr>
+</tbody>
+</table>
+<div class="alert alert-warning">
+<p class="alert-title">
+重要</p><p>The <span class="guilabel">Application Keyset</span> can be accessed by going to <a class="reference external" href="https://go.developer.ebay.com/">eBay's developer portal</a> and navigate to the <code class="o_code docutils literal notranslate"><span class="pre">Hi</span> <span class="pre">[username]</span></code> at top right of screen,
+then click on <span class="guilabel">Application Keysets</span>. Get to the <em>User Token</em> in eBay by navigating to
+the <code class="o_code docutils literal notranslate"><span class="pre">Hi</span> <span class="pre">[username]</span></code> at top right of screen, then <span class="guilabel">User Access Tokens</span> and click on
+<span class="guilabel">Sign in to Sandbox</span>. The <span class="guilabel">User Token</span> can also be accessed by clicking on
+<span class="guilabel">User Tokens</span> from the <span class="menuselection">Application Keys</span> page.</p>
+</div>
+<p>Confirm that the setup is correct by saving the credentials in Odoo. Once the initial setup is
+complete, a new menu tab in products will appear called <code class="o_code docutils literal notranslate"><span class="pre">eBay</span></code> with the option to <span class="guilabel">Sell on
+eBay</span>. See the <a class="reference internal" href="manage.html"><span class="doc">How to list a product?</span></a> documentation on how to list products.</p>
+<div class="alert alert-tip">
+<p class="alert-title">
+ちなみに</p><p>Sync product categories by clicking <span class="guilabel">Product Categories</span>. After syncing, a new menu
+item, <code class="o_code docutils literal notranslate"><span class="pre">eBay</span> <span class="pre">Category</span></code>, appears available for products to be configured with. These eBay
+categories are imported from the Odoo database and are available when listing an item on eBay
+through Odoo.</p>
+<div class="alert alert-warning">
+<p class="alert-title">
+重要</p><p>If Product Categories beyond four paths are required, users will need to manually add those
+paths. This has historically been done by getting a list of all product categories beyond four
+paths, manually importing them into the Product Category model in Odoo, and then linking them
+individually to the product.</p>
+</div>
+</div>
+<div class="alert alert-secondary">
+<p class="alert-title">
+参考</p><p>Now that the setup is complete, proceed to either:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="manage.html"><span class="doc">Create listings</span></a></p></li>
+<li><p><a class="reference internal" href="linking_listings.html"><span class="doc">Link existing listings</span></a></p></li>
+</ul>
+</div>
 </section>
 
                     </div>
@@ -2158,16 +2439,27 @@ day per default)</p></li>
             <aside id="o_page_toc" class="o_page_toc" hidden><div class="o_page_toc_nav mt-1">
     <h5>On this page</h5>
     <ul>
-<li><a class="reference internal" href="#">How to configure eBay in Odoo?</a><ul>
-<li><a class="reference internal" href="#create-ebay-tokens">Create eBay tokens</a></li>
-<li><a class="reference internal" href="#set-up-tokens-in-odoo">Set up tokens in Odoo?</a></li>
-<li><a class="reference internal" href="#accept-account-deletion-notifications">Accept account deletion notifications</a><ul>
-<li><a class="reference internal" href="#retrieve-endpoint-details-from-odoo">Retrieve endpoint details from Odoo</a></li>
-<li><a class="reference internal" href="#subscribe-to-account-deletion-notifications">Subscribe to account deletion notifications</a></li>
-<li><a class="reference internal" href="#verify-the-connectivity-with-the-endpoint">Verify the connectivity with the endpoint</a></li>
+<li><a class="reference internal" href="#">eBay connector setup</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a><ul>
+<li><a class="reference internal" href="#ebay-odoo-linked-fields">eBay - Odoo linked fields</a></li>
+<li><a class="reference internal" href="#ebay-terms">eBay terms</a></li>
+<li><a class="reference internal" href="#ebay-actions-available-on-odoo">eBay actions available on Odoo</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#using-the-updated-synchronisation-method">Using the updated synchronisation method</a></li>
+<li><a class="reference internal" href="#setup-required-on-odoo-prior-to-ebay-setup">Setup required on Odoo prior to eBay setup</a></li>
+<li><a class="reference internal" href="#set-up-on-ebay">Set up on eBay</a><ul>
+<li><a class="reference internal" href="#set-up-ebay-developer-account">Set up eBay developer account</a></li>
+<li><a class="reference internal" href="#set-up-ebay-keyset">Set up eBay keyset</a><ul>
+<li><a class="reference internal" href="#configure-account-deletion-notification-settings-production">Configure account deletion / notification settings (Production)</a></li>
+<li><a class="reference internal" href="#creating-the-keyset">Creating the keyset</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#create-ebay-user-token">Create eBay user token</a></li>
+<li><a class="reference internal" href="#grant-application-access">Grant application access</a></li>
+<li><a class="reference internal" href="#api-explorer">API explorer</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#entering-credentials-into-odoo">Entering credentials into Odoo</a></li>
 </ul>
 </li>
 </ul>
@@ -2210,7 +2502,7 @@ day per default)</p></li>
           <li class="nav-item nav-item-2"><a href="../../../sales.html" >Sales</a> &#187;</li>
           <li class="nav-item nav-item-3"><a href="../../sales.html" >Sales</a> &#187;</li>
           <li class="nav-item nav-item-4"><a href="../ebay_connector.html" >eBay Connector</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">How to configure eBay in Odoo?</a></li> 
+        <li class="nav-item nav-item-this"><a href="">eBay connector setup</a></li> 
       </ul>
     </div>
   </body>
