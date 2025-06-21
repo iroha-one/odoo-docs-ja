@@ -12,9 +12,10 @@ on:
       sourcecode:
         description: 'With inline docstrings'
         required: true
-        default: '17.0' 
+        default: '18.0' 
         type: choice
         options:
+        - '18.0'
         - '17.0'
         - '16.0'
         - '15.0'
