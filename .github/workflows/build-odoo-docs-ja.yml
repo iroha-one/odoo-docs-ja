@@ -94,10 +94,10 @@ jobs:
           repository: odoo/odoo
           ref: ${{ github.event.inputs.sourcecode }}
           path: odoo
-      - name: Install odoo/odoo dependencies
-        if: ${{ github.event.inputs.checkout_odoo == 'true' }}
-        run: |
-          pip install -r odoo/requirements.txt
+      # - name: Install odoo/odoo dependencies
+      #   if: ${{ github.event.inputs.checkout_odoo == 'true' }}
+      #   run: |
+      #     pip install -r odoo/requirements.txt
       # Build Sphinx documentation for Japanese locale
       - name: Add 'ja' to languages_names in conf.py
         run: |
