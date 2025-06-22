@@ -1,19 +1,19 @@
 # odoo-docs-ja
-build odoo documentation
+Build Odoo documentation
 
+[`Run workflow` - actions/workflows/build-odoo-docs-ja.yml](https://github.com/iroha-one/odoo-docs-ja/actions/workflows/build-odoo-docs-ja.yml)
+
+- Odoo version: select Odoo version.
+- Target branch: select translation branch, such as 'main', 'develop', or 'l10n_crowdin_action'.
+
+The generated documentation is published at:  
 https://iroha-one.github.io/odoo-docs-ja/
 
-## build
-
-`Run workflow` - [actions/workflows/build-odoo-docs-ja.yml](https://github.com/iroha-one/odoo-docs-ja/actions/workflows/build-odoo-docs-ja.yml)
-
-- sourcecode: select odoo version.
-- branch: select translation's branch, 'main', 'develop', 'l10n_crowdin_action'.
-
-# sources
+# Sources
 
 ## Documentation translations
 
+- [odoo-docs-locale-ja-18.0](https://github.com/iroha-one/odoo-docs-locale-ja-18.0)
 - [odoo-docs-locale-ja-17.0](https://github.com/iroha-one/odoo-docs-locale-ja-17.0)
 - [odoo-docs-locale-ja-16.0](https://github.com/iroha-one/odoo-docs-locale-ja-16.0)
 - [odoo-docs-locale-ja-15.0](https://github.com/iroha-one/odoo-docs-locale-ja-15.0)

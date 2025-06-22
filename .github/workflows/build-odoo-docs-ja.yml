@@ -98,6 +98,10 @@ jobs:
         if: ${{ github.event.inputs.checkout_odoo == 'true' }}
         run: |
           pip install -r odoo/requirements.txt
+      # Create _build/html/ja directory if it doesn't exist
+      - name: Create _build/html/ja directory
+        run: |
+          mkdir -p _build/html/ja
       # Update locale/sources and export to _build/html/ja/lc_sources.zip
       - name: Run make gettext
         run: |
@@ -109,9 +113,6 @@ jobs:
       - name: Add 'ja' to languages_names in conf.py
         run: |
           echo -e "\n\nlanguages_names['ja']='日本語'\n" >> conf.py
-      - name: Create _build/html/ja directory
-        run: |
-          mkdir -p _build/html/ja
       - name: Build Sphinx docs
         run: |
           make html 2>&1 | tee _build/html/ja/build.log
