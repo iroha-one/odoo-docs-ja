@@ -101,7 +101,7 @@ jobs:
       # Build Sphinx documentation for Japanese locale
       - name: Add 'ja' to languages_names in conf.py
         run: |
-          echo -e "\n\nlanguages_names.setdefault('ja', '日本語')\n" >> conf.py
+          echo -e "\n\nlanguages_names['ja']='日本語'\n" >> conf.py
       - name: Create _build/html/ja directory
         run: |
           mkdir -p _build/html/ja
