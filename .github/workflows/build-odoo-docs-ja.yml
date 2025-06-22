@@ -32,12 +32,13 @@ on:
       python-version:
         description: 'Python version'
         required: true
-        default: '3.8'
+        default: '3.9'
         type: choice
         options:
         - '3.12'
+        - '3.11'
         - '3.10'
-        - '3.8'
+        - '3.9'
       checkout_odoo:
         description: 'Checkout odoo/odoo repository'
         required: false
@@ -80,14 +81,14 @@ jobs:
           pip install -r requirements.txt
       # Optional: Checkout odoo/odoo
       - name: Checkout odoo/odoo
-        if: ${{ github.event.inputs.checkout_odoo }}
+        if: ${{ github.event.inputs.checkout_odoo == 'true' }}
         uses: actions/checkout@v3
         with:
           repository: odoo/odoo
           ref: ${{ github.event.inputs.sourcecode }}
           path: odoo
       - name: Install dependencies of odoo/odoo
-        if: ${{ github.event.inputs.checkout_odoo }}
+        if: ${{ github.event.inputs.checkout_odoo == 'true' }}
         run: |
           pip install -r odoo/requirements.txt
       # Build Sphinx docs for ja locale
