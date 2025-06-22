@@ -98,6 +98,13 @@ jobs:
         if: ${{ github.event.inputs.checkout_odoo == 'true' }}
         run: |
           pip install -r odoo/requirements.txt
+      # Update locale/sources and export to _build/html/ja/lc_sources.zip
+      - name: Run make gettext
+        run: |
+          make gettext
+      - name: Zip locale/sources to _build/html/ja/lc_sources.zip
+        run: |
+          zip -r _build/html/ja/lc_sources.zip locale/sources
       # Build Sphinx documentation for Japanese locale
       - name: Add 'ja' to languages_names in conf.py
         run: |
