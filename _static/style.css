@@ -14130,6 +14130,11 @@ span.viewcode-link {
     .sphinx-tabs .sphinx-tabs-panel > *:last-child {
       margin-bottom: 0 !important; }
 
+.os-icon {
+  width: 18px;
+  height: 18px;
+  font-size: 18px; }
+
 footer .o_get_help {
   padding-top: 3rem;
   padding-bottom: 3rem;
