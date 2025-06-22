@@ -15,23 +15,23 @@ loading intersphinx inventory from https://docs.python.org/3/objects.inv...
 loading intersphinx inventory from ../invs/werkzeug.inv...
 building [mo]: targets for 18 po files that are out of date
 writing output... [  5%] ../locale/ja/LC_MESSAGES/developer.mo
-writing output... [ 11%] ../locale/ja/LC_MESSAGES/inventory_and_mrp.mo
-writing output... [ 16%] ../locale/ja/LC_MESSAGES/index.mo
-writing output... [ 22%] ../locale/ja/LC_MESSAGES/productivity.mo
+writing output... [ 11%] ../locale/ja/LC_MESSAGES/applications.mo
+writing output... [ 16%] ../locale/ja/LC_MESSAGES/contributing.mo
+writing output... [ 22%] ../locale/ja/LC_MESSAGES/sales.mo
 writing output... [ 27%] ../locale/ja/LC_MESSAGES/services.mo
-writing output... [ 33%] ../locale/ja/LC_MESSAGES/essentials.mo
-writing output... [ 38%] ../locale/ja/LC_MESSAGES/legal.mo
-writing output... [ 44%] ../locale/ja/LC_MESSAGES/marketing.mo
-writing output... [ 50%] ../locale/ja/LC_MESSAGES/sales.mo
-writing output... [ 55%] ../locale/ja/LC_MESSAGES/websites.mo
-writing output... [ 61%] ../locale/ja/LC_MESSAGES/administration.mo
-writing output... [ 66%] ../locale/ja/LC_MESSAGES/applications.mo
-writing output... [ 72%] ../locale/ja/LC_MESSAGES/hr.mo
-writing output... [ 77%] ../locale/ja/LC_MESSAGES/studio.mo
-writing output... [ 83%] ../locale/ja/LC_MESSAGES/finance.mo
-writing output... [ 88%] ../locale/ja/LC_MESSAGES/settings.mo
-writing output... [ 94%] ../locale/ja/LC_MESSAGES/contributing.mo
-writing output... [100%] ../locale/ja/LC_MESSAGES/general.mo
+writing output... [ 33%] ../locale/ja/LC_MESSAGES/finance.mo
+writing output... [ 38%] ../locale/ja/LC_MESSAGES/settings.mo
+writing output... [ 44%] ../locale/ja/LC_MESSAGES/hr.mo
+writing output... [ 50%] ../locale/ja/LC_MESSAGES/essentials.mo
+writing output... [ 55%] ../locale/ja/LC_MESSAGES/general.mo
+writing output... [ 61%] ../locale/ja/LC_MESSAGES/legal.mo
+writing output... [ 66%] ../locale/ja/LC_MESSAGES/inventory_and_mrp.mo
+writing output... [ 72%] ../locale/ja/LC_MESSAGES/websites.mo
+writing output... [ 77%] ../locale/ja/LC_MESSAGES/productivity.mo
+writing output... [ 83%] ../locale/ja/LC_MESSAGES/administration.mo
+writing output... [ 88%] ../locale/ja/LC_MESSAGES/index.mo
+writing output... [ 94%] ../locale/ja/LC_MESSAGES/studio.mo
+writing output... [100%] ../locale/ja/LC_MESSAGES/marketing.mo
 
 building [html]: targets for 1033 source files that are out of date
 updating environment: [new config] 1033 added, 0 changed, 0 removed
