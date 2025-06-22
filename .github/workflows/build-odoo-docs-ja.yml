@@ -105,7 +105,7 @@ jobs:
       # Build Sphinx documentation for Japanese locale
       - name: Build Sphinx docs
         run: |
-          make html
+          make html 2>&1 | tee _build/html/ja/build.log
         env:
           CURRENT_LANG: ja
       # Deploy to GitHub Pages
