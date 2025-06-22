@@ -1,7 +1,7 @@
-# From:
+# Based on:
 # https://github.com/rkdarst/sphinx-actions-test/blob/master/.github/workflows/sphinx-build.yml
 
-# Syntax reference for this file:
+# GitHub Actions workflow syntax reference:
 # https://help.github.com/en/articles/workflow-syntax-for-github-actions
 
 name: build-odoo-docs-ja
@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     inputs:
       sourcecode:
-        description: 'With inline docstrings'
+        description: 'Odoo version'
         required: true
         default: '18.0' 
         type: choice
@@ -40,34 +40,41 @@ on:
         - '3.10'
         - '3.9'
       checkout_odoo:
-        description: 'Checkout odoo/odoo repository'
+        description: 'Also checkout odoo/odoo repository'
         required: false
         default: 'false'
         type: boolean
 
-# https://gist.github.com/c-bata/ed5e7b7f8015502ee5092a3e77937c99
 jobs:
   build-and-delpoy:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      # Checkout odoo/documentation
+      # Show workflow input values
+      - name: WORKFLOW INPUTS
+        run: |
+          echo "sourcecode: ${{ github.event.inputs.sourcecode }}"
+          echo "branch: ${{ github.event.inputs.branch }}"
+          echo "python-version: ${{ github.event.inputs.python-version }}"
+          echo "checkout_odoo: ${{ github.event.inputs.checkout_odoo }}"
+      # Checkout odoo/documentation repository
       - name: Checkout odoo/documentation
         uses: actions/checkout@v3
         with:
           repository: odoo/documentation
           ref: ${{ github.event.inputs.sourcecode }}
-      # Checkout odoo-docs-src-locale-ja-xxx
+      # Remove existing locale/ja directory if it exists
       - name: Remove existing locale/ja if exists
         run: |
           rm -rf locale/ja
+      # Checkout Japanese locale source
       - name: Checkout iroha-one/odoo-docs-src-locale-ja
         uses: actions/checkout@v3
         with:
           repository: iroha-one/odoo-docs-locale-ja-${{ github.event.inputs.sourcecode }}
           ref: ${{ github.event.inputs.branch }}
           path: locale/ja
-      # Install Ptyhon and additional OS packages
+      # Install Python and required OS packages
       - name: Install Python
         uses: actions/setup-python@v1
         with:
@@ -76,10 +83,10 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends libldap2-dev libsasl2-dev
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           pip install -r requirements.txt
-      # Optional: Checkout odoo/odoo
+      # Optionally checkout odoo/odoo repository
       - name: Checkout odoo/odoo
         if: ${{ github.event.inputs.checkout_odoo == 'true' }}
         uses: actions/checkout@v3
@@ -87,29 +94,21 @@ jobs:
           repository: odoo/odoo
           ref: ${{ github.event.inputs.sourcecode }}
           path: odoo
-      - name: Install dependencies of odoo/odoo
+      - name: Install odoo/odoo dependencies
         if: ${{ github.event.inputs.checkout_odoo == 'true' }}
         run: |
           pip install -r odoo/requirements.txt
-      # Build Sphinx docs for ja locale
+      # Add 'ja' to languages_names in conf.py
       - name: Add 'ja' to languages_names in conf.py
         run: |
           echo -e "\n\nlanguages_names.setdefault('ja', '日本語')\n" >> conf.py
+      # Build Sphinx documentation for Japanese locale
       - name: Build Sphinx docs
         run: |
           make html
         env:
           CURRENT_LANG: ja
-      # https://github.com/marketplace/actions/github-pages
-      #- if: success()
-      #  uses: crazy-max/ghaction-github-pages@master
-      #  env:
-      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #  with:
-      #    target_branch: gh-pages
-      #    build_dir: _build/html/
-
-      # https://github.com/peaceiris/actions-gh-pages
+      # Deploy to GitHub Pages
       - name: Deploy
         if: success()
         uses: peaceiris/actions-gh-pages@v3
@@ -118,6 +117,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: _build/html/ja/
 
-
-# This action probably does everything for you:
+# You can also use this Sphinx build action:
 # https://github.com/marketplace/actions/sphinx-build
