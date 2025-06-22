@@ -14,24 +14,24 @@ loading translations [ja]... done
 loading intersphinx inventory from https://docs.python.org/3/objects.inv...
 loading intersphinx inventory from ../invs/werkzeug.inv...
 building [mo]: targets for 18 po files that are out of date
-writing output... [  5%] ../locale/ja/LC_MESSAGES/services.mo
-writing output... [ 11%] ../locale/ja/LC_MESSAGES/inventory_and_mrp.mo
-writing output... [ 16%] ../locale/ja/LC_MESSAGES/settings.mo
-writing output... [ 22%] ../locale/ja/LC_MESSAGES/developer.mo
-writing output... [ 27%] ../locale/ja/LC_MESSAGES/legal.mo
+writing output... [  5%] ../locale/ja/LC_MESSAGES/index.mo
+writing output... [ 11%] ../locale/ja/LC_MESSAGES/productivity.mo
+writing output... [ 16%] ../locale/ja/LC_MESSAGES/contributing.mo
+writing output... [ 22%] ../locale/ja/LC_MESSAGES/websites.mo
+writing output... [ 27%] ../locale/ja/LC_MESSAGES/services.mo
 writing output... [ 33%] ../locale/ja/LC_MESSAGES/essentials.mo
-writing output... [ 38%] ../locale/ja/LC_MESSAGES/contributing.mo
-writing output... [ 44%] ../locale/ja/LC_MESSAGES/productivity.mo
-writing output... [ 50%] ../locale/ja/LC_MESSAGES/applications.mo
-writing output... [ 55%] ../locale/ja/LC_MESSAGES/index.mo
-writing output... [ 61%] ../locale/ja/LC_MESSAGES/finance.mo
-writing output... [ 66%] ../locale/ja/LC_MESSAGES/administration.mo
-writing output... [ 72%] ../locale/ja/LC_MESSAGES/studio.mo
-writing output... [ 77%] ../locale/ja/LC_MESSAGES/sales.mo
-writing output... [ 83%] ../locale/ja/LC_MESSAGES/hr.mo
-writing output... [ 88%] ../locale/ja/LC_MESSAGES/websites.mo
+writing output... [ 38%] ../locale/ja/LC_MESSAGES/hr.mo
+writing output... [ 44%] ../locale/ja/LC_MESSAGES/applications.mo
+writing output... [ 50%] ../locale/ja/LC_MESSAGES/developer.mo
+writing output... [ 55%] ../locale/ja/LC_MESSAGES/general.mo
+writing output... [ 61%] ../locale/ja/LC_MESSAGES/legal.mo
+writing output... [ 66%] ../locale/ja/LC_MESSAGES/finance.mo
+writing output... [ 72%] ../locale/ja/LC_MESSAGES/inventory_and_mrp.mo
+writing output... [ 77%] ../locale/ja/LC_MESSAGES/administration.mo
+writing output... [ 83%] ../locale/ja/LC_MESSAGES/sales.mo
+writing output... [ 88%] ../locale/ja/LC_MESSAGES/settings.mo
 writing output... [ 94%] ../locale/ja/LC_MESSAGES/marketing.mo
-writing output... [100%] ../locale/ja/LC_MESSAGES/general.mo
+writing output... [100%] ../locale/ja/LC_MESSAGES/studio.mo
 
 building [html]: targets for 1033 source files that are out of date
 updating environment: [new config] 1033 added, 0 changed, 0 removed
@@ -343,6 +343,17 @@ waiting for workers...
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/finance/accounting/bank/bank_synchronization.rst:147: WARNING: inconsistent term references in translated message. original: [':ref:`developer mode <developer-mode>`'], translated: []
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/finance/accounting/bank/bank_synchronization.rst:196: WARNING: inconsistent references in translated message. original: [], translated: ['`サポートチケット <https://www.odoo.com/help>を提出`_']
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/finance/accounting/bank/bank_synchronization.rst:196: WARNING: Unknown target name: "サポートチケット <https://www.odoo.com/help>を提出".
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/define_module_data.rst:170:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/define_module_data.rst:170:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/server_framework_101/01_architecture.rst:98: WARNING: inconsistent term references in translated message. original: [], translated: [':ref:`Pythonパッケージ<https://docs.python.org/3/tutorial/modules.html#packages>`']
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/server_framework_101/04_securityintro.rst:103:<translated>:1: WARNING: Inline literal start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/server_framework_101/04_securityintro.rst:103:<translated>:1: WARNING: Inline literal start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/server_framework_101/06_basicviews.rst:213:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/server_framework_101/06_basicviews.rst:213:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/server_framework_101/11_sprinkles.rst:266:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/server_framework_101/11_sprinkles.rst:266:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/server_framework_101/11_sprinkles.rst:266: WARNING: inconsistent term references in translated message. original: [':ref:`FieldMany2ManyTags widget documentation <reference/js/widgets>`'], translated: []
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/server_framework_101/14_qwebintro.rst:10: WARNING: inconsistent references in translated message. original: ['templating_'], translated: []
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation/content_guidelines.rst:89:<translated>:1: WARNING: Inline strong start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation/content_guidelines.rst:89:<translated>:1: WARNING: Inline strong start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation/rst_guidelines.rst:302:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
@@ -353,101 +364,6 @@ waiting for workers...
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation/rst_guidelines.rst:405:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation/rst_guidelines.rst:935:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation/rst_guidelines.rst:935:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/customer_accounts.rst:29:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/customer_accounts.rst:29:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/products.rst:130: WARNING: inconsistent term references in translated message. original: [':ref:`compare products\n<ecommerce/products/product-comparison>`'], translated: []
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/products.rst:302: WARNING: inconsistent term references in translated message. original: [':ref:`before payment <ecommerce-products-digital-files-before-payment>`', ':ref:`after checkout <ecommerce-products-digital-files-after-payment>`'], translated: [':ref:`チェックアウト後 <ecommerce-products-digital-files-after-payment>`']
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/products.rst:417: WARNING: inconsistent term references in translated message. original: [':ref:`attributes <ecommerce/products/product-variants>`'], translated: []
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/products/catalog.rst:150:<translated>:1: WARNING: Inline strong start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/products/catalog.rst:188:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/products/catalog.rst:150:<translated>:1: WARNING: Inline strong start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/products/catalog.rst:188:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/shipping.rst:119: WARNING: inconsistent term references in translated message. original: [':ref:`Show Available Qty <ecommerce/products/stock-management>`'], translated: []
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:30:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:46:<translated>:1: WARNING: Inline strong start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:131:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:131:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:241:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:30:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:30: WARNING: inconsistent term references in translated message. original: [':ref:`Content <elearning/content>`', ':ref:`Description <elearning/description>`', ':ref:`Options <elearning/options>`', ':ref:`Karma <elearning/karma>`'], translated: [':ref:`コンテンツ <elearning/content>`', ':ref:`説明 <elearning/description>`', ':ref:`オプション <elearning/options>`']
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:46:<translated>:1: WARNING: Inline strong start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:131:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:131:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:241:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/forum.rst:5:<translated>:1: WARNING: Inline strong start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/forum.rst:208:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/forum.rst:5:<translated>:1: WARNING: Inline strong start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/forum.rst:208:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/forum.rst:208: WARNING: inconsistent term references in translated message. original: [':ref:`badges <forum/badges>`'], translated: []
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/forum.rst:304: WARNING: inconsistent term references in translated message. original: [':ref:`karma points\n<forum/karma-related-rights>`'], translated: []
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/website/configuration/spam_protection.rst:55:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/website/configuration/spam_protection.rst:55:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/website/pages.rst:28:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/website/pages.rst:28:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:17:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:67:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:86:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:132:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:137:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:137:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:17:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:17: WARNING: inconsistent term references in translated message. original: [':doc:`Discover other ways to contribute to Odoo <../contributing>`'], translated: []
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:19: WARNING: inconsistent term references in translated message. original: [':ref:`contributing/development/setup`'], translated: []
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:67:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:86:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:86: WARNING: inconsistent term references in translated message. original: [':ref:`make your first contribution\n<contributing/development/first-contribution>`'], translated: []
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:132:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:132: WARNING: inconsistent term references in translated message. original: [':doc:`coding guidelines <development/coding_guidelines>`'], translated: []
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:137:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:137:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:137: WARNING: inconsistent term references in translated message. original: [':doc:`Git guidelines\n<development/git_guidelines>`'], translated: []
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:14:<translated>:1: WARNING: Inline strong start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:58:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:63:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:77:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:110:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:137:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:146:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:249:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:400:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:442:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1063:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1227:<translated>:1: WARNING: Inline strong start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1263:<translated>:1: WARNING: Inline strong start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1295:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1295:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1303:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1303:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:14:<translated>:1: WARNING: Inline strong start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:58:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:63:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:77:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:110:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:137:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:146:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:249:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:400:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:400: WARNING: inconsistent term references in translated message. original: [':ref:`Security Pitfalls <reference/security/pitfalls>`'], translated: []
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:442:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1063:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1227:<translated>:1: WARNING: Inline strong start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1263:<translated>:1: WARNING: Inline strong start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1295:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1295:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1303:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1303:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/git_guidelines.rst:142:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/git_guidelines.rst:142:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:29:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:185:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:255:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:255:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:29:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:29: WARNING: inconsistent term references in translated message. original: [':doc:`Discover other ways to contribute to Odoo <../contributing>`'], translated: []
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:185:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:255:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:255:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:255: WARNING: inconsistent term references in translated message. original: [':doc:`Git guidelines\n<development/git_guidelines>`'], translated: []
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/finance/fiscal_localizations/belgium.rst:65:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/finance/fiscal_localizations/belgium.rst:114:<translated>:1: WARNING: Inline strong start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/finance/fiscal_localizations/belgium.rst:315:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
@@ -1465,6 +1381,101 @@ waiting for workers...
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/finance/payment_providers/mollie.rst:23:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/finance/payment_providers/paypal.rst:9:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/finance/payment_providers/paypal.rst:9:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/customer_accounts.rst:29:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/customer_accounts.rst:29:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/products.rst:130: WARNING: inconsistent term references in translated message. original: [':ref:`compare products\n<ecommerce/products/product-comparison>`'], translated: []
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/products.rst:302: WARNING: inconsistent term references in translated message. original: [':ref:`before payment <ecommerce-products-digital-files-before-payment>`', ':ref:`after checkout <ecommerce-products-digital-files-after-payment>`'], translated: [':ref:`チェックアウト後 <ecommerce-products-digital-files-after-payment>`']
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/products.rst:417: WARNING: inconsistent term references in translated message. original: [':ref:`attributes <ecommerce/products/product-variants>`'], translated: []
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/products/catalog.rst:150:<translated>:1: WARNING: Inline strong start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/products/catalog.rst:188:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/products/catalog.rst:150:<translated>:1: WARNING: Inline strong start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/products/catalog.rst:188:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/ecommerce/shipping.rst:119: WARNING: inconsistent term references in translated message. original: [':ref:`Show Available Qty <ecommerce/products/stock-management>`'], translated: []
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:30:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:46:<translated>:1: WARNING: Inline strong start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:131:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:131:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:241:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:30:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:30: WARNING: inconsistent term references in translated message. original: [':ref:`Content <elearning/content>`', ':ref:`Description <elearning/description>`', ':ref:`Options <elearning/options>`', ':ref:`Karma <elearning/karma>`'], translated: [':ref:`コンテンツ <elearning/content>`', ':ref:`説明 <elearning/description>`', ':ref:`オプション <elearning/options>`']
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:46:<translated>:1: WARNING: Inline strong start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:131:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:131:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/elearning.rst:241:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/forum.rst:5:<translated>:1: WARNING: Inline strong start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/forum.rst:208:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/forum.rst:5:<translated>:1: WARNING: Inline strong start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/forum.rst:208:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/forum.rst:208: WARNING: inconsistent term references in translated message. original: [':ref:`badges <forum/badges>`'], translated: []
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/forum.rst:304: WARNING: inconsistent term references in translated message. original: [':ref:`karma points\n<forum/karma-related-rights>`'], translated: []
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/website/configuration/spam_protection.rst:55:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/website/configuration/spam_protection.rst:55:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/website/pages.rst:28:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/website/pages.rst:28:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:17:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:67:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:86:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:132:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:137:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:137:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:17:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:17: WARNING: inconsistent term references in translated message. original: [':doc:`Discover other ways to contribute to Odoo <../contributing>`'], translated: []
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:19: WARNING: inconsistent term references in translated message. original: [':ref:`contributing/development/setup`'], translated: []
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:67:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:86:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:86: WARNING: inconsistent term references in translated message. original: [':ref:`make your first contribution\n<contributing/development/first-contribution>`'], translated: []
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:132:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:132: WARNING: inconsistent term references in translated message. original: [':doc:`coding guidelines <development/coding_guidelines>`'], translated: []
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:137:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:137:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:137: WARNING: inconsistent term references in translated message. original: [':doc:`Git guidelines\n<development/git_guidelines>`'], translated: []
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:14:<translated>:1: WARNING: Inline strong start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:58:<translated>:1: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:63:<translated>:1: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:77:<translated>:1: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:110:<translated>:1: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:137:<translated>:1: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:146:<translated>:1: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:249:<translated>:1: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:400:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:442:<translated>:1: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1063:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1227:<translated>:1: WARNING: Inline strong start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1263:<translated>:1: WARNING: Inline strong start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1295:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1295:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1303:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1303:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:14:<translated>:1: WARNING: Inline strong start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:58:<translated>:1: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:63:<translated>:1: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:77:<translated>:1: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:110:<translated>:1: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:137:<translated>:1: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:146:<translated>:1: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:249:<translated>:1: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:400:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:400: WARNING: inconsistent term references in translated message. original: [':ref:`Security Pitfalls <reference/security/pitfalls>`'], translated: []
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:442:<translated>:1: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1063:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1227:<translated>:1: WARNING: Inline strong start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1263:<translated>:1: WARNING: Inline strong start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1295:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1295:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1303:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1303:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/git_guidelines.rst:142:<translated>:1: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/git_guidelines.rst:142:<translated>:1: WARNING: Inline emphasis start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:29:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:185:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:255:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:255:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:29:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:29: WARNING: inconsistent term references in translated message. original: [':doc:`Discover other ways to contribute to Odoo <../contributing>`'], translated: []
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:185:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:255:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:255:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:255: WARNING: inconsistent term references in translated message. original: [':doc:`Git guidelines\n<development/git_guidelines>`'], translated: []
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/sales/subscriptions/automatic_alerts.rst:111:<translated>:1: WARNING: Inline emphasis start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/sales/subscriptions/automatic_alerts.rst:111:<translated>:1: WARNING: Inline emphasis start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/sales/subscriptions/ecommerce.rst:5:<translated>:1: WARNING: Inline emphasis start-string without end-string.
@@ -1625,6 +1636,8 @@ waiting for workers...
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/sales/point_of_sale/receipts_invoices.rst:83:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/sales/point_of_sale/restaurant/bill_printing.rst:32:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/sales/point_of_sale/restaurant/bill_printing.rst:32:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/productivity/documents.rst:5:<translated>:1: WARNING: Inline strong start-string without end-string.
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/productivity/documents.rst:5:<translated>:1: WARNING: Inline strong start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/sales/point_of_sale/restaurant/tips.rst:67:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/sales/point_of_sale/restaurant/tips.rst:67:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/sales/point_of_sale/restaurant/tips.rst:67: WARNING: inconsistent term references in translated message. original: [':ref:`tip product <tip-product>`'], translated: []
@@ -1738,8 +1751,6 @@ waiting for workers...
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/sales/sales/sales_quotations/orders_and_variants.rst:69:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:151:<translated>:1: WARNING: Inline emphasis start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:151:<translated>:1: WARNING: Inline emphasis start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/productivity/documents.rst:5:<translated>:1: WARNING: Inline strong start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/productivity/documents.rst:5:<translated>:1: WARNING: Inline strong start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/sales/crm/acquire_leads/email_manual.rst:39:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/sales/crm/acquire_leads/email_manual.rst:124:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/sales/crm/acquire_leads/email_manual.rst:8: WARNING: inconsistent term references in translated message. original: [':doc:`website contact form <opportunities_form>`'], translated: []
@@ -2746,6 +2757,7 @@ writing output... [ 83%] applications/websites/livechat .. developer/howtos/webs
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:50:<translated>:1: WARNING: unknown document: ../administration/on_beane/source
 writing output... [ 88%] developer/howtos/website_themes/building_blocks .. developer/reference/upgrades
 writing output... [ 94%] developer/reference/upgrades/upgrade_scripts .. developer/tutorials/server_framework_101/15_final_word
+/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/server_framework_101/01_architecture.rst:98:<translated>:1: WARNING: undefined label: https://docs.python.org/3/tutorial/modules.html#packages
 writing output... [100%] developer/tutorials/setup_guide .. legal/terms/terms_of_sale_tex
 
 waiting for workers...
@@ -6404,7 +6416,7 @@ copying static files... done
 copying extra files... done
 dumping search index in Japanese (code: ja)... done
 dumping object inventory... done
-build succeeded, 2668 warnings.
+build succeeded, 2680 warnings.
 
 The HTML pages are in _build/html/ja.
 Build finished.

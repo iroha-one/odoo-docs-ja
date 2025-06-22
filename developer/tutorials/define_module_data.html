@@ -1091,11 +1091,11 @@
 <li class="toctree-l2 o_menu_administration_odoo_accounts"><a class="reference internal" href="../../administration/odoo_accounts.html">Odoo.comアカウント</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current o_menu_developer"><a class="reference internal" href="../../developer.html">開発者</a><ul class="current">
-<li class="toctree-l2 current o_menu_developer_tutorials"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l1 current o_menu_developer"><a class="reference internal" href="../../developer.html">開発者向け</a><ul class="current">
+<li class="toctree-l2 current o_menu_developer_tutorials"><a class="reference internal" href="../tutorials.html">チュートリアル</a><ul class="current">
 <li class="toctree-l3 o_menu_developer_tutorials_setup_guide"><a class="reference internal" href="setup_guide.html">Setup guide</a></li>
 <li class="toctree-l3 o_menu_developer_tutorials_server_framework_101"><a class="reference internal" href="server_framework_101.html">Server framework 101</a><ul>
-<li class="toctree-l4 o_menu_developer_tutorials_server_framework_101_01_architecture"><a class="reference internal" href="server_framework_101/01_architecture.html">Chapter 1: Architecture Overview</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_server_framework_101_01_architecture"><a class="reference internal" href="server_framework_101/01_architecture.html">第1章：アーキテクチャの概要</a></li>
 <li class="toctree-l4 o_menu_developer_tutorials_server_framework_101_02_newapp"><a class="reference internal" href="server_framework_101/02_newapp.html">Chapter 2: A New Application</a></li>
 <li class="toctree-l4 o_menu_developer_tutorials_server_framework_101_03_basicmodel"><a class="reference internal" href="server_framework_101/03_basicmodel.html">Chapter 3: Models And Basic Fields</a></li>
 <li class="toctree-l4 o_menu_developer_tutorials_server_framework_101_04_securityintro"><a class="reference internal" href="server_framework_101/04_securityintro.html">Chapter 4: Security - A Brief Introduction</a></li>
@@ -1178,7 +1178,7 @@
 <li class="toctree-l5 o_menu_developer_reference_backend_orm_changelog"><a class="reference internal" href="../reference/backend/orm/changelog.html">Changelog</a></li>
 </ul>
 </li>
-<li class="toctree-l4 o_menu_developer_reference_backend_data"><a class="reference internal" href="../reference/backend/data.html">Data Files</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_data"><a class="reference internal" href="../reference/backend/data.html">データファイル</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_actions"><a class="reference internal" href="../reference/backend/actions.html">アクション</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_reports"><a class="reference internal" href="../reference/backend/reports.html">QWeb Reports</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_module"><a class="reference internal" href="../reference/backend/module.html">Module Manifests</a></li>
@@ -1233,13 +1233,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_developer_reference_cli"><a class="reference internal" href="../reference/cli.html">Command-line interface (CLI)</a></li>
+<li class="toctree-l3 o_menu_developer_reference_cli"><a class="reference internal" href="../reference/cli.html">コマンドラインインターフェース (CLI)</a></li>
 <li class="toctree-l3 o_menu_developer_reference_upgrades"><a class="reference internal" href="#">Upgrades</a><ul>
 <li class="toctree-l4 o_menu_developer_reference_upgrades_upgrade_scripts"><a class="reference internal" href="../reference/upgrades/upgrade_scripts.html">Upgrade scripts</a></li>
 <li class="toctree-l4 o_menu_developer_reference_upgrades_upgrade_utils"><a class="reference internal" href="../reference/upgrades/upgrade_utils.html">Upgrade utils</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_developer_reference_external_api"><a class="reference internal" href="../reference/external_api.html">External API</a></li>
+<li class="toctree-l3 o_menu_developer_reference_external_api"><a class="reference internal" href="../reference/external_api.html">外部API</a></li>
 <li class="toctree-l3 o_menu_developer_reference_extract_api"><a class="reference internal" href="../reference/extract_api.html">Extract API</a></li>
 </ul>
 </li>
@@ -1271,30 +1271,30 @@
     <h5>On this page</h5>
     <ul>
 <li><a class="reference internal" href="#">Define module data</a><ul>
-<li><a class="reference internal" href="#data-types">Data Types</a><ul>
-<li><a class="reference internal" href="#master-data">Master Data</a></li>
-<li><a class="reference internal" href="#demo-data">Demo Data</a></li>
+<li><a class="reference internal" href="#data-types">データの種類</a><ul>
+<li><a class="reference internal" href="#master-data">マスター・データ</a></li>
+<li><a class="reference internal" href="#demo-data">デモ・データ</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#data-declaration">Data Declaration</a><ul>
-<li><a class="reference internal" href="#manifest">Manifest</a></li>
-<li><a class="reference internal" href="#csv">CSV</a></li>
-<li><a class="reference internal" href="#xml">XML</a><ul>
-<li><a class="reference internal" href="#data-extension">Data Extension</a></li>
+<li><a class="reference internal" href="#data-declaration">データの宣言</a><ul>
+<li><a class="reference internal" href="#manifest">マニフェスト</a></li>
+<li><a class="reference internal" href="#csv">CSV形式</a></li>
+<li><a class="reference internal" href="#xml">XML形式</a><ul>
+<li><a class="reference internal" href="#data-extension">データの拡張</a></li>
 <li><a class="reference internal" href="#ref"><code class="o_code docutils literal notranslate"><span class="pre">ref</span></code></a></li>
 <li><a class="reference internal" href="#eval"><code class="o_code docutils literal notranslate"><span class="pre">eval</span></code></a></li>
 <li><a class="reference internal" href="#search"><code class="o_code docutils literal notranslate"><span class="pre">search</span></code></a></li>
 <li><a class="reference internal" href="#function"><code class="o_code docutils literal notranslate"><span class="pre">function</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#add-x2many-fields">Add X2many fields</a></li>
+<li><a class="reference internal" href="#add-x2many-fields">X2many フィールドへの追加</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#accessing-the-data">Accessing the data</a></li>
-<li><a class="reference internal" href="#advanced">詳細</a><ul>
-<li><a class="reference internal" href="#what-is-the-xml-id">What is the XML id?</a></li>
-<li><a class="reference internal" href="#no-update">No update</a></li>
-<li><a class="reference internal" href="#import-as-sql">Import as SQL</a></li>
+<li><a class="reference internal" href="#accessing-the-data">データへのアクセス</a></li>
+<li><a class="reference internal" href="#advanced">上級者向け</a><ul>
+<li><a class="reference internal" href="#what-is-the-xml-id">XML idとは？</a></li>
+<li><a class="reference internal" href="#no-update">アップデート不要</a></li>
+<li><a class="reference internal" href="#import-as-sql">SQLとして取り込む</a></li>
 </ul>
 </li>
 </ul>
@@ -2363,11 +2363,11 @@
 <li class="toctree-l2 o_menu_administration_odoo_accounts"><a class="reference internal" href="../../administration/odoo_accounts.html">Odoo.comアカウント</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current o_menu_developer"><a class="reference internal" href="../../developer.html">開発者</a><ul class="current">
-<li class="toctree-l2 current o_menu_developer_tutorials"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l1 current o_menu_developer"><a class="reference internal" href="../../developer.html">開発者向け</a><ul class="current">
+<li class="toctree-l2 current o_menu_developer_tutorials"><a class="reference internal" href="../tutorials.html">チュートリアル</a><ul class="current">
 <li class="toctree-l3 o_menu_developer_tutorials_setup_guide"><a class="reference internal" href="setup_guide.html">Setup guide</a></li>
 <li class="toctree-l3 o_menu_developer_tutorials_server_framework_101"><a class="reference internal" href="server_framework_101.html">Server framework 101</a><ul>
-<li class="toctree-l4 o_menu_developer_tutorials_server_framework_101_01_architecture"><a class="reference internal" href="server_framework_101/01_architecture.html">Chapter 1: Architecture Overview</a></li>
+<li class="toctree-l4 o_menu_developer_tutorials_server_framework_101_01_architecture"><a class="reference internal" href="server_framework_101/01_architecture.html">第1章：アーキテクチャの概要</a></li>
 <li class="toctree-l4 o_menu_developer_tutorials_server_framework_101_02_newapp"><a class="reference internal" href="server_framework_101/02_newapp.html">Chapter 2: A New Application</a></li>
 <li class="toctree-l4 o_menu_developer_tutorials_server_framework_101_03_basicmodel"><a class="reference internal" href="server_framework_101/03_basicmodel.html">Chapter 3: Models And Basic Fields</a></li>
 <li class="toctree-l4 o_menu_developer_tutorials_server_framework_101_04_securityintro"><a class="reference internal" href="server_framework_101/04_securityintro.html">Chapter 4: Security - A Brief Introduction</a></li>
@@ -2450,7 +2450,7 @@
 <li class="toctree-l5 o_menu_developer_reference_backend_orm_changelog"><a class="reference internal" href="../reference/backend/orm/changelog.html">Changelog</a></li>
 </ul>
 </li>
-<li class="toctree-l4 o_menu_developer_reference_backend_data"><a class="reference internal" href="../reference/backend/data.html">Data Files</a></li>
+<li class="toctree-l4 o_menu_developer_reference_backend_data"><a class="reference internal" href="../reference/backend/data.html">データファイル</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_actions"><a class="reference internal" href="../reference/backend/actions.html">アクション</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_reports"><a class="reference internal" href="../reference/backend/reports.html">QWeb Reports</a></li>
 <li class="toctree-l4 o_menu_developer_reference_backend_module"><a class="reference internal" href="../reference/backend/module.html">Module Manifests</a></li>
@@ -2505,13 +2505,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_developer_reference_cli"><a class="reference internal" href="../reference/cli.html">Command-line interface (CLI)</a></li>
+<li class="toctree-l3 o_menu_developer_reference_cli"><a class="reference internal" href="../reference/cli.html">コマンドラインインターフェース (CLI)</a></li>
 <li class="toctree-l3 o_menu_developer_reference_upgrades"><a class="reference internal" href="#">Upgrades</a><ul>
 <li class="toctree-l4 o_menu_developer_reference_upgrades_upgrade_scripts"><a class="reference internal" href="../reference/upgrades/upgrade_scripts.html">Upgrade scripts</a></li>
 <li class="toctree-l4 o_menu_developer_reference_upgrades_upgrade_utils"><a class="reference internal" href="../reference/upgrades/upgrade_utils.html">Upgrade utils</a></li>
 </ul>
 </li>
-<li class="toctree-l3 o_menu_developer_reference_external_api"><a class="reference internal" href="../reference/external_api.html">External API</a></li>
+<li class="toctree-l3 o_menu_developer_reference_external_api"><a class="reference internal" href="../reference/external_api.html">外部API</a></li>
 <li class="toctree-l3 o_menu_developer_reference_extract_api"><a class="reference internal" href="../reference/extract_api.html">Extract API</a></li>
 </ul>
 </li>
@@ -2598,8 +2598,8 @@
           <a href="master_odoo_web_framework/03_customize_kanban_view.html" title="Chapter 3: Customize a kanban view"
              accesskey="P">前へ</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Odoo 18.0 ドキュメント</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../../developer.html" >開発者</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../tutorials.html" accesskey="U">Tutorials</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../developer.html" >開発者向け</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../tutorials.html" accesskey="U">チュートリアル</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Define module data</a></li> 
       </ul>
     </div>
@@ -2617,26 +2617,24 @@ completed it and use the <code class="o_code docutils literal notranslate"><span
 tutorial.</p>
 </div>
 </section><section id="data-types">
-<h2>Data Types<a class="headerlink" href="#data-types" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>データの種類<a class="headerlink" href="#data-types" title="このヘッドラインへのパーマリンク">¶</a></h2>
 </section><section id="master-data">
-<h3>Master Data<a class="headerlink" href="#master-data" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Master data is usually part of the technical or business requirements for the module. In other
-words, such data is often necessary for the module to work properly. This data will always be
-installed when installing the module.</p>
+<h3>マスター・データ<a class="headerlink" href="#master-data" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>マスター・データは通常、モジュールの技術的またはビジネス的要件の一部です。つまり、モジュールが正常に動作するために必要なデータであることが多いです。このデータは、モジュールのインストール時に必ずインストールされます。</p>
 <p>We already met technical data previously since we have defined <a class="reference internal" href="../reference/user_interface/view_records.html"><span class="doc">views</span></a> and <a class="reference internal" href="../reference/backend/actions.html"><span class="doc">actions</span></a>. Those
 are one kind of master data.</p>
 <p>On top of technical data, business data can be defined, e.g. countries, currencies, units of measure,
 as well as complete country localization (legal reports, tax definitions, chart of account), and much
 more...</p>
 </section><section id="demo-data">
-<h3>Demo Data<a class="headerlink" href="#demo-data" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>デモ・データ<a class="headerlink" href="#demo-data" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>In additional to master data, which are requirements for a module to work properly, we also like
 having data for demonstration purposes:</p>
 <ul class="simple">
 <li><p>Help the sales representatives make their demos quickly.</p></li>
 <li><p>Have a set of working data for developers to test new features and see how these new features look
 with data they might not have added themselves.</p></li>
-<li><p>Test that the data is loaded correctly, without raising an error.</p></li>
+<li><p>データが正しく読み込まれ、エラーが発生しないことをテストする。</p></li>
 <li><p>Setup most of the features to be used quickly when creating a new database.</p></li>
 </ul>
 <p>Demo data is automatically loaded when you start the server if you don't explicitly say you don't
@@ -2660,11 +2658,10 @@ want it. This can be done in the database manager or with the command line.</p>
 </pre></div>
 </div>
 </section><section id="data-declaration">
-<h2>Data Declaration<a class="headerlink" href="#data-declaration" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>データの宣言<a class="headerlink" href="#data-declaration" title="このヘッドラインへのパーマリンク">¶</a></h2>
 </section><section id="manifest">
-<h3>Manifest<a class="headerlink" href="#manifest" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p><strong>Reference</strong>: the documentation related to this topic can be found in
-<a class="reference internal" href="../reference/backend/module.html#reference-module-manifest"><span class="std std-ref">Module Manifests</span></a>.</p>
+<h3>マニフェスト<a class="headerlink" href="#manifest" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><strong>参照</strong>: このトピックに関連するドキュメントは、 <a class="reference internal" href="../reference/backend/module.html#reference-module-manifest"><span class="std std-ref">モジュールマニフェスト</span></a> にあります。</p>
 <p>Data is declared either in CSV or in XML.
 Each file containing data must be added in the manifest for them to be loaded.</p>
 <p>The keys to use in the manifest to add new data are <code class="o_code docutils literal notranslate"><span class="pre">data</span></code> for the master data and <code class="o_code docutils literal notranslate"><span class="pre">demo</span></code> for
@@ -2673,7 +2670,7 @@ declaring the data.</p>
 <p>Usually, demo data is in a <code class="o_code docutils literal notranslate"><span class="pre">demo</span></code> folder, views and actions are in a <code class="o_code docutils literal notranslate"><span class="pre">views</span></code>
 folder, security related data is in a <code class="o_code docutils literal notranslate"><span class="pre">security</span></code> folder, and other data is in a
 <code class="o_code docutils literal notranslate"><span class="pre">data</span></code> folder.</p>
-<p>If your work tree looks like this:</p>
+<p>作業フォルダーのツリーが次のようになっている場合:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>estate
 ├── data
 │   └── master_data.xml
@@ -2690,7 +2687,7 @@ folder, security related data is in a <code class="o_code docutils literal notra
 └── __manifest__.py
 </pre></div>
 </div>
-<p>Your manifest should look like this:</p>
+<p>マニフェストは次のようになります:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
 
 <span class="p">{</span>
@@ -2711,9 +2708,8 @@ folder, security related data is in a <code class="o_code docutils literal notra
 </pre></div>
 </div>
 </section><section id="csv">
-<h3>CSV<a class="headerlink" href="#csv" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p><strong>Reference</strong>: the documentation related to this topic can be found in
-<a class="reference internal" href="../reference/backend/data.html#reference-data-csvdatafiles"><span class="std std-ref">CSV data files</span></a>.</p>
+<h3>CSV形式<a class="headerlink" href="#csv" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><strong>参照</strong>: このトピックに関連するドキュメントは、 <a class="reference internal" href="../reference/backend/data.html#reference-data-csvdatafiles"><span class="std std-ref">CSVデータファイル</span></a> にあります。</p>
 <p>The easiest way to declare simple data is by using the CSV format. This is however limited in terms
 of features: use it for long lists of simple models, but prefer XML otherwise.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>id,field_a,field_b,related_id:id
@@ -2723,23 +2719,21 @@ id2,valueA2,valueB2,module.relatedid
 </div>
 <div class="alert alert-tip">
 <p class="alert-title">
-ちなみに</p><p>Your IDE has probably an extension to have a syntax highlighting of the CSV files</p>
+ちなみに</p><p>お使いのIDEには、CSVファイルのシンタックスハイライトを行う拡張機能があると思います。</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://atom.io/packages/rainbow-csv">Atom</a>.</p></li>
-<li><p><a class="reference external" href="https://plugins.jetbrains.com/plugin/10037-csv-plugin">PyCharm/IntelliJ</a>.</p></li>
-<li><p><a class="reference external" href="https://github.com/mechatroner/rainbow_csv">Vim</a>.</p></li>
-<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv">Visual Studio</a>.</p></li>
+<li><p><a class="reference external" href="https://atom.io/packages/rainbow-csv">Atom</a></p></li>
+<li><p><a class="reference external" href="https://plugins.jetbrains.com/plugin/10037-csv-plugin">PyCharm/IntelliJ</a></p></li>
+<li><p><a class="reference external" href="https://github.com/mechatroner/rainbow_csv">Vim</a></p></li>
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv">Visual Studio</a></p></li>
 </ul>
 </div>
 <div class="alert alert-dark">
 <p class="alert-title">
-Exercise</p><p>Add some standard Real Estate Property Types for the <code class="o_code docutils literal notranslate"><span class="pre">estate</span></code> module: Residential,
-Commercial, Industrial and Land. These should always be installed.</p>
+Exercise</p><p><code class="o_code docutils literal notranslate"><span class="pre">estate</span></code> モジュールに標準的な不動産物件タイプをいくつか追加してみましょう: 住宅（Residential）、商業（Commercial）、工業（Industrial）、土地（Land）。これらは常にインストールしておく必要があります。</p>
 </div>
 </section><section id="xml">
-<h3>XML<a class="headerlink" href="#xml" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p><strong>Reference</strong>: the documentation related to this topic can be found in
-<a class="reference internal" href="../reference/backend/data.html#reference-data"><span class="std std-ref">Data Files</span></a>.</p>
+<h3>XML形式<a class="headerlink" href="#xml" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><strong>参照</strong>: このトピックに関連するドキュメントは、 <a class="reference internal" href="../reference/backend/data.html#reference-data"><span class="std std-ref">データファイル</span></a> にあります。</p>
 <p>When the data to create is more complex it can be useful, or even necessary, to do it in XML.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;odoo&gt;</span>
   <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;id1&quot;</span> <span class="na">model=</span><span class="s">&quot;tutorial.example&quot;</span><span class="nt">&gt;</span>
@@ -2756,7 +2750,7 @@ Commercial, Industrial and Land. These should always be installed.</p>
 </div>
 <div class="alert alert-dark">
 <p class="alert-title">
-Exercise</p><p>Create some demo data for the <code class="o_code docutils literal notranslate"><span class="pre">estate</span></code> module.</p>
+Exercise</p><p><a href="#id1"><span class="problematic" id="id2">`</span></a>estate`モジュールのデモ・データを作成してみましょう。</p>
 <table class="table docutils">
 <colgroup>
 <col style="width: 30%" />
@@ -2765,12 +2759,12 @@ Exercise</p><p>Create some demo data for the <code class="o_code docutils litera
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>フィールド</p></th>
-<th class="head"><p>Values</p></th>
-<th class="head"><p>Values</p></th>
+<th class="head"><p>値</p></th>
+<th class="head"><p>値</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>名称</p></td>
+<tr class="row-even"><td><p>名前（name）</p></td>
 <td><p>Big Villa</p></td>
 <td><p>Trailer home</p></td>
 </tr>
@@ -2830,14 +2824,11 @@ Exercise</p><p>Create some demo data for the <code class="o_code docutils litera
 </table>
 </div>
 </section><section id="data-extension">
-<h4>Data Extension<a class="headerlink" href="#data-extension" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<h4>データの拡張<a class="headerlink" href="#data-extension" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>During the Core Training, we saw in the <a class="reference internal" href="server_framework_101/12_inheritance.html"><span class="doc">Chapter 12: Inheritance</span></a> chapter we
 could inherit (extend) an existing view. This was a special case of data extension: any data can be
 extended in a module.</p>
-<p>When you are adding new fields to an existing model in a new module, you might want to populate
-those fields on the records created in the modules you are depending on. This is done by giving the
-<code class="o_code docutils literal notranslate"><span class="pre">xml_id</span></code> of the record you want to extend. It won't replace it, in this case we will set the
-<code class="o_code docutils literal notranslate"><span class="pre">field_c</span></code> to the given value for both records.</p>
+<p>新しいモジュールで既存のモデルに新しいフィールドを追加するとき、依存しているモジュールで作成されたレコードにそれらのフィールドを入力したい場合があります。これは、拡張したいレコードの <code class="o_code docutils literal notranslate"><span class="pre">xml_id</span></code> を与えることで行います。置き換えられるわけではありませんが、この場合は両方のレコードの <code class="o_code docutils literal notranslate"><span class="pre">field_c</span></code> に与えられた値を設定します。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;odoo&gt;</span>
   <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;id1&quot;</span> <span class="na">model=</span><span class="s">&quot;tutorial.example&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;field_c&quot;</span><span class="nt">&gt;</span>valueC1<span class="nt">&lt;/field&gt;</span>
@@ -2851,10 +2842,7 @@ those fields on the records created in the modules you are depending on. This is
 </div>
 </section><section id="ref">
 <h4><code class="o_code docutils literal notranslate"><span class="pre">ref</span></code><a class="headerlink" href="#ref" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p>Related fields can be set using the <code class="o_code docutils literal notranslate"><span class="pre">ref</span></code> key. The value of that key is the <code class="o_code docutils literal notranslate"><span class="pre">xml_id</span></code> of the
-record you want to link. Remember the <code class="o_code docutils literal notranslate"><span class="pre">xml_id</span></code> is composed of the name of the module where the
-data is first declared, followed by a dot, followed by the <code class="o_code docutils literal notranslate"><span class="pre">id</span></code> of the record (just the <code class="o_code docutils literal notranslate"><span class="pre">id</span></code>
-works too if you are in the module declaring it).</p>
+<p>関連フィールドは、 <code class="o_code docutils literal notranslate"><span class="pre">ref</span></code> キーを使って設定することができます。このキーの値は、リンクさせたいレコードの <code class="o_code docutils literal notranslate"><span class="pre">xml_id</span></code> です。 <code class="o_code docutils literal notranslate"><span class="pre">xml_id</span></code> は、データが最初に宣言されたモジュールの名前、ドット、レコードの <code class="o_code docutils literal notranslate"><span class="pre">id</span></code> の順で構成されていることを覚えておいてください (データを宣言したモジュール内にある場合は、 <code class="o_code docutils literal notranslate"><span class="pre">id</span></code> だけでも動作します) 。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;odoo&gt;</span>
   <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;id1&quot;</span> <span class="na">model=</span><span class="s">&quot;tutorial.example&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;related_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;module.relatedid&quot;</span><span class="nt">/&gt;</span>
@@ -2864,8 +2852,8 @@ works too if you are in the module declaring it).</p>
 </div>
 <div class="alert alert-dark">
 <p class="alert-title">
-Exercise</p><p>Create some demo data offers for the properties you created.</p>
-<p>Create offers using the partners defined in <code class="o_code docutils literal notranslate"><span class="pre">base</span></code></p>
+Exercise</p><p>作成した物件情報のオファーのデモ・データを作成してみましょう。</p>
+<p><code class="o_code docutils literal notranslate"><span class="pre">base</span></code> で定義されたパートナーを使用してオファーを作成してみましょう。</p>
 <table class="table docutils">
 <colgroup>
 <col style="width: 37%" />
@@ -2874,10 +2862,10 @@ Exercise</p><p>Create some demo data offers for the properties you created.</p>
 <col style="width: 21%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>取引先</p></th>
-<th class="head"><p>Estate</p></th>
-<th class="head"><p>Price</p></th>
-<th class="head"><p>Validity</p></th>
+<tr class="row-odd"><th class="head"><p>パートナー</p></th>
+<th class="head"><p>不動産</p></th>
+<th class="head"><p>価格</p></th>
+<th class="head"><p>有効期間</p></th>
 </tr>
 </thead>
 <tbody>
@@ -2917,12 +2905,11 @@ to add the related values in batch. See :<a class="reference internal" href="#tu
 </div>
 <div class="alert alert-dark">
 <p class="alert-title">
-Exercise</p><p>The offers you added should always be in a date relative to the installation of the
-module.</p>
+Exercise</p><p>追加したオファーは、常にモジュールのインストール時に対して、相対的な日付となるようにしてみましょう。</p>
 </div>
 </section><section id="search">
 <h4><code class="o_code docutils literal notranslate"><span class="pre">search</span></code><a class="headerlink" href="#search" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p>Sometimes, you need to call the ORM to do a <code class="o_code docutils literal notranslate"><span class="pre">search</span></code>. This is not feasible with the CSV format.</p>
+<p>時には、ORMを呼び出して <code class="o_code docutils literal notranslate"><span class="pre">search</span></code> （検索）を行う必要があります。これはCSV形式では実現できません。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;odoo&gt;</span>
   <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;id1&quot;</span> <span class="na">model=</span><span class="s">&quot;account.move.line&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;account_id&quot;</span> <span class="na">search=</span><span class="s">&quot;[</span>
@@ -2945,13 +2932,11 @@ installed.</p>
 </div>
 <div class="alert alert-dark">
 <p class="alert-title">
-Exercise</p><p>Validate one of the demo data offers by using the &quot;Accept Offer&quot; button. Refuse the
-others.</p>
+Exercise</p><p>デモデータのオファーのうち1つを &quot;Accept Offer&quot; ボタンを使って検証済みにしてみましょう。その他は拒否します。</p>
 </div>
 </section><section id="add-x2many-fields">
-<span id="tutorials-define-module-data-x2m"></span><h3>Add X2many fields<a class="headerlink" href="#add-x2many-fields" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p><strong>Reference</strong>: the documentation related to this topic can be found in
-<code class="xref py py-class o_code docutils literal notranslate"><span class="pre">Command</span></code>.</p>
+<span id="tutorials-define-module-data-x2m"></span><h3>X2many フィールドへの追加<a class="headerlink" href="#add-x2many-fields" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><strong>参考</strong>: このトピックに関連するドキュメントは、 <code class="xref py py-class o_code docutils literal notranslate"><span class="pre">Command</span></code> にあります。</p>
 <p>If you need to add related data in a One2many or a Many2many field, you can do so by using the
 <code class="xref py py-class o_code docutils literal notranslate"><span class="pre">Command</span></code> methods.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;odoo&gt;</span>
@@ -2975,16 +2960,14 @@ Exercise</p><p>Create one new Property, but this time with some offers created d
 One2many field linked to the Offers.</p>
 </div>
 </section><section id="accessing-the-data">
-<h2>Accessing the data<a class="headerlink" href="#accessing-the-data" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>データへのアクセス<a class="headerlink" href="#accessing-the-data" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="alert alert-warning">
 <p class="alert-title">
-警告</p><p>You should never access demo data outside of the demo data declaration, not even in
-tests.</p>
+警告</p><p>デモ・データとして宣言されていないデモ・データには、テストであっても絶対にアクセスしてはいけません。</p>
 </div>
-<p>There are multiple ways to access the master/demo data.</p>
-<p>In python code, you can use the <code class="o_code docutils literal notranslate"><span class="pre">env.ref(self,</span> <span class="pre">xml_id,</span> <span class="pre">raise_if_not_found=True)</span></code> method. It
-returns the recordset linked to the <code class="o_code docutils literal notranslate"><span class="pre">xml_id</span></code> you specify.</p>
-<p>In XML, you can use the <code class="o_code docutils literal notranslate"><span class="pre">ref</span></code> key like this</p>
+<p>マスター/デモ・データにアクセスする方法は複数あります。</p>
+<p>Pythonコードでは、 <code class="o_code docutils literal notranslate"><span class="pre">env.ref(self,</span> <span class="pre">xml_id,</span> <span class="pre">raise_if_not_found=True)</span></code> メソッドを使用できます。このメソッドは、指定した <code class="o_code docutils literal notranslate"><span class="pre">xml_id</span></code> にリンクされたレコードセットを返します。</p>
+<p>XML では、次のように <code class="o_code docutils literal notranslate"><span class="pre">ref</span></code> キーを使用できます。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;odoo&gt;</span>
   <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;id1&quot;</span> <span class="na">model=</span><span class="s">&quot;tutorial.example&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;related_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;module.relatedid&quot;</span><span class="nt">/&gt;</span>
@@ -2992,9 +2975,8 @@ returns the recordset linked to the <code class="o_code docutils literal notrans
 <span class="nt">&lt;/odoo&gt;</span>
 </pre></div>
 </div>
-<p>It will call the ref method, and store the id of the record returned on the field <code class="o_code docutils literal notranslate"><span class="pre">related_id</span></code> of
-the record of type <code class="o_code docutils literal notranslate"><span class="pre">tutorial.example</span></code> with id <code class="o_code docutils literal notranslate"><span class="pre">id1</span></code>.</p>
-<p>In CSV, the title of the column must be suffixed with <code class="o_code docutils literal notranslate"><span class="pre">:id</span></code> or <code class="o_code docutils literal notranslate"><span class="pre">/id</span></code>.</p>
+<p>refメソッドが呼び出され、 <code class="o_code docutils literal notranslate"><span class="pre">id1</span></code> を持つ <code class="o_code docutils literal notranslate"><span class="pre">tutorial.example</span></code> 型のレコードのフィールド <code class="o_code docutils literal notranslate"><span class="pre">related_id</span></code> に、返されたレコードのidが格納されます。</p>
+<p>CSVでは、カラムのタイトルの末尾に <code class="o_code docutils literal notranslate"><span class="pre">:id</span></code> または <code class="o_code docutils literal notranslate"><span class="pre">/id</span></code> を付ける必要があります。</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>id,parent_id:id,name
 &quot;child1&quot;,&quot;module.parent&quot;,&quot;Name1&quot;
 &quot;child2&quot;,&quot;module.parent&quot;,&quot;Name2&quot;
@@ -3004,25 +2986,20 @@ the record of type <code class="o_code docutils literal notranslate"><span class
 <p>In SQL, it is more complicated, see <a class="reference internal" href="#tutorials-define-module-data-xml-id"><span class="std std-ref">the advanced section</span></a>.</p>
 <div class="alert alert-warning">
 <p class="alert-title">
-警告</p><p>Data can always be deleted by the user. Always code defensively, taking this into
-account.</p>
+警告</p><p>データは常にユーザーによって削除される可能性があります。この点を考慮して、常に防御的なコーディングを行いましょう。</p>
 </div>
 </section><section id="advanced">
-<h2>詳細<a class="headerlink" href="#advanced" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>上級者向け<a class="headerlink" href="#advanced" title="このヘッドラインへのパーマリンク">¶</a></h2>
 </section><section id="what-is-the-xml-id">
-<span id="tutorials-define-module-data-xml-id"></span><h3>What is the XML id?<a class="headerlink" href="#what-is-the-xml-id" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Because we don't want a column <code class="o_code docutils literal notranslate"><span class="pre">xml_id</span></code> in every single SQL table of the database, we need a
-mechanism to store it. This is done with the <code class="o_code docutils literal notranslate"><span class="pre">ir.model.data</span></code> model.</p>
-<p>It contains the name of the record (the <code class="o_code docutils literal notranslate"><span class="pre">xml_id</span></code>) along with the module in which it is defined,
-the model defining it, and the id of it.</p>
+<span id="tutorials-define-module-data-xml-id"></span><h3>XML idとは？<a class="headerlink" href="#what-is-the-xml-id" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>データベースのすべてのSQLテーブルに <code class="o_code docutils literal notranslate"><span class="pre">xml_id</span></code> というカラムを入れたくないので、それを格納する仕組みが必要です。これは、 <code class="o_code docutils literal notranslate"><span class="pre">ir.model.data</span></code> モデルで行なわれます。</p>
+<p>このモデルには、レコードの名前(<code class="o_code docutils literal notranslate"><span class="pre">xml_id</span></code>) 、定義されているモジュール、定義されているモデル、そしてレコードのidが含まれています。</p>
 </section><section id="no-update">
-<h3>No update<a class="headerlink" href="#no-update" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The records created with the <code class="o_code docutils literal notranslate"><span class="pre">noupdate</span></code> flag won't be updated when upgrading the module that
-created them, but it will be created if it didn't exist yet.</p>
+<h3>アップデート不要<a class="headerlink" href="#no-update" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="o_code docutils literal notranslate"><span class="pre">noupdate</span></code> フラグで作成されたレコードは、そのレコードを作成したモジュールをアップグレードしても更新されませんが、まだ存在していない場合は作成されます。</p>
 <div class="alert alert-primary">
 <p class="alert-title">
-注釈</p><p><code class="o_code docutils literal notranslate"><span class="pre">odoo-bin</span> <span class="pre">-i</span> <span class="pre">module</span></code> will bypass this setting and always load the data. But normally
-one shouldn't do this on a production database.</p>
+注釈</p><p><code class="o_code docutils literal notranslate"><span class="pre">odoo-bin</span> <span class="pre">-i</span> <span class="pre">module</span></code> はこの設定をバイパスし、常にデータをロードします。しかし、通常は本番のデータベースでこのようなことをすべきではありません。</p>
 </div>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;odoo</span> <span class="na">noupdate=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;id1&quot;</span> <span class="na">model=</span><span class="s">&quot;model&quot;</span><span class="nt">&gt;</span>
@@ -3032,21 +3009,17 @@ one shouldn't do this on a production database.</p>
 </pre></div>
 </div>
 </section><section id="import-as-sql">
-<h3>Import as SQL<a class="headerlink" href="#import-as-sql" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>In some cases, it makes sense to do the import directly in SQL. This is however discouraged as it
-bypasses all the features of the ORM, computed fields (including metadata) and python constraints.</p>
+<h3>SQLとして取り込む<a class="headerlink" href="#import-as-sql" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>場合によっては、SQLで直接インポートを行うことも可能です。しかし、これはORMの全ての機能、計算されたフィールド(メタデータを含む) とpythonの制約をバイパスするため、推奨されません。</p>
 <div class="alert alert-primary">
 <p class="alert-title">
-注釈</p><p>Generally using raw SQL also bypasses ACLs and increases the risks of injections.</p>
-<p><strong>Reference</strong>: <a class="reference internal" href="../reference/backend/security.html#reference-security"><span class="std std-ref">Security in Odoo</span></a></p>
+注釈</p><p>一般的に生のSQLを使用すると、ACLがバイパスされ、インジェクションのリスクが高まります。</p>
+<p><strong>参照</strong>: <a class="reference internal" href="../reference/backend/security.html#reference-security"><span class="std std-ref">Odooにおけるセキュリティ</span></a></p>
 </div>
 <ul class="simple">
-<li><p>It can help to speed the import time by a lot
-<a class="reference external" href="https://github.com/odoo/enterprise/blob/d46cceef8c594b9056d0115edb7169e207a5986f/product_unspsc/hooks.py#L19">with huge files</a>.</p></li>
-<li><p>For more complex imports like for the
-<a class="reference external" href="https://github.com/odoo/odoo/blob/e1f8d549895cd9c459e6350430f30d541d02838a/odoo/addons/base/models/ir_translation.py#L24">translations</a>.</p></li>
-<li><p>It can be necessary to
-<a class="reference external" href="https://github.com/odoo/odoo/blob/e1f8d549895cd9c459e6350430f30d541d02838a/odoo/addons/base/data/base_data.sql">initialize the database</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/odoo/enterprise/blob/d46cceef8c594b9056d0115edb7169e207a5986f/product_unspsc/hooks.py#L19">巨大なファイル</a> のインポート時間を短縮することができます。</p></li>
+<li><p>より複雑なインポートを行うには、 <a class="reference external" href="https://github.com/odoo/odoo/blob/e1f8d549895cd9c459e6350430f30d541d02838a/odoo/addons/base/models/ir_translation.py#L24">translations</a> を使用します。</p></li>
+<li><p><a class="reference external" href="https://github.com/odoo/odoo/blob/e1f8d549895cd9c459e6350430f30d541d02838a/odoo/addons/base/data/base_data.sql">initialize the database</a> が必要になることがあります。</p></li>
 </ul>
 </section>
 
@@ -3058,30 +3031,30 @@ bypasses all the features of the ORM, computed fields (including metadata) and p
     <h5>On this page</h5>
     <ul>
 <li><a class="reference internal" href="#">Define module data</a><ul>
-<li><a class="reference internal" href="#data-types">Data Types</a><ul>
-<li><a class="reference internal" href="#master-data">Master Data</a></li>
-<li><a class="reference internal" href="#demo-data">Demo Data</a></li>
+<li><a class="reference internal" href="#data-types">データの種類</a><ul>
+<li><a class="reference internal" href="#master-data">マスター・データ</a></li>
+<li><a class="reference internal" href="#demo-data">デモ・データ</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#data-declaration">Data Declaration</a><ul>
-<li><a class="reference internal" href="#manifest">Manifest</a></li>
-<li><a class="reference internal" href="#csv">CSV</a></li>
-<li><a class="reference internal" href="#xml">XML</a><ul>
-<li><a class="reference internal" href="#data-extension">Data Extension</a></li>
+<li><a class="reference internal" href="#data-declaration">データの宣言</a><ul>
+<li><a class="reference internal" href="#manifest">マニフェスト</a></li>
+<li><a class="reference internal" href="#csv">CSV形式</a></li>
+<li><a class="reference internal" href="#xml">XML形式</a><ul>
+<li><a class="reference internal" href="#data-extension">データの拡張</a></li>
 <li><a class="reference internal" href="#ref"><code class="o_code docutils literal notranslate"><span class="pre">ref</span></code></a></li>
 <li><a class="reference internal" href="#eval"><code class="o_code docutils literal notranslate"><span class="pre">eval</span></code></a></li>
 <li><a class="reference internal" href="#search"><code class="o_code docutils literal notranslate"><span class="pre">search</span></code></a></li>
 <li><a class="reference internal" href="#function"><code class="o_code docutils literal notranslate"><span class="pre">function</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#add-x2many-fields">Add X2many fields</a></li>
+<li><a class="reference internal" href="#add-x2many-fields">X2many フィールドへの追加</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#accessing-the-data">Accessing the data</a></li>
-<li><a class="reference internal" href="#advanced">詳細</a><ul>
-<li><a class="reference internal" href="#what-is-the-xml-id">What is the XML id?</a></li>
-<li><a class="reference internal" href="#no-update">No update</a></li>
-<li><a class="reference internal" href="#import-as-sql">Import as SQL</a></li>
+<li><a class="reference internal" href="#accessing-the-data">データへのアクセス</a></li>
+<li><a class="reference internal" href="#advanced">上級者向け</a><ul>
+<li><a class="reference internal" href="#what-is-the-xml-id">XML idとは？</a></li>
+<li><a class="reference internal" href="#no-update">アップデート不要</a></li>
+<li><a class="reference internal" href="#import-as-sql">SQLとして取り込む</a></li>
 </ul>
 </li>
 </ul>
@@ -3119,8 +3092,8 @@ bypasses all the features of the ORM, computed fields (including metadata) and p
           <a href="master_odoo_web_framework/03_customize_kanban_view.html" title="Chapter 3: Customize a kanban view"
              >前へ</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Odoo 18.0 ドキュメント</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../../developer.html" >開発者</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="../tutorials.html" >Tutorials</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../developer.html" >開発者向け</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../tutorials.html" >チュートリアル</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Define module data</a></li> 
       </ul>
     </div>
