@@ -7,47 +7,47 @@ sphinx-build -c . -b html -D project_root= -D canonical_version= -D versions= -D
 Running Sphinx v4.3.2
 
 Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/sphinx/config.py", line 329, in eval_config_file
+  File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/sphinx/config.py", line 329, in eval_config_file
     exec(code, namespace)
   File "/home/runner/work/odoo-docs-ja/odoo-docs-ja/conf.py", line 116, in <module>
     import odoo.addons
-  File "/home/runner/work/odoo-docs-ja/odoo-docs-ja/odoo/odoo/__init__.py", line 21, in <module>
-    assert sys.version_info > MIN_PY_VERSION, f"Outdated python version detected, Odoo requires Python >= {'.'.join(map(str, MIN_PY_VERSION))} to run."
-AssertionError: Outdated python version detected, Odoo requires Python >= 3.10 to run.
+  File "/home/runner/work/odoo-docs-ja/odoo-docs-ja/odoo/odoo/__init__.py", line 77, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
 
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/sphinx/cmd/build.py", line 276, in build_main
+  File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/sphinx/cmd/build.py", line 276, in build_main
     app = Sphinx(args.sourcedir, args.confdir, args.outputdir,
-  File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/sphinx/application.py", line 216, in __init__
+  File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/sphinx/application.py", line 216, in __init__
     self.config = Config.read(self.confdir, confoverrides or {}, self.tags)
-  File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/sphinx/config.py", line 173, in read
+  File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/sphinx/config.py", line 173, in read
     namespace = eval_config_file(filename, tags)
-  File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/sphinx/config.py", line 342, in eval_config_file
+  File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/sphinx/config.py", line 342, in eval_config_file
     raise ConfigError(msg % traceback.format_exc()) from exc
 sphinx.errors.ConfigError: There is a programmable error in your configuration file:
 
 Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/sphinx/config.py", line 329, in eval_config_file
+  File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/sphinx/config.py", line 329, in eval_config_file
     exec(code, namespace)
   File "/home/runner/work/odoo-docs-ja/odoo-docs-ja/conf.py", line 116, in <module>
     import odoo.addons
-  File "/home/runner/work/odoo-docs-ja/odoo-docs-ja/odoo/odoo/__init__.py", line 21, in <module>
-    assert sys.version_info > MIN_PY_VERSION, f"Outdated python version detected, Odoo requires Python >= {'.'.join(map(str, MIN_PY_VERSION))} to run."
-AssertionError: Outdated python version detected, Odoo requires Python >= 3.10 to run.
+  File "/home/runner/work/odoo-docs-ja/odoo-docs-ja/odoo/odoo/__init__.py", line 77, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
 
 
 Configuration error:
 There is a programmable error in your configuration file:
 
 Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.9.23/x64/lib/python3.9/site-packages/sphinx/config.py", line 329, in eval_config_file
+  File "/opt/hostedtoolcache/Python/3.10.18/x64/lib/python3.10/site-packages/sphinx/config.py", line 329, in eval_config_file
     exec(code, namespace)
   File "/home/runner/work/odoo-docs-ja/odoo-docs-ja/conf.py", line 116, in <module>
     import odoo.addons
-  File "/home/runner/work/odoo-docs-ja/odoo-docs-ja/odoo/odoo/__init__.py", line 21, in <module>
-    assert sys.version_info > MIN_PY_VERSION, f"Outdated python version detected, Odoo requires Python >= {'.'.join(map(str, MIN_PY_VERSION))} to run."
-AssertionError: Outdated python version detected, Odoo requires Python >= 3.10 to run.
+  File "/home/runner/work/odoo-docs-ja/odoo-docs-ja/odoo/odoo/__init__.py", line 77, in <module>
+    import PyPDF2
+ModuleNotFoundError: No module named 'PyPDF2'
 
 make: *** [Makefile:57: html] Error 2
