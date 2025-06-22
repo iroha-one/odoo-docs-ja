@@ -2,209 +2,181 @@
 Job positions
 =============
 
-In the default :menuselection:`Recruitment` dashboard view, all job positions are shown, regardless
-of status. Current published positions with active applicants are shown, as well as job positions
-that have been created but have not yet been published.
+In Odoo's **Recruitment** application, all job positions are shown on the default dashboard in the
+**Recruitment** app, which includes both active and inactive positions.
 
-Each job position is shown in an individual kanban card. If the job position is active and
-candidates can apply, then a :guilabel:`Published` banner will appear in the top-right corner of the
-card.
+Each job position is shown in an individual Kanban card. If the job position is active, and
+candidates can apply, a :guilabel:`PUBLISHED` banner appears in the top-right corner of the card.
 
-View submitted applications by clicking the :guilabel:`# Applications` button, with `#` being the
-number of applications received. If a position is not published, a :guilabel:`Start Recruitment`
-button will appear instead.
+View submitted applications by clicking anywhere on a job position card.
 
 .. image:: new_job/jobs.png
-   :align: center
-   :alt: Main dashboard view of Recruitment showing all job positions.
+   :alt: Main dashboard view of Recruitment app showing all job positions.
 
 Create a new job position
 =========================
 
-There are two ways a job position can be created: from the main :guilabel:`Recruitment` dashboard,
-or from the :guilabel:`Configuration` menu.
+To create a new job position from the main dashboard in the **Recruitment** app, click the
+:guilabel:`New` button in the top-left corner, and a :guilabel:`Create a Job Position` pop-up window
+appears.
 
-To create a job position from the :guilabel:`Configuration` menu, go to :menuselection:`Recruitment
-app --> Configuration --> Job Positions`. The job positions in this view are displayed in a list.
+First, enter the name of the :guilabel:`Job Position` (such as `Sales Manager`, `Mechanical
+Engineer`, etc.) in the field.
 
-Create a new job position from the :guilabel:`Job Positions` dashboard by clicking the
-:guilabel:`Create` button in the top-left corner.
+Next, enter an :guilabel:`Application email` by typing in the first half of the email address in the
+first field, then select the second half of the email using the drop-down menu in the second field.
+Applicants can send a resumé to this specific email address, and Odoo creates an application for
+them automatically.
 
-Then, a :guilabel:`Create a Job Position` pop-up window will appear. From here, enter the name of
-the position (such as `Sales Manager`, `Mechanical Engineer`, etc.). When complete, click the
-:guilabel:`Create` button to save the entry, or the :guilabel:`Discard` button to delete it.
+When complete, click the :guilabel:`Create` button to save the entry, or the :guilabel:`Discard`
+button to delete it.
 
 .. image:: new_job/job-title.png
-   :align: center
    :alt: Create a new job position.
 
-Once the job position has been created, it will appear as a card in the kanban view on the main
-:guilabel:`Recruitment`` dashboard, as well as in the list view on the :guilabel:`Configuration`
-dashboard.
+Once the job position has been created, it appears as a card in the Kanban view on the main
+**Recruitment** app dashboard.
+
+.. _recruitment/new_job_position/edit:
 
 Edit a new job position
 -----------------------
 
-Once the job position is created, it's time to enter the details for the position. Click on the
-:guilabel:`⋮ (three dots)` icon in the upper-right corner of the relevant card to reveal several
-options, and then click :guilabel:`Edit` to edit the details.
+After the job position is created, it is time to enter the details for the position. Click on the
+:icon:`fa-ellipsis-v` :guilabel:`(Dropdown menu)` icon in the upper-right corner of the relevant
+card to reveal several options, and then click :guilabel:`Configuration` to edit the details.
 
 .. image:: new_job/edit-job.png
-   :align: center
    :alt: Edit the job position card.
 
-Enter the job description in the :guilabel:`Job Description` tab. This information is what is
-visible to potential employees when searching for available jobs.
+.. note::
+   The top-right corner of the card has a toggle to publish the job position to the website. If the
+   job position is published, a green :guilabel:`Published` toggle is visible. If the job position
+   is *not* published a gray :guilabel:`Not Published` toggle appears. Click the toggle to publish
+   or unpublish the job position.
 
-Recruitment
-~~~~~~~~~~~
+Recruitment tab
+~~~~~~~~~~~~~~~
 
 All the basic information about the job position is listed under the :guilabel:`Recruitment` tab.
-None of the fields are required, but it is a good idea to provide at least a few details, such as
-where the job is located.
+
+None of the fields are required, but it is important to configure and populate the
+:guilabel:`Department`, :guilabel:`Job Location`, :guilabel:`Employment Type` fields, and the
+:guilabel:`Job Summary` tab, as they are all visible to prospective applicants on the website.
+
+.. note::
+   Some fields listed below may not appear depending on the database configuration and other
+   installed applications.
 
 The fields can be filled out as follows:
 
-- :guilabel:`Company`: Select the company the job is for.
-- :guilabel:`Website`: Select the website where the job will be published.
-- :guilabel:`Department`: Select the relevant department for the job position.
-- :guilabel:`Expected New Employees`: Enter the number of employees to be hired for this position.
-- :guilabel:`Contract Template`: Select a contract template that will be used when offering the job
-  to a candidate.
-- :guilabel:`Interview Form`: Select a form that applicants will fill out prior to their interview,
-  or create a new form. Once selected, a :guilabel:`Display (Name) Form` button will appear next to
-  the selected form. Click on this to see how the form will be displayed to the candidate on the
-  front end.
-
-  .. image:: new_job/interview-form.png
-     :align: center
-     :alt: The interview form will display a link to see the form as the candidate will.
-
-- :guilabel:`Recruiter`: Select the person who will be doing the recruiting for this role.
+- :guilabel:`Department`: Select the relevant department for the job position. This is visible on
+  the website.
+- :guilabel:`Job Location`: Select the physical address for the job. If the job position is remote,
+  leave this field blank. This is visible on the website.
+- :guilabel:`Industry`: Select the relevant industry the job position falls under. This field
+  corresponds to the industries on job boards. Odoo comes with 86 preconfigured industries. It is
+  *not* recommended to add a new industry, as it may hide the job position during some searched on
+  the various job boards.
+- :guilabel:`Email Alias`: Enter an email address to which applicants can send a resumé. Once
+  emailed, Odoo automatically creates an application for them. If an email was entered when creating
+  the job position, this field is populated.
+- :guilabel:`Employment Type`: select what type of position the job is, using the drop-down menu.
+  The default options are :guilabel:`Permanent`, :guilabel:`Temporary`, :guilabel:`Seasonal`,
+  :guilabel:`Full-Time`, :guilabel:`Intern`, :guilabel:`Student`, :guilabel:`Apprenticeship`,
+  :guilabel:`Thesis`, :guilabel:`Statutory`, and :guilabel:`Employee`. Depending on the installed
+  localization, other options may be available. This is visible on the website.
+- :guilabel:`Working Schedule`: Select the working schedule for the job position. Odoo provides one
+  working schedule by default, :guilabel:`Standard 40 hours/week`, but all working schedules in the
+  database are available.
+- :guilabel:`Salary Range`: Enter both the minimum and maximum salaries offered for the position in
+  the two fields. Then, set the last field to the time-frame for the salary range. The default
+  options are :guilabel:`Hour`, :guilabel:`Day`, :guilabel:`Week`, :guilabel:`Bi-Week`,
+  :guilabel:`Month`, and :guilabel:`Year`.
+- :guilabel:`Expected Skills`: Select all the desired skills for the job position, using the
+  drop-down menu. The skills presented are :ref:`configured in the Employees app
+  <employees/skills>`.
+- :guilabel:`Company`: Select the company the job is for. This field only appears if using a
+  multi-company database.
+- :guilabel:`Mission Dates`: Using the calendar selector, set the start date for the job position.
+  If the job is temporary and has a specific end date, set the end date in the second field.
+- :guilabel:`Target`: Enter the number of employees to be hired for this position.
+- :guilabel:`Website`: Select the website the job is published on.
+- :guilabel:`Recruiter`: Select the person responsible for recruiting this role.
+- :guilabel:`Interviewers`: Select who should perform the interviews. Multiple people can be
+  selected.
+- :guilabel:`Interview Form`: select an :ref:`Interview form <recruitment/interview>` that
+  applicants fill out prior to their interview.
+- :guilabel:`Contract Template`: Select a contract template to be used when offering the job to a
+  candidate.
 
 .. image:: new_job/recruitment-tab.png
-   :align: center
+   :alt: The job information details in the Recruitment tab.
+
+Job summary tab
+~~~~~~~~~~~~~~~
+
+Enter the job description in the :guilabel:`Job Summary` tab. This description is visible on the
+website.
+
+.. image:: new_job/job-summary.png
+   :alt: The summary of the position in the Job Summary tab.
+
+Application info tab
+~~~~~~~~~~~~~~~~~~~~
+
+The :guilabel:`Process Details` section of the :guilabel:`Application Info` tab contains information
+that is displayed online for the job position. This informs the applicants of the timeline and steps
+for the recruitment process, so they know when to expect a reply.
+
+The following fields are populated by default, but can be modified to suit the recruitment timeline
+of the business:
+
+- :guilabel:`Time to Answer`: Enter the number of days before the applicant is contacted.
+  :guilabel:`2 open days` populates this field by default.
+- :guilabel:`Process`: Enter the various stages the candidate goes through during the recruitment
+  process. By default, two process steps are visible: :guilabel:`1 Phone Call` and :guilabel:`1
+  Onsite Interview`.
+- :guilabel:`Days to get an Offer`: Enter the number of days before the applicant should expect an
+  offer after the recruitment process has ended. The default is :guilabel:`4 Days after Interview`.
+
+.. image:: new_job/app-info.png
    :alt: Enter job information details in the recruitment tab.
 
-Appraisals
-~~~~~~~~~~
+.. note::
+   The :guilabel:`Process Details` section is a text field. All answers are typed in rather than
+   selected from a drop-down menu. The text is displayed on the website exactly as it appears in
+   this tab.
 
-This tab displays the :guilabel:`Employee Feedback Template` and the :guilabel:`Manager Feedback
-Template`, both of which will be used after the employee has been hired, the predetermined time has
-passed, and feedback is requested.
+.. _recruitment/interview:
 
 Create interview form
 ---------------------
 
-Once a job position has been made, the :guilabel:`Interview Form` needs to be created. In the
-kanban view of the :menuselection:`Recruitment` dashboard, click on the :guilabel:`⋮ (three dots)`
-icon in the upper-right corner of the card to reveal several options, and then click
-:guilabel:`Create Interview Form`.
+An *Interview Form* is used to determine if a candidate is a good fit for a job position. Interview
+forms can be as specific or general as desired, and can take the form of a certification, an exam,
+or a general questionnaire. Interview forms are determined by the recruitment team.
 
-.. image:: new_job/new-interview-form.png
-   :align: center
-   :alt: Create an interview form for the new position.
+Before creating an interview form, ensure the proper settings are enabled. Navigate to
+:menuselection:`Recruitment app --> Configuration --> Settings`, and under the
+:guilabel:`Recruitment Process` section, ensure the :guilabel:`Send Interview Survey` option is
+enabled.
 
-Click on :guilabel:`Add a section` to add a section to the form. A line will appear, and a section
-heading can be entered. When complete, click off the line, or press enter to lock in the new
-section on the form.
+Since there are no preconfigured forms in Odoo, all interview forms must be created. To create an
+interview form, start from the :guilabel:`Recruitment` tab of the :guilabel:`Job Position` form. In
+the :guilabel:`Interview Form` field, enter a name for the new interview form. As the name is typed,
+several options populate beneath the entry: :guilabel:`Create (interview form name)`,
+:guilabel:`Search More...`, and :guilabel:`Create and edit...`. Click :guilabel:`Create and edit...`
+and a :guilabel:`Create Interview Form` pop-up window appears.
 
-.. image:: new_job/add-section.png
-   :align: center
-   :alt: Enter job information details in the recruitment tab.
+.. image:: new_job/blank-interview-form.png
+   :alt: The blank interview form pop-up window.
 
-Next, click :guilabel:`Add a question` to add a question to the section. A pop-up window appears to
-enter the question details. Type out the question in the top line.
+.. note::
+   The option :guilabel:`Search More...` only appears if there are any interview forms already
+   created. If no interview forms exist, the only options available are :guilabel:`Create (interview
+   form name)`, and :guilabel:`Create and edit...`.
 
-There are several *Question Types* to choose from:
-
-- :guilabel:`Multiple Lines Text Box`: allows the applicant to enter several lines of text
-- :guilabel:`Single Line Text Box`: limits the applicant to only a single line of text
-- :guilabel:`Numerical Value`: only allows a number to be entered
-- :guilabel:`Date`: a calendar module is presented to select a date
-- :guilabel:`Datetime`:  a calendar module and a clock icon is presented to select a date and time
-- :guilabel:`Multiple choice: only one answer`: a multiple choice question that only allows the
-  candidate to select one answer
-- :guilabel:`Multiple choice: multiple answers allowed`: a multiple choice question that allows the
-  candidate to select multiple answers
-- :guilabel:`Matrix`: a customizable table that allows the candidate to choose an answer for each
-  row
-
-.. image:: new_job/questions.png
-   :align: center
-   :alt: Add a new question to the interview form.
-
-Questions and sections can be reorganized. Move them by clicking and dragging individual section
-headings or question lines to their desired position(s).
-
-Sections are indicated by a gray background, while questions have a white background.
-
-.. image:: new_job/questions-matrix.png
-   :align: center
-   :alt: A sample of categories and questions for a candidate.
-
-Next, configure the options for the interview form. Click the :guilabel:`Options` tab to view all
-the options to configure, by category.
-
-Questions
-~~~~~~~~~
-
-- :guilabel:`Layout`: Choose how the questions should be displayed.
-
-  - :guilabel:`One page with all the questions`: Display all sections and questions at the same
-    time.
-  - :guilabel:`One page per section`: Display each section with the corresponding questions on an
-    individual page.
-  - :guilabel:`One page per question`: Display a single question on each page.
-
-- :guilabel:`Progression Mode`: Display the progress the candidate is making, either as a
-  :guilabel:`Percentage`, or as a :guilabel:`Number`.
-- :guilabel:`Survey Time Limit`: Check this box to limit the time allowed to complete the form. When
-  selected, a field to enter the minutes appears next to the checked box. Enter the time (using an
-  XX:XX minute/second format) in the field.
-- :guilabel:`Selection`: Display the entire form (e.g. :guilabel:`All questions`), or only a random
-  selection of questions from each section (:guilabel:`Randomized per section`).
-
-  .. note::
-     Although it is a selectable option, the :guilabel:`Randomized per section` option is not
-     typically selected for an interview form.
-
-Scoring
-~~~~~~~
-
-- :guilabel:`No scoring`: Select this option to not score the form.
-- :guilabel:`Scoring with answers at the end`: Select this option to score the form and display the
-    correct answers for the candidate when they are finished with the form.
-- :guilabel:`Scoring without answers at the end`: Select this option to score the form but not
-  display the answers to the candidate.
-
-If one of the scoring options was selected, a :guilabel:`Success %` field will appear. Enter the
-percentage the candidate needs to pass the exam (example, 80.00%). The entry should be written in an
-“XX.XX” format.
-
-Candidates
-~~~~~~~~~~
-
-- :guilabel:`Access Mode`: Specify who can access the exam. Either :guilabel:`Anyone with the link`
-  or :guilabel:`Invited people only`.
-- :guilabel:`Appraisal Managers Only`: Check this box so only the managers who are reviewing the
-  exam can see the answers. If left unchecked, anyone can view the results.
-- :guilabel:`Login Required`: Check this box to require candidates to log in before taking the exam,
-  whether they have a valid token or not.
-- :guilabel:`Attempts Limit`: If there is a limit to how many times the exam can be taken, check
-  this box, then enter the maximum attempt number in the field next to it.
-
-Live Session
-~~~~~~~~~~~~
-
-- :guilabel:`Reward quick answers`: If the exam is to be taken live, check this box to award more
-  points to participants who answer quickly.
-- :guilabel:`Session Code`: Enter an access code that will allow the viewers into the live exam
-  session.
-
-After all fields have been entered, click the :guilabel:`Save` button to save the changes, or click
-:guilabel:`Discard` to delete the changes.
-
-.. image:: new_job/options.png
-   :align: center
-   :alt: Various options to configure for the interview form.
+Proceed to fill out the interview form pop-up window as a typical survey. For specific directions on
+how to create a survey, refer to the :doc:`survey essentials <../../marketing/surveys/create>`
+document, which provides step-by-step instructions on how to create and configure a survey.

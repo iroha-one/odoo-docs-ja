@@ -15,6 +15,8 @@ When browsing your chart of accounts, you can sort the accounts by :guilabel:`Co
 .. image:: chart_of_accounts/chart-of-accounts-sort.png
    :alt: Group the accounts by type in Odoo Accounting
 
+.. _chart-of-account/create:
+
 Configuration of an account
 ===========================
 
@@ -92,13 +94,12 @@ corresponding type from the following list:
 |Other          | Other        | Off-Balance Sheet       |
 +---------------+--------------+-------------------------+
 
-Assets, deferred expenses, and deferred revenues automation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Assets
+~~~~~~
 
-Some **account types** can **automate** the creation of :ref:`assets <assets-automation>` entries,
-:ref:`deferred expenses <deferred-expenses-automation>` entries, and
-:ref:`deferred revenues <deferred-revenues-automation>` entries. To **automate** entries, click
-:guilabel:`View` on an account line and go to the :guilabel:`Automation` tab.
+Some **account types** can **automate** the creation of :ref:`asset <assets-automation>` entries.
+To **automate** entries, click :guilabel:`View` on an account line and go to the
+:guilabel:`Automation` tab.
 
 You have three choices for the :guilabel:`Automation` tab:
 
@@ -168,6 +169,15 @@ To do so, check the :guilabel:`Allow Reconciliation` box in the account's settin
 .. image:: chart_of_accounts/chart-of-accounts-reconciliation.png
    :alt: Allow reconciliation for accounts in Odoo Accounting
 
+.. _coa_shared_accounts:
+
+Shared Accounts
+---------------
+
+The **Shared Accounts** feature allows the creation of a single account for a specific purpose and
+sharing it between multiple companies. It is especially useful for multi-company environments where
+a similar account might be used across different companies.
+
 Deprecated
 ----------
 
@@ -181,6 +191,6 @@ account's settings, and :guilabel:`Save`.
    * :doc:`../vendor_bills/deferred_expenses`
    * :doc:`../customer_invoices/deferred_revenues`
    * :doc:`../../fiscal_localizations`
-   * `Odoo Tutorials: Chart of accounts <https://www.odoo.com/slides/slide/chart-of-accounts-1630>`_
+   * `Odoo Tutorials: Chart of accounts <https://www.odoo.com/slides/slide/chart-of-accounts-6834>`_
    * `Odoo Tutorials: Update your chart of accounts
-     <https://www.odoo.com/slides/slide/update-your-chart-of-accounts-1658>`_
+     <https://www.odoo.com/slides/slide/update-your-chart-of-accounts-6391>`_

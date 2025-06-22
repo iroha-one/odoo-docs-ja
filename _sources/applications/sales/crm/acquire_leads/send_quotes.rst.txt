@@ -26,6 +26,10 @@ At the top-left of the form, click the :guilabel:`New Quotation` button.
    :alt: Qualified lead form with New Quotation button emphasized.
 
 .. important::
+   The **Sales** application **must** be installed for the :guilabel:`New Quotation` button to
+   appear.
+
+.. important::
    The :guilabel:`Customer` field is **not** required on the opportunity form.
 
    However, customer information must be added or linked before a quotation can be sent. If the
@@ -48,7 +52,7 @@ of the form, and update any missing or incorrect fields:
 - :guilabel:`Invoice Address`: physical address where the invoice should be sent.
 - :guilabel:`Delivery Address`: physical address where any products should be delivered.
 - :guilabel:`Quotation Template`: if applicable, select a pre-configured :doc:`quotation template
-  </applications/sales/sales/send_quotations/quote_template>` from this field.
+  <../../sales/sales_quotations/quote_template>` from this field.
 - :guilabel:`Expiration`: date when this quotation is no longer valid.
 - :guilabel:`Quotation Date`: creation date of draft/sent orders, confirmation date of confirmed
   orders. Note that this field is only visible if :doc:`Developer mode (debug mode)
@@ -94,9 +98,41 @@ catalog. Then, select a product from the drop-down menu, or create a new one by 
 After selecting a product, update the :guilabel:`Quantity`, if necessary. Confirm the information in
 the remaining fields.
 
-To remove a line from the quotation, click the :guilabel:`🗑️ (trash can)` icon.
+To remove a line from the quotation, click the :icon:`fa-trash-o` :guilabel:`(trash can)` icon.
 
-Repeat the steps above until the quotation is complete.
+To organize products into sections click :guilabel:`Add a section` and type a name for the section.
+Then, click the :icon:`oi-draggable` :guilabel:`(drag)` icon to the left of the name and drag to
+move the section to the appropriate location. Move each product using the same method to finish
+organizing the quotation order lines.
+
+.. image:: send_quotes/product-sections.png
+   :align: center
+   :alt: Categories are used to create separate sections on the order lines of a quote.
+
+Product catalog
+~~~~~~~~~~~~~~~
+
+To quickly add numerous products to the quotation, click the :guilabel:`Catalog` button to open the
+product catalog.
+
+All products in the database are listed as cards and can be sorted in the left panel by
+:guilabel:`Product Category` and :guilabel:`Attributes`.
+
+.. image:: send_quotes/product-catalog.png
+   :align: center
+   :alt: The product catalog displays all products as cards.
+
+To add a product, click the :icon:`fa-shopping-cart` :guilabel:`Add` button on the product card.
+Set the quantity of the item using the :icon:`fa-plus` :guilabel:`(add)` or :icon:`fa-minus`
+:guilabel:`(subtract)` buttons, or type the quantity in the number field between the two buttons.
+To remove an item, click the :icon:`fa-trash` :guilabel:`Remove` button on the product card.
+
+.. image:: send_quotes/set-quantity.png
+   :align: center
+   :alt: The purple add and subtract buttons are used to set the quantity of an item.
+
+Once all product quantities are set, click the :guilabel:`Back to Quotation` button to return to the
+quotation. The items selected in the product catalog now appear in the :guilabel:`Order Lines` tab.
 
 Preview and send quotation
 ==========================
@@ -134,11 +170,6 @@ sales orders, will be deducted from the number listed on the :guilabel:`Quotatio
 Instead, the value of the sales order will appear in the :guilabel:`Orders` smart button located in
 the same control panel.
 
-.. seealso::
-   - `Quotation templates </applications/sales/sales/send_quotations/quote_template/>`_
-   - `Optional products </applications/sales/sales/send_quotations/optional_products/>`_
-   - `Quotation deadlines </applications/sales/sales/send_quotations/deadline/>`_
-
 Mark an opportunity won or lost
 ===============================
 
@@ -168,7 +199,7 @@ clicking :guilabel:`Create`.
    :guilabel:`Lost Reason` parameter.
 
    To set up new values for this field, navigate to :menuselection:`CRM --> Configuration --> Lost
-   Reasons`, and click both :guilabel:`New`and :guilabel:`Save` for each new entry added to the
+   Reasons`, and click both :guilabel:`New` and :guilabel:`Save` for each new entry added to the
    list.
 
 Additional notes and comments can be added in the :guilabel:`Closing Note` field.
@@ -191,6 +222,3 @@ drop-down menu that appears.
    While opportunities that have been marked as *lost* are considered *Archived*, be advised that,
    in order for an opportunity to be included as *lost* in reporting, it **must** be specifically
    marked as *lost*, not *Archived*.
-
-.. seealso::
-   - `Manage lost opportunities </applications/sales/crm/pipeline/lost_opportunities>`_

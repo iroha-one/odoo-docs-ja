@@ -43,7 +43,7 @@ Before closing a fiscal year, ensure first everything is accurate and up-to-date
 - Validate all :doc:`expenses <../../expenses>`, ensuring their accuracy.
 - Corroborate that all :doc:`received payments <../payments>` have been encoded and recorded
   accurately.
-- Close all :ref:`suspense accounts <bank_accounts/suspense>`.
+- Close all :ref:`suspense accounts <accounting/bank/suspense>`.
 - Book all :doc:`depreciation <../vendor_bills/assets>` and :doc:`deferred revenue
   <../customer_invoices/deferred_revenues>` entries.
 
@@ -52,18 +52,20 @@ Closing a fiscal year
 
 Then, to close the fiscal year:
 
-- Run a :ref:`tax report <reporting/tax-report>`, and verify that all tax information is correct.
-- Reconcile all accounts on the :ref:`balance sheet <reporting/balance-sheet>`:
+- Run a :ref:`tax report <accounting/reporting/tax-report>`, and verify that all tax information is
+  correct.
+- Reconcile all accounts on the :ref:`balance sheet <accounting/reporting/balance-sheet>`:
 
   - Update the bank balances in Odoo according to the actual balances found on the bank statements.
   - Reconcile all transactions in the cash and bank accounts by running the :ref:`aged receivables
-    <reporting/aged-receivable>` and :ref:`aged payables <reporting/aged-payable>` reports.
+    <accounting/reporting/aged-receivable>` and :ref:`aged payables
+    <accounting/reporting/aged-payable>` reports.
   - Audit all accounts, being sure to fully understand all transactions and their nature, making
     sure to include loans and fixed assets.
-  - Optionally, run :ref:`payments matching <payments/matching>` to validate any open vendor bills
-    and customer invoices with their payments. While this step is optional, it could assist the
-    year-end closing process if all outstanding payments and invoices are reconciled, potentially
-    finding errors or mistakes in the system.
+  - Optionally, :ref:`match payments <accounting/payments/auto-reconcile-tool>` to validate any open
+    vendor bills and customer invoices with their payments. While this step is optional, it could
+    assist the year-end closing process if all outstanding payments and invoices are reconciled,
+    potentially finding errors or mistakes in the system.
 
 Next, the accountant likely verifies balance sheet items and book entries for:
 
@@ -101,8 +103,9 @@ correctly reporting a balance of zero. If that is the case, set an :guilabel:`Al
 to the last day of the fiscal year by going to :menuselection:`Accounting --> Accounting --> Lock
 Dates`.
 
-.. warning::
-   Setting an :guilabel:`All Users Lock Date` is **irreversible** and cannot be removed.
+.. tip::
+   Install the :guilabel:`Irreversible Lock Date` (`account_lock`) module to make the :guilabel:`All
+   Users Lock Date` *irreversible* once set.
 
 .. note::
    A specific year-end closing entry is **optional** in order to close out the **profit and loss

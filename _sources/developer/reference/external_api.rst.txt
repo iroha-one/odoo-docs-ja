@@ -12,6 +12,12 @@ easily available over XML-RPC_ and accessible from a variety of languages.
    Check out the `manual <https://www.php.net/manual/en/xmlrpc.installation.php>`_
    for the installation steps.
 
+.. note::
+   Access to data via the external API is only available on *Custom* Odoo pricing plans. Access to
+   the external API is not available on *One App Free* or *Standard* plans. For more information
+   visit the `Odoo pricing page <https://www.odoo.com/pricing-plan>`_ or reach out to your Customer
+   Success Manager.
+
 .. seealso::
    - :doc:`Tutorial on web services <../howtos/web_services>`
 
@@ -318,27 +324,26 @@ Each call to ``execute_kw`` takes the following parameters:
 
 .. example::
 
-   For instance, to see if we can read the ``res.partner`` model, we can call
-   ``check_access_rights`` with ``operation`` passed by position and
-   ``raise_exception`` passed by keyword (in order to get a true/false result
-   rather than true/error):
+   For instance, to search for records in the ``res.partner`` model, we can call
+   ``name_search`` with ``name`` passed by position and ``limit`` passed by
+   keyword (in order to get maximum 10 results):
 
    .. tabs::
 
       .. code-tab:: python
 
          models = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url))
-         models.execute_kw(db, uid, password, 'res.partner', 'check_access_rights', ['read'], {'raise_exception': False})
+         models.execute_kw(db, uid, password, 'res.partner', 'name_search', ['foo'], {'limit': 10})
 
       .. code-tab:: ruby
 
          models = XMLRPC::Client.new2("#{url}/xmlrpc/2/object").proxy
-         models.execute_kw(db, uid, password, 'res.partner', 'check_access_rights', ['read'], {raise_exception: false})
+         models.execute_kw(db, uid, password, 'res.partner', 'name_search', ['foo'], {limit: 10})
 
       .. code-tab:: php
 
          $models = ripcord::client("$url/xmlrpc/2/object");
-         $models->execute_kw($db, $uid, $password, 'res.partner', 'check_access_rights', array('read'), array('raise_exception' => false));
+         $models->execute_kw($db, $uid, $password, 'res.partner', 'name_search', array('foo'), array('limit' => 10));
 
       .. code-tab:: java
 
@@ -349,9 +354,9 @@ Each call to ``execute_kw`` takes the following parameters:
          }};
          models.execute("execute_kw", asList(
              db, uid, password,
-             "res.partner", "check_access_rights",
-             asList("read"),
-             new HashMap() {{ put("raise_exception", false); }}
+             "res.partner", "name_search",
+             asList("foo"),
+             new HashMap() {{ put("limit", 10); }}
          ));
 
       .. code-tab:: go
@@ -363,9 +368,9 @@ Each call to ``execute_kw`` takes the following parameters:
          var result bool
          if err := models.Call("execute_kw", []any{
              db, uid, password,
-             "res.partner", "check_access_rights",
-             []string{"read"},
-             map[string]bool{"raise_exception": false},
+             "res.partner", "name_search",
+             []string{"foo"},
+             map[string]bool{"limit": 10},
          }, &result); err != nil {
              log.Fatal(err)
          }
@@ -1112,7 +1117,7 @@ Provides information about Odoo models via its various fields.
     list of the model's fields through a :class:`~odoo.fields.One2many` to
     :ref:`reference/webservice/inspection/fields`
 ``view_ids``
-    :class:`~odoo.fields.One2many` to the :doc:`../reference/user_interface//view_architecture`
+    :class:`~odoo.fields.One2many` to the :doc:`../reference/user_interface/view_architectures`
     defined for the model
 ``access_ids``
     :class:`~odoo.fields.One2many` relation to the

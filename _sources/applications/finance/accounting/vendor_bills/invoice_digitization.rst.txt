@@ -11,8 +11,8 @@ created and populated based on the scanned invoices.
 
 .. seealso::
    - `Test Odoo's invoice digitization <https://www.odoo.com/app/invoice-automation>`_
-   - `Odoo Tutorials: Invoice Digitization with OCR
-     <https://www.odoo.com/slides/slide/digitize-bills-with-ocr-1712>`_
+   - `Odoo Tutorials: Vendor Bill Digitization
+     <https://www.odoo.com/slides/slide/vendor-bill-digitization-7065>`_
 
 Configuration
 =============
@@ -52,8 +52,9 @@ The email alias is now available in the :guilabel:`Advanced Settings` tab of the
 sent to this address will be converted automatically into new invoices or bills.
 
 .. note::
-   If you use the :doc:`Documents <../../documents>` app, you can automatically send your scanned
-   invoices to the :guilabel:`Finance` workspace (e.g., `inbox-financial@example.odoo.com`).
+   If you use the :doc:`Documents </applications/productivity/documents>` app, you can automatically
+   send your scanned invoices to the :guilabel:`Finance` workspace (e.g.,
+   `inbox-financial@example.odoo.com`).
 
 The default email aliases `vendor-bills@` and `customer-invoices@` followed by the
 :guilabel:`Alias Domain` you set are automatically created for the :guilabel:`Vendor Bills` and
@@ -90,10 +91,11 @@ To buy credits, go to :menuselection:`Accounting --> Configuration --> Settings 
 and click on :guilabel:`Buy credits`, or go to :menuselection:`Settings --> Odoo IAP` and click on
 :guilabel:`View My Services`.
 
-.. important::
-   If you are on Odoo Online and have the Enterprise version, you benefit from free trial credits to
-   test the feature.
+.. note::
+   Enterprise Odoo users with a valid subscription get free credits to test IAP features before
+   deciding to purchase more credits for the database. This includes demo/training databases,
+   educational databases, and one-app-free databases.
 
 .. seealso::
    - `Our Privacy Policy <https://iap.odoo.com/privacy#header_6>`_
-   - :doc:`/applications/general/in_app_purchase`
+   - :doc:`/applications/essentials/in_app_purchase`

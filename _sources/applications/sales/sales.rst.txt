@@ -16,8 +16,10 @@ deliver and invoice what has been sold.
 .. toctree::
    :titlesonly:
 
-   sales/send_quotations
+   sales/sales_quotations
    sales/invoicing
    sales/products_prices
+   sales/commissions
    sales/amazon_connector
-   sales/ebay_connector
+   sales/shopee_connector
+   sales/gelato

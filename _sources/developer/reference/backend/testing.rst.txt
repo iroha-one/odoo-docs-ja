@@ -578,6 +578,8 @@ You can then:
    - :ref:`Assets Bundle <reference/assets_bundle>`
    - :ref:`testing/python`
 
+.. _testing/javascript/test:
+
 Javascript
 ~~~~~~~~~~
 
@@ -585,11 +587,9 @@ Javascript
 
    .. code-block:: javascript
 
-      /** @odoo-module **/
       import tour from 'web_tour.tour';
       tour.register('rental_product_configurator_tour', {
           url: '/web',  // Here, you can specify any other starting url
-          test: true,
       }, [
           // Your sequence of steps
       ]);
@@ -610,8 +610,9 @@ Here are some example of steps:
       tour.stepUtils.showAppsMenuItem(),
       // Second step
       {
-          trigger: '.o_app[data-menu-xmlid="your_module.maybe_your_module_menu_root"]',
-          edition: 'community'  // Optional
+         trigger: '.o_app[data-menu-xmlid="your_module.maybe_your_module_menu_root"]',
+         isActive: ['community'],  // Optional
+         run: "click",
       }, {
           // Third step
       },
@@ -622,7 +623,7 @@ Here are some example of steps:
 
       {
           trigger: '.js_product:has(strong:contains(Chair floor protection)) .js_add',
-          extra_trigger: '.oe_advanced_configurator_modal',  // This ensure we are in the wizard
+          run: "click",
       },
 
 .. example::
@@ -630,74 +631,83 @@ Here are some example of steps:
    .. code-block:: javascript
 
       {
+          isActive: ["mobile", "enterprise"],
+          content: "Click on Add a product link",
           trigger: 'a:contains("Add a product")',
-          // Extra-trigger to make sure a line is added before trying to add another one
-          extra_trigger: '.o_field_many2one[name="product_template_id"] .o_external_button',
+          tooltipPosition: "bottom",
+          async run(helpers) { //Exactly the same as run: "click"
+            helpers.click();
+          }
       },
 
 Here are some possible arguments for your personalized steps:
 
-- **trigger**: Selector/element to ``run`` an action on. The tour will
+- **trigger**: Required, Selector/element to ``run`` an action on. The tour will
   wait until the element exists and is visible before ``run``-ing the
   action *on it*.
-- **extra_trigger**: Optional secondary condition for the step to
-  ``run``. Will be waited for like the **trigger** element but the
-  action will not run on the extra trigger.
+- **run**: Optional, Action to perform on the *trigger* element. If no ``run``,
+  no action.
 
-  Useful to have a precondition, or two different and unrelated
-  conditions.
-- **run**: Action to perform on the *trigger* element.
+  The action can be:
 
-  By default, tries to set the **trigger**'s content to ``Text`` if
-  it's an ``input``, otherwise ``click`` it.
-
-  The action can also be:
-
-  - A function, synchronous, executed with the trigger's ``Tip`` as
+  - A function, asynchronous, executed with the trigger's ``Tip`` as
     context (``this``) and the action helpers as parameter.
   - The name of one of the action helpers, which will be run on the
     trigger element:
 
     .. rst-class::  o-definition-list
 
+    ``check``
+        Ensures that the **trigger** element is checked. This helper is intended
+        for `<input[type=checkbox]>` elements only.
+    ``clear``
+        Clears the value of the **trigger** element. This helper is
+        intended for `<input>` or `<textarea>` elements only.
     ``click``
-        Clicks the element, performing all the relevant intermediate
+        Clicks the **trigger** element, performing all the relevant intermediate
         events.
-    :samp:`text {content}`
-        Clicks (focuses) the element then sets ``content`` as the
-        element's value (if an input), option (if a select), or
-        content.
-    ``dblclick``, ``tripleclick``
-        Same as ``click`` with multiple repetitions.
-    ``clicknoleave``
-        By default, ``click`` (and variants) will trigger "exit"
-        events on the trigger element (mouseout, mouseleave). This
-        helper suppresses those (note: further clicks on other
-        elements will not trigger those events implicitly).
-    ``text_blur``
-        Similar to ``text`` but follows the edition with ``focusout``
-        and ``blur`` events.
+    ``dblclick``,
+        Same as ``click`` with two repetitions.
     :samp:`drag_and_drop {target}`
-       Simulates the dragging of the **trigger** element over to the
-       ``target``.
-- **edition**: Optional,
+        Simulates the dragging of the **trigger** element over to the ``target``.
+    :samp:`edit {content}`
+        ``clear`` the element and then ``fill`` the ``content``.
+    :samp:`editor {content}`
+        Focus the **trigger** element (wysiwyg) and then ``press`` the ``content``.
+    :samp:`fill {content}`
+        Focus the **trigger** element and then ``press`` the ``content``. This helper is
+        intended for `<input>` or `<textarea>` elements only.
+    ``hover``
+        Performs a hover sequence on the **trigger** element.
+    :samp:`press {content}`
+        Performs a keyboard event sequence.
+    :samp:`range {content}`
+        Focus the **trigger** element and set ``content`` as value. This helper is intended
+        for `<input[type=range]>` elements only.
+    :samp:`select {value}`
+        Performs a selection event sequence on **trigger** element. Select the option by its
+        ``value``. This helper is intended for `<select>` elements only.
+    :samp:`selectByIndex {index}`
+        Same as ``select`` but select the option by its ``index``. Note that first option has
+        index 0.
+    :samp:`selectByLabel {label}`
+        Same as ``select`` but select the option by its ``label``.
+    ``uncheck``
+        Ensures that the **trigger** element is unchecked. This helper is intended
+        for `<input[type=checkbox]>` elements only.
 
-  - If you don't specify an edition, the step will be active in both community and enterprise.
-  - Sometimes, a step will be different in enterprise or in community. You can then write two
-    steps, one for the enterprise edition and one for the community one.
-  - Generally, you want to specify an edition for steps that use the main menu as the main
-    menus are different in community and enterprise.
-- **position**: Optional, ``"top"``, ``"right"``, ``"bottom"``, or
+
+- **isActive**: Optional,
+  Activates the step only if all conditions of isActive array are met.
+  - Browser is in either **desktop** or **mobile** mode.
+  - The tour concerns either **community** or **enterprise** edition.
+  - The tour is run in either **auto** (runbot) or **manual** (onboarding) mode.
+- **tooltipPosition**: Optional, ``"top"``, ``"right"``, ``"bottom"``, or
   ``"left"``. Where to position the tooltip relative to the **target**
   when running interactive tours.
 - **content**: Optional but recommended, the content of the tooltip in
   interactive tours, also logged to the console so very useful to
   trace and debug automated tours.
-- **auto**: Whether the tour manager should wait for the user to
-  perform the action if the tour is interactive, defaults to
-  ``false``.
-- **in_modal**: If set the **trigger** element will be searched only
-  in the top modal window, defaults to ``false``.
 - **timeout**: How long to wait until the step can ``run``, in
   milliseconds, 10000 (10 seconds).
 
@@ -721,16 +731,98 @@ To start a tour from a python test, make the class inherit from
 
    def test_your_test(self):
        # Optional Setup
-       self.start_tour("/web", 'your_module.your_tour_name', login="admin")
+       self.start_tour("/web", "your_tour_name", login="admin")
        # Optional verifications
+
+Writing an onboarding tour
+--------------------------
+
+Structure
+~~~~~~~~~
+
+To write an onboarding tour for `your_module`, start with creating the required files:
+
+.. code-block:: text
+
+    your_module
+    ├── ...
+    ├── data
+    |   └── your_tour.xml
+    ├── static/src/js/tours/your_tour.js
+    └── __manifest__.py
+
+You can then update :file:`__manifest__.py` to add :file:`your_tour.js` in the assets and :file:`your_tour.xml` in the data.
+
+  .. code-block:: python
+
+     'data': [
+        'data/your_tour.xml',
+     ],
+     'assets': {
+         'web.assets_backend': [
+             'your_module/static/src/js/tours/your_tour.js',
+         ],
+     },
+
+Javascript
+~~~~~~~~~~
+
+The javascript part is the same as for :ref: `the test tour <testing/javascript/test>`.
+
+XML
+~~~
+
+When you have your tour in the javascript registry, you can create a record `web_tour.tour` in the xml, like that:
+
+  .. code-block:: xml
+
+      <?xml version="1.0" encoding="utf-8"?>
+      <odoo>
+          <record id="your_tour" model="web_tour.tour">
+              <field name="name">your_tour</field>
+              <field name="sequence">10</field>
+              <field name="rainbow_man_message">Congrats, that was a great tour</field>
+          </record>
+      </odoo>
+
+- `name`: Required, the name must be the same as the one in the
+  javascript registry.
+- `sequence`: Optional; determines the order to execute the
+  onboarding tours. Defaults to 1000.
+- `url`: Optional; the url where to start the tour. If ``url`` is ``False``,
+  take the url from the registry. Defaults to "/odoo".
+- `rainbow_man_message`: Optional; will show the message in the
+  rainbow man effect at the completion of the tour. If ``rainbow_man_message`` is ``False``,
+  there is no rainbow effect. Defaults to ``<b>Good job!</b> You went through all steps of this tour.``
+
+Running onboarding tours
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+They can all be started in their sequence order by toggling the :guilabel:`Onboarding` option in the user menu.
+You can run specific onboarding tours by going to the :menuselection:`Settings --> Technical --> User Interface --> Tours`
+and clicking on :guilabel:`Onboarding` or :guilabel:`Testing`.
+
+- **Onboarding**: will execute the tour in interactive mode. That means the tour will show what to do and
+  wait for interactions from the user.
+- **Testing**: will execute the tour automatically. That means the tour will be executing all the step in
+  front of the user.
+
+Tour recorder
+~~~~~~~~~~~~~
+
+You can also create tours easily with the tour recorder. To do so, click on :guilabel:`Record` on the
+onboarding tours view. When started, this tool will record all your interactions in Odoo.
+
+The created tours are flagged in the onboarding tours view as **Custom**. These tours can also
+be exported to a javascript file, ready to be put in your module.
 
 Debugging tips
 --------------
 
-Observing tours in a browser
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Observing test tours in a browser
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-There are two ways with different tradeoffs:
+There are three ways with different tradeoffs:
 
 ``watch=True``
 **************
@@ -739,7 +831,7 @@ When running a tour locally via the test suite, the ``watch=True``
 parameter can be added to the ``browser_js`` or ``start_tour``
 call::
 
-    self.start_tour("/web", code, watch=True)
+    self.start_tour("/web", "your_tour_name", watch=True)
 
 This will automatically open a Chrome window with the tour being
 run inside it.
@@ -752,22 +844,39 @@ run inside it.
   - only works locally
   - only works if the test / tour can run correctly locally
 
+``debug=True``
+**************
+
+When running a tour locally via the test suite, the ``debug=True``
+parameter can be added to the ``browser_js`` or ``start_tour``
+call::
+
+    self.start_tour("/web", "your_tour_name", debug=True)
+
+This will automatically open a fullscreen Chrome window with opened
+devtools and a debugger breakpoint set at the start of the tour. The tour
+is ran with the debug=assets query parameter. When an error is thrown, the
+debugger stops on the exception.
+
+**Advantages**
+  - Same advantages as mode `watch=True`
+  - Easier to debug steps
+**Drawbacks**
+  - only works locally
+  - only works if the test / tour can run correctly locally
+
 Run via browser
 ***************
 
-Tours can also be launched via the browser UI, either by calling
+Test tours can also be launched via the browser UI by calling
 
 .. code-block:: javascript
 
-    odoo.startTour(tour_name);
+    odoo.startTour("tour_name");
 
 in the javascript console, or by enabling :ref:`tests mode
 <frontend/framework/tests_debug_mode>` by setting ``?debug=tests`` in
-the URL, then selecting **Start Tour** in the debug menu and picking a
-tour:
-
-.. image:: testing/tours.png
-   :align: center
+the URL.
 
 **Advantages**
   - easier to run
@@ -820,35 +929,40 @@ driven explicitly by the user) it's more complicated when running
 "test" tours, or when running tours through the test suite. In that
 case there are two main tricks:
 
-- Have a step with a ``run() { debugger; }`` action.
+- A step property ``break: true,`` in debug mode (debug=True).
+
+  This adds a debugger breakpoint at the start of the step.
+  You can then add your own wherever you need.
+
+  **Advantages**
+    - very simple
+    - the tour continues as soon as you resume execution
+  **Drawbacks**
+    - page interaction is limited as all javascript is blocked
+
+- A step property ``pause: true,`` in debug mode (debug=True).
+
+  The tour will stop at the end of the step. This allows inspecting
+  and interacting with the page until the developer is ready to
+  resume by typing **play();** in the browser console.
+
+  **Advantages**
+    - allows interacting with the page
+    - no useless (for this situation) debugger UI
+
+- A step with a ``run() { debugger; }`` action.
 
   This can be added to an existing step, or can be a new dedicated
   step. Once the step's **trigger** is matched, the execution will
   stop all javascript execution.
 
   **Advantages**
-    - very simple
-    - the tour restarts as soon as you resume execution
+    - simple
+    - the tour continues as soon as you resume execution
   **Drawbacks**
     - page interaction is limited as all javascript is blocked
-    - debugging the inside of the tour manager is not very useful
-- Add a step with a trigger which never succeeds and a very long
-  ``timeout``.
-
-  The browser will wait for the **trigger** until the ``timeout``
-  before it fails the tour, this allows inspecting and interacting
-  with the page until the developer is ready to resume, by manually
-  enabling the **trigger** (a nonsense class is useful there, as it
-  can be triggered by adding the class to any visible element of the
-  page).
-
-  **Advantages**
-    - allows interacting with the page
-    - easy to apply to a step which times out (just add a long
-      ``timeout`` then look around)
-    - no useless (for this situation) debugger UI
-  **Drawbacks**
-    - more manual, especially when resuming
+    - the debugger is triggered after trying to find targeted
+      element defined in the step.
 
 Performance Testing
 ===================

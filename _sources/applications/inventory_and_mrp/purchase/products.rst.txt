@@ -7,5 +7,6 @@ Products
 .. toctree::
    :titlesonly:
 
+   products/pricelist
    products/reordering
-   products/uom
+   products/temporary_reordering

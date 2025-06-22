@@ -25,26 +25,30 @@ localization:
    * - :guilabel:`Indian E-waybill`
      - `l10n_in_edi_ewaybill`
      - :ref:`Indian E-way bill integration <india/e-waybill>`
+   * - :guilabel:`Indian E-waybill Stock`
+     - `l10n_in_ewaybill_stock`
+     - :ref:`E-waybill creation from the Inventory app <india/e-waybill-stock>`
+   * - :guilabel:`Indian - Check GST Number Status`
+     - `l10n_in_gstin_status`
+     - :ref:`Indian Check GST Number Status <india/gstin_status>`
    * - :guilabel:`Indian - GSTR India eFiling`
      - `l10n_in_reports_gstr`
      - :ref:`Indian GST Return filing <india/gstr>`
    * - :guilabel:`Indian - Accounting Reports`
      - `l10n_in_reports`
      - :ref:`Indian tax reports <india/gstr_reports>`
-   * - :guilabel:`Indian - Purchase Report(GST)`
-     - `l10n_in_purchase`
-     - Indian GST Purchase report
-   * - :guilabel:`Indian - Sale Report(GST)`
-     - `l10n_in_sale`
-     - Indian GST Sale report
-   * - :guilabel:`Indian - Stock Report(GST)`
-     - `l10n_in_stock`
-     - Indian GST Stock report
 
 .. image:: india/india-modules.png
    :alt: Indian localization modules
 
 .. _india/e-invoicing:
+
+Indian Configuration
+====================
+
+In :menuselection:`Settings --> Users & Companies --> Companies`, add your :guilabel:`PAN` and
+:guilabel:`GSTIN`. The PAN is essential for determining the type of taxpayer,
+while GSTIN is required for generating e-Invoices and E-waybills.
 
 e-Invoice system
 ================
@@ -164,6 +168,48 @@ Cancel`.
      the NIC e-Invoice portal. You can click :guilabel:`Process now` if you want to process the
      invoice immediately.
 
+.. _india/e-invoice-negative-lines:
+
+Management of negative lines in e-Invoices
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Negative lines are typically used to represent discounts or adjustments associated with specific
+products or global discounts. The government portal prohibits the submission of data with negative
+lines, which means they need to be converted based on the HSN code and GST rate. This is done
+automatically by Odoo.
+
+.. example::
+
+   Consider the following example:
+
+   +---------------------------------------------------------------------------------------------------+
+   |                                     **Product Details**                                           |
+   +=======================+==============+==================+==============+==============+===========+
+   | **Product Name**      | **HSN Code** | **Tax Excluded** | **Quantity** | **GST Rate** | **Total** |
+   +-----------------------+--------------+------------------+--------------+--------------+-----------+
+   | Product A             |  123456      |  1,000           |  1           |  18%         |  1,180    |
+   +-----------------------+--------------+------------------+--------------+--------------+-----------+
+   | Product B             |  239345      |  1,500           |  2           |  5%          |  3,150    |
+   +-----------------------+--------------+------------------+--------------+--------------+-----------+
+   | Discount on Product A |  123456      |  -100            |  1           |  18%         |  -118     |
+   +-----------------------+--------------+------------------+--------------+--------------+-----------+
+
+   Here's the transformed representation:
+
+   +-------------------------------------------------------------------------------------------------------------+
+   |                                         **Product Details**                                                 |
+   +==================+==============+==================+==============+==============+==============+===========+
+   | **Product Name** | **HSN Code** | **Tax Excluded** | **Quantity** | **Discount** | **GST Rate** | **Total** |
+   +------------------+--------------+------------------+--------------+--------------+--------------+-----------+
+   | Product A        |  123456      |  1,000           |  1           |  100         |  18%         |  1,062    |
+   +------------------+--------------+------------------+--------------+--------------+--------------+-----------+
+   | Product B        |  239345      |  1,500           |  2           |  0           |  5%          |  3,150    |
+   +------------------+--------------+------------------+--------------+--------------+--------------+-----------+
+
+   In this conversion, negative lines have been transformed into positive discounts, maintaining
+   accurate calculations based on the HSN Code and GST rate. This ensures a more straightforward and
+   standardized representation in the E-invoice records.
+
 .. _india/verify-e-invoice:
 
 GST e-Invoice verification
@@ -190,6 +236,8 @@ website itself.
 
 E-Way bill
 ==========
+
+.. _india/e-waybill-setup:
 
 Setup
 -----
@@ -244,9 +292,8 @@ Workflow
 Send an E-Way bill
 ~~~~~~~~~~~~~~~~~~
 
-You can manually send an E-Way bill by clicking :guilabel:`Send E-Way bill`. To send the E-Way bill
-automatically when an invoice or a bill is confirmed, enable :guilabel:`E-Way bill (IN)` in your
-:ref:`Sales or Purchase journal <india/e-invoicing-journals>`.
+To send an E-Way bill, confirm the customer invoice/vendor bill and click :guilabel:`Send E-Way
+bill`.
 
 .. image:: india/e-waybill-send-button.png
    :alt: Send E-waybill button on invoices
@@ -256,8 +303,8 @@ automatically when an invoice or a bill is confirmed, enable :guilabel:`E-Way bi
 Invoice validation
 ~~~~~~~~~~~~~~~~~~
 
-Once an invoice has been issued and sent via :guilabel:`Send E-Way bill`, a confirmation message is
-displayed.
+Once an invoice/bill has been issued and sent via :guilabel:`Send E-Way bill`, a confirmation
+message is displayed.
 
 .. image:: india/e-waybill-process.png
    :alt: Indian e-Way bill confirmation message
@@ -265,7 +312,7 @@ displayed.
 .. note::
    - You can find the JSON-signed file in the attached files in the chatter.
    - Odoo automatically uploads the JSON-signed file to the government portal after some time. Click
-     :guilabel:`Process now` if you want to process the invoice immediately.
+     :guilabel:`Process now` if you want to process the invoice/bill immediately.
 
 Invoice PDF report
 ~~~~~~~~~~~~~~~~~~
@@ -281,9 +328,9 @@ You can print the invoice PDF report once you have submitted the E-Way bill. The
 E-Way bill cancellation
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-If you want to cancel an E-Way bill, go to the :guilabel:`E-Way bill` tab of the related invoice and
-fill out the :guilabel:`Cancel reason` and :guilabel:`Cancel remarks` fields. Then, click
-:guilabel:`Request EDI Cancellation`.
+If you want to cancel an E-Way bill, go to the :guilabel:`E-Way bill` tab of the related
+invoice/bill and fill out the :guilabel:`Cancel reason` and :guilabel:`Cancel remarks` fields. Then,
+click :guilabel:`Request EDI Cancellation`.
 
 .. important::
    Doing so cancels both the :ref:`e-Invoice <india/e-invoicing>` (if applicable) and the
@@ -298,6 +345,60 @@ fill out the :guilabel:`Cancel reason` and :guilabel:`Cancel remarks` fields. Th
    - Once you request to cancel the E-Way bill, Odoo automatically submits the JSON-signed file to
      the government portal. You can click :guilabel:`Process Now` if you want to process the invoice
      immediately.
+
+.. _india/e-waybill-stock:
+
+E-waybill creation from receipts and delivery orders
+----------------------------------------------------
+
+.. note::
+   Make sure the **E-Way bill Stock** module is :ref:`installed <general/install>` and
+   the :ref:`E-Way bill setup <india/e-waybill-setup>` is complete.
+
+To create E-Way bills from :doc:`receipts and deliveries
+</applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations>` in the Inventory
+app, follow these steps:
+
+#. Go to :menuselection:`Inventory --> Operations --> Deliveries` or :menuselection:`Inventory -->
+   Operations --> Receipts` and select an existing delivery order/receipt or create a new one.
+
+#. Click :guilabel:`Create E-waybill/Challan`.
+
+   .. note::
+      To create an E-way bill:
+
+      - A delivery order must be in the :guilabel:`Done` state (i.e., validated)
+      - A receipt must have the :guilabel:`Ready` or :guilabel:`Done` state.
+
+#. Click :guilabel:`Generate e-Waybill` to validate the E-Way bill and send it to the NIC E-Way
+   bill portal.
+
+   .. tip::
+      To use the E-Way bill as a challan for goods deliveries without sending it to the NIC
+      E-Waybill portal, click :guilabel:`Use as Challan`.
+
+To print the E-waybill or the challan, click the :icon:`fa-cog` :guilabel:`(gear)` icon and select
+:icon:`fa-print` :guilabel:`Ewaybill / Delivery Challan`.
+
+.. _india/gstin_status:
+
+Indian Check GSTIN Status
+=========================
+
+The :guilabel:`Indian - Check GST Number Status` module allows you to verify the status of a
+:abbr:`GSTIN (Goods and Services Tax Identification Number)` directly from Odoo.
+
+To verify the status of a contact's GST number, access the customer's/vendor's form and click
+:guilabel:`Check GSTIN Status` next to the :guilabel:`GSTIN` field.
+
+To verify the status of a GST number entered on an invoice/bill, access the invoice/bill and click
+the :icon:`fa-refresh` (:guilabel:`refresh`) button next to the :guilabel:`GST Status` field.
+
+.. image:: india/gstin-status-invoice.png
+   :alt: Check GSTIN status of an invoice
+
+A notification is displayed to confirm the status update and the GSTIN status and verification date
+are logged in the contact's chatter.
 
 .. _india/gstr:
 
@@ -322,6 +423,10 @@ To file GST Returns in Odoo, you must first enable API access on the GST portal.
 
    .. image:: india/gst-portal-api-yes.png
       :alt: Click Yes
+
+.. note::
+   It is recommended to set the :guilabel:`Duration` to :guilabel:`30 days` to avoid the need for
+   frequent token reauthentication.
 
 #. Doing so enables a :guilabel:`Duration` drop-down menu. Select the :guilabel:`Duration` of your
    preference, and click :guilabel:`Confirm`.
@@ -360,10 +465,40 @@ Return Period** if it does not exist. GST Return file-in is done in **three step
 Send GSTR-1
 ~~~~~~~~~~~
 
-#. The user can verify the :ref:`GSTR-1 <india/gstr-1_report>` report before uploading it to the
-   **GST portal** by clicking :guilabel:`GSTR-1 Report`;
+#. Click :guilabel:`GSTR-1 Report` to verify the :ref:`GSTR-1 <india/gstr-1_report>` report before
+   uploading it to the **GST portal**.
+
+   .. image:: india/gst-gstr-1-verify.png
+      :alt: GSTR-1 verify
+
+   .. note::
+      The system performs basic validations to ensure compliance with the GST portal's requirements.
+      Possible issues include:
+
+      - **Incorrect Tax Application:** The tax type does not match the :guilabel:`Fiscal Position`
+        (:guilabel:`CGST/SGST` applied instead of :guilabel:`IGST` for interstate transactions, or
+        :guilabel:`IGST` applied instead of :guilabel:`CGST/SGST` for intrastate transactions).
+      - **Missing HSN Code:** No HSN Code is defined for the product.
+      - **Invalid HSN Code for Services:** The HSN Code for a service does not start with "99" or is
+        incorrect.
+      - **Non-compliant UQC:** The Unit Quantity Code (UQC) does not meet Indian GST standards.
+
+      If any validation fails, the system alerts users with a warning, highlighting the
+      discrepancies and providing a direct link to the affected lines.
+
+      .. image:: india/gst-gstr-1-validation.png
+         :alt: GSTR-1 validation warning
+
+#. Click :guilabel:`Generate` to view the report in **Spreadsheet view**.
+
+   .. image:: india/gst-gstr-1-generate.png
+      :alt: GSTR-1 generate
+
+   .. image:: india/gst-gstr-1-spreadsheet-view.png
+      :alt: GSTR-1 Spreadsheet View
+
 #. If the **GSTR-1** report is correct, then click :guilabel:`Push to GSTN` to send it to the **GST
-   portal**. The status of the :guilabel:`GSTR-1` report changes to :guilabel:`Sending`;
+   portal**. The status of the :guilabel:`GSTR-1` report changes to :guilabel:`Sending`.
 
    .. image:: india/gst-gstr-1-sending.png
       :alt: GSTR-1 in the Sending Status
@@ -386,14 +521,11 @@ Send GSTR-1
         :alt: GSTR-1 Sent
 
    - If the state of the **GSTR-1** is :guilabel:`Error in Invoice`, invoices can be checked for
-     errors in the :guilabel:`Log Note`. Once issues have been resolved, the user can click
+     errors in the chatter. Once issues have been resolved, the user can click
      :guilabel:`Push to GSTN` to submit the file again on the **GST portal**.
 
      .. image:: india/gst-gstr-1-error.png
         :alt: GSTR-1 Error in Invoice
-
-   .. image:: india/gst-gstr-1-error-log.png
-      :alt: GSTR-1 Error in Invoice Log
 
 #. Click :guilabel:`Mark as Filed` after filing the **GSTR-1** report on the **GST portal**. The
    status of the report changes to :guilabel:`Filed` in **Odoo**.
@@ -430,14 +562,14 @@ the **GSTR-2B** report with your Odoo bills;
       .. image:: india/gst-gstr-2b-matched.png
          :alt: GSTR-2B Matched
 
-   - If the status is :guilabel:`Partially Matched`, you can make changes in bills by clicking
-     :guilabel:`View Reconciled Bills`. Once it is done, click :guilabel:`re-match`.
+   - If the status is :guilabel:`Partially Matched`, you can review and modify the bills by
+     clicking :guilabel:`View Reconciled Bills`. This will display categorized discrepancies, such
+     as bills missing in Odoo or GSTR-2. After making the necessary corrections, click
+     :guilabel:`re-match` to update the reconciliation and ensure accuracy before finalizing the
+     report.
 
       .. image:: india/gst-gstr-2b-partially.png
          :alt: GSTR-2B Partially Matched
-
-      .. image:: india/gst-gstr-2b-reconcile.png
-         :alt: GSTR-2B Reconciled Bills
 
 .. _india/gstr-3:
 
@@ -453,7 +585,7 @@ This return is auto-generated by extracting information from **GSTR-1** and **GS
 #. Once the **GSTR-3** report has been verified by the user and the tax amount on the **GST portal**
    has been paid. Once paid, the report can be **closed** by clicking :guilabel:`Closing Entry`;
 
-   .. image:: india/gst-gstr-3.png
+   .. image:: india/gst-gstr-3-not_filed.png
       :alt: GSTR-3
 
 #. In :guilabel:`Closing Entry`, add the tax amount paid on the **GST portal** using challan, and
@@ -498,3 +630,106 @@ The :guilabel:`GSTR-3` report contains different sections:
 
    .. image:: india/gst-gstr-3-report.png
       :alt: GSTR-3 Report
+
+Profit and Loss (IN) report
+---------------------------
+
+This is a :guilabel:`Profit and Loss` report that displays the balances for **Opening Stock** and
+**Closing Stock**. It helps users using Continental accounting to accurately determine the cost of
+goods (i.e :guilabel:`Opening Stock` + purchases during the period - :guilabel:`Closing Stock`).
+
+   .. image:: india/profit-and-loss-report.png
+      :alt: Profit and Loss report
+
+.. _india/tds-tcs-threshold:
+
+TDS/TCS threshold alert
+=======================
+
+:abbr:`TDS (tax deducted at source)` and :abbr:`TCS (tax collected at source)` are tax provisions
+under Indian law, triggered when transaction amounts exceed specified thresholds. This alert
+notifies users when the value of invoices or bills surpasses these limits, prompting the application
+of the appropriate TDS/TCS.
+
+To configure Odoo to advise you on when to apply TDS/TCS, set the :guilabel:`TDS/TCS section`
+field on the corresponding account in the chart of accounts. Odoo will display a banner suggesting
+the TDS/TCS section under which tax might be applicable when recording an invoice or bill.
+
+Configuration
+-------------
+
+#. Navigate to :menuselection:`Accounting --> Configuration --> Settings`.
+#. In the :guilabel:`Indian Integration` section, enable the :guilabel:`TDS and TCS` feature.
+#. Navigate to :menuselection:`Accounting --> Configuration --> Chart of Accounts`.
+#. Click :guilabel:`View` on the desired account, and set the :guilabel:`TDS/TCS Section` field.
+
+.. note::
+   The TDS/TCS sections are pre-configured with threshold limits. If you need to modify these
+   limits, go to :menuselection:`Accounting --> Configuration --> Taxes`. In the :guilabel:`Advanced
+   Options` tab, click on the  :icon:`fa-arrow-right` :guilabel:`(internal link)` icon of the
+   :guilabel:`Section` field.
+
+   .. image:: india/tds-tcs-section-modify.png
+      :alt: TDS/TCS section modify
+
+Applying TCS/TDS on invoices and bills
+--------------------------------------
+
+Based on the account used on the customer invoice or vendor bill, Odoo checks the TCS/TDS threshold
+limit. If the limit specified in the :guilabel:`TCS/TDS Section` of the account is exceeded, Odoo
+displays an alert that suggests applying the appropriate TCS/TDS. The alert will disappear once the
+TCS/TDS is applied.
+
+.. image:: india/tcs-warning.png
+   :alt: TCS advice
+
+**TCS** is directly applicable in the tax on the invoice lines. To apply **TDS**, click the
+:guilabel:`TDS Entry` smart button on the vendor bill/payment. The popup window allows specifying
+the TDS details. Confirm the entry to apply the TDS.
+
+.. image:: india/tds-apply.png
+   :alt: TDS application
+
+In Odoo, the aggregate total is calculated for partners sharing the same PAN number, across all
+company branches.
+
+.. example::
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 10 20 10 20 15
+
+      * - **Branch**
+        - **Customer**
+        - **Invoice**
+        - **Transaction Amount (₹)**
+        - **PAN Number**
+      * - IN - MH
+        - XYZ Enterprise - GJ
+        - Invoice 1
+        - ₹50,000
+        - ABCPX1234E
+      * - IN - MH
+        - XYZ Enterprise - GJ
+        - Invoice 2
+        - ₹30,000
+        - ABCPX1234E
+      * - IN - MH
+        - XYZ Enterprise - MH
+        - Invoice 3
+        - ₹40,000
+        - ABCPX1234E
+      * - IN - DL
+        - XYZ Enterprise - GJ
+        - Invoice 4
+        - ₹20,000
+        - ABCPX1234E
+      * - IN - GJ
+        - XYZ Enterprise - MH
+        - Invoice 5
+        - ₹60,000
+        - ABCPX1234E
+
+   -  **Aggregate total** = 50,000 + 30,000 + 40,000 + 20,000 + 60,000 = ₹200,000
+   -  The aggregate total for all customers (XYZ Enterprise - GJ, MH, DL) sharing the PAN number
+      ABCPX1234E across all branches is ₹200,000.

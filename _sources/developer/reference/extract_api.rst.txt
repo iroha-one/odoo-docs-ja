@@ -2,16 +2,20 @@
 Extract API
 ===========
 
-Odoo provides a service to automate the processing of documents of type **invoices**, **expenses**
-or **resumes**.
+.. |IAP| replace:: :abbr:`IAP (In-app purchases)`
+.. |OCR| replace:: :abbr:`OCR (Optical Character Recognition)`
 
-The service scans documents using an :abbr:`OCR (Optical Character Recognition)` engine and then
+Odoo provides a service to automate the processing of documents of type **invoices**, **bank statements**,
+**expenses** or **resumes**.
+
+The service scans documents using an |OCR| engine and then
 uses :abbr:`AI(Artificial Intelligence)`-based algorithms to extract fields of interest such as the
-total, due date, or invoice lines for *invoices*, the total, date for *expenses*,
-or the name, email, phone number for *resumes*.
+total, due date, or invoice lines for *invoices*, the initial and final balances, the date for
+*bank statements*, the total, date for *expenses*, or the name, email, phone number for *resumes*.
 
-This service is a paid service. Each document processing will cost you one credit.
-Credits can be bought on `iap.odoo.com <https://iap.odoo.com/iap/in-app-services/259?sortby=date>`_.
+This service is a paid service. Each document processing will cost you one credit from your
+document digitization |IAP| account. More information about |IAP| accounts can be found
+:doc:`here </applications/essentials/in_app_purchase>`.
 
 You can either use this service directly in the Accounting, Expense, or Recruitment App or through
 the API. The Extract API, which is detailed in the next section, allows you to integrate our
@@ -32,7 +36,8 @@ Version
 The version of the Extract API is specified in the route.
 
 The latest versions are:
-    - invoices: 122
+    - invoices: 123
+    - bank statements: 100
     - expenses: 132
     - applicant: 102
 
@@ -58,8 +63,8 @@ testing is provided in the
 Parse
 =====
 
-Request the processing of a document from the OCR. The route will return a `document_token`,
-you can use it to obtain the result of your request.
+Request the digitization of a document. The route will return a `document_token` that you can use
+to fetch the result of your request.
 
 .. _extract_api/parse:
 
@@ -67,6 +72,7 @@ Routes
 ------
 
     - /api/extract/invoice/2/parse
+    - /api/extract/bank_statement/1/parse
     - /api/extract/expense/2/parse
     - /api/extract/applicant/2/parse
 
@@ -85,17 +91,15 @@ Request
     .. rst-class:: o-definition-list
 
     ``account_token`` (required)
-        The token of the account from which credits will be taken. Each successful call costs one
-        token.
+        The token of the :doc:`IAP </applications/essentials/in_app_purchase>` account from which
+        credits will be charged. Each successful call costs one credit.
     ``version`` (required)
         The version will determine the format of your requests and the format of the server response.
         You should use the :ref:`latest version available <extract_api/version>`.
     ``documents`` (required)
-        The document must be provided as a string in the ASCII encoding. The list should contain
-        only one string. If multiple strings are provided only the first string corresponding to a
-        pdf will be processed. If no pdf is found, the first string will be processed. This field
-        is a list only for legacy reasons. The supported extensions are *pdf*, *png*, *jpg* and
-        *bmp*.
+        The document must be provided as a Base64 string in the ASCII encoding.
+        The list should contain only one document. This field is a list only for legacy reasons.
+        The supported formats are *pdf*, *png* and *jpg*.
     ``dbuuid`` (optional)
         Unique identifier of the Odoo database.
     ``webhook_url`` (optional)
@@ -213,6 +217,7 @@ Routes
 ------
 
     - /api/extract/invoice/2/get_result
+    - /api/extract/bank_statement/1/get_result
     - /api/extract/expense/2/get_result
     - /api/extract/applicant/2/get_result
 
@@ -235,7 +240,7 @@ Request
     ``document_token`` (required)
         The ``document_token`` for which you want to get the current parsing status.
     ``account_token`` (required)
-        The token of the account that was used to submit the document.
+        The token of the |IAP| account that was used to submit the document.
 
 .. code-block:: js
 
@@ -276,7 +281,7 @@ are the name of the field and the value is the value of the field.
         .. rst-class:: o-definition-list
 
         ``full_text_annotation``
-            Contains the unprocessed full result from the OCR for the document
+            Contains the unprocessed full result from the |OCR| for the document.
 
 ================================  =============================================================
 status                            status_msg
@@ -382,7 +387,7 @@ Invoices are complex and can have a lot of different fields. The following table
 list of all the fields we can extract from an invoice.
 
 +-------------------------+------------------------------------------------------------------------+
-| Feature name            | Specifities                                                            |
+| Feature name            | Specificities                                                          |
 +=========================+========================================================================+
 | ``SWIFT_code``          | ``content`` is a dictionary encoded as a string.                       |
 |                         |                                                                        |
@@ -453,31 +458,56 @@ list of all the fields we can extract from an invoice.
 +-------------------------+------------------------------------------------------------------------+
 
 
-``feature_result`` for the ``invoice_lines`` feature
-****************************************************
+``invoice_lines`` feature
+*************************
 
-It follows a more specific structure. It is basically a list of dictionaries where each dictionary
-represents an invoice line. Each value follows a
-:ref:`latestextract_api/get_result/feature_result` structure.
+It is returned as a list of dictionaries where each dictionary represents an invoice line.
 
 .. code-block:: js
 
     "invoice_lines": [
         {
-            "description": feature_result,
-            "discount": feature_result,
-            "product": feature_result,
-            "quantity": feature_result,
-            "subtotal": feature_result,
-            "total": feature_result,
-            "taxes": feature_result,
-            "total": feature_result,
-            "unit": feature_result,
-            "unit_price": feature_result
+            "description": string,
+            "quantity": float,
+            "subtotal": float,
+            "total": float,
+            "taxes": list[float],
+            "total": float,
+            "unit_price": float
         },
         ...
     ]
 
+Bank statements
+~~~~~~~~~~~~~~~
+
+The following table gives a list of all the fields that are extracted from bank statements.
+
++-------------------------+------------------------------------------------------------------------+
+| Feature name            | Specificities                                                          |
++=========================+========================================================================+
+| ``balance_start``       | ``content`` is a float                                                 |
++-------------------------+------------------------------------------------------------------------+
+| ``balance_end``         | ``content`` is a float                                                 |
++-------------------------+------------------------------------------------------------------------+
+| ``date``                | ``content`` is a string                                                |
++-------------------------+------------------------------------------------------------------------+
+
+``bank_statement_lines`` feature
+********************************
+
+It is returned as a list of dictionaries where each dictionary represents a bank statement line.
+
+.. code-block:: js
+
+    "bank_statement_lines": [
+        {
+            "amount": float,
+            "description": string,
+            "date": string,
+        },
+        ...
+    ]
 
 Expense
 ~~~~~~~
@@ -486,7 +516,7 @@ The expenses are less complex than invoices. The following table gives an exhaus
 fields we can extract from an expense report.
 
 +-------------------------+------------------------------------------------------------------------+
-| Feature name            | Specifities                                                            |
+| Feature name            | Specificities                                                          |
 +=========================+========================================================================+
 | ``description``         | ``content`` is a string                                                |
 +-------------------------+------------------------------------------------------------------------+
@@ -506,7 +536,7 @@ This third type of document is meant for processing resumes. The following table
 list of all the fields we can extract from a resume.
 
 +-------------------------+------------------------------------------------------------------------+
-| Feature name            | Specifities                                                            |
+| Feature name            | Specificities                                                          |
 +=========================+========================================================================+
 | ``name``                | ``content`` is a string                                                |
 +-------------------------+------------------------------------------------------------------------+

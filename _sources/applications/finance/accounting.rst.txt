@@ -76,13 +76,19 @@ expense either when the transaction occurs (accrual basis) or when the payment i
 .. seealso::
    :doc:`Cash basis <accounting/taxes/cash_basis>`
 
+.. _accounting/multi-company:
+
 Multi-company
 =============
 
 Several companies can be managed within the same database. Each company has its :doc:`chart of
-accounts <accounting/get_started/chart_of_accounts>`, which is also useful to generate consolidation
-reports. Users can access several companies but can only work on a single company's accounting at a
-time.
+accounts <accounting/get_started/chart_of_accounts>`, but it is possible to share accounts
+between them for scenarios in which such a configuration would be required. Users can then
+access several companies but only work on a single company's accounting at a time.
+
+.. seealso::
+   - :ref:`Shared Accounts Feature <coa_shared_accounts>`
+   - :doc:`Consolidation <accounting/get_started/consolidation>`
 
 Multi-currency environment
 ==========================
@@ -140,7 +146,7 @@ real-time:
 |            +----------------------------------+
 |            | Tax report                       |
 |            +----------------------------------+
-|            | ES sales list                    |
+|            | EC sales list                    |
 +------------+----------------------------------+
 | Audit      | General ledger                   |
 |            +----------------------------------+
@@ -209,7 +215,7 @@ available methods are standard price, average price, :abbr:`LIFO (Last-In, First
 :abbr:`FIFO (First-In, First-Out).`
 
 .. seealso::
-   :doc:`../inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config`
+   :doc:`../inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config`
 
 Retained earnings
 =================
@@ -220,6 +226,8 @@ and loss balance is automatically reported on the balance sheet report.
 
 .. seealso::
    :doc:`Accounting Cheat Sheet <accounting/get_started/cheat_sheet>`
+
+.. _fiduciaries:
 
 Fiduciaries
 ===========

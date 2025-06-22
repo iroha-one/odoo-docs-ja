@@ -693,6 +693,7 @@ Useful environment methods
 .. automethod:: Environment.is_superuser
 .. automethod:: Environment.is_admin
 .. automethod:: Environment.is_system
+.. automethod:: Environment.execute_query
 
 Altering the environment
 ------------------------
@@ -883,7 +884,12 @@ A domain is a list of criteria, each criterion being a triple (either a
 * ``field_name`` (``str``)
     a field name of the current model, or a relationship traversal through
     a :class:`~odoo.fields.Many2one` using dot-notation e.g. ``'street'``
-    or ``'partner_id.country'``
+    or ``'partner_id.country'``. If the field is a date(time) field, you can also
+    specify a part of the date using ``'field_name.granularity'``. The supported
+    granularities are ``'year_number'``, ``'quarter_number'``, ``'month_number'``, ``'iso_week_number'``,
+    ``'day_of_week'``, ``'day_of_month'``, ``'day_of_year'``, ``'hour_number'``, ``'minute_number'``,
+    ``'second_number'``.
+    They all use an integer as value.
 
 * ``operator`` (``str``)
     an operator used to compare the ``field_name`` with the ``value``. Valid
@@ -938,6 +944,16 @@ A domain is a list of criteria, each criterion being a triple (either a
         Takes the semantics of the model into account (i.e following the
         relationship field named by
         :attr:`~odoo.models.Model._parent_name`).
+    ``any``
+        matches if any record in the relationship traversal through
+        ``field_name`` (:class:`~odoo.fields.Many2one`,
+        :class:`~odoo.fields.One2many`, or :class:`~odoo.fields.Many2many`)
+        satisfies the provided domain ``value``.
+    ``not any``
+        matches if no record in the relationship traversal through
+        ``field_name`` (:class:`~odoo.fields.Many2one`,
+        :class:`~odoo.fields.One2many`, or :class:`~odoo.fields.Many2many`)
+        satisfies the provided domain ``value``.
 
 * ``value``
     variable type, must be comparable (through ``operator``) to the named
@@ -959,21 +975,21 @@ Domain criteria can be combined using logical operators in *prefix* form:
 
 .. example::
 
-    To search for partners named *ABC*, from belgium or germany, whose language
-    is not english::
+    To search for partners named *ABC*, with a phone or mobile number containing *7620*::
 
-        [('name','=','ABC'),
-         ('language.code','!=','en_US'),
-         '|',('country_id.code','=','be'),
-             ('country_id.code','=','de')]
+        [('name', '=', 'ABC'),
+         '|', ('phone','ilike','7620'), ('mobile', 'ilike', '7620')]
 
-    This domain is interpreted as:
+    To search sales orders to invoice that have at least one line with
+    a product that is out of stock::
 
-    .. code-block:: text
+        [('invoice_status', '=', 'to invoice'),
+         ('order_line', 'any', [('product_id.qty_available', '<=', 0)])]
 
-            (name is 'ABC')
-        AND (language is NOT english)
-        AND (country is Belgium OR Germany)
+
+    To search for all partners born in the month of February::
+
+        [('birthday.month_number', '=', 2)]
 
 Unlink
 ------

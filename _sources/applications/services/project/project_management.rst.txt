@@ -1,3 +1,6 @@
+:show-content:
+:hide-page-toc:
+
 ==================
 Project management
 ==================
@@ -9,9 +12,7 @@ into tasks, which are categorized on a whiteboard according to what production p
 
    The word **Kanban** comes from Japanese and refers to the "visual board" management method.
 
-.. seealso::
-   `Odoo Tutorials: Kanban Project Management
-   <https://www.odoo.com/slides/slide/kanban-project-management-1664>`_
+.. _project_management/configuration:
 
 Configuration
 =============
@@ -55,8 +56,8 @@ Additionally, you can mark the project as :guilabel:`Favorite`, allowing you to 
    :alt: Project settings
 
 .. seealso::
-   `Odoo Tutorials: Customize your project
-   <https://www.odoo.com/slides/slide/customize-your-project-1662?fullscreen=1>`_
+   `Odoo Tutorials: Customize projects
+   <https://www.odoo.com/slides/slide/customize-projects-3615?fullscreen=1>`_
 
 Further settings are available under the :guilabel:`Settings` tab. Most of them are *only* available
 depending on the activated apps.
@@ -74,3 +75,41 @@ may have **additional options** available.
 .. note::
    If an activity is **already** scheduled, the icon may change to a **phone**, **group of people**,
    or other.
+
+.. _project/project-management/top-bar:
+
+Top bar
+=======
+
+In project management, reviewing the various records and documents related to a project is often
+necessary. Odoo Project’s **top bar** provides quick access to these essential resources. You can
+customize each project's top bar to match its specific needs.
+
+To set up the top bar for a project, go to the :guilabel:`Project` app, click the project's card,
+then click the top bar :icon:`fa-sliders` :guilabel:`(sliders)` button. In the bar that appears
+above the search bar, click the :icon:`fa-sliders` :guilabel:`(sliders)` button to select the records
+you want to display, such as timesheets, sales orders, invoices, documents, dashboards, etc.
+
+You can then click the buttons to access the related records without leaving the Project app. To
+return to your project tasks' Kanban view, click the :guilabel:`Tasks` button in the top bar.
+
+.. image:: project_management/top-bar.png
+   :alt: Top bar selection menu
+
+Custom top bar buttons
+----------------------
+
+You can also create your own buttons to access more specific views:
+
+#. Click an existing top bar button to access the view.
+#. Customize the view with keywords, filters, and grouping options using the search bar.
+#. Click the :icon:`fa-sliders` :guilabel:`(sliders)` button in the top bar and select
+   :guilabel:`Save View`.
+#. Edit the default button name if necessary, then enable :guilabel:`Shared` if you want to share
+   the button with other users.
+
+.. toctree::
+   :titlesonly:
+
+   project_management/project_dashboard
+   project_management/project_profitability

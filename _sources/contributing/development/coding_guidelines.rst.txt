@@ -28,6 +28,11 @@ These guidelines should be applied to every new module and to all new developmen
 Module structure
 ================
 
+.. warning::
+
+    For modules developed by the community, it is strongly recommended to name
+    your module with a prefix like your company name.
+
 Directories
 -----------
 
@@ -263,10 +268,10 @@ To declare a record in XML, the **record** notation (using *<record>*) is recomm
         <field name="model">object_name</field>
         <field name="priority" eval="16"/>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="my_field_1"/>
                 <field name="my_field_2" string="My Label" widget="statusbar" statusbar_visible="draft,sent,progress,done" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -288,7 +293,7 @@ Use the following pattern :
 
 * For a menu: :samp:`{<model_name>}_menu`, or :samp:`{<model_name>}_menu_{do_stuff}` for submenus.
 * For a view: :samp:`{<model_name>}_view_{<view_type>}`, where *view_type* is
-  ``kanban``, ``form``, ``tree``, ``search``, ...
+  ``kanban``, ``form``, ``list``, ``search``, ...
 * For an action: the main action respects :samp:`{<model_name>}_action`.
   Others are suffixed with :samp:`_{<detail>}`, where *detail* is a
   lowercase string briefly explaining the action. This is used only if
@@ -425,7 +430,7 @@ Inside these 3 groups, the imported lines are alphabetically sorted.
     from datetime import datetime
     # 2 : imports of odoo
     import odoo
-    from odoo import api, fields, models, _ # alphabetically ordered
+    from odoo import Command, _, api, fields, models # ASCIIbetically ordered
     from odoo.tools.safe_eval import safe_eval as eval
     # 3 : imports from odoo addons
     from odoo.addons.web.controllers.main import login_redirect
@@ -575,7 +580,7 @@ So, you can write ``if some_collection:`` instead of ``if len(some_collection):`
 - As a good developer, document your code (docstring on methods, simple
   comments for tricky part of code)
 - In additions to these guidelines, you may also find the following link
-  interesting: http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html
+  interesting: https://david.goodger.org/projects/pycon/2007/idiomatic/handout.html
   (a little bit outdated, but quite relevant)
 
 Programming in Odoo
@@ -725,14 +730,10 @@ they can and will be removed !
 Use translation method correctly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Odoo uses a GetText-like method named "underscore" ``_( )`` to indicate that
-a static string used in the code needs to be translated at runtime using the
-language of the context. This pseudo-method is accessed within your code by
-importing as follows:
-
-.. code-block:: python
-
-    from odoo import _
+Odoo uses a GetText-like method named "underscore" ``_()`` to indicate that
+a static string used in the code needs to be translated at runtime.
+That method is available at ``self.env._`` using the language of the
+environment.
 
 A few very important rules must be followed when using it, in order for it to
 work and to avoid filling the translations with useless junk.
@@ -744,9 +745,11 @@ field.
 
 The method accepts optional positional or named parameter
 The rule is very simple: calls to the underscore method should always be in
-the form ``_('literal string')`` and nothing else:
+the form ``self.env._('literal string')`` and nothing else:
 
 .. code-block:: python
+
+    _ = self.env._
 
     # good: plain strings
     error = _('This record is locked!')

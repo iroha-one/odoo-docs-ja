@@ -4,6 +4,49 @@
 Changelog
 =========
 
+Odoo version 18.0
+=================
+
+- Searching by name is now implemented as `_search_display_name` like all other fields.
+  See `#174967 <https://github.com/odoo/odoo/pull/174967>`_.
+- New methods to check access rights and rules now combine both access rights
+  and rules: `check_access`, `has_access` and `_filtered_access`.
+  See `#179148 <https://github.com/odoo/odoo/pull/179148>`_.
+- Translations are made available from the `Environment` with `#174844 <https://github.com/odoo/odoo/pull/174844>`_.
+
+
+Odoo Online version 17.4
+========================
+
+- The internal operator `inselect` is removed. The alternative is to use `in`
+  with a Query or SQL object. `#171371 <https://github.com/odoo/odoo/pull/171371>`_.
+
+
+Odoo Online version 17.3
+========================
+
+- We can now group by date parts numbers in `read_group`, `_read_group` and domains with `#159528 <https://github.com/odoo/odoo/pull/159528>`_.
+
+
+Odoo Online version 17.2
+========================
+
+- The :attr:`group_operator` attribute of :class:`~odoo.fields.Field` is renamed into
+  :attr:`aggregator` with `#127353 <https://github.com/odoo/odoo/pull/127353>`_.
+- We can now group/aggregate/order by related no-store field with
+  `#127353 <https://github.com/odoo/odoo/pull/127353>`_.
+
+Odoo Online version 17.1
+========================
+
+- Method :meth:`~odoo.models.Model._flush_search` has been deprecated with
+  `#144747 <https://github.com/odoo/odoo/pull/144747>`_.
+  The flushing of fields is now done by :meth:`~odoo.api.Environment.execute_query`,
+  and is based on metadata put in the :class:`~odoo.tools.SQL` object by
+  :meth:`~odoo.models.BaseModel._search` and other low-level ORM methods that
+  build such objects.  Those methods are also responsible for checking the access
+  rights on the fields that are used in the SQL object.
+
 Odoo version 17.0
 =================
 

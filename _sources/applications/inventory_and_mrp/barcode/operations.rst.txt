@@ -9,7 +9,8 @@ Daily operations
    :glob:
 
    operations/adjustments
-   operations/internal
+   operations/receipts_deliveries
+   operations/process_transfers
    operations/transfers_scratch
    operations/barcode_nomenclature
    operations/gs1_nomenclature

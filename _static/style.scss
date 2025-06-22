@@ -9,6 +9,7 @@
 @import "scss/_typography";
 @import "scss/_iconfont";
 @import "lib/odoo_ui_icons/style.css";
+@import "scss/_font_awesome";
 
 div[aria-label="related navigation"] {
     display: none;
@@ -1229,6 +1230,16 @@ span.viewcode-link {
             margin-bottom: 0 !important;
         }
     }
+}
+
+//------------------------------------------------------------------------------
+// Odoo Spreadsheet SVG icons
+//------------------------------------------------------------------------------
+
+.os-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
 }
 
 //------------------------------------------------------------------------------

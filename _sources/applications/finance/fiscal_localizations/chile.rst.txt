@@ -15,6 +15,8 @@ Chile
    - `Chilean localization app tour <https://www.youtube.com/watch?v=3qYkgbmBYHw>`_
    - `Chilean localization smart tutorial
      <https://www.odoo.com/slides/smart-tutorial-localizacion-de-chile-131>`_
+   - :doc:`Documentation on e-invoicing's legality and compliance in Chile
+     <../accounting/customer_invoices/electronic_invoicing/chile>`
 
 .. _chile/configuration:
 
@@ -37,15 +39,12 @@ localization.
    * - :guilabel:`Chile - Accounting Reports`
      - `l10n_cl_reports`
      - Adds the *Propuesta F29* and *Balance Tributario (8 columnas)* reports.
-   * - :guilabel:`Chile - E-invoiving`
+   * - :guilabel:`Chile - E-invoicing`
      - `l10n_cl_edi`
-     - Includes all technical and functional requirements to generate and receive electronic
-       invoices online based on the :abbr:`SII (Servicio de Impuestos Internos)` regulations.
-   * - :guilabel:`Chile - Electronic Receipt`
-     - `l10n_cl_boletas`
-     - Includes all technical and functional requirements to generate and receive electronic
-       invoices digitally based on the :abbr:`SII (Servicio de Impuestos Internos)` regulations.
-   * - :guilabel:`Electronic Esports of Goods for Chile`
+     - Includes all technical and functional requirements to receive and generate **electronic
+       receipts** and **invoices** online based on the :abbr:`SII (Servicio de Impuestos Internos)`
+       regulations.
+   * - :guilabel:`Electronic Exports of Goods for Chile`
      - `l10n_cl_edi_exports`
      - Includes technical and functional requirements to generate electronic invoices for exporting
        goods based on the :abbr:`SII (Servicio de Impuestos Internos)` and customs regulations.
@@ -53,10 +52,6 @@ localization.
      - `l10n_cl_edi_stock`
      - Includes all technical and functional requirements to generate delivery guides via web
        service based on the :abbr:`SII (Servicio de Impuestos Internos)` regulations.
-   * - :guilabel:`Chile - E-Invoicing Delivery Guide`
-     - `l10n_cl_edi_stock`
-     - Includes all technical and functional requirements to generate delivery guides online based
-       on the :abbr:`SII (Servicio de Impuestos Internos)` regulations.
 
 .. note::
    - Odoo automatically installs the appropriate package for the company according to the country
@@ -156,7 +151,7 @@ Electrónicos)` incoming email server.
 .. important::
    In order to receive your SII documents, it's necessary to set up your own email server. More
    information on how to do this can be found in this documentation:
-   :doc:`../../general/email_communication/email_servers`
+   :doc:`../../general/email_communication`
 
 Begin by clicking :guilabel:`Configure DTE Incoming Email`, then click :guilabel:`New` to add a
 server and fill in the following fields:
@@ -215,6 +210,11 @@ Certificates` section. Then, click :guilabel:`New` to configure the certificate:
 .. image:: chile/new-certificate.png
    :alt: Digital certificate configuration.
    :align: center
+
+.. warning::
+   If the :guilabel:`Certificate Owner` field is set to a specific user, and there are no
+   certificates shared with users, then the automatic sending of electronic documents and receipt
+   acknowledgments is **disabled**.
 
 Multicurrency
 =============
@@ -515,9 +515,8 @@ Once the invoice is accepted and validated by the :abbr:`SII (Servicio de Impues
 the PDF is printed, it includes the fiscal elements that indicate that the document is fiscally
 valid.
 
-.. image:: chile/sii-validation-elements.png
-   :alt: SII Validation fiscal elements.
-   :align: center
+.. image:: chile/accepted-invoice-fiscal-information.png
+   :alt: Fiscal elements and barcode printed in accepted invoices.
 
 .. important::
    If you are hosted in Odoo SH or On-Premise, you should manually install the `pdf417gen
@@ -621,7 +620,7 @@ Note` and select :guilabel:`Full Refund`, in this case the :abbr:`SII (Servicio 
 Internos)` reference code is automatically set to :guilabel:`Anula Documento de referencia`.
 
 .. image:: chile/credit-note-cancel-ref-doc.png
-   :alt: Credit note canceling the referenced document.
+   :alt: Credit note cancelling the referenced document.
    :align: center
 
 Correct referenced document
@@ -746,8 +745,57 @@ vendor.
    :align: center
 
 If you claim a vendor bill, the status changes from :guilabel:`Draft` to :guilabel:`Cancel`
-automatically. Considering this as best practice, all the claimed documents should be canceled as
+automatically. Considering this as best practice, all the claimed documents should be cancelled as
 they won't be valid for your accounting records.
+
+Electronic purchase invoice
+---------------------------
+
+The *electronic purchase invoice* is a feature included in the `l10n_cl_edi` module.
+
+Once all configurations have been made for :ref:`electronic invoices <chile/electronic-invoice>`
+(e.g., uploading a valid company certificate, setting up master data, etc.), the electronic
+purchase invoices need their own :abbr:`CAFs (Folio Authorization Code)`. Please refer to the
+:ref:`CAF documentation <chile/caf-documentation>` to check the details on how to acquire the
+:abbr:`CAFs (Folio Authorization Code)` for electronic purchase invoices.
+
+Electronic purchase invoices are useful when vendors are not obligated to expedite an electronic
+vendor bill for your purchase. Still, your obligations require a document to be sent to the
+:abbr:`SII (Servicio de Impuestos Internos)` as proof of purchase.
+
+Configuration
+~~~~~~~~~~~~~
+
+To generate an electronic purchase invoice from a vendor bill, the bill must be created in a
+purchase journal with the *Use Documents* feature enabled. It is possible to modify an existing
+purchase journal or create a new one in the following process.
+
+To modify the existing purchase journal, or create a new purchase journal, navigate to
+:menuselection:`Accounting --> Configuration --> Journals`. Then, click the :guilabel:`New` button,
+and fill in the following required information:
+
+- :guilabel:`Type`: select :guilabel:`Purchase` from the drop-down menu for vendor bill journals.
+- :guilabel:`Use Documents`: check this field so the journal can generate electronic documents (in
+  this case the electronic purchase invoice).
+
+Generate an electronic purchase invoice
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To generate this type of document, it is necessary to create a vendor bill in Odoo. To do so,
+navigate to :menuselection:`Accounting --> Vendors --> Bills`, and click the :guilabel:`New` button.
+
+When all of the electronic purchase invoice information is filled, select the option :guilabel:`(46)
+Electronic Purchase Invoice` in the :guilabel:`Document Type` field:
+
+After the vendor bill is posted:
+
+- The :abbr:`DTE (Documentos Tributarios Electrónicos)` file (Electronic Tax Document) is
+  automatically created and added to the chatter.
+- The :guilabel:`DTE SII Status` is set as :guilabel:`Pending to be sent`.
+
+Odoo automatically updates the *DTE Status* every night using a scheduled action. To get a response
+from the :abbr:`SII (Servicio de Impuestos Internos)` immediately, click the :guilabel:`Send now to
+SII` button.
 
 Delivery guide
 --------------
@@ -1151,7 +1199,7 @@ on the client's original order.
    :alt: Selection of order for the refund process.
 
 When the return payment is validated, Odoo generates the necessary credit note, referencing the
-original receipt or invoice, partially or fully canceling the document.
+original receipt or invoice, partially or fully cancelling the document.
 
 .. seealso::
    `Smart tutorial - Electronic invoicing for point of sale
@@ -1186,6 +1234,10 @@ The form *F29* is a new system that the :abbr:`SII (Servicio de Impuestos Intern
 taxpayers, and that replaces the *Purchase and Sales Books*. This report is integrated by Purchase
 Register (CR) and the Sales Register (RV). Its purpose is to support the transactions related to
 VAT, improving its control and declaration.
+
+.. important::
+   The *Propuesta F29 (CL)* report in Odoo covers the basic legal requirements as a first proposal
+   for your final tax declaration.
 
 This record is supplied by the electronic tax documents (DTE's) that have been received by the
 :abbr:`SII (Servicio de Impuestos Internos)`.

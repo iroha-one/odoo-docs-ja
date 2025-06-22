@@ -41,7 +41,7 @@ Place a hold on a card
 ~~~~~~~~~~~~~~~~~~~~~~
 
 With Authorize.Net, you can enable the :ref:`manual capture
-<payment_providers/features/manual_capture>`. If enabled, the funds are reserved for 30 days on the
+<payment_providers/manual_capture>`. If enabled, the funds are reserved for 30 days on the
 customer's card, but not charged yet.
 
 .. warning::
@@ -49,6 +49,8 @@ customer's card, but not charged yet.
 
 .. seealso::
    - :doc:`../payment_providers`
+
+.. _authorize/ach_payments:
 
 ACH payments (USA only)
 =======================
@@ -66,25 +68,20 @@ previously configured Authorize.Net payment provider on Odoo by going to :menuse
 (:guilabel:`⛭`) and select :guilabel:`Duplicate`. Change the provider's name to differentiate both
 versions (e.g., `Authorize.net - Banks`).
 
-Open the :guilabel:`Configuration` tab, set the :guilabel:`Allow Payments From` field to
-:guilabel:`Bank Account (USA only)`.
-
 When ready, change the provider's :guilabel:`State` to :guilabel:`Enabled` for a regular account or
 :guilabel:`Test Mode` for a sandbox account.
 
 Import an Authorize.Net statement
 =================================
 
+.. _authorize-import-template:
+
 Export from Authorize.Net
 -------------------------
 
-.. _authorize-import-template:
-
 .. admonition:: Template
 
-   `Download the Excel import template <https://docs.google.com/spreadsheets/d/1CMVtBWLLVIrUpYA92paw-cL7-WdKLbaa/edit?usp=share_link&ouid=105295722917050444558&rtpof=true&sd=true>`_
-
-To export a statement:
+   :download:`Download the Excel import template. <authorize/authorize-net-magic-sheet.xlsx>`
 
 - Log in to Authorize.Net.
 - Go to :menuselection:`Account --> Statements --> eCheck.Net Settlement Statement`.

@@ -25,6 +25,8 @@ of the following in Odoo:
    Portal users only have read/view access, and will not be able to edit any documents in the
    database.
 
+.. _portal/access:
+
 Provide portal access to customers
 ==================================
 
@@ -155,6 +157,8 @@ on :guilabel:`Confirm Password`. Next, activate :abbr:`2FA (two-factor authentic
 :guilabel:`QR code` or entering a :guilabel:`Verification Code`.
 
 Finally, click :guilabel:`Enable two-factor authentication` to complete the setup.
+
+.. _users-portal-payment-methods:
 
 Change payment info
 -------------------

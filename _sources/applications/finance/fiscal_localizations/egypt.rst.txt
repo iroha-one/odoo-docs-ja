@@ -175,7 +175,7 @@ Make sure your products are correctly configured so your e-invoices are valid:
 
 - :guilabel:`Product Type`: storable products, consumables, or services.
 - :guilabel:`Unit of Measure`: if you also use Odoo Inventory and have enabled :doc:`Units of
-  Measure <../../inventory_and_mrp/inventory/product_management/product_replenishment/uom>`.
+  Measure <../../inventory_and_mrp/inventory/product_management/configure/uom>`.
 - :guilabel:`Barcode`: **GS1** or **EGS** barcode
 - :guilabel:`ETA Item code` (under the :menuselection:`Accounting` tab): if the barcode doesn't
   match your ETA item code.
@@ -205,11 +205,11 @@ An Odoo local server works as a bridge between your computer and your Odoo datab
 Download the Odoo Community installer from the page https://www.odoo.com/page/download and start the
 installation on your computer.
 
-Select :guilabel:`Local Proxy Mode` as the type of install.
+Select :guilabel:`Odoo IoT` as the type of install.
 
 .. image:: egypt/install-odoo-local-proxy.png
    :align: center
-   :alt: Selection of "Local Proxy Mode" during the installation of Odoo Community.
+   :alt: Selection of "Odoo IoT" during the installation of Odoo Community.
 
 .. note::
    This installation of Odoo only works as a server and does not install any Odoo apps on your
@@ -220,7 +220,7 @@ Proxy. Copy the token and save it in a safe place for later use.
 
 .. seealso::
    - `Odoo: Download Odoo <https://www.odoo.com/page/download>`_
-   - :doc:`../../../administration/install`
+   - :doc:`../../../administration/on_premise`
 
 .. _egypt/e-invoicing-usb-configuration:
 

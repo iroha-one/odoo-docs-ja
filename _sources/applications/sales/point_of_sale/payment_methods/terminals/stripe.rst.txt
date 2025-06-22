@@ -5,8 +5,15 @@ Stripe
 Connecting a payment terminal allows you to offer a fluid payment flow to your customers and ease
 the work of your cashiers.
 
+.. important::
+   - Stripe payment terminals do not require an :doc:`IoT Box </applications/general/iot>`
+   - Stripe terminals can be used in many countries, but not worldwide. Check the `global
+     availability for Stripe Terminal <https://support.stripe.com/questions/global-availability-for-stripe-terminal>`_.
+   - Stripe's integration works with `Stripe Terminal smart readers <https://docs.stripe.com/terminal/smart-readers>`_
+
 .. seealso::
-   - :doc:`Use Stripe as payment provider. <../../../../finance/payment_providers/stripe>`
+   - :doc:`Stripe as payment provider <../../../../finance/payment_providers/stripe>`
+   - `List of payment methods supported by Stripe <https://stripe.com/payments/payment-methods>`_
 
 Configuration
 =============
@@ -70,8 +77,8 @@ Swipe right on your payment terminal, click :guilabel:`Settings`, enter the admi
 and select your network.
 
 .. note::
-   - The device must be connected to a secured WI-FI network.
-   - Your Odoo database and payment terminal must share the same network.
+   - The user's device and the terminal must share the same network.
+   - In case of a Wi-Fi connection, the network must be secured.
    - You must enter the admin PIN code to access your payment terminal settings. By default, this
      code is `07139`.
 
@@ -81,21 +88,6 @@ Link the payment method to a POS
 To add a **payment method** to your point of sale, go to :menuselection:`Point of Sale -->
 Configuration --> Settings`. Select the POS, scroll down to the :guilabel:`Payments` section, and
 add your payment method for **Stripe** in the :guilabel:`Payment Methods` field.
-
-Pay with a payment terminal
-===========================
-
-When processing a payment, select :guilabel:`Stripe` as the payment method. Check the amount and
-click :guilabel:`Send`. Once the payment is successful, the status changes to :guilabel:`Payment
-Successful`. To cancel the payment request, click :guilabel:`cancel`.
-
-.. note::
-   - | In case of connection issues between Odoo and the payment terminal, force the payment by
-       clicking on :guilabel:`Force Done`, which allows you to validate the order.
-     | This option is only available after receiving an error message informing you that the
-       connection failed.
-   - The terminal must have at least 10% battery level to use it.
-   - The device does not work for payments under €0.50.
 
 Troubleshooting
 ===============
