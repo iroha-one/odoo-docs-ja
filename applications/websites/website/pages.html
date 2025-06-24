@@ -1274,7 +1274,6 @@
 <li><a class="reference internal" href="#page-creation">Page creation</a></li>
 <li><a class="reference internal" href="#page-management">Page management</a><ul>
 <li><a class="reference internal" href="#publishing-unpublishing-pages">Publishing/unpublishing pages</a></li>
-<li><a class="reference internal" href="#homepage">ホームページ</a></li>
 <li><a class="reference internal" href="#page-properties">Page properties</a><ul>
 <li><a class="reference internal" href="#duplicating-pages">Duplicating pages</a></li>
 <li><a class="reference internal" href="#deleting-pages">Deleting pages</a></li>
@@ -2599,13 +2598,14 @@
 <h1>ページ<a class="headerlink" href="#pages" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>Odoo allows you to create pages for your website and customize their content and appearance to your
 needs.</p>
-<p id="website-page-type"><strong>Static</strong> pages have stable content, such as the homepage. You can manually create new ones, define
-their URLs, adapt their <a class="reference internal" href="#website-page-properties"><span class="std std-ref">properties</span></a>, etc. <strong>Dynamic</strong> pages, on the
-other hand, are generated dynamically. All pages generated automatically by Odoo, for example, when
-you install an app or module (e.g., <code class="o_code docutils literal notranslate"><span class="pre">/shop</span></code> or <code class="o_code docutils literal notranslate"><span class="pre">/blog</span></code>) or publish a new product or blog post, are
-dynamic pages and are therefore managed differently.</p>
+<p id="website-pages-page-type"><strong>Static</strong> pages, such as the homepage or any <a class="reference internal" href="#website-pages-page-creation"><span class="std std-ref">custom-created</span></a>,
+contain fixed content that does not change dynamically. You can manually create these pages, define
+their URLs, and adapt their <a class="reference internal" href="#website-pages-page-management"><span class="std std-ref">properties</span></a> as needed. <strong>Dynamic</strong>
+pages, on the other hand, are generated dynamically. All pages generated automatically by Odoo, for
+example, when you install an app or module (e.g., <code class="o_code docutils literal notranslate"><span class="pre">/shop</span></code> or <code class="o_code docutils literal notranslate"><span class="pre">/blog</span></code>) or publish a new product or
+<a class="reference internal" href="../blog.html"><span class="doc">blog post</span></a>, are dynamic pages and are therefore managed differently.</p>
 </section><section id="page-creation">
-<h2>Page creation<a class="headerlink" href="#page-creation" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="website-pages-page-creation"></span><h2>Page creation<a class="headerlink" href="#page-creation" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Website pages can be created from the <strong>frontend</strong> and the <strong>backend</strong>. To create a new website
 page, proceed as follows:</p>
 <blockquote>
@@ -2616,22 +2616,37 @@ page, proceed as follows:</p>
 <li><p>Or go to <span class="menuselection">Website ‣ Site ‣ Pages</span> and click <span class="guilabel">New</span>.</p></li>
 </ul>
 </li>
+<li><p>In the <span class="guilabel">New Page</span> selection menu, click on a template. They are sorted by type:</p>
+<ul class="simple">
+<li><p><span class="guilabel">Basic</span>: Multi-purpose page. A blank page is also available to start from scratch.</p></li>
+<li><p><span class="guilabel">About</span>: Information about your brand.</p></li>
+<li><p><span class="guilabel">Landing Pages</span>: Summary of company content and info.</p></li>
+<li><p><span class="guilabel">Gallery</span>: Photos and media showcase.</p></li>
+<li><p><span class="guilabel">Services</span>: Focus on what you're selling and contact.</p></li>
+<li><p><span class="guilabel">Pricing Plans</span>: Highlight on subscription and prices.</p></li>
+<li><p><span class="guilabel">Team</span>: The people behind your company.</p></li>
+<li><p><span class="guilabel">Custom</span>: To select a custom template. To add a template to this category, open the
+page you want to save as a template, then go to <span class="menuselection">Site ‣ Properties</span>, enter
+the <span class="guilabel">Page Title</span>, <a class="reference internal" href="#website-pages-page-properties"><span class="std std-ref">edit the page's properties</span></a>, enable <span class="guilabel">Is a template</span>, and click
+<span class="guilabel">Save</span>.</p></li>
+</ul>
+</li>
 <li><p>Enter a <span class="guilabel">Page Title</span>; this title is used in the menu and the page's URL.</p></li>
 <li><p>Click <span class="guilabel">Create</span>.</p></li>
-<li><p>Customize the page's content and appearance using the website builder, then click
-<span class="guilabel">Save</span>.</p></li>
-<li><p><a class="reference internal" href="#website-un-publish-page"><span class="std std-ref">Publish</span></a> the page.</p></li>
+<li><p>If needed, <a class="reference internal" href="web_design.html"><span class="doc">customize the page's content and appearance</span></a> using the website
+editor, then click <span class="guilabel">Save</span>.</p></li>
+<li><p><a class="reference internal" href="#website-pages-un-publish-page"><span class="std std-ref">Publish</span></a> the page.</p></li>
 </ol>
 </div></blockquote>
-<div class="alert alert-primary">
+<div class="alert alert-tip">
 <p class="alert-title">
-注釈</p><p>Disable <span class="guilabel">Add to menu</span> if the page should not appear in the menu.</p>
+ちなみに</p><p>Disable <span class="guilabel">Add to menu</span> if the page should not appear in the menu.</p>
 </div>
 </section><section id="page-management">
-<h2>Page management<a class="headerlink" href="#page-management" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<span id="website-pages-page-management"></span><h2>Page management<a class="headerlink" href="#page-management" title="このヘッドラインへのパーマリンク">¶</a></h2>
 </section><section id="publishing-unpublishing-pages">
-<span id="website-un-publish-page"></span><h3>Publishing/unpublishing pages<a class="headerlink" href="#publishing-unpublishing-pages" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>Pages need to be published to make them accessible to website visitors. To publish or unpublish a
+<span id="website-pages-un-publish-page"></span><h3>Publishing/unpublishing pages<a class="headerlink" href="#publishing-unpublishing-pages" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Pages need to be published to make them visible to website visitors. To publish or unpublish a
 page, access it and toggle the switch in the upper-right corner from <span class="guilabel">Unpublished</span>
 to <span class="guilabel">Published</span>, or vice versa.</p>
 <img alt="Unpublished/Published toggle" src="../../../_images/un-published_toggle.png" />
@@ -2640,94 +2655,93 @@ to <span class="guilabel">Published</span>, or vice versa.</p>
 注釈</p><p>It is also possible to:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>publish/unpublish a page from the <a class="reference internal" href="#website-page-properties"><span class="std std-ref">page properties</span></a>, where you
-can define a publishing date and/or restrict the page's visibility if needed;</p></li>
-<li><p>publish/unpublish several pages at once: go to <span class="menuselection">Website ‣ Site ‣ Pages</span>,
+<li><p>Publish/unpublish a page from the <a class="reference internal" href="#website-pages-page-properties"><span class="std std-ref">page properties</span></a>,
+where you can define a publishing date and/or restrict the page's visibility if needed;</p></li>
+<li><p>Publish/unpublish several pages at once: go to <span class="menuselection">Website ‣ Site ‣ Pages</span>,
 select the pages, then click <span class="guilabel">Action</span> and select <span class="guilabel">Publish</span> or
 <span class="guilabel">Unpublish</span>.</p></li>
 </ul>
 </div></blockquote>
 </div>
-</section><section id="homepage">
-<h3>ホームページ<a class="headerlink" href="#homepage" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>When you create a website, Odoo creates a dedicated <span class="guilabel">Home</span> page by default, but you can
-define any website page as your homepage. To do so, go to <span class="menuselection">Website ‣ Configuration
-‣ Settings</span>, then, in the <span class="guilabel">Website info</span> section, define the URL of the desired page in
-the field <span class="guilabel">Homepage URL</span> (e.g., <code class="o_code docutils literal notranslate"><span class="pre">/shop</span></code>).</p>
-<p>Alternatively, you can define any <a class="reference internal" href="#website-page-type"><span class="std std-ref">static page</span></a> as your homepage by going
-to <span class="menuselection">Website ‣ Site ‣ Properties</span>. Select the <span class="guilabel">Publish</span> tab and enable
-<span class="guilabel">Use as Homepage</span>.</p>
+<p>Alternatively, you can define any <a class="reference internal" href="#website-pages-page-type"><span class="std std-ref">static page</span></a> as your homepage by
+going to <span class="menuselection">Website ‣ Site ‣ Properties</span>. Select the <span class="guilabel">Publish</span> tab and
+enable <span class="guilabel">Use as Homepage</span>.</p>
 </section><section id="page-properties">
-<span id="website-page-properties"></span><h3>Page properties<a class="headerlink" href="#page-properties" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>To modify a <a class="reference internal" href="#website-page-type"><span class="std std-ref">static page's</span></a> properties, access the page you wish to
-modify, then go to <span class="menuselection">Site ‣ Properties</span>.</p>
-<p>The <span class="guilabel">Name</span> tab allows you to:</p>
-<ul>
-<li><p>rename the page using the <span class="guilabel">Page Name</span> field;</p></li>
-<li><p>modify the <span class="guilabel">Page URL</span>. In this case, you can redirect the old URL to the new one if
-needed. To do so, enable <span class="guilabel">Redirect Old URL</span>, then select the <span class="guilabel">Type</span> of
-<a class="reference internal" href="#website-url-redirection"><span class="std std-ref">redirection</span></a>:</p>
-<ul class="simple">
-<li><p><span class="guilabel">301 Moved permanently</span>: to redirect the page permanently;</p></li>
+<span id="website-pages-page-properties"></span><h3>Page properties<a class="headerlink" href="#page-properties" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>To modify a <a class="reference internal" href="#website-pages-page-type"><span class="std std-ref">static page's</span></a> properties, access the page you wish to
+modify, then go to <span class="menuselection">Site ‣ Properties</span>, where you can change the following
+properties:</p>
+<blockquote>
+<div><ul>
+<li><p><span class="guilabel">Page URL</span> : Modify the page URL in the field. In this case, you can redirect the
+old URL to the new one if needed. To do so, enable <span class="guilabel">Redirect old URL</span>, then select the
+<span class="guilabel">Type</span> of <a class="reference internal" href="#website-pages-url-redirection"><span class="std std-ref">redirection</span></a>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="guilabel">301 Moved permanently</span>: to redirect the page permanently.</p></li>
 <li><p><span class="guilabel">302 Moved temporarily</span>: to redirect the page temporarily.</p></li>
 </ul>
-<img alt="Redirect old URL" src="../../../_images/page-redirection.png" />
+</div></blockquote>
+<img alt="Redirect old URL" src="../../../_images/page-properties.png" />
 </li>
-</ul>
-<p>You can further adapt the page's properties in the <span class="guilabel">Publish</span> tab:</p>
-<ul class="simple">
-<li><p><span class="guilabel">Show in Top Menu</span>: Disable if you don't want the page to appear in the menu;</p></li>
-<li><p><span class="guilabel">Use as Homepage</span>: Enable if you want the page to be the homepage of your website;</p></li>
-<li><p><span class="guilabel">Indexed</span>: Disable if you don't want the page to be shown in search engine results;</p></li>
-<li><p><span class="guilabel">Published</span>: Enable to publish the page;</p></li>
-<li><p><span class="guilabel">Publishing Date</span>: To publish the page at a specific moment, select the date,
-click the clock icon to set the time, then click the green check mark to validate your selection.</p></li>
+<li><p><span class="guilabel">In Menu</span>: Disable if you don't want the page to appear in the menu.</p></li>
+<li><p><span class="guilabel">Is Homepage</span>: Enable if you want the page to be the homepage of your website.</p></li>
+<li><p><span class="guilabel">Published</span>: Enable to publish the page.</p></li>
+<li><p><span class="guilabel">Publishing Date</span>: To publish the page at a specific date and time, click the field,
+set the date and time, then press <strong>Enter</strong> or click <span class="guilabel">Apply</span> to validate your selection.</p></li>
+<li><p><span class="guilabel">Indexed</span>: Disable if you don't want the page to appear in search engine results.</p></li>
 <li><p><span class="guilabel">Visibility</span>: Select who can access the page:</p>
-<ul>
-<li><p><span class="guilabel">All</span></p></li>
-<li><p><span class="guilabel">Signed In</span></p></li>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="guilabel">Public</span>: Everyone can access the page.</p></li>
+<li><p><span class="guilabel">Signed In</span>: Only signed-in users can access the page.</p></li>
 <li><p><span class="guilabel">Restricted Group</span>: Select the <a class="reference internal" href="../../general/users/access_rights.html"><span class="doc">user access group(s)</span></a> in the <span class="guilabel">Authorized group</span> field.</p></li>
-<li><p><span class="guilabel">With Password</span>: Enter the password in the <span class="guilabel">Password</span> field.</p></li>
+<li><p><span class="guilabel">With Password</span>: Type the password required to access the page in the
+<span class="guilabel">Password</span> field.</p></li>
 </ul>
+</div></blockquote>
 </li>
+<li><p><span class="guilabel">Is a template</span>: Toggle the switch to save the page as a template and add it to the
+<span class="guilabel">Custom</span>  category.</p></li>
 </ul>
+</div></blockquote>
 <div class="alert alert-tip">
 <p class="alert-title">
-ちなみに</p><p><em>Some</em> of these properties can also be modified from <span class="menuselection">Website ‣ Site ‣ Pages</span>.</p>
+ちなみに</p><p><em>Some</em> of these properties can also be modified in batch from
+<span class="menuselection">Website ‣ Site ‣ Pages</span>.</p>
 </div>
 </section><section id="duplicating-pages">
-<h4>Duplicating pages<a class="headerlink" href="#duplicating-pages" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p>To duplicate a page, access the page, then go to <span class="menuselection">Site ‣ Properties</span> and click
+<span id="website-pages-duplicate-page"></span><h4>Duplicating pages<a class="headerlink" href="#duplicating-pages" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>To duplicate a page, access the page, then go to <span class="menuselection">Site ‣ Properties</span>, and click
 <span class="guilabel">Duplicate Page</span>. Enter a <span class="guilabel">Page Name</span>, then click <span class="guilabel">OK</span>. By default,
 the new page is added after the duplicated page in the menu, but you can remove it from the menu or
 change its position using the <a class="reference internal" href="pages/header_footer.html"><span class="doc">menu editor</span></a>.</p>
 </section><section id="deleting-pages">
-<span id="website-delete-page"></span><h4>Deleting pages<a class="headerlink" href="#deleting-pages" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<span id="website-pages-delete-page"></span><h4>Deleting pages<a class="headerlink" href="#deleting-pages" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>To delete a page, proceed as follows:</p>
 <ol class="arabic simple">
-<li><p>Access the page, then go to <span class="menuselection">Site ‣ Properties</span> and click <span class="guilabel">Delete
-Page</span>.</p></li>
-<li><p>A pop-up window appears on the screen with all links referring to the page you want to delete,
-organized by category. To ensure website visitors don't land on a 404 error page, you must update
+<li><p>Access the page, then go to <span class="menuselection">Site ‣ Properties</span> and click <span class="guilabel">Delete Page</span>.</p></li>
+<li><p>A pop-up window shows all links referring to the page you want to delete,
+organized by category. To ensure website visitors don't land on an error page, you must update
 all the links on your website referring to the page. To do so, expand a category, then click on a
-link to open it in a new window. Alternatively, you can set up a <a class="reference internal" href="#website-url-redirection"><span class="std std-ref">redirection</span></a> for the deleted page.</p></li>
-<li><p>Once you have updated the links (or set up a <a class="reference internal" href="#website-url-redirection"><span class="std std-ref">redirection</span></a>),
-select the <span class="guilabel">I am sure about this</span> check box, then click <span class="guilabel">OK</span>.</p></li>
+link to open it in a new window. Alternatively, you can set up a <a class="reference internal" href="#website-pages-url-redirection"><span class="std std-ref">redirection</span></a> for the deleted page.</p></li>
+<li><p>Once you have updated the links (or set up a <a class="reference internal" href="#website-pages-url-redirection"><span class="std std-ref">redirection</span></a>),
+tick the <span class="guilabel">I am sure about this</span> check box, then click <span class="guilabel">OK</span>.</p></li>
 </ol>
 </section><section id="url-redirect-mapping">
-<span id="website-url-redirection"></span><h3>URL redirect mapping<a class="headerlink" href="#url-redirect-mapping" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<span id="website-pages-url-redirection"></span><h3>URL redirect mapping<a class="headerlink" href="#url-redirect-mapping" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>URL redirect mapping consists in sending visitors and search engines to a URL different from
 the one they initially requested. This technique is used, for example, to prevent broken links when
-you <a class="reference internal" href="#website-delete-page"><span class="std std-ref">delete a page</span></a>, <a class="reference internal" href="#website-page-properties"><span class="std std-ref">modify its URL</span></a>, or
-migrate your site from another platform to an Odoo <a class="reference internal" href="configuration/domain_names.html"><span class="doc">domain</span></a>. It
-can also be used to improve <a class="reference internal" href="pages/seo.html"><span class="doc">Search Engine Optimization (SEO)</span></a>.</p>
+you <a class="reference internal" href="#website-pages-delete-page"><span class="std std-ref">delete a page</span></a>,
+<a class="reference internal" href="#website-pages-page-properties"><span class="std std-ref">modify its URL</span></a>, or migrate your site from another platform to
+an Odoo <a class="reference internal" href="configuration/domain_names.html"><span class="doc">domain</span></a>. It can also be used to improve <a class="reference internal" href="pages/seo.html"><span class="doc">Search Engine Optimization (SEO)</span></a>.</p>
 <p>To access existing URL redirections and create new ones, <a class="reference internal" href="../../general/developer_mode.html"><span class="doc">activate the developer mode</span></a> and go to <span class="menuselection">Website ‣ Configuration ‣
 Redirects</span>.</p>
 <div class="alert alert-primary">
 <p class="alert-title">
 注釈</p><ul class="simple">
-<li><p>A redirect record is added automatically every time you <a class="reference internal" href="#website-page-properties"><span class="std std-ref">modify a page's URL</span></a> and enable <span class="guilabel">Redirect Old URL</span>.</p></li>
-<li><p>You can set up redirections for <a class="reference internal" href="#website-page-type"><span class="std std-ref">static and dynamic pages</span></a>.</p></li>
+<li><p>A redirect record is added automatically every time you <a class="reference internal" href="#website-pages-page-properties"><span class="std std-ref">modify a page's URL</span></a> and enable <span class="guilabel">Redirect Old URL</span>.</p></li>
+<li><p>You can set up redirections for <a class="reference internal" href="#website-pages-page-type"><span class="std std-ref">static and dynamic pages</span></a>.</p></li>
 </ul>
 </div>
 <p>To create a new redirection, click the <span class="guilabel">New</span> button, then fill in the fields:</p>
@@ -2739,21 +2753,21 @@ Redirects</span>.</p>
 <li><p><span class="guilabel">404 Not found</span>: visitors are redirected to a 404 error page when they try to access
 an unpublished or deleted page.</p></li>
 <li><p><span class="guilabel">301 Moved Permanently</span>: for permanent redirections of unpublished or deleted
-<a class="reference internal" href="#website-page-type"><span class="std std-ref">static pages</span></a>. The new URL is shown in search engine results, and the
-redirect is cached by browsers.</p></li>
+<a class="reference internal" href="#website-pages-page-type"><span class="std std-ref">static pages</span></a>. The new URL is shown in search engine results,
+and the redirect is cached by browsers.</p></li>
 <li><p><span class="guilabel">302 Moved Temporarily</span>: for short-term redirections, for example, if you are
 redesigning or updating a page. The new URL is neither cached by browsers nor shown in search
 engine results.</p></li>
-<li><p><span class="guilabel">308 Redirect/Rewrite</span>: for permanent redirections of existing <a class="reference internal" href="#website-page-type"><span class="std std-ref">dynamic pages</span></a>. The URL is renamed; the new name is shown in search engine results and is
-cached by browsers. Use this redirect type to rename a dynamic page, for example, if you wish
-to rename <code class="o_code docutils literal notranslate"><span class="pre">/shop</span></code> into <code class="o_code docutils literal notranslate"><span class="pre">/market</span></code>.</p></li>
+<li><p><span class="guilabel">308 Redirect/Rewrite</span>: for permanent redirections of existing <a class="reference internal" href="#website-pages-page-type"><span class="std std-ref">dynamic pages</span></a>. The URL is renamed; the new name is shown in search engine results
+and is cached by browsers. Use this redirect type to rename a dynamic page, for example, if you
+wish to rename <code class="o_code docutils literal notranslate"><span class="pre">/shop</span></code> into <code class="o_code docutils literal notranslate"><span class="pre">/market</span></code>.</p></li>
 </ul>
 </div></blockquote>
 </li>
 <li><p><span class="guilabel">URL from</span>: Enter the URL to be redirected (e.g., <code class="o_code docutils literal notranslate"><span class="pre">/about-the-company</span></code>) or search for
-the desired <a class="reference internal" href="#website-page-type"><span class="std std-ref">dynamic page</span></a> and select it from the list.</p></li>
-<li><p><span class="guilabel">URL to</span>: For 301, 302, and 308 redirects, enter the URL to be redirected to. If you want
-to redirect to an external URL, include the protocol (e.g., <code class="o_code docutils literal notranslate"><span class="pre">https://</span></code>).</p></li>
+the desired <a class="reference internal" href="#website-pages-page-type"><span class="std std-ref">dynamic page</span></a> and select it from the list.</p></li>
+<li><p><span class="guilabel">URL to</span>: For 301, 302, and 308 redirects, enter the URL to be redirected to. If you
+want to redirect to an external URL, include the protocol (e.g., <code class="o_code docutils literal notranslate"><span class="pre">https://</span></code>).</p></li>
 <li><p><span class="guilabel">Website</span>: Select a specific website.</p></li>
 <li><p><span class="guilabel">Sequence</span>: To define the order in which redirections are performed, e.g., in the case
 of redirect chains (i.e., a series of redirects where one URL is redirected to another one, which
@@ -2763,7 +2777,7 @@ is itself further redirected to another URL).</p></li>
 <div class="alert alert-warning">
 <p class="alert-title">
 重要</p><p>404, 301, and 302 redirections are meant to migrate traffic from
-<a class="reference internal" href="#website-un-publish-page"><span class="std std-ref">unpublished</span></a> or <a class="reference internal" href="#website-delete-page"><span class="std std-ref">deleted</span></a> pages
+<a class="reference internal" href="#website-pages-un-publish-page"><span class="std std-ref">unpublished</span></a> or <a class="reference internal" href="#website-pages-delete-page"><span class="std std-ref">deleted</span></a> pages
 to <em>new</em> pages, while the 308 redirect is used for <em>permanent</em> redirections of <em>existing</em> pages.</p>
 </div>
 <div class="alert alert-secondary">
@@ -2792,7 +2806,6 @@ to <em>new</em> pages, while the 308 redirect is used for <em>permanent</em> red
 <li><a class="reference internal" href="#page-creation">Page creation</a></li>
 <li><a class="reference internal" href="#page-management">Page management</a><ul>
 <li><a class="reference internal" href="#publishing-unpublishing-pages">Publishing/unpublishing pages</a></li>
-<li><a class="reference internal" href="#homepage">ホームページ</a></li>
 <li><a class="reference internal" href="#page-properties">Page properties</a><ul>
 <li><a class="reference internal" href="#duplicating-pages">Duplicating pages</a></li>
 <li><a class="reference internal" href="#deleting-pages">Deleting pages</a></li>
