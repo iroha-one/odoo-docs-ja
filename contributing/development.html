@@ -2605,10 +2605,8 @@
 <li><p>まず、<a class="reference external" href="https://github.com/join">GitHub アカウント</a> を作成します。 Odoo は GitHub を使用して製品のソースコードを管理します。ここで変更を加えてレビューに提出します。</p></li>
 <li><p><a class="reference external" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">新しい SSH キーを生成し、GitHub アカウント</a> に登録します。</p></li>
 <li><p><a class="reference external" href="https://github.com/odoo/odoo">github.com/odoo/odoo</a> にアクセスし、右上の <span class="guilabel">Fork</span> ボタンをクリックするとあなたのアカウントにリポジトリのフォーク (<span class="dfn"><span>your own copy</span></span>) が作成されます。もし、　<a class="reference external" href="https://github.com/odoo/enterprise">github.com/odoo/enterprise</a> にアクセスできる場合は、同様にフォークを作成してください。これにより、メインのコードベースに影響を与えることなく、変更を加えられるコピーが作成されます。Odoo 社で働いている場合は、このステップをスキップしてかまいません。</p></li>
-<li><p><a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Install Git</a>. It is a command-line
-(<span class="dfn"><span>a text interface</span></span>) tool that allows tracking the history of changes made to a file and, more
-importantly, working on different versions of that file simultaneously. It means you do not need to
-worry about overwriting someone else’s pending work when making changes.</p>
+<li><p><a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Git をインストール</a> します。Git はコマンドライン（<span class="dfn"><span>テキストベースのインターフェイス</span></span> ）ツールであり、ファイルに加えられた変更履歴を記録するだけでなく、同じファイルの異なるバージョンを同時に作業できる点が大きな特長です。
+つまり、他の人が保留中の作業をしていても、それを上書きする心配をせずに自分の変更作業を進めることができます。</p>
 <p>Git のインストールディレクトリがシステムの <code class="o_code docutils literal notranslate"><span class="pre">PATH</span></code> 変数に含まれていることを確認します。</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-TGludXggYW5kIG1hY09T" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXggYW5kIG1hY09T" name="TGludXggYW5kIG1hY09T" role="tab" tabindex="0">Linux and macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXggYW5kIG1hY09T" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXggYW5kIG1hY09T" name="TGludXggYW5kIG1hY09T" role="tabpanel" tabindex="0"><p><a class="reference external" href="https://unix.stackexchange.com/a/26059">Linux および macOS で PATH 変数を更新するためのガイド</a>
@@ -2660,10 +2658,7 @@ worry about overwriting someone else’s pending work when making changes.</p>
 </div>
 <p>環境がセットアップされたので、コードベースへの貢献を開始できます。 ターミナルで、ソースからインストールしたOdooのディレクトリに移動し、次に挙げたガイドに従ってください。</p>
 <ol class="arabic">
-<li><p>Choose the version of Odoo to which you want to make changes. Keep in mind that contributions
-targeting an <a class="reference internal" href="../administration/supported_versions.html"><span class="doc">unsupported version of Odoo</span></a> are not
-accepted. This guide assumes that the changes target Odoo 18, which corresponds to
-branch <code class="o_code docutils literal notranslate"><span class="pre">18.0</span></code>.</p></li>
+<li><p>変更を加えたいバージョンのOdooを選択します。 <a class="reference internal" href="../administration/supported_versions.html"><span class="doc">サポートされていないバージョンの Odoo</span></a> を対象とした貢献は受け付けていません。 このガイドでは、<a href="#id1"><span class="problematic" id="id2">`</span></a>18.0`のブランチに対応するOdoo 18を変更することを想定しています。</p></li>
 <li><p>ブランチ 18.0 から始まる新しいブランチを作成します。ブランチ名の前に base ブランチ: <code class="o_code docutils literal notranslate"><span class="pre">18.0-...</span></code> を付けます。Odoo で作業している場合は、　<code class="o_code docutils literal notranslate"><span class="pre">18.0-...-xyz</span></code> のブランチ名を末尾に付けます。</p>
 <div class="alert alert-success">
 <p class="alert-title">
@@ -2675,8 +2670,7 @@ Example</p><div class="highlight-console notranslate"><div class="highlight"><pr
 </div>
 </div>
 </li>
-<li><p><a class="reference external" href="https://github.com/odoo/odoo/blob/18.0/doc/cla/sign-cla.md">Sign the Odoo CLA</a> if not already done. Skip this step if
-you work at Odoo.</p></li>
+<li><p>まだ署名していない場合は、 <a class="reference external" href="https://github.com/odoo/odoo/blob/18.0/doc/cla/sign-cla.md">Odoo CLA に署名する</a> で署名してください。Odoo 社に勤務している方は、この手順をスキップしてください。</p></li>
 <li><p>コードベースに望ましい変更を加えます。コードベースで作業する場合は、次のルールに従ってください。</p>
 <ul class="simple">
 <li><p>変更内容に焦点を当て、具体的に注意してください。 複数の無関係な変更に同時に取り組むのではなく、ある特定の機能やバグ修正に一度に取り組むのが最善です。</p></li>
@@ -2701,14 +2695,10 @@ Example</p><div class="highlight-console notranslate"><div class="highlight"><pr
 </li>
 <li><p>GitHub で <abbr title="Pull Request">PR</abbr> を開き、変更内容をレビューに提出します。</p>
 <ol class="arabic simple">
-<li><p>Go to the <a class="reference external" href="https://github.com/odoo/odoo/compare">compare page of the odoo/odoo codebase</a>, or
-the <a class="reference external" href="https://github.com/odoo/enterprise/compare">compare page of the odoo/enterprise codebase</a>, depending on which codebase your changes
-target.</p></li>
+<li><p>変更対象のコードベースに応じて、<a class="reference external" href="https://github.com/odoo/odoo/compare">odoo/odoo コードベースの 比較ページ</a> または <a class="reference external" href="https://github.com/odoo/enterprise/compare">odoo/enterprise コードベースの 比較ページ</a> にアクセスしてください。</p></li>
 <li><p>ベースに <strong>18.0</strong> を選択します。</p></li>
 <li><p><span class="guilabel">compare across forks</span> をクリックします。</p></li>
-<li><p>Select <strong>&lt;your_github_account&gt;/odoo</strong> or <strong>&lt;your_github_account&gt;/enterprise</strong> for the head
-repository. Replace <code class="o_code docutils literal notranslate"><span class="pre">&lt;your_github_account&gt;</span></code> with the name of the GitHub account on which you
-created the fork or by <strong>odoo-dev</strong> if you work at Odoo.</p></li>
+<li><p>Headリポジトリには <strong>&lt;your_github_account&gt;/odoo</strong> または <strong>&lt;your_github_account&gt;/enterprise</strong> を選択してください。 <code class="o_code docutils literal notranslate"><span class="pre">&lt;your_github_account&gt;</span></code> には、フォークを作成したご自身の GitHub アカウント名を入力します。Odoo 社で作業している場合は、 <strong>odoo-dev</strong> に置き換えてください。</p></li>
 <li><p>変更内容を確認し、 <span class="guilabel">Create pull request</span> ボタンをクリックしてください。</p></li>
 <li><p><span class="guilabel">Allow edits from maintainer</span> チェックボックスをオンにします。Odoo で作業する場合はこの手順をスキップします。</p></li>
 <li><p>説明を入力し、 <span class="guilabel">Create pull request</span> ボタンをもう一度クリックします。</p></li>

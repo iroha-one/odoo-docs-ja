@@ -1274,7 +1274,7 @@
 <li><a class="reference internal" href="#">コーディング ガイドライン</a><ul>
 <li><a class="reference internal" href="#module-structure">モジュール構造</a><ul>
 <li><a class="reference internal" href="#directories">ディレクトリ</a></li>
-<li><a class="reference internal" href="#file-naming">ファイルの名前</a></li>
+<li><a class="reference internal" href="#file-naming">ファイルの命名</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#xml-files">XML ファイル</a><ul>
@@ -2652,24 +2652,25 @@
 </div>
 </section><section id="directories">
 <h3>ディレクトリ<a class="headerlink" href="#directories" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>モジュールは重要なディレクトリで構成されています。 それらはビジネスロジックを含んでいる; それらを見ることはモジュールの目的を理解させるべきである。</p>
+<p>モジュールは重要なディレクトリで構成されています。ビジネスロジックが含まれており、
+それを確認することで、モジュールの目的を理解できるはずです。</p>
 <ul class="simple">
-<li><p><em>data/</em> : デモと xml</p></li>
-<li><p><em>モデル/</em> : モデル定義</p></li>
-<li><p><em>controllers/</em> : コントローラーを含む (HTTP ルート)</p></li>
-<li><p><em>views/</em> : ビューとテンプレートが含まれています</p></li>
+<li><p><em>data/</em> : デモやデータのxml</p></li>
+<li><p><em>models/</em> : モデルの定義</p></li>
+<li><p><em>controllers/</em> : コントローラー(HTTP ルート)が含まれている</p></li>
+<li><p><em>views/</em> : ビューやテンプレートが含まれている</p></li>
 <li><p><em>static/</em> : <em>css/, js/, img/, lib/, ...</em></p></li>
 </ul>
-<p>他のオプションディレクトリがモジュールを構成します。</p>
+<p>モジュールは、その他の任意のディレクトリによって構成されることもあります。</p>
 <ul class="simple">
-<li><p><em>ウィザード/</em> : 一時モデル (<code class="o_code docutils literal notranslate"><span class="pre">models.TransientModel</span></code>) とそのビューを再グループ化します。</p></li>
-<li><p><em>report/</em> : SQL ビューに基づく印刷可能なレポートとモデルが含まれています。Python オブジェクトと XML ビューは、このディレクトリに含まれています。</p></li>
-<li><p><em>tests/</em> : Python テストが含まれています</p></li>
+<li><p><em>wizard/</em> : 一時モデル (<code class="o_code docutils literal notranslate"><span class="pre">models.TransientModel</span></code>) とそのビューをまとめています</p></li>
+<li><p><em>report/</em> : SQL ビューに基づく印刷可能なレポートとモデルが含まれる。Python オブジェクトと XML ビューがこのディレクトリに含まれる</p></li>
+<li><p><em>tests/</em> : Python テストが含まれる</p></li>
 </ul>
 </section><section id="file-naming">
-<h3>ファイルの名前<a class="headerlink" href="#file-naming" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>ファイル名は、すべてのアドオンから情報をすばやく見つけるために重要です。このセクションでは、標準の odoo モジュールでファイルに名前を付ける方法を説明します。 例として、<a class="reference external" href="https://github.com/tivisse/odoodays-2018/tree/master/plant_nursery">plant murde</a> applicationを使用します。<a href="#id1"><span class="problematic" id="id2">*</span></a>plant.narsery*と*plant.order*の2つの主要なモデルを保持します。</p>
-<p><a href="#id1"><span class="problematic" id="id2">*</span></a>モデル*については、同じメインモデルに属するモデルでビジネスロジックを分割します。 各セットは、メインモデルに基づいて指定されたファイルにあります。 モデルが 1 つだけの場合は、モジュール名と同じ名前になります。 それぞれの継承されたモデルは、影響を受けたモデルの理解に役立つ独自のファイルでなければなりません。</p>
+<h3>ファイルの命名<a class="headerlink" href="#file-naming" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>ファイルの命名は、すべてのアドオンから情報をすばやく見つけるために重要です。このセクションでは、標準の odoo モジュールでファイルに名前を付ける方法を説明します。 例として、<a class="reference external" href="https://github.com/tivisse/odoodays-2018/tree/master/plant_nursery">plant murde</a> applicationを使用します。それには、 <em>plant.narsery</em> と <em>plant.order</em> の2つの主要なモデルが含まれています。</p>
+<p><em>models</em> については、同じメインモデルに属するモデルでビジネスロジックを分割します。 各セットは、メインモデルに基づいて指定されたファイルにあります。 モデルが 1 つだけの場合は、モジュール名と同じ名前になります。 それぞれの継承されたモデルは、影響を受けるモデルを理解できるように、個別のファイルにします。</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>addons/plant_nursery/
 |-- models/
 |   |-- plant_nursery.py (first main model)
@@ -2677,7 +2678,7 @@
 |   |-- res_partner.py (inherited Odoo model)
 </pre></div>
 </div>
-<p><a href="#id1"><span class="problematic" id="id2">*</span></a>セキュリティ*については、3つの主要なファイルを使用する必要があります:</p>
+<p><em>security</em> については、3つの主要なファイルを使用する必要があります：</p>
 <ul class="simple">
 <li><p>1つ目は、 <code class="file o_code docutils literal notranslate"><span class="pre">ir.model.access.csv</span></code> ファイルで行われるアクセス権の定義です。</p></li>
 <li><p>ユーザーグループは <code class="file o_code docutils literal notranslate"><span class="pre">&lt;module&gt;_groups.xml</span></code> で定義されています。</p></li>
@@ -2691,12 +2692,7 @@
 |   |-- plant_order_security.xml
 </pre></div>
 </div>
-<p>Concerning <em>views</em>, backend views should be split like models and suffixed
-by <code class="o_code docutils literal notranslate"><span class="pre">_views.xml</span></code>. Backend views are list, form, kanban, activity, graph, pivot, ..
-views. To ease split by model in views main menus not linked to specific actions
-may be extracted into an optional <code class="o_code docutils literal notranslate"><span class="pre">&lt;module&gt;_menus.xml</span></code> file. Templates (QWeb
-pages used notably for portal / website display) are put in separate files named
-<code class="o_code docutils literal notranslate"><span class="pre">&lt;model&gt;_templates.xml</span></code>.</p>
+<p><em>views</em> については、バックエンドビューもモデルと同様に分割し、ファイル名の末尾に <code class="o_code docutils literal notranslate"><span class="pre">_views.xml</span></code> を付ける必要があります。バックエンドビューには、リストビュー、フォームビュー、カンバン、アクティビティビュー、グラフ、ピボットビューなどが含まれます。モデルごとにビューを分けやすくするために、特定のアクションに紐づかないメインメニューは、オプションで <code class="o_code docutils literal notranslate"><span class="pre">&lt;module&gt;_menus.xml</span></code> というファイルに分離することができます。テンプレート（主にポータルやウェブサイト表示で使われる QWeb ページ）は、 <code class="o_code docutils literal notranslate"><span class="pre">&lt;model&gt;_templates.xml</span></code> という名前の別ファイルにまとめます。</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>addons/plant_nursery/
 |-- views/
 |   | -- plant_nursery_menus.xml (optional definition of main menus)
@@ -2707,7 +2703,7 @@ pages used notably for portal / website display) are put in separate files named
 |   | -- res_partner_views.xml
 </pre></div>
 </div>
-<p><a href="#id1"><span class="problematic" id="id2">*</span></a>data*については、目的(デモまたはデータ)とメインモデルで分割します。ファイル名は <code class="o_code docutils literal notranslate"><span class="pre">_demo.xml</span></code> または <code class="o_code docutils literal notranslate"><span class="pre">_data.xml</span></code> でサフィックスされた main_model 名になります。 たとえば、メインモデルとサブタイプのデモとデータを持つアプリケーションの場合。 アクティビティとメールテンプレートはすべてメールモジュールに関連しています:</p>
+<p><em>data</em> については、目的(デモまたはデータ)とメインモデルで分割します。ファイル名は、main_modelに <code class="o_code docutils literal notranslate"><span class="pre">_demo.xml</span></code> または <code class="o_code docutils literal notranslate"><span class="pre">_data.xml</span></code> のサフィックスをつなげた名になります。 たとえば、メインモデルとサブタイプのデモとデータを持つアプリケーションの場合、アクティビティとメールテンプレートはすべてメールモジュールに関連しています：</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>addons/plant_nursery/
 |-- data/
 |   |-- plant_nursery_data.xml
@@ -2715,11 +2711,7 @@ pages used notably for portal / website display) are put in separate files named
 |   |-- mail_data.xml
 </pre></div>
 </div>
-<p>Concerning <em>controllers</em>, generally all controllers belong to a single controller
-contained in a file named <code class="o_code docutils literal notranslate"><span class="pre">&lt;module_name&gt;.py</span></code>. An old convention in Odoo is to
-name this file <code class="o_code docutils literal notranslate"><span class="pre">main.py</span></code> but it is considered as outdated. If you need to inherit
-an existing controller from another module do it in <code class="o_code docutils literal notranslate"><span class="pre">&lt;inherited_module_name&gt;.py</span></code>.
-For example adding portal controller in an application is done in <code class="o_code docutils literal notranslate"><span class="pre">portal.py</span></code>.</p>
+<p><em>controllers</em> については、通常すべてのコントローラーは 1 つのファイルにまとめられており、そのファイル名は <code class="o_code docutils literal notranslate"><span class="pre">&lt;module_name&gt;.py</span></code> とします。以前の Odoo ではこのファイルを <code class="o_code docutils literal notranslate"><span class="pre">main.py</span></code> と名付ける慣習がありましたが、現在では非推奨とされています。他のモジュールの既存コントローラーを継承する必要がある場合は、そのモジュール名に基づいたファイル名である <code class="o_code docutils literal notranslate"><span class="pre">&lt;inherited_module_name&gt;.py</span></code> として定義します。たとえば、アプリケーションにポータル用のコントローラーを追加する場合は、　<code class="o_code docutils literal notranslate"><span class="pre">portal.py</span></code> に実装します。</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>addons/plant_nursery/
 |-- controllers/
 |   |-- plant_nursery.py
@@ -2727,29 +2719,29 @@ For example adding portal controller in an application is done in <code class="o
 |   |-- main.py (deprecated, replaced by plant_nursery.py)
 </pre></div>
 </div>
-<p><a href="#id1"><span class="problematic" id="id2">*</span></a>静的ファイル*については、JavascriptファイルはPythonモデルと同じロジックに従います。 各コンポーネントは、意味のある名前のファイルに含める必要があります。たとえば、メールモジュールの <code class="o_code docutils literal notranslate"><span class="pre">activity.js</span></code> にアクティビティウィジェットがあります。 サブディレクトリは 'package' を構造化するために作成することもできます (詳細は web モジュールを参照してください)。 JSウィジェットのテンプレート(静的XMLファイル)とスタイル(scssファイル)に同じロジックを適用する必要があります。 Odoo の外にあるデータ (画像、ライブラリ) をリンクしないでください: URL を画像に使用せず、代わりにコードベースにコピーしてください。</p>
-<p><a href="#id1"><span class="problematic" id="id2">*</span></a>ウィザード*については、命名規則はPythonモデルと同じです: <code class="o_code docutils literal notranslate"><span class="pre">&lt;transient&gt;.py</span></code> と <code class="o_code docutils literal notranslate"><span class="pre">&lt;transient&gt;_views.xml</span></code> 。 両方ともウィザードディレクトリに配置されています。この名前は、一時モデルのウィザードキーワードを使用している古いodoアプリケーションから来ています。</p>
+<p><em>static群</em> については、JavascriptファイルはPythonモデルと同じロジックに従います。 各コンポーネントは、意味のある名前のファイルに含める必要があります。たとえば、メールモジュールの <code class="o_code docutils literal notranslate"><span class="pre">activity.js</span></code> にアクティビティウィジェットがあります。 サブディレクトリは 'package' を構造化するために作成することもできます (詳細は web モジュールを参照してください)。 JSウィジェットのテンプレート(静的XMLファイル)とスタイル(scssファイル)に同じロジックを適用する必要があります。 Odoo の外にあるデータ (画像、ライブラリ) をリンクしないでください: URL を画像に使用せず、代わりにコードベースにコピーしてください。</p>
+<p><em>wizards</em> については、命名規則はPythonモデルと同様で、 <code class="o_code docutils literal notranslate"><span class="pre">&lt;transient&gt;.py</span></code> や <code class="o_code docutils literal notranslate"><span class="pre">&lt;transient&gt;_views.xml</span></code> のようにします。 両方ともウィザードディレクトリに配置されます。この名称は、一時モデルのウィザードキーワードを使用している古いodooアプリケーションに由来しています。</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>addons/plant_nursery/
 |-- wizard/
 |   |-- make_plant_order.py
 |   |-- make_plant_order_views.xml
 </pre></div>
 </div>
-<p>Python/SQLビューと古典的なビュー名称で行われた*統計レポート*は以下の通りです:</p>
+<p><em>統計的な reports</em> については、Python や SQL ビュー、また従来のビューで構成されますが、そのファイルの命名は次の通りです：</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>addons/plant_nursery/
 |-- report/
 |   |-- plant_order_report.py
 |   |-- plant_order_report_views.xml
 </pre></div>
 </div>
-<p>主にデータ準備やQWebテンプレートの命名を含む*印刷可能なレポート*については、以下の通りです:</p>
+<p><em>印刷可能な reports</em> については、主にデータの準備処理やQWeb テンプレートで構成されますが、そのファイルの命名は次の通りです：</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>addons/plant_nursery/
 |-- report/
 |   |-- plant_order_reports.xml (report actions, paperformat, ...)
 |   |-- plant_order_templates.xml (xml report templates)
 </pre></div>
 </div>
-<p>したがって、Odoo モジュールの完全なツリーは次のようになります。</p>
+<p>まとめると、Odoo モジュールの完全なツリーは次のようになります。</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>addons/plant_nursery/
 |-- __init__.py
 |-- __manifest__.py
@@ -3747,7 +3739,7 @@ Example</p><div class="literal-block-wrapper docutils container" id="id3">
 <li><a class="reference internal" href="#">コーディング ガイドライン</a><ul>
 <li><a class="reference internal" href="#module-structure">モジュール構造</a><ul>
 <li><a class="reference internal" href="#directories">ディレクトリ</a></li>
-<li><a class="reference internal" href="#file-naming">ファイルの名前</a></li>
+<li><a class="reference internal" href="#file-naming">ファイルの命名</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#xml-files">XML ファイル</a><ul>

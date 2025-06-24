@@ -2618,10 +2618,8 @@ with markup, which allows including headings, images, notes, and so on. <abbr ti
 <li><p>まず、 <a class="reference external" href="https://github.com/join">GitHub アカウント</a> を作成します。 Odoo は GitHub を使用して製品のソースコードを管理します。ここで変更を送信します。</p></li>
 <li><p><a class="reference external" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">新しい SSH キーを生成し、GitHub アカウント</a> に登録します。</p></li>
 <li><p><a class="reference external" href="https://github.com/odoo/documentation">github. を開きます。 om/odoo/documentation</a> そして右上隅にある <span class="guilabel">Fork</span> ボタンをクリックして、あなたのアカウントにリポジトリのフォーク(<span class="dfn"><span>your own copy</span></span> ) を作成します。 これにより、メインのコードベースに影響を与えずに変更できるコードベースのコピーが作成されます。 Odoo で作業している場合は、この手順をスキップします。</p></li>
-<li><p><a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Install Git</a>. It is a command-line
-(<span class="dfn"><span>a text interface</span></span>) tool that allows tracking the history of changes made to a file and, more
-importantly, working on different versions of that file simultaneously. It means you do not need to
-worry about overwriting someone else’s pending work when making changes.</p>
+<li><p><a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Git をインストール</a> します。Git はコマンドライン（<span class="dfn"><span>テキストベースのインターフェイス</span></span> ）ツールであり、ファイルに加えられた変更履歴を記録するだけでなく、同じファイルの異なるバージョンを同時に作業できる点が大きな特長です。
+つまり、他の人が保留中の作業をしていても、それを上書きする心配をせずに自分の変更作業を進めることができます。</p>
 <p>Git のインストールディレクトリがシステムの <code class="o_code docutils literal notranslate"><span class="pre">PATH</span></code> 変数に含まれていることを確認します。</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-TGludXggYW5kIG1hY09T" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXggYW5kIG1hY09T" name="TGludXggYW5kIG1hY09T" role="tab" tabindex="0">Linux and macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXggYW5kIG1hY09T" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXggYW5kIG1hY09T" name="TGludXggYW5kIG1hY09T" role="tabpanel" tabindex="0"><p><a class="reference external" href="https://unix.stackexchange.com/a/26059">Linux および macOS で PATH 変数を更新するためのガイド</a>
@@ -2714,10 +2712,7 @@ worry about overwriting someone else’s pending work when making changes.</p>
 </div>
 <p>環境が設定されたので、ドキュメントへの貢献を開始できます。 端末で、ソースを複製したディレクトリに移動し、以下のガイドに従います。</p>
 <ol class="arabic">
-<li><p>Choose the version of the documentation to which you want to make changes. Keep in mind
-that contributions targeting an <a class="reference internal" href="../administration/supported_versions.html"><span class="doc">unsupported version of Odoo</span></a> are not accepted. This guide assumes that the changes
-target the documentation of Odoo 18, which corresponds to branch
-<code class="o_code docutils literal notranslate"><span class="pre">18.0</span></code>.</p></li>
+<li><p>変更を加えたいバージョンのOdooを選択します。 <a class="reference internal" href="../administration/supported_versions.html"><span class="doc">サポートされていないバージョンの Odoo</span></a> を対象とした貢献は受け付けられません。 このガイドでは、<a href="#id1"><span class="problematic" id="id2">`</span></a>18.0`のブランチに対応するOdoo 18を変更することを想定しています。</p></li>
 <li><p>ブランチ 18.0 から始まる新しいブランチを作成します。ブランチ名の前に base ブランチ: <code class="o_code docutils literal notranslate"><span class="pre">18.0-...</span></code> を付けます。Odoo で作業している場合は、　<code class="o_code docutils literal notranslate"><span class="pre">18.0-...-xyz</span></code> のブランチ名を末尾に付けます。</p>
 <div class="alert alert-success">
 <p class="alert-title">
