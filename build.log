@@ -14,25 +14,25 @@ loading translations [ja]... done
 loading intersphinx inventory from ../invs/python.inv...
 loading intersphinx inventory from ../invs/werkzeug.inv...
 building [mo]: targets for 19 po files that are out of date
-writing output... [  5%] ../locale/ja/LC_MESSAGES/productivity.mo
-writing output... [ 10%] ../locale/ja/LC_MESSAGES/marketing.mo
-writing output... [ 15%] ../locale/ja/LC_MESSAGES/developer.mo
-writing output... [ 21%] ../locale/ja/LC_MESSAGES/contributing.mo
-writing output... [ 26%] ../locale/ja/LC_MESSAGES/hr.mo
-writing output... [ 31%] ../locale/ja/LC_MESSAGES/last_build.mo
-writing output... [ 36%] ../locale/ja/LC_MESSAGES/studio.mo
-writing output... [ 42%] ../locale/ja/LC_MESSAGES/general.mo
-writing output... [ 47%] ../locale/ja/LC_MESSAGES/essentials.mo
-writing output... [ 52%] ../locale/ja/LC_MESSAGES/index.mo
-writing output... [ 57%] ../locale/ja/LC_MESSAGES/applications.mo
-writing output... [ 63%] ../locale/ja/LC_MESSAGES/administration.mo
-writing output... [ 68%] ../locale/ja/LC_MESSAGES/finance.mo
-writing output... [ 73%] ../locale/ja/LC_MESSAGES/legal.mo
-writing output... [ 78%] ../locale/ja/LC_MESSAGES/services.mo
-writing output... [ 84%] ../locale/ja/LC_MESSAGES/sales.mo
-writing output... [ 89%] ../locale/ja/LC_MESSAGES/settings.mo
-writing output... [ 94%] ../locale/ja/LC_MESSAGES/inventory_and_mrp.mo
-writing output... [100%] ../locale/ja/LC_MESSAGES/websites.mo
+writing output... [  5%] ../locale/ja/LC_MESSAGES/last_build.mo
+writing output... [ 10%] ../locale/ja/LC_MESSAGES/essentials.mo
+writing output... [ 15%] ../locale/ja/LC_MESSAGES/websites.mo
+writing output... [ 21%] ../locale/ja/LC_MESSAGES/sales.mo
+writing output... [ 26%] ../locale/ja/LC_MESSAGES/general.mo
+writing output... [ 31%] ../locale/ja/LC_MESSAGES/studio.mo
+writing output... [ 36%] ../locale/ja/LC_MESSAGES/legal.mo
+writing output... [ 42%] ../locale/ja/LC_MESSAGES/settings.mo
+writing output... [ 47%] ../locale/ja/LC_MESSAGES/services.mo
+writing output... [ 52%] ../locale/ja/LC_MESSAGES/inventory_and_mrp.mo
+writing output... [ 57%] ../locale/ja/LC_MESSAGES/contributing.mo
+writing output... [ 63%] ../locale/ja/LC_MESSAGES/index.mo
+writing output... [ 68%] ../locale/ja/LC_MESSAGES/productivity.mo
+writing output... [ 73%] ../locale/ja/LC_MESSAGES/marketing.mo
+writing output... [ 78%] ../locale/ja/LC_MESSAGES/hr.mo
+writing output... [ 84%] ../locale/ja/LC_MESSAGES/administration.mo
+writing output... [ 89%] ../locale/ja/LC_MESSAGES/developer.mo
+writing output... [ 94%] ../locale/ja/LC_MESSAGES/applications.mo
+writing output... [100%] ../locale/ja/LC_MESSAGES/finance.mo
 
 building [html]: targets for 1031 source files that are out of date
 updating environment: [new config] 1031 added, 0 changed, 0 removed
@@ -2610,14 +2610,6 @@ See "backrefs" attribute for IDs.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/website/configuration/spam_protection.rst:55:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/website/pages.rst:46:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/applications/websites/website/pages.rst:46:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:137:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:137:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:169:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:137:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:137:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:137: WARNING: inconsistent term references in translated message. original: [':doc:`Git guidelines\n<development/git_guidelines>`'], translated: []
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development.rst:169:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:14:<translated>:1: WARNING: Inline strong start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:58:<translated>:1: WARNING: Inline emphasis start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:63:<translated>:1: WARNING: Inline emphasis start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:77:<translated>:1: WARNING: Inline emphasis start-string without end-string.
@@ -2634,7 +2626,6 @@ See "backrefs" attribute for IDs.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1295:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1303:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:1303:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:14:<translated>:1: WARNING: Inline strong start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:58:<translated>:1: WARNING: Inline emphasis start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:63:<translated>:1: WARNING: Inline emphasis start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/development/coding_guidelines.rst:77:<translated>:1: WARNING: Inline emphasis start-string without end-string.
@@ -2661,11 +2652,7 @@ See "backrefs" attribute for IDs.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:42:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:151:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:185:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:199:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:249:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:255:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:255:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:295:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:16:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:16: WARNING: inconsistent term references in translated message. original: [':ref:`introduction to the reStructuredText language <contributing/documentation/rst-intro>`'], translated: []
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:20:<translated>:1: WARNING: Inline strong start-string without end-string.
@@ -2678,12 +2665,7 @@ See "backrefs" attribute for IDs.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:151:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:151: WARNING: inconsistent term references in translated message. original: [':ref:`make your first contribution\n<contributing/documentation/first-contribution>`'], translated: []
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:185:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:199:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:249:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:255:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:255:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:255: WARNING: inconsistent term references in translated message. original: [':doc:`Git guidelines\n<development/git_guidelines>`'], translated: []
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation.rst:295:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation/content_guidelines.rst:19:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation/content_guidelines.rst:19:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/contributing/documentation/content_guidelines.rst:68:<translated>:1: WARNING: Inline strong start-string without end-string.
@@ -8221,7 +8203,7 @@ copying static files... done
 copying extra files... done
 dumping search index in Japanese (code: ja)... done
 dumping object inventory... done
-build succeeded, 4482 warnings.
+build succeeded, 4464 warnings.
 
 The HTML pages are in _build/html/ja.
 Build finished.

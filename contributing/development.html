@@ -28,7 +28,7 @@
     
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
-    <link rel="next" title="Coding guidelines" href="development/coding_guidelines.html" />
+    <link rel="next" title="コーディング ガイドライン" href="development/coding_guidelines.html" />
     <link rel="prev" title="コントリビュートについて" href="../contributing.html" /> 
   </head><body>
     <noscript>
@@ -1248,8 +1248,8 @@
 </li>
 <li class="toctree-l1 current o_menu_contributing"><a class="reference internal" href="../contributing.html">コントリビュートについて</a><ul class="current">
 <li class="toctree-l2 current o_menu_contributing_"><a class="current reference internal" href="#">開発</a><ul>
-<li class="toctree-l3 o_menu_contributing_development_coding_guidelines"><a class="reference internal" href="development/coding_guidelines.html">Coding guidelines</a></li>
-<li class="toctree-l3 o_menu_contributing_development_git_guidelines"><a class="reference internal" href="development/git_guidelines.html">Git guidelines</a></li>
+<li class="toctree-l3 o_menu_contributing_development_coding_guidelines"><a class="reference internal" href="development/coding_guidelines.html">コーディング ガイドライン</a></li>
+<li class="toctree-l3 o_menu_contributing_development_git_guidelines"><a class="reference internal" href="development/git_guidelines.html">Git ガイドライン</a></li>
 </ul>
 </li>
 <li class="toctree-l2 o_menu_contributing_documentation"><a class="reference internal" href="documentation.html">ドキュメント</a><ul>
@@ -2496,8 +2496,8 @@
 </li>
 <li class="toctree-l1 current o_menu_contributing"><a class="reference internal" href="../contributing.html">コントリビュートについて</a><ul class="current">
 <li class="toctree-l2 current o_menu_contributing_"><a class="current reference internal" href="#">開発</a><ul>
-<li class="toctree-l3 o_menu_contributing_development_coding_guidelines"><a class="reference internal" href="development/coding_guidelines.html">Coding guidelines</a></li>
-<li class="toctree-l3 o_menu_contributing_development_git_guidelines"><a class="reference internal" href="development/git_guidelines.html">Git guidelines</a></li>
+<li class="toctree-l3 o_menu_contributing_development_coding_guidelines"><a class="reference internal" href="development/coding_guidelines.html">コーディング ガイドライン</a></li>
+<li class="toctree-l3 o_menu_contributing_development_git_guidelines"><a class="reference internal" href="development/git_guidelines.html">Git ガイドライン</a></li>
 </ul>
 </li>
 <li class="toctree-l2 o_menu_contributing_documentation"><a class="reference internal" href="documentation.html">ドキュメント</a><ul>
@@ -2569,7 +2569,7 @@
           <a href="../genindex.html" title="総合索引"
              accesskey="I">索引</a></li>
         <li class="right" >
-          <a href="development/coding_guidelines.html" title="Coding guidelines"
+          <a href="development/coding_guidelines.html" title="コーディング ガイドライン"
              accesskey="N">次へ</a> |</li>
         <li class="right" >
           <a href="../contributing.html" title="コントリビュートについて"
@@ -2588,14 +2588,14 @@
 <h1>開発<a class="headerlink" href="#development" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1 o_menu_contributing_development_coding_guidelines"><a class="reference internal" href="development/coding_guidelines.html">Coding guidelines</a></li>
-<li class="toctree-l1 o_menu_contributing_development_git_guidelines"><a class="reference internal" href="development/git_guidelines.html">Git guidelines</a></li>
+<li class="toctree-l1 o_menu_contributing_development_coding_guidelines"><a class="reference internal" href="development/coding_guidelines.html">コーディング ガイドライン</a></li>
+<li class="toctree-l1 o_menu_contributing_development_git_guidelines"><a class="reference internal" href="development/git_guidelines.html">Git ガイドライン</a></li>
 </ul>
 </div>
 <p>これを読んでいるということは、Odoo のコードベースへの貢献方法に興味がある可能性が高いですね。そうであっても、偶然ここにたどり着いたとしても、大丈夫です！どちらにしても、しっかりサポートします！</p>
 <div class="alert alert-secondary">
 <p class="alert-title">
-関連項目</p><p><a class="reference internal" href="../contributing.html"><span class="doc">Discover other ways to contribute to Odoo</span></a></p>
+関連項目</p><p><a class="reference internal" href="../contributing.html"><span class="doc">Odooに貢献する方法をほかにも見つけましょう</span></a></p>
 </div>
 <p>準備ができたら、 <a class="reference internal" href="#contributing-development-setup"><span class="std std-ref">環境のセットアップ</span></a> セクションに移動して、Odoo の開発に貢献するための旅を始めましょう。</p>
 </section><section id="environment-setup">
@@ -2611,9 +2611,9 @@ importantly, working on different versions of that file simultaneously. It means
 worry about overwriting someone else’s pending work when making changes.</p>
 <p>Git のインストールディレクトリがシステムの <code class="o_code docutils literal notranslate"><span class="pre">PATH</span></code> 変数に含まれていることを確認します。</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-TGludXggYW5kIG1hY09T" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXggYW5kIG1hY09T" name="TGludXggYW5kIG1hY09T" role="tab" tabindex="0">Linux and macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXggYW5kIG1hY09T" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXggYW5kIG1hY09T" name="TGludXggYW5kIG1hY09T" role="tabpanel" tabindex="0"><p>‘Linux および macOS で PATH 変数を更新するためのガイド &lt;<a class="reference external" href="https://unix.stackexchange.com/a/26059">https://unix.stackexchange.com/a/26059</a>&gt;`_
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-TGludXggYW5kIG1hY09T" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-TGludXggYW5kIG1hY09T" name="TGludXggYW5kIG1hY09T" role="tab" tabindex="0">Linux and macOS</button><button aria-controls="panel-0-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-TGludXggYW5kIG1hY09T" class="sphinx-tabs-panel group-tab" id="panel-0-TGludXggYW5kIG1hY09T" name="TGludXggYW5kIG1hY09T" role="tabpanel" tabindex="0"><p><a class="reference external" href="https://unix.stackexchange.com/a/26059">Linux および macOS で PATH 変数を更新するためのガイド</a>
 に従って、Git のインストールパス（デフォルトでは <code class="file o_code docutils literal notranslate"><span class="pre">/usr/bin/git</span></code> ）を追加します。</p>
-</div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p>‘Windows で PATH 変数を更新するためのガイド &lt;<a class="reference external" href="https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/">https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/</a>&gt;`_
+</div><div aria-labelledby="tab-0-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><p><a class="reference external" href="https://www.howtogeek.com/118594/how-to-edit-your-system-path-for-easy-command-line-access/">Windows で PATH 変数を更新するためのガイド</a>
 に従って、Git のインストールパス（デフォルトでは <code class="file o_code docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\Git</span></code> ）を追加します。</p>
 </div></div>
 </li>
@@ -2623,7 +2623,7 @@ worry about overwriting someone else’s pending work when making changes.</p>
 </pre></div>
 </div>
 </li>
-<li><p><a class="reference internal" href="../administration/on_premise/source.html"><span class="doc">Install Odoo from the sources</span></a> を参照しOdooをインストールします。ソースを取得する際は、Git を使用して SSH 経由で行ってください。</p></li>
+<li><p><a class="reference internal" href="../administration/on_premise/source.html"><span class="doc">ソースからのインストール</span></a> を参照しOdooをインストールします。ソースを取得する際は、Git を使用して SSH 経由で行ってください。</p></li>
 <li><p>メインのコードベースではなく、フォークに変更をプッシュするように Git を設定します。 Odoo で作業している場合は、アカウント <strong>odoo-dev</strong> で作成された共有フォークに変更をプッシュするように Git を設定します。</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">Link Git with your fork(s)</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">Link Git with odoo-dev</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><p>次のコマンドの <code class="o_code docutils literal notranslate"><span class="pre">&lt;your_github_account&gt;</span></code> を、フォークを作成したあなたの GitHub アカウント名に置き換えて、実行します。</p>
@@ -2647,14 +2647,14 @@ worry about overwriting someone else’s pending work when making changes.</p>
 </div>
 </div></div>
 </li>
-<li><p>以上です！ <a class="reference internal" href="#contributing-development-first-contribution"><span class="std std-ref">make your first contribution</span></a> への準備ができました。</p></li>
+<li><p>以上です！ <a class="reference internal" href="#contributing-development-first-contribution"><span class="std std-ref">初めての貢献をする</span></a> への準備ができました。</p></li>
 </ol>
 </section><section id="make-your-first-contribution">
 <span id="contributing-development-first-contribution"></span><h2>初めての貢献をする<a class="headerlink" href="#make-your-first-contribution" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="alert alert-warning">
 <p class="alert-title">
 重要</p><ul class="simple">
-<li><p>Odooの開発は初心者には難しい場合があります。貢献する前に、小さなモジュールをコーディングするのに十分な知識があることをお勧めします。 そうでない場合は、 <a class="reference internal" href="../developer/tutorials.html"><span class="doc">developer tutorials</span></a> を確認して、ギャップを埋めてください。</p></li>
+<li><p>Odooの開発は初心者には難しい場合があります。貢献する前に、小さなモジュールをコーディングするのに十分な知識があることをお勧めします。 そうでない場合は、 <a class="reference internal" href="../developer/tutorials.html"><span class="doc">開発者向けチュートリアル</span></a> を確認して、ギャップを埋めてください。</p></li>
 <li><p>このガイドのいくつかのステップは、Gitに慣れている必要があります。 途中でつまずいた場合には、 <a class="reference external" href="https://www.atlassian.com/git/tutorials">チュートリアル</a> や <a class="reference external" href="https://learngitbranching.js.org/">インタラクティブトレーニング</a> が役に立ちます。</p></li>
 </ul>
 </div>
@@ -2681,11 +2681,11 @@ you work at Odoo.</p></li>
 <ul class="simple">
 <li><p>変更内容に焦点を当て、具体的に注意してください。 複数の無関係な変更に同時に取り組むのではなく、ある特定の機能やバグ修正に一度に取り組むのが最善です。</p></li>
 <li><p><code class="o_code docutils literal notranslate"><span class="pre">master</span></code> 以外のブランチで作業するときは、 <a class="reference external" href="https://github.com/odoo/odoo/wiki/Contributing#what-does-stable-mean">stable policy</a> を尊重してください。</p></li>
-<li><p><a class="reference internal" href="development/coding_guidelines.html"><span class="doc">coding guidelines</span></a> に従ってください。</p></li>
-<li><p>あなたの変更を徹底的にテストし、 <a class="reference internal" href="../developer/reference/backend/testing.html"><span class="doc">write tests</span></a> は、すべてが期待どおりに動作し、回帰や意図しない結果がないことを確認します。</p></li>
+<li><p><a class="reference internal" href="development/coding_guidelines.html"><span class="doc">コーディングガイドライン</span></a> に従ってください。</p></li>
+<li><p>変更内容を十分にテストし、すべてが期待どおりに動作していること、またリグレッションや予期しない影響がないことを確認するために、 <a class="reference internal" href="../developer/reference/backend/testing.html"><span class="doc">テストを書こう</span></a> を参照して、テストコードを書く ようにしましょう。</p></li>
 </ul>
 </li>
-<li><p>変更をコミットします。 :doc:<a href="#id1"><span class="problematic" id="id2">`</span></a>Git ガイドライン &lt;development/git_guidelines&gt; <a href="#id3"><span class="problematic" id="id4">`</span></a>の指示に従って、コミットメッセージを明確に書きます。</p>
+<li><p>変更をコミットします。 <a class="reference internal" href="development/git_guidelines.html"><span class="doc">Git ガイドライン</span></a> に従って、コミットメッセージを明確に書きます。</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> git add .
 <span class="gp">$</span> git commit
 </pre></div>
@@ -2705,17 +2705,17 @@ Example</p><div class="highlight-console notranslate"><div class="highlight"><pr
 the <a class="reference external" href="https://github.com/odoo/enterprise/compare">compare page of the odoo/enterprise codebase</a>, depending on which codebase your changes
 target.</p></li>
 <li><p>ベースに <strong>18.0</strong> を選択します。</p></li>
-<li><p>:guilabel:の「フォーク間で比較」をクリックします。</p></li>
+<li><p><span class="guilabel">compare across forks</span> をクリックします。</p></li>
 <li><p>Select <strong>&lt;your_github_account&gt;/odoo</strong> or <strong>&lt;your_github_account&gt;/enterprise</strong> for the head
 repository. Replace <code class="o_code docutils literal notranslate"><span class="pre">&lt;your_github_account&gt;</span></code> with the name of the GitHub account on which you
 created the fork or by <strong>odoo-dev</strong> if you work at Odoo.</p></li>
 <li><p>変更内容を確認し、 <span class="guilabel">Create pull request</span> ボタンをクリックしてください。</p></li>
-<li><p><span class="guilabel">メンテナーから編集を許可する</span> チェックボックスをオンにします。Odoo で作業する場合はこの手順をスキップします。</p></li>
-<li><p>説明を入力し、 <span class="guilabel">プルリクエストを作成する</span> ボタンをもう一度クリックします。</p></li>
+<li><p><span class="guilabel">Allow edits from maintainer</span> チェックボックスをオンにします。Odoo で作業する場合はこの手順をスキップします。</p></li>
+<li><p>説明を入力し、 <span class="guilabel">Create pull request</span> ボタンをもう一度クリックします。</p></li>
 </ol>
 </li>
 <li><p>ページの下部にある統合状況を確認し、問題を解決します。</p></li>
-<li><p>:abbr:<a href="#id1"><span class="problematic" id="id2">`</span></a>PR (Pull Request)`がマージする準備ができ次第、Odooチームのメンバーが自動的にレビューに割り当てられます。 査読者に質問や発言がある場合は、それらをコメントとして投稿し、あなたは電子メールで通知されます。 これらのコメントは、貢献が進むために解決されなければなりません。</p></li>
+<li><p><abbr title="Pull Request">PR</abbr> がマージする準備ができ次第、Odooチームのメンバーが自動的にレビューに割り当てられます。 査読者に質問や発言がある場合は、それらをコメントとして投稿し、あなたには電子メールで通知されます。 これらのコメントは、貢献が進むために解決されなければなりません。</p></li>
 <li><p>変更が承認されると、レビューはそれらを統合し、次のコードアップデート後にすべてのOdooユーザーが利用できるようになります!</p></li>
 </ol>
 </section>
@@ -2759,7 +2759,7 @@ created the fork or by <strong>odoo-dev</strong> if you work at Odoo.</p></li>
           <a href="../genindex.html" title="総合索引"
              >索引</a></li>
         <li class="right" >
-          <a href="development/coding_guidelines.html" title="Coding guidelines"
+          <a href="development/coding_guidelines.html" title="コーディング ガイドライン"
              >次へ</a> |</li>
         <li class="right" >
           <a href="../contributing.html" title="コントリビュートについて"
