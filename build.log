@@ -14,25 +14,25 @@ loading translations [ja]... done
 loading intersphinx inventory from ../invs/python.inv...
 loading intersphinx inventory from ../invs/werkzeug.inv...
 building [mo]: targets for 19 po files that are out of date
-writing output... [  5%] ../locale/ja/LC_MESSAGES/applications.mo
-writing output... [ 10%] ../locale/ja/LC_MESSAGES/contributing.mo
-writing output... [ 15%] ../locale/ja/LC_MESSAGES/sales.mo
-writing output... [ 21%] ../locale/ja/LC_MESSAGES/general.mo
-writing output... [ 26%] ../locale/ja/LC_MESSAGES/websites.mo
-writing output... [ 31%] ../locale/ja/LC_MESSAGES/finance.mo
-writing output... [ 36%] ../locale/ja/LC_MESSAGES/hr.mo
-writing output... [ 42%] ../locale/ja/LC_MESSAGES/index.mo
-writing output... [ 47%] ../locale/ja/LC_MESSAGES/essentials.mo
-writing output... [ 52%] ../locale/ja/LC_MESSAGES/settings.mo
-writing output... [ 57%] ../locale/ja/LC_MESSAGES/administration.mo
-writing output... [ 63%] ../locale/ja/LC_MESSAGES/inventory_and_mrp.mo
-writing output... [ 68%] ../locale/ja/LC_MESSAGES/marketing.mo
+writing output... [  5%] ../locale/ja/LC_MESSAGES/finance.mo
+writing output... [ 10%] ../locale/ja/LC_MESSAGES/essentials.mo
+writing output... [ 15%] ../locale/ja/LC_MESSAGES/legal.mo
+writing output... [ 21%] ../locale/ja/LC_MESSAGES/inventory_and_mrp.mo
+writing output... [ 26%] ../locale/ja/LC_MESSAGES/hr.mo
+writing output... [ 31%] ../locale/ja/LC_MESSAGES/applications.mo
+writing output... [ 36%] ../locale/ja/LC_MESSAGES/contributing.mo
+writing output... [ 42%] ../locale/ja/LC_MESSAGES/sales.mo
+writing output... [ 47%] ../locale/ja/LC_MESSAGES/last_build.mo
+writing output... [ 52%] ../locale/ja/LC_MESSAGES/administration.mo
+writing output... [ 57%] ../locale/ja/LC_MESSAGES/developer.mo
+writing output... [ 63%] ../locale/ja/LC_MESSAGES/marketing.mo
+writing output... [ 68%] ../locale/ja/LC_MESSAGES/productivity.mo
 writing output... [ 73%] ../locale/ja/LC_MESSAGES/services.mo
-writing output... [ 78%] ../locale/ja/LC_MESSAGES/studio.mo
-writing output... [ 84%] ../locale/ja/LC_MESSAGES/developer.mo
-writing output... [ 89%] ../locale/ja/LC_MESSAGES/legal.mo
-writing output... [ 94%] ../locale/ja/LC_MESSAGES/last_build.mo
-writing output... [100%] ../locale/ja/LC_MESSAGES/productivity.mo
+writing output... [ 78%] ../locale/ja/LC_MESSAGES/index.mo
+writing output... [ 84%] ../locale/ja/LC_MESSAGES/general.mo
+writing output... [ 89%] ../locale/ja/LC_MESSAGES/settings.mo
+writing output... [ 94%] ../locale/ja/LC_MESSAGES/websites.mo
+writing output... [100%] ../locale/ja/LC_MESSAGES/studio.mo
 
 building [html]: targets for 1031 source files that are out of date
 updating environment: [new config] 1031 added, 0 changed, 0 removed
