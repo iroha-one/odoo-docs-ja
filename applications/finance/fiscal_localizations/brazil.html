@@ -2786,6 +2786,47 @@ the <span class="guilabel">Distribution for invoices</span> and <span class="gui
 how the product will be used.</p>
 </section><section id="e-invoice-for-goods-nf-e">
 <h4>商品用電子請求書 (NF-e)<a class="headerlink" href="#e-invoice-for-goods-nf-e" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="alert alert-warning">
+<p class="alert-title">
+重要</p><p>The <a class="reference internal" href="#localizations-brazil-avatax-account"><span class="std std-ref">Avalara integration</span></a> works on a credit-based
+system, where each interaction with Avalara consumes one credit. Below are the main
+credit-consuming operations:</p>
+<p><strong>Sales application</strong></p>
+<ul class="simple">
+<li><p>Tax calculation on quotations and sales orders.</p></li>
+</ul>
+<p><strong>Accounting application</strong></p>
+<ul class="simple">
+<li><p>Tax calculation on invoices.</p></li>
+<li><p>Electronic invoice submission (NF-e or NFS-e).</p></li>
+</ul>
+<p><strong>Occasional operations</strong>: (each step is billed separately)</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#localizations-brazil-correction-letter"><span class="std std-ref">Correction letter (Carta de Correção)</span></a></p></li>
+<li><p><a class="reference internal" href="#localizations-brazil-invoice-cancellation"><span class="std std-ref">Invoice cancellation</span></a></p></li>
+<li><p><a class="reference internal" href="#localizations-brazil-credit-notes"><span class="std std-ref">Sales refund via credit note</span></a></p></li>
+<li><p><a class="reference internal" href="#localizations-brazil-debit-notes"><span class="std std-ref">Sales complementary invoice via debit note</span></a></p></li>
+<li><p><a class="reference internal" href="#localizations-brazil-invalidate-invoice-number"><span class="std std-ref">Invalidate invoice number range</span></a></p></li>
+<li><p>Other tax validations.</p></li>
+</ul>
+</div>
+<div class="alert alert-primary">
+<p class="alert-title">
+注釈</p><p>If taxes are calculated in the <strong>Sales</strong> app, and the invoice is later issued in the
+<strong>Accounting</strong> app, the calculation happens twice, consuming two credits.</p>
+</div>
+<div class="alert alert-success">
+<p class="alert-title">
+Example</p><div class="line-block">
+<div class="line"><strong>Sales order confirmed</strong></div>
+<div class="line"><i class="fa fa-arrow-down"></i> 1 credit (tax calculation)</div>
+<div class="line"><strong>Invoice created</strong></div>
+<div class="line"><i class="fa fa-arrow-down"></i> 1 credit (tax calculation)</div>
+<div class="line"><strong>Invoice confirmed and submitted</strong></div>
+<div class="line"><i class="fa fa-arrow-down"></i> 1 credit (tax calculation) + 1 credit (submit invoice)</div>
+<div class="line"><strong>Total: 4 credits</strong></div>
+</div>
+</div>
 <ul class="simple">
 <li><p><span class="guilabel">CEST Code</span>: code for products subject to ICMS tax substitution</p></li>
 <li><p><span class="guilabel">Mercosul NCM コード</span>: Mercosur共通名称 プロダクトコード</p></li>
@@ -2808,6 +2849,48 @@ and are already configured. If more need to be created, duplicate and use the sa
 </div>
 </section><section id="e-invoice-for-services-nfs-e">
 <h4>サービス用電子請求 (NFS-e)<a class="headerlink" href="#e-invoice-for-services-nfs-e" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="alert alert-warning">
+<p class="alert-title">
+重要</p><p>The <a class="reference internal" href="#localizations-brazil-avatax-account"><span class="std std-ref">Avalara integration</span></a> works on a credit-based
+system, where each interaction with Avalara consumes 1 credit. Below are the main
+credit-consuming operations:</p>
+<p><strong>Sales application</strong></p>
+<ul class="simple">
+<li><p>Tax calculation on quotations and sales orders.</p></li>
+</ul>
+<p><strong>Accounting application</strong></p>
+<ul class="simple">
+<li><p>Tax calculation on invoices.</p></li>
+<li><p>Electronic invoice submission (NF-e or NFS-e).</p></li>
+<li><p>Invoice status check (1 credit is consumed each time the invoice status is checked).</p></li>
+</ul>
+<p><strong>Occasional operations</strong>: (each step is billed separately)</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#localizations-brazil-correction-letter"><span class="std std-ref">Correction letter (Carta de Correção)</span></a></p></li>
+<li><p><a class="reference internal" href="#localizations-brazil-invoice-cancellation"><span class="std std-ref">Invoice cancellation</span></a></p></li>
+<li><p><a class="reference internal" href="#localizations-brazil-credit-notes"><span class="std std-ref">Sales refund via credit note</span></a></p></li>
+<li><p><a class="reference internal" href="#localizations-brazil-debit-notes"><span class="std std-ref">Sales complementary invoice via debit note</span></a></p></li>
+<li><p><a class="reference internal" href="#localizations-brazil-invalidate-invoice-number"><span class="std std-ref">Invalidate invoice number range</span></a></p></li>
+<li><p>Other tax validations.</p></li>
+</ul>
+</div>
+<div class="alert alert-primary">
+<p class="alert-title">
+注釈</p><p>If taxes are calculated in the <strong>Sales</strong> app, and the invoice is later issued in the
+<strong>Accounting</strong> app, the calculation happens twice, consuming two credits.</p>
+</div>
+<div class="alert alert-success">
+<p class="alert-title">
+Example</p><div class="line-block">
+<div class="line"><strong>Sales order confirmed</strong></div>
+<div class="line"><i class="fa fa-arrow-down"></i> 1 credit (tax calculation)</div>
+<div class="line"><strong>Invoice created</strong></div>
+<div class="line"><i class="fa fa-arrow-down"></i> 1 credit (tax calculation)</div>
+<div class="line"><strong>Invoice confirmed and submitted</strong></div>
+<div class="line"><i class="fa fa-arrow-down"></i> 1 credit (tax calculation) + 1 credit (submit invoice)</div>
+<div class="line"><strong>Total: 4 credits</strong></div>
+</div>
+</div>
 <ul class="simple">
 <li><p><span class="guilabel">Mercosul NCM コード</span>: Mercosur共通名称 プロダクトコード</p></li>
 <li><p><span class="guilabel">Purpose of Use</span>: intended purpose of use for this product</p></li>
@@ -3193,6 +3276,21 @@ also issued in XML file format and has an auxiliary document (DANFC-e) known as 
 This electronic document can be issued through <strong>Odoo Point of Sale app</strong>.</p>
 <p>Its legal validity is guaranteed by the digital signature and by each Brazilian state's SEFAZ
 (Secretaria da Fazenda).</p>
+<div class="alert alert-warning">
+<p class="alert-title">
+重要</p><p>The <a class="reference internal" href="#localizations-brazil-avatax-account"><span class="std std-ref">Avalara integration</span></a> operates on a credit-based
+system. Each operation that involves communication with Avalara consumes one credit. The following
+operations within the <strong>Point of Sale</strong> (POS) application are subject to credit consumption:</p>
+<ul class="simple">
+<li><p>Tax calculation at the time of sale</p></li>
+<li><p>Electronic invoice issuance (NFC-e)</p></li>
+</ul>
+</div>
+<div class="alert alert-primary">
+<p class="alert-title">
+注釈</p><p>Each step is billed separately. For example, calculating taxes and issuing an invoice for the
+same POS transaction consume two credits.</p>
+</div>
 <div class="alert alert-secondary">
 <p class="alert-title">
 関連項目</p><p><a class="reference internal" href="../../sales/point_of_sale.html"><span class="doc">Point of Sale</span></a></p>

@@ -1273,7 +1273,10 @@
 <li><a class="reference internal" href="#">デンマーク</a><ul>
 <li><a class="reference internal" href="#compliance-with-danish-bookkeeping-requirements-data-retention-and-integrity">Compliance with Danish bookkeeping requirements: data retention and integrity</a><ul>
 <li><a class="reference internal" href="#key-requirements-of-the-danish-bookkeeping-act">Key requirements of the Danish Bookkeeping Act</a></li>
-<li><a class="reference internal" href="#odoo-compliance-measures">Odoo compliance measures</a></li>
+<li><a class="reference internal" href="#odoo-compliance">Odoo Compliance</a><ul>
+<li><a class="reference internal" href="#conditions-for-full-dba-compliance">Conditions for full DBA compliance</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#immutable-transaction-records">Immutable transaction records</a></li>
 <li><a class="reference internal" href="#secure-document-storage">Secure document storage</a></li>
 <li><a class="reference internal" href="#continuous-data-availability">Continuous data availability</a></li>
@@ -2602,22 +2605,47 @@
 specifically regarding the storage and integrity of financial transactions and receipts.
 Odoo recognizes the importance of adhering to Danish regulations and has implemented robust
 measures to ensure clients' data is secure and compliant.</p>
+<div class="alert alert-warning">
+<p class="alert-title">
+重要</p><p>Odoo’s registration as a digital bookkeeping system has been confirmed by the Danish Business
+Authority under registration numbers <code class="o_code docutils literal notranslate"><span class="pre">fob585505</span></code> and <code class="o_code docutils literal notranslate"><span class="pre">fob441967</span></code>. Customers must meet certain
+conditions to benefit from it, as outlined below.</p>
+</div>
 </section><section id="key-requirements-of-the-danish-bookkeeping-act">
 <h3>Key requirements of the Danish Bookkeeping Act<a class="headerlink" href="#key-requirements-of-the-danish-bookkeeping-act" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>The Danish Bookkeeping Act (DBA) outlines the <a class="reference external" href="https://danishbusinessauthority.dk/requirements-digital-bookkeeping-systems">requirements for digital bookkeping systems</a>:</p>
 <ul class="simple">
 <li><p><strong>Retain transactional data and receipts:</strong> Store all recorded transactions and receipts
 covered by § 3 for a minimum of five years from the end of the financial year to which they pertain.</p></li>
-<li><p><strong>Ensure data integrity:</strong> Prevent the company from changing, backdating, or deleting recorded transactions.</p></li>
+<li><p><strong>Ensure data integrity:</strong> Prevent the customer from changing, backdating, or deleting recorded transactions.</p></li>
 <li><p><strong>Maintain data accessibility:</strong> Store all recorded transactions in a structured and machine-readable format
 for the required five-year period, regardless of customer relationship status, bankruptcy, or dissolution.</p></li>
 <li><p><strong>Provide decryption capabilities:</strong> Ensure that encrypted bookkeeping data and receipts can be decrypted
 into a structured and readable format.</p></li>
 </ul>
-</section><section id="odoo-compliance-measures">
-<h3>Odoo compliance measures<a class="headerlink" href="#odoo-compliance-measures" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>For companies using Odoo on Odoo Cloud hosting specifically, these requirements are met
-through the following features and processes:</p>
+</section><section id="odoo-compliance">
+<h3>Odoo Compliance<a class="headerlink" href="#odoo-compliance" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>Odoo's registration as digital standard bookkeeping systems with the Danish Business Authority
+confirms that Odoo meets the applicable criteria for digital bookkeeping systems in Denmark,
+in accordance with the requirements of the <abbr title="Danish Bookkeeping Act">DBA</abbr>.</p>
+<p>However, to benefit from all the required guarantees for digital bookkeeping systems in Denmark,
+customers must meet a few conditions.</p>
+</section><section id="conditions-for-full-dba-compliance">
+<h4>Conditions for full DBA compliance<a class="headerlink" href="#conditions-for-full-dba-compliance" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<ul class="simple">
+<li><p>The customer uses Odoo Accounting on the Odoo SaaS platform (Odoo Online);</p></li>
+<li><p>The customer has an active Odoo subscription (e.g., Standard or Custom Plan), or their database is
+managed by an officially registered <a class="reference external" href="https://www.odoo.com/accounting-firms">Odoo Accounting Firm</a>;</p></li>
+<li><p>The customer refrains from customizations or actions intended to undermine the system’s immutability,
+traceability, or security controls.</p></li>
+</ul>
+<div class="alert alert-primary">
+<p class="alert-title">
+注釈</p><p>Customers using Odoo products outside these conditions are responsible for ensuring their own
+compliance with the DBA.</p>
+</div>
+<p>When the above conditions are met, the requirements of the DBA are fulfilled through features and
+processes described in the following sections.</p>
 </section><section id="immutable-transaction-records">
 <h3>Immutable transaction records<a class="headerlink" href="#immutable-transaction-records" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
@@ -2643,9 +2671,9 @@ and digital voucher details to former clients for six years (see <a class="refer
 </section><section id="automated-data-export-and-secure-storage">
 <h3>Automated data export and secure storage<a class="headerlink" href="#automated-data-export-and-secure-storage" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
-<li><p>Odoo Accounting implements no automatic deletion or archival of recorded transactions, so if a company has
+<li><p>Odoo Accounting implements no automatic deletion or archival of recorded transactions, so if a customer has
 been recording transactions for six years, the six years of history are preserved in the Odoo Accounting database.</p></li>
-<li><p>As described in the <a class="reference external" href="https://www.odoo.com/cloud-sla">Odoo SLA</a> and
+<li><p>As described in the <a class="reference external" href="https://www.odoo.com/cloud-sla">Odoo Cloud Hosting SLA</a> and
 <a class="reference external" href="https://www.odoo.com/privacy">Odoo Privacy Policy</a>, the Odoo Cloud relies on immutable daily snapshot
 backups, which cannot be individually altered or deleted, even at the customer's request, ensuring their integrity.</p></li>
 <li><p>All documents and receipts stored in a database backup are available as a standard ZIP archive accompanying
@@ -2656,12 +2684,10 @@ the SQL dump.</p></li>
 <ul class="simple">
 <li><p>Odoo database backups are available in standard SQL dump formats at all times and include all recorded
 transactions.</p></li>
-<li><p>The default Odoo Cloud SLA guarantees three months of backup history to all active customers. As a special guarantee for
-Danish companies subject to the <abbr title="Danish Bookkeeping Act">DBA</abbr> and who opt for an Odoo Cloud solution, the backup retention gets increased
-to six years as soon as they decide to terminate their Odoo Cloud subscription, in order to comply with the
-requirements of Annex 1, 4 of Executive Order 97.</p></li>
-<li><p>Companies who are using Odoo products outside of the Odoo Cloud are responsible for implementing their
-own compliance with the <abbr title="Danish Bookkeeping Act">DBA</abbr>.</p></li>
+<li><p>The <a class="reference external" href="https://www.odoo.com/cloud-sla">Odoo Cloud Hosting SLA</a> guarantees three months of backup history to all
+active customers. As a special guarantee for Danish customers subject to the DBA and meeting the conditions
+highlighted above the last Odoo Cloud backup retention gets increased to six years as soon as they decide to
+terminate their Odoo Cloud subscription, in order to comply with the requirements of Annex 1, 4 of Executive Order 97.</p></li>
 </ul>
 </section><section id="decryption">
 <h3>Decryption<a class="headerlink" href="#decryption" title="このヘッドラインへのパーマリンク">¶</a></h3>
@@ -2680,7 +2706,10 @@ standard formats for the user: SQL dumps + ZIP archive of all attached documents
 <li><a class="reference internal" href="#">デンマーク</a><ul>
 <li><a class="reference internal" href="#compliance-with-danish-bookkeeping-requirements-data-retention-and-integrity">Compliance with Danish bookkeeping requirements: data retention and integrity</a><ul>
 <li><a class="reference internal" href="#key-requirements-of-the-danish-bookkeeping-act">Key requirements of the Danish Bookkeeping Act</a></li>
-<li><a class="reference internal" href="#odoo-compliance-measures">Odoo compliance measures</a></li>
+<li><a class="reference internal" href="#odoo-compliance">Odoo Compliance</a><ul>
+<li><a class="reference internal" href="#conditions-for-full-dba-compliance">Conditions for full DBA compliance</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#immutable-transaction-records">Immutable transaction records</a></li>
 <li><a class="reference internal" href="#secure-document-storage">Secure document storage</a></li>
 <li><a class="reference internal" href="#continuous-data-availability">Continuous data availability</a></li>

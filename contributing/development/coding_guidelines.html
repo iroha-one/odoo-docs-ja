@@ -1279,9 +1279,9 @@
 </li>
 <li><a class="reference internal" href="#xml-files">XML ファイル</a><ul>
 <li><a class="reference internal" href="#format">書式</a></li>
-<li><a class="reference internal" href="#xml-ids-and-naming">XML IDと名前</a><ul>
+<li><a class="reference internal" href="#xml-ids-and-naming">XML IDとその命名規則</a><ul>
 <li><a class="reference internal" href="#security-view-and-action">セキュリティ、表示、アクション</a></li>
-<li><a class="reference internal" href="#inheriting-xml">XMLの継承中</a></li>
+<li><a class="reference internal" href="#inheriting-xml">XMLの継承</a></li>
 </ul>
 </li>
 </ul>
@@ -2809,15 +2809,14 @@
 <span id="contributing-development-xml-guidelines"></span><h2>XML ファイル<a class="headerlink" href="#xml-files" title="このヘッドラインへのパーマリンク">¶</a></h2>
 </section><section id="format">
 <h3>書式<a class="headerlink" href="#format" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>XMLでレコードを宣言するには、<strong>記録</strong> (<a href="#id1"><span class="problematic" id="id2">*</span></a>&lt;record&gt;*を使用) を推奨します。</p>
+<p>XML でレコードを宣言するには、<strong>record</strong> 表記（<em>&lt;record&gt;</em> を使用）を推奨します：</p>
 <ul class="simple">
-<li><p><code class="o_code docutils literal notranslate"><span class="pre">model</span></code> の前に <code class="o_code docutils literal notranslate"><span class="pre">id</span></code> 属性を配置します</p></li>
-<li><p>フィールド宣言の場合、<code class="o_code docutils literal notranslate"><span class="pre">name</span></code> 属性が最初です。 次に、<code class="o_code docutils literal notranslate"><span class="pre">field</span></code> タグのどちらかに <em>value</em> を、<code class="o_code docutils literal notranslate"><span class="pre">eval</span></code> 属性のどちらかに、そして最後に重要性によって順序付けられた他の属性 (ウィジェット、オプション、...) に配置します。</p></li>
-<li><p>モデル別にレコードをグループ化してみてください。アクション/メニュー/ビュー間の依存関係がある場合、この規則は適用できない場合があります。</p></li>
-<li><p>次の点で定義された命名規則を使用する</p></li>
-<li><p>The tag <em>&lt;data&gt;</em> is only used to set not-updatable data with <code class="o_code docutils literal notranslate"><span class="pre">noupdate=1</span></code>.
-If there is only not-updatable data in the file, the <code class="o_code docutils literal notranslate"><span class="pre">noupdate=1</span></code> can be
-set on the <code class="o_code docutils literal notranslate"><span class="pre">&lt;odoo&gt;</span></code> tag and do not set a <code class="o_code docutils literal notranslate"><span class="pre">&lt;data&gt;</span></code> tag.</p></li>
+<li><p><code class="o_code docutils literal notranslate"><span class="pre">model</span></code> 属性の前に <code class="o_code docutils literal notranslate"><span class="pre">id</span></code> 属性を配置します</p></li>
+<li><p>フィールドを宣言する際は、まず <code class="o_code docutils literal notranslate"><span class="pre">name</span></code> 属性を記述します。その後、　<em>値</em> を <code class="o_code docutils literal notranslate"><span class="pre">field</span></code> タグ内、または <code class="o_code docutils literal notranslate"><span class="pre">eval</span></code> 属性のいずれかに記述し、最後にその他の属性（widget、options など）を重要度順に並べます。</p></li>
+<li><p>レコードはできるだけモデルごとにまとめて記述するようにしてください。ただし、アクション／メニュー／ビュー間に依存関係がある場合、この規則は適用できないことがあります。</p></li>
+<li><p>次の項で定義されている命名規則を使用してください</p></li>
+<li><p><em>&lt;data&gt;</em> タグは、 <code class="o_code docutils literal notranslate"><span class="pre">noupdate=1</span></code> を指定して更新不可のデータを設定する場合にのみ使用されます。
+ファイル内に更新不可のデータしか含まれていない場合は、<code class="o_code docutils literal notranslate"><span class="pre">&lt;odoo&gt;</span></code> タグに <code class="o_code docutils literal notranslate"><span class="pre">noupdate=1</span></code> を指定し、 <code class="o_code docutils literal notranslate"><span class="pre">&lt;data&gt;</span></code> タグは使用しないでください。</p></li>
 </ul>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;view_id&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>view.name<span class="nt">&lt;/field&gt;</span>
@@ -2832,29 +2831,28 @@ set on the <code class="o_code docutils literal notranslate"><span class="pre">&
 <span class="nt">&lt;/record&gt;</span>
 </pre></div>
 </div>
-<p>Odooは構文糖として機能するカスタムタグをサポートしています:</p>
+<p>Odooは糖衣構文として機能するカスタムタグをサポートしています：</p>
 <ul class="simple">
 <li><p>menuitem: <code class="o_code docutils literal notranslate"><span class="pre">ir.ui.menu</span></code> を宣言するためのショートカットとして使用する</p></li>
 <li><p>template: ビューの <code class="o_code docutils literal notranslate"><span class="pre">arch</span></code> セクションのみが必要な QWeb ビューを宣言するために使用します。</p></li>
 </ul>
-<p>これらのタグは <em>レコード</em> 表記よりも優先されます。</p>
+<p>これらのタグは <em>record</em> 表記よりも優先されます。</p>
 </section><section id="xml-ids-and-naming">
-<h3>XML IDと名前<a class="headerlink" href="#xml-ids-and-naming" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>XML IDとその命名規則<a class="headerlink" href="#xml-ids-and-naming" title="このヘッドラインへのパーマリンク">¶</a></h3>
 </section><section id="security-view-and-action">
 <h4>セキュリティ、表示、アクション<a class="headerlink" href="#security-view-and-action" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>次のパターンを使用します。</p>
 <ul class="simple">
-<li><p>メニューの場合: <code class="samp o_code docutils literal notranslate"><em><span class="pre">&lt;model_name&gt;</span></em><span class="pre">_menu</span></code>, or <code class="samp o_code docutils literal notranslate"><em><span class="pre">&lt;model_name&gt;</span></em><span class="pre">_menu_</span><em><span class="pre">do_stuff</span></em></code> のサブメニュー。</p></li>
-<li><p>ビューについて: <code class="samp o_code docutils literal notranslate"><em><span class="pre">&lt;model_name&gt;</span></em><span class="pre">_view_</span><em><span class="pre">&lt;view_type&gt;</span></em></code>, <em>view_type</em> は <code class="o_code docutils literal notranslate"><span class="pre">kanban</span></code>, <code class="o_code docutils literal notranslate"><span class="pre">form</span></code>, <code class="o_code docutils literal notranslate"><span class="pre">list</span></code>, <code class="o_code docutils literal notranslate"><span class="pre">search</span></code>, ...</p></li>
-<li><p>For an action: the main action respects <code class="samp o_code docutils literal notranslate"><em><span class="pre">&lt;model_name&gt;</span></em><span class="pre">_action</span></code>.
-Others are suffixed with <code class="samp o_code docutils literal notranslate"><span class="pre">_</span><em><span class="pre">&lt;detail&gt;</span></em></code>, where <em>detail</em> is a
-lowercase string briefly explaining the action. This is used only if
-multiple actions are declared for the model.</p></li>
-<li><p>ウィンドウアクションの場合: <code class="samp o_code docutils literal notranslate"><em><span class="pre">&lt;model_name&gt;</span></em><span class="pre">_action_view_</span><em><span class="pre">&lt;view_type&gt;</span> </em></code> のような特定のビュー情報でアクション名をサフィックスします。</p></li>
-<li><p>グループの場合: <code class="samp o_code docutils literal notranslate"><em><span class="pre">&lt;module_name&gt;</span></em><span class="pre">_group_</span><em><span class="pre">&lt;group_name&gt;</span></em></code> <em>group_name</em> はグループの名前です。一般的には 'user', 'manager', ...</p></li>
-<li><p>ルールの場合: <code class="samp o_code docutils literal notranslate"><em><span class="pre">&lt;model_name&gt;</span></em><span class="pre">_rule_</span><em><span class="pre">&lt;concerned_group&gt;</span></em></code> ここで <em>concerned_group</em> は関係するグループの短い名前です ('user' for the 'model_name_group_user', 公開ユーザーの「公開」、マルチ企業規則の「会社」。 ).</p></li>
+<li><p>メニューの場合: <code class="samp o_code docutils literal notranslate"><em><span class="pre">&lt;model_name&gt;</span></em><span class="pre">_menu</span></code> 。サブメニューの場合は、 <code class="samp o_code docutils literal notranslate"><em><span class="pre">&lt;model_name&gt;</span></em><span class="pre">_menu_</span><em><span class="pre">do_stuff</span></em></code> 。</p></li>
+<li><p>ビューの場合: <code class="samp o_code docutils literal notranslate"><em><span class="pre">&lt;model_name&gt;</span></em><span class="pre">_view_</span><em><span class="pre">&lt;view_type&gt;</span></em></code>。 ここでの <em>view_type</em> は <code class="o_code docutils literal notranslate"><span class="pre">kanban</span></code>, <code class="o_code docutils literal notranslate"><span class="pre">form</span></code>, <code class="o_code docutils literal notranslate"><span class="pre">list</span></code>, <code class="o_code docutils literal notranslate"><span class="pre">search</span></code> などです。</p></li>
+<li><p>アクションの場合: メインのアクションには <code class="samp o_code docutils literal notranslate"><em><span class="pre">&lt;model_name&gt;</span></em><span class="pre">_action</span></code> という命名規則に従います。
+他のアクションには <code class="samp o_code docutils literal notranslate"><span class="pre">_</span><em><span class="pre">&lt;detail&gt;</span></em></code> という接尾辞を付けます。ここでの <em>detail</em> は、そのアクションの内容を簡潔に表す小文字の文字列です。これは、同じモデルに対して複数のアクションが定義されている場合にのみ適用されます。</p></li>
+<li><p>ウィンドウアクションの場合: <code class="samp o_code docutils literal notranslate"><em><span class="pre">&lt;model_name&gt;</span></em><span class="pre">_action_view_</span><em><span class="pre">&lt;view_type&gt;</span> </em></code> のような特定のビュー情報でアクション名に接尾辞を付けます。</p></li>
+<li><p>グループの場合: <code class="samp o_code docutils literal notranslate"><em><span class="pre">&lt;module_name&gt;</span></em><span class="pre">_group_</span><em><span class="pre">&lt;group_name&gt;</span></em></code> 。ここでの <em>group_name</em> はグループの名前です。一般的には 'user', 'manager' などがあります…</p></li>
+<li><p>ルールの場合: <code class="samp o_code docutils literal notranslate"><em><span class="pre">&lt;model_name&gt;</span></em><span class="pre">_rule_</span><em><span class="pre">&lt;concerned_group&gt;</span></em></code> 。ここでの <em>concerned_group</em> には、対象となるグループの短い名称を指定します（ 'model_name_group_user' には、 'user' 、公開ユーザーには、 'public' 、マルチカンパニー用ルールには、 'company' のように）。</p></li>
 </ul>
-<p>名前は xml id と同じで、アンダースコアを置き換えるドットである必要があります。表示名として使用されるアクションは実際の名前を持つ必要があります。</p>
+<p>Nameは、XML IDのアンダースコア（_）をドット（.）に置き換えた同一な名称にしてください。
+また、アクションには実際に意味のある名称を付けてください。これは、その名称が表示名として使用されるからです。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- views  --&gt;</span>
 <span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;model_name_view_form&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>model.name.view.form<span class="nt">&lt;/field&gt;</span>
@@ -2905,9 +2903,9 @@ multiple actions are declared for the model.</p></li>
 </pre></div>
 </div>
 </section><section id="inheriting-xml">
-<h4>XMLの継承中<a class="headerlink" href="#inheriting-xml" title="このヘッドラインへのパーマリンク">¶</a></h4>
-<p>ビューを継承する XML ID は、元のレコードと同じ ID を使用する必要があります。一目ですべての継承を見つけるのに役立ちます。 最終的なXml Idsはそれらを作成するモジュールの前に追加されるため、重複はありません。</p>
-<p>名前は <code class="o_code docutils literal notranslate"><span class="pre">.inherited</span> <span class="pre">from</span> <span class="pre">に含まれている必要があります。{details}</span></code> サフィックスは、その名前を参照するときにオーバーライドの目的を理解しやすくします。</p>
+<h4>XMLの継承<a class="headerlink" href="#inheriting-xml" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<p>継承ビューの XML ID は、元のレコードと同じ ID を使用するようにしてください。これにより、どのビューがどれを継承しているのかを一目で把握しやすくなります。最終的な XML ID は、それを作成したモジュールに対応する接頭辞が付くため、他のモジュールと衝突することはありません。</p>
+<p>命名には <code class="o_code docutils literal notranslate"><span class="pre">.inherit.{details}</span></code> という接尾辞を含めてください。これにより、name を見ただけで何をオーバーライドしているのかが明確になり、理解しやすくなります。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;model_view_form&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>model.view.form.inherit.module2<span class="nt">&lt;/field&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;inherit_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;module1.model_view_form&quot;</span><span class="nt">/&gt;</span>
@@ -2915,7 +2913,7 @@ multiple actions are declared for the model.</p></li>
 <span class="nt">&lt;/record&gt;</span>
 </pre></div>
 </div>
-<p>新しいプライマリビューでは、最初のレコードに基づく新しいレコードなので、継承サフィックスは必要ありません。</p>
+<p>新しいプライマリビューには inherit 接尾辞を付ける必要はありません。それは既存ビューの継承ではなく、元となるビューに基づいて新たに定義される独立したレコードであるためです。</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;record</span> <span class="na">id=</span><span class="s">&quot;module2.model_view_form&quot;</span> <span class="na">model=</span><span class="s">&quot;ir.ui.view&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>model.view.form.module2<span class="nt">&lt;/field&gt;</span>
     <span class="nt">&lt;field</span> <span class="na">name=</span><span class="s">&quot;inherit_id&quot;</span> <span class="na">ref=</span><span class="s">&quot;module1.model_view_form&quot;</span><span class="nt">/&gt;</span>
@@ -3744,9 +3742,9 @@ Example</p><div class="literal-block-wrapper docutils container" id="id3">
 </li>
 <li><a class="reference internal" href="#xml-files">XML ファイル</a><ul>
 <li><a class="reference internal" href="#format">書式</a></li>
-<li><a class="reference internal" href="#xml-ids-and-naming">XML IDと名前</a><ul>
+<li><a class="reference internal" href="#xml-ids-and-naming">XML IDとその命名規則</a><ul>
 <li><a class="reference internal" href="#security-view-and-action">セキュリティ、表示、アクション</a></li>
-<li><a class="reference internal" href="#inheriting-xml">XMLの継承中</a></li>
+<li><a class="reference internal" href="#inheriting-xml">XMLの継承</a></li>
 </ul>
 </li>
 </ul>
