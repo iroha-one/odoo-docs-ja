@@ -8294,7 +8294,7 @@ Example</p><p>ガントビューでレコードを作成したくない場合は
 </div>
 </section><section id="api">
 <h3>API<a class="headerlink" href="#api" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>ビューは、タイルを取得するために位置データプラットフォームの API を使用します (マップの背景)。 ジオフォワーディング(アドレスを座標のセットに変換)を行い、ルートを取得します。 ビューは、OpenStreetMapとMapBoxの2つのAPIを実装しています。OpenStreetMapはデフォルトで使用され、<a class="reference external" href="https://wiki.openstreetmap.org/wiki/Tile_data_server">tiles`_をフェッチして`geoforwarding</a> を行うことができます。 この API はトークンを必要としません。 一般設定で有効な <a class="reference external" href="https://docs.mapbox.com/api/">MapBox</a> トークンが提供されると、ビューは MapBox API に切り替わります。 この API はより高速で、ルートの計算を可能にします。トークンは MapBox に <a class="reference external" href="https://account.mapbox.com/auth/signup/">signing up</a> することで取得できます。</p>
+<p>ビューは、タイルを取得するために位置データプラットフォームの API を使用します (マップの背景)。 ジオフォワーディング(アドレスを座標のセットに変換)を行い、ルートを取得します。 ビューは、OpenStreetMapとMapBoxの2つのAPIを実装しています。OpenStreetMapはデフォルトで使用され、<a class="reference external" href="https://nominatim.org/release-docs/develop/">tiles`_をフェッチして`geoforwarding</a> を行うことができます。 この API はトークンを必要としません。 一般設定で有効な <a class="reference external" href="https://docs.mapbox.com/api/">MapBox</a> トークンが提供されると、ビューは MapBox API に切り替わります。 この API はより高速で、ルートの計算を可能にします。トークンは MapBox に <a class="reference external" href="https://account.mapbox.com/auth/signup/">signing up</a> することで取得できます。</p>
 </section><section id="id20">
 <h3>構造部品<a class="headerlink" href="#id20" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>ビューのルート要素は <code class="o_code docutils literal notranslate"><span class="pre">&lt;map&gt;</span></code> です。次の属性を持つことができます。</p>

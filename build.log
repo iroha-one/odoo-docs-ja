@@ -15,24 +15,24 @@ loading intersphinx inventory from ../invs/python.inv...
 loading intersphinx inventory from ../invs/werkzeug.inv...
 building [mo]: targets for 19 po files that are out of date
 writing output... [  5%] ../locale/ja/LC_MESSAGES/general.mo
-writing output... [ 10%] ../locale/ja/LC_MESSAGES/developer.mo
+writing output... [ 10%] ../locale/ja/LC_MESSAGES/studio.mo
 writing output... [ 15%] ../locale/ja/LC_MESSAGES/websites.mo
-writing output... [ 21%] ../locale/ja/LC_MESSAGES/settings.mo
+writing output... [ 21%] ../locale/ja/LC_MESSAGES/developer.mo
 writing output... [ 26%] ../locale/ja/LC_MESSAGES/legal.mo
-writing output... [ 31%] ../locale/ja/LC_MESSAGES/marketing.mo
-writing output... [ 36%] ../locale/ja/LC_MESSAGES/sales.mo
-writing output... [ 42%] ../locale/ja/LC_MESSAGES/inventory_and_mrp.mo
-writing output... [ 47%] ../locale/ja/LC_MESSAGES/contributing.mo
-writing output... [ 52%] ../locale/ja/LC_MESSAGES/administration.mo
-writing output... [ 57%] ../locale/ja/LC_MESSAGES/index.mo
-writing output... [ 63%] ../locale/ja/LC_MESSAGES/hr.mo
-writing output... [ 68%] ../locale/ja/LC_MESSAGES/studio.mo
-writing output... [ 73%] ../locale/ja/LC_MESSAGES/essentials.mo
-writing output... [ 78%] ../locale/ja/LC_MESSAGES/applications.mo
-writing output... [ 84%] ../locale/ja/LC_MESSAGES/productivity.mo
-writing output... [ 89%] ../locale/ja/LC_MESSAGES/finance.mo
-writing output... [ 94%] ../locale/ja/LC_MESSAGES/services.mo
-writing output... [100%] ../locale/ja/LC_MESSAGES/last_build.mo
+writing output... [ 31%] ../locale/ja/LC_MESSAGES/essentials.mo
+writing output... [ 36%] ../locale/ja/LC_MESSAGES/finance.mo
+writing output... [ 42%] ../locale/ja/LC_MESSAGES/index.mo
+writing output... [ 47%] ../locale/ja/LC_MESSAGES/marketing.mo
+writing output... [ 52%] ../locale/ja/LC_MESSAGES/productivity.mo
+writing output... [ 57%] ../locale/ja/LC_MESSAGES/services.mo
+writing output... [ 63%] ../locale/ja/LC_MESSAGES/applications.mo
+writing output... [ 68%] ../locale/ja/LC_MESSAGES/last_build.mo
+writing output... [ 73%] ../locale/ja/LC_MESSAGES/contributing.mo
+writing output... [ 78%] ../locale/ja/LC_MESSAGES/administration.mo
+writing output... [ 84%] ../locale/ja/LC_MESSAGES/hr.mo
+writing output... [ 89%] ../locale/ja/LC_MESSAGES/sales.mo
+writing output... [ 94%] ../locale/ja/LC_MESSAGES/settings.mo
+writing output... [100%] ../locale/ja/LC_MESSAGES/inventory_and_mrp.mo
 
 building [html]: targets for 1031 source files that are out of date
 updating environment: [new config] 1031 added, 0 changed, 0 removed
@@ -1653,10 +1653,7 @@ waiting for workers...
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/restrict_data_access.rst:377: WARNING: inconsistent term references in translated message. original: [':ref:`reference/howtos/company`', ':ref:`multi-company security rules <howto/company/security>`'], translated: []
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/restrict_data_access.rst:431:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/restrict_data_access.rst:431: WARNING: inconsistent term references in translated message. original: [':ref:`global <reference/security/rules/global>`'], translated: []
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/server_framework_101.rst:25:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/server_framework_101.rst:41:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/server_framework_101.rst:25:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
-/home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/server_framework_101.rst:25: WARNING: inconsistent term references in translated message. original: [':doc:`setup guide <setup_guide>`'], translated: []
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/server_framework_101.rst:41:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/server_framework_101.rst:41: WARNING: inconsistent term references in translated message. original: [':doc:`server_framework_101/12_inheritance`'], translated: []
 /home/runner/work/odoo-docs-ja/odoo-docs-ja/content/developer/tutorials/server_framework_101/01_architecture.rst:124:<translated>:1: WARNING: Inline interpreted text or phrase reference start-string without end-string.
@@ -8193,7 +8190,7 @@ copying static files... done
 copying extra files... done
 dumping search index in Japanese (code: ja)... done
 dumping object inventory... done
-build succeeded, 4454 warnings.
+build succeeded, 4451 warnings.
 
 The HTML pages are in _build/html/ja.
 Build finished.
