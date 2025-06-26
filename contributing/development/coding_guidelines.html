@@ -3239,10 +3239,7 @@ need to do that are exceptional!</p>
 <li><dl class="simple">
 <dt>モデル名 (ドット表記、プレフィックスをモジュール名で使用) :</dt><dd><ul>
 <li><p>Odoo Model を定義する場合: <em>res.partnerS</em> と <em>saleS.orderS</em> の代わりに <em>res.partner</em> と <em>sale.order</em> という名前の単一形式を使用してください</p></li>
-<li><p>When defining an Odoo Transient (wizard) : use <code class="o_code docutils literal notranslate"><span class="pre">&lt;related_base_model&gt;.&lt;action&gt;</span></code>
-where <em>related_base_model</em> is the base model (defined in <em>models/</em>) related
-to the transient, and <em>action</em> is the short name of what the transient do. Avoid the <em>wizard</em> word.
-For instance : <code class="o_code docutils literal notranslate"><span class="pre">account.invoice.make</span></code>, <code class="o_code docutils literal notranslate"><span class="pre">project.task.delegate.batch</span></code>, ...</p></li>
+<li><p>Odooの一時モデル（ウィザード）を定義する際は、 <code class="o_code docutils literal notranslate"><span class="pre">&lt;related_base_model&gt;.&lt;action&gt;</span></code> という形式を使用してください。ここでの <em>related_base_model</em> はその一時モデルに関連する基本モデル（ <em>models/</em> ディレクトリで定義）を指し、 <em>action</em> はその一時モデルが実行する処理の短い名前です。 <em>wizard</em> という語の使用は避けてください。例：account.invoice.make、project.task.delegate.batch など。</p></li>
 <li><p>When defining <em>report</em> model (SQL views e.i.) : use
 <code class="o_code docutils literal notranslate"><span class="pre">&lt;related_base_model&gt;.report.&lt;action&gt;</span></code>, based on the Transient convention.</p></li>
 </ul>
@@ -3610,7 +3607,7 @@ Example</p><div class="highlight-html notranslate"><div class="highlight"><pre><
 <div class="alert alert-secondary">
 <p class="alert-title">
 関連項目</p><ul class="simple">
-<li><p><a class="reference external" href="https://sass-lang.com/documentation/at-rules/mixin">Mixins on the SASS Documentation</a></p></li>
+<li><p><a class="reference external" href="https://sass-lang.com/documentation/at-rules/mixin">SASSドキュメントにおけるMixin</a></p></li>
 <li><p><a class="reference external" href="https://sass-lang.com/documentation/at-rules/function">SASSドキュメント上の関数</a></p></li>
 </ul>
 </div>

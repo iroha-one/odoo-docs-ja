@@ -2610,27 +2610,15 @@
 <span id="contributing-content-organization"></span><h2>ドキュメントの組織<a class="headerlink" href="#documentation-organization" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>特定のトピックに関するドキュメントを作成する場合は、ページを同じフォルダ内に保持します。</p>
 <p>ほとんどのトピックでは、単一のページがジョブを実行する必要があります。ドキュメントの適切なセクションに配置します (例: CRMアプリに関連するコンテンツは、 :menuselection:<a href="#id1"><span class="problematic" id="id2">`</span></a>User Docs --&gt; Sales --&gt; CRM`の下にあり、 :ref:<a href="#id3"><span class="problematic" id="id4">`</span></a>document structure &lt;contributing/content/structure&gt;`ガイドラインに従います。</p>
-<p>For more complex topics, several pages may be needed to cover all their aspects. Usually, you will
-find yourself adding documentation to a topic that is already partially covered. In that case,
-either create a new page and place it at the same level as other related pages or add new sections
-to an existing page. When documenting a complex topic from scratch, organize the content across
-several child pages that are referenced on that directory's parent page (the <abbr title="Table Of Contents">TOC</abbr> page); whenever possible, write content on the parent page and not only on the child
-pages. Make the parent page accessible from the navigation menu by using the
-<a class="reference internal" href="rst_guidelines.html#contributing-rst-document-metadata"><span class="std std-ref">show-content</span></a> metadata directive.</p>
+<p>複雑なトピックを扱う場合、そのすべての側面を網羅するには複数のページが必要になることがあります。
+通常は、すでに一部が記述されているトピックにドキュメントを追加することになるでしょう。その場合は、新しいページを作成して他の関連ページと同じ階層に配置するか、既存のページに新しいセクションを追加してください。トピック全体を一から文書化する場合は、内容を複数の子ページに分割し、それらをディレクトリ内の親ページ（ <abbr title="Table Of Contents">TOC</abbr> ページ）から参照するように構成します。可能な限り、子ページだけでなく親ページにも内容を書くようにしてください。親ページをナビゲーションメニューからアクセス可能にするには、 <a class="reference internal" href="rst_guidelines.html#contributing-rst-document-metadata"><span class="std std-ref">show-content</span></a> メタデータディレクティブを使用します。</p>
 <div class="alert alert-primary">
 <p class="alert-title">
 注釈</p><p>可能な限りコンテンツの複製は避けてください。トピックが既に別のページで文書化されている場合は、既存の情報を繰り返すのではなく、 <a class="reference internal" href="rst_guidelines.html#contributing-rst-hyperlinks"><span class="std std-ref">reference</span></a> を使用します。</p>
 </div>
 <div class="alert alert-warning">
 <p class="alert-title">
-重要</p><p>When deleting or moving a <code class="o_code docutils literal notranslate"><span class="pre">.rst</span></code> file, update the corresponding text file in the
-<code class="file o_code docutils literal notranslate"><span class="pre">redirects</span></code> folder based on your branch's version (e.g., <code class="file o_code docutils literal notranslate"><span class="pre">17.0.txt</span></code>). To do so, add a
-new line at the bottom of the relevant section (e.g., <code class="o_code docutils literal notranslate"><span class="pre">#</span> <span class="pre">applications/sales</span></code>). On this line,
-first, add the redirection entry point with the old file location, followed by a space, and then
-add the exit point with the new or relevant file location. For example, if moving the file
-<code class="file o_code docutils literal notranslate"><span class="pre">unsplash.rst</span></code> from <code class="file o_code docutils literal notranslate"><span class="pre">applications/websites/website/configuration</span></code> to
-<code class="file o_code docutils literal notranslate"><span class="pre">applications/general/integrations</span></code>, add the following entry under the section
-<code class="o_code docutils literal notranslate"><span class="pre">#</span> <span class="pre">applications/websites</span></code>:</p>
+重要</p><p><code class="o_code docutils literal notranslate"><span class="pre">.rst</span></code> ファイルを削除または移動する場合は、ブランチのバージョンに対応する <code class="file o_code docutils literal notranslate"><span class="pre">redirects</span></code> フォルダ内のテキストファイル（例： <code class="file o_code docutils literal notranslate"><span class="pre">17.0.txt</span></code> ）を更新してください。その際、該当セクション（例： <code class="o_code docutils literal notranslate"><span class="pre">#</span> <span class="pre">applications/sales</span></code> ）の末尾に新しい行を追加します。その行には、まず旧ファイルのパス（リダイレクト元）を記述し、スペースを空けてから新しいファイルのパス（リダイレクト先）を記述します。たとえば、 <code class="file o_code docutils literal notranslate"><span class="pre">unsplash.rst</span></code> を <code class="file o_code docutils literal notranslate"><span class="pre">applications/websites/website/configuration</span></code> から <code class="file o_code docutils literal notranslate"><span class="pre">applications/general/integrations</span></code> に移動する場合は、 <code class="o_code docutils literal notranslate"><span class="pre">#</span> <span class="pre">applications/websites</span></code> セクションの下に以下のようなエントリを追加します：</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>applications/websites/website/configuration/unsplash.rst applications/general/integrations/unsplash.rst
 </pre></div>
 </div>
