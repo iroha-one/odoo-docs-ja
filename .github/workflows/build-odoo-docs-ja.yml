@@ -23,7 +23,7 @@ on:
       branch:
         description: 'Target branch'
         required: true
-        default: 'main'
+        default: 'l10n_crowdin_action'
         type: choice
         options:
         - 'main'
